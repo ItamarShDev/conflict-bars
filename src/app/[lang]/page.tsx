@@ -66,7 +66,7 @@ export default function TimelinePage({ params: { lang } }: { params: { lang: 'en
                                     </div>
                                 </div>
 
-                                <div className={`absolute ${entry.leaning === 'left' ? 'right-1/2' : 'left-1/2'} -ml-1.5 mt-1.5 h-3 w-3 rounded-full ${entry.leaning === 'left' ? 'bg-blue-500' : entry.leaning === 'right' ? 'bg-red-500' : 'bg-slate-400'} border-2 border-white dark:border-zinc-900 shadow`} aria-hidden />
+                                <div className={`absolute ${entry.leaning === 'left' ? 'right-1/2 -mr-1.5' : 'left-1/2 -ml-1.5'} mt-1.5 h-3 w-3 rounded-full ${entry.leaning === 'left' ? 'bg-blue-500' : entry.leaning === 'right' ? 'bg-red-500' : 'bg-slate-400'} border-2 border-white dark:border-zinc-900 shadow`} aria-hidden />
 
                                 <div className={`ml-4 ${entry.leaning === 'left' ? 'mr-auto' : 'ml-auto'} w-full max-w-md bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-md p-4`}>
                                     <div className="flex items-baseline gap-2">
