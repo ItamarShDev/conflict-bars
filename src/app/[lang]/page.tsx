@@ -51,8 +51,8 @@ export default function TimelinePage({ params: { lang } }: { params: { lang: 'en
     return (
         <main className="min-h-screen bg-white dark:bg-zinc-900">
             <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-                <h1 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-100">{t.title}</h1>
-                <p className="mt-2 text-slate-600 dark:text-slate-400">{t.subtitle}</p>
+                <h1 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-100 text-center">{t.title}</h1>
+                <p className="mt-2 text-slate-600 dark:text-slate-400 text-center">{t.subtitle}</p>
 
                 <div className="mt-10 relative">
                     <div className="absolute left-1/2 -ml-px top-0 bottom-0 w-px bg-slate-200 dark:bg-slate-700" aria-hidden />
