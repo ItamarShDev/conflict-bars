@@ -13,8 +13,8 @@ export const tuna2020s: TimelineEvent[] = [
         artist: 'Tuna',
         language: 'Hebrew',
         lyric_sample: {
-          original: 'תמיד סלדתי משירים של זיכרון ואבל … כל העולם מלחמת כנופיות',
-          english_translation: "I've always disliked songs of remembrance and mourning … the whole world is a gang war."
+          original: 'הן סיפרו לי איך הן שרו שמה "קאובוי" כל השבי\nהחיים עוד לא חזרו לחיות, עוד קצת קשה לבלוע\nביום ההוא גם אצלנו ביקר הרוע',
+          english_translation: 'They told me how they sang “Cowboy” there throughout the captivity\nLife hasn’t returned to living yet, it’s still hard to swallow\nOn that day evil also visited us'
         },
         links: {
           lyrics: 'https://genius.com/Tuna-rosh-lemala-lyrics',
@@ -22,8 +22,30 @@ export const tuna2020s: TimelineEvent[] = [
           youtube: 'https://www.youtube.com/watch?v=Vjusx05G9sI'
         }
       },
-      { name: 'Kol Hakohavim (כל הכוכבים)', artist: 'Tuna', language: 'Hebrew' },
-      { name: "Shuvo Shel Mordechai (שובו של מרדכי)", artist: 'Tuna feat. Oshik Levi & Teddy Neguse', language: 'Hebrew' },
+      {
+        name: 'Kol Hakohavim (כל הכוכבים)',
+        artist: 'Tuna',
+        language: 'Hebrew',
+        lyric_sample: {
+          original: 'גם אם זה לא נראה טוב\nוכל הכוכבים מראים שיש סיבה לדאוג',
+          english_translation: "Even if it doesn’t look good, and all the stars show there’s a reason to worry"
+        },
+        links: {
+          lyrics: 'https://genius.com/Tuna-kol-hakohavim-lyrics'
+        }
+      },
+      {
+        name: "Shuvo Shel Mordechai (שובו של מרדכי)",
+        artist: 'Tuna feat. Oshik Levi & Teddy Neguse',
+        language: 'Hebrew',
+        lyric_sample: {
+          original: 'חצי עיר בסרט שהם עוד שנייה מתים\nהמון של אנשים בחוץ, הם לא מעריצים – רק תוצר עבודתם של עריצים',
+          english_translation: 'Half the city is freaking out that they’re one second from dying\nA crowd of people outside — they’re not fans, just the product of tyrants’ work'
+        },
+        links: {
+          lyrics: 'https://genius.com/Tuna-shuvo-shel-mordechai-lyrics'
+        }
+      },
       { name: "Yoda'at Lesovev (יודעת לסובב)", artist: 'Tuna', language: 'Hebrew' },
       { name: 'Hey Babe (היי בייב)', artist: 'Tuna', language: 'Hebrew' },
       { name: 'Sahara (סהרה)', artist: 'Tuna', language: 'Hebrew' },
