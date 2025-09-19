@@ -1,0 +1,4 @@
+@import "tailwindcss";
+
+/* Keep Tailwind as the styling source of truth. No custom theme rules needed. */
+html, body { height: 100%; }
