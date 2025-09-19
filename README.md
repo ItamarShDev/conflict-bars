@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Israeli Hip‑Hop Conflict Timeline
 
-## Getting Started
+An interactive timeline exploring Israeli hip‑hop artists and key events across years and decades. Built with Next.js (App Router), React, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## Project Goal
+
+The goal of this project is to document and visualize how Israeli hip‑hop intersects with key sociopolitical events, especially periods of conflict. The timeline aims to:
+
+- Provide a clear, chronological view of artists, releases, public statements, and notable events by decade.
+- Offer neutral, contextual metadata such as stated or perceived political affiliations, when relevant.
+- Make exploration accessible in multiple languages through locale‑aware routing.
+- Encourage community contributions to expand coverage and improve accuracy.
+
+Where possible, entries should be concise, sourced, and written in a neutral tone. See the Timeline Content Model section below for how data is structured.
+
+## Stack
+
+- Next.js 15 (App Router) with Turbopack
+- React 19
+- TypeScript 5.x
+- Tailwind CSS v4
+- ESLint 9
+
+Project structure follows `src/` with `@/*` path alias.
+
+## Project Structure
+
+- `src/app/`
+  - `timeline/` — timeline routes and data per artist/decade
+  - `[lang]/` — language-aware segment (middleware-based detection)
+  - `favicon.ico`, globals, route files
+- `src/data/` — shared data (if any)
+- `src/middleware.ts` — locale middleware and routing helpers
+- `public/` — static assets (icons, svgs)
+
+## Local Development
+
+1) Install dependencies
+
+```bash
+npm install
+```
+
+2) Start the dev server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` — start development server
+- `npm run build` — production build (Next.js with Turbopack)
+- `npm run start` — start production server
+- `npm run lint` — run ESLint on `src`
 
-## Learn More
+## Timeline Content Model
 
-To learn more about Next.js, take a look at the following resources:
+Timeline content is organized by artist and decade under `src/app/timeline/`, for example:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `src/app/timeline/tuna/2010s.ts`
+- `src/app/timeline/tuna/2020s.ts`
+- `src/app/timeline/subliminal/2010s.ts`
+- `src/app/timeline/peled/2010s.ts`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Each file exports typed data for events that power the UI. Add or edit files to extend the timeline.
 
-## Deploy on Vercel
+There is also metadata such as political affiliation under files like:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `src/app/timeline/atrist-political-affiliation.ts`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Internationalization
+
+The app uses a `[lang]` segment and middleware (`src/middleware.ts`) to support locale-aware routing.
+
+## Styling
+
+Tailwind CSS v4 is configured. Use utility classes in your components; global styles live under `src/app/` as needed.
+
+## Deployment
+
+The app is ready for deployment on platforms like Vercel. Build with:
+
+```bash
+npm run build && npm run start
+```
+
+See Next.js deployment docs for details: https://nextjs.org/docs/app/building-your-application/deploying
+
+## Contributing
+
+1. Create a feature branch.
+2. Make changes with type-safe timeline entries in `src/app/timeline/`.
+3. Run `npm run lint` and `npm run build` to verify.
+4. Open a PR.
+
+## License
+
+License not specified.

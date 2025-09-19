@@ -9,32 +9,49 @@ export const subliminal2000s: TimelineEvent[] = [
     },
     songs: [
       {
-        name: "תקווה (Tikva / Hope)",
-        artist: "Subliminal & The Shadow (סאבלימינל והצל)",
+        name: "התקווה (Hatikva / The Hope)",
+        artist: "Subliminal & HaTzel (סאבלימינל והצל)",
         language: "Hebrew",
         lyric_sample: {
-          original: "יד ביד, נשבענו נצח אמונים, להילחם ולא לבגוד, להגן על המולדת עד יומנו האחרון.",
-          english_translation: "Hand in hand, we swore eternal allegiance, to fight and not betray, to protect the homeland until our last day."
+          original: "אני ראיתי כמה הם הלכו, יותר מדי מהם לא חזרו... התקווה בראשנו, אהבה בנפשנו.",
+          english_translation: "I saw how many went, too many did not return... The hope is in our minds, love in our souls."
         },
         links: {
-          lyrics: "https://shironet.mako.co.il/artist?type=lyrics&lang=1&prfid=851&wrkid=5058",
+          lyrics: "https://genius.com/Subliminal-and-hatzel-hatikva-lyrics",
           song_info: "https://en.wikipedia.org/wiki/Subliminal_(rapper)"
         }
       },
       {
-        name: "שירת הסטיקר (Shirat HaSticker / The Sticker Song)",
-        artist: "Hadag Nahash (הדג נחש)",
+        name: "הפרד ומשול (Hafred U'Mshol / Divide and Rule)",
+        artist: "Subliminal & HaTzel (סאבלימינל והצל)",
         language: "Hebrew",
         lyric_sample: {
-          original: "העם עם הגולן, חברון מאז ולתמיד. אין שלום עם ערבים, אין ערבים אין פיגועים. תנו לחיות לחיות, בצלם, שוברים שתיקה.",
-          english_translation: "The people are with the Golan, Hebron forever. No peace with Arabs, No Arabs - no terror attacks. Let the animals live, B'Tselem, Breaking the Silence."
+          original: "הטקטיקה פוליטיקה, אין אפילו אתיקה...",
+          english_translation: "The tactic is politics, there isn't even ethics..."
         },
         links: {
-          lyrics: "https://shironet.mako.co.il/artist?type=lyrics&lang=1&prfid=333&wrkid=6109",
-          song_info: "https://en.wikipedia.org/wiki/The_Sticker_Song",
-          youtube: "https://www.youtube.com/watch?v=GIbjpev6U5s"
+          lyrics: "https://genius.com/Subliminal-and-hatzel-hafred-umshol-lyrics",
+          song_info: "https://genius.com/albums/Subliminal-and-hatzel/Haor-ve-hatzel"
         }
       },
+      {
+        name: "לא תצליחו לעצור אותי (Lo Tatzlichu La'atsor Oti / You Won't Stop Me)",
+        artist: "Subliminal & HaTzel (סאבלימינל והצל)",
+        language: "Hebrew",
+        links: {
+          lyrics: "https://genius.com/Subliminal-and-hatzel-lo-tazlichu-laatzor-oti-lyrics",
+          song_info: "https://genius.com/albums/Subliminal-and-hatzel/Haor-ve-hatzel"
+        }
+      },
+      {
+        name: "הצל מציון (HaTzel MiTzion / The Shadow from Zion)",
+        artist: "Subliminal & HaTzel (סאבלימינל והצל)",
+        language: "Hebrew",
+        links: {
+          lyrics: "https://genius.com/Subliminal-and-hatzel-hatzel-mitzion-lyrics",
+          song_info: "https://genius.com/albums/Subliminal-and-hatzel/Haor-ve-hatzel"
+        }
+      }
 
     ]
   },
@@ -46,45 +63,38 @@ export const subliminal2000s: TimelineEvent[] = [
     },
     songs: [
       {
-        name: "הנה אני בא (Hine Ani Ba / Here I Come)",
-        artist: "Hadag Nahash (הדג נחש)",
+        name: "תן כוח (Ten Ko'ach / Give Me Strength)",
+        artist: "Subliminal (סאבלימינל)",
         language: "Hebrew",
-        lyric_sample: {
-          original: "לא רוצים למות, רוצים רק לחיות... נמאס לי לקרוא בעיתון כל בוקר כותרות על עוד ועוד דם שנשפך פה ואין לו סוף.",
-          english_translation: "Don't want to die, just want to live... I'm tired of reading headlines in the paper every morning about more and more blood being spilled here with no end."
-        },
         links: {
-          lyrics: "https://shironet.mako.co.il/artist?type=lyrics&lang=1&prfid=333&wrkid=9404",
-          song_info: "https://en.wikipedia.org/wiki/Bezzera_Kaf",
-          youtube: "https://www.youtube.com/watch?v=BXUmEMyNHuw"
+          song_info: "https://genius.com/albums/Subliminal/Bidiuk-kshehashavtem-shehakol-nigmar"
         }
       },
       {
-        name: "מה נעשה (Ma Na'ase? / What Will We Do?)",
-        artist: "Sagol 59 feat. Quami De La Fox (סגול 59)",
+        name: "קלאסית ופרסי (Klasit Ve'Parsi / Classic and Persian)",
+        artist: "Subliminal (סאבלימינל)",
         language: "Hebrew",
-        lyric_sample: {
-          original: "המצב דפוק ואין לו פתרון, כל אהבל בממשלה חושב שהוא נפוליאון... ביירות, דמשק, עזה ורמאללה, כל יום אותו סיפור, יאללה בלאגן.",
-          english_translation: "The situation is screwed and has no solution, every idiot in the government thinks he's Napoleon... Beirut, Damascus, Gaza and Ramallah, every day the same story, let's make a mess."
-        },
         links: {
-          lyrics: "https://shironet.mako.co.il/artist?type=lyrics&lang=1&prfid=835&wrkid=8765",
-          song_info: "https://en.wikipedia.org/wiki/Sagol_59"
+          song_info: "https://genius.com/albums/Subliminal/Bidiuk-kshehashavtem-shehakol-nigmar"
         }
       },
       {
-        name: "קלאסית ופרסי (Classic and Persian)",
-        artist: "Cohen@Mushon (כהן@מושון)",
+        name: "ארץ אהובה (Eretz Ahuva / Beloved Land)",
+        artist: "Subliminal (סאבלימינל)",
         language: "Hebrew",
-        lyric_sample: {
-          original: "אני לא אומר שלום, לא קורא עיתון, לא נותן למציאות להרוס לי את היום... טילים, איראנים, פצצות, עזתים.",
-          english_translation: "I don't say hello, don't read the newspaper, don't let reality ruin my day... Missiles, Iranians, bombs, Gazans."
-        },
         links: {
-          lyrics: "https://shironet.mako.co.il/artist?type=lyrics&lang=1&prfid=21033&wrkid=11306",
-          song_info: "https://en.wikipedia.org/wiki/Cohen@Mushon"
+          song_info: "https://music.apple.com/us/album/%D7%91%D7%93%D7%99%D7%95%D7%A7-%D7%9B%D7%A9%D7%97%D7%A9%D7%91%D7%AA%D7%9D-%D7%A9%D7%94%D7%9B%D7%9C-%D7%A0%D7%92%D7%9E%D7%A8/1461704474"
+        }
+      },
+      {
+        name: "זה הגיע עד לכאן (Ze Higia Ad Lekan / It Has Gone This Far)",
+        artist: "Subliminal (סאבלימינל)",
+        language: "Hebrew",
+        links: {
+          song_info: "https://music.apple.com/us/album/%D7%91%D7%93%D7%99%D7%95%D7%A7-%D7%9B%D7%A9%D7%97%D7%A9%D7%91%D7%AA%D7%9D-%D7%A9%D7%94%D7%9B%D7%9C-%D7%A0%D7%92%D7%9E%D7%A8/1461704474"
         }
       }
     ]
   }
-];;
+];
+;
