@@ -31,6 +31,7 @@ export const theShadow2000s: SongList = [
   {
     name: 'הציוני האחרון (Hazioni Ha’acharon)',
     artist: 'The Shadow',
+    published_date: '2008-01-01',
     lyric_sample: {
       hebrew: 'כיבוי אורות הצל נכנס מילים צלילים צרות, צרות צרורות האל קרס טילים נופלים גבולות.',
       english_translation: 'Lights out, the Shadow enters, words, sounds, troubles. Bundles of troubles, God collapsed, missiles fall, borders.',
