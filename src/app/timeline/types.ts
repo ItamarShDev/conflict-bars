@@ -20,6 +20,13 @@ export type EventsTimeline = {
   time: { start: string; end?: string }
   conflict?: {
     title: string;
+    title_he?: string; // Hebrew translation
     reason: string;
+    reason_he?: string; // Hebrew translation
+    description?: string; // Detailed description of the conflict
+    description_he?: string; // Hebrew translation of description
+    effects?: string; // Effects and impact of the conflict
+    effects_he?: string; // Hebrew translation of effects
+    wikipedia_url?: string; // Wikipedia page URL
   };
 };

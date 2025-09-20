@@ -1,23 +1,7 @@
-import { TimelineEntry } from '@/components/TimelineEntry';
+import { ConflictTimelineEntry } from '@/components/ConflictTimelineEntry';
+import { SongTimelineEntry } from '@/components/SongTimelineEntry';
+import { getEntriesByYear } from '@/utils/timeline';
 import { timeline } from '../timeline';
-import { artistPoliticalAffiliation } from '../timeline/atrist-political-affiliation';
-import { israeliConflicts } from '../timeline/conflicts';
-
-// Helper to determine political leaning
-function getArtistLeaning(artistName: string): 'left' | 'right' | 'center' | 'unknown' {
-    const affiliationData = Object.entries(artistPoliticalAffiliation).find(([key]) => artistName.includes(key));
-    if (affiliationData) {
-        const affiliation = affiliationData[1].affiliation.toLowerCase();
-        if (affiliation.includes('left')) return 'left';
-        if (affiliation.includes('right')) return 'right';
-        if (affiliation.includes('center')) return 'center';
-    }
-    return 'unknown'; // Default for neutral, apolitical, or not found
-}
-
-function parseStartYear(timestamp: string): number | null {
-    return new Date(timestamp).getFullYear();
-}
 
 const translations = {
     en: {
@@ -27,6 +11,10 @@ const translations = {
         info: 'Info',
         conflict: 'Conflict',
         reason: 'Reason',
+        wikipedia: 'Wikipedia',
+        youtube: 'YouTube',
+        description: 'Description',
+        effects: 'Effects',
     },
     he: {
         title: 'ציר זמן',
@@ -35,76 +23,85 @@ const translations = {
         info: 'מידע',
         conflict: 'סכסוך',
         reason: 'סיבה',
+        wikipedia: 'ויקיפדיה',
+        youtube: 'יוטיוב',
+        description: 'תיאור',
+        effects: 'השפעות',
     },
 };
 
 export default async function TimelinePage({ params }: { params: Promise<{ lang: 'en' | 'he' }> }) {
     const { lang } = await params;
     const t = translations[lang];
-
-    const songEntries = timeline
-        .flatMap((t) => {
-            return {
-                year: parseStartYear(t.published_date),
-                timestamp: new Date(t.published_date).toLocaleDateString(),
-                song: t,
-                leaning: getArtistLeaning(t.artist),
-            };
-        })
-        .filter((e) => e.year !== null)
-        .sort((a, b) => (a.year! - b.year!));
-
-    const conflictEntries = israeliConflicts
-        .flatMap((c) => {
-            const startYear = parseStartYear(c.time.start);
-
-            return {
-                year: startYear,
-                timestamp: c.time.end
-                    ? `${new Date(c.time.start).toLocaleDateString()} - ${new Date(c.time.end).toLocaleDateString()}`
-                    : new Date(c.time.start).toLocaleDateString(),
-                song: {
-                    name: '',
-                    artist: '',
-                    published_date: c.time.start,
-                    language: '',
-                },
-                leaning: 'center' as const, // Conflicts are neutral/center
-                conflict: {
-                    title: c.conflict!.title,
-                    reason: c.conflict!.reason,
-                },
-            };
-        })
-        .filter((e) => e.year !== null)
-        .sort((a, b) => (a.year! - b.year!));
-
-    const allEntries = [...songEntries, ...conflictEntries]
-        .sort((a, b) => (a.year! - b.year!));
-
+    const yearGroups = getEntriesByYear(timeline);
     return (
         <main className="min-h-screen bg-white dark:bg-zinc-900">
+            {/* Client component for sticky header with scroll detection */}
+
             <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-                <h1 className="text-center text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-100">{t.title}</h1>
-                <p className="mt-2 text-center text-slate-600 dark:text-slate-400">{t.subtitle}</p>
+                <h1 className={`text-center text-3xl font-bold tracking-tight ${lang === 'he' ? 'text-slate-900' : 'text-slate-900'} dark:text-slate-100`}>{t.title}</h1>
 
                 <div className="mt-10 relative">
                     <div className="absolute left-1/2 -ml-px top-0 bottom-0 w-px bg-slate-200 dark:bg-slate-700" aria-hidden />
 
                     <ul className="space-y-8">
-                        {allEntries.map((entry, idx) => {
-                            const showYear = idx === 0 || entry.year !== allEntries[idx - 1]?.year;
-                            const isConflict = 'conflict' in entry;
+                        {yearGroups.map(([year, entries], idx) => {
+                            const showYear = idx === 0 || year !== yearGroups[idx - 1]?.[0];
+
+                            // Separate songs and conflicts for this year
+                            const songs = entries.filter(e => e.type === 'song');
+                            const conflicts = entries.filter(e => e.type === 'conflict');
+
                             return (
-                                <TimelineEntry
-                                    key={`${entry.year}-${idx}`}
-                                    entry={entry}
-                                    lang={lang}
-                                    t={{ lyrics: t.lyrics, info: t.info, conflict: t.conflict, reason: t.reason }}
-                                    index={idx}
-                                    showYear={showYear}
-                                    isConflict={isConflict}
-                                />
+                                <li key={year} className="relative group">
+                                    {showYear && (
+                                        <div
+                                            className={`absolute left-1/2 -translate-x-1/2 text-center hidden 
+                                                -top-4 md:block ${lang === 'he' ? 'text-right' : 'text-left'}`}
+                                        >
+                                            <div className="text-sm font-semibold text-slate-700 dark:text-slate-300 tabular-nums">{year}</div>
+                                        </div>
+                                    )}
+
+                                    <div
+                                        className="absolute left-1/2 -translate-x-1/2 mt-1.5 h-3 w-3 rounded-full bg-slate-400 border-2 border-white dark:border-zinc-900 shadow z-10"
+                                        aria-hidden
+                                    />
+
+                                    {/* Render songs and conflicts side by side */}
+                                    <div className={`flex justify-between items-start mt-4 ${lang === 'he' ? 'flex-row-reverse' : ''}`}>
+                                        {/* Songs on the left (or right for RTL) */}
+                                        <div className="flex-1 mr-4">
+                                            {songs.map((songEntry, songIdx) => (
+                                                <SongTimelineEntry
+                                                    key={`${year}-song-${songIdx}`}
+                                                    song={songEntry.song}
+                                                    leaning={songEntry.leaning}
+                                                    lang={lang}
+                                                    t={{ lyrics: t.lyrics, info: t.info, youtube: t.youtube }}
+                                                    timestamp={songEntry.timestamp}
+                                                />
+                                            ))}
+                                        </div>
+
+                                        {/* Conflicts on the right (or left for RTL) */}
+                                        <div className="flex-1 ml-4 relative group">
+                                            {conflicts.map((conflictEntry, conflictIdx) => (
+                                                <div
+                                                    key={`${year}-conflict-${conflictIdx}`}
+                                                    data-conflict-id={conflictEntry.conflictEntry.id}
+                                                    className="mb-2"
+                                                >
+                                                    <ConflictTimelineEntry
+                                                        conflict={conflictEntry.conflictEntry!}
+                                                        lang={lang}
+                                                        t={{ conflict: t.conflict, reason: t.reason, lang, wikipedia: t.wikipedia, description: t.description, effects: t.effects }}
+                                                    />
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </li>
                             );
                         })}
                     </ul>
