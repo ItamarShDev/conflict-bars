@@ -42,16 +42,5 @@ export const tuna2020s: SongList = [
     links: {
       lyrics: 'https://genius.com/Tuna-shuvo-shel-mordechai-lyrics'
     }
-  },
-  { name: "Yoda'at Lesovev (יודעת לסובב)", artist: 'Tuna', language: 'Hebrew', published_date: '2020-03-15' },
-  { name: 'Hey Babe (היי בייב)', artist: 'Tuna', language: 'Hebrew', published_date: '2020-07-22' },
-  { name: 'Sahara (סהרה)', artist: 'Tuna', language: 'Hebrew', published_date: '2021-01-10' },
-  { name: 'Shimi (שימי)', artist: 'Tuna', language: 'Hebrew', published_date: '2021-04-18' },
-  { name: 'Karaoke (קריוקי)', artist: 'Tuna feat. Peer Tasi', language: 'Hebrew', published_date: '2021-08-05' },
-  { name: "Mizrah Paru'a (מזרח פרוע)", artist: 'Tuna', language: 'Hebrew', published_date: '2021-11-12' },
-  { name: 'TaranTuna (טרנטונה)', artist: 'Tuna', language: 'Hebrew', published_date: '2022-02-28' },
-  { name: 'Omes Lev (עומס לב)', artist: 'Tuna feat. Dudu Tassa', language: 'Hebrew', published_date: '2022-06-14' },
-  { name: "Echad Le'savta (אחד לסבתא)", artist: 'Tuna', language: 'Hebrew', published_date: '2022-09-03' },
-  { name: 'Afterpark (אפטרפארק)', artist: 'Tuna', language: 'Hebrew', published_date: '2022-12-20' },
-  { name: "Hatov, Hara Ve'achotcha (הטוב, הרע ואחותך)", artist: 'Tuna feat. Shalom Hanoch', language: 'Hebrew', published_date: '2023-03-07' }
+  }
 ];
