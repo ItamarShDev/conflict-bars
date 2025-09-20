@@ -15,7 +15,7 @@ export const kafeShachorChazak2010s: TimelineEvent[] = [
         artist: 'Kafe Shachor Chazak',
         language: 'Hebrew',
         lyric_sample: {
-          original: 'אני יודע שהכל יהיה בסדר',
+          hebrew: 'אני יודע שהכל יהיה בסדר',
           english_translation: 'I know everything will be okay.'
         },
         links: {

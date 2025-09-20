@@ -24,10 +24,10 @@ export const peled2010s: TimelineEvent[] = [
       {
         name: 'שירת הסטיקר 2019 (Sticker Song 2019)',
         artist: 'Hadag Nahash (feat. Peled and others)',
-        date: '2019-03-15',
+        published_date: '2019-03-15',
         language: 'Hebrew',
         lyric_sample: {
-          original: 'אין ערבים אין פיגועים',
+          hebrew: 'אין ערבים אין פיגועים',
           english_translation: 'No Arabs, no terror attacks.'
         },
         links: {

@@ -13,7 +13,7 @@ export const subliminal2000s: TimelineEvent[] = [
         artist: "Subliminal & HaTzel (סאבלימינל והצל)",
         language: "Hebrew",
         lyric_sample: {
-          original: "אני ראיתי כמה הם הלכו, יותר מדי מהם לא חזרו... התקווה בראשנו, אהבה בנפשנו.",
+          hebrew: "אני ראיתי כמה הם הלכו, יותר מדי מהם לא חזרו... התקווה בראשנו, אהבה בנפשנו.",
           english_translation: "I saw how many went, too many did not return... The hope is in our minds, love in our souls."
         },
         links: {
@@ -26,7 +26,7 @@ export const subliminal2000s: TimelineEvent[] = [
         artist: "Subliminal & HaTzel (סאבלימינל והצל)",
         language: "Hebrew",
         lyric_sample: {
-          original: "הטקטיקה פוליטיקה, אין אפילו אתיקה...",
+          hebrew: "הטקטיקה פוליטיקה, אין אפילו אתיקה...",
           english_translation: "The tactic is politics, there isn't even ethics..."
         },
         links: {

@@ -32,7 +32,7 @@ export const tuna2010s: TimelineEvent[] = [
         artist: 'Tuna',
         language: 'Hebrew/Arabic',
         lyric_sample: {
-          original: 'יא איבני, יא באבה, יום באסאל, יום סבבה / חם כמו פינג׳אן שעל האש, יעני לבה',
+          hebrew: 'יא איבני, יא באבה, יום באסאל, יום סבבה / חם כמו פינג׳אן שעל האש, יעני לבה',
           english_translation: 'My son, my father, one day is bitter, one day is great / Hot like a finjan on the fire, like lava.'
         },
         links: {

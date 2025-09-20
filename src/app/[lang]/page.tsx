@@ -74,8 +74,8 @@ export default function TimelinePage({ params: { lang } }: { params: { lang: 'en
                                         <h3 className="font-medium text-slate-900 dark:text-slate-100">{entry.song.name}</h3>
                                         <span className="text-slate-500 dark:text-slate-400">— {entry.song.artist}</span>
                                     </div>
-                                    {entry.song.lyric_sample?.original && (
-                                        <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">“{lang === 'he' ? entry.song.lyric_sample?.original : entry.song.lyric_sample?.english_translation}”</p>
+                                    {entry.song.lyric_sample?.hebrew && (
+                                        <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">“{lang === 'he' ? entry.song.lyric_sample?.hebrew : entry.song.lyric_sample?.english_translation}”</p>
                                     )}
                                     <div className="mt-2 flex gap-4 text-sm">
                                         {entry.song.links?.lyrics && (

@@ -14,7 +14,7 @@ export const sagol592000s: TimelineEvent[] = [
         artist: 'Sagol 59',
         language: 'Hebrew',
         lyric_sample: {
-          original: 'השלום מתפרק כמו שיוקו פירקה את הביטלס … דם של ילדים נשפך לנהרות',
+          hebrew: 'השלום מתפרק כמו שיוקו פירקה את הביטלס … דם של ילדים נשפך לנהרות',
           english_translation: 'Peace is falling apart like Yoko broke up the Beatles … children’s blood is flowing like rivers.'
         },
         links: {

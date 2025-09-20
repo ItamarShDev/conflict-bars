@@ -4,7 +4,7 @@ export type Song = {
   published_date?: string; // Specific release date for the song
   language?: string;
   lyric_sample?: {
-    original?: string;
+    hebrew?: string;
     english_translation?: string;
   };
   links?: {
@@ -21,4 +21,14 @@ export type TimelineEvent = {
     reason: string;
   };
   songs: Song[];
+};
+
+export type TimelineSong = Song[];
+
+export type EventsTimeline = {
+  time: { start: string; end?: string }
+  conflict?: {
+    title: string;
+    reason: string;
+  };
 };

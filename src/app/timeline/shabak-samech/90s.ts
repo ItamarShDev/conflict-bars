@@ -12,7 +12,7 @@ export const shabakSamech90s: TimelineEvent[] = [
         name: 'Beiskey Hashin - בעסקי ה-ש’',
         artist: 'Shabak Samech',
         lyric_sample: {
-          original: '...את הרוב שמתעסק בשחיתויות / כמו בכנסת אני כבר לא יכול',
+          hebrew: '...את הרוב שמתעסק בשחיתויות / כמו בכנסת אני כבר לא יכול',
           english_translation: '...the majority that deals with corruption / like in the Knesset, I can\'t anymore.',
         },
         links: {
@@ -25,7 +25,7 @@ export const shabakSamech90s: TimelineEvent[] = [
         artist: 'Shabak Samech',
         published_date: '1995-09-20',
         lyric_sample: {
-          original: 'שבעה על הכוונת נכנסים לכאן בשווינג / עם פול עוצמה שאפ\'חד לא יבין',
+          hebrew: 'שבעה על הכוונת נכנסים לכאן בשווינג / עם פול עוצמה שאפ\'חד לא יבין',
           english_translation: 'Seven in the crosshairs enter here with a swing / with full power that no one will understand.',
         },
         links: {
