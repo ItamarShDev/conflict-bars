@@ -5,13 +5,9 @@ export const shabakSamech2010s: SongList = [
     name: 'משיח (Mashi\'ach)',
     artist: 'Shabak Samech',
     published_date: '2012-07-01',
-    context: {
-      title: 'Social Protests and Political Disillusionment',
-      reason: 'The early 2010s in Israel were marked by widespread social protests (like the 2011 social justice protests) and a growing sense of disillusionment with the political establishment. The music from this era often carried a satirical and critical tone, questioning leadership and societal norms.',
-    },
     lyric_sample: {
-      hebrew: 'מה נעשה כשמשיח יבוא? איפה נתחבא כשמשיח יבוא?',
-      english_translation: 'What will we do when the messiah comes? Where will we hide when the messiah comes?',
+      hebrew: 'דופקים אותך ברחוב, בעמלה, באבט"ש לא חלב, לא דבש, פה כולם אוכלים קש זה לא מקום למשיח, זה ניסוי שלא הצליח',
+      english_translation: 'They beat you in the street, in labor, in safeguard - no milk, no honey, here everyone eats straw, this is no place for a messiah, this is an experiment that failed'
     },
     links: {
       lyrics: 'https://genius.com/Shabak-samech-mashiach-lyrics',

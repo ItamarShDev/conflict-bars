@@ -7,6 +7,7 @@ export const tuna2010s: SongList = [
     name: "Gam Zeh Ya'avor (גם זה יעבור)",
     artist: 'Tuna',
     language: 'Hebrew',
+    published_date: '2015-08-06',
     links: {
       lyrics: 'https://genius.com/Tuna-gam-zeh-yaavor-lyrics',
       song_info: 'https://en.wikipedia.org/wiki/This_Too_Shall_Pass_(Tuna_album)',
@@ -17,6 +18,7 @@ export const tuna2010s: SongList = [
     name: 'Rock Shloshim (רוק שלושים)',
     artist: 'Tuna',
     language: 'Hebrew',
+    published_date: '2015',
     links: {
       lyrics: 'https://genius.com/Tuna-rock-30-30-lyrics'
     }
@@ -25,6 +27,7 @@ export const tuna2010s: SongList = [
     name: 'Seret Aravi (סרט ערבי)',
     artist: 'Tuna',
     language: 'Hebrew/Arabic',
+    published_date: '2015',
     lyric_sample: {
       hebrew: 'יא איבני, יא באבה, יום באסאל, יום סבבה / חם כמו פינג׳אן שעל האש, יעני לבה',
       english_translation: 'My son, my father, one day is bitter, one day is great / Hot like a finjan on the fire, like lava.'
@@ -37,6 +40,7 @@ export const tuna2010s: SongList = [
     name: 'Omdim Bamakom (עומדים במקום)',
     artist: 'Tuna',
     language: 'Hebrew',
+    published_date: '2015',
     links: {
       lyrics: 'https://genius.com/Tuna-omdim-bamakom-lyrics'
     }
@@ -45,6 +49,7 @@ export const tuna2010s: SongList = [
     name: 'Bon Voyage (בון וויאג׳)',
     artist: 'Tuna feat. Ortega, SHI 360, Soul J',
     language: 'Hebrew',
+    published_date: '2015',
     links: {
       lyrics: 'https://genius.com/Tuna-bon-voyage-lyrics'
     }
@@ -53,6 +58,7 @@ export const tuna2010s: SongList = [
     name: 'Marpekim (מרפקים)',
     artist: 'Tuna',
     language: 'Hebrew',
+    published_date: '2015',
     links: {
       lyrics: 'https://genius.com/Tuna-marpekim-lyrics'
     }
@@ -61,6 +67,7 @@ export const tuna2010s: SongList = [
     name: 'Olam Meshuga (עולם משוגע)',
     artist: 'Tuna feat. Ravid Plotnik',
     language: 'Hebrew',
+    published_date: '2015',
     links: {
       lyrics: 'https://genius.com/Tuna-olam-meshuga-lyrics'
     }
@@ -69,6 +76,7 @@ export const tuna2010s: SongList = [
     name: 'Schnitzelim (שניצלים)',
     artist: 'Tuna',
     language: 'Hebrew',
+    published_date: '2015',
     links: {
       lyrics: 'https://genius.com/Tuna-schnitzelim-lyrics'
     }
@@ -77,6 +85,7 @@ export const tuna2010s: SongList = [
     name: 'Lama Lo Achshav (למה לא עכשיו)',
     artist: 'Tuna feat. Shlomi Saranga',
     language: 'Hebrew',
+    published_date: '2015',
     links: {
       lyrics: 'https://genius.com/Tuna-lama-lo-achshav-lyrics'
     }
@@ -85,6 +94,7 @@ export const tuna2010s: SongList = [
     name: "Nish'ar Bachayim (Live) (נשאר בחיים - לייב)",
     artist: 'Tuna',
     language: 'Hebrew',
+    published_date: '2015',
     links: {
       lyrics: 'https://genius.com/Tuna-nishar-bachayim-live-lyrics'
     }
@@ -95,6 +105,7 @@ export const tuna2010s: SongList = [
     name: 'Avudim Bahalal (אבודים בחלל)',
     artist: 'Tuna feat. A-WA',
     language: 'Hebrew',
+    published_date: '2017',
     links: {
       lyrics: 'https://genius.com/Tuna-avudim-bahalal-lyrics'
     }
@@ -103,6 +114,7 @@ export const tuna2010s: SongList = [
     name: 'Galgal Anak (גלגל ענק)',
     artist: 'Tuna',
     language: 'Hebrew',
+    published_date: '2017',
     links: {
       lyrics: 'https://genius.com/Tuna-galgal-anak-lyrics'
     }
@@ -111,6 +123,7 @@ export const tuna2010s: SongList = [
     name: 'Cowboy (קאובוי)',
     artist: 'Tuna feat. Miki Gavrielov',
     language: 'Hebrew',
+    published_date: '2017',
     links: {
       lyrics: 'https://genius.com/Tuna-cowboy-lyrics'
     }
@@ -119,6 +132,7 @@ export const tuna2010s: SongList = [
     name: 'S’charhoret (סחרחורת)',
     artist: 'Tuna',
     language: 'Hebrew',
+    published_date: '2017',
     links: {
       lyrics: 'https://genius.com/Tuna-scharhoret-lyrics'
     }
@@ -127,6 +141,7 @@ export const tuna2010s: SongList = [
     name: 'Besivuv (בסיבוב)',
     artist: 'Tuna feat. Tzlil',
     language: 'Hebrew',
+    published_date: '2017',
     links: {
       lyrics: 'https://genius.com/Tuna-besivuv-lyrics'
     }
@@ -135,6 +150,7 @@ export const tuna2010s: SongList = [
     name: 'Yud Alef 2 (י"א 2)',
     artist: 'Tuna',
     language: 'Hebrew',
+    published_date: '2017',
     links: {
       lyrics: 'https://genius.com/Tuna-yud-alef-2-2-lyrics'
     }
@@ -143,6 +159,7 @@ export const tuna2010s: SongList = [
     name: 'Dvarim Holchim Lehishtanot (דברים הולכים להשתנות)',
     artist: 'Tuna feat. Ortega',
     language: 'Hebrew',
+    published_date: '2017',
     links: {
       lyrics: 'https://genius.com/Tuna-dvarim-holchim-lehishtanot-lyrics'
     }
@@ -151,6 +168,7 @@ export const tuna2010s: SongList = [
     name: 'Yom Kayitz (יום קיץ)',
     artist: 'Tuna feat. Harel Dahary, Lukach & Ohad Dahan',
     language: 'Hebrew',
+    published_date: '2017',
     links: {
       lyrics: 'https://genius.com/Tuna-yom-kayitz-lyrics'
     }
@@ -159,6 +177,7 @@ export const tuna2010s: SongList = [
     name: "Al Hara'kevet (על הרכבת)",
     artist: 'Tuna',
     language: 'Hebrew',
+    published_date: '2017',
     links: {
       lyrics: 'https://genius.com/Tuna-al-harakevet-lyrics'
     }
@@ -167,6 +186,7 @@ export const tuna2010s: SongList = [
     name: "Aharey Ha'ahava (אחרי האהבה)",
     artist: 'Tuna feat. Bar Tzabary',
     language: 'Hebrew',
+    published_date: '2017',
     links: {
       lyrics: 'https://genius.com/Tuna-aharey-haahava-lyrics'
     }
@@ -175,6 +195,7 @@ export const tuna2010s: SongList = [
     name: "Hakol Ze Ba'tzevet (הכל זה בצוות)",
     artist: 'Tuna feat. Adi Ulmansky & Philip Dealer',
     language: 'Hebrew',
+    published_date: '2017',
     links: {
       lyrics: 'https://genius.com/Tuna-hakol-ze-batzevet-lyrics'
     }
@@ -183,6 +204,7 @@ export const tuna2010s: SongList = [
     name: 'Dang (דאנג)',
     artist: 'Tuna',
     language: 'Hebrew',
+    published_date: '2017',
     links: {
       lyrics: 'https://genius.com/Tuna-dang-lyrics'
     }
@@ -193,6 +215,7 @@ export const tuna2010s: SongList = [
     name: 'Ein Beneinu Chalal (אין בינינו חלל)',
     artist: 'Tuna',
     language: 'Hebrew',
+    published_date: '2019',
     links: {
       lyrics: 'https://genius.com/Tuna-ein-beneinu-chalal-lyrics'
     }
@@ -201,6 +224,7 @@ export const tuna2010s: SongList = [
     name: 'Ooh (אוח)',
     artist: 'Tuna feat. Bro Two (אחשתיים)',
     language: 'Hebrew',
+    published_date: '2019',
     links: {
       lyrics: 'https://genius.com/Tuna-ooh-lyrics'
     }
@@ -209,6 +233,7 @@ export const tuna2010s: SongList = [
     name: 'Lo Mehem (לא מהם)',
     artist: 'Tuna',
     language: 'Hebrew',
+    published_date: '2019',
     links: {
       lyrics: 'https://genius.com/Tuna-lo-mehem-lyrics'
     }
@@ -217,6 +242,7 @@ export const tuna2010s: SongList = [
     name: 'Knafaim (כנפיים)',
     artist: 'Tuna',
     language: 'Hebrew',
+    published_date: '2019',
     links: {
       lyrics: 'https://genius.com/Tuna-knafaim-lyrics'
     }
@@ -225,6 +251,7 @@ export const tuna2010s: SongList = [
     name: 'Orot Gvohim (אורות גבוהים)',
     artist: 'Tuna feat. Peled',
     language: 'Hebrew',
+    published_date: '2019',
     links: {
       lyrics: 'https://genius.com/Tuna-orot-gvohim-lyrics'
     }
@@ -233,6 +260,7 @@ export const tuna2010s: SongList = [
     name: 'Ad Haboker (עד הבוקר)',
     artist: 'Tuna',
     language: 'Hebrew',
+    published_date: '2019',
     links: {
       lyrics: 'https://genius.com/Tuna-ad-haboker-lyrics'
     }
@@ -241,6 +269,7 @@ export const tuna2010s: SongList = [
     name: 'Milion Dollar (מיליון דולר)',
     artist: 'Tuna',
     language: 'Hebrew',
+    published_date: '2019',
     links: {
       lyrics: 'https://genius.com/Tuna-milion-dollar-lyrics'
     }
@@ -249,6 +278,7 @@ export const tuna2010s: SongList = [
     name: 'Od Yom Bamisrad (עוד יום במשרד)',
     artist: 'Tuna',
     language: 'Hebrew',
+    published_date: '2019',
     links: {
       lyrics: 'https://genius.com/Tuna-od-yom-bamisrad-lyrics'
     }
@@ -257,6 +287,7 @@ export const tuna2010s: SongList = [
     name: 'Abam (עב"מ)',
     artist: 'Tuna feat. Liron Amram & Ravid Plotnik',
     language: 'Hebrew',
+    published_date: '2019',
     links: {
       lyrics: 'https://genius.com/Tuna-abam-lyrics'
     }
@@ -265,6 +296,7 @@ export const tuna2010s: SongList = [
     name: 'Meteor Beslow Motion (מטאור בסלואו מושן)',
     artist: 'Tuna',
     language: 'Hebrew',
+    published_date: '2019',
     links: {
       lyrics: 'https://genius.com/Tuna-meteor-beslow-motion-lyrics'
     }
@@ -273,6 +305,7 @@ export const tuna2010s: SongList = [
     name: 'Klang (קלאנג)',
     artist: 'Tuna feat. Michael Swissa & Noroz',
     language: 'Hebrew',
+    published_date: '2019',
     links: {
       lyrics: 'https://genius.com/Tuna-klang-lyrics'
     }
@@ -281,6 +314,7 @@ export const tuna2010s: SongList = [
     name: 'Energia (אנרגיה)',
     artist: 'Tuna',
     language: 'Hebrew',
+    published_date: '2019',
     links: {
       lyrics: 'https://genius.com/Tuna-energia-lyrics'
     }
@@ -289,6 +323,7 @@ export const tuna2010s: SongList = [
     name: 'Shambala (שמבלה)',
     artist: 'Tuna',
     language: 'Hebrew',
+    published_date: '2019',
     links: {
       lyrics: 'https://genius.com/Tuna-shambala-lyrics'
     }

@@ -4,6 +4,7 @@ export const shabakSamech90s: SongList = [
   {
     name: 'Beiskey Hashin - בעסקי ה-ש’',
     artist: 'Shabak Samech',
+    published_date: '1995',
     lyric_sample: {
       hebrew: '...את הרוב שמתעסק בשחיתויות / כמו בכנסת אני כבר לא יכול',
       english_translation: '...the majority that deals with corruption / like in the Knesset, I can\'t anymore.',

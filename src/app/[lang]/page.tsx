@@ -1,21 +1,20 @@
 import { timeline } from '../timeline';
 import { artistPoliticalAffiliation } from '../timeline/atrist-political-affiliation';
-import { SongList } from '../timeline/types';
 
 // Helper to determine political leaning
-function getArtistLeaning(artistName: string): 'left' | 'right' | 'center' {
+function getArtistLeaning(artistName: string): 'left' | 'right' | 'center' | 'unknown' {
     const affiliationData = Object.entries(artistPoliticalAffiliation).find(([key]) => artistName.includes(key));
     if (affiliationData) {
         const affiliation = affiliationData[1].affiliation.toLowerCase();
         if (affiliation.includes('left')) return 'left';
         if (affiliation.includes('right')) return 'right';
+        if (affiliation.includes('center')) return 'center';
     }
-    return 'center'; // Default for neutral, apolitical, or not found
+    return 'unknown'; // Default for neutral, apolitical, or not found
 }
 
 function parseStartYear(timestamp: string): number | null {
-    const match = timestamp.match(/\d{4}/);
-    return match ? parseInt(match[0], 10) : null;
+    return new Date(timestamp).getFullYear();
 }
 
 const translations = {
@@ -35,16 +34,15 @@ const translations = {
 
 export default function TimelinePage({ params: { lang } }: { params: { lang: 'en' | 'he' } }) {
     const t = translations[lang];
-    const entries = (timeline as SongList)
+
+    const entries = timeline
         .flatMap((t) => {
-            const year = parseStartYear(t.timestamp);
-            return t.songs.map((song) => ({
-                year: song.date ? parseStartYear(song.date) : year, // Use song-specific year if available
-                timestamp: t.timestamp,
-                songDate: song.date, // Store song-specific date
-                song,
-                leaning: getArtistLeaning(song.artist),
-            }));
+            return {
+                year: parseStartYear(t.published_date),
+                timestamp: t.published_date,
+                song: t,
+                leaning: getArtistLeaning(t.artist),
+            };
         })
         .filter((e) => e.year !== null)
         .sort((a, b) => (a.year! - b.year!));
@@ -63,7 +61,7 @@ export default function TimelinePage({ params: { lang } }: { params: { lang: 'en
                             <li key={`${entry.year}-${idx}`} className={`relative ${entry.leaning === 'left' ? 'pr-[50%]' : 'pl-[50%]'} group`}>
                                 <div className={`absolute ${entry.leaning === 'left' ? 'right-1/2' : 'left-1/2'} w-24 ${entry.leaning === 'left' ? 'text-left pl-8' : 'text-right pr-8'} hidden md:block`}>
                                     <div className="text-sm font-semibold text-slate-700 dark:text-slate-300 tabular-nums">
-                                        {entry.songDate || entry.year}
+                                        {entry.year}
                                     </div>
                                 </div>
 
