@@ -14,16 +14,7 @@ export type Song = {
   };
 };
 
-export type TimelineEvent = {
-  timestamp: string;
-  conflict?: {
-    title: string;
-    reason: string;
-  };
-  songs: Song[];
-};
-
-export type TimelineSong = Song[];
+export type SongList = Song[];
 
 export type EventsTimeline = {
   time: { start: string; end?: string }

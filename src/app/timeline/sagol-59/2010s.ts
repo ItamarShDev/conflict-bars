@@ -1,24 +1,14 @@
-import { TimelineEvent } from '../types';
+import { SongList } from '../types';
 
-export const sagol592010s: TimelineEvent[] = [
+export const sagol592010s: SongList = [
   {
-    timestamp: "2010–2019",
-    conflict: {
-      title: 'Collaborations and cultural projects',
-      reason:
-        'Includes projects like Another Passenger (2011) and the Grateful Dead/Jerry Garcia Hebrew Project (2015), alongside hip‑hop releases and remixes.'
+    name: 'Westerns',
+    artist: 'Sagol 59 feat. Kool G Rap',
+    language: 'English/Hebrew',
+    published_date: '2010',
+    lyric_sample: {},
+    links: {
+      song_info: 'https://en.wikipedia.org/wiki/Sagol_59',
     },
-    songs: [
-      {
-        name: 'Westerns',
-        artist: 'Sagol 59 feat. Kool G Rap',
-        language: 'English/Hebrew',
-        published_date: '2011',
-        lyric_sample: {},
-        links: {
-          song_info: 'https://en.wikipedia.org/wiki/Sagol_59',
-        },
-      },
-    ]
   }
 ];

@@ -1,13 +1,6 @@
-import { TimelineEvent } from '../types';
+import { SongList } from '../types';
 
-export const tuna2000s: TimelineEvent[] = [
-  {
-    timestamp: '2000–2009',
-    conflict: {
-      title: 'Early 2000s Israeli hip‑hop expansion',
-      reason: 'Tuna began rising within the local scene as Israeli hip‑hop gained mainstream traction.'
-    },
-    songs: [
+export const tuna2000s: SongList = [
       // 2006 — HaShevet (השבט) — group including Tuna (Itay Zvulun)
       { name: "Aba'le Tagbir (אבא'לה תגביר)", artist: 'HaShevet', published_date: '2006', language: 'Hebrew' },
       {
@@ -122,6 +115,4 @@ export const tuna2000s: TimelineEvent[] = [
         language: 'Hebrew',
         links: { lyrics: 'https://genius.com/Hashevet-hadvarim-hanechonim-lyrics' }
       }
-    ]
-  }
 ];

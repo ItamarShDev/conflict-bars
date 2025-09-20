@@ -1,6 +1,6 @@
 import { timeline } from '../timeline';
 import { artistPoliticalAffiliation } from '../timeline/atrist-political-affiliation';
-import { TimelineEvent } from '../timeline/types';
+import { SongList } from '../timeline/types';
 
 // Helper to determine political leaning
 function getArtistLeaning(artistName: string): 'left' | 'right' | 'center' {
@@ -35,7 +35,7 @@ const translations = {
 
 export default function TimelinePage({ params: { lang } }: { params: { lang: 'en' | 'he' } }) {
     const t = translations[lang];
-    const entries = (timeline as TimelineEvent[])
+    const entries = (timeline as SongList)
         .flatMap((t) => {
             const year = parseStartYear(t.timestamp);
             return t.songs.map((song) => ({
