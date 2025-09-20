@@ -1,6 +1,7 @@
 import { TimelineEntry } from '@/components/TimelineEntry';
 import { timeline } from '../timeline';
 import { artistPoliticalAffiliation } from '../timeline/atrist-political-affiliation';
+import { israeliConflicts } from '../timeline/conflicts';
 
 // Helper to determine political leaning
 function getArtistLeaning(artistName: string): 'left' | 'right' | 'center' | 'unknown' {
@@ -24,12 +25,16 @@ const translations = {
         subtitle: 'Direction is the political leaning of the artist',
         lyrics: 'Lyrics',
         info: 'Info',
+        conflict: 'Conflict',
+        reason: 'Reason',
     },
     he: {
         title: 'ציר זמן',
         subtitle: 'בכיוון הנטייה הפוליטית',
         lyrics: 'מילים',
         info: 'מידע',
+        conflict: 'סכסוך',
+        reason: 'סיבה',
     },
 };
 
@@ -37,7 +42,7 @@ export default async function TimelinePage({ params }: { params: Promise<{ lang:
     const { lang } = await params;
     const t = translations[lang];
 
-    const entries = timeline
+    const songEntries = timeline
         .flatMap((t) => {
             return {
                 year: parseStartYear(t.published_date),
@@ -47,6 +52,34 @@ export default async function TimelinePage({ params }: { params: Promise<{ lang:
             };
         })
         .filter((e) => e.year !== null)
+        .sort((a, b) => (a.year! - b.year!));
+
+    const conflictEntries = israeliConflicts
+        .flatMap((c) => {
+            const startYear = parseStartYear(c.time.start);
+
+            return {
+                year: startYear,
+                timestamp: c.time.end
+                    ? `${new Date(c.time.start).toLocaleDateString()} - ${new Date(c.time.end).toLocaleDateString()}`
+                    : new Date(c.time.start).toLocaleDateString(),
+                song: {
+                    name: '',
+                    artist: '',
+                    published_date: c.time.start,
+                    language: '',
+                },
+                leaning: 'center' as const, // Conflicts are neutral/center
+                conflict: {
+                    title: c.conflict!.title,
+                    reason: c.conflict!.reason,
+                },
+            };
+        })
+        .filter((e) => e.year !== null)
+        .sort((a, b) => (a.year! - b.year!));
+
+    const allEntries = [...songEntries, ...conflictEntries]
         .sort((a, b) => (a.year! - b.year!));
 
     return (
@@ -59,16 +92,18 @@ export default async function TimelinePage({ params }: { params: Promise<{ lang:
                     <div className="absolute left-1/2 -ml-px top-0 bottom-0 w-px bg-slate-200 dark:bg-slate-700" aria-hidden />
 
                     <ul className="space-y-8">
-                        {entries.map((entry, idx) => {
-                            const showYear = idx === 0 || entry.year !== entries[idx - 1]?.year;
+                        {allEntries.map((entry, idx) => {
+                            const showYear = idx === 0 || entry.year !== allEntries[idx - 1]?.year;
+                            const isConflict = 'conflict' in entry;
                             return (
                                 <TimelineEntry
                                     key={`${entry.year}-${idx}`}
                                     entry={entry}
                                     lang={lang}
-                                    t={{ lyrics: t.lyrics, info: t.info }}
+                                    t={{ lyrics: t.lyrics, info: t.info, conflict: t.conflict, reason: t.reason }}
                                     index={idx}
                                     showYear={showYear}
+                                    isConflict={isConflict}
                                 />
                             );
                         })}

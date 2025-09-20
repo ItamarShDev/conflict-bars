@@ -7,11 +7,17 @@ export type TimelineEntryData = {
     timestamp: string;
     song: Song;
     leaning: Leaning;
+    conflict?: {
+        title: string;
+        reason: string;
+    };
 };
 
 export type Translations = {
     lyrics: string;
     info: string;
+    conflict: string;
+    reason: string;
 };
 
 export function TimelineEntry({
@@ -20,12 +26,14 @@ export function TimelineEntry({
     t,
     index,
     showYear = true,
+    isConflict = false,
 }: {
     entry: TimelineEntryData;
     lang: 'en' | 'he';
     t: Translations;
     index: number;
     showYear?: boolean;
+    isConflict?: boolean;
 }) {
     const colors = {
         left: 'bg-blue-500',
@@ -39,9 +47,14 @@ export function TimelineEntry({
         center: 'border-slate-400',
         unknown: 'border-slate-400',
     };
-    const { leaning, year, song, timestamp } = entry;
+    const { leaning, year, song, timestamp, conflict } = entry;
+
+    // Position conflicts on the left, songs on the right
+    const positioning = isConflict ? 'pr-[50%]' : 'pl-[50%]';
+    const contentAlignment = isConflict ? 'mr-4 ml-auto' : 'ml-4 mr-auto';
+
     return (
-        <li key={`${year}-${index}`} className="relative pl-[50%] group">
+        <li key={`${year}-${index}`} className={`relative ${positioning} group`}>
             {showYear && (
                 <div
                     className="absolute left-1/2 -translate-x-1/2 w-24 text-center hidden md:block"
@@ -57,49 +70,70 @@ export function TimelineEntry({
             />
 
             <div
-                className={`ml-4 mr-auto w-full max-w-md bg-slate-50 dark:bg-slate-900 border ${borderColors[leaning]} rounded-md p-4 mt-4`}
+                className={`${contentAlignment} w-full max-w-md bg-slate-50 dark:bg-slate-900 border ${borderColors[leaning]} rounded-md p-4 mt-4`}
             >
-                <div className="flex items-baseline gap-2">
-                    <h3 className="font-medium text-slate-900 dark:text-slate-100">{song.name}</h3>
-                    <span className="text-slate-500 dark:text-slate-400">— {song.artist}</span>
-                </div>
-                {song.lyric_sample?.hebrew && (
-                    <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
-                        “{lang === 'he' ? song.lyric_sample?.hebrew : song.lyric_sample?.english_translation}”
-                    </p>
+                {isConflict && conflict ? (
+                    <>
+                        <div className="flex items-baseline gap-2">
+                            <h3 className="font-medium text-slate-900 dark:text-slate-100">{conflict.title}</h3>
+                        </div>
+                        <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
+                            {conflict.reason}
+                        </p>
+                        <div className="mt-2 flex gap-4 text-sm">
+                            <a
+                                href="#"
+                                className="text-sky-600 hover:text-sky-700 dark:text-sky-400 dark:hover:text-sky-300 underline"
+                            >
+                                {t.conflict}
+                            </a>
+                        </div>
+                    </>
+                ) : (
+                    <>
+                        <div className="flex items-baseline gap-2">
+                            <h3 className="font-medium text-slate-900 dark:text-slate-100">{song.name}</h3>
+                            <span className="text-slate-500 dark:text-slate-400">— {song.artist}</span>
+                        </div>
+                        {song.lyric_sample?.hebrew && (
+                            <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
+                                "{lang === 'he' ? song.lyric_sample?.hebrew : song.lyric_sample?.english_translation}"
+                            </p>
+                        )}
+                        <div className="mt-2 flex gap-4 text-sm">
+                            {song.links?.lyrics && (
+                                <a
+                                    href={song.links.lyrics}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="text-sky-600 hover:text-sky-700 dark:text-sky-400 dark:hover:text-sky-300 underline"
+                                >
+                                    {t.lyrics}
+                                </a>
+                            )}
+                            {song.links?.song_info && (
+                                <a
+                                    href={song.links.song_info}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="text-sky-600 hover:text-sky-700 dark:text-sky-400 dark:hover:text-sky-300 underline"
+                                >
+                                    {t.info}
+                                </a>
+                            )}
+                            {song.links?.youtube && (
+                                <a
+                                    href={song.links.youtube}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="text-sky-600 hover:text-sky-700 dark:text-sky-400 dark:hover:text-sky-300 underline"
+                                >
+                                    YouTube
+                                </a>
+                            )}
+                        </div>
+                    </>
                 )}
-                <div className="mt-2 flex gap-4 text-sm">
-                    {song.links?.lyrics && (
-                        <a
-                            href={song.links.lyrics}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="text-sky-600 hover:text-sky-700 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                        >
-                            {t.lyrics}
-                        </a>
-                    )}
-                    {song.links?.song_info && (
-                        <a
-                            href={song.links.song_info}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="text-sky-600 hover:text-sky-700 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                        >
-                            {t.info}
-                        </a>
-                    )}
-                    {song.links?.youtube && (
-                        <a
-                            href={song.links.youtube}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="text-sky-600 hover:text-sky-700 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                        >
-                            YouTube
-                        </a>
-                    )}
-                </div>
                 <p className="mt-2 text-xs text-slate-500 dark:text-slate-400">{timestamp}</p>
             </div>
         </li>
