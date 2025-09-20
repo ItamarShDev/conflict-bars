@@ -10,7 +10,7 @@ export const peled2010s: TimelineEvent[] = [
         'Period marked by recurring Gaza escalations and the 2011 social justice protests in Israel. Capture tracks reflecting social critique and conflict ambience.'
     },
     songs: [
-      // Add entries as: { name, artist: 'Peled', language, lyric_sample: { original, english_translation }, links: { lyrics, song_info, youtube } }
+      // Add entries as: { name, artist: 'Peled', date, language, lyric_sample: { original, english_translation }, links: { lyrics, song_info, youtube } }
     ]
   },
   {
@@ -24,6 +24,7 @@ export const peled2010s: TimelineEvent[] = [
       {
         name: 'שירת הסטיקר 2019 (Sticker Song 2019)',
         artist: 'Hadag Nahash (feat. Peled and others)',
+        date: '2019-03-15',
         language: 'Hebrew',
         lyric_sample: {
           original: 'אין ערבים אין פיגועים',

@@ -11,6 +11,7 @@ export const shabakSamech2000s: TimelineEvent[] = [
       {
         name: 'Nofel Ve\'kam - נופל וקם',
         artist: 'Shabak Samech',
+        published_date: '2000-10-15',
         lyric_sample: {
           original: 'הדרך ארוכה ומפותלת / אני נופל וקם, נופל וקם... אף פעם לא אפסיק ללכת',
           english_translation: 'The road is long and winding / I fall and get up, fall and get up... I will never stop walking.',
@@ -24,6 +25,7 @@ export const shabakSamech2000s: TimelineEvent[] = [
       {
         name: 'Ein Kavod - אין כבוד',
         artist: 'Shabak Samech',
+        published_date: '2001-03-22',
         lyric_sample: {
           original: 'עיניים להם אבל הם לא יראו / אוזניים להם אבל הם לא ישמעו',
           english_translation: 'They have eyes but they do not see / they have ears but they do not hear.',

@@ -11,6 +11,7 @@ export const mooki2000s: TimelineEvent[] = [
             {
                 name: "מדברים על שלום (Medabrim Al Shalom / Talking About Peace)",
                 artist: "Mooki (מוקי)",
+                published_date: "2002",
                 language: "Hebrew",
                 lyric_sample: {
                     original: "כולם מדברים על שלום, אף אחד לא מדבר על צדק... ואם אין צדק, אז על איזה שלום אתם מדברים?",

@@ -11,6 +11,7 @@ export const shabakSamech2020s: TimelineEvent[] = [
       {
         name: 'כולם עושים את זה (Kulam Osim Et Ze)',
         artist: 'Shabak Samech',
+        published_date: '2022-09-15',
         lyric_sample: {
           original: 'אם בממשלה הראש גנב, מה יגיד אז הזנב? גם הרב הוא מעורב, כל החצר מאחוריו.',
           english_translation: 'If the head of the government is a thief, what will the tail say? The rabbi is also involved, the whole court is behind him.',
@@ -32,6 +33,7 @@ export const shabakSamech2020s: TimelineEvent[] = [
       {
         name: 'אמן (Amen)',
         artist: 'Shabak Samech',
+        published_date: '2024-01-01',
         lyric_sample: {
           original: 'שנשמע רק בשורות טובות, אמן. שנדע ימים טובים מאלה, אמן.',
           english_translation: 'May we only hear good news, Amen. May we know better days than these, Amen.',

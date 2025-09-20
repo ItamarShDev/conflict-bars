@@ -1,6 +1,7 @@
 export type Song = {
   name: string;
   artist: string;
+  published_date?: string; // Specific release date for the song
   language?: string;
   lyric_sample?: {
     original?: string;

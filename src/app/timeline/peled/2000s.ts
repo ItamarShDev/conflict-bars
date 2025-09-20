@@ -11,7 +11,7 @@ export const peled2000s: TimelineEvent[] = [
         'Waves of violence (2000–2005), disengagement from Gaza (2005), and recurring escalations shaped the scene. Use this decade to capture any early releases/appearances if directly relevant.'
     },
     songs: [
-      // Add entries as: { name, artist: 'Peled', language, lyric_sample: { original, english_translation }, links: { lyrics, song_info, youtube } }
+      // Add entries as: { name, artist: 'Peled', language, published_date, lyric_sample: { original, english_translation }, links: { lyrics, song_info, youtube } }
     ]
   }
 ];

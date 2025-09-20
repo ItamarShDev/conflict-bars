@@ -23,6 +23,7 @@ export const shabakSamech90s: TimelineEvent[] = [
       {
         name: 'Hamedina Balehavot - המדינה בלהבות',
         artist: 'Shabak Samech',
+        published_date: '1995-09-20',
         lyric_sample: {
           original: 'שבעה על הכוונת נכנסים לכאן בשווינג / עם פול עוצמה שאפ\'חד לא יבין',
           english_translation: 'Seven in the crosshairs enter here with a swing / with full power that no one will understand.',

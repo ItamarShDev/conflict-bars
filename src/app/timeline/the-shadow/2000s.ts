@@ -11,6 +11,7 @@ export const theShadow2000s: TimelineEvent[] = [
       {
         name: 'התקווה (Hatikva)',
         artist: 'Subliminal & The Shadow',
+        published_date: '2002-03-15',
         lyric_sample: {
           original: 'אני ראיתי כמה הם הלכו, יותר מדי מהם לא חזרו... התקווה בראשנו, אהבה בנפשנו, החלום ברוחנו אז לעד.',
           english_translation: 'I saw how many they went, too many of them did not return... The hope in our heads, the love in our souls, the dream in our spirits forever.',
@@ -23,6 +24,7 @@ export const theShadow2000s: TimelineEvent[] = [
       {
         name: 'בילדי (Biladi)',
         artist: 'Subliminal & The Shadow',
+        published_date: '2002-06-20',
         lyric_sample: {
           original: 'אמא אדמה שלי, לא שלי כל מה שהיה שלי, אפילו המדינה שלי, סכנה שלי, הפכה להיות שק חבטות.',
           english_translation: 'My mother earth, not mine is all that was mine, even my country, my danger, has become a punching bag.',

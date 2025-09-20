@@ -11,6 +11,7 @@ export const shabakSamech2010s: TimelineEvent[] = [
       {
         name: 'משיח (Mashi\'ach)',
         artist: 'Shabak Samech',
+        published_date: '2012-07-01',
         lyric_sample: {
           original: 'מה נעשה כשמשיח יבוא? איפה נתחבא כשמשיח יבוא?',
           english_translation: 'What will we do when the messiah comes? Where will we hide when the messiah comes?',
