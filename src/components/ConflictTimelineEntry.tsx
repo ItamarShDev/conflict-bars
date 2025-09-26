@@ -1,3 +1,5 @@
+"use client";
+
 import type { ConflictEntry } from '@/app/timeline/conflict-utils';
 
 export type ConflictTranslations = {
@@ -28,8 +30,14 @@ export function ConflictTimelineEntry({
 
     return (
         <div
+            tabIndex={0}
+            onPointerDown={(event) => {
+                if (event.pointerType !== 'mouse') {
+                    event.currentTarget.focus();
+                }
+            }}
             className={`absolute z-0 ml-2 mr-10 bg-orange-100 dark:bg-orange-900 border border-orange-300 dark:border-orange-700 rounded-md p-2 shadow-sm transition-all duration-200 hover:z-50 
-                 hover:ring-2 hover:ring-orange-500 hover:shadow-lg ${t.lang === 'he' ? 'text-right' : ''}`}
+                 hover:ring-2 hover:ring-orange-500 hover:shadow-lg focus:outline-none focus:z-50 focus:ring-2 focus:ring-orange-500 focus:shadow-lg ${t.lang === 'he' ? 'text-right' : ''}`}
         >
             <div className="flex items-start gap-1 h-full">
                 <div className="flex-1 min-w-0">
