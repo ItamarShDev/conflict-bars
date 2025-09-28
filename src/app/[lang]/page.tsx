@@ -1,5 +1,5 @@
 import { ConflictTimelineEntry } from '@/components/ConflictTimelineEntry';
-import { SongTimelineEntry } from '@/components/SongTimelineEntry';
+import { SongStack } from '@/components/SongStack';
 import { getEntriesByYear } from '@/utils/timeline';
 import { timeline } from '../timeline';
 
@@ -15,6 +15,11 @@ const translations = {
         youtube: 'YouTube',
         description: 'Description',
         effects: 'Effects',
+        stack: {
+            viewAll: 'View songs',
+            close: 'Close',
+            songsLabel: 'songs',
+        },
     },
     he: {
         title: 'ציר זמן',
@@ -27,6 +32,11 @@ const translations = {
         youtube: 'יוטיוב',
         description: 'תיאור',
         effects: 'השפעות',
+        stack: {
+            viewAll: 'הצג שירים',
+            close: 'סגור',
+            songsLabel: 'שירים',
+        },
     },
 };
 
@@ -34,6 +44,7 @@ export default async function TimelinePage({ params }: { params: Promise<{ lang:
     const { lang } = await params;
     const t = translations[lang];
     const yearGroups = getEntriesByYear(timeline);
+    const baseYearSpacing = 80;
     return (
         <main className="min-h-screen bg-white dark:bg-zinc-900">
             {/* Client component for sticky header with scroll detection */}
@@ -44,16 +55,19 @@ export default async function TimelinePage({ params }: { params: Promise<{ lang:
                 <div className="mt-10 relative">
                     <div className="absolute left-1/2 -ml-px top-0 bottom-0 w-px bg-slate-200 dark:bg-slate-700" aria-hidden />
 
-                    <ul className="space-y-8">
+                    <ul className="relative pb-24">
                         {yearGroups.map(([year, entries], idx) => {
                             const showYear = idx === 0 || year !== yearGroups[idx - 1]?.[0];
+                            const previousYear = yearGroups[idx - 1]?.[0];
+                            const yearGap = idx === 0 || !previousYear ? 0 : Math.max(1, year - previousYear);
+                            const marginTop = idx === 0 ? 0 : yearGap * baseYearSpacing;
 
                             // Separate songs and conflicts for this year
                             const songs = entries.filter(e => e.type === 'song');
                             const conflicts = entries.filter(e => e.type === 'conflict');
 
                             return (
-                                <li key={year} className="relative group">
+                                <li key={year} className="relative group" style={{ marginTop }}>
                                     {showYear && (
                                         <div
                                             className={`absolute left-1/2 -translate-x-1/2 text-center hidden 
@@ -71,21 +85,24 @@ export default async function TimelinePage({ params }: { params: Promise<{ lang:
                                     {/* Render songs and conflicts side by side */}
                                     <div className={`flex justify-between items-start mt-4 ${lang === 'he' ? 'flex-row-reverse' : ''}`}>
                                         {/* Songs on the left (or right for RTL) */}
-                                        <div className="flex-1 mr-4">
-                                            {songs.map((songEntry, songIdx) => (
-                                                <SongTimelineEntry
-                                                    key={`${year}-song-${songIdx}`}
-                                                    song={songEntry.song}
-                                                    leaning={songEntry.leaning}
+                                        <div className={`flex-1 mr-4 ${lang === 'he' ? 'mr-0 ml-4' : ''}`}>
+                                            {songs.length > 0 && (
+                                                <SongStack
+                                                    songs={songs.map(songEntry => ({
+                                                        song: songEntry.song,
+                                                        timestamp: songEntry.timestamp,
+                                                        leaning: songEntry.leaning,
+                                                    }))}
                                                     lang={lang}
                                                     t={{ lyrics: t.lyrics, info: t.info, youtube: t.youtube }}
-                                                    timestamp={songEntry.timestamp}
+                                                    labels={t.stack}
+                                                    year={year}
                                                 />
-                                            ))}
+                                            )}
                                         </div>
 
                                         {/* Conflicts on the right (or left for RTL) */}
-                                        <div className="flex-1 ml-4 relative group">
+                                        <div className={`flex-1 ml-4 relative group ${lang === 'he' ? 'ml-0 mr-4' : ''}`}>
                                             {conflicts.map((conflictEntry, conflictIdx) => (
                                                 <div
                                                     key={`${year}-conflict-${conflictIdx}`}

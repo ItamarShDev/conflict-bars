@@ -26,6 +26,7 @@ type TimelineEntryItem = {
     timestamp: string;
     song: Song; // Song type from timeline
     leaning: 'left' | 'right' | 'center' | 'unknown';
+    position: number;
 } | {
     type: 'conflict';
     year: number;
@@ -45,9 +46,12 @@ type TimelineEntryItem = {
     };
     conflictEntry: ConflictEntry;
     maxStackLevel: number;
+    position: number;
 };
 
-export function getEntriesByYear(timeline: SongList): [number, TimelineEntryItem[]][] {
+type YearGroup = [number, TimelineEntryItem[]];
+
+export function getEntriesByYear(timeline: SongList): YearGroup[] {
     const songEntries = timeline
         .flatMap((t) => {
             return {
@@ -71,6 +75,7 @@ export function getEntriesByYear(timeline: SongList): [number, TimelineEntryItem
         timestamp: entry.timestamp,
         song: entry.song,
         leaning: entry.leaning,
+        position: 0,
     }));
 
     // Add conflict entries to the timeline
@@ -84,6 +89,7 @@ export function getEntriesByYear(timeline: SongList): [number, TimelineEntryItem
             conflict: conflict.conflict,
             conflictEntry: conflict,
             maxStackLevel: 0, // Not used in side-by-side layout
+            position: 0,
         });
     });
 
@@ -99,6 +105,23 @@ export function getEntriesByYear(timeline: SongList): [number, TimelineEntryItem
     });
 
     // Convert to array of year groups for rendering
-    const yearGroups = Array.from(entriesByYear.entries()).sort(([a], [b]) => a - b);
+    const yearGroups: YearGroup[] = Array.from(entriesByYear.entries()).sort(([a], [b]) => a - b);
+
+    if (yearGroups.length === 0) {
+        return yearGroups;
+    }
+
+    const years = yearGroups.map(([year]) => year);
+    const minYear = Math.min(...years);
+    const maxYear = Math.max(...years);
+    const totalSpan = Math.max(maxYear - minYear, 1);
+
+    yearGroups.forEach(([year, entries]) => {
+        const normalized = (year - minYear) / totalSpan;
+        entries.forEach(entry => {
+            entry.position = normalized;
+        });
+    });
+
     return yearGroups;
 }
