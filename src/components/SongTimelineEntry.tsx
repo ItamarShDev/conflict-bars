@@ -42,7 +42,7 @@ export function SongTimelineEntry({
 
     const orientationClass = lang === 'he' ? 'ml-4 mr-auto text-right' : 'mr-4 ml-auto';
     const containerClasses = [
-        'relative w-full max-w-md bg-slate-50 dark:bg-slate-900 border rounded-md shadow-sm transition-transform duration-200',
+        'relative w-full max-w-md bg-[var(--color-card-background)] border-[var(--color-border)] rounded-md shadow-sm transition-transform duration-200',
         leaningColor[leaning],
         orientationClass,
         showMarginTop ? 'mt-4' : '',
@@ -51,11 +51,11 @@ export function SongTimelineEntry({
     ].filter(Boolean).join(' ');
 
     const titleClass = isCompact
-        ? 'text-base font-semibold leading-tight text-slate-900 dark:text-slate-100'
-        : 'text-lg font-semibold leading-snug text-slate-900 dark:text-slate-100';
+        ? 'text-base font-semibold leading-tight text-[var(--color-card-foreground)]'
+        : 'text-lg font-semibold leading-snug text-[var(--color-card-foreground)]';
     const artistClass = isCompact
-        ? 'text-[0.7rem] uppercase tracking-wide text-slate-500 dark:text-slate-400'
-        : 'text-sm text-slate-500 dark:text-slate-400';
+        ? 'text-[0.7rem] uppercase tracking-wide text-[var(--color-muted-foreground)]'
+        : 'text-sm text-[var(--color-muted-foreground)]';
 
     const lyricContent = lang === 'he'
         ? lyricSample?.hebrew ?? lyricSample?.english_translation
@@ -90,7 +90,7 @@ export function SongTimelineEntry({
             )}
 
             {!isCompact && lyricSample && lyricContent && (
-                <p className="text-sm text-slate-600 dark:text-slate-400">
+                <p className="text-sm text-[var(--color-muted-foreground)]">
                     "{lyricContent}"
                 </p>
             )}
@@ -102,7 +102,7 @@ export function SongTimelineEntry({
                             href={links.lyrics}
                             target="_blank"
                             rel="noreferrer"
-                            className="underline text-sky-600 hover:text-sky-700 dark:text-sky-400 dark:hover:text-sky-300"
+                            className="underline text-[var(--color-accent)] hover:text-[var(--color-accent-hover)]"
                         >
                             {t.lyrics}
                         </a>
@@ -112,7 +112,7 @@ export function SongTimelineEntry({
                             href={links.song_info}
                             target="_blank"
                             rel="noreferrer"
-                            className="underline text-sky-600 hover:text-sky-700 dark:text-sky-400 dark:hover:text-sky-300"
+                            className="underline text-[var(--color-accent)] hover:text-[var(--color-accent-hover)]"
                         >
                             {t.info}
                         </a>
@@ -122,7 +122,7 @@ export function SongTimelineEntry({
                             href={links.youtube}
                             target="_blank"
                             rel="noreferrer"
-                            className="underline text-sky-600 hover:text-sky-700 dark:text-sky-400 dark:hover:text-sky-300"
+                            className="underline text-[var(--color-accent)] hover:text-[var(--color-accent-hover)]"
                         >
                             {t.youtube}
                         </a>
@@ -133,7 +133,7 @@ export function SongTimelineEntry({
             <p
                 className={[
                     isCompact ? 'text-[0.65rem]' : 'text-xs',
-                    'text-slate-500 dark:text-slate-400',
+                    'text-[var(--color-muted-foreground)]',
                     lang === 'he' ? 'text-left' : '',
                 ]
                     .filter(Boolean)

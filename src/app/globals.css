@@ -1,5 +1,32 @@
 @import "tailwindcss";
 
+/* System dark mode configuration - using CSS variables with media query */
+:root {
+  --color-background: white;
+  --color-foreground: #0f172a;
+  --color-card-background: #f8fafc;
+  --color-card-foreground: #0f172a;
+  --color-muted-foreground: #64748b;
+  --color-muted: #e2e8f0;
+  --color-accent: #0284c7;
+  --color-accent-hover: #0369a1;
+  --color-border: #e2e8f0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #18181b;
+    --color-foreground: #f1f5f9;
+    --color-card-background: #1e293b;
+    --color-card-foreground: #f8fafc;
+    --color-muted-foreground: #94a3b8;
+    --color-muted: #334155;
+    --color-accent: #38bdf8;
+    --color-accent-hover: #0ea5e9;
+    --color-border: #334155;
+  }
+}
+
 /* Keep Tailwind as the styling source of truth. No custom theme rules needed. */
 html, body { height: 100%; }
 

@@ -36,25 +36,25 @@ export function ConflictTimelineEntry({
                     event.currentTarget.focus();
                 }
             }}
-            className={`absolute z-0 ml-2 mr-10 bg-orange-100 dark:bg-orange-900 border border-orange-300 dark:border-orange-700 rounded-md p-2 shadow-sm transition-all duration-200 hover:z-50 
-                 hover:ring-2 hover:ring-orange-500 hover:shadow-lg focus:outline-none focus:z-50 focus:ring-2 focus:ring-orange-500 focus:shadow-lg ${t.lang === 'he' ? 'text-right' : ''}`}
+            className={`absolute z-0 ml-2 mr-10 bg-[var(--color-card-background)] border-[var(--color-border)] rounded-md p-2 shadow-sm transition-all duration-200 hover:z-50 
+                 hover:ring-2 hover:ring-[var(--color-accent)] hover:shadow-lg focus:outline-none focus:z-50 focus:ring-2 focus:ring-[var(--color-accent)] focus:shadow-lg ${t.lang === 'he' ? 'text-right' : ''}`}
         >
             <div className="flex items-start gap-1 h-full">
                 <div className="flex-1 min-w-0">
-                    <h3 className="font-medium text-slate-900 dark:text-slate-100 text-xs leading-tight">
+                    <h3 className="font-semibold text-[var(--color-card-foreground)] text-sm leading-tight">
                         {title}
                     </h3>
-                    <p className="mt-1 text-xs text-slate-600 dark:text-slate-400 leading-tight">
+                    <p className="mt-1 text-sm text-[var(--color-muted-foreground)] leading-tight">
                         {reason}
                     </p>
                     {description && (
-                        <div className="mt-1 text-xs text-slate-700 dark:text-slate-300 leading-tight">
-                            <strong className="text-slate-800 dark:text-slate-200">{t.description}:</strong> {description}
+                        <div className="mt-1 text-sm text-[var(--color-card-foreground)] leading-tight">
+                            <strong className="text-[var(--color-card-foreground)]">{t.description}:</strong> {description}
                         </div>
                     )}
                     {effects && (
-                        <div className="mt-1 text-xs text-slate-700 dark:text-slate-300 leading-tight">
-                            <strong className="text-slate-800 dark:text-slate-200">{t.effects}:</strong> {effects}
+                        <div className="mt-1 text-sm text-[var(--color-card-foreground)] leading-tight">
+                            <strong className="text-[var(--color-card-foreground)]">{t.effects}:</strong> {effects}
                         </div>
                     )}
                     <div className="mt-1 flex gap-1 text-xs">
@@ -63,7 +63,7 @@ export function ConflictTimelineEntry({
                                 href={conflict.wikipedia_url}
                                 target="_blank"
                                 rel="noreferrer"
-                                className="text-sky-600 hover:text-sky-700 dark:text-sky-400 dark:hover:text-sky-300 underline"
+                                className="text-[var(--color-accent)] hover:text-[var(--color-accent-hover)] underline"
                             >
                                 {t.wikipedia}
                             </a>
@@ -71,8 +71,8 @@ export function ConflictTimelineEntry({
                     </div>
                 </div>
             </div>
-            <div className="absolute -right-1 top-1 w-1 h-1 bg-orange-500 border border-white dark:border-zinc-900 rounded-full shadow" />
-            <p className="absolute bottom-0 right-1 text-xs text-slate-500 dark:text-slate-400">
+            <div className="absolute -right-1 top-1 w-1 h-1 bg-[var(--color-accent)] border border-[var(--color-background)] rounded-full shadow" />
+            <p className="absolute bottom-0 right-1 text-xs text-[var(--color-muted-foreground)]">
                 {conflict.timestamp}
             </p>
         </div>
