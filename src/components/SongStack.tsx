@@ -172,12 +172,12 @@ export function SongStack({ songs, lang, t, labels, year }: SongStackProps) {
                         </div>
                     )}
                 </div>
-                <div className="mt-3 flex items-center gap-2 text-xs font-medium text-slate-500 dark:text-slate-400">
+                <div className="mt-3 flex items-center gap-2 text-xs font-medium text-[var(--color-muted-foreground)]">
                     <span className="transition-opacity duration-200 opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 group-focus-within:opacity-100">
                         {labels.viewAll}
                     </span>
                     <span
-                        className={`rounded-full bg-slate-200/70 px-2 py-0.5 text-slate-700 dark:bg-slate-700/70 dark:text-slate-200 ${lang === 'he' ? 'text-right' : ''}`}
+                        className={`rounded-full bg-[color:var(--color-muted)]/70 px-2 py-0.5 text-[var(--color-foreground)]/80 ${lang === 'he' ? 'text-right' : ''}`}
                         dir={lang === 'he' ? 'rtl' : undefined}
                     >
                         {getSongCountLabel()}
@@ -223,7 +223,7 @@ export function SongStack({ songs, lang, t, labels, year }: SongStackProps) {
                                     timestamp={entry.timestamp}
                                     leaning={entry.leaning}
                                     showMarginTop={false}
-                                    className="ml-0 mr-0 w-full max-w-full bg-white/95 text-left shadow-xl ring-1 ring-slate-200 backdrop-blur dark:bg-zinc-900/95 dark:ring-zinc-700"
+                                    className="ml-0 mr-0 w-full max-w-full bg-[var(--color-card-background)] text-left shadow-xl border border-[var(--color-border)]"
                                     variant="full"
                                 />
                             ))}
