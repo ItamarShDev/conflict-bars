@@ -90,13 +90,16 @@ export function SongTimelineEntry({
             )}
 
             {!isCompact && lyricSample && lyricContent && (
-                <p className="text-sm text-[var(--color-muted-foreground)] opacity-90">
+                <p 
+                    className={`text-sm text-[var(--color-muted-foreground)] opacity-90 ${lang === 'he' ? 'text-right' : ''}`}
+                    dir={lang === 'he' && lyricSample?.hebrew ? 'rtl' : 'ltr'}
+                >
                     "{lyricContent}"
                 </p>
             )}
 
             {!isCompact && links && (
-                <div className="flex gap-3 text-sm">
+                <div className={`flex gap-3 text-sm ${lang === 'he' ? 'flex-row-reverse' : ''}`}>
                     {links?.lyrics && (
                         <a
                             href={links.lyrics}

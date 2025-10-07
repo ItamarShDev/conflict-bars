@@ -46,34 +46,34 @@ export default async function TimelinePage({ params }: { params: Promise<{ lang:
     const yearGroups = getEntriesByYear(timeline);
     const baseYearSpacing = 80;
     return (
-        <main className="min-h-screen bg-white dark:bg-zinc-900">
+        <main className="dark:bg-zinc-900 min-h-screen bg-white">
             {/* Client component for sticky header with scroll detection */}
 
-            <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+            <div className="sm:px-6 lg:px-8 px-4 py-10 mx-auto max-w-7xl">
                 <h1 className={`text-center text-3xl font-bold tracking-tight ${lang === 'he' ? 'text-slate-900' : 'text-slate-900'} dark:text-slate-100`}>{t.title}</h1>
 
-                <div className="mt-10 relative">
-                    <div className="absolute left-1/2 -ml-px top-0 bottom-0 w-px bg-slate-200 dark:bg-slate-700" aria-hidden />
+                <div className="relative mt-10">
+                    <div className="bg-slate-200 dark:bg-slate-700 absolute top-0 bottom-0 left-1/2 -ml-px w-px" aria-hidden />
 
                     <ul className="relative pb-24">
                         {yearGroups.map(([year, entries], idx) => {
                             const showYear = idx === 0 || year !== yearGroups[idx - 1]?.[0];
                             const previousYear = yearGroups[idx - 1]?.[0];
                             const yearGap = idx === 0 || !previousYear ? 0 : Math.max(1, year - previousYear);
-                            const marginTop = idx === 0 ? 0 : yearGap * baseYearSpacing;
+                            const marginTop = idx === 0 ? 0 : yearGap * baseYearSpacing + ;
 
                             // Separate songs and conflicts for this year
                             const songs = entries.filter(e => e.type === 'song');
                             const conflicts = entries.filter(e => e.type === 'conflict');
 
                             return (
-                                <li key={year} className="relative group" style={{ marginTop }}>
+                                <li key={year} className="group relative" style={{ marginTop }}>
                                     {showYear && (
                                         <div
                                             className={`absolute left-1/2 -translate-x-1/2 text-center hidden 
                                                 -top-4 md:block ${lang === 'he' ? 'text-right' : 'text-left'}`}
                                         >
-                                            <div className="text-sm font-semibold text-slate-700 dark:text-slate-300 tabular-nums">{year}</div>
+                                            <div className="text-slate-700 dark:text-slate-300 text-sm font-semibold tabular-nums">{year}</div>
                                         </div>
                                     )}
 
