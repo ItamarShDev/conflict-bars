@@ -60,7 +60,7 @@ export default async function TimelinePage({ params }: { params: Promise<{ lang:
                             const showYear = idx === 0 || year !== yearGroups[idx - 1]?.[0];
                             const previousYear = yearGroups[idx - 1]?.[0];
                             const yearGap = idx === 0 || !previousYear ? 0 : Math.max(1, year - previousYear);
-                            const marginTop = idx === 0 ? 0 : yearGap * baseYearSpacing + ;
+                            const marginTop = idx === 0 ? 0 : yearGap * baseYearSpacing;
 
                             // Separate songs and conflicts for this year
                             const songs = entries.filter(e => e.type === 'song');
