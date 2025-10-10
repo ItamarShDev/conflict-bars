@@ -1,10 +1,10 @@
 import { artistPoliticalAffiliation } from "@/app/timeline/atrist-political-affiliation";
 import {
 	type ConflictEntry,
-	parseConflictsForTimeline,
 	detectOverlappingConflicts,
+	parseConflictsForTimeline,
 } from "@/app/timeline/conflict-utils";
-import type { Song, SongList, EventsTimeline } from "@/app/timeline/types";
+import type { EventsTimeline, Song, SongList } from "@/app/timeline/types";
 
 // Helper to determine political leaning
 function getArtistLeaning(
@@ -65,15 +65,16 @@ export function getEntriesByYear(
 ): YearGroup[] {
 	const songEntries = timeline
 		.flatMap((t) => {
+			const year = parseStartYear(t.published_date);
 			return {
-				year: parseStartYear(t.published_date),
+				year,
 				timestamp: new Date(t.published_date).toLocaleDateString(),
 				song: t,
 				leaning: getArtistLeaning(t.artist),
 			};
 		})
-		.filter((e) => e.year !== null)
-		.sort((a, b) => a.year! - b.year!);
+		.filter((entry) => Number.isFinite(entry.year))
+		.sort((a, b) => a.year - b.year);
 
 	// Process conflicts with side-by-side layout logic
 	const rawConflicts = parseConflictsForTimeline(conflicts);
@@ -112,7 +113,10 @@ export function getEntriesByYear(
 		if (!entriesByYear.has(entry.year)) {
 			entriesByYear.set(entry.year, []);
 		}
-		entriesByYear.get(entry.year)!.push(entry);
+		const yearEntries = entriesByYear.get(entry.year);
+		if (yearEntries) {
+			yearEntries.push(entry);
+		}
 	});
 
 	// Convert to array of year groups for rendering

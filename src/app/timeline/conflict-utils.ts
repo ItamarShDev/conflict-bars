@@ -1,4 +1,4 @@
-import { EventsTimeline } from "./types";
+import type { EventsTimeline } from "./types";
 
 export interface ConflictEntry {
 	id: string;
@@ -114,7 +114,7 @@ export function detectOverlappingConflicts(
 		if (!conflictsByYear.has(conflict.year)) {
 			conflictsByYear.set(conflict.year, []);
 		}
-		conflictsByYear.get(conflict.year)!.push(conflict);
+		conflictsByYear.get(conflict.year)?.push(conflict);
 	});
 
 	// Assign position indices to conflicts within each year

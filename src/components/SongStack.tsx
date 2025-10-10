@@ -1,7 +1,7 @@
 "use client";
 
-import type { Song } from "@/app/timeline/types";
 import { useEffect, useMemo, useState } from "react";
+import type { Song } from "@/app/timeline/types";
 import type { SongTranslations } from "./SongTimelineEntry";
 import { ExpandedModal } from "./song-stack/ExpandedModal";
 import { getSongCountText } from "./song-stack/SongCountLabel";

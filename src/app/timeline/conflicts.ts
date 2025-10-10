@@ -1,4 +1,4 @@
-import { EventsTimeline } from "./types";
+import type { EventsTimeline } from "./types";
 
 export const israeliConflicts: EventsTimeline[] = [
 	{

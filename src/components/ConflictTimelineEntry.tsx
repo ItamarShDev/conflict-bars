@@ -45,12 +45,6 @@ export function ConflictTimelineEntry({
 
 	return (
 		<div
-			tabIndex={0}
-			onPointerDown={(event) => {
-				if (event.pointerType !== "mouse") {
-					event.currentTarget.focus();
-				}
-			}}
 			className={`absolute z-0 ml-2 mr-10 bg-slate-100 dark:bg-neutral-800 border-slate-300 dark:border-slate-600 border rounded-md p-4 shadow-sm transition-all duration-200 hover:z-50 
                  hover:ring-2 hover:ring-[var(--color-accent)] hover:shadow-lg focus:outline-none focus:z-50 focus:ring-2 focus:ring-[var(--color-accent)] focus:shadow-lg ${t.lang === "he" ? "text-right" : ""}`}
 		>

@@ -1,4 +1,4 @@
-import { SongList } from "../types";
+import type { SongList } from "../types";
 
 export const mooki2000s: SongList = [
 	{
