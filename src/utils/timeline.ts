@@ -1,7 +1,6 @@
 import { artistPoliticalAffiliation } from '@/app/timeline/atrist-political-affiliation';
 import { type ConflictEntry, parseConflictsForTimeline, detectOverlappingConflicts } from '@/app/timeline/conflict-utils';
-import { israeliConflicts } from '@/app/timeline/conflicts';
-import type { Song, SongList } from '@/app/timeline/types';
+import type { Song, SongList, EventsTimeline } from '@/app/timeline/types';
 
 
 // Helper to determine political leaning
@@ -51,7 +50,7 @@ type TimelineEntryItem = {
 
 type YearGroup = [number, TimelineEntryItem[]];
 
-export function getEntriesByYear(timeline: SongList): YearGroup[] {
+export function getEntriesByYear(timeline: SongList, conflicts: EventsTimeline[]): YearGroup[] {
     const songEntries = timeline
         .flatMap((t) => {
             return {
@@ -65,7 +64,7 @@ export function getEntriesByYear(timeline: SongList): YearGroup[] {
         .sort((a, b) => (a.year! - b.year!));
 
     // Process conflicts with side-by-side layout logic
-    const rawConflicts = parseConflictsForTimeline(israeliConflicts);
+    const rawConflicts = parseConflictsForTimeline(conflicts);
     const processedConflicts = detectOverlappingConflicts(rawConflicts);
 
     // Combine songs and conflicts into a single timeline

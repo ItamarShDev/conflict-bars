@@ -20,6 +20,7 @@ Where possible, entries should be concise, sourced, and written in a neutral ton
 - TypeScript 5.x
 - Tailwind CSS v4
 - ESLint 9
+- Convex (Database & Backend)
 
 Project structure follows `src/` with `@/*` path alias.
 
@@ -41,7 +42,33 @@ Project structure follows `src/` with `@/*` path alias.
 npm install
 ```
 
-2) Start the dev server
+2) Start the Convex development server (required)
+
+```bash
+npx convex dev
+```
+
+This will:
+- Create a Convex deployment (or connect to existing)
+- Generate type-safe API code
+- Set up environment variables
+- Watch for changes to Convex functions
+
+**Keep this terminal running.**
+
+3) Migrate data to Convex (first time only)
+
+In a new terminal:
+
+```bash
+npm run migrate
+```
+
+This populates your Convex database with existing songs and events data.
+
+4) Start the Next.js dev server
+
+In another terminal:
 
 ```bash
 npm run dev
@@ -49,27 +76,49 @@ npm run dev
 
 Open http://localhost:3000
 
+**Note:** The Convex dev server must be running for the app to work.
+
 ## Available Scripts
 
 - `npm run dev` — start development server
 - `npm run build` — production build (Next.js with Turbopack)
 - `npm run start` — start production server
 - `npm run lint` — run ESLint on `src`
+- `npm run migrate` — migrate data to Convex database
+- `npx convex dev` — start Convex development server
+- `npx convex dashboard` — open Convex dashboard in browser
 
 ## Timeline Content Model
 
-Timeline content is organized by artist and decade under `src/app/timeline/`, for example:
+### Database (Convex)
+
+Timeline data is now stored in Convex database with two main tables:
+
+- **songs** — Song entries with artist, date, lyrics, links
+- **events** — Conflict/event entries with dates, descriptions, effects
+
+You can view and manage data at https://dashboard.convex.dev
+
+### Schema & Queries
+
+- `convex/schema.ts` — Database schema definition
+- `convex/songs.ts` — Song queries
+- `convex/events.ts` — Event queries
+- `convex/mutations.ts` — Data mutations
+
+### Legacy Data Files
+
+Original data files are kept in `src/app/timeline/` for reference and migration:
 
 - `src/app/timeline/tuna/2010s.ts`
-- `src/app/timeline/tuna/2020s.ts`
 - `src/app/timeline/subliminal/2010s.ts`
-- `src/app/timeline/peled/2010s.ts`
+- `src/app/timeline/conflicts.ts`
 
-Each file exports typed data for events that power the UI. Add or edit files to extend the timeline.
-
-There is also metadata such as political affiliation under files like:
+Metadata like political affiliation is still in:
 
 - `src/app/timeline/atrist-political-affiliation.ts`
+
+For detailed migration information, see [CONVEX_MIGRATION.md](./CONVEX_MIGRATION.md)
 
 ## Internationalization
 
