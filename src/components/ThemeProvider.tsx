@@ -1,18 +1,22 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-export default function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [isMounted, setIsMounted] = useState(false);
+export default function ThemeProvider({
+	children,
+}: {
+	children: React.ReactNode;
+}) {
+	const [isMounted, setIsMounted] = useState(false);
 
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+	useEffect(() => {
+		setIsMounted(true);
+	}, []);
 
-  // Only render children after component is mounted to avoid hydration mismatch
-  if (!isMounted) {
-    return <>{children}</>;
-  }
+	// Only render children after component is mounted to avoid hydration mismatch
+	if (!isMounted) {
+		return <>{children}</>;
+	}
 
-  return <>{children}</>;
+	return <>{children}</>;
 }

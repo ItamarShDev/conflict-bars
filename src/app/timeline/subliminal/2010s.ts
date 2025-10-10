@@ -1,5 +1,3 @@
-import { SongList } from '../types';
+import { SongList } from "../types";
 
-export const subliminal2010s: SongList = [
-
-];
+export const subliminal2010s: SongList = [];

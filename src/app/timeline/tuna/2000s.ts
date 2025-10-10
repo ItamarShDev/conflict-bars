@@ -1,5 +1,3 @@
-import { SongList } from '../types';
+import { SongList } from "../types";
 
-export const tuna2000s: SongList = [
-];
-
+export const tuna2000s: SongList = [];

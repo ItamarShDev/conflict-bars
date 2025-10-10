@@ -1,4 +1,3 @@
-import { SongList } from '../types';
+import { SongList } from "../types";
 
-export const sagol592010s: SongList = [
-];
+export const sagol592010s: SongList = [];

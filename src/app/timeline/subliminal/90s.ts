@@ -1,3 +1,3 @@
-import { SongList } from '../types';
+import { SongList } from "../types";
 
-export const subliminal90s: SongList = []
+export const subliminal90s: SongList = [];
