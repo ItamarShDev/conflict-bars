@@ -38,6 +38,23 @@ export const translations = {
 					"Something went wrong while submitting the song. Please try again.",
 			},
 		},
+		helpModal: {
+			buttonLabel: "How it works",
+			buttonAria: "Open site explanation",
+			modalTitle: "How to read this timeline",
+			description: {
+				intro: "This site visualizes key moments in the Israeli hip-hop scene alongside major conflicts.",
+				columns: {
+					left: "Left column: Israeli major conflicts",
+					right: "Right column: Songs released in the same period",
+				},
+				borders:
+					"Card borders indicate political leaning — red for left, blue for right, gray for unknown.",
+				submissions:
+					"Want to contribute? Use the Submit a Song button to share missing tracks or context.",
+			},
+			close: "Close",
+		},
 		stack: {
 			viewAll: "View songs",
 			close: "Close",
@@ -82,6 +99,23 @@ export const translations = {
 				generic: "משהו השתבש בשליחת השיר. נסה שוב בבקשה.",
 			},
 		},
+		helpModal: {
+			buttonLabel: "איך זה עובד",
+			buttonAria: "פתח הסבר על האתר",
+			modalTitle: "איך לקרוא את הציר",
+			description: {
+				intro: "האתר מציג אירועים מרכזיים בסצנת ההיפ-הופ הישראלי לצד סכסוכים משמעותיים.",
+				columns: {
+					left: "צד שמאל: סכסוכים מרכזיים בישראל",
+					right: "צד ימין: שירים שיצאו באותה תקופה",
+				},
+				borders:
+					"מסגרת הכרטיס מציינת נטייה פוליטית — אדום לשמאל, כחול לימין, אפור ללא ידוע.",
+				submissions:
+					"רוצים להוסיף? לחצו על כפתור הוסף שיר ושלחו שיר או מידע שחסר.",
+			},
+			close: "סגור",
+		},
 		stack: {
 			viewAll: "הצג שירים",
 			close: "סגור",
@@ -92,3 +126,4 @@ export const translations = {
 
 export type SubmitSongFormTranslations =
 	(typeof translations)["en"]["submitSongForm"];
+export type HelpModalTranslations = (typeof translations)["en"]["helpModal"];
