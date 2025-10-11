@@ -1,5 +1,5 @@
 import type { Song } from "@/app/timeline/types";
-import { SongTimelineEntry, type SongTranslations } from "../SongTimelineEntry";
+import { SongEntry } from "../timeline/SongEntry";
 
 type SongStackItem = {
 	song: Song;
@@ -10,34 +10,30 @@ type SongStackItem = {
 type StackedCardsProps = {
 	songs: SongStackItem[];
 	lang: "en" | "he";
-	t: SongTranslations;
 	isExpanded: boolean;
 	isOverlayVisible: boolean;
-	stackRotations: number[];
-	stackScales: number[];
-	stackTranslate: number;
-	stackOverlap: number;
 };
+
+const STACK_TRANSLATE = -40;
+const STACK_ROTATIONS = [-1.8, 1.2, -0.9, 1.6];
+const STACK_SCALES = [0.94, 0.96, 0.92, 0.95];
 
 export function StackedCards({
 	songs,
 	lang,
-	t,
 	isExpanded,
 	isOverlayVisible,
-	stackRotations,
-	stackScales,
-	stackTranslate,
-	stackOverlap,
 }: StackedCardsProps) {
 	return (
 		<div
-			className={`relative transition-all duration-300 ease-out ${isOverlayVisible ? "pointer-events-none" : ""} ${isExpanded ? "opacity-0 scale-95" : "opacity-100 scale-100"}`}
+			className={`transition-all duration-300 ease-out ${isOverlayVisible ? "pointer-events-none" : ""} ${isExpanded ? "opacity-0 scale-95" : "opacity-100 scale-100"}`}
 		>
 			{songs.map((entry, idx) => {
-				const transform = `translateY(${idx * stackTranslate}px) rotate(${stackRotations[idx % stackRotations.length]}deg) scale(${stackScales[idx % stackScales.length]})`;
-				const marginTop = idx === 0 ? undefined : -stackOverlap;
-				const zIndex = songs.length - idx;
+				const rotationIndex = Math.abs(Math.floor(Math.random() * 10) - 7);
+				const rotation =
+					STACK_ROTATIONS[rotationIndex % STACK_ROTATIONS.length];
+				const yTranslate = (idx - songs.length / 2) * STACK_TRANSLATE;
+				const transform = `translateY(${yTranslate}px) rotate(${rotation}deg) scale(${STACK_SCALES[idx % STACK_SCALES.length]})`;
 				return (
 					<div
 						key={`${entry.song.artist}-${entry.song.name}-${idx}`}
@@ -46,14 +42,11 @@ export function StackedCards({
 							transform: isExpanded
 								? "translateY(0) rotate(0deg) scale(1)"
 								: transform,
-							marginTop,
-							zIndex,
 						}}
 					>
-						<SongTimelineEntry
+						<SongEntry
 							song={entry.song}
 							lang={lang}
-							t={t}
 							timestamp={entry.timestamp}
 							leaning={entry.leaning}
 							showMarginTop={idx === 0}

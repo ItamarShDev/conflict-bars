@@ -1,0 +1,36 @@
+export const translations = {
+  en: {
+    title: "Timeline",
+    subtitle: "Direction is the political leaning of the artist",
+    lyrics: "Lyrics",
+    info: "Info",
+    conflict: "Conflict",
+    reason: "Reason",
+    wikipedia: "Wikipedia",
+    youtube: "YouTube",
+    description: "Description",
+    effects: "Effects",
+    stack: {
+      viewAll: "View songs",
+      close: "Close",
+      songsLabel: "songs",
+    },
+  },
+  he: {
+    title: "ציר זמן",
+    subtitle: "בכיוון הנטייה הפוליטית",
+    lyrics: "מילים",
+    info: "מידע",
+    conflict: "סכסוך",
+    reason: "סיבה",
+    wikipedia: "ויקיפדיה",
+    youtube: "יוטיוב",
+    description: "תיאור",
+    effects: "השפעות",
+    stack: {
+      viewAll: "הצג שירים",
+      close: "סגור",
+      songsLabel: "שירים",
+    },
+  },
+};

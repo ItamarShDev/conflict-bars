@@ -2,17 +2,10 @@
 
 import { useEffect, useMemo, useState } from "react";
 import type { Song } from "@/app/timeline/types";
-import type { SongTranslations } from "./SongTimelineEntry";
+import { translations } from "@/components/timeline/translations";
 import { ExpandedModal } from "./song-stack/ExpandedModal";
 import { getSongCountText } from "./song-stack/SongCountLabel";
 import { StackedCards } from "./song-stack/StackedCards";
-import { TapToOpenBadge } from "./song-stack/TapToOpenBadge";
-
-type SongStackTranslations = {
-	viewAll: string;
-	close: string;
-	songsLabel: string;
-};
 
 type SongStackItem = {
 	song: Song;
@@ -23,18 +16,13 @@ type SongStackItem = {
 type SongStackProps = {
 	songs: SongStackItem[];
 	lang: "en" | "he";
-	t: SongTranslations;
-	labels: SongStackTranslations;
 	year: number;
 };
 
-const STACK_OVERLAP = 140;
-const STACK_TRANSLATE = 2;
-const STACK_ROTATIONS = [-1.8, 1.2, -0.9, 1.6];
-const STACK_SCALES = [0.94, 0.96, 0.92, 0.95];
 const OVERLAY_TRANSITION_MS = 350;
 
-export function SongStack({ songs, lang, t, labels, year }: SongStackProps) {
+export function SongStack({ songs, lang, year }: SongStackProps) {
+	const t = translations[lang];
 	const [isExpanded, setIsExpanded] = useState(false);
 	const [isOverlayVisible, setIsOverlayVisible] = useState(false);
 	const [isMounted, setIsMounted] = useState(false);
@@ -82,7 +70,7 @@ export function SongStack({ songs, lang, t, labels, year }: SongStackProps) {
 
 	const collapsedCards = useMemo(() => songs, [songs]);
 	const songCount = songs.length;
-	const songCountText = getSongCountText(lang, songCount, labels.songsLabel);
+	const songCountText = getSongCountText(lang, songCount, t.stack.songsLabel);
 
 	const openStack = () => {
 		if (isOverlayVisible) {
@@ -104,41 +92,32 @@ export function SongStack({ songs, lang, t, labels, year }: SongStackProps) {
 	}
 
 	return (
-		<div className="mt-4" aria-hidden={songCount === 0}>
+		<>
 			<button
 				type="button"
 				onClick={openStack}
-				className={`group relative block w-full text-left focus:outline-none ${lang === "he" ? "text-right" : ""}`}
+				className={`w-full text-left focus:outline-none ${lang === "he" ? "text-right" : ""}`}
 				aria-expanded={isExpanded}
-				aria-label={`${labels.viewAll} ${songCountText}`}
+				aria-label={`${t.stack.viewAll} ${songCountText}`}
 			>
 				<StackedCards
 					songs={collapsedCards}
 					lang={lang}
-					t={t}
 					isExpanded={isExpanded}
 					isOverlayVisible={isOverlayVisible}
-					stackRotations={STACK_ROTATIONS}
-					stackScales={STACK_SCALES}
-					stackTranslate={STACK_TRANSLATE}
-					stackOverlap={STACK_OVERLAP}
 				/>
-				<TapToOpenBadge lang={lang} isExpanded={isExpanded} />
 			</button>
 
 			{isMounted && isOverlayVisible && (
 				<ExpandedModal
 					songs={songs}
 					lang={lang}
-					t={t}
 					year={year}
 					isExpanded={isExpanded}
 					onClose={closeStack}
-					viewAllLabel={labels.viewAll}
-					closeLabel={labels.close}
 					songCountText={songCountText}
 				/>
 			)}
-		</div>
+		</>
 	);
 }

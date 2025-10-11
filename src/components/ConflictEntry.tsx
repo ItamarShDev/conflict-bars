@@ -1,6 +1,7 @@
 "use client";
 
-import type { ConflictEntry } from "@/app/timeline/conflict-utils";
+import type { ConflictEntry as ConflictEntryType } from "@/app/timeline/conflict-utils";
+import { translations } from "@/components/timeline/translations";
 import { ConflictDetail } from "./conflict/ConflictDetail";
 import { ConflictHeader } from "./conflict/ConflictHeader";
 import { ConflictIndicator } from "./conflict/ConflictIndicator";
@@ -18,35 +19,30 @@ export type ConflictTranslations = {
 };
 
 interface ConflictTimelineEntryProps {
-	conflict: ConflictEntry;
+	conflict: ConflictEntryType;
 	lang: "en" | "he";
-	t: ConflictTranslations;
 }
 
-export function ConflictTimelineEntry({
-	conflict,
-	t,
-}: ConflictTimelineEntryProps) {
+export function ConflictEntry({ conflict, lang }: ConflictTimelineEntryProps) {
+	const t = translations[lang];
 	// Use Hebrew translations if language is Hebrew, otherwise use English
 	const title =
-		t.lang === "he" && conflict.title_he ? conflict.title_he : conflict.title;
+		lang === "he" && conflict.title_he ? conflict.title_he : conflict.title;
 	const reason =
-		t.lang === "he" && conflict.reason_he
-			? conflict.reason_he
-			: conflict.reason;
+		lang === "he" && conflict.reason_he ? conflict.reason_he : conflict.reason;
 	const description =
-		t.lang === "he" && conflict.description_he
+		lang === "he" && conflict.description_he
 			? conflict.description_he
 			: conflict.description;
 	const effects =
-		t.lang === "he" && conflict.effects_he
+		lang === "he" && conflict.effects_he
 			? conflict.effects_he
 			: conflict.effects;
 
 	return (
 		<div
-			className={`absolute z-0 ml-2 mr-10 bg-slate-100 dark:bg-neutral-800 border-slate-300 dark:border-slate-600 border rounded-md p-4 shadow-sm transition-all duration-200 hover:z-50 
-                 hover:ring-2 hover:ring-[var(--color-accent)] hover:shadow-lg focus:outline-none focus:z-50 focus:ring-2 focus:ring-[var(--color-accent)] focus:shadow-lg ${t.lang === "he" ? "text-right" : ""}`}
+			className={`z-0 ml-2 mr-10 bg-slate-100 dark:bg-neutral-800 border-slate-300 dark:border-slate-600 border rounded-md p-4 shadow-sm transition-all duration-200 hover:z-50 
+                 hover:ring-2 hover:ring-[var(--color-accent)] hover:shadow-lg focus:outline-none focus:z-50 focus:ring-2 focus:ring-[var(--color-accent)] focus:shadow-lg ${lang === "he" ? "text-right" : ""}`}
 		>
 			<div className="flex gap-1 items-start h-full">
 				<div className="flex-1 min-w-0">

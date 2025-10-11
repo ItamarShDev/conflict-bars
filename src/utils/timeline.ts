@@ -26,7 +26,7 @@ function parseStartYear(timestamp: string): number {
 	return new Date(timestamp).getFullYear();
 }
 
-type TimelineEntryItem =
+export type TimelineEntryItem =
 	| {
 			type: "song";
 			year: number;
@@ -57,7 +57,7 @@ type TimelineEntryItem =
 			position: number;
 	  };
 
-type YearGroup = [number, TimelineEntryItem[]];
+export type YearGroup = [number, TimelineEntryItem[]];
 
 export function getEntriesByYear(
 	timeline: SongList,

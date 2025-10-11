@@ -1,5 +1,6 @@
 import type { Song } from "@/app/timeline/types";
-import { SongTimelineEntry, type SongTranslations } from "../SongTimelineEntry";
+import { translations } from "@/components/timeline/translations";
+import { SongEntry } from "../timeline/SongEntry";
 import { ModalHeader } from "./ModalHeader";
 
 type SongStackItem = {
@@ -11,26 +12,21 @@ type SongStackItem = {
 type ExpandedModalProps = {
   songs: SongStackItem[];
   lang: "en" | "he";
-  t: SongTranslations;
   year: number;
   isExpanded: boolean;
   onClose: () => void;
-  viewAllLabel: string;
-  closeLabel: string;
   songCountText: string;
 };
 
 export function ExpandedModal({
   songs,
   lang,
-  t,
   year,
   isExpanded,
   onClose,
-  viewAllLabel,
-  closeLabel,
   songCountText,
 }: ExpandedModalProps) {
+  const t = translations[lang];
   return (
     <dialog
       open={isExpanded}
@@ -58,18 +54,17 @@ export function ExpandedModal({
         <ModalHeader
           lang={lang}
           year={year}
-          viewAllLabel={viewAllLabel}
+          viewAllLabel={t.stack.viewAll}
           songCountText={songCountText}
-          closeLabel={closeLabel}
+          closeLabel={t.stack.close}
           onClose={onClose}
         />
         <div className="mt-8 grid gap-6 md:grid-cols-2">
           {songs.map((entry, idx) => (
-            <SongTimelineEntry
+            <SongEntry
               key={`${entry.song.artist}-${entry.song.name}-expanded-${idx}`}
               song={entry.song}
               lang={lang}
-              t={t}
               timestamp={entry.timestamp}
               leaning={entry.leaning}
               showMarginTop={false}
