@@ -1,7 +1,13 @@
 {
 	"$schema": "https://biomejs.dev/schemas/2.2.5/schema.json",
 	"files": {
-		"includes": ["**", "!**/node_modules", "!**/.next"]
+		"includes": [
+			"**",
+			"!**/node_modules",
+			"!**/.next",
+			"!**/convex/_generated",
+			"!**/.vscode"
+		]
 	},
 	"linter": {
 		"enabled": true,

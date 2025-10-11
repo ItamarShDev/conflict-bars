@@ -6,6 +6,7 @@ export default defineSchema({
 		name: v.string(),
 		artist: v.string(),
 		published_date: v.string(),
+		published: v.optional(v.boolean()),
 		language: v.optional(v.string()),
 		lyric_sample: v.optional(
 			v.object({
@@ -20,9 +21,16 @@ export default defineSchema({
 				youtube: v.optional(v.string()),
 			}),
 		),
+		submitted_by: v.optional(v.id("users")),
 	})
 		.index("by_published_date", ["published_date"])
-		.index("by_artist", ["artist"]),
+		.index("by_artist", ["artist"])
+		.index("by_submitted_by", ["submitted_by"]),
+
+	users: defineTable({
+		display_name: v.string(),
+		email: v.optional(v.string()),
+	}).index("by_email", ["email"]),
 
 	events: defineTable({
 		start: v.string(),

@@ -1,10 +1,10 @@
 import { Timeline } from "@/components/timeline/Timeline";
 
 export default async function TimelinePage({
-  params,
+	params,
 }: {
-  params: Promise<{ lang: "en" | "he" }>;
+	params: Promise<{ lang: "en" | "he" }>;
 }) {
-  const { lang } = await params;
-  return <Timeline lang={lang} />;
+	const { lang } = await params;
+	return <Timeline lang={lang} />;
 }

@@ -1,4 +1,5 @@
 import { v } from "convex/values";
+import type { Id } from "./_generated/dataModel";
 import { mutation } from "./_generated/server";
 
 export const insertSong = mutation({
@@ -6,6 +7,7 @@ export const insertSong = mutation({
 		name: v.string(),
 		artist: v.string(),
 		published_date: v.string(),
+		published: v.optional(v.boolean()),
 		language: v.optional(v.string()),
 		lyric_sample: v.optional(
 			v.object({
@@ -20,9 +22,13 @@ export const insertSong = mutation({
 				youtube: v.optional(v.string()),
 			}),
 		),
+		submitted_by: v.optional(v.id("users")),
 	},
 	handler: async (ctx, args) => {
-		return await ctx.db.insert("songs", args);
+		return await ctx.db.insert("songs", {
+			...args,
+			published: args.published ?? false,
+		});
 	},
 });
 
@@ -62,5 +68,68 @@ export const clearAllEvents = mutation({
 		for (const event of events) {
 			await ctx.db.delete(event._id);
 		}
+	},
+});
+
+export const publishAllSongs = mutation({
+	args: {},
+	handler: async (ctx) => {
+		const songs = await ctx.db.query("songs").collect();
+		for (const song of songs) {
+			await ctx.db.patch(song._id, {
+				published: true,
+			});
+		}
+	},
+});
+
+export const submitSongWithUser = mutation({
+	args: {
+		userDisplayName: v.string(),
+		userEmail: v.optional(v.string()),
+		song: v.object({
+			name: v.string(),
+			artist: v.string(),
+			published_date: v.string(),
+			language: v.optional(v.string()),
+			lyric_sample: v.optional(
+				v.object({
+					hebrew: v.optional(v.string()),
+					english_translation: v.optional(v.string()),
+				}),
+			),
+			links: v.optional(
+				v.object({
+					lyrics: v.optional(v.string()),
+					song_info: v.optional(v.string()),
+					youtube: v.optional(v.string()),
+				}),
+			),
+		}),
+	},
+	handler: async (ctx, args) => {
+		const displayName = args.userDisplayName.trim();
+		const email = args.userEmail?.trim().toLowerCase();
+		let userId: Id<"users"> | undefined;
+		if (email) {
+			const existing = await ctx.db
+				.query("users")
+				.withIndex("by_email", (q) => q.eq("email", email))
+				.first();
+			if (existing) {
+				userId = existing._id;
+			}
+		}
+		if (!userId) {
+			userId = await ctx.db.insert("users", {
+				display_name: displayName,
+				email: email ?? undefined,
+			});
+		}
+		return await ctx.db.insert("songs", {
+			...args.song,
+			published: false,
+			submitted_by: userId,
+		});
 	},
 });

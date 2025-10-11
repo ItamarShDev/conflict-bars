@@ -29,9 +29,12 @@ export function StackedCards({
 			className={`transition-all duration-300 ease-out ${isOverlayVisible ? "pointer-events-none" : ""} ${isExpanded ? "opacity-0 scale-95" : "opacity-100 scale-100"}`}
 		>
 			{songs.map((entry, idx) => {
-				const rotationIndex = Math.abs(Math.floor(Math.random() * 10) - 7);
-				const rotation =
-					STACK_ROTATIONS[rotationIndex % STACK_ROTATIONS.length];
+				const rotationKey = `${entry.song.artist}-${entry.song.name}`;
+				const rotationSeed = Array.from(rotationKey).reduce(
+					(accumulator, character) => accumulator + character.charCodeAt(0),
+					0,
+				);
+				const rotation = STACK_ROTATIONS[rotationSeed % STACK_ROTATIONS.length];
 				const yTranslate = (idx - songs.length / 2) * STACK_TRANSLATE;
 				const transform = `translateY(${yTranslate}px) rotate(${rotation}deg) scale(${STACK_SCALES[idx % STACK_SCALES.length]})`;
 				return (

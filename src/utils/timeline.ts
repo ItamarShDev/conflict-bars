@@ -1,4 +1,4 @@
-import { artistPoliticalAffiliation } from "@/app/timeline/atrist-political-affiliation";
+import { artistPoliticalAffiliation } from "@/app/timeline/artist-political-affiliation";
 import {
 	type ConflictEntry,
 	detectOverlappingConflicts,
