@@ -1,3 +1,5 @@
+# Feel free to submit pull requests, or suggest songs
+
 # Welcome to your Convex functions directory!
 
 Write your Convex functions here.
