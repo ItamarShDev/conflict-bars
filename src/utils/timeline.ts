@@ -1,10 +1,10 @@
-import { artistPoliticalAffiliation } from "@/app/timeline/artist-political-affiliation";
+import { artistPoliticalAffiliation } from "../../timeline/artist-political-affiliation";
 import {
 	type ConflictEntry,
 	detectOverlappingConflicts,
 	parseConflictsForTimeline,
-} from "@/app/timeline/conflict-utils";
-import type { EventsTimeline, Song, SongList } from "@/app/timeline/types";
+} from "../../timeline/conflict-utils";
+import type { EventsTimeline, Song, SongList } from "../../timeline/types";
 
 // Helper to determine political leaning
 function getArtistLeaning(

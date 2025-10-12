@@ -1,4 +1,4 @@
-import type { Song } from "@/app/timeline/types";
+import type { Song } from "../../../timeline/types";
 import { SongEntry } from "../timeline/SongEntry";
 
 type SongStackItem = {

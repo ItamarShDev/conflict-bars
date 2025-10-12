@@ -1,4 +1,4 @@
-import type { ConvexEvent, EventsTimeline } from "@/app/timeline/types";
+import type { ConvexEvent, EventsTimeline } from "../../timeline/types";
 
 export function convertConvexEventToTimeline(
 	event: ConvexEvent,

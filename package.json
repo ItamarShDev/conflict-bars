@@ -9,6 +9,7 @@
 		"lint": "biome check .",
 		"format": "biome format --write .",
 		"format:check": "biome format .",
+		"typecheck": "tsc --noEmit",
 		"migrate": "npx tsx scripts/migrate-to-convex.ts"
 	},
 	"dependencies": {

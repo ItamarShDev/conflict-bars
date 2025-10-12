@@ -1,7 +1,7 @@
 "use client";
 
-import type { ConflictEntry as ConflictEntryType } from "@/app/timeline/conflict-utils";
 import { translations } from "@/components/timeline/translations";
+import type { ConflictEntry as ConflictEntryType } from "../../timeline/conflict-utils";
 import { ConflictDetail } from "./conflict/ConflictDetail";
 import { ConflictHeader } from "./conflict/ConflictHeader";
 import { ConflictIndicator } from "./conflict/ConflictIndicator";

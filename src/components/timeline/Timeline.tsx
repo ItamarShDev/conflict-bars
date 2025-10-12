@@ -1,5 +1,4 @@
 import { preloadQuery } from "convex/nextjs";
-import type { ConvexEvent, Song } from "@/app/timeline/types";
 import { SubmitSongModal } from "@/components/SubmitSongModal";
 import { HelpModal } from "@/components/timeline/HelpModal";
 import { TimelineHeader } from "@/components/timeline/TimelineHeader";
@@ -8,6 +7,7 @@ import { YearGroup } from "@/components/timeline/YearGroup";
 import { convertConvexEventsToTimeline } from "@/utils/convex-helpers";
 import { getEntriesByYear } from "@/utils/timeline";
 import { api } from "../../../convex/_generated/api";
+import type { ConvexEvent, Song } from "../../../timeline/types";
 
 export async function Timeline({ lang }: { lang: "en" | "he" }) {
 	const t = translations[lang];

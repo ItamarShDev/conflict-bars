@@ -1,5 +1,5 @@
-import type { Song } from "@/app/timeline/types";
 import { translations } from "@/components/timeline/translations";
+import type { Song } from "../../../timeline/types";
 
 export type SongTranslations = {
 	lyrics: string;
