@@ -18,6 +18,14 @@ const STACK_TRANSLATE = -40;
 const STACK_ROTATIONS = [-1.8, 1.2, -0.9, 1.6];
 const STACK_SCALES = [0.94, 0.96, 0.92, 0.95];
 
+declare module "react" {
+	interface CSSProperties {
+		"--rotate"?: string;
+		"--translate-y"?: string;
+		"--scale"?: string;
+		"--hover-rotate"?: string;
+	}
+}
 export function StackedCards({
 	songs,
 	lang,
@@ -34,17 +42,30 @@ export function StackedCards({
 					(accumulator, character) => accumulator + character.charCodeAt(0),
 					0,
 				);
+
 				const rotation = STACK_ROTATIONS[rotationSeed % STACK_ROTATIONS.length];
 				const yTranslate = (idx - songs.length / 2) * STACK_TRANSLATE;
-				const transform = `translateY(${yTranslate}px) rotate(${rotation}deg) scale(${STACK_SCALES[idx % STACK_SCALES.length]})`;
+
+				const hoveredRotation =
+					STACK_ROTATIONS[(rotationSeed + 1) % STACK_ROTATIONS.length];
+
+				const rotationStyle = isExpanded ? "0deg" : `${rotation}deg`;
+				const hoveredRotationStyle = isExpanded
+					? "0deg"
+					: `${hoveredRotation}deg`;
+				const translateStyle = isExpanded ? "0" : `${yTranslate}px`;
+				const scaleStyle = isExpanded
+					? "1"
+					: `${STACK_SCALES[idx % STACK_SCALES.length]}`;
 				return (
 					<div
 						key={`${entry.song.artist}-${entry.song.name}-${idx}`}
-						className={`transition-transform duration-300 ${!isExpanded ? "hover:translate-y-0 hover:rotate-0" : ""}`}
+						className={`transition-transform duration-300 rotate-(--rotate) translate-y-(--translate-y) scale-(--scale) hover:rotate-(--hover-rotate)`}
 						style={{
-							transform: isExpanded
-								? "translateY(0) rotate(0deg) scale(1)"
-								: transform,
+							"--rotate": rotationStyle,
+							"--translate-y": translateStyle,
+							"--scale": scaleStyle,
+							"--hover-rotate": hoveredRotationStyle,
 						}}
 					>
 						<SongEntry

@@ -30,7 +30,7 @@ export function ExpandedModal({
 	return (
 		<dialog
 			open={isExpanded}
-			className={`fixed inset-0 z-50 h-screen w-full bg-transparent p-0 backdrop:bg-slate-900/70 backdrop-blur-sm transition-opacity duration-300 ${isExpanded ? "opacity-100" : "opacity-0"}`}
+			className={`fixed inset-0 z-50 h-screen w-full bg-transparent p-0 backdrop-grayscale-100 backdrop-blur-sm transition-all duration-300 ${isExpanded ? "opacity-100" : "opacity-0"}`}
 			aria-modal="true"
 			onCancel={(event) => {
 				event.preventDefault();
