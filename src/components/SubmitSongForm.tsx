@@ -18,29 +18,41 @@ export function SubmitSongForm({
 }: SubmitSongFormProps) {
 	const submitSong = useMutation(api.mutations.submitSongWithUser);
 	const songs = useQuery(api.songs.getAllSongs) ?? [];
+	const artists = useQuery(api.artists.getAllArtists) ?? [];
 	const [status, setStatus] = useState<SubmissionStatus>("idle");
 	const [errorMessage, setErrorMessage] = useState<string | null>(null);
 	const artistListId = useId();
 	const languageListId = useId();
 
-	const { artists, languages } = useMemo(() => {
-		const artistSet = new Set<string>();
+	const { artistOptions, languages } = useMemo(() => {
 		const languageSet = new Set<string>();
-
 		for (const song of songs) {
-			if (song.artist) {
-				artistSet.add(song.artist);
-			}
 			if (song.language) {
 				languageSet.add(song.language);
 			}
 		}
+		const artistOptions = artists
+			.map((artist) => ({
+				id: artist._id,
+				name: artist.name,
+			}))
+			.sort((a, b) => a.name.localeCompare(b.name));
 
 		return {
-			artists: Array.from(artistSet).sort((a, b) => a.localeCompare(b)),
+			artistOptions,
 			languages: Array.from(languageSet).sort((a, b) => a.localeCompare(b)),
 		};
-	}, [songs]);
+	}, [songs, artists]);
+
+	const artistNameToId = useMemo(() => {
+		const map = new Map<string, string>();
+		for (const option of artistOptions) {
+			if (option.name) {
+				map.set(option.name.toLowerCase(), option.id as string);
+			}
+		}
+		return map;
+	}, [artistOptions]);
 
 	const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (
 		event,
@@ -74,6 +86,13 @@ export function SubmitSongForm({
 			return;
 		}
 
+		const artistId = artistNameToId.get(artist.toLowerCase());
+		if (!artistId) {
+			setStatus("error");
+			setErrorMessage(translations.errors.required);
+			return;
+		}
+
 		const lyricSample =
 			lyricHebrew || lyricEnglish
 				? {
@@ -98,6 +117,7 @@ export function SubmitSongForm({
 				song: {
 					name: songName,
 					artist,
+					artistId,
 					published_date: publishedDate,
 					language: language ? language : undefined,
 					lyric_sample: lyricSample,
@@ -266,8 +286,8 @@ export function SubmitSongForm({
 					)}
 				</div>
 				<datalist id={artistListId}>
-					{artists.map((artistName) => (
-						<option key={artistName} value={artistName} />
+					{artistOptions.map((option) => (
+						<option key={option.id} value={option.name} />
 					))}
 				</datalist>
 				<datalist id={languageListId}>

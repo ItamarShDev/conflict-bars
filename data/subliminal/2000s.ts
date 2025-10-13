@@ -120,25 +120,6 @@ export const subliminal2000s: SongList = [
 		},
 	},
 	{
-		name: "ביחד ננצח (Beyachad Nenatzeach / Together We Will Win)",
-		artist: "סאבלימינל והצל (Subliminal and The Shadow)",
-		published_date: "2002",
-		language: "Hebrew",
-		lyric_sample: {
-			hebrew:
-				"יד ביד, נשארים ביחד, לא נשברים לעולם / נגד כל הסיכויים, מאוחדים כל העולם / יד ביד, זה הזמן לקום, להיות לגוי אחד חזק / אנחנו לא נוותר, ביחד ננצח.",
-			english_translation:
-				"Hand in hand, we stay together, we will never break / Against all odds, united as one world / Hand in hand, it's time to rise, to be one strong nation / We will not give up, together we will win.",
-		},
-		links: {
-			lyrics:
-				"https://shironet.mako.co.il/artist?type=lyrics&lang=1&prfid=143&wrkid=2787",
-			song_info:
-				"https://he.wikipedia.org/wiki/%D7%94%D7%90%D7%95%D7%A8_%D7%95%D7%94%D7%A6%D7%9C",
-			youtube: "https://www.youtube.com/watch?v=vV7naOfsJZo",
-		},
-	},
-	{
 		name: "במקום הכי נמוך בתל אביב (Ba'Makom Hachi Namuch Be'Tel Aviv / In the Lowest Place in Tel Aviv)",
 		artist: "סאבלימינל (Subliminal)",
 		published_date: "2017-05-22",

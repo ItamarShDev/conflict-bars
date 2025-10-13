@@ -1,4 +1,11 @@
-export const artistPoliticalAffiliation = {
+export const artistPoliticalAffiliation: Record<
+	string,
+	{
+		era: string;
+		affiliation: string;
+		notes: string;
+	}
+> = {
 	"Shabak Samech": {
 		era: "1990s–present",
 		affiliation: "Counterculture / Apolitical",
@@ -94,4 +101,4 @@ export const artistPoliticalAffiliation = {
 		notes:
 			"Pioneering Palestinian hip hop group from Lod; lyrics address occupation, inequality, and identity; known for activist stance and collaborations.",
 	},
-};
+} as const;

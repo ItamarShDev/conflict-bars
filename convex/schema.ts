@@ -2,9 +2,18 @@ import { defineSchema, defineTable } from "convex/server";
 import { v } from "convex/values";
 
 export default defineSchema({
+	artists: defineTable({
+		name: v.string(),
+		normalized_name: v.string(),
+		era: v.optional(v.string()),
+		affiliation: v.optional(v.string()),
+		notes: v.optional(v.string()),
+	}).index("by_normalized_name", ["normalized_name"]),
+
 	songs: defineTable({
 		name: v.string(),
-		artist: v.string(),
+		artist: v.optional(v.string()),
+		artist_id: v.optional(v.id("artists")),
 		published_date: v.string(),
 		published: v.optional(v.boolean()),
 		language: v.optional(v.string()),
@@ -24,7 +33,7 @@ export default defineSchema({
 		submitted_by: v.optional(v.id("users")),
 	})
 		.index("by_published_date", ["published_date"])
-		.index("by_artist", ["artist"])
+		.index("by_artist", ["artist_id"])
 		.index("by_submitted_by", ["submitted_by"]),
 
 	users: defineTable({

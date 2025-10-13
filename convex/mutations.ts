@@ -2,10 +2,61 @@ import { v } from "convex/values";
 import type { Id } from "./_generated/dataModel";
 import { mutation } from "./_generated/server";
 
+function normalizeArtistName(name: string) {
+	return name.trim().toLowerCase();
+}
+
+export const upsertArtist = mutation({
+	args: {
+		name: v.string(),
+		era: v.optional(v.string()),
+		affiliation: v.optional(v.string()),
+		notes: v.optional(v.string()),
+	},
+	handler: async (ctx, args) => {
+		const normalized = normalizeArtistName(args.name);
+		const existing = await ctx.db
+			.query("artists")
+			.withIndex("by_normalized_name", (q) =>
+				q.eq("normalized_name", normalized),
+			)
+			.first();
+		if (existing) {
+			await ctx.db.patch(existing._id, {
+				name: args.name,
+				normalized_name: normalized,
+				era: args.era ?? undefined,
+				affiliation: args.affiliation ?? undefined,
+				notes: args.notes ?? undefined,
+			});
+			return existing._id;
+		}
+		return await ctx.db.insert("artists", {
+			name: args.name,
+			normalized_name: normalized,
+			era: args.era ?? undefined,
+			affiliation: args.affiliation ?? undefined,
+			notes: args.notes ?? undefined,
+		});
+	},
+});
+
+export const assignArtistToSong = mutation({
+	args: {
+		songId: v.id("songs"),
+		artistId: v.id("artists"),
+	},
+	handler: async (ctx, args) => {
+		await ctx.db.patch(args.songId, {
+			artist_id: args.artistId,
+		});
+	},
+});
+
 export const insertSong = mutation({
 	args: {
 		name: v.string(),
-		artist: v.string(),
+		artistId: v.id("artists"),
 		published_date: v.string(),
 		published: v.optional(v.boolean()),
 		language: v.optional(v.string()),
@@ -25,9 +76,11 @@ export const insertSong = mutation({
 		submitted_by: v.optional(v.id("users")),
 	},
 	handler: async (ctx, args) => {
+		const { artistId, published, ...rest } = args;
 		return await ctx.db.insert("songs", {
-			...args,
-			published: args.published ?? false,
+			...rest,
+			artist_id: artistId,
+			published: published ?? false,
 		});
 	},
 });
@@ -89,7 +142,7 @@ export const submitSongWithUser = mutation({
 		userEmail: v.optional(v.string()),
 		song: v.object({
 			name: v.string(),
-			artist: v.string(),
+			artistId: v.id("artists"),
 			published_date: v.string(),
 			language: v.optional(v.string()),
 			lyric_sample: v.optional(
@@ -126,8 +179,10 @@ export const submitSongWithUser = mutation({
 				email: email ?? undefined,
 			});
 		}
+		const { artistId, ...song } = args.song;
 		return await ctx.db.insert("songs", {
-			...args.song,
+			...song,
+			artist_id: artistId,
 			published: false,
 			submitted_by: userId,
 		});

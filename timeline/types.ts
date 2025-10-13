@@ -1,8 +1,20 @@
+export type Artist = {
+	_id?: string;
+	_creationTime?: number;
+	name: string;
+	normalized_name: string;
+	era?: string;
+	affiliation?: string;
+	notes?: string;
+};
+
 export type Song = {
 	_id?: string;
 	_creationTime?: number;
 	name: string;
 	artist: string;
+	artist_id?: string;
+	artist_details?: Artist;
 	published_date: string; // Specific release date for the song
 	language?: string;
 	lyric_sample?: {

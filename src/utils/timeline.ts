@@ -1,4 +1,3 @@
-import { artistPoliticalAffiliation } from "../../timeline/artist-political-affiliation";
 import {
 	type ConflictEntry,
 	detectOverlappingConflicts,
@@ -8,18 +7,16 @@ import type { EventsTimeline, Song, SongList } from "../../timeline/types";
 
 // Helper to determine political leaning
 function getArtistLeaning(
-	artistName: string,
+	artist: Song["artist_details"],
 ): "left" | "right" | "center" | "unknown" {
-	const affiliationData = Object.entries(artistPoliticalAffiliation).find(
-		([key]) => artistName.includes(key),
-	);
-	if (affiliationData) {
-		const affiliation = affiliationData[1].affiliation.toLowerCase();
-		if (affiliation.includes("left")) return "left";
-		if (affiliation.includes("right")) return "right";
-		if (affiliation.includes("center")) return "center";
+	const affiliation = artist?.affiliation?.toLowerCase();
+	if (!affiliation) {
+		return "unknown";
 	}
-	return "unknown"; // Default for neutral, apolitical, or not found
+	if (affiliation.includes("left")) return "left";
+	if (affiliation.includes("right")) return "right";
+	if (affiliation.includes("center")) return "center";
+	return "unknown";
 }
 
 function parseStartYear(timestamp: string): number {
@@ -70,7 +67,7 @@ export function getEntriesByYear(
 				year,
 				timestamp: new Date(t.published_date).toLocaleDateString(),
 				song: t,
-				leaning: getArtistLeaning(t.artist),
+				leaning: getArtistLeaning(t.artist_details),
 			};
 		})
 		.filter((entry) => Number.isFinite(entry.year))
