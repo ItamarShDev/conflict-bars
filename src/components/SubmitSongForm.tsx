@@ -4,6 +4,7 @@ import { useMutation, useQuery } from "convex/react";
 import { useId, useMemo, useState } from "react";
 import type { SubmitSongFormTranslations } from "@/components/timeline/translations";
 import { api } from "../../convex/_generated/api";
+import type { Id } from "../../convex/_generated/dataModel";
 
 type SubmissionStatus = "idle" | "submitting" | "success" | "error";
 
@@ -45,10 +46,10 @@ export function SubmitSongForm({
 	}, [songs, artists]);
 
 	const artistNameToId = useMemo(() => {
-		const map = new Map<string, string>();
+		const map = new Map<string, Id<"artists">>();
 		for (const option of artistOptions) {
 			if (option.name) {
-				map.set(option.name.toLowerCase(), option.id as string);
+				map.set(option.name.toLowerCase(), option.id);
 			}
 		}
 		return map;
@@ -116,7 +117,6 @@ export function SubmitSongForm({
 				userEmail: email ? email : undefined,
 				song: {
 					name: songName,
-					artist,
 					artistId,
 					published_date: publishedDate,
 					language: language ? language : undefined,
