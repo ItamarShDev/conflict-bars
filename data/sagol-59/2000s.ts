@@ -13,8 +13,6 @@ export const sagol592000s: SongList = [
 		},
 		links: {
 			lyrics: "https://genius.com/Sagol-59-59-veidat-pisga-lyrics",
-			song_info: "https://en.wikipedia.org/wiki/Sagol_59",
-			youtube:
 				"https://www.youtube.com/results?search_query=%D7%A1%D7%92%D7%95%D7%9C+59+%D7%A2%D7%99%D7%93%D7%AA+%D7%A4%D7%A1%D7%92%D7%94",
 		},
 	},

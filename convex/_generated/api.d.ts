@@ -8,17 +8,18 @@
  * @module
  */
 
-import type {
-  ApiFromModules,
-  FilterApi,
-  FunctionReference,
-} from "convex/server";
 import type * as artists from "../artists.js";
 import type * as events from "../events.js";
 import type * as internal_artists from "../internal/artists.js";
 import type * as internal_songs from "../internal/songs.js";
 import type * as mutations from "../mutations.js";
 import type * as songs from "../songs.js";
+
+import type {
+  ApiFromModules,
+  FilterApi,
+  FunctionReference,
+} from "convex/server";
 
 /**
  * A utility for referencing Convex functions in your app's API.
@@ -36,11 +37,15 @@ declare const fullApi: ApiFromModules<{
   mutations: typeof mutations;
   songs: typeof songs;
 }>;
+declare const fullApiWithMounts: typeof fullApi;
+
 export declare const api: FilterApi<
-  typeof fullApi,
+  typeof fullApiWithMounts,
   FunctionReference<any, "public">
 >;
 export declare const internal: FilterApi<
-  typeof fullApi,
+  typeof fullApiWithMounts,
   FunctionReference<any, "internal">
 >;
+
+export declare const components: {};

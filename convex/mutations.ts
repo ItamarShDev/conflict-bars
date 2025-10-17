@@ -9,6 +9,8 @@ function normalizeArtistName(name: string) {
 export const upsertArtist = mutation({
 	args: {
 		name: v.string(),
+		name_he: v.optional(v.string()),
+		name_en: v.optional(v.string()),
 		era: v.optional(v.string()),
 		affiliation: v.optional(v.string()),
 		notes: v.optional(v.string()),
@@ -24,6 +26,8 @@ export const upsertArtist = mutation({
 		if (existing) {
 			await ctx.db.patch(existing._id, {
 				name: args.name,
+				name_he: args.name_he ?? undefined,
+				name_en: args.name_en ?? undefined,
 				normalized_name: normalized,
 				era: args.era ?? undefined,
 				affiliation: args.affiliation ?? undefined,
@@ -33,6 +37,8 @@ export const upsertArtist = mutation({
 		}
 		return await ctx.db.insert("artists", {
 			name: args.name,
+			name_he: args.name_he ?? undefined,
+			name_en: args.name_en ?? undefined,
 			normalized_name: normalized,
 			era: args.era ?? undefined,
 			affiliation: args.affiliation ?? undefined,
@@ -53,10 +59,23 @@ export const assignArtistToSong = mutation({
 	},
 });
 
+export const assignCollaboratorsToSong = mutation({
+	args: {
+		songId: v.id("songs"),
+		collaboratorIds: v.array(v.id("artists")),
+	},
+	handler: async (ctx, args) => {
+		await ctx.db.patch(args.songId, {
+			collaborator_ids: args.collaboratorIds,
+		});
+	},
+});
+
 export const insertSong = mutation({
 	args: {
 		name: v.string(),
 		artistId: v.id("artists"),
+		collaboratorIds: v.optional(v.array(v.id("artists"))),
 		published_date: v.string(),
 		published: v.optional(v.boolean()),
 		language: v.optional(v.string()),
@@ -76,12 +95,42 @@ export const insertSong = mutation({
 		submitted_by: v.optional(v.id("users")),
 	},
 	handler: async (ctx, args) => {
-		const { artistId, published, ...rest } = args;
+		const { artistId, collaboratorIds, published, ...rest } = args;
 		return await ctx.db.insert("songs", {
 			...rest,
 			artist_id: artistId,
+			collaborator_ids: collaboratorIds ?? undefined,
 			published: published ?? false,
 		});
+	},
+});
+
+export const updateSong = mutation({
+	args: {
+		songId: v.id("songs"),
+		updates: v.object({
+			name: v.optional(v.string()),
+			artist_id: v.optional(v.id("artists")),
+			collaborator_ids: v.optional(v.array(v.id("artists"))),
+			language: v.optional(v.string()),
+			lyric_sample: v.optional(
+				v.object({
+					hebrew: v.optional(v.string()),
+					english_translation: v.optional(v.string()),
+				}),
+			),
+			links: v.optional(
+				v.object({
+					lyrics: v.optional(v.string()),
+					song_info: v.optional(v.string()),
+					youtube: v.optional(v.string()),
+				}),
+			),
+		}),
+	},
+	handler: async (ctx, args) => {
+		await ctx.db.patch(args.songId, args.updates);
+		return args.songId;
 	},
 });
 
@@ -120,6 +169,26 @@ export const clearAllEvents = mutation({
 		const events = await ctx.db.query("events").collect();
 		for (const event of events) {
 			await ctx.db.delete(event._id);
+		}
+	},
+});
+
+export const clearAllUsers = mutation({
+	args: {},
+	handler: async (ctx) => {
+		const users = await ctx.db.query("users").collect();
+		for (const user of users) {
+			await ctx.db.delete(user._id);
+		}
+	},
+});
+
+export const clearAllArtists = mutation({
+	args: {},
+	handler: async (ctx) => {
+		const artists = await ctx.db.query("artists").collect();
+		for (const artist of artists) {
+			await ctx.db.delete(artist._id);
 		}
 	},
 });

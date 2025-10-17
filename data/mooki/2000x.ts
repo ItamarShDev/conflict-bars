@@ -13,9 +13,7 @@ export const mooki2000s: SongList = [
 				"Everyone's talking about peace, nobody is talking about justice... and if there's no justice, then what peace are you talking about?",
 		},
 		links: {
-			lyrics:
-				"https://shironet.mako.co.il/artist?type=lyrics&lang=1&prfid=186&wrkid=2810",
-			song_info: "https://en.wikipedia.org/wiki/Mook_E.",
+			lyrics: "https://genius.com/Mooki-medabrim-al-shalom-lyrics",
 		},
 	},
 ];

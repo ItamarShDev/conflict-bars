@@ -3,7 +3,8 @@ import type { SongList } from "../../timeline/types";
 export const subliminal2000s: SongList = [
 	{
 		name: "התקווה (Hatikva / The Hope)",
-		artist: "Subliminal & HaTzel (סאבלימינל והצל)",
+		artist: "Subliminal (סאבלימינל)",
+		collaborators: ["The Shadow (הצל)"],
 		language: "Hebrew",
 		published_date: "2002-03-15",
 		lyric_sample: {
@@ -14,12 +15,12 @@ export const subliminal2000s: SongList = [
 		},
 		links: {
 			lyrics: "https://genius.com/Subliminal-and-hatzel-hatikva-lyrics",
-			song_info: "https://en.wikipedia.org/wiki/Subliminal_(rapper)",
 		},
 	},
 	{
 		name: "הפרד ומשול (Hafred U'Mshol / Divide and Rule)",
-		artist: "Subliminal & HaTzel (סאבלימינל והצל)",
+		artist: "Subliminal (סאבלימינל)",
+		collaborators: ["The Shadow (הצל)"],
 		language: "Hebrew",
 		published_date: "2002",
 		lyric_sample: {
@@ -30,8 +31,6 @@ export const subliminal2000s: SongList = [
 		},
 		links: {
 			lyrics: "https://genius.com/Subliminal-and-hatzel-hafred-umshol-lyrics",
-			song_info:
-				"https://genius.com/albums/Subliminal-and-hatzel/Haor-ve-hatzel",
 		},
 	},
 	{
@@ -64,7 +63,8 @@ export const subliminal2000s: SongList = [
 	},
 	{
 		name: "ביחד ננצח (Beyachad Nenatzeach / Together We Will Win)",
-		artist: "סאבלימינל והצל (Subliminal and The Shadow)",
+		artist: "Subliminal (סאבלימינל)",
+		collaborators: ["The Shadow (הצל)"],
 		published_date: "2002",
 		language: "Hebrew",
 		lyric_sample: {
@@ -75,15 +75,13 @@ export const subliminal2000s: SongList = [
 		},
 		links: {
 			lyrics:
-				"https://shironet.mako.co.il/artist?type=lyrics&lang=1&prfid=143&wrkid=2787",
-			song_info:
-				"https://he.wikipedia.org/wiki/%D7%94%D7%90%D7%95%D7%A8_%D7%95%D7%94%D7%A6%D7%9C",
-			youtube: "https://www.youtube.com/watch?v=vV7naOfsJZo",
+				"https://genius.com/Subliminal-and-hatzel-beyachad-nenatzeach-lyrics",
 		},
 	},
 	{
 		name: "אינתיפאדה (Intifada)",
-		artist: "סאבלימינל והצל (Subliminal and The Shadow)",
+		artist: "Subliminal (סאבלימינל)",
+		collaborators: ["The Shadow (הצל)"],
 		published_date: "2006-03-03",
 		language: "Hebrew",
 		lyric_sample: {
@@ -93,17 +91,17 @@ export const subliminal2000s: SongList = [
 				"You rose against us, you got an Intifada / Arabs and Jews are playing 'kazazada' (a clash) / One stabs, the other shoots, the situation only gets worse / My dear brothers, it's time to return fire.",
 		},
 		links: {
-			lyrics:
-				"https://shironet.mako.co.il/artist?type=lyrics&lang=1&prfid=143&wrkid=19782",
-			song_info:
-				"https://he.wikipedia.org/wiki/%D7%91%D7%93%D7%99%D7%95%D7%A7_%D7%9B%D7%A9%D7%97%D7%A9%D7%91%D7%AA%D7%9D_%D7%A9%D7%94%D7%9B%D7%9C_%D7%A0%D7%92%D7%9E%D7%A8",
-			youtube: "https://www.youtube.com/watch?v=xTdeeaQhBvY",
+			lyrics: "https://genius.com/Subliminal-and-hatzel-intifada-lyrics",
 		},
 	},
 	{
 		name: "פרחים בקנה (Prachim BaKaneh / Flowers in the Cannon)",
-		artist:
-			"סאבלימינל, הצל, איציק שמלי, שרית חדד (Subliminal, The Shadow, Itzik Shamli, Sarit Hadad)",
+		artist: "Subliminal (סאבלימינל)",
+		collaborators: [
+			"The Shadow (הצל)",
+			"Itzik Shamli (איציק שמלי)",
+			"Sarit Hadad (סרית הדד)",
+		],
 		published_date: "2006-03-03",
 		language: "Hebrew",
 		lyric_sample: {
@@ -113,15 +111,12 @@ export const subliminal2000s: SongList = [
 				"Because if we lay down our weapons, brother, our end is near / Therefore we will respond with war to every enemy / But when the time of peace arrives, we will live here safely / We will lay down our weapons and sing for the family.",
 		},
 		links: {
-			lyrics:
-				"https://shironet.mako.co.il/artist?type=lyrics&lang=1&prfid=143&wrkid=7105",
-			song_info: "https://en.wikipedia.org/wiki/Flowers_in_the_cannon",
-			youtube: "https://www.youtube.com/watch?v=wz64bL1aM2M",
+			lyrics: "https://genius.com/Subliminal-prachim-bakaneh-lyrics",
 		},
 	},
 	{
 		name: "במקום הכי נמוך בתל אביב (Ba'Makom Hachi Namuch Be'Tel Aviv / In the Lowest Place in Tel Aviv)",
-		artist: "סאבלימינל (Subliminal)",
+		artist: "Subliminal (סאבלימינל)",
 		published_date: "2017-05-22",
 		language: "Hebrew",
 		lyric_sample: {
@@ -131,16 +126,13 @@ export const subliminal2000s: SongList = [
 				"Here isn't Paris, not London, not New York / Here is the Middle East, everyone is stressed, everyone is in a fix / And if you're alone, brother, you have no chance of survival / Only those at the top are set, opening another club and another.",
 		},
 		links: {
-			lyrics:
-				"https://shironet.mako.co.il/artist?type=lyrics&lang=1&prfid=143&wrkid=30846",
-			song_info:
-				"https://he.wikipedia.org/wiki/%D7%A6%D7%91%D7%A2_%D7%9C%D7%97%D7%99%D7%99%D7%9D",
-			youtube: "https://www.youtube.com/watch?v=L-s_hLpB7sA",
+			lyrics: "https://genius.com/Subliminal-bamakom-hachi-namuch-lyrics",
 		},
 	},
 	{
 		name: "שרוטים (Srutim / Scratched)",
-		artist: "סאבלימינל וליאור נרקיס (Subliminal and Lior Narkis)",
+		artist: "Subliminal (סאבלימינל)",
+		collaborators: ["Lior Narkis (ליאור נרקיס)"],
 		published_date: "2017-01-15",
 		language: "Hebrew",
 		lyric_sample: {
@@ -150,11 +142,7 @@ export const subliminal2000s: SongList = [
 				"We grew up in a hot country where there's never a dull moment / Every other day we hear about another terror attack or a missile that fell / So what's the wonder that we're all a bit scratched, we all have tics.",
 		},
 		links: {
-			lyrics:
-				"https://shironet.mako.co.il/artist?type=lyrics&lang=1&prfid=143&wrkid=30704",
-			song_info:
-				"https://he.wikipedia.org/wiki/%D7%A6%D7%91%D7%A2_%D7%9C%D7%97%D7%99%D7%99%D7%9D",
-			youtube: "https://www.youtube.com/watch?v=GvcD-w_m-zo",
+			lyrics: "https://genius.com/Subliminal-srutim-lyrics",
 		},
 	},
 ];

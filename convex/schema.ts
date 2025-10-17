@@ -4,6 +4,8 @@ import { v } from "convex/values";
 export default defineSchema({
 	artists: defineTable({
 		name: v.string(),
+		name_he: v.optional(v.string()),
+		name_en: v.optional(v.string()),
 		normalized_name: v.string(),
 		era: v.optional(v.string()),
 		affiliation: v.optional(v.string()),
@@ -12,8 +14,8 @@ export default defineSchema({
 
 	songs: defineTable({
 		name: v.string(),
-		artist: v.optional(v.string()),
 		artist_id: v.optional(v.id("artists")),
+		collaborator_ids: v.optional(v.array(v.id("artists"))),
 		published_date: v.string(),
 		published: v.optional(v.boolean()),
 		language: v.optional(v.string()),

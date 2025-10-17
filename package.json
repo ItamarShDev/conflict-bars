@@ -10,7 +10,13 @@
 		"format": "biome format --write .",
 		"format:check": "biome format .",
 		"typecheck": "tsc --noEmit",
-		"migrate": "npx tsx scripts/migrate-to-convex.ts"
+		"migrate": "tsx scripts/migrate-data.ts",
+		"migrate:force": "tsx scripts/migrate-data.ts --force",
+		"migrate:cleanup": "tsx scripts/migrate-remove-artist-column.ts",
+		"migrate:events": "tsx scripts/migrate-events.ts",
+		"db:clear": "tsx scripts/clear-songs.ts",
+		"reset-data": "npm run db:clear && npm run migrate",
+		"reset-data:force": "npm run db:clear && npm run migrate:force"
 	},
 	"dependencies": {
 		"convex": "^1.28.0",

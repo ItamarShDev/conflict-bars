@@ -3,19 +3,26 @@ import type { Doc } from "./_generated/dataModel";
 import type { QueryCtx } from "./_generated/server";
 import { query } from "./_generated/server";
 
-type SongDoc = Doc<"songs"> & { artist?: string };
-
-async function addArtistDetails(ctx: QueryCtx, song: SongDoc) {
+async function addArtistDetails(ctx: QueryCtx, song: Doc<"songs">) {
 	const artist = song.artist_id ? await ctx.db.get(song.artist_id) : null;
-	const legacyArtist = song.artist ?? undefined;
+	
+	// Hydrate collaborator details
+	const collaboratorDetails = song.collaborator_ids
+		? await Promise.all(
+				song.collaborator_ids.map((id) => ctx.db.get(id)),
+			)
+		: undefined;
+	
 	return {
 		...song,
-		artist: artist?.name ?? legacyArtist ?? "",
+		artist: artist?.name ?? "",
 		artist_details: artist ?? undefined,
+		collaborators: collaboratorDetails?.map((c) => c?.name).filter(Boolean),
+		collaborator_details: collaboratorDetails?.filter(Boolean),
 	};
 }
 
-async function hydrateSongs(ctx: QueryCtx, songs: SongDoc[]) {
+async function hydrateSongs(ctx: QueryCtx, songs: Doc<"songs">[]) {
 	return Promise.all(songs.map((song) => addArtistDetails(ctx, song)));
 }
 

@@ -3,7 +3,8 @@ import type { SongList } from "../../timeline/types";
 export const sagol592020s: SongList = [
 	{
 		name: "Judoka",
-		artist: "Sagol 59 feat. Hasan M.C.",
+		artist: "Sagol 59 (סגול 59)",
+		collaborators: ["Hasan M.C. (חסן M.C.)"],
 		language: "Hebrew/Arabic",
 		published_date: "2021",
 		lyric_sample: {
@@ -14,8 +15,6 @@ export const sagol592020s: SongList = [
 		},
 		links: {
 			lyrics: "https://genius.com/Sagol-59-59-judoka-lyrics",
-			song_info: "https://en.wikipedia.org/wiki/Sagol_59",
-			youtube: "https://www.youtube.com/watch?v=L2nTbpb2EK4",
 		},
 	},
 ];

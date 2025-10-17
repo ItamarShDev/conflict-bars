@@ -29,7 +29,16 @@ export function SongStack({ songs, lang, year }: SongStackProps) {
 
 	useEffect(() => {
 		setIsMounted(true);
-	}, []);
+		// Check if hash matches current year and open preview
+		const hash = window.location.hash.slice(1); // Remove '#'
+		if (hash === String(year)) {
+			window.location.hash = `${year}`;
+			setIsOverlayVisible(true);
+			requestAnimationFrame(() => {
+				setIsExpanded(true);
+			});
+		}
+	}, [year]);
 
 	useEffect(() => {
 		if (!isOverlayVisible) {
@@ -77,6 +86,7 @@ export function SongStack({ songs, lang, year }: SongStackProps) {
 			setIsExpanded(true);
 			return;
 		}
+		window.location.hash = `${year}`;
 		setIsOverlayVisible(true);
 		requestAnimationFrame(() => {
 			setIsExpanded(true);
@@ -85,6 +95,7 @@ export function SongStack({ songs, lang, year }: SongStackProps) {
 
 	const closeStack = () => {
 		setIsExpanded(false);
+		window.history.replaceState(null, "", window.location.pathname);
 	};
 
 	if (collapsedCards.length === 0) {

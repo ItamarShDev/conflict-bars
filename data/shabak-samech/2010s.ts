@@ -3,7 +3,8 @@ import type { SongList } from "../../timeline/types";
 export const shabakSamech2010s: SongList = [
 	{
 		name: "משיח (Mashi'ach)",
-		artist: "Shabak Samech",
+		artist: "Shabak Samech (שבק ס)",
+		language: "Hebrew",
 		published_date: "2012-07-01",
 		lyric_sample: {
 			hebrew:
@@ -13,7 +14,6 @@ export const shabakSamech2010s: SongList = [
 		},
 		links: {
 			lyrics: "https://genius.com/Shabak-samech-mashiach-lyrics",
-			song_info: "https://open.spotify.com/album/3x5V2xW6a8dJ6s5f3gY5b5",
 		},
 	},
 ];

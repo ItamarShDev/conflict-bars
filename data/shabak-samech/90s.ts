@@ -2,8 +2,9 @@ import type { SongList } from "../../timeline/types";
 
 export const shabakSamech90s: SongList = [
 	{
-		name: "Beiskey Hashin - בעסקי ה-ש’",
-		artist: "Shabak Samech",
+		name: "Beiskey Hashin - בעסקי ה-ש'",
+		artist: "Shabak Samech (שבק ס)",
+		language: "Hebrew",
 		published_date: "1995",
 		lyric_sample: {
 			hebrew: "...את הרוב שמתעסק בשחיתויות / כמו בכנסת אני כבר לא יכול",
@@ -12,12 +13,12 @@ export const shabakSamech90s: SongList = [
 		},
 		links: {
 			lyrics: "https://genius.com/Shabak-samech-beiskey-hashin-lyrics",
-			song_info: "https://open.spotify.com/track/1V2n8fD5h4fXpYvJ3qY6q4",
 		},
 	},
 	{
 		name: "Hamedina Balehavot - המדינה בלהבות",
-		artist: "Shabak Samech",
+		artist: "Shabak Samech (שבק ס)",
+		language: "Hebrew",
 		published_date: "1995-09-20",
 		lyric_sample: {
 			hebrew:
@@ -27,7 +28,6 @@ export const shabakSamech90s: SongList = [
 		},
 		links: {
 			lyrics: "https://genius.com/Shabak-samech-hamedina-balehavot-lyrics",
-			song_info: "https://open.spotify.com/track/6v4pY6b5Z2qY8Z2qY6q4pY",
 		},
 	},
 ];

@@ -1,5 +1,10 @@
+import { dirname, join } from "node:path";
+import { config } from "dotenv";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../convex/_generated/api";
+
+// Load environment variables from .env.local
+config({ path: join(dirname(new URL(import.meta.url).pathname), "../.env.local") });
 
 const CONVEX_URL = process.env.NEXT_PUBLIC_CONVEX_URL;
 
@@ -13,19 +18,28 @@ if (!CONVEX_URL) {
 
 const client = new ConvexHttpClient(CONVEX_URL);
 
-async function clearSongs() {
-	console.log("\n🗑️  Clearing existing songs from Convex...");
+async function clearAllTables() {
+	console.log("\n🗑️  Clearing all tables from Convex database...\n");
 
 	try {
+		// Clear songs first (has foreign keys to artists)
+		console.log("  Clearing songs...");
 		await client.mutation(api.mutations.clearAllSongs, {});
 		console.log("  ✓ Cleared all songs");
+
+		// Clear artists last (no dependencies)
+		console.log("  Clearing artists...");
+		await client.mutation(api.mutations.clearAllArtists, {});
+		console.log("  ✓ Cleared all artists");
+
+		console.log("\n✅ All tables cleared successfully\n");
 	} catch (error) {
-		console.error("  ✗ Error clearing songs:", error);
+		console.error("  ✗ Error clearing tables:", error);
 		process.exit(1);
 	}
 }
 
-clearSongs().catch((error) => {
-	console.error("Fatal error while clearing songs:", error);
+clearAllTables().catch((error) => {
+	console.error("Fatal error while clearing tables:", error);
 	process.exit(1);
 });

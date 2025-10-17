@@ -3,7 +3,7 @@ import type { SongList } from "../../timeline/types";
 export const tuna2020s: SongList = [
 	{
 		name: "Rosh Lemal'a (ראש למעלה)",
-		artist: "Tuna",
+		artist: "Tuna (טונה)",
 		language: "Hebrew",
 		published_date: "2023-10-15",
 		lyric_sample: {
@@ -14,14 +14,11 @@ export const tuna2020s: SongList = [
 		},
 		links: {
 			lyrics: "https://genius.com/Tuna-rosh-lemala-lyrics",
-			song_info:
-				"https://he.wikipedia.org/wiki/%D7%98%D7%95%D7%A0%D7%94_(%D7%96%D7%9E%D7%A8)",
-			youtube: "https://www.youtube.com/watch?v=Vjusx05G9sI",
 		},
 	},
 	{
 		name: "Kol Hakohavim (כל הכוכבים)",
-		artist: "Tuna",
+		artist: "Tuna (טונה)",
 		language: "Hebrew",
 		published_date: "2023-11-02",
 		lyric_sample: {
@@ -35,7 +32,8 @@ export const tuna2020s: SongList = [
 	},
 	{
 		name: "Shuvo Shel Mordechai (שובו של מרדכי)",
-		artist: "Tuna feat. Oshik Levi & Teddy Neguse",
+		artist: "Tuna (טונה)",
+		collaborators: ["Oshik Levi (אושיק לוי)", "Teddy Neguse (טדי נגוסה)"],
 		language: "Hebrew",
 		published_date: "2023-12-08",
 		lyric_sample: {

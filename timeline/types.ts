@@ -2,6 +2,8 @@ export type Artist = {
 	_id?: string;
 	_creationTime?: number;
 	name: string;
+	name_he?: string;
+	name_en?: string;
 	normalized_name: string;
 	era?: string;
 	affiliation?: string;
@@ -15,6 +17,8 @@ export type Song = {
 	artist: string;
 	artist_id?: string;
 	artist_details?: Artist;
+	collaborators?: string[]; // Array of collaborating artist names
+	collaborator_ids?: string[]; // Array of collaborating artist IDs
 	published_date: string; // Specific release date for the song
 	language?: string;
 	lyric_sample?: {
