@@ -14,6 +14,7 @@ export const dam2000s: SongList = [
 		},
 		links: {
 			lyrics: "https://genius.com/DAM-whos-the-terrorist-lyrics",
+			youtube: "https://www.youtube.com/watch?v=OgSVXjNLFgo",
 		},
 	},
 	{

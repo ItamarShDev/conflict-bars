@@ -14,6 +14,7 @@ export const shabakSamech2010s: SongList = [
 		},
 		links: {
 			lyrics: "https://genius.com/Shabak-samech-mashiach-lyrics",
+			youtube: "https://www.youtube.com/watch?v=UyOuQnxiu5o",
 		},
 	},
 ];

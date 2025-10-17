@@ -14,6 +14,7 @@ export const tuna2010s: SongList = [
 		},
 		links: {
 			lyrics: "https://genius.com/Tuna-seret-aravi-lyrics",
+			youtube: "https://www.youtube.com/watch?v=OPrbtVIwhHo",
 		},
 	},
 	{

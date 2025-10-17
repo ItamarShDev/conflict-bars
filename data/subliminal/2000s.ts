@@ -15,6 +15,7 @@ export const subliminal2000s: SongList = [
 		},
 		links: {
 			lyrics: "https://genius.com/Subliminal-and-hatzel-hatikva-lyrics",
+			youtube: "https://www.youtube.com/watch?v=hybBJ0InVSA",
 		},
 	},
 	{
@@ -31,6 +32,7 @@ export const subliminal2000s: SongList = [
 		},
 		links: {
 			lyrics: "https://genius.com/Subliminal-and-hatzel-hafred-umshol-lyrics",
+			youtube: "https://www.youtube.com/watch?v=Vbq8kScxQWY",
 		},
 	},
 	{
@@ -45,6 +47,7 @@ export const subliminal2000s: SongList = [
 		},
 		links: {
 			lyrics: "https://genius.com/Subliminal-eretz-ahuva-lyrics",
+			youtube: "https://www.youtube.com/watch?v=-g-XW1pIFeg",
 		},
 	},
 	{
@@ -59,6 +62,7 @@ export const subliminal2000s: SongList = [
 		},
 		links: {
 			lyrics: "https://genius.com/Subliminal-ze-hegia-ad-lekan-lyrics",
+			youtube: "https://www.youtube.com/watch?v=Z8WJjOP9p_c",
 		},
 	},
 	{
@@ -76,6 +80,7 @@ export const subliminal2000s: SongList = [
 		links: {
 			lyrics:
 				"https://genius.com/Subliminal-and-hatzel-beyachad-nenatzeach-lyrics",
+			youtube: "https://www.youtube.com/watch?v=-O6bKCoARrQ",
 		},
 	},
 	{
@@ -112,6 +117,7 @@ export const subliminal2000s: SongList = [
 		},
 		links: {
 			lyrics: "https://genius.com/Subliminal-prachim-bakaneh-lyrics",
+			youtube: "https://www.youtube.com/watch?v=Mh94v1zosyg",
 		},
 	},
 	{
@@ -127,6 +133,7 @@ export const subliminal2000s: SongList = [
 		},
 		links: {
 			lyrics: "https://genius.com/Subliminal-bamakom-hachi-namuch-lyrics",
+			youtube: "https://www.youtube.com/watch?v=lc2sILjXx-E",
 		},
 	},
 	{
@@ -143,6 +150,7 @@ export const subliminal2000s: SongList = [
 		},
 		links: {
 			lyrics: "https://genius.com/Subliminal-srutim-lyrics",
+			youtube: "https://www.youtube.com/watch?v=FqNAYKUo28Y",
 		},
 	},
 ];

@@ -15,6 +15,7 @@ export const sagol592020s: SongList = [
 		},
 		links: {
 			lyrics: "https://genius.com/Sagol-59-59-judoka-lyrics",
+			youtube: "https://www.youtube.com/watch?v=L2nTbpb2EK4",
 		},
 	},
 ];
