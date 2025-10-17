@@ -2,11 +2,9 @@ import { ConvexProvider, ConvexReactClient } from "convex/react";
 import type { ReactNode } from "react";
 
 // Get Convex URL from environment variables
-// Vite uses VITE_ prefix, but we also check for NEXT_PUBLIC_ for compatibility
 const convexUrl = 
   import.meta.env.VITE_CONVEX_URL ||
   import.meta.env.VITE_PUBLIC_CONVEX_URL ||
-  import.meta.env.NEXT_PUBLIC_CONVEX_URL ||
   // Fallback - this should not be used if env vars are set correctly
   'https://israeli-hiphop-conflict-timeline.convex.cloud';
 
