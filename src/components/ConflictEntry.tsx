@@ -1,5 +1,3 @@
-"use client";
-
 import { translations } from "@/components/timeline/translations";
 import type { ConflictEntry as ConflictEntryType } from "../../timeline/conflict-utils";
 import { ConflictDetail } from "./conflict/ConflictDetail";

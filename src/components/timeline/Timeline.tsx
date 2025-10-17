@@ -1,27 +1,30 @@
-import { preloadQuery } from "convex/nextjs";
 import { SubmitSongModal } from "@/components/SubmitSongModal";
 import { HelpModal } from "@/components/timeline/HelpModal";
 import { TimelineHeader } from "@/components/timeline/TimelineHeader";
 import { translations } from "@/components/timeline/translations";
 import { YearGroup } from "@/components/timeline/YearGroup";
 import { convertConvexEventsToTimeline } from "@/utils/convex-helpers";
+import type { TimelineData } from "@/utils/loaders";
 import { getEntriesByYear } from "@/utils/timeline";
-import { api } from "../../../convex/_generated/api";
 import type { ConvexEvent, Song } from "../../../timeline/types";
 
-export async function Timeline({ lang }: { lang: "en" | "he" }) {
+export function Timeline({
+	lang = "he",
+	initialData,
+}: {
+	lang?: "en" | "he";
+	initialData?: TimelineData;
+}) {
 	const t = translations[lang];
+	const songs = initialData?.songs ?? [];
+	const convexEvents = initialData?.events ?? [];
 
-	const songsPreload = await preloadQuery(api.songs.getAllSongs);
-	type NewType = Song;
+	const events = convertConvexEventsToTimeline(
+		(convexEvents ?? []) as ConvexEvent[],
+	);
 
-	const songs = songsPreload._valueJSON as unknown as NewType[];
+	const yearGroups = getEntriesByYear((songs ?? []) as Song[], events);
 
-	const eventsPreload = await preloadQuery(api.events.getAllEvents);
-	const convexEvents = eventsPreload._valueJSON as unknown as ConvexEvent[];
-	const events = convertConvexEventsToTimeline(convexEvents);
-
-	const yearGroups = getEntriesByYear(songs, events);
 	return (
 		<div className="relative overflow-x-hidden">
 			<TimelineHeader title={t.title} lang={lang} />

@@ -27,10 +27,14 @@
 	}
 }
 
-/* Keep Tailwind as the styling source of truth. No custom theme rules needed. */
 html,
-body {
+body,
+#app {
 	height: 100%;
+	font-family:
+		-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+		Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+		"Segoe UI Symbol", "Noto Color Emoji";
 }
 
 /* RTL Support */

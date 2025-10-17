@@ -7,12 +7,13 @@ interface YearMarkerProps {
 export function YearMarker({ year, showYear, index }: YearMarkerProps) {
 	return (
 		<div
-			className={`h-full col-2 row-${index + 1} flex flex-col items-center gap-3 relative`}
+			style={{ gridColumn: 2, gridRow: index + 1 }}
+			className="h-full flex flex-col items-center gap-3 relative"
 		>
-			<div className="absolute h-full border-1 w-0.5 border-slate-200 dark:border-slate-700 -z-10" />
+			<div className="absolute inset-y-0 w-px bg-slate-200 dark:bg-slate-700 left-1/2 -translate-x-1/2" />
 			{showYear && (
 				<div
-					className={`text-center text-slate-700 dark:text-slate-300 text-sm font-semibold tabular-nums`}
+					className="text-center text-slate-700 dark:text-slate-300 text-sm font-semibold tabular-nums"
 				>
 					{year}
 				</div>

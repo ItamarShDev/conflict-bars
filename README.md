@@ -1,6 +1,6 @@
 # Israeli Hip‑Hop Conflict Timeline
 
-An interactive timeline exploring Israeli hip‑hop artists and key events across years and decades. Built with Next.js (App Router), React, TypeScript, and Tailwind CSS.
+An interactive timeline exploring Israeli hip‑hop artists and key events across years and decades. Built with TanStack Router, Vite, React, TypeScript, and Tailwind CSS.
 
 ## Project Goal
 
@@ -15,31 +15,34 @@ Where possible, entries should be concise, sourced, and written in a neutral ton
 
 ## Stack
 
-- Next.js 15 (App Router) with Turbopack
+- TanStack Router (file-based routing)
+- Vite (build tool)
 - React 19
 - TypeScript 5.x
 - Tailwind CSS v4
-- ESLint 9
+- Biome (linting & formatting)
 - Convex (Database & Backend)
+- Bun (package manager)
 
 Project structure follows `src/` with `@/*` path alias.
 
 ## Project Structure
 
-- `src/app/`
-  - `timeline/` — timeline routes and data per artist/decade
-  - `[lang]/` — language-aware segment (middleware-based detection)
-  - `favicon.ico`, globals, route files
-- `src/data/` — shared data (if any)
-- `src/middleware.ts` — locale middleware and routing helpers
-- `public/` — static assets (icons, svgs)
+- `src/routes/` — TanStack Router file-based routes
+  - `__root.tsx` — Root layout with locale middleware
+  - `$lang.tsx` — Dynamic locale route
+- `src/components/` — React components
+- `src/utils/` — Utility functions
+- `convex/` — Convex database schema and functions
+- `public/` — Static assets (icons, svgs)
+- `scripts/` — Build and utility scripts
 
 ## Local Development
 
 1) Install dependencies
 
 ```bash
-npm install
+bun install
 ```
 
 2) Start the Convex development server (required)
@@ -61,30 +64,33 @@ This will:
 In a new terminal:
 
 ```bash
-npm run migrate
+bun run migrate
 ```
 
 This populates your Convex database with existing songs and events data.
 
-4) Start the Next.js dev server
+4) Start the development server
 
 In another terminal:
 
 ```bash
-npm run dev
+bun run dev
 ```
 
-Open http://localhost:3000
+Open http://localhost:5173
 
 **Note:** The Convex dev server must be running for the app to work.
 
 ## Available Scripts
 
-- `npm run dev` — start development server
-- `npm run build` — production build (Next.js with Turbopack)
-- `npm run start` — start production server
-- `npm run lint` — run ESLint on `src`
-- `npm run migrate` — migrate data to Convex database
+- `bun run dev` — start development server
+- `bun run build` — production build
+- `bun run prerender` — build and prerender static files
+- `bun run start` — start production preview server
+- `bun run lint` — run Biome linter on `src`
+- `bun run format` — format code with Biome
+- `bun run typecheck` — run TypeScript type checking
+- `bun run migrate` — migrate data to Convex database
 - `npx convex dev` — start Convex development server
 - `npx convex dashboard` — open Convex dashboard in browser
 
@@ -92,7 +98,7 @@ Open http://localhost:3000
 
 ### Database (Convex)
 
-Timeline data is now stored in Convex database with two main tables:
+Timeline data is stored in Convex database with two main tables:
 
 - **songs** — Song entries with artist, date, lyrics, links
 - **events** — Conflict/event entries with dates, descriptions, effects
@@ -106,43 +112,49 @@ You can view and manage data at https://dashboard.convex.dev
 - `convex/events.ts` — Event queries
 - `convex/mutations.ts` — Data mutations
 
-### Legacy Data Files
+### Data Loading
 
-Original data files are kept in `src/app/timeline/` for reference and migration:
-
-- `src/app/timeline/tuna/2010s.ts`
-- `src/app/timeline/subliminal/2010s.ts`
-- `src/app/timeline/conflicts.ts`
-
-Metadata like political affiliation is still in:
-
-- `src/app/timeline/atrist-political-affiliation.ts`
-
-For detailed migration information, see [CONVEX_MIGRATION.md](./CONVEX_MIGRATION.md)
+- `src/routes/loaders.ts` — TanStack Router data loaders
+- `src/routes/$lang.tsx` — Route with loader for timeline data
 
 ## Internationalization
 
-The app uses a `[lang]` segment and middleware (`src/middleware.ts`) to support locale-aware routing.
+The app uses a `$lang` route parameter to support locale-aware routing:
+- `/he` — Hebrew (RTL)
+- `/en` — English (LTR)
 
 ## Styling
 
-Tailwind CSS v4 is configured. Use utility classes in your components; global styles live under `src/app/` as needed.
+Tailwind CSS v4 is configured. Use utility classes in your components; global styles live in `src/routes/globals.css`.
 
 ## Deployment
 
-The app is ready for deployment on platforms like Vercel. Build with:
+The app is ready for deployment to any static hosting service:
 
 ```bash
-npm run build && npm run start
+# Build and prerender static files
+bun run prerender
+
+# Preview the build locally
+bun run start
+
+# Deploy the `dist/` directory to your hosting provider
 ```
 
-See Next.js deployment docs for details: https://nextjs.org/docs/app/building-your-application/deploying
+### Deployment Options
+
+- **Vercel** — Deploy `dist/` directory
+- **Netlify** — Deploy `dist/` directory
+- **GitHub Pages** — Deploy `dist/` directory to `gh-pages` branch
+- **Any CDN** — Upload `dist/` contents
+
+The app is fully prerendered and works as a static site with client-side hydration.
 
 ## Contributing
 
 1. Create a feature branch.
-2. Make changes with type-safe timeline entries in `src/app/timeline/`.
-3. Run `npm run lint` and `npm run build` to verify.
+2. Make changes with type-safe timeline entries.
+3. Run `bun run lint` and `bun run build` to verify.
 4. Open a PR.
 
 ## License

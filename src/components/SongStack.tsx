@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useMemo, useState } from "react";
 import { translations } from "@/components/timeline/translations";
 import type { Song } from "../../timeline/types";

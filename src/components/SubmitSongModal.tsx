@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useState } from "react";
 import type { SubmitSongFormTranslations } from "@/components/timeline/translations";
 import { SubmitSongForm } from "./SubmitSongForm";

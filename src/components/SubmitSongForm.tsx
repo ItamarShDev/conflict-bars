@@ -1,5 +1,3 @@
-"use client";
-
 import { useMutation, useQuery } from "convex/react";
 import { useId, useMemo, useState } from "react";
 import type { SubmitSongFormTranslations } from "@/components/timeline/translations";
