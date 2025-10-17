@@ -12,6 +12,7 @@ export default defineConfig({
 	plugins: [tsconfigPaths(), tanstackStart({
 		prerender: {
 			enabled: false,
+			crawlLinks: false,
 		}
 	}), viteReact(), tailwindcss(), nitro()],
 });

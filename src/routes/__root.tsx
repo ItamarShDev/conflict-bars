@@ -40,12 +40,12 @@ function RootLayout() {
 
 		if (!hasLocale && pathname !== "/") {
 			navigate({
-				to: "/he",
+				to: "/$lang",
 				params: { lang: defaultLocale },
 				search: { redirect: pathname },
 			});
 		} else if (pathname === "/") {
-			navigate({ to: "/he", params: { lang: defaultLocale } });
+			navigate({ to: "/$lang", params: { lang: defaultLocale } });
 		}
 	}, [location.pathname, navigate]);
 
