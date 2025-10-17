@@ -55,19 +55,19 @@ export function SongEntry({
 	const orientationClass =
 		lang === "he" ? "ml-4 mr-auto text-right" : "mr-4 ml-auto";
 	const containerClasses = [
-		"relative w-full max-w-md bg-[var(--color-card-background)] border border-[var(--color-border)] rounded-md shadow-sm transition-transform duration-200",
+		"relative w-full max-w-md bg-[var(--color-card-background)] border border-[var(--color-border)] rounded-lg shadow-sm transition-transform duration-200",
 		leaningColor[leaning],
 		orientationClass,
 		showMarginTop ? "mt-4" : "",
-		isCompact ? "p-3 space-y-1.5" : "p-4 space-y-3",
+		isCompact ? "p-3 space-y-2" : "p-5 space-y-4",
 		className ?? "",
 	]
 		.filter(Boolean)
 		.join(" ");
 
 	const titleClass = isCompact
-		? "text-lg font-semibold leading-tight text-[var(--color-card-foreground)]"
-		: "text-xl font-semibold leading-snug text-[var(--color-card-foreground)]";
+		? "text-lg font-bold leading-snug text-[var(--color-card-foreground)]"
+		: "text-xl font-bold leading-snug text-[var(--color-card-foreground)]";
 	const artistClass = isCompact
 		? "text-[0.7rem] uppercase tracking-wide text-[var(--color-muted-foreground)]"
 		: "text-sm text-[var(--color-muted-foreground)]";
@@ -85,10 +85,10 @@ export function SongEntry({
 						lang === "he"
 							? isCompact
 								? "flex flex-col gap-0.5 text-right"
-								: "flex flex-col gap-1 text-right"
+								: "flex flex-col gap-1.5 text-right"
 							: isCompact
 								? "flex flex-col gap-0.5"
-								: "flex items-baseline gap-2"
+								: "flex flex-col gap-1"
 					}
 				>
 					{lang === "he" ? (
@@ -106,17 +106,19 @@ export function SongEntry({
 			)}
 
 			{!isCompact && lyricSample && lyricContent && (
-				<p
-					className={`text-sm text-[var(--color-muted-foreground)] opacity-90 ${lang === "he" ? "text-right" : ""}`}
-					dir={lang === "he" && lyricSample?.hebrew ? "rtl" : "ltr"}
-				>
-					"{lyricContent}"
-				</p>
+				<div className="pt-2 border-t border-[var(--color-border)]">
+					<p
+						className={`text-sm text-[var(--color-muted-foreground)] leading-relaxed italic ${lang === "he" ? "text-right" : ""}`}
+						dir={lang === "he" && lyricSample?.hebrew ? "rtl" : "ltr"}
+					>
+						"{lyricContent}"
+					</p>
+				</div>
 			)}
 
 			{!isCompact && links && (
 				<div
-					className={`flex gap-3 text-sm ${lang === "he" ? "flex-row-reverse" : ""}`}
+					className={`flex gap-3 text-sm pt-2 border-t border-[var(--color-border)] ${lang === "he" ? "flex-row-reverse" : ""}`}
 				>
 					{links?.lyrics && (
 						<a
