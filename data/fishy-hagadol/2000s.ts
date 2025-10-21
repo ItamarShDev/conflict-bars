@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const fishyHagadol2000s: SongList = [
+export const fishyHagadol2000s = [
 	{
 		name: "הכל שקוף (Hakol Sakaif / Everything is Transparent)",
 		artist: "Fishy Hagadol (פישי הגדול)",

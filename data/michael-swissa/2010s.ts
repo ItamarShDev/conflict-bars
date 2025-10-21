@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const michaelSwissa2010s: SongList = [
+export const michaelSwissa2010s = [
 	{
 		name: "Playful Rhymes (חרוזים משעשעים)",
 		artist: "Michael Swissa (מיכאל סוויסה)",

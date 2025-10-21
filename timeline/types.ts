@@ -1,8 +1,10 @@
+import type { Preloaded } from "convex/react";
 import type { api } from "../convex/_generated/api";
 
 export type Song = (typeof api.songs.getAllSongs._returnType)[number];
-
 export type SongList = typeof api.songs.getAllSongs._returnType;
+export type PreloadedSongList = Preloaded<typeof api.songs.getAllSongs>;
+export type PreloadedEvents = Preloaded<typeof api.events.getAllEvents>;
 
 export type EventsTimeline = {
 	time: { start: string; end?: string };

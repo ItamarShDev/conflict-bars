@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const echo2010s: SongList = [
+export const echo2010s = [
 	{
 		name: "Nashim (נשים)",
 		artist: "Echo (הד)",

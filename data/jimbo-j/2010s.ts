@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const jimboJ2010s: SongList = [
+export const jimboJ2010s = [
 	{
 		name: "Politika (פוליטיקה)",
 		artist: "Jimbo J (ג'ימבו ג')",

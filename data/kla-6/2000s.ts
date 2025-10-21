@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const kla62000s: SongList = [
+export const kla62000s = [
 	{
 		name: "דרך לחיים (Derech Lechayim / Way to Life)",
 		artist: "Kla 6 (כלא 6)",

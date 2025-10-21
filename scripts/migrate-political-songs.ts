@@ -57,6 +57,7 @@ async function upsertSongWithArtist(song: SongList[number]) {
 	const collaboratorIds: string[] = [];
 	if (song.collaborators && song.collaborators.length > 0) {
 		for (const collaborator of song.collaborators) {
+			if (!collaborator) continue;
 			const collaboratorInfo =
 				artistPoliticalAffiliation[collaborator] ?? undefined;
 			const collaboratorId = await ensureArtist(collaborator, collaboratorInfo);
@@ -86,7 +87,8 @@ async function upsertSongWithArtist(song: SongList[number]) {
 	return client.mutation(api.mutations.insertSong, {
 		name: song.name,
 		artistId,
-		collaboratorIds: collaboratorIds.length > 0 ? (collaboratorIds as never) : undefined,
+		collaboratorIds:
+			collaboratorIds.length > 0 ? (collaboratorIds as never) : undefined,
 		published_date: song.published_date,
 		language: song.language,
 		lyric_sample: song.lyric_sample,
@@ -205,9 +207,7 @@ async function run() {
 		}
 	}
 
-	console.log(
-		`\nPhase 1 complete: ${artistsCreated} artists created/updated`,
-	);
+	console.log(`\nPhase 1 complete: ${artistsCreated} artists created/updated`);
 
 	// Phase 2: Migrate songs
 	console.log("\nPhase 2: Migrating songs...");

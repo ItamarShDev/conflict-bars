@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const subliminal2020s: SongList = [
+export const subliminal2020s = [
 	{
 		name: "זה עלינו (Zeh Aleinu / It's On Us)",
 		artist: "Subliminal (סאבלימינל)",

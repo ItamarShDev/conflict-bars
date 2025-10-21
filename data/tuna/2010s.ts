@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const tuna2010s: SongList = [
+export const tuna2010s = [
 	{
 		name: "Seret Aravi (סרט ערבי)",
 		artist: "Tuna (טונה)",

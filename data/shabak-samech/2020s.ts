@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const shabakSamech2020s: SongList = [
+export const shabakSamech2020s = [
 	{
 		name: "כולם עושים את זה (Kulam Osim Et Ze)",
 		artist: "Shabak Samech (שבק ס)",

@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const mooki2000s: SongList = [
+export const mooki2000s = [
 	{
 		name: "מדברים על שלום (Medabrim Al Shalom / Talking About Peace)",
 		artist: "Mooki (מוקי)",

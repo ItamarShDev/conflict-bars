@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const loukatz2010s: SongList = [
+export const loukatz2010s = [
 	{
 		name: "שיר השלום (Shir Hashalom / Song of Peace)",
 		artist: "Loukatz (לוקץ')",

@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const peled2000s: SongList = [
+export const peled2000s = [
 	{
 		name: "Satira (סטירה)",
 		artist: "Peled (פלד)",

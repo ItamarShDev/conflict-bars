@@ -1,4 +1,5 @@
-import { fetchQuery } from "convex/nextjs";
+"use client";
+import { usePreloadedQuery } from "convex/react";
 import { SubmitSongModal } from "@/components/SubmitSongModal";
 import { HelpModal } from "@/components/timeline/HelpModal";
 import { TimelineHeader } from "@/components/timeline/TimelineHeader";
@@ -6,17 +7,26 @@ import { translations } from "@/components/timeline/translations";
 import { YearGroup } from "@/components/timeline/YearGroup";
 import { convertConvexEventsToTimeline } from "@/utils/convex-helpers";
 import { getEntriesByYear } from "@/utils/timeline";
-import { api } from "../../../convex/_generated/api";
+import type {
+	PreloadedEvents,
+	PreloadedSongList,
+} from "../../../timeline/types";
 
-export async function Timeline({ lang }: { lang: "en" | "he" }) {
+export function Timeline({
+	lang,
+	preloadedSongs,
+	convexEvents,
+}: {
+	lang: "en" | "he";
+	preloadedSongs: PreloadedSongList;
+	convexEvents: PreloadedEvents;
+}) {
 	const t = translations[lang];
+	const _events = usePreloadedQuery(convexEvents);
+	const events = convertConvexEventsToTimeline(_events);
 
-	const songs = await fetchQuery(api.songs.getAllSongs);
-
-	const convexEvents = await fetchQuery(api.events.getAllEvents);
-	const events = convertConvexEventsToTimeline(convexEvents);
-
-	const yearGroups = getEntriesByYear(songs, events);
+	const _songs = usePreloadedQuery(preloadedSongs);
+	const yearGroups = getEntriesByYear(_songs, events);
 	return (
 		<div className="relative overflow-x-hidden">
 			<TimelineHeader title={t.title} lang={lang} />

@@ -1,9 +1,9 @@
 import { useMutation } from "convex/react";
 import { useState } from "react";
+import { SubmitSongForm } from "@/components/SubmitSongForm";
 import { translations } from "@/components/timeline/translations";
 import { api } from "../../../convex/_generated/api";
 import type { Song } from "../../../timeline/types";
-import { SubmitSongForm } from "../SubmitSongForm";
 
 export type SongTranslations = {
 	lyrics: string;
@@ -87,7 +87,10 @@ export function SongEntry({
 			<div className={`${containerClasses} group`}>
 				<button
 					type="button"
-					onClick={() => setIsEditModalOpen(true)}
+					onClick={(e) => {
+						e.stopPropagation();
+						setIsEditModalOpen(true);
+					}}
 					className="absolute -top-4 -left-4 flex items-center justify-center w-8 h-8 rounded-full bg-blue-500 hover:bg-blue-600 text-white transition-opacity opacity-0 group-hover:opacity-100 shadow-lg z-20 cursor-pointer"
 					title="Suggest edit"
 					aria-label="Suggest edit for this song"

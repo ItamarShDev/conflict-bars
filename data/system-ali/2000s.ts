@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const systemAli2000s: SongList = [
+export const systemAli2000s = [
 	{
 		name: "אין כמו יפו (Ain Kmo Yafo / There's Nothing Like Jaffa)",
 		artist: "System Ali (סיסטם עלי)",

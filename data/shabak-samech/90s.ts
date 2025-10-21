@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const shabakSamech90s: SongList = [
+export const shabakSamech90s = [
 	{
 		name: "Beiskey Hashin - בעסקי ה-ש'",
 		artist: "Shabak Samech (שבק ס)",

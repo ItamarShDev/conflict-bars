@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const silverdone1990s: SongList = [
+export const silverdone1990s = [
 	{
 		name: "מדינה בסכנה (Medina Besikana / State in Danger)",
 		artist: "Silverdone (סילברדון)",

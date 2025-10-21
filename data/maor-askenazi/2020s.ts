@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const maorAskenazi2020s: SongList = [
+export const maorAskenazi2020s = [
 	{
 		name: "השיר של נועם (Hashir Shel Noam / Noam's Song)",
 		artist: "Maor Askenazi (מאור אשכנזי)",

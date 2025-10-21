@@ -117,7 +117,7 @@ async function migrateLanguages() {
 	console.log("🔄 Starting language migration...");
 
 	try {
-		const songs = await client.query(api.songs.getAllSongs);
+		const songs = await client.query(api.songs.getAllSongs, {});
 		console.log(`📊 Found ${songs.length} songs to process`);
 
 		let updated = 0;

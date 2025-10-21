@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const subliminal2010s: SongList = [
+export const subliminal2010s = [
 	{
 		name: "תן כוח (Ten Koah / Give Me Strength)",
 		artist: "Subliminal (סאבלימינל)",

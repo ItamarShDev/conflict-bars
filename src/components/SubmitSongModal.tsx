@@ -2,9 +2,9 @@
 
 import { useMutation } from "convex/react";
 import { useEffect, useState } from "react";
+import { SubmitSongForm } from "@/components/SubmitSongForm";
 import type { SubmitSongFormTranslations } from "@/components/timeline/translations";
 import { api } from "../../convex/_generated/api";
-import { SubmitSongForm } from "./SubmitSongForm";
 
 export function SubmitSongModal({
 	label,

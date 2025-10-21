@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const sagol592020s: SongList = [
+export const sagol592020s = [
 	{
 		name: "Judoka",
 		artist: "Sagol 59 (סגול 59)",

@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const nessVeStilla2020s: SongList = [
+export const nessVeStilla2020s = [
 	{
 		name: "חרבו דרבו (Charbu Darbu / Swords and Strikes)",
 		artist: "Ness Ve Stilla (נס וסטילה)",

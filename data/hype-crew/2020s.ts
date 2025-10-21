@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const hypeCrew2020s: SongList = [
+export const hypeCrew2020s = [
 	{
 		name: "תדליקו ת׳אורות (Tadliku T'Orot / Light Up the Lights)",
 		artist: "Hype Crew (היפ קרו)",

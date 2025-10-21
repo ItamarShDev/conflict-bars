@@ -1,14 +1,16 @@
+import { execSync } from "node:child_process";
 import { readdirSync, statSync } from "node:fs";
 import { dirname, join } from "node:path";
-import { execSync } from "node:child_process";
-import { config } from "dotenv";
 import { ConvexHttpClient } from "convex/browser";
+import { config } from "dotenv";
 import { api } from "../convex/_generated/api";
 import { artistPoliticalAffiliation } from "../timeline/artist-political-affiliation";
 import type { SongList } from "../timeline/types";
 
 // Load environment variables from .env.local
-config({ path: join(dirname(new URL(import.meta.url).pathname), "../.env.local") });
+config({
+	path: join(dirname(new URL(import.meta.url).pathname), "../.env.local"),
+});
 
 const CONVEX_URL = process.env.NEXT_PUBLIC_CONVEX_URL;
 
@@ -25,7 +27,6 @@ const client = new ConvexHttpClient(CONVEX_URL);
 function normalize(name: string) {
 	return name.trim().toLowerCase();
 }
-
 
 async function ensureArtist(
 	name: string,
@@ -94,6 +95,7 @@ async function upsertSongWithArtist(
 	const collaboratorIds: string[] = [];
 	if (song.collaborators && song.collaborators.length > 0) {
 		for (const collaborator of song.collaborators) {
+			if (!collaborator) continue;
 			const collaboratorInfo =
 				artistPoliticalAffiliation[collaborator] ?? undefined;
 			const collaboratorId = await ensureArtist(
@@ -121,7 +123,8 @@ async function upsertSongWithArtist(
 				updates: {
 					name: song.name,
 					artist_id: artistId as never,
-					collaborator_ids: collaboratorIds.length > 0 ? (collaboratorIds as never) : undefined,
+					collaborator_ids:
+						collaboratorIds.length > 0 ? (collaboratorIds as never) : undefined,
 					language: song.language,
 					lyric_sample: song.lyric_sample,
 					links: song.links,
@@ -143,7 +146,8 @@ async function upsertSongWithArtist(
 	return client.mutation(api.mutations.insertSong, {
 		name: song.name,
 		artistId,
-		collaboratorIds: collaboratorIds.length > 0 ? (collaboratorIds as never) : undefined,
+		collaboratorIds:
+			collaboratorIds.length > 0 ? (collaboratorIds as never) : undefined,
 		published_date: song.published_date,
 		language: song.language,
 		lyric_sample: song.lyric_sample,
@@ -192,12 +196,14 @@ async function run() {
 	// Check for force flag
 	const forceUpdate = process.argv.includes("--force");
 	if (forceUpdate) {
-		console.log("⚠️  Running in FORCE UPDATE mode - existing data will be overwritten\n");
+		console.log(
+			"⚠️  Running in FORCE UPDATE mode - existing data will be overwritten\n",
+		);
 	}
 
 	// Phase 1: Ensure all artists from political affiliation file exist in database
 	console.log("📊 Phase 1: Creating/updating all artists in database...");
-	let artistsCreated = 0;
+	const artistsCreated = 0;
 	let artistsUpdated = 0;
 
 	for (const [artistName, artistData] of Object.entries(

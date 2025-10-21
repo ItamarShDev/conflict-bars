@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const odeya2020s: SongList = [
+export const odeya2020s = [
 	{
 		name: "חורף 23 (Choref 23 / The Winter of 23)",
 		artist: "Odeya (אודיה)",

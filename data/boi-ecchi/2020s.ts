@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const boiEcchi2020s: SongList = [
+export const boiEcchi2020s = [
 	{
 		name: "Aesthetic Vibes (ויברציות אסתטיות)",
 		artist: "Boi Ecchi (בוי אקי)",

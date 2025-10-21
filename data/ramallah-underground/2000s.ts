@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const ramallahUnderground2000s: SongList = [
+export const ramallahUnderground2000s = [
 	{
 		name: "Sijen ib Sijen",
 		artist: "Ramallah Underground (رام الله أندرجراوند)",

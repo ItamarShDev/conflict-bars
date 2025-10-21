@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const axsom2010s: SongList = [
+export const axsom2010s = [
 	{
 		name: "מדינה של גנבים (Medina Shel Ganavim / State of Thieves)",
 		artist: "Axsom (אקסום)",

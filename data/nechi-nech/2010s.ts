@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const nechiNech2010s: SongList = [
+export const nechiNech2010s = [
 	{
 		name: "Discrimination (אפליה)",
 		artist: "Rabid Plotnik (רביד פלוטניק)",

@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const strongBlackCoffee2010s: SongList = [
+export const strongBlackCoffee2010s = [
 	{
 		name: "Kushi (כושי)",
 		artist: "Strong Black Coffee (קפה שחור חזק)",

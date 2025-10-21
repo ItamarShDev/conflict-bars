@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const ravidPlotnik2020s: SongList = [
+export const ravidPlotnik2020s = [
 	{
 		name: "שגרה בזמן מלחמה (Routine During War)",
 		artist: "Ravid Plotnik (רביד פלוטניק)",

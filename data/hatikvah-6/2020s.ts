@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const hatikvah62020s: SongList = [
+export const hatikvah62020s = [
 	{
 		name: "גיבורי על (Giborei Al / Superheroes)",
 		artist: "Hatikvah 6 (התיכווה 6)",

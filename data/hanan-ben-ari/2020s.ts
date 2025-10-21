@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const hananBenAri2020s: SongList = [
+export const hananBenAri2020s = [
 	{
 		name: "מולדת (Moledet / Homeland)",
 		artist: "Hanan Ben Ari (חנן בן ארי)",

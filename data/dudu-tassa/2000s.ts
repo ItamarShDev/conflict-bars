@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const duduTassa2000s: SongList = [
+export const duduTassa2000s = [
 	{
 		name: "Coexistence (קיום משותף)",
 		artist: "Dudu Tassa (דודו טסה)",

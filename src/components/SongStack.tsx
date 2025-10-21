@@ -104,10 +104,18 @@ export function SongStack({ songs, lang, year }: SongStackProps) {
 
 	return (
 		<>
-			<button
-				type="button"
+			{/** biome-ignore lint/a11y/useSemanticElements: false positive */}
+			<div
 				onClick={openStack}
-				className={`w-full focus:outline-none text-start`}
+				onKeyDown={(e) => {
+					if (e.key === "Enter" || e.key === " ") {
+						e.preventDefault();
+						openStack();
+					}
+				}}
+				role="button"
+				tabIndex={0}
+				className={`w-full focus:outline-none text-start cursor-pointer`}
 				aria-expanded={isExpanded}
 				aria-label={`${t.stack.viewAll} ${songCountText}`}
 			>
@@ -117,7 +125,7 @@ export function SongStack({ songs, lang, year }: SongStackProps) {
 					isExpanded={isExpanded}
 					isOverlayVisible={isOverlayVisible}
 				/>
-			</button>
+			</div>
 
 			{isMounted && isOverlayVisible && (
 				<ExpandedModal

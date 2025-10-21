@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const iz2020s: SongList = [
+export const iz2020s = [
 	{
 		name: "שבעה באוקטובר (October Seventh)",
 		artist: "IZ (איזי)",

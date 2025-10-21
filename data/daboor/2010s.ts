@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const daboor2010s: SongList = [
+export const daboor2010s = [
 	{
 		name: "Inn Ann",
 		artist: "Daboor (دابور)",

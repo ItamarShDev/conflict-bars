@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const avivGefen2020s: SongList = [
+export const avivGefen2020s = [
 	{
 		name: "זריחה שחורה (Zeriha Shehora / Black Sunrise)",
 		artist: "Aviv Gefen (אביב גפן)",

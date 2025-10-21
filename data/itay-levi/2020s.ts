@@ -1,6 +1,4 @@
-import type { SongList } from "../../timeline/types";
-
-export const itayLevi2020s: SongList = [
+export const itayLevi2020s = [
 	{
 		name: "אין לי מקום אחר (Ein Li Makom Acher / I Have No Other Place)",
 		artist: "Itay Levi (איתי לוי)",
@@ -14,7 +12,8 @@ export const itayLevi2020s: SongList = [
 		},
 		links: {
 			lyrics: "https://genius.com/search?q=itay+levi+ein+li+makom+acher",
-			youtube: "https://www.youtube.com/results?search_query=itay+levi+ein+li+makom+acher",
+			youtube:
+				"https://www.youtube.com/results?search_query=itay+levi+ein+li+makom+acher",
 		},
 	},
 ];

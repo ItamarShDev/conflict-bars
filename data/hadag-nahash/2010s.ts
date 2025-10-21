@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const hadagNahash2010s: SongList = [
+export const hadagNahash2010s = [
 	{
 		name: "קובלנה על מפלגות ישראל (Complaint About Israeli Parties)",
 		artist: "Hadag Nahash (הדג נחש)",

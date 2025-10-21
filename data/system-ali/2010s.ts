@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const systemAli2010s: SongList = [
+export const systemAli2010s = [
 	{
 		name: "Vayina WAR (Live)",
 		artist: "System Ali (סיסטם עלי)",

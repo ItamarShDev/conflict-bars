@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const eyalGolan2020s: SongList = [
+export const eyalGolan2020s = [
 	{
 		name: "עם ישראל חי (Am Yisrael Chai / The Israeli Nation Lives)",
 		artist: "Eyal Golan (אייל גולן)",

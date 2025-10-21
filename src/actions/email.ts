@@ -1,7 +1,8 @@
+"use server";
+import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 export interface SongSubmissionEmailPayload {
-	submitterName: string;
 	submitterEmail?: string;
 	songName: string;
 	artist: string;
@@ -18,12 +19,11 @@ export interface SongSubmissionEmailPayload {
 	};
 }
 
-const notificationEmail = "itamarsharify@gmail.com";
+const notificationEmail = "itamarsharifytech@gmail.com";
 
 function formatAdminMessage(payload: SongSubmissionEmailPayload) {
 	const lines = [
 		"New song submission received.",
-		`Submitter: ${payload.submitterName}`,
 		`Submitter email: ${payload.submitterEmail ?? "N/A"}`,
 		`Song: ${payload.songName}`,
 		`Artist: ${payload.artist}`,
@@ -65,7 +65,7 @@ function formatAdminMessage(payload: SongSubmissionEmailPayload) {
 
 function formatSubmitterMessage(payload: SongSubmissionEmailPayload) {
 	const lines = [
-		`Hi ${payload.submitterName},`,
+		`Hi,`,
 		"",
 		"Thanks for submitting a song to the Israeli Hip-Hop timeline!",
 		"We'll review the details soon. Here's what we received:",
@@ -105,10 +105,10 @@ function formatSubmitterMessage(payload: SongSubmissionEmailPayload) {
 
 export async function sendThankYouMail(payload: SongSubmissionEmailPayload) {
 	if (!payload.submitterEmail) {
-		return;
+		return NextResponse.json({ status: "error" });
 	}
 
-	const mail = "itamarsharify@gmail.com";
+	const mail = "itamarsharifytech@gmail.com";
 	const transporter = nodemailer.createTransport({
 		service: "gmail",
 		auth: {
@@ -125,9 +125,11 @@ export async function sendThankYouMail(payload: SongSubmissionEmailPayload) {
 	};
 
 	await transporter.sendMail(mailOptions);
+	await sendAdminMail(payload);
+	return NextResponse.json({ status: "success" });
 }
 
-export async function sendMail(payload: SongSubmissionEmailPayload) {
+export async function sendAdminMail(payload: SongSubmissionEmailPayload) {
 	const mail = notificationEmail;
 	const transporter = nodemailer.createTransport({
 		service: "gmail",
@@ -145,4 +147,5 @@ export async function sendMail(payload: SongSubmissionEmailPayload) {
 	};
 
 	await transporter.sendMail(mailOptions);
+	transporter.close();
 }

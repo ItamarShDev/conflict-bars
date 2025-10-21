@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const ortega2000s: SongList = [
+export const ortega2000s = [
 	{
 		name: "04:47",
 		artist: "Ortega (אורטגה)",

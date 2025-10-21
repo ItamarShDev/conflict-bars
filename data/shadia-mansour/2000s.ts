@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const shadiaMansour2000s: SongList = [
+export const shadiaMansour2000s = [
 	{
 		name: "Palestinian Hip Hop",
 		artist: "Shadia Mansour (شادية منصور)",

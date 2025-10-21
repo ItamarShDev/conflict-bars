@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const ortega2020s: SongList = [
+export const ortega2020s = [
 	{
 		name: "זהב שחור (Black Gold)",
 		artist: "Ortega (אורטגה)",

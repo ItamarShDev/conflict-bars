@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const dam2000s: SongList = [
+export const dam2000s = [
 	{
 		name: "Who's the Terrorist? (מי הטרוריסט?)",
 		artist: "DAM (דאם)",

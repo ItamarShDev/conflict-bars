@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const shananStreet2000s: SongList = [
+export const shananStreet2000s = [
 	{
 		name: "Summit Meeting",
 		artist: "Shanan Street (שאנן סטריט)",

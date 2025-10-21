@@ -1,35 +1,13 @@
 "use client";
 
-import { type ReactMutation, useQuery } from "convex/react";
+import { useQuery } from "convex/react";
 import { useEffect, useId, useMemo, useState } from "react";
-import type { SubmitSongFormTranslations } from "@/components/timeline/translations";
 import { api } from "../../convex/_generated/api";
 import type { Id } from "../../convex/_generated/dataModel";
+import { sendThankYouMail } from "../actions/email";
+import type { SubmitSongFormProps } from "./SubmitSongForm.types";
 
 type SubmissionStatus = "idle" | "submitting" | "success" | "error";
-
-type SubmitSongFormProps = {
-	submitSong: ReactMutation<typeof api.mutations.submitSongEditSuggestion>;
-	onSuccess?: () => void;
-	translations: SubmitSongFormTranslations;
-	lang?: "en" | "he";
-	editSong?: {
-		_id: Id<"songs">;
-		name: string;
-		artist: string;
-		published_date: string;
-		language?: string;
-		lyric_sample?: {
-			hebrew?: string;
-			english_translation?: string;
-		};
-		links?: {
-			lyrics?: string;
-			song_info?: string;
-			youtube?: string;
-		};
-	};
-};
 
 export function SubmitSongForm({
 	onSuccess,
@@ -43,6 +21,9 @@ export function SubmitSongForm({
 	const [status, setStatus] = useState<SubmissionStatus>("idle");
 	const [errorMessage, setErrorMessage] = useState<string | null>(null);
 	const [prefillEmail, setPrefillEmail] = useState<string>("");
+	const [artistValue, setArtistValue] = useState<string>(
+		editSong?.artist ?? "",
+	);
 	const [missingFields, setMissingFields] = useState<Set<string>>(new Set());
 	const artistListId = useId();
 	const languageListId = useId();
@@ -168,6 +149,15 @@ export function SubmitSongForm({
 			setStatus("success");
 			onSuccess?.();
 			form.reset();
+			await sendThankYouMail({
+				submitterEmail: email,
+				songName,
+				artist,
+				publishedDate,
+				language,
+				lyricSample,
+				links,
+			});
 		} catch (error) {
 			console.error("Failed to submit song", error);
 			setStatus("error");
@@ -232,8 +222,9 @@ export function SubmitSongForm({
 							name="artist"
 							type="text"
 							required={!isEditMode}
-							readOnly={!isEditMode}
-							value={editSong?.artist || ""}
+							readOnly={isEditMode}
+							value={artistValue}
+							onChange={(e) => setArtistValue(e.target.value)}
 							list={isEditMode ? undefined : artistListId}
 							className={`rounded border px-3 py-2 ${
 								missingFields.has("artist")

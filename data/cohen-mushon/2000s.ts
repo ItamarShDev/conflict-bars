@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const cohenMushon2000s: SongList = [
+export const cohenMushon2000s = [
 	{
 		name: "Shir Ahava (שיר אהבה)",
 		artist: "Cohen@Mushon (כהן@מושון)",

@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const checkpoint3032000s: SongList = [
+export const checkpoint3032000s = [
 	{
 		name: "Checkpoint Tunes",
 		artist: "Checkpoint 303 (تفتيش 303)",

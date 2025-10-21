@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const yosefDayan2010s: SongList = [
+export const yosefDayan2010s = [
 	{
 		name: "Sharp Commentary (פרשנות חדה)",
 		artist: "Yosef Dayan (יוסף דיין)",

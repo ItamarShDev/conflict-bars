@@ -1,6 +1,6 @@
 import type { SongList } from "../../timeline/types";
 
-export const theShadow2000s: SongList = [
+export const theShadow2000s = [
 	{
 		name: "התקווה (Hatikva)",
 		artist: "Subliminal & The Shadow",
