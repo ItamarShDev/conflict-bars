@@ -35,9 +35,9 @@ export function SongEntry({
 	const t = translations[lang];
 	const leaningColor: Record<"left" | "right" | "center" | "unknown", string> =
 		{
-			left: "border-blue-600",
-			right: "border-red-600",
-			center: "border-yellow-600",
+			left: "border-red-600",
+			right: "border-blue-600",
+			center: "border-yellow-400",
 			unknown: "border-gray-600",
 		};
 	const songObj = song as Song;
