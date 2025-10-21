@@ -303,4 +303,28 @@ export const artistPoliticalAffiliation: Record<
 		notes:
 			"Palestinian producer and rapper; collaborations with Shabjdeed and Daboor on resistance themes; BBC-recognized artist.",
 	},
+	"System Ali (סיסטם עלי)": {
+		era: "2000s–present",
+		affiliation: "Palestinian left / Anti-occupation",
+		notes:
+			"Palestinian-Israeli rapper from Jaffa; multilingual artist addressing gentrification, housing rights, and urban resistance.",
+	},
+	"IZ (איזי)": {
+		era: "2020s–present",
+		affiliation: "Center / War response",
+		notes:
+			"Rapper responding to October 7 events; created memorial songs for victims.",
+	},
+	"Hype Crew (היפ קרו)": {
+		era: "2020s–present",
+		affiliation: "Right-leaning / Nationalist",
+		notes:
+			"Emerged after October 7, 2023; known for patriotic and encouraging themes during wartime.",
+	},
+	"Ravid Plotnik (רביד פלוטניק)": {
+		era: "2020s–present",
+		affiliation: "Center / War response",
+		notes:
+			"Rapper addressing daily reality under war; songs about living in extraordinary conditions.",
+	},
 } as const;

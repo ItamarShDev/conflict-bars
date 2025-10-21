@@ -34,7 +34,7 @@ export function StackedCards({
 }: StackedCardsProps) {
 	return (
 		<div
-			className={`transition-all duration-300 ease-out ${isOverlayVisible ? "pointer-events-none" : ""} ${isExpanded ? "opacity-0 scale-95" : "opacity-100 scale-100"}`}
+			className={`transition-all duration-300 ease-out pt-6 ${isOverlayVisible ? "pointer-events-none" : ""} ${isExpanded ? "opacity-0 scale-95" : "opacity-100 scale-100"}`}
 		>
 			{songs.map((entry, idx) => {
 				const rotationKey = `${entry.song.artist}-${entry.song.name}`;

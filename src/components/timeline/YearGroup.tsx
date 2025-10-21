@@ -23,9 +23,9 @@ export function YearGroup({
 
 	return (
 		<>
-			<ConflictsColumn index={index} conflicts={conflicts} lang={lang} />
-			<YearMarker index={index} year={year} showYear={showYear} />
 			<SongsColumn index={index} songs={songs} lang={lang} year={year} />
+			<YearMarker index={index} year={year} showYear={showYear} />
+			<ConflictsColumn index={index} conflicts={conflicts} lang={lang} />
 		</>
 	);
 }

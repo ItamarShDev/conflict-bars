@@ -1,38 +1,8 @@
-export type Artist = {
-	_id?: string;
-	_creationTime?: number;
-	name: string;
-	name_he?: string;
-	name_en?: string;
-	normalized_name: string;
-	era?: string;
-	affiliation?: string;
-	notes?: string;
-};
+import type { api } from "../convex/_generated/api";
 
-export type Song = {
-	_id?: string;
-	_creationTime?: number;
-	name: string;
-	artist: string;
-	artist_id?: string;
-	artist_details?: Artist;
-	collaborators?: string[]; // Array of collaborating artist names
-	collaborator_ids?: string[]; // Array of collaborating artist IDs
-	published_date: string; // Specific release date for the song
-	language?: string;
-	lyric_sample?: {
-		hebrew?: string;
-		english_translation?: string;
-	};
-	links?: {
-		lyrics?: string;
-		song_info?: string;
-		youtube?: string;
-	};
-};
+export type Song = (typeof api.songs.getAllSongs._returnType)[number];
 
-export type SongList = Song[];
+export type SongList = typeof api.songs.getAllSongs._returnType;
 
 export type EventsTimeline = {
 	time: { start: string; end?: string };
@@ -49,18 +19,4 @@ export type EventsTimeline = {
 	};
 };
 
-export type ConvexEvent = {
-	_id: string;
-	_creationTime: number;
-	start: string;
-	end?: string;
-	title: string;
-	title_he?: string;
-	reason: string;
-	reason_he?: string;
-	description?: string;
-	description_he?: string;
-	effects?: string;
-	effects_he?: string;
-	wikipedia_url?: string;
-};
+export type ConvexEvent = (typeof api.events.getAllEvents._returnType)[number];

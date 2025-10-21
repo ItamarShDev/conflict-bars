@@ -20,7 +20,7 @@ export function ConflictsColumn({
 
 	return (
 		<div
-			className={`col-1 ml-4 row-${index + 1} ${lang === "he" ? "ml-0 mr-4" : ""}`}
+			className={`col-3 me-4 row-${index + 1} ${lang === "he" ? "mr-0 ml-4" : ""}`}
 		>
 			{conflictItems.map((conflictEntry) => {
 				const conflictDetails = conflictEntry.conflictEntry;

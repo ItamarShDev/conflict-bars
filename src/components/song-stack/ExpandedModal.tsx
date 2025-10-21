@@ -60,8 +60,8 @@ export function ExpandedModal({
 					closeLabel={t.stack.close}
 					onClose={onClose}
 				/>
-				<div className="mt-8 flex-1 overflow-y-auto">
-					<div className="grid gap-6 md:grid-cols-2">
+				<div className="mt-8 flex-1 overflow-y-auto overflow-x-visible pt-6 px-2">
+					<div className="grid gap-6 md:grid-cols-2 overflow-visible">
 						{songs.map((entry, idx) => (
 							<SongEntry
 								key={`${entry.song.artist}-${entry.song.name}-expanded-${idx}`}

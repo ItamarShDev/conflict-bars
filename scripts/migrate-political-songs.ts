@@ -145,6 +145,10 @@ function loadPoliticalSongs(): SongList {
 		"e-z",
 		"benia-bar-avi",
 		"al-nather",
+		"system-ali",
+		"iz",
+		"hype-crew",
+		"ravid-plotnik",
 	];
 
 	function walk(directory: string) {

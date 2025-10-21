@@ -17,7 +17,7 @@ export function SongsColumn({ songs, lang, year, index }: SongsColumnProps) {
 
 	return (
 		<div
-			className={`col-3 mr-4 mb-4 row-${index + 1} ${lang === "he" ? "mr-0 ml-4" : ""}`}
+			className={`col-1 me-4 mb-4 row-${index + 1} ${lang === "he" ? "me-0 ms-4" : ""}`}
 			aria-hidden={songItems.length === 0}
 		>
 			<SongStack

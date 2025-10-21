@@ -205,14 +205,16 @@ export const publishAllSongs = mutation({
 	},
 });
 
-export const submitSongWithUser = mutation({
+export const submitSongEditSuggestion = mutation({
 	args: {
-		userDisplayName: v.string(),
-		userEmail: v.optional(v.string()),
-		song: v.object({
-			name: v.string(),
-			artistId: v.id("artists"),
-			published_date: v.string(),
+		songId: v.optional(v.id("songs")),
+		userDisplayName: v.optional(v.string()),
+		userEmail: v.string(),
+		suggestion: v.object({
+			name: v.optional(v.string()),
+			artistId: v.optional(v.id("artists")),
+			collaboratorIds: v.optional(v.array(v.id("artists"))),
+			published_date: v.optional(v.string()),
 			language: v.optional(v.string()),
 			lyric_sample: v.optional(
 				v.object({
@@ -227,11 +229,12 @@ export const submitSongWithUser = mutation({
 					youtube: v.optional(v.string()),
 				}),
 			),
+			suggestion_notes: v.optional(v.string()),
 		}),
 	},
 	handler: async (ctx, args) => {
-		const displayName = args.userDisplayName.trim();
-		const email = args.userEmail?.trim().toLowerCase();
+		const displayName = args.userDisplayName?.trim();
+		const email = args.userEmail.trim().toLowerCase();
 		let userId: Id<"users"> | undefined;
 		if (email) {
 			const existing = await ctx.db
@@ -244,16 +247,35 @@ export const submitSongWithUser = mutation({
 		}
 		if (!userId) {
 			userId = await ctx.db.insert("users", {
-				display_name: displayName,
-				email: email ?? undefined,
+				display_name: displayName ?? "",
+				email: email,
 			});
 		}
-		const { artistId, ...song } = args.song;
-		return await ctx.db.insert("songs", {
-			...song,
-			artist_id: artistId,
-			published: false,
-			submitted_by: userId,
-		});
+		const { artistId, collaboratorIds, ...suggestionData } = args.suggestion;
+
+		// For edit suggestions, songId is required
+		if (args.songId) {
+			return await ctx.db.insert("song_edit_suggestions", {
+				song_id: args.songId,
+				user_id: userId,
+				...suggestionData,
+				artist_id: artistId ?? undefined,
+				collaborator_ids: collaboratorIds ?? undefined,
+				created_at: Date.now(),
+			});
+		}
+
+		// For new song submissions, insert into songs table
+		if (suggestionData.name && suggestionData.published_date && artistId) {
+			return await ctx.db.insert("songs", {
+				...suggestionData,
+				name: suggestionData.name,
+				published_date: suggestionData.published_date,
+				artist_id: artistId,
+				collaborator_ids: collaboratorIds ?? undefined,
+				published: false,
+				submitted_by: userId,
+			});
+		}
 	},
 });

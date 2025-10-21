@@ -107,7 +107,7 @@ export function SongStack({ songs, lang, year }: SongStackProps) {
 			<button
 				type="button"
 				onClick={openStack}
-				className={`w-full text-left focus:outline-none ${lang === "he" ? "text-right" : ""}`}
+				className={`w-full focus:outline-none text-start`}
 				aria-expanded={isExpanded}
 				aria-label={`${t.stack.viewAll} ${songCountText}`}
 			>

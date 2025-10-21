@@ -10,7 +10,9 @@ export default defineSchema({
 		era: v.optional(v.string()),
 		affiliation: v.optional(v.string()),
 		notes: v.optional(v.string()),
-	}).index("by_normalized_name", ["normalized_name"]),
+	})
+		.index("by_name", ["name"])
+		.index("by_normalized_name", ["normalized_name"]),
 
 	songs: defineTable({
 		name: v.string(),
@@ -39,8 +41,8 @@ export default defineSchema({
 		.index("by_submitted_by", ["submitted_by"]),
 
 	users: defineTable({
-		display_name: v.string(),
-		email: v.optional(v.string()),
+		display_name: v.optional(v.string()),
+		email: v.string(),
 	}).index("by_email", ["email"]),
 
 	events: defineTable({
@@ -58,4 +60,31 @@ export default defineSchema({
 	})
 		.index("by_start", ["start"])
 		.index("by_end", ["end"]),
+
+	song_edit_suggestions: defineTable({
+		song_id: v.id("songs"),
+		user_id: v.id("users"),
+		name: v.optional(v.string()),
+		artist_id: v.optional(v.id("artists")),
+		collaborator_ids: v.optional(v.array(v.id("artists"))),
+		published_date: v.optional(v.string()),
+		language: v.optional(v.string()),
+		lyric_sample: v.optional(
+			v.object({
+				hebrew: v.optional(v.string()),
+				english_translation: v.optional(v.string()),
+			}),
+		),
+		links: v.optional(
+			v.object({
+				lyrics: v.optional(v.string()),
+				song_info: v.optional(v.string()),
+				youtube: v.optional(v.string()),
+			}),
+		),
+		suggestion_notes: v.optional(v.string()),
+		created_at: v.number(),
+	})
+		.index("by_song_id", ["song_id"])
+		.index("by_user_id", ["user_id"]),
 });

@@ -14,6 +14,7 @@
 		"migrate:force": "tsx scripts/migrate-data.ts --force",
 		"migrate:cleanup": "tsx scripts/migrate-remove-artist-column.ts",
 		"migrate:events": "tsx scripts/migrate-events.ts",
+		"migrate:language": "CONVEX_URL=$(grep -o 'https://[^\"]*' .env.local | head -1) tsx scripts/migrate-language.ts",
 		"db:clear": "tsx scripts/clear-songs.ts",
 		"reset-data": "npm run db:clear && npm run migrate",
 		"reset-data:force": "npm run db:clear && npm run migrate:force"
