@@ -14,6 +14,7 @@ export const translations = {
 		submitSongForm: {
 			modalCloseAria: "Close submit song form",
 			title: "Submit a Song",
+			editTitle: "Suggest Song Edit",
 			fields: {
 				displayName: "Your name",
 				email: "Email",
@@ -26,6 +27,10 @@ export const translations = {
 				linkLyrics: "Lyrics link",
 				linkInfo: "Song info link",
 				linkYoutube: "YouTube link",
+			},
+			placeholders: {
+				displayNameOptional: "Optional",
+				publishedYear: "YYYY",
 			},
 			buttons: {
 				submitting: "Submitting...",
@@ -55,6 +60,11 @@ export const translations = {
 			},
 			close: "Close",
 		},
+		editSuggestion: {
+			buttonTitle: "Suggest edit",
+			buttonAria: "Suggest edit for this song",
+			iconTitle: "Suggest edit",
+		},
 		stack: {
 			viewAll: "View songs",
 			close: "Close",
@@ -76,6 +86,7 @@ export const translations = {
 		submitSongForm: {
 			modalCloseAria: "סגור את טופס שליחת השיר",
 			title: "הוסף שיר",
+			editTitle: "הצעת עריכה לשיר",
 			fields: {
 				displayName: "השם שלך",
 				email: "אימייל",
@@ -88,6 +99,10 @@ export const translations = {
 				linkLyrics: "קישור למילים",
 				linkInfo: "קישור למידע על השיר",
 				linkYoutube: "קישור ליוטיוב",
+			},
+			placeholders: {
+				displayNameOptional: "אופציונלי",
+				publishedYear: "YYYY",
 			},
 			buttons: {
 				submitting: "שולח...",
@@ -115,6 +130,11 @@ export const translations = {
 					"רוצים להוסיף? לחצו על כפתור הוסף שיר ושלחו שיר או מידע שחסר.",
 			},
 			close: "סגור",
+		},
+		editSuggestion: {
+			buttonTitle: "הצע עריכה",
+			buttonAria: "הצע עריכה לשיר זה",
+			iconTitle: "הצע עריכה",
 		},
 		stack: {
 			viewAll: "הצג שירים",

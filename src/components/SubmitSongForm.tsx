@@ -171,7 +171,7 @@ export function SubmitSongForm({
 		<div
 			className={`border border-neutral-700 rounded-lg p-6 bg-neutral-900/50 text-start`}
 		>
-			<h2 className="text-xl font-semibold mb-4 text-neutral-100">{t.title}</h2>
+			<h2 className="text-xl font-semibold mb-4 text-neutral-100">{isEditMode ? t.editTitle : t.title}</h2>
 			<form onSubmit={handleSubmit} className="space-y-4">
 				<div className={`grid grid-cols-1 gap-4 md:grid-cols-2`}>
 					<label className="flex flex-col gap-2">
@@ -181,7 +181,7 @@ export function SubmitSongForm({
 						<input
 							name="displayName"
 							type="text"
-							placeholder="Optional"
+							placeholder={t.placeholders.displayNameOptional}
 							className="rounded border border-neutral-700 bg-neutral-950 px-3 py-2 text-neutral-100"
 						/>
 					</label>
@@ -251,7 +251,7 @@ export function SubmitSongForm({
 							type="number"
 							min="1900"
 							max="2099"
-							placeholder="YYYY"
+							placeholder={t.placeholders.publishedYear}
 							required
 							defaultValue={editSong?.published_date || ""}
 							className={`rounded border px-3 py-2 bg-neutral-950 text-neutral-100 ${

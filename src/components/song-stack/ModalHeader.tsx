@@ -19,17 +19,6 @@ export function ModalHeader({
 		<div
 			className={`flex items-start justify-between ${lang === "he" ? "flex-row-reverse" : ""}`}
 		>
-			<div>
-				<p className="text-sm uppercase tracking-wide text-slate-200/80">
-					{year}
-				</p>
-				<h2
-					className={`mt-1 text-2xl font-semibold text-white ${lang === "he" ? "text-right" : ""}`}
-					dir={lang === "he" ? "rtl" : undefined}
-				>
-					{viewAllLabel} {songCountText}
-				</h2>
-			</div>
 			<button
 				type="button"
 				onClick={onClose}
@@ -37,6 +26,17 @@ export function ModalHeader({
 			>
 				{closeLabel}
 			</button>
+			<div>
+				<h2
+					className={`mt-1 text-2xl font-semibold text-white ${lang === "he" ? "text-right" : ""}`}
+					dir={lang === "he" ? "rtl" : undefined}
+				>
+					{year}
+				</h2>
+				<p className="text-sm uppercase tracking-wide text-slate-200/80">
+					{songCountText}
+				</p>
+			</div>
 		</div>
 	);
 }

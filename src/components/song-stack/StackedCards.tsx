@@ -71,7 +71,6 @@ export function StackedCards({
 						<SongEntry
 							song={entry.song}
 							lang={lang}
-							timestamp={entry.timestamp}
 							leaning={entry.leaning}
 							showMarginTop={idx === 0}
 							className={`${isExpanded ? "" : "pointer-events-none px-3 py-3 text-sm"} ${lang === "he" ? "ml-4 mr-auto" : "mr-4 ml-auto"}`}

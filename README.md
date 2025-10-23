@@ -1,4 +1,4 @@
-# Israeli Hip‑Hop Conflict Timeline
+# ConflictBars
 
 An interactive timeline exploring Israeli hip‑hop artists and key events across years and decades. Built with Next.js (App Router), React, TypeScript, and Tailwind CSS.
 

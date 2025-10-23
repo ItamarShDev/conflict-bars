@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-	title: "Israeli Hip-Hop Conflict Timeline",
+	title: "Conflict Bars",
 	description:
 		"An interactive timeline exploring Israeli hip-hop artists and key events across years and decades",
 };
@@ -28,7 +28,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[var(--color-background)] text-[var(--color-foreground)]`}
+				className={`${geistSans.variable} ${geistMono.variable} antialiased bg-(--color-background) text-(--color-foreground)`}
 			>
 				<ConvexClientProvider>
 					<ThemeProvider>{children}</ThemeProvider>

@@ -14,7 +14,6 @@ export type SongTranslations = {
 interface SongTimelineEntryProps {
 	song: Song | Record<string, unknown>;
 	lang: "en" | "he";
-	timestamp: string;
 	leaning: "left" | "right" | "center" | "unknown";
 	className?: string;
 	showMarginTop?: boolean;
@@ -24,7 +23,6 @@ interface SongTimelineEntryProps {
 export function SongEntry({
 	song,
 	lang,
-	timestamp,
 	leaning,
 	className,
 	showMarginTop = true,
@@ -60,7 +58,7 @@ export function SongEntry({
 
 	const orientationClass = lang === "he" ? "ml-4 mr-auto" : "mr-4 ml-auto";
 	const containerClasses = [
-		"relative w-full max-w-md bg-[var(--color-card-background)] border border-[var(--color-border)] rounded-lg shadow-sm transition-transform duration-200 overflow-visible",
+		"relative w-full max-w-md bg-(--color-card-background) border border-(--color-border) rounded-lg shadow-sm transition-transform duration-200 overflow-visible",
 		leaningColor[leaning],
 		orientationClass,
 		showMarginTop ? "mt-4" : "",
@@ -71,11 +69,11 @@ export function SongEntry({
 		.join(" ");
 
 	const titleClass = isCompact
-		? "text-lg font-bold leading-snug text-[var(--color-card-foreground)]"
-		: "text-xl font-bold leading-snug text-[var(--color-card-foreground)]";
+		? "text-lg font-bold leading-snug text-(--color-card-foreground)"
+		: "text-xl font-bold leading-snug text-(--color-card-foreground)";
 	const artistClass = isCompact
-		? "text-[0.7rem] uppercase tracking-wide text-[var(--color-muted-foreground)]"
-		: "text-sm text-[var(--color-muted-foreground)]";
+		? "text-[0.7rem] uppercase tracking-wide text-(--color-muted-foreground)"
+		: "text-sm text-(--color-muted-foreground)";
 
 	const lyricContent =
 		lang === "he"
@@ -92,8 +90,8 @@ export function SongEntry({
 						setIsEditModalOpen(true);
 					}}
 					className="absolute -top-4 -left-4 flex items-center justify-center w-8 h-8 rounded-full bg-blue-500 hover:bg-blue-600 text-white transition-opacity opacity-0 group-hover:opacity-100 shadow-lg z-20 cursor-pointer"
-					title="Suggest edit"
-					aria-label="Suggest edit for this song"
+					title={t.editSuggestion.buttonTitle}
+					aria-label={t.editSuggestion.buttonAria}
 				>
 					<svg
 						className="w-4 h-4"
@@ -101,7 +99,7 @@ export function SongEntry({
 						stroke="currentColor"
 						viewBox="0 0 24 24"
 					>
-						<title>Suggest edit</title>
+						<title>{t.editSuggestion.iconTitle}</title>
 						<path
 							strokeLinecap="round"
 							strokeLinejoin="round"
@@ -137,9 +135,9 @@ export function SongEntry({
 				)}
 
 				{!isCompact && lyricSample && lyricContent && (
-					<div className="pt-2 border-t border-[var(--color-border)]">
+					<div className="pt-2 border-t border-(--color-border)">
 						<p
-							className={`text-sm text-[var(--color-muted-foreground)] leading-relaxed italic text-start`}
+							className={`text-sm text-(--color-muted-foreground) leading-relaxed italic text-start`}
 							dir={lang === "he" && lyricSample?.hebrew ? "rtl" : "ltr"}
 						>
 							"{lyricContent}"
@@ -149,14 +147,14 @@ export function SongEntry({
 
 				{!isCompact && links && (
 					<div
-						className={`flex gap-3 text-sm pt-2 border-t border-[var(--color-border)] ${lang === "he" ? "flex-row-reverse" : ""}`}
+						className={`flex gap-3 text-sm pt-2 border-t border-(--color-border) ${lang === "he" ? "flex-row-reverse" : ""}`}
 					>
 						{links?.lyrics && (
 							<a
 								href={links.lyrics}
 								target="_blank"
 								rel="noreferrer"
-								className="no-underline hover:underline text-[color:var(--color-accent)]/90 hover:text-[var(--color-accent-hover)] font-medium"
+								className="no-underline hover:underline text-(--color-accent)/90 hover:text-(--color-accent-hover) font-medium"
 							>
 								{t.lyrics}
 							</a>
@@ -166,7 +164,7 @@ export function SongEntry({
 								href={links.song_info}
 								target="_blank"
 								rel="noreferrer"
-								className="no-underline hover:underline text-[color:var(--color-accent)]/90 hover:text-[var(--color-accent-hover)] font-medium"
+								className="no-underline hover:underline text-(--color-accent)/90 hover:text-(--color-accent-hover) font-medium"
 							>
 								{t.info}
 							</a>
@@ -176,24 +174,13 @@ export function SongEntry({
 								href={links.youtube}
 								target="_blank"
 								rel="noreferrer"
-								className="no-underline hover:underline text-[color:var(--color-accent)]/90 hover:text-[var(--color-accent-hover)] font-medium"
+								className="no-underline hover:underline text-(--color-accent)/90 hover:text-(--color-accent-hover) font-medium"
 							>
 								{t.youtube}
 							</a>
 						)}
 					</div>
 				)}
-
-				<p
-					className={[
-						isCompact ? "text-[0.65rem]" : "text-xs",
-						"text-[var(--color-muted-foreground)] opacity-70 text-start",
-					]
-						.filter(Boolean)
-						.join(" ")}
-				>
-					{timestamp}
-				</p>
 			</div>
 
 			{hasSongIdentity && isEditModalOpen && (
@@ -207,16 +194,16 @@ export function SongEntry({
 							}
 						}}
 						className="absolute inset-0 cursor-default"
-						aria-label="Close modal"
+						aria-label={t.submitSongForm.modalCloseAria}
 					/>
 					<div className="relative z-10 w-full max-w-2xl overflow-y-auto rounded-xl border border-neutral-700 bg-neutral-950 p-6 shadow-2xl">
 						<div className="mb-4 flex items-center justify-between">
-							<h2 className="text-lg font-semibold">Suggest Song Edit</h2>
+							<h2 className="text-lg font-semibold">{t.submitSongForm.editTitle}</h2>
 							<button
 								type="button"
 								onClick={() => setIsEditModalOpen(false)}
 								className="rounded-full p-2 text-neutral-400 transition hover:bg-neutral-800 hover:text-neutral-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300"
-								aria-label="Close modal"
+								aria-label={t.submitSongForm.modalCloseAria}
 							>
 								&#x2715;
 							</button>

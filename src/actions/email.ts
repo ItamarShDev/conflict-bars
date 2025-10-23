@@ -93,12 +93,7 @@ function formatSubmitterMessage(payload: SongSubmissionEmailPayload) {
 		}
 	}
 
-	lines.push(
-		"",
-		"We appreciate your contribution!",
-		"",
-		"– Israeli Hip-Hop Conflict Timeline",
-	);
+	lines.push("", "We appreciate your contribution!", "", " - Conflict Bars");
 
 	return lines.filter(Boolean).join("\n");
 }

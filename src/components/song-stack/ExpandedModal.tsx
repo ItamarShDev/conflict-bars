@@ -67,10 +67,9 @@ export function ExpandedModal({
 								key={`${entry.song.artist}-${entry.song.name}-expanded-${idx}`}
 								song={entry.song}
 								lang={lang}
-								timestamp={entry.timestamp}
 								leaning={entry.leaning}
 								showMarginTop={false}
-								className="ml-0 mr-0 w-full max-w-full bg-[var(--color-card-background)] text-left shadow-xl border border-[var(--color-border)]"
+								className="ml-0 mr-0 w-full max-w-full bg-(--color-card-background) text-left shadow-xl border border-(--color-border)"
 								variant="full"
 							/>
 						))}
