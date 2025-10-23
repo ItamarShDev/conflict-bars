@@ -26,8 +26,6 @@ export default function Image({
 
 	return new ImageResponse(
 		<div
-			lang={lang}
-			dir={isHebrew ? "rtl" : "ltr"}
 			style={{
 				display: "flex",
 				flexDirection: "column",
@@ -39,7 +37,7 @@ export default function Image({
 				color: "#f8fafc",
 				fontFamily:
 					'"Geist", "Segoe UI", "Helvetica Neue", "Arial", "Noto Sans Hebrew", sans-serif',
-				unicodeBidi: "plaintext",
+				direction: isHebrew ? "rtl" : "ltr",
 			}}
 		>
 			<header
@@ -59,6 +57,7 @@ export default function Image({
 						borderRadius: "9999px",
 						fontSize: 28,
 						fontWeight: 600,
+						textAlign: isHebrew ? "right" : "left",
 					}}
 				>
 					{isHebrew ? "סצנת היפ־הופ ישראלית" : "Israeli Hip-Hop Scene"}
@@ -67,6 +66,7 @@ export default function Image({
 					style={{
 						opacity: 0.6,
 						fontSize: 24,
+						textAlign: isHebrew ? "right" : "left",
 					}}
 				>
 					{isHebrew ? "סכסוכים בחרוזים" : "Conflict Bars"}
@@ -84,6 +84,7 @@ export default function Image({
 						fontSize: 86,
 						fontWeight: 700,
 						lineHeight: 1.05,
+						textAlign: isHebrew ? "right" : "left",
 					}}
 				>
 					{translation.title}
@@ -94,6 +95,7 @@ export default function Image({
 						lineHeight: 1.4,
 						opacity: 0.85,
 						maxWidth: "80%",
+						textAlign: isHebrew ? "right" : "left",
 					}}
 				>
 					{description}
@@ -149,6 +151,7 @@ export default function Image({
 								style={{
 									fontSize: 30,
 									fontWeight: 600,
+									textAlign: isHebrew ? "right" : "left",
 								}}
 							>
 								{card.label}
@@ -158,6 +161,7 @@ export default function Image({
 									fontSize: 24,
 									opacity: 0.85,
 									lineHeight: 1.35,
+									textAlign: isHebrew ? "right" : "left",
 								}}
 							>
 								{card.caption}
