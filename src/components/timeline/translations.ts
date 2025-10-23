@@ -1,6 +1,6 @@
 export const translations = {
 	en: {
-		title: "Timeline",
+		title: "Conflict Bars",
 		subtitle: "Direction is the political leaning of the artist",
 		lyrics: "Lyrics",
 		info: "Info",
@@ -48,7 +48,8 @@ export const translations = {
 			buttonAria: "Open site explanation",
 			modalTitle: "How to read this timeline",
 			description: {
-				intro: "This site visualizes key moments in the Israeli hip-hop scene alongside major conflicts.",
+				intro:
+					"This site visualizes key moments in the Israeli hip-hop scene alongside major conflicts.",
 				columns: {
 					left: "Left column: Israeli major conflicts",
 					right: "Right column: Songs released in the same period",
@@ -72,7 +73,7 @@ export const translations = {
 		},
 	},
 	he: {
-		title: "ציר זמן",
+		title: "סכסוכים בחרוזים",
 		subtitle: "בכיוון הנטייה הפוליטית",
 		lyrics: "מילים",
 		info: "מידע",
@@ -119,7 +120,8 @@ export const translations = {
 			buttonAria: "פתח הסבר על האתר",
 			modalTitle: "איך לקרוא את הציר",
 			description: {
-				intro: "האתר מציג אירועים מרכזיים בסצנת ההיפ-הופ הישראלי לצד סכסוכים משמעותיים.",
+				intro:
+					"האתר מציג אירועים מרכזיים בסצנת ההיפ-הופ הישראלי לצד סכסוכים משמעותיים.",
 				columns: {
 					left: "צד שמאל: סכסוכים מרכזיים בישראל",
 					right: "צד ימין: שירים שיצאו באותה תקופה",
