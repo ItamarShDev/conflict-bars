@@ -58,7 +58,7 @@ export function SongEntry({
 
 	const orientationClass = lang === "he" ? "ml-4 mr-auto" : "mr-4 ml-auto";
 	const containerClasses = [
-		"relative w-full max-w-md bg-[var(--color-card-background)] border border-[var(--color-border)] rounded-lg shadow-sm transition-transform duration-200 overflow-visible",
+		"relative w-full max-w-md bg-(--color-card-background) border border-(--color-border) rounded-lg shadow-sm transition-transform duration-200 overflow-visible",
 		leaningColor[leaning],
 		orientationClass,
 		showMarginTop ? "mt-4" : "",
@@ -69,11 +69,11 @@ export function SongEntry({
 		.join(" ");
 
 	const titleClass = isCompact
-		? "text-lg font-bold leading-snug text-[var(--color-card-foreground)]"
-		: "text-xl font-bold leading-snug text-[var(--color-card-foreground)]";
+		? "text-lg font-bold leading-snug text-(--color-card-foreground)"
+		: "text-xl font-bold leading-snug text-(--color-card-foreground)";
 	const artistClass = isCompact
-		? "text-[0.7rem] uppercase tracking-wide text-[var(--color-muted-foreground)]"
-		: "text-sm text-[var(--color-muted-foreground)]";
+		? "text-[0.7rem] uppercase tracking-wide text-(--color-muted-foreground)"
+		: "text-sm text-(--color-muted-foreground)";
 
 	const lyricContent =
 		lang === "he"
@@ -135,9 +135,9 @@ export function SongEntry({
 				)}
 
 				{!isCompact && lyricSample && lyricContent && (
-					<div className="pt-2 border-t border-[var(--color-border)]">
+					<div className="pt-2 border-t border-(--color-border)">
 						<p
-							className={`text-sm text-[var(--color-muted-foreground)] leading-relaxed italic text-start`}
+							className={`text-sm text-(--color-muted-foreground) leading-relaxed italic text-start`}
 							dir={lang === "he" && lyricSample?.hebrew ? "rtl" : "ltr"}
 						>
 							"{lyricContent}"
@@ -147,24 +147,24 @@ export function SongEntry({
 
 				{!isCompact && links && (
 					<div
-						className={`flex gap-3 text-sm pt-2 border-t border-[var(--color-border)] ${lang === "he" ? "flex-row-reverse" : ""}`}
+						className={`flex gap-3 text-sm pt-2 border-t border-(--color-border) ${lang === "he" ? "flex-row-reverse" : ""}`}
 					>
 						{links?.lyrics && (
-							<a
-								href={links.lyrics}
-								target="_blank"
-								rel="noreferrer"
-								className="no-underline hover:underline text-[var(--color-accent)]/90 hover:text-[var(--color-accent-hover)] font-medium"
-							>
-								{t.lyrics}
-							</a>
-						)}
+						<a
+							href={links.lyrics}
+							target="_blank"
+							rel="noreferrer"
+							className="no-underline hover:underline text-(--color-accent)/90 hover:text-(--color-accent-hover) font-medium"
+						>
+							{t.lyrics}
+						</a>
+					)}
 						{links?.song_info && (
 							<a
 								href={links.song_info}
 								target="_blank"
 								rel="noreferrer"
-								className="no-underline hover:underline text-[var(--color-accent)]/90 hover:text-[var(--color-accent-hover)] font-medium"
+								className="no-underline hover:underline text-accent/90 hover:text-accent-hover font-medium"
 							>
 								{t.info}
 							</a>
@@ -174,7 +174,7 @@ export function SongEntry({
 								href={links.youtube}
 								target="_blank"
 								rel="noreferrer"
-								className="no-underline hover:underline text-[var(--color-accent)]/90 hover:text-[var(--color-accent-hover)] font-medium"
+								className="no-underline hover:underline text-accent/90 hover:text-accent-hover font-medium"
 							>
 								{t.youtube}
 							</a>

@@ -9,7 +9,7 @@ export function YearMarker({ year, showYear, index }: YearMarkerProps) {
 		<div
 			className={`h-full col-2 row-${index + 1} flex flex-col items-center gap-3 relative`}
 		>
-			<div className="absolute h-full border-1 w-0.5 border-slate-200 dark:border-slate-700 -z-10" />
+			<div className="absolute h-full border w-0.5 border-slate-200 dark:border-slate-700 -z-10" />
 			{showYear && (
 				<div
 					className={`text-center text-slate-700 dark:text-slate-300 text-sm font-semibold tabular-nums`}

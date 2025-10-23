@@ -1,7 +1,6 @@
 type ModalHeaderProps = {
 	lang: "en" | "he";
 	year: number;
-	viewAllLabel: string;
 	songCountText: string;
 	closeLabel: string;
 	onClose: () => void;
@@ -10,7 +9,6 @@ type ModalHeaderProps = {
 export function ModalHeader({
 	lang,
 	year,
-	viewAllLabel,
 	songCountText,
 	closeLabel,
 	onClose,

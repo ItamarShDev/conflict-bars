@@ -55,7 +55,6 @@ export function ExpandedModal({
 				<ModalHeader
 					lang={lang}
 					year={year}
-					viewAllLabel={t.stack.viewAll}
 					songCountText={songCountText}
 					closeLabel={t.stack.close}
 					onClose={onClose}
@@ -69,7 +68,7 @@ export function ExpandedModal({
 								lang={lang}
 								leaning={entry.leaning}
 								showMarginTop={false}
-								className="ml-0 mr-0 w-full max-w-full bg-[var(--color-card-background)] text-left shadow-xl border border-[var(--color-border)]"
+								className="ml-0 mr-0 w-full max-w-full bg-(--color-card-background) text-left shadow-xl border border-(--color-border)"
 								variant="full"
 							/>
 						))}
