@@ -26,6 +26,8 @@ export default function Image({
 
 	return new ImageResponse(
 		<div
+			lang={lang}
+			dir={isHebrew ? "rtl" : "ltr"}
 			style={{
 				display: "flex",
 				flexDirection: "column",
@@ -37,7 +39,7 @@ export default function Image({
 				color: "#f8fafc",
 				fontFamily:
 					'"Geist", "Segoe UI", "Helvetica Neue", "Arial", "Noto Sans Hebrew", sans-serif',
-				direction: isHebrew ? "rtl" : "ltr",
+				unicodeBidi: "plaintext",
 			}}
 		>
 			<header
