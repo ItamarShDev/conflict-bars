@@ -19,10 +19,11 @@ export default function Image({
 }: {
 	params: { lang: string };
 }) {
-	const lang = params.lang === "he" ? "he" : "en";
-	const isHebrew = lang === "he";
+	// Force English for OG images since Hebrew doesn't render properly in next/og
+	const lang = "en";
+	const isHebrew = false;
 	const translation = translations[lang];
-	const description = descriptionByLang[lang] ?? descriptionByLang.en;
+	const description = descriptionByLang[lang];
 
 	return new ImageResponse(
 		<div
