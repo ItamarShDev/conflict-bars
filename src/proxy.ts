@@ -2,7 +2,7 @@ import { type NextRequest, NextResponse } from "next/server";
 
 const locales = ["he", "en"];
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
 	const { pathname } = request.nextUrl;
 
 	const pathnameHasLocale = locales.some(
