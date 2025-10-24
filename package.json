@@ -20,6 +20,7 @@
     "reset-data:force": "npm run db:clear && npm run migrate:force"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.5.0",
     "convex": "^1.28.0",
     "next": "16.0.0",
     "nodemailer": "^7.0.10",

@@ -147,35 +147,20 @@ export function SongEntry({
 
 				{!isCompact && links && (
 					<div
-						className={`flex gap-3 text-sm pt-2 border-t border-(--color-border) ${lang === "he" ? "flex-row-reverse" : ""}`}
+						className={`flex gap-3 text-sm pt-2 border-t border-(--color-border) ${lang === "he" ? "flex-row-reverse" : ""} no-underline hover:underline text-(--color-accent)/90 hover:text-(--color-accent-hover) font-medium`}
 					>
 						{links?.lyrics && (
-						<a
-							href={links.lyrics}
-							target="_blank"
-							rel="noreferrer"
-							className="no-underline hover:underline text-(--color-accent)/90 hover:text-(--color-accent-hover) font-medium"
-						>
-							{t.lyrics}
-						</a>
-					)}
+							<a href={links.lyrics} target="_blank" rel="noreferrer">
+								{t.lyrics}
+							</a>
+						)}
 						{links?.song_info && (
-							<a
-								href={links.song_info}
-								target="_blank"
-								rel="noreferrer"
-								className="no-underline hover:underline text-accent/90 hover:text-accent-hover font-medium"
-							>
+							<a href={links.song_info} target="_blank" rel="noreferrer">
 								{t.info}
 							</a>
 						)}
 						{links?.youtube && (
-							<a
-								href={links.youtube}
-								target="_blank"
-								rel="noreferrer"
-								className="no-underline hover:underline text-accent/90 hover:text-accent-hover font-medium"
-							>
+							<a href={links.youtube} target="_blank" rel="noreferrer">
 								{t.youtube}
 							</a>
 						)}
@@ -198,7 +183,9 @@ export function SongEntry({
 					/>
 					<div className="relative z-10 w-full max-w-2xl overflow-y-auto rounded-xl border border-neutral-700 bg-neutral-950 p-6 shadow-2xl">
 						<div className="mb-4 flex items-center justify-between">
-							<h2 className="text-lg font-semibold">{t.submitSongForm.editTitle}</h2>
+							<h2 className="text-lg font-semibold">
+								{t.submitSongForm.editTitle}
+							</h2>
 							<button
 								type="button"
 								onClick={() => setIsEditModalOpen(false)}
