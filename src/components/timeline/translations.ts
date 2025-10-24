@@ -73,7 +73,7 @@ export const translations = {
 		},
 	},
 	he: {
-		title: "סכסוכים בחרוזים",
+		title: "חרוזים מסוכסכים",
 		subtitle: "בכיוון הנטייה הפוליטית",
 		lyrics: "מילים",
 		info: "מידע",

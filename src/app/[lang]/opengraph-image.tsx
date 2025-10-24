@@ -14,11 +14,7 @@ const descriptionByLang: Record<string, string> = {
 	he: "ציר זמן אינטראקטיבי לחקר אמני היפ־הופ ישראליים ואירועים מרכזיים לאורך השנים",
 };
 
-export default function Image({
-	params,
-}: {
-	params: { lang: string };
-}) {
+export default function Image({ params }: { params: { lang: string } }) {
 	// Force English for OG images since Hebrew doesn't render properly in next/og
 	const lang = "en";
 	const isHebrew = false;
@@ -70,7 +66,7 @@ export default function Image({
 						textAlign: isHebrew ? "right" : "left",
 					}}
 				>
-					{isHebrew ? "סכסוכים בחרוזים" : "Conflict Bars"}
+					{isHebrew ? "חרוזים מסוכסכים" : "Conflict Bars"}
 				</div>
 			</header>
 			<main
@@ -183,7 +179,11 @@ export default function Image({
 					opacity: 0.8,
 				}}
 			>
-				<span>{isHebrew ? "conflictbars.vercel.app/he" : "conflictbars.vercel.app/en"}</span>
+				<span>
+					{isHebrew
+						? "conflictbars.vercel.app/he"
+						: "conflictbars.vercel.app/en"}
+				</span>
 				<span>
 					{isHebrew
 						? "אמנות, פוליטיקה וקולות מרובים ברגע אחד"
@@ -193,6 +193,6 @@ export default function Image({
 		</div>,
 		{
 			...size,
-		}
+		},
 	);
 }
