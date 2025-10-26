@@ -5,7 +5,7 @@ import { HelpModal } from "@/components/timeline/HelpModal";
 import { TimelineHeader } from "@/components/timeline/TimelineHeader";
 import { translations } from "@/components/timeline/translations";
 import { YearGroup } from "@/components/timeline/YearGroup";
-import { convertConvexEventsToTimeline } from "@/utils/convex-helpers";
+import { buildYearEventColors, convertConvexEventsToTimeline } from "@/utils/convex-helpers";
 import { getEntriesByYear } from "@/utils/timeline";
 import type {
 	PreloadedEvents,
@@ -24,6 +24,7 @@ export function Timeline({
 	const t = translations[lang];
 	const _events = usePreloadedQuery(convexEvents);
 	const events = convertConvexEventsToTimeline(_events);
+	const yearEventColors = buildYearEventColors(events);
 
 	const _songs = usePreloadedQuery(preloadedSongs);
 	const yearGroups = getEntriesByYear(_songs, events);
@@ -44,6 +45,7 @@ export function Timeline({
 							year={year}
 							entries={entries}
 							showYear={showYear}
+							yearColors={yearEventColors[year] ?? []}
 							lang={lang}
 						/>
 					);
