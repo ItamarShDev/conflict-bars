@@ -147,7 +147,7 @@ export function SongEntry({
 
 				{!isCompact && links && (
 					<div
-						className={`flex gap-3 text-sm pt-2 border-t border-(--color-border) ${lang === "he" ? "flex-row-reverse" : ""} no-underline hover:underline text-(--color-accent)/90 hover:text-(--color-accent-hover) font-medium`}
+						className={`flex gap-3 text-sm pt-2 border-t border-(--color-border) ${lang === "he" ? "flex-row-reverse" : ""} no-underline hover:underline text-(--color-accent) hover:text-(--color-accent-hover) font-medium`}
 					>
 						{links?.lyrics && (
 							<a href={links.lyrics} target="_blank" rel="noreferrer">
