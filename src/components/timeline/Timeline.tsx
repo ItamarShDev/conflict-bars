@@ -28,12 +28,12 @@ export function Timeline({
 	const _songs = usePreloadedQuery(preloadedSongs);
 	const yearGroups = getEntriesByYear(_songs, events);
 	return (
-		<div className="relative overflow-x-hidden">
+		<div className="relative overflow-x-hidden px-2 sm:px-4">
 			<TimelineHeader title={t.title} lang={lang} />
 			<HelpModal translations={t.helpModal} lang={lang} />
 
 			<div
-				className={`w-full mt-10 grid grid-rows-[${yearGroups.length}] grid-cols-[1fr_50px_1fr] pb-24`}
+				className={`w-full mt-10 grid grid-rows-[${yearGroups.length}] grid-cols-[1fr_30px_1fr] sm:grid-cols-[1fr_50px_1fr] pb-24`}
 			>
 				{yearGroups.map(([year, entries], idx) => {
 					const showYear = idx === 0 || year !== yearGroups[idx - 1]?.[0];

@@ -169,24 +169,24 @@ export function SubmitSongForm({
 
 	return (
 		<div
-			className={`border border-neutral-700 rounded-lg p-6 bg-neutral-900/50 text-start`}
+			className={`border border-neutral-700 rounded-lg p-4 sm:p-6 bg-neutral-900/50 text-start`}
 		>
-			<h2 className="text-xl font-semibold mb-4 text-neutral-100">{isEditMode ? t.editTitle : t.title}</h2>
-			<form onSubmit={handleSubmit} className="space-y-4">
-				<div className={`grid grid-cols-1 gap-4 md:grid-cols-2`}>
-					<label className="flex flex-col gap-2">
-						<span className="text-sm font-medium text-neutral-300">
+			<h2 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-neutral-100">{isEditMode ? t.editTitle : t.title}</h2>
+			<form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
+				<div className={`grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-2`}>
+					<label className="flex flex-col gap-1.5 sm:gap-2">
+						<span className="text-xs sm:text-sm font-medium text-neutral-300">
 							{t.fields.displayName}
 						</span>
 						<input
 							name="displayName"
 							type="text"
 							placeholder={t.placeholders.displayNameOptional}
-							className="rounded border border-neutral-700 bg-neutral-950 px-3 py-2 text-neutral-100"
+							className="rounded border border-neutral-700 bg-neutral-950 px-2.5 sm:px-3 py-1.5 sm:py-2 text-sm sm:text-base text-neutral-100"
 						/>
 					</label>
-					<label className="flex flex-col gap-2">
-						<span className="text-sm font-medium text-neutral-300">
+					<label className="flex flex-col gap-1.5 sm:gap-2">
+						<span className="text-xs sm:text-sm font-medium text-neutral-300">
 							{t.fields.email}
 						</span>
 						<input
@@ -194,11 +194,11 @@ export function SubmitSongForm({
 							type="email"
 							defaultValue={prefillEmail}
 							dir="ltr"
-							className="rounded border border-neutral-700 bg-neutral-950 px-3 py-2 text-neutral-100"
+							className="rounded border border-neutral-700 bg-neutral-950 px-2.5 sm:px-3 py-1.5 sm:py-2 text-sm sm:text-base text-neutral-100"
 						/>
 					</label>
-					<label className="flex flex-col gap-2">
-						<span className="text-sm font-medium text-neutral-300">
+					<label className="flex flex-col gap-1.5 sm:gap-2">
+						<span className="text-xs sm:text-sm font-medium text-neutral-300">
 							{t.fields.songName}
 						</span>
 						<input
@@ -207,15 +207,15 @@ export function SubmitSongForm({
 							required
 							defaultValue={editSong?.name || ""}
 							dir={lang === "he" ? "rtl" : "ltr"}
-							className={`rounded border px-3 py-2 bg-neutral-950 text-neutral-100 ${
+							className={`rounded border px-2.5 sm:px-3 py-1.5 sm:py-2 text-sm sm:text-base bg-neutral-950 text-neutral-100 ${
 								missingFields.has("songName")
 									? "border-red-500"
 									: "border-neutral-700"
 							}`}
 						/>
 					</label>
-					<label className="flex flex-col gap-2">
-						<span className="text-sm font-medium text-neutral-300">
+					<label className="flex flex-col gap-1.5 sm:gap-2">
+						<span className="text-xs sm:text-sm font-medium text-neutral-300">
 							{t.fields.artist}
 						</span>
 						<input
@@ -226,7 +226,7 @@ export function SubmitSongForm({
 							value={artistValue}
 							onChange={(e) => setArtistValue(e.target.value)}
 							list={isEditMode ? undefined : artistListId}
-							className={`rounded border px-3 py-2 ${
+							className={`rounded border px-2.5 sm:px-3 py-1.5 sm:py-2 text-sm sm:text-base ${
 								missingFields.has("artist")
 									? "border-red-500"
 									: "border-neutral-700"

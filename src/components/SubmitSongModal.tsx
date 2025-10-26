@@ -39,13 +39,13 @@ export function SubmitSongModal({
 			<button
 				type="button"
 				onClick={() => setIsOpen(true)}
-				className="fixed bottom-6 right-6 z-40 rounded-full bg-emerald-500 px-5 py-3 font-semibold text-black shadow-lg transition hover:bg-emerald-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300"
+				className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 rounded-full bg-emerald-500 px-4 py-2 sm:px-5 sm:py-3 text-sm sm:text-base font-semibold text-black shadow-lg transition hover:bg-emerald-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300"
 			>
 				{label}
 			</button>
 
 			{isOpen && (
-				<div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4">
+				<div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-3 sm:px-4">
 					<button
 						type="button"
 						onClick={() => setIsOpen(false)}
@@ -57,9 +57,9 @@ export function SubmitSongModal({
 						className="absolute inset-0 cursor-default"
 						aria-label={translations.modalCloseAria}
 					/>
-					<div className="relative z-10 w-full max-w-2xl overflow-y-auto rounded-xl border border-neutral-700 bg-neutral-950 p-6 shadow-2xl">
-						<div className="mb-4 flex items-center justify-between">
-							<h2 className="text-lg font-semibold">{translations.title}</h2>
+					<div className="relative z-10 w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-xl border border-neutral-700 bg-neutral-950 p-4 sm:p-6 shadow-2xl">
+						<div className="mb-3 sm:mb-4 flex items-center justify-between">
+							<h2 className="text-base sm:text-lg font-semibold">{translations.title}</h2>
 							<button
 								type="button"
 								onClick={() => setIsOpen(false)}

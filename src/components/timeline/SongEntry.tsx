@@ -56,13 +56,13 @@ export function SongEntry({
 			? songObj.links
 			: undefined;
 
-	const orientationClass = lang === "he" ? "ml-4 mr-auto" : "mr-4 ml-auto";
+	const orientationClass = lang === "he" ? "ml-2 sm:ml-4 mr-auto" : "mr-2 sm:mr-4 ml-auto";
 	const containerClasses = [
-		"relative w-full max-w-md bg-(--color-card-background) border border-(--color-border) rounded-lg shadow-sm transition-transform duration-200 overflow-visible",
+		"relative w-full max-w-[calc(100vw-4rem)] sm:max-w-md bg-(--color-card-background) border border-(--color-border) rounded-lg shadow-sm transition-transform duration-200 overflow-visible",
 		leaningColor[leaning],
 		orientationClass,
 		showMarginTop ? "mt-4" : "",
-		isCompact ? "p-3 space-y-2" : "p-5 space-y-4",
+		isCompact ? "p-3 space-y-2" : "p-4 sm:p-5 space-y-3 sm:space-y-4",
 		className ?? "",
 	]
 		.filter(Boolean)

@@ -39,17 +39,17 @@ export function ConflictEntry({ conflict, lang }: ConflictTimelineEntryProps) {
 
 	return (
 		<div
-			className={`z-0 ml-2 mr-10 bg-slate-100 dark:bg-neutral-800 border-slate-300 dark:border-slate-600 border rounded-lg p-5 shadow-sm transition-all duration-200 hover:z-50 hover:ring-2 hover:ring-(--color-accent) hover:shadow-lg focus:outline-none focus:z-50 focus:ring-2 focus:ring-(--color-accent) focus:shadow-lg text-start`}
+			className={`z-0 ml-1 sm:ml-2 mr-2 sm:mr-10 bg-slate-100 dark:bg-neutral-800 border-slate-300 dark:border-slate-600 border rounded-lg p-3 sm:p-5 shadow-sm transition-all duration-200 hover:z-50 hover:ring-2 hover:ring-(--color-accent) hover:shadow-lg focus:outline-none focus:z-50 focus:ring-2 focus:ring-(--color-accent) focus:shadow-lg text-start`}
 		>
-			<div className="flex gap-3 items-start h-full">
-				<div className="flex-1 min-w-0 space-y-4">
+			<div className="flex gap-2 sm:gap-3 items-start h-full">
+				<div className="flex-1 min-w-0 space-y-3 sm:space-y-4">
 					<div>
 						<ConflictTimestamp timestamp={conflict.timestamp} />
 						<ConflictHeader title={title} />
 						<ConflictReason reason={reason} />
 					</div>
 					{(description || effects) && (
-						<div className="space-y-3 pt-2 border-t border-slate-300 dark:border-slate-500 text-start">
+						<div className="space-y-2 sm:space-y-3 pt-2 border-t border-slate-300 dark:border-slate-500 text-start">
 							{description && (
 								<ConflictDetail label={t.description} content={description} />
 							)}

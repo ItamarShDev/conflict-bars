@@ -20,7 +20,7 @@ export function ConflictsColumn({
 
 	return (
 		<div
-			className={`col-3 me-4 row-${index + 1} ${lang === "he" ? "mr-0 ml-4" : ""}`}
+			className={`col-3 me-1 sm:me-4 row-${index + 1} ${lang === "he" ? "mr-0 ml-1 sm:ml-4" : ""}`}
 		>
 			{conflictItems.map((conflictEntry) => {
 				const conflictDetails = conflictEntry.conflictEntry;
@@ -31,7 +31,7 @@ export function ConflictsColumn({
 					<div
 						key={conflictDetails.id}
 						data-conflict-id={conflictDetails.id}
-						className="mb-4"
+						className="mb-3 sm:mb-4"
 					>
 						<ConflictEntry conflict={conflictDetails} lang={lang} />
 					</div>
