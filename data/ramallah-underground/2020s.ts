@@ -1,82 +1,34 @@
 import type { SongList } from "../../timeline/types";
 
-export const ramallahunderground2020s = [
+export const ramallahunderground2020s: SongList = [
 	{
-		name: "Sijen ib Sijen",
+		name: "970",
 		artist: "רמאללה אנדרגראונד (Ramallah Underground)",
 		published_date: "2020s",
-		lyric_sample: {
-			hebrew: "",
-			english_translation: "", 
-		},
-		links: {
-			lyrics: "",
-			youtube: "",
-		},
 	},
 	{
 		name: "Kilmeh (Se'beh Titfasar)",
 		artist: "רמאללה אנדרגראונד (Ramallah Underground)",
 		published_date: "2020s",
-		lyric_sample: {
-			hebrew: "",
-			english_translation: "", 
-		},
-		links: {
-			lyrics: "",
-			youtube: "",
-		},
-	},
-	{
-		name: "970",
-		artist: "רמאללה אנדרגראונד (Ramallah Underground)",
-		published_date: "2020s",
-		lyric_sample: {
-			hebrew: "",
-			english_translation: "", 
-		},
-		links: {
-			lyrics: "",
-			youtube: "",
-		},
-	},
-	{
-		name: "Ta'al Shoof",
-		artist: "רמאללה אנדרגראונד (Ramallah Underground)",
-		published_date: "2020s",
-		lyric_sample: {
-			hebrew: "",
-			english_translation: "", 
-		},
-		links: {
-			lyrics: "",
-			youtube: "",
-		},
 	},
 	{
 		name: "Mish Beinatna",
 		artist: "רמאללה אנדרגראונד (Ramallah Underground)",
 		published_date: "2020s",
-		lyric_sample: {
-			hebrew: "",
-			english_translation: "", 
-		},
-		links: {
-			lyrics: "",
-			youtube: "",
-		},
+	},
+	{
+		name: "Sijen ib Sijen",
+		artist: "רמאללה אנדרגראונד (Ramallah Underground)",
+		published_date: "2020s",
+	},
+	{
+		name: "Ta'al Shoof",
+		artist: "רמאללה אנדרגראונד (Ramallah Underground)",
+		published_date: "2020s",
 	},
 	{
 		name: "Tashweesh",
 		artist: "רמאללה אנדרגראונד (Ramallah Underground)",
 		published_date: "2020s",
-		lyric_sample: {
-			hebrew: "",
-			english_translation: "", 
-		},
-		links: {
-			lyrics: "",
-			youtube: "",
-		},
 	},
 ];

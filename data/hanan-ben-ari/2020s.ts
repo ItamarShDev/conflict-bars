@@ -1,33 +1,26 @@
 import type { SongList } from "../../timeline/types";
 
-export const hananBenAri2020s = [
+export const hananBenAri2020s: SongList = [
+	{
+		name: "Moledet",
+		artist: "Hanan Ben Ari",
+		published_date: "2023",
+		links: {
+				lyrics: "https://genius.com/Hanan-ben-ari-moledet-lyrics",
+				youtube: "https://www.youtube.com/results?search_query=Hanan+Ben+Ari+Moledet",
+		},
+	},
 	{
 		name: "מולדת (Moledet / Homeland)",
 		artist: "Hanan Ben Ari (חנן בן ארי)",
 		language: "Hebrew",
 		published_date: "2023-10",
 		lyric_sample: {
-			hebrew:
-				"אפילו על קצה התהום, אפילו באמצע הגיהינום, את גן עדן - שיר רגשי שפונה ישירות לארץ ישראל",
-			english_translation:
-				"Even on the edge of the abyss, even in the middle of hell, you are paradise - emotional song addressing Israel directly",
+				hebrew: "איך ממשיכים לריב כשנהרות של דם / שוטפים אותנו? לכתוב שירי אהבה כשכל שיר פה ריח של מלחמה?",
+				english_translation: "How do we keep fighting when rivers of blood are washing us? Writing love songs when every song here smells like war?",
 		},
 		links: {
-			lyrics: "",
-			youtube: "https://www.youtube.com/results?search_query=hanan+ben+ari+moledet",
-		},
-	},
-	{
-		name: "Moledet",
-		artist: "Hanan Ben Ari",
-		published_date: "2023",
-		lyric_sample: {
-			hebrew: "",
-			english_translation: "", 
-		},
-		links: {
-			lyrics: "https://genius.com/Hanan-ben-ari-moledet-lyrics",
-			youtube: "https://www.youtube.com/results?search_query=Hanan+Ben+Ari+Moledet",
+				youtube: "https://www.youtube.com/results?search_query=hanan+ben+ari+moledet",
 		},
 	},
 ];

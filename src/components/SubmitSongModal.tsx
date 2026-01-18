@@ -59,7 +59,9 @@ export function SubmitSongModal({
 					/>
 					<div className="relative z-10 w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-xl border border-neutral-700 bg-neutral-950 p-4 sm:p-6 shadow-2xl">
 						<div className="mb-3 sm:mb-4 flex items-center justify-between">
-							<h2 className="text-base sm:text-lg font-semibold">{translations.title}</h2>
+							<h2 className="text-base sm:text-lg font-semibold">
+								{translations.title}
+							</h2>
 							<button
 								type="button"
 								onClick={() => setIsOpen(false)}

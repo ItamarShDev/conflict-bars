@@ -1,19 +1,13 @@
 import type { SongList } from "../../timeline/types";
 
-export const shabakSamech2000s = [
+export const shabakSamech2000s: SongList = [
 	{
-		name: "Nofel Ve'kam - נופל וקם",
-		artist: "Shabak Samech (שבק ס)",
-		language: "Hebrew",
-		published_date: "2000-10-15",
+		name: "C'naan 2000",
+		artist: "שבק\"ס (Shabak Samech)",
+		published_date: "2000",
 		lyric_sample: {
-			hebrew:
-				"הדרך ארוכה ומפותלת / אני נופל וקם, נופל וקם... אף פעם לא אפסיק ללכת",
-			english_translation:
-				"The road is long and winding / I fall and get up, fall and get up... I will never stop walking.",
-		},
-		links: {
-			lyrics: "https://genius.com/Shabak-samech-nofel-vekam-lyrics",
+				hebrew: "לא חשוב מה, לא חשוב מי / יהיה פה שלום בעזרת השם",
+				english_translation: "It doesn't matter what, it doesn't matter who / There will be peace here, with God's help.",
 		},
 	},
 	{
@@ -22,25 +16,24 @@ export const shabakSamech2000s = [
 		language: "Hebrew",
 		published_date: "2001-03-22",
 		lyric_sample: {
-			hebrew: "עיניים להם אבל הם לא יראו / אוזניים להם אבל הם לא ישמעו",
-			english_translation:
-				"They have eyes but they do not see / they have ears but they do not hear.",
+				hebrew: "עיניים להם אבל הם לא יראו / אוזניים להם אבל הם לא ישמעו",
+				english_translation: "They have eyes but they do not see / they have ears but they do not hear.",
 		},
 		links: {
-			lyrics: "https://genius.com/Shabak-samech-ein-kavod-lyrics",
+				lyrics: "https://genius.com/Shabak-samech-ein-kavod-lyrics",
 		},
 	},
 	{
-		name: "C'naan 2000",
-		artist: "שבק\"ס (Shabak Samech)",
-		published_date: "2000",
+		name: "Nofel Ve'kam - נופל וקם",
+		artist: "Shabak Samech (שבק ס)",
+		language: "Hebrew",
+		published_date: "2000-10-15",
 		lyric_sample: {
-			hebrew: "",
-			english_translation: "", 
+				hebrew: "הדרך ארוכה ומפותלת / אני נופל וקם, נופל וקם... אף פעם לא אפסיק ללכת",
+				english_translation: "The road is long and winding / I fall and get up, fall and get up... I will never stop walking.",
 		},
 		links: {
-			lyrics: "",
-			youtube: "",
+				lyrics: "https://genius.com/Shabak-samech-nofel-vekam-lyrics",
 		},
 	},
 ];

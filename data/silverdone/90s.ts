@@ -1,17 +1,13 @@
 import type { SongList } from "../../timeline/types";
 
-export const silverdone90s = [
+export const silverdone90s: SongList = [
 	{
 		name: "מדינה בסכנה",
 		artist: "סילברדון",
 		published_date: "1999",
 		lyric_sample: {
-			hebrew: "",
-			english_translation: "", 
-		},
-		links: {
-			lyrics: "",
-			youtube: "",
+				hebrew: "מדינה בסכנה, הטרור בכל פינה / כל העולם כולו, כל העולם נגדנו",
+				english_translation: "Country in danger, terror in every corner / The whole world, the whole world is against us.",
 		},
 	},
 ];

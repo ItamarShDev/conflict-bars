@@ -2,6 +2,7 @@ import { readdirSync, statSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../convex/_generated/api";
+import type { Id } from "../convex/_generated/dataModel";
 import { artistPoliticalAffiliation } from "../timeline/artist-political-affiliation";
 import type { SongList } from "../timeline/types";
 
@@ -44,8 +45,8 @@ async function ensureArtist(
 
 async function assignSongArtist(songId: string, artistId: string) {
 	await client.mutation(api.mutations.assignArtistToSong, {
-		songId: songId as any,
-		artistId: artistId as any,
+		songId: songId as Id<"songs">,
+		artistId: artistId as Id<"artists">,
 	});
 }
 

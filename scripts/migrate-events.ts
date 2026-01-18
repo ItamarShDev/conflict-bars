@@ -1,11 +1,13 @@
 import { dirname, join } from "node:path";
-import { config } from "dotenv";
 import { ConvexHttpClient } from "convex/browser";
+import { config } from "dotenv";
 import { api } from "../convex/_generated/api";
 import { israeliConflicts } from "../timeline/conflicts";
 
 // Load environment variables from .env.local
-config({ path: join(dirname(new URL(import.meta.url).pathname), "../.env.local") });
+config({
+	path: join(dirname(new URL(import.meta.url).pathname), "../.env.local"),
+});
 
 const CONVEX_URL = process.env.NEXT_PUBLIC_CONVEX_URL;
 
@@ -30,7 +32,9 @@ async function run() {
 			try {
 				const conflict = conflictEntry.conflict;
 				if (!conflict) {
-					console.log(`⚠️  Skipped: No conflict data for ${conflictEntry.time.start}`);
+					console.log(
+						`⚠️  Skipped: No conflict data for ${conflictEntry.time.start}`,
+					);
 					continue;
 				}
 

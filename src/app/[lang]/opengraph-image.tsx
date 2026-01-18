@@ -14,7 +14,7 @@ const descriptionByLang: Record<string, string> = {
 	he: "ציר זמן אינטראקטיבי לחקר אמני היפ־הופ ישראליים ואירועים מרכזיים לאורך השנים",
 };
 
-export default function Image({ params }: { params: { lang: string } }) {
+export default function Image() {
 	// Force English for OG images since Hebrew doesn't render properly in next/og
 	const lang = "en";
 	const isHebrew = false;

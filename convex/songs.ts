@@ -5,14 +5,12 @@ import { query } from "./_generated/server";
 
 async function addArtistDetails(ctx: QueryCtx, song: Doc<"songs">) {
 	const artist = song.artist_id ? await ctx.db.get(song.artist_id) : null;
-	
+
 	// Hydrate collaborator details
 	const collaboratorDetails = song.collaborator_ids
-		? await Promise.all(
-				song.collaborator_ids.map((id) => ctx.db.get(id)),
-			)
+		? await Promise.all(song.collaborator_ids.map((id) => ctx.db.get(id)))
 		: undefined;
-	
+
 	return {
 		...song,
 		artist: artist?.name ?? "",

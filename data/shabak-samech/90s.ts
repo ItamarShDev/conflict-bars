@@ -1,18 +1,17 @@
 import type { SongList } from "../../timeline/types";
 
-export const shabakSamech90s = [
+export const shabakSamech90s: SongList = [
 	{
 		name: "Beiskey Hashin - בעסקי ה-ש'",
 		artist: "Shabak Samech (שבק ס)",
 		language: "Hebrew",
 		published_date: "1995",
 		lyric_sample: {
-			hebrew: "...את הרוב שמתעסק בשחיתויות / כמו בכנסת אני כבר לא יכול",
-			english_translation:
-				"...the majority that deals with corruption / like in the Knesset, I can't anymore.",
+				hebrew: "...את הרוב שמתעסק בשחיתויות / כמו בכנסת אני כבר לא יכול",
+				english_translation: "...the majority that deals with corruption / like in the Knesset, I can't anymore.",
 		},
 		links: {
-			lyrics: "https://genius.com/Shabak-samech-beiskey-hashin-lyrics",
+				lyrics: "https://genius.com/Shabak-samech-beiskey-hashin-lyrics",
 		},
 	},
 	{
@@ -21,65 +20,21 @@ export const shabakSamech90s = [
 		language: "Hebrew",
 		published_date: "1995-09-20",
 		lyric_sample: {
-			hebrew:
-				"שבעה על הכוונת נכנסים לכאן בשווינג / עם פול עוצמה שאפ'חד לא יבין",
-			english_translation:
-				"Seven in the crosshairs enter here with a swing / with full power that no one will understand.",
+				hebrew: "שבעה על הכוונת נכנסים לכאן בשווינג / עם פול עוצמה שאפ'חד לא יבין",
+				english_translation: "Seven in the crosshairs enter here with a swing / with full power that no one will understand.",
 		},
 		links: {
-			lyrics: "https://genius.com/Shabak-samech-hamedina-balehavot-lyrics",
-		},
-	},
-	{
-		name: "יהיה פיצוץ",
-		artist: "שב\"ק ס'",
-		published_date: "1997",
-		lyric_sample: {
-			hebrew: "",
-			english_translation: "", 
-		},
-		links: {
-			lyrics: "",
-			youtube: "",
-		},
-	},
-	{
-		name: "אימפריה",
-		artist: "שב\"ק ס'",
-		published_date: "1998",
-		lyric_sample: {
-			hebrew: "עומד אדם אחד",
-			english_translation: "", 
-		},
-		links: {
-			lyrics: "",
-			youtube: "",
-		},
-	},
-	{
-		name: "מלחמת מיקרופון",
-		artist: "שב\"ק ס'",
-		published_date: "1998",
-		lyric_sample: {
-			hebrew: "",
-			english_translation: "", 
-		},
-		links: {
-			lyrics: "",
-			youtube: "",
+				lyrics: "https://genius.com/Shabak-samech-hamedina-balehavot-lyrics",
 		},
 	},
 	{
 		name: "Shin Business",
 		artist: "שבק\"ס (Shabak Samech)",
 		published_date: "1995",
-		lyric_sample: {
-			hebrew: "",
-			english_translation: "", 
-		},
-		links: {
-			lyrics: "",
-			youtube: "",
-		},
+	},
+	{
+		name: "יהיה פיצוץ",
+		artist: "שב\"ק ס'",
+		published_date: "1997",
 	},
 ];

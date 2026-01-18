@@ -32,6 +32,20 @@ This doc orients AI/automation agents to work safely and effectively on Conflict
 - Legacy/reference: `data/` and `timeline/` folders (artist decades, conflict metadata, political affiliation map in `timeline/artist-political-affiliation.ts`).
 - Content expectations: Each entry should have dates, links, and optional political affiliation; keep language neutral and sourced where possible.
 
+### Song shape (Convex)
+- Table: `songs` with fields `name`, `artist_id`, optional `collaborator_ids`, `published_date` (string), `published` flag, optional `language`, optional `lyric_sample` (`hebrew`, `english_translation`), optional `links` (`lyrics`, `song_info`, `youtube`), and optional `submitted_by`.
+- Queries: `convex/songs.ts` hydrates artist + collaborators and sorts by date.
+- Mutations: `insertSong`, `updateSong`, `deleteSong`, plus helpers for assigning artists/collaborators.
+
+### Song shape (file data)
+- `data/<artist>/<era>.ts` exports `SongList` arrays with similar fields to Convex. `timeline/types.ts` defines shared types.
+- Era buckets: `90s`, `2000s`, `2010s`, `2020s` file names; `index.ts` per artist re-exports combined array.
+
+### Dedupe and data hygiene
+- Prefer richer entries (more lyrics/links/language/collaborators). Avoid removing data unless explicitly required.
+- File dedupe: `tsx scripts/dedupe-data-songs.ts` rewrites era files, keeping the richest entry per artist+song.
+- Convex dedupe: `tsx scripts/dedupe-convex-songs.ts` (requires `NEXT_PUBLIC_CONVEX_URL` and Convex dev server) merges richer fields into one record and deletes duplicates.
+
 ## Operations (local)
 1) Install deps: `npm install`
 2) Run Convex dev server (required): `npx convex dev`

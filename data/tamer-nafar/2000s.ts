@@ -1,17 +1,17 @@
 import type { SongList } from "../../timeline/types";
 
-export const tamernafar2000s = [
+export const tamernafar2000s: SongList = [
 	{
 		name: "Innocent Criminals (Posheem Hapim me Peshaa)",
 		artist: "Tamer Nafar",
 		published_date: "2000",
 		lyric_sample: {
-			hebrew: "פושעים חפים מפשע - שיר על הגזענות והאפליה שחווים ערבים בישראל",
-			english_translation: "Innocent Criminals - a song about racism and discrimination faced by Arabs in Israel",
+				hebrew: "פושעים חפים מפשע - שיר על הגזענות והאפליה שחווים ערבים בישראל",
+				english_translation: "Innocent Criminals - a song about racism and discrimination faced by Arabs in Israel",
 		},
 		links: {
-			lyrics: "https://lyricstranslate.com/en/dam-lyrics.html",
-			youtube: "https://www.youtube.com/watch?v=XcC_8nVBCGQ",
+				lyrics: "https://lyricstranslate.com/en/dam-lyrics.html",
+				youtube: "https://www.youtube.com/watch?v=XcC_8nVBCGQ",
 		},
 	},
 ];

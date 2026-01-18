@@ -5,7 +5,10 @@ import { HelpModal } from "@/components/timeline/HelpModal";
 import { TimelineHeader } from "@/components/timeline/TimelineHeader";
 import { translations } from "@/components/timeline/translations";
 import { YearGroup } from "@/components/timeline/YearGroup";
-import { buildYearEventColors, convertConvexEventsToTimeline } from "@/utils/convex-helpers";
+import {
+	buildYearEventColors,
+	convertConvexEventsToTimeline,
+} from "@/utils/convex-helpers";
 import { getEntriesByYear } from "@/utils/timeline";
 import type {
 	PreloadedEvents,

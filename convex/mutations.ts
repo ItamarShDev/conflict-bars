@@ -1,9 +1,98 @@
 import { v } from "convex/values";
-import type { Id } from "./_generated/dataModel";
+import type { Doc, Id } from "./_generated/dataModel";
+import type { MutationCtx } from "./_generated/server";
 import { mutation } from "./_generated/server";
 
 function normalizeArtistName(name: string) {
 	return name.trim().toLowerCase();
+}
+
+function normalizeSongName(name: string) {
+	return name.trim().toLowerCase();
+}
+
+function fieldLength(str?: string | null) {
+	return (str ?? "").trim().length;
+}
+
+function mergeSongData(base: Doc<"songs">, incoming: Partial<Doc<"songs">>) {
+	const merged: Doc<"songs"> = { ...base };
+
+	if (incoming.name) merged.name = incoming.name;
+	if (incoming.artist_id) merged.artist_id = incoming.artist_id;
+	if (incoming.language) merged.language = incoming.language;
+	if (incoming.published !== undefined) merged.published = incoming.published;
+	if (incoming.collaborator_ids)
+		merged.collaborator_ids = incoming.collaborator_ids;
+
+	if (incoming.lyric_sample) {
+		merged.lyric_sample = merged.lyric_sample ?? {};
+		if (
+			incoming.lyric_sample.hebrew &&
+			fieldLength(incoming.lyric_sample.hebrew) >
+				fieldLength(merged.lyric_sample.hebrew)
+		) {
+			merged.lyric_sample.hebrew = incoming.lyric_sample.hebrew;
+		}
+		if (
+			incoming.lyric_sample.english_translation &&
+			fieldLength(incoming.lyric_sample.english_translation) >
+				fieldLength(merged.lyric_sample.english_translation)
+		) {
+			merged.lyric_sample.english_translation =
+				incoming.lyric_sample.english_translation;
+		}
+	}
+
+	if (incoming.links) {
+		merged.links = merged.links ?? {};
+		for (const key of ["lyrics", "song_info", "youtube"] as const) {
+			if (incoming.links[key]) {
+				merged.links[key] = incoming.links[key];
+			}
+		}
+	}
+
+	if (incoming.published_date) {
+		merged.published_date = incoming.published_date;
+	}
+
+	return merged;
+}
+
+function buildPatch(from: Doc<"songs">, to: Doc<"songs">) {
+	const patch: Partial<Doc<"songs">> = {};
+	if (from.language !== to.language) patch.language = to.language;
+	if (from.published !== to.published) patch.published = to.published;
+	if (from.collaborator_ids !== to.collaborator_ids)
+		patch.collaborator_ids = to.collaborator_ids;
+	if (JSON.stringify(from.lyric_sample) !== JSON.stringify(to.lyric_sample))
+		patch.lyric_sample = to.lyric_sample;
+	if (JSON.stringify(from.links) !== JSON.stringify(to.links))
+		patch.links = to.links;
+	if (from.published_date !== to.published_date)
+		patch.published_date = to.published_date;
+	if (from.artist_id !== to.artist_id) patch.artist_id = to.artist_id;
+	if (from.name !== to.name) patch.name = to.name;
+	return patch;
+}
+
+async function findDuplicateByName(
+	ctx: { db: MutationCtx["db"] },
+	artistId: Id<"artists">,
+	name: string,
+	excludeId?: Id<"songs">,
+): Promise<Doc<"songs"> | null> {
+	const normalized = normalizeSongName(name);
+	const songs = await ctx.db
+		.query("songs")
+		.withIndex("by_artist", (q) => q.eq("artist_id", artistId))
+		.collect();
+	for (const song of songs) {
+		if (excludeId && song._id === excludeId) continue;
+		if (normalizeSongName(song.name) === normalized) return song;
+	}
+	return null;
 }
 
 export const upsertArtist = mutation({
@@ -44,6 +133,15 @@ export const upsertArtist = mutation({
 			affiliation: args.affiliation ?? undefined,
 			notes: args.notes ?? undefined,
 		});
+	},
+});
+
+export const deleteSong = mutation({
+	args: {
+		songId: v.id("songs"),
+	},
+	handler: async (ctx, args) => {
+		await ctx.db.delete(args.songId);
 	},
 });
 
@@ -95,8 +193,27 @@ export const insertSong = mutation({
 		submitted_by: v.optional(v.id("users")),
 	},
 	handler: async (ctx, args) => {
-		const { artistId, collaboratorIds, published, ...rest } = args;
+		const { artistId, collaboratorIds, published, name, ...rest } = args;
+		const duplicate = await findDuplicateByName(ctx, artistId, args.name);
+		const incomingPartial: Partial<Doc<"songs">> = {
+			name,
+			artist_id: artistId,
+			collaborator_ids: collaboratorIds ?? undefined,
+			published: published ?? false,
+			...rest,
+		};
+
+		if (duplicate) {
+			const merged = mergeSongData(duplicate, incomingPartial);
+			const patch = buildPatch(duplicate, merged);
+			if (Object.keys(patch).length > 0) {
+				await ctx.db.patch(duplicate._id, patch);
+			}
+			return duplicate._id;
+		}
+
 		return await ctx.db.insert("songs", {
+			name,
 			...rest,
 			artist_id: artistId,
 			collaborator_ids: collaboratorIds ?? undefined,
@@ -112,6 +229,7 @@ export const updateSong = mutation({
 			name: v.optional(v.string()),
 			artist_id: v.optional(v.id("artists")),
 			collaborator_ids: v.optional(v.array(v.id("artists"))),
+			published: v.optional(v.boolean()),
 			language: v.optional(v.string()),
 			lyric_sample: v.optional(
 				v.object({
@@ -129,7 +247,31 @@ export const updateSong = mutation({
 		}),
 	},
 	handler: async (ctx, args) => {
-		await ctx.db.patch(args.songId, args.updates);
+		const existing = await ctx.db.get(args.songId);
+		if (!existing) throw new Error("Song not found");
+
+		const targetArtist = args.updates.artist_id ?? existing.artist_id;
+		const targetName = args.updates.name ?? existing.name;
+
+		let merged = mergeSongData(existing, args.updates as Partial<Doc<"songs">>);
+
+		if (targetArtist) {
+			const duplicate = await findDuplicateByName(
+				ctx,
+				targetArtist,
+				targetName,
+				args.songId,
+			);
+			if (duplicate) {
+				merged = mergeSongData(merged, duplicate);
+				await ctx.db.delete(duplicate._id);
+			}
+		}
+
+		const patch = buildPatch(existing, merged);
+		if (Object.keys(patch).length > 0) {
+			await ctx.db.patch(args.songId, patch);
+		}
 		return args.songId;
 	},
 });

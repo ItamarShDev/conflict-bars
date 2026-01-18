@@ -171,7 +171,9 @@ export function SubmitSongForm({
 		<div
 			className={`border border-neutral-700 rounded-lg p-4 sm:p-6 bg-neutral-900/50 text-start`}
 		>
-			<h2 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-neutral-100">{isEditMode ? t.editTitle : t.title}</h2>
+			<h2 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-neutral-100">
+				{isEditMode ? t.editTitle : t.title}
+			</h2>
 			<form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
 				<div className={`grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-2`}>
 					<label className="flex flex-col gap-1.5 sm:gap-2">

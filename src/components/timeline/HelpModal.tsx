@@ -66,7 +66,10 @@ export function HelpModal({ translations, lang }: HelpModalProps) {
 						className="relative z-10 w-full max-w-xl rounded-xl border border-neutral-700 bg-neutral-950 p-6 shadow-2xl"
 					>
 						<div className="mb-4 flex items-center justify-between">
-							<h2 id={titleId} className="text-lg font-semibold text-neutral-100">
+							<h2
+								id={titleId}
+								className="text-lg font-semibold text-neutral-100"
+							>
 								{translations.modalTitle}
 							</h2>
 							<button
@@ -78,7 +81,10 @@ export function HelpModal({ translations, lang }: HelpModalProps) {
 								&#x2715;
 							</button>
 						</div>
-						<div id={descriptionId} className="space-y-4 text-sm text-neutral-200">
+						<div
+							id={descriptionId}
+							className="space-y-4 text-sm text-neutral-200"
+						>
 							<p>{translations.description.intro}</p>
 							<ul
 								className={`${isRtl ? "list-disc pr-6" : "list-disc pl-6"} space-y-2`}

@@ -56,7 +56,8 @@ export function SongEntry({
 			? songObj.links
 			: undefined;
 
-	const orientationClass = lang === "he" ? "ml-2 sm:ml-4 mr-auto" : "mr-2 sm:mr-4 ml-auto";
+	const orientationClass =
+		lang === "he" ? "ml-2 sm:ml-4 mr-auto" : "mr-2 sm:mr-4 ml-auto";
 	const containerClasses = [
 		"relative w-full max-w-[calc(100vw-4rem)] sm:max-w-md bg-(--color-card-background) border border-(--color-border) rounded-lg shadow-sm transition-transform duration-200 overflow-visible",
 		leaningColor[leaning],

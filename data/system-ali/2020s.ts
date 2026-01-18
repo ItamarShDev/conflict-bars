@@ -1,30 +1,17 @@
 import type { SongList } from "../../timeline/types";
 
-export const systemali2020s = [
-	{
-		name: "אין כמו יפו",
-		artist: "System Ali",
-		published_date: "2020s",
-		lyric_sample: {
-			hebrew: "",
-			english_translation: "", 
-		},
-		links: {
-			lyrics: "",
-			youtube: "",
-		},
-	},
+export const systemali2020s: SongList = [
 	{
 		name: "Vayina WAR (Live)",
 		artist: "System Ali",
 		published_date: "2020s",
 		lyric_sample: {
-			hebrew: "Ohhh, war, I despise  Because it means destruction / I said, war   huh      Good God, y'all / Ooooh, war  It's an enemy to all mankind / The point of war blows my mind",
-			english_translation: "", 
+				hebrew: "Ohhh, war, I despise  Because it means destruction / I said, war   huh      Good God, y'all / Ooooh, war  It's an enemy to all mankind / The point of war blows my mind",
 		},
-		links: {
-			lyrics: "",
-			youtube: "",
-		},
+	},
+	{
+		name: "אין כמו יפו",
+		artist: "System Ali",
+		published_date: "2020s",
 	},
 ];

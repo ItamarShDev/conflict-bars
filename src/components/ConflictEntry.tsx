@@ -1,4 +1,5 @@
 import { translations } from "@/components/timeline/translations";
+import { eventColor } from "@/utils/colors";
 import type { ConflictEntry as ConflictEntryType } from "../../timeline/conflict-utils";
 import { ConflictDetail } from "./conflict/ConflictDetail";
 import { ConflictHeader } from "./conflict/ConflictHeader";
@@ -6,7 +7,6 @@ import { ConflictIndicator } from "./conflict/ConflictIndicator";
 import { ConflictLinks } from "./conflict/ConflictLinks";
 import { ConflictReason } from "./conflict/ConflictReason";
 import { ConflictTimestamp } from "./conflict/ConflictTimestamp";
-import { eventColor } from "@/utils/colors";
 
 export type ConflictTranslations = {
 	conflict: string;

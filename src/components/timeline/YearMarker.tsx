@@ -1,4 +1,5 @@
 import { reorderColorsToMaximizeContrast } from "@/utils/colors";
+
 interface YearMarkerProps {
 	year: number;
 	showYear: boolean;
@@ -6,20 +7,27 @@ interface YearMarkerProps {
 	yearColors?: string[];
 }
 
-export function YearMarker({ year, showYear, index, yearColors = [] }: YearMarkerProps) {
+export function YearMarker({
+	year,
+	showYear,
+	index,
+	yearColors = [],
+}: YearMarkerProps) {
 	const hasColors = yearColors.length > 0;
-	const ordered = hasColors ? reorderColorsToMaximizeContrast(yearColors) : yearColors;
+	const ordered = hasColors
+		? reorderColorsToMaximizeContrast(yearColors)
+		: yearColors;
 	const gradient = hasColors
 		? (() => {
-			const n = ordered.length;
-			const stops: string[] = [];
-			ordered.forEach((c, i) => {
-				const start = Math.round((i / n) * 100);
-				const end = Math.round(((i + 1) / n) * 100);
-				stops.push(`${c} ${start}%`, `${c} ${end}%`);
-			});
-			return `linear-gradient(to bottom, ${stops.join(", ")})`;
-		})()
+				const n = ordered.length;
+				const stops: string[] = [];
+				ordered.forEach((c, i) => {
+					const start = Math.round((i / n) * 100);
+					const end = Math.round(((i + 1) / n) * 100);
+					stops.push(`${c} ${start}%`, `${c} ${end}%`);
+				});
+				return `linear-gradient(to bottom, ${stops.join(", ")})`;
+			})()
 		: undefined;
 	return (
 		<div

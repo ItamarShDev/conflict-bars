@@ -26,12 +26,14 @@ export const artistPoliticalAffiliation: Record<
 	"Oshik Levi (אושיק לוי)": {
 		era: "2000s–present",
 		affiliation: "Center-left / Social commentary",
-		notes: "Collaborator on various hip-hop projects, known for social commentary.",
+		notes:
+			"Collaborator on various hip-hop projects, known for social commentary.",
 	},
 	"Teddy Neguse (טדי נגוסה)": {
 		era: "2000s–present",
 		affiliation: "Center-left / Social commentary",
-		notes: "Collaborator on various hip-hop projects, known for social commentary.",
+		notes:
+			"Collaborator on various hip-hop projects, known for social commentary.",
 	},
 	"The Shadow (הצל)": {
 		era: "2000s–present",
