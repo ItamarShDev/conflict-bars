@@ -13,7 +13,7 @@ export const kla62000s = [
 				"State in war, I want to escape, the pressure and anxiety from the security situation",
 		},
 		links: {
-			lyrics: "https://genius.com/search?q=kla+6+derech+lechayim",
+			lyrics: "",
 			youtube: "https://www.youtube.com/results?search_query=kla+6+derech+lechayim",
 		},
 	},
@@ -29,8 +29,34 @@ export const kla62000s = [
 				"Mom I'm writing to you from the front, Second Lebanon War, I'm coming home",
 		},
 		links: {
-			lyrics: "https://genius.com/search?q=kla+6+ima",
+			lyrics: "",
 			youtube: "https://www.youtube.com/results?search_query=kla+6+ima",
+		},
+	},
+	{
+		name: "דרך לחיים",
+		artist: "כלא 6",
+		published_date: "2004",
+		lyric_sample: {
+			hebrew: "אותך רציתי כל הלילה   נסעתי כה רחוק וכמה / עוד דקה    עד שאגיע אלייך / לוקח את הגיטרה     פורט כותב על שכמה / הנשמות שלנו תאומות",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
+	{
+		name: "אמא",
+		artist: "כלא 6",
+		published_date: "2006",
+		lyric_sample: {
+			hebrew: "ונשמתה אליי   קרובה  אמא יקרה / בנשמתה אלי קרובה",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "https://genius.com/Kele-6-6-amartem-lyrics",
+			youtube: "",
 		},
 	},
 ];

@@ -14,7 +14,7 @@ export const maorAskenazi2020s = [
 				"Difficult to watch song, written by Nova massacre survivor on October 7, describes his survival story",
 		},
 		links: {
-			lyrics: "https://genius.com/search?q=maor+askenazi+noam+song",
+			lyrics: "",
 			youtube: "https://www.youtube.com/results?search_query=maor+askenazi+noam+song",
 		},
 	},

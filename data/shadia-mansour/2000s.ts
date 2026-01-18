@@ -13,7 +13,7 @@ export const shadiaMansour2000s = [
 				"First lady of Arab hip-hop, political lyrics about Zionist colonization and cultural erasure",
 		},
 		links: {
-			lyrics: "https://genius.com/search?q=shadia+mansour+palestinian+hip+hop",
+			lyrics: "",
 			youtube: "https://www.youtube.com/results?search_query=shadia+mansour+palestinian+hip+hop",
 		},
 	},

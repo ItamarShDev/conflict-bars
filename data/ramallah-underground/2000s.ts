@@ -13,7 +13,7 @@ export const ramallahUnderground2000s = [
 				"Musical collective from Ramallah, songs about resistance to Israeli occupation",
 		},
 		links: {
-			lyrics: "https://genius.com/search?q=ramallah+underground+sijen",
+			lyrics: "",
 			youtube: "https://www.youtube.com/results?search_query=ramallah+underground+sijen",
 		},
 	},

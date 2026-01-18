@@ -18,4 +18,30 @@ export const sagol592020s = [
 			youtube: "https://www.youtube.com/watch?v=L2nTbpb2EK4",
 		},
 	},
+	{
+		name: "Big Ben",
+		artist: "סאגול 59 (Sagol 59 - חן רותם)",
+		published_date: "2020s",
+		lyric_sample: {
+			hebrew: "",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
+	{
+		name: "ועידת פסגה” (עם תאמר נפאר ושאנן סטריט)",
+		artist: "סגול 59",
+		published_date: "2020s",
+		lyric_sample: {
+			hebrew: "",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
 ];

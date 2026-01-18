@@ -13,7 +13,7 @@ export const shabjdeed2010s = [
 				"Palestinian rapper from Akka, song about resistance and life under occupation",
 		},
 		links: {
-			lyrics: "https://genius.com/search?q=shabjdeed+mtaktak",
+			lyrics: "",
 			youtube: "https://www.youtube.com/results?search_query=shabjdeed+mtaktak",
 		},
 	},
@@ -30,8 +30,47 @@ export const shabjdeed2010s = [
 				"Unofficial Palestinian anthem for Palestinian youth, voice of a young generation",
 		},
 		links: {
-			lyrics: "https://genius.com/search?q=shabjdeed+inn+ann",
+			lyrics: "",
 			youtube: "https://www.youtube.com/results?search_query=shabjdeed+inn+ann",
+		},
+	},
+	{
+		name: "Carlo",
+		artist: "שבג'דיד (Shabjdeed - עודאי עבאס)",
+		published_date: "2017",
+		lyric_sample: {
+			hebrew: "",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
+	{
+		name: "Hmlana",
+		artist: "שבג'דיד (Shabjdeed - עודאי עבאס)",
+		published_date: "2018",
+		lyric_sample: {
+			hebrew: "",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
+	{
+		name: "Jdeed vol.1-3",
+		artist: "שבג'דיד (Shabjdeed - עודאי עבאס)",
+		published_date: "2019",
+		lyric_sample: {
+			hebrew: "",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
 		},
 	},
 ];

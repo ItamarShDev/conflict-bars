@@ -13,7 +13,7 @@ export const odeya2020s = [
 				"Inspired by the classic song 'Winter 73' about the Yom Kippur War, tells the story of winter 2023",
 		},
 		links: {
-			lyrics: "https://genius.com/search?q=odeya+choref+23",
+			lyrics: "",
 			youtube: "https://www.youtube.com/results?search_query=odeya+choref+23",
 		},
 	},

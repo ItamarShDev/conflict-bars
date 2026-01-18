@@ -153,4 +153,147 @@ export const subliminal2000s = [
 			youtube: "https://www.youtube.com/watch?v=FqNAYKUo28Y",
 		},
 	},
+	{
+		name: "חי מיום ליום",
+		artist: "סאבלימינל והצל",
+		published_date: "2001",
+		lyric_sample: {
+			hebrew: "תמונות צרחות סירנות ועיריות / חי במדינה בלי שלום / רגשות אשם על כל דם שנשפך / כל חייל שנשלח",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
+	{
+		name: "תקווה",
+		artist: "סאבלימינל והצל",
+		published_date: "2002",
+		lyric_sample: {
+			hebrew: "נפש  יהודי  ה ו מ י ה / ע י ן  לציון  צ ו פ י ה / א ר ץ  ציון וירושלים / א ר ץ   ציון וירושלים",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
+	{
+		name: "הפרד ומשול",
+		artist: "סאבלימינל והצל",
+		published_date: "2002",
+		lyric_sample: {
+			hebrew: "",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
+	{
+		name: "בילאדי",
+		artist: "סאבלימינל והצל",
+		published_date: "2004",
+		lyric_sample: {
+			hebrew: "",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
+	{
+		name: "פרחים בקנה",
+		artist: "סאבלימינל והצל",
+		published_date: "2002",
+		lyric_sample: {
+			hebrew: "השמש תידום בין עזה לרפיח / ישובו לעיר חיילים בהמון / לא ידע שהלכת להביא את השלום / בנות על הצריח במקום חיילים",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
+	{
+		name: "האדריכלים",
+		artist: "סאבלימינל והצל",
+		published_date: "2001",
+		lyric_sample: {
+			hebrew: "",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
+	{
+		name: "לא פוחד",
+		artist: "Subliminal (סאבלימינל)",
+		published_date: "2002",
+		lyric_sample: {
+			hebrew: "",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
+	{
+		name: "האור והצל",
+		artist: "Subliminal (סאבלימינל)",
+		published_date: "2004",
+		lyric_sample: {
+			hebrew: "",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
+	{
+		name: "תפילה",
+		artist: "Subliminal (סאבלימינל)",
+		published_date: "2006",
+		lyric_sample: {
+			hebrew: "הוא היושב לו אי שם במרומים / הוא הרופא כל חולים / הוא הנותן רוב שמחה לילדים / הוא העושה משפטים",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
+	{
+		name: "בדיוק כשחשבתם שהכל נגמר",
+		artist: "Subliminal (סאבלימינל)",
+		published_date: "2007",
+		lyric_sample: {
+			hebrew: "ובלב תל אביב היה שוב פיגוע / ובלב תל אביב היה שוב פיגוע / ובלב תל אביב היה שוב פיגוע",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
+	{
+		name: "אדון עולם עד מתי",
+		artist: "Subliminal (סאבלימינל)",
+		published_date: "2005",
+		lyric_sample: {
+			hebrew: "אדון עולם    אשר מלך / בטרם כל    יציר נברא / לעת נעשה    בחפצו כל / אזי מלך   אזי מלך  שמו נקרא",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
 ];

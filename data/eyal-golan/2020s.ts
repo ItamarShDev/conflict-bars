@@ -13,8 +13,21 @@ export const eyalGolan2020s = [
 				"Patriotic song released a week and a half after October 7, one of the most popular songs on radio",
 		},
 		links: {
-			lyrics: "https://genius.com/search?q=eyal+golan+am+yisrael+chai",
+			lyrics: "",
 			youtube: "https://www.youtube.com/results?search_query=eyal+golan+am+yisrael+chai",
+		},
+	},
+	{
+		name: "Am Yisrael Chai",
+		artist: "Eyal Golan",
+		published_date: "2023",
+		lyric_sample: {
+			hebrew: "",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "https://www.youtube.com/results?search_query=Eyal+Golan+Am+Yisrael+Chai",
 		},
 	},
 ];

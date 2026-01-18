@@ -13,7 +13,7 @@ export const nigelHadmor1990s = [
 				"Rabin fell, the land trembles, what happened to us, what is this conflict that never ends",
 		},
 		links: {
-			lyrics: "https://genius.com/search?q=nigel+hadmor+rabin",
+			lyrics: "",
 			youtube: "https://www.youtube.com/results?search_query=nigel+hadmor+rabin",
 		},
 	},

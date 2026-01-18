@@ -30,4 +30,56 @@ export const shabakSamech90s = [
 			lyrics: "https://genius.com/Shabak-samech-hamedina-balehavot-lyrics",
 		},
 	},
+	{
+		name: "יהיה פיצוץ",
+		artist: "שב\"ק ס'",
+		published_date: "1997",
+		lyric_sample: {
+			hebrew: "",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
+	{
+		name: "אימפריה",
+		artist: "שב\"ק ס'",
+		published_date: "1998",
+		lyric_sample: {
+			hebrew: "עומד אדם אחד",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
+	{
+		name: "מלחמת מיקרופון",
+		artist: "שב\"ק ס'",
+		published_date: "1998",
+		lyric_sample: {
+			hebrew: "",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
+	{
+		name: "Shin Business",
+		artist: "שבק\"ס (Shabak Samech)",
+		published_date: "1995",
+		lyric_sample: {
+			hebrew: "",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
 ];

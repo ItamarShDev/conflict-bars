@@ -47,4 +47,56 @@ export const tuna2010s = [
 			lyrics: "https://genius.com/Tuna-tzedaka-lyrics",
 		},
 	},
+	{
+		name: "רוק 30",
+		artist: "טונה",
+		published_date: "2015",
+		lyric_sample: {
+			hebrew: "מסתובבות לך בראש כמו חיילות בעזריאלי",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
+	{
+		name: "י\"א 2",
+		artist: "טונה",
+		published_date: "2015",
+		lyric_sample: {
+			hebrew: "מסתובבות לך בראש כמו חיילות בעזריאלי",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
+	{
+		name: "סרט ערבי",
+		artist: "טונה",
+		published_date: "2017",
+		lyric_sample: {
+			hebrew: "ואללה כולם פה בסרט ערבי / ואללה כולם פה בסרט ערבי / ואללה כולם פה בסרט ערבי / I come in peace",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
+	{
+		name: "גם זה יעבור",
+		artist: "טונה",
+		published_date: "2015",
+		lyric_sample: {
+			hebrew: "וגם    שמע אולי מוקדם להתלכלך / חנוך רוזן ,סאדם חוסיין",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
 ];

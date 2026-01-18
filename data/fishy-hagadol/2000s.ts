@@ -13,8 +13,21 @@ export const fishyHagadol2000s = [
 				"Everything is transparent, the media lies, the government hides the truth, the attacks and war",
 		},
 		links: {
-			lyrics: "https://genius.com/search?q=fishy+hagadol+hakol+sakaif",
+			lyrics: "",
 			youtube: "https://www.youtube.com/results?search_query=fishy+hagadol+hakol+sakaif",
+		},
+	},
+	{
+		name: "הכל שקוף",
+		artist: "פישי הגדול",
+		published_date: "2000",
+		lyric_sample: {
+			hebrew: "פתיחה: / רק את / אין אחרת / שלך",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
 		},
 	},
 ];

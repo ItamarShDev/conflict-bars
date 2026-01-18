@@ -14,7 +14,7 @@ export const shananStreet2000s = [
 				"Summit meeting between leaders, call for peace during the Second Intifada",
 		},
 		links: {
-			lyrics: "https://genius.com/search?q=shanan+street+summit+meeting",
+			lyrics: "",
 			youtube: "https://www.youtube.com/results?search_query=shanan+street+summit+meeting",
 		},
 	},

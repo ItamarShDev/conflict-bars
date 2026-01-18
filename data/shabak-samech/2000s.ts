@@ -30,4 +30,17 @@ export const shabakSamech2000s = [
 			lyrics: "https://genius.com/Shabak-samech-ein-kavod-lyrics",
 		},
 	},
+	{
+		name: "C'naan 2000",
+		artist: "שבק\"ס (Shabak Samech)",
+		published_date: "2000",
+		lyric_sample: {
+			hebrew: "",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
 ];

@@ -14,7 +14,7 @@ export const alNather2010s = [
 				"With staccato trap beats, song about Palestinian resistance, included in BBC's list of greatest hip-hop songs of all time",
 		},
 		links: {
-			lyrics: "https://genius.com/search?q=al+nather+mtaktak",
+			lyrics: "",
 			youtube: "https://www.youtube.com/results?search_query=al+nather+mtaktak",
 		},
 	},
@@ -31,7 +31,7 @@ export const alNather2010s = [
 				"Unofficial Palestinian anthem for Palestinian youth, voice of young generation in resistance",
 		},
 		links: {
-			lyrics: "https://genius.com/search?q=al+nather+inn+ann",
+			lyrics: "",
 			youtube: "https://www.youtube.com/results?search_query=al+nather+inn+ann",
 		},
 	},

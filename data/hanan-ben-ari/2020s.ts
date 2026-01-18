@@ -13,8 +13,21 @@ export const hananBenAri2020s = [
 				"Even on the edge of the abyss, even in the middle of hell, you are paradise - emotional song addressing Israel directly",
 		},
 		links: {
-			lyrics: "https://genius.com/search?q=hanan+ben+ari+moledet",
+			lyrics: "",
 			youtube: "https://www.youtube.com/results?search_query=hanan+ben+ari+moledet",
+		},
+	},
+	{
+		name: "Moledet",
+		artist: "Hanan Ben Ari",
+		published_date: "2023",
+		lyric_sample: {
+			hebrew: "",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "https://genius.com/Hanan-ben-ari-moledet-lyrics",
+			youtube: "https://www.youtube.com/results?search_query=Hanan+Ben+Ari+Moledet",
 		},
 	},
 ];

@@ -1,0 +1,140 @@
+[
+	{
+		"artist": "Tamer Nafar",
+		"name": "Innocent Criminals (Posheem Hapim me Peshaa)",
+		"year": "2000",
+		"description": "One of the first direct political songs written by Tamer Nafar in the context of the Second Intifada.",
+		"sourceFile": "web_search",
+		"links": {
+			"youtube": "https://www.youtube.com/results?search_query=Tamer+Nafar+Innocent+Criminals"
+		}
+	},
+	{
+		"artist": "Tamer Nafar",
+		"name": "Tamer Must Vote",
+		"year": "2019",
+		"description": "Encouraged Arab citizens of Israel to participate in elections to combat right-wing politics.",
+		"sourceFile": "web_search",
+		"links": {
+			"youtube": "https://www.youtube.com/results?search_query=Tamer+Nafar+Tamer+Must+Vote"
+		}
+	},
+	{
+		"artist": "Tamer Nafar",
+		"name": "The Beat Never Goes Off",
+		"year": "2021",
+		"description": "Tamer Nafar raps in front of the separation wall, touching on occupation and Palestinian spirit.",
+		"sourceFile": "web_search",
+		"links": { "youtube": "https://www.youtube.com/watch?v=M-R8S7QwO1g" }
+	},
+	{
+		"artist": "Tamer Nafar",
+		"name": "Rock it like a Palestinian",
+		"year": "2020",
+		"description": "Recent single by Tamer Nafar highlighting identity.",
+		"sourceFile": "web_search",
+		"links": {
+			"youtube": "https://www.youtube.com/results?search_query=Tamer+Nafar+Rock+it+like+a+Palestinian"
+		}
+	},
+	{
+		"artist": "Saz",
+		"name": "Bo Nedaber Dugri (Let's Talk Straight)",
+		"year": "2021",
+		"description": "Viral hit by Saz and Uriya Rosenman tackling the Jewish-Arab narrative conflict head-on.",
+		"sourceFile": "web_search",
+		"links": {
+			"youtube": "https://www.youtube.com/results?search_query=Saz+Uriya+Rosenman+Dugri"
+		}
+	},
+	{
+		"artist": "Hatikvah 6",
+		"name": "Hymn of the Warrior (Hamnon Halochem)",
+		"year": "2021",
+		"description": "Tribute to IDF combat soldiers, filming at Bahad 1.",
+		"sourceFile": "web_search",
+		"links": {
+			"youtube": "https://www.youtube.com/results?search_query=Hatikvah+6+Hamnon+Halochem"
+		}
+	},
+	{
+		"artist": "Hatikvah 6",
+		"name": "Super Heroes (Giborei Al)",
+		"year": "2023",
+		"description": "Tribute to IDF reservists following Oct 7, highlighting civilians turning into soldiers.",
+		"sourceFile": "web_search",
+		"links": {
+			"youtube": "https://www.youtube.com/results?search_query=Hatikvah+6+Super+Heroes"
+		}
+	},
+	{
+		"artist": "Hatikvah 6",
+		"name": "Most Israeli (Hachi Yisraeli)",
+		"year": "2015",
+		"description": "Explores facets of Israeli identity and national pride.",
+		"sourceFile": "web_search",
+		"links": {
+			"youtube": "https://www.youtube.com/results?search_query=Hatikvah+6+Hachi+Yisraeli"
+		}
+	},
+	{
+		"artist": "Hanan Ben Ari",
+		"name": "Moledet",
+		"year": "2023",
+		"description": "Dedicated to Israel after Oct 7, expressing desire to rebuild and resilience.",
+		"sourceFile": "web_search",
+		"links": {
+			"youtube": "https://www.youtube.com/results?search_query=Hanan+Ben+Ari+Moledet"
+		}
+	},
+	{
+		"artist": "Hanan Ben Ari",
+		"name": "Nigun HaNeshamot",
+		"year": "2006",
+		"description": "Written during the Second Lebanon War, revisited in later conflicts.",
+		"sourceFile": "web_search",
+		"links": {
+			"youtube": "https://www.youtube.com/results?search_query=Hanan+Ben+Ari+Nigun+HaNeshamot"
+		}
+	},
+	{
+		"artist": "Eyal Golan",
+		"name": "Am Yisrael Chai",
+		"year": "2023",
+		"description": "Anthem released after Oct 7 symbolizing unity and resilience.",
+		"sourceFile": "web_search",
+		"links": {
+			"youtube": "https://www.youtube.com/results?search_query=Eyal+Golan+Am+Yisrael+Chai"
+		}
+	},
+	{
+		"artist": "Shadia Mansour",
+		"name": "Al Kufiyyeh 3arabeyyeh (The Kufiya is Arab)",
+		"year": "2010",
+		"description": "Seminal track emphasizing the keffiyeh as a symbol of Palestinian identity.",
+		"sourceFile": "web_search",
+		"links": {
+			"youtube": "https://www.youtube.com/results?search_query=Shadia+Mansour+Al+Kufiyyeh+3arabeyyeh"
+		}
+	},
+	{
+		"artist": "Shadia Mansour",
+		"name": "Kulun 'Andun Dababat (They All Have Tanks)",
+		"year": "2011",
+		"description": "Delves into Palestinian internal politics and resistance.",
+		"sourceFile": "web_search",
+		"links": {
+			"youtube": "https://www.youtube.com/results?search_query=Shadia+Mansour+Kulun+Andun+Dababat"
+		}
+	},
+	{
+		"artist": "Shadia Mansour",
+		"name": "Somos Sur",
+		"year": "2014",
+		"description": "Collaboration with Ana Tijoux, speaking to the global resistance movement.",
+		"sourceFile": "web_search",
+		"links": {
+			"youtube": "https://www.youtube.com/results?search_query=Shadia+Mansour+Somos+Sur"
+		}
+	}
+]

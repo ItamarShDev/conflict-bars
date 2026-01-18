@@ -46,4 +46,43 @@ export const tuna2020s = [
 			lyrics: "https://genius.com/Tuna-shuvo-shel-mordechai-lyrics",
 		},
 	},
+	{
+		name: "הטוב, הרע ואחותך",
+		artist: "טונה",
+		published_date: "2021",
+		lyric_sample: {
+			hebrew: "אווירת דם, אווירת דמשק / זה לא שלפני זה קודם היה לי / בפרק הקודם שדדתי בנק בשביל קניות / כדלקמן, זו מלחמה",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
+	{
+		name: "מלאכים",
+		artist: "טונה",
+		published_date: "2024",
+		lyric_sample: {
+			hebrew: "אין בכלל מלאכים בשמיים / אני כאן איתך, ממש בינתיים / להחזיק את הראש מעל המים / לראות הכל, לעצום עיניים",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
+	{
+		name: "ראש למעלה” (2025)",
+		artist: "טונה",
+		published_date: "2020s",
+		lyric_sample: {
+			hebrew: "פתיחה: / לעולם לא להביט למטה / העולם הוא חבל דק מאוד / לנשום עמוק, להיות מי שאתה",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
 ];

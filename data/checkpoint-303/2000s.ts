@@ -13,7 +13,7 @@ export const checkpoint3032000s = [
 				"Activist project about life under occupation, song about checkpoints in the West Bank",
 		},
 		links: {
-			lyrics: "https://genius.com/search?q=checkpoint+303+checkpoint+tunes",
+			lyrics: "",
 			youtube: "https://www.youtube.com/results?search_query=checkpoint+303+checkpoint+tunes",
 		},
 	},

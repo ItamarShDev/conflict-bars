@@ -31,4 +31,17 @@ export const sagol592010s = [
 			lyrics: "https://genius.com/Sagol-59-shir-shalom-lyrics",
 		},
 	},
+	{
+		name: "List of Demands",
+		artist: "סאגול 59 (Sagol 59 - חן רותם)",
+		published_date: "2011",
+		lyric_sample: {
+			hebrew: "",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
 ];

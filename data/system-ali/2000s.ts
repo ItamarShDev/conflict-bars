@@ -13,7 +13,7 @@ export const systemAli2000s = [
 				"Multilingual perspective on life and identity in Jaffa, with civic protest against gentrification and housing rights",
 		},
 		links: {
-			lyrics: "https://genius.com/search?q=system+ali+ain+kmo+yafo",
+			lyrics: "",
 			youtube: "https://www.youtube.com/results?search_query=system+ali+jaffa",
 		},
 	},

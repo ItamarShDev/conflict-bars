@@ -12,7 +12,7 @@ export const beniaBarAvi2020s = [
 				"Beautiful love song to Israel and the Israeli people, expresses deep connection to the land",
 		},
 		links: {
-			lyrics: "https://genius.com/search?q=benia+bar+avi+from+river+to+sea",
+			lyrics: "",
 			youtube:
 				"https://www.youtube.com/results?search_query=benia+bar+avi+from+river+to+sea",
 		},

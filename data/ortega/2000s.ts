@@ -13,7 +13,7 @@ export const ortega2000s = [
 				"Album produced by Borgore, veteran rapper in Israeli hip-hop scene",
 		},
 		links: {
-			lyrics: "https://genius.com/search?q=ortega+04:47",
+			lyrics: "",
 			youtube: "https://www.youtube.com/results?search_query=ortega+04:47",
 		},
 	},

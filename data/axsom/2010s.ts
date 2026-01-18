@@ -13,8 +13,21 @@ export const axsom2010s = [
 				"State of thieves, corruption in government, the government steals from the people, security situation as an excuse",
 		},
 		links: {
-			lyrics: "https://genius.com/search?q=axsom+medina+shel+ganavim",
+			lyrics: "",
 			youtube: "https://www.youtube.com/results?search_query=axsom+medina+shel+ganavim",
+		},
+	},
+	{
+		name: "מדינה של גנבים",
+		artist: "אקסום",
+		published_date: "2012",
+		lyric_sample: {
+			hebrew: "פתיחה:‏ / כל היום אני יושב / ועלייך רק חושב / מה יהיה, יהיה, יהיה איתך",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
 		},
 	},
 ];

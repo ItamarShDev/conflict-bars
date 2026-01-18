@@ -13,8 +13,21 @@ export const loukatz2010s = [
 				"Extreme satire on political discourse, everyone talks about peace but nothing happens",
 		},
 		links: {
-			lyrics: "https://genius.com/search?q=loukatz+shir+hashalom",
+			lyrics: "",
 			youtube: "https://www.youtube.com/results?search_query=loukatz+shir+hashalom",
+		},
+	},
+	{
+		name: "שיר השלום",
+		artist: "לוקץ'",
+		published_date: "2016",
+		lyric_sample: {
+			hebrew: "כוכבים כמו בני אדם / ולא נדע מלחמה / הכל יהיה   כמו בחלום  כשיבוא שלום / ולא נדע מלחמה",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
 		},
 	},
 ];

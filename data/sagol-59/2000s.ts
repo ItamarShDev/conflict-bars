@@ -15,4 +15,30 @@ export const sagol592000s = [
 			lyrics: "https://genius.com/Sagol-59-59-veidat-pisga-lyrics",
 		},
 	},
+	{
+		name: "Summit Meeting",
+		artist: "סאגול 59 (Sagol 59 - חן רותם)",
+		published_date: "2001",
+		lyric_sample: {
+			hebrew: "",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
+	{
+		name: "Shoah Business",
+		artist: "סאגול 59 (Sagol 59 - חן רותם)",
+		published_date: "2007",
+		lyric_sample: {
+			hebrew: "",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
 ];

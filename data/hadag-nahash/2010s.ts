@@ -13,7 +13,7 @@ export const hadagNahash2010s = [
 				"Indictment against Israeli politics, sharp criticism of the government system",
 		},
 		links: {
-			lyrics: "https://genius.com/search?q=hadag+nahash+complaint+parties",
+			lyrics: "",
 			youtube: "https://www.youtube.com/results?search_query=hadag+nahash+complaint+parties",
 		},
 	},
@@ -30,7 +30,7 @@ export const hadagNahash2010s = [
 				"Parody-protest about Zionism and national myths, critique of national narrative",
 		},
 		links: {
-			lyrics: "https://genius.com/search?q=hadag+nahash+gabi+dabi",
+			lyrics: "",
 			youtube: "https://www.youtube.com/results?search_query=hadag+nahash+gabi+dabi",
 		},
 	},
@@ -46,7 +46,7 @@ export const hadagNahash2010s = [
 				"Protest song about social-political situation, including music video with official English subtitles",
 		},
 		links: {
-			lyrics: "https://genius.com/search?q=hadag+nahash+voting+feet",
+			lyrics: "",
 			youtube: "https://www.youtube.com/results?search_query=hadag+nahash+voting+feet",
 		},
 	},
@@ -62,7 +62,7 @@ export const hadagNahash2010s = [
 				"Direct text about the country as a war zone, budgets for security",
 		},
 		links: {
-			lyrics: "https://genius.com/search?q=hadag+nahash+war+movie",
+			lyrics: "",
 			youtube: "https://www.youtube.com/results?search_query=hadag+nahash+war+movie",
 		},
 	},
@@ -78,7 +78,7 @@ export const hadagNahash2010s = [
 				"Jerusalem as icon of holiness/violence/poverty-wealth; city under constant tension",
 		},
 		links: {
-			lyrics: "https://genius.com/search?q=hadag+nahash+city+god",
+			lyrics: "",
 			youtube: "https://www.youtube.com/results?search_query=hadag+nahash+city+of+god",
 		},
 	},
@@ -94,7 +94,7 @@ export const hadagNahash2010s = [
 				"2004 version became a landmark of protest; 2019 saw a re-recorded version",
 		},
 		links: {
-			lyrics: "https://genius.com/search?q=hadag+nahash+sticker+song",
+			lyrics: "",
 			youtube: "https://www.youtube.com/results?search_query=hadag+nahash+sticker+song",
 		},
 	},
@@ -110,8 +110,47 @@ export const hadagNahash2010s = [
 				"Cynical look at branding and image of the country abroad",
 		},
 		links: {
-			lyrics: "https://genius.com/search?q=hadag+nahash+welcome+izrael",
+			lyrics: "",
 			youtube: "https://www.youtube.com/results?search_query=hadag+nahash+welcome+izrael",
+		},
+	},
+	{
+		name: "עוד אח אחד",
+		artist: "הדג נחש",
+		published_date: "2010",
+		lyric_sample: {
+			hebrew: "בן אדם למה זה ליבך כמו קרח / לירות בבני אדם איך אתה מסוגל / לא רוצה לראות עוד בן אדם שימות / כל דם שנשפך מותיר שובל ריקנות",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "https://genius.com/Hadag-nahash-od-ach-echad-lyrics",
+			youtube: "",
+		},
+	},
+	{
+		name: "שמש",
+		artist: "הדג נחש",
+		published_date: "2013",
+		lyric_sample: {
+			hebrew: "אל המקום שבו זרם בי הדם",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "https://genius.com/Hadag-nahash-shemesh-annotated",
+			youtube: "",
+		},
+	},
+	{
+		name: "זמן להתעורר",
+		artist: "הדג נחש",
+		published_date: "2013",
+		lyric_sample: {
+			hebrew: "<span  onmouseover=\"sCI('Am/G','S6F3E2`S4F2E3`S3F2E4`S2F1E1`S1F0E0',1,'',1,159);\" onmouseout='CO()' id=\"c_159\" class=\"c_C\">Am/G</span>: xxx010 / השכמה! / מעבר: / לא מאמין בנשק מאמין בשירה",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "https://genius.com/Hadag-nahash-zman-lehitorer-lyrics",
+			youtube: "",
 		},
 	},
 ];

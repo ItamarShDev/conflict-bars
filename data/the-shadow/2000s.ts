@@ -48,4 +48,17 @@ export const theShadow2000s = [
 			lyrics: "https://genius.com/Hatzel-hazioni-haacharon-lyrics",
 		},
 	},
+	{
+		name: "לא שם זין",
+		artist: "הצל (סולו)",
+		published_date: "2007",
+		lyric_sample: {
+			hebrew: "פתיחה: / ברוך שעשני גבר, אחושרמוטה גבר / וכל עוד הזיקפה לא תיפול / מותר לי לעשות הכל",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
 ];

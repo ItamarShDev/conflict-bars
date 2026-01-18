@@ -47,4 +47,43 @@ export const dam2000s = [
 			lyrics: "https://genius.com/DAM-mwallon-lyrics",
 		},
 	},
+	{
+		name: "מי ארהבי?\" (מי טרוריסט?)",
+		artist: "דאם (DAM)",
+		published_date: "2001",
+		lyric_sample: {
+			hebrew: "",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
+	{
+		name: "נולדתי פה",
+		artist: "דאם (DAM)",
+		published_date: "2004",
+		lyric_sample: {
+			hebrew: "",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
+	{
+		name: "Dedication",
+		artist: "DAM (דאם) - Da Arabian MCs",
+		published_date: "2006",
+		lyric_sample: {
+			hebrew: "",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
 ];

@@ -46,4 +46,17 @@ export const noroz2020s = [
 			lyrics: "https://genius.com/Noroz-trap-anthem-lyrics",
 		},
 	},
+	{
+		name: "אנחנו מנצחים",
+		artist: "נורוז",
+		published_date: "2023",
+		lyric_sample: {
+			hebrew: "פתיחה ובבתים: x2 / וכשהלילה תם והשמש מאירה / התדעי אמא מה לעינינו נראה? / עצים סביב, רמי צמרת אך חרוכי גזע",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
 ];

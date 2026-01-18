@@ -13,8 +13,21 @@ export const systemAli2010s = [
 				"Live performance with war themes, alongside texts about Jaffa and gentrification, voice of urban resistance",
 		},
 		links: {
-			lyrics: "https://genius.com/search?q=system+ali+vayina+war",
+			lyrics: "",
 			youtube: "https://www.youtube.com/results?search_query=system+ali+vayina+war+live",
+		},
+	},
+	{
+		name: "System Ali",
+		artist: "סיסטם עאלי",
+		published_date: "2013",
+		lyric_sample: {
+			hebrew: "",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
 		},
 	},
 ];

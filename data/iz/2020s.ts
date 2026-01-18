@@ -13,8 +13,21 @@ export const iz2020s = [
 				"Quick response to October 7, released days after the attack, song in memory of those killed",
 		},
 		links: {
-			lyrics: "https://genius.com/search?q=iz+october+seventh",
+			lyrics: "",
 			youtube: "https://www.youtube.com/results?search_query=iz+october+seventh",
+		},
+	},
+	{
+		name: "שבעה באוקטובר” (2023)",
+		artist: "IZ (איזי)",
+		published_date: "2020s",
+		lyric_sample: {
+			hebrew: "עוד מוקדם לדבר על כל החברים / זה הדם היהודי שלי בוער זה / אלוהים אחד מגן דוד שומר ירושלים / ונבכה על הדם היקר שנשפך",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
 		},
 	},
 ];

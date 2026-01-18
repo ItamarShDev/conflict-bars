@@ -13,7 +13,7 @@ export const ez2020s = [
 				"Song in memory of those killed on October 7, immediate response to the massacre",
 		},
 		links: {
-			lyrics: "https://genius.com/search?q=e-z+october+seventh",
+			lyrics: "",
 			youtube: "https://www.youtube.com/results?search_query=e-z+october+seventh",
 		},
 	},

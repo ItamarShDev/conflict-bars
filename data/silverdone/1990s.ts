@@ -13,7 +13,7 @@ export const silverdone1990s = [
 				"The state is in danger, everything is falling apart, the attacks don't stop, we return home",
 		},
 		links: {
-			lyrics: "https://genius.com/search?q=silverdone+medina+besikana",
+			lyrics: "",
 			youtube: "https://www.youtube.com/results?search_query=silverdone+medina+besikana",
 		},
 	},

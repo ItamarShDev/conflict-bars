@@ -13,7 +13,7 @@ export const ortega2020s = [
 				"Collaborations with various artists, describes political and social situation",
 		},
 		links: {
-			lyrics: "https://genius.com/search?q=ortega+black+gold",
+			lyrics: "",
 			youtube: "https://www.youtube.com/results?search_query=ortega+black+gold",
 		},
 	},

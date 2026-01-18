@@ -13,8 +13,21 @@ export const hypeCrew2020s = [
 				"Encouragement song during the war, with music video filmed in the south, voice of hope and unity",
 		},
 		links: {
-			lyrics: "https://genius.com/search?q=hype+crew+tadliku+torot",
+			lyrics: "",
 			youtube: "https://www.youtube.com/results?search_query=hype+crew+light+up+lights",
+		},
+	},
+	{
+		name: "תדליקו ת׳אורות” (2023)",
+		artist: "Hype Crew",
+		published_date: "2020s",
+		lyric_sample: {
+			hebrew: "",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
 		},
 	},
 ];

@@ -46,4 +46,30 @@ export const jimboJ2010s = [
 			lyrics: "https://genius.com/Jimbo-j-tzedek-lyrics",
 		},
 	},
+	{
+		name: "עשיתי",
+		artist: "ג'ימבו ג'יי ולהקת ספא",
+		published_date: "2017",
+		lyric_sample: {
+			hebrew: "מה זה שירתי?   עשיתי צבא / אחר כך חטמ\"ר עציון, נעלין / החייל אז אמרו",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "https://genius.com/Jimbo-j-asiti-lyrics",
+			youtube: "",
+		},
+	},
+	{
+		name: "חתולים",
+		artist: "ג'ימבו ג'יי ולהקת ספא",
+		published_date: "2017",
+		lyric_sample: {
+			hebrew: "פתיחה: / בא לי לומר לך שחיפשתי אותך / כי לאהבה אין זמן ואין גיל / אבל לא בא לי שתילחצי אז כותב",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "https://genius.com/Jimbo-j-chatulim-lyrics",
+			youtube: "",
+		},
+	},
 ];

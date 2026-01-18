@@ -14,7 +14,7 @@ export const avivGefen2020s = [
 				"Mia was herself held captive in Gaza and released after 51 days, song about return from captivity",
 		},
 		links: {
-			lyrics: "https://genius.com/search?q=aviv+gefen+black+sunrise",
+			lyrics: "",
 			youtube: "https://www.youtube.com/results?search_query=aviv+gefen+black+sunrise",
 		},
 	},

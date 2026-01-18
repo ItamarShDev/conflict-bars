@@ -14,7 +14,7 @@ export const daboor2010s = [
 				"Song about Palestinian identity and life in Gaza Strip, voice of resistance",
 		},
 		links: {
-			lyrics: "https://genius.com/search?q=daboor+inn+ann",
+			lyrics: "",
 			youtube: "https://www.youtube.com/results?search_query=daboor+inn+ann",
 		},
 	},

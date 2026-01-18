@@ -46,4 +46,17 @@ export const nechiNech2010s = [
 			lyrics: "https://genius.com/Nechi-nech-everyday-lyrics",
 		},
 	},
+	{
+		name: "בור ועם הארץ: סיפורו של הבום-שאקה-לאק",
+		artist: "נצ'י נצ' (Nechi Nech - רביד פלוטניק)",
+		published_date: "2013",
+		lyric_sample: {
+			hebrew: "",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
 ];

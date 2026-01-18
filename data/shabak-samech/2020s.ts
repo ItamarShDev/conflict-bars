@@ -30,4 +30,43 @@ export const shabakSamech2020s = [
 			lyrics: "https://genius.com/Shabak-samech-amen-lyrics",
 		},
 	},
+	{
+		name: "Straight Outta Yavne",
+		artist: "שבק\"ס (Shabak Samech)",
+		published_date: "2020s",
+		lyric_sample: {
+			hebrew: "",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
+	{
+		name: "Imperia",
+		artist: "שבק\"ס (Shabak Samech)",
+		published_date: "2020s",
+		lyric_sample: {
+			hebrew: "",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
+	{
+		name: "המדינה בלהבות",
+		artist: "שב״ק ס׳",
+		published_date: "2020s",
+		lyric_sample: {
+			hebrew: "",
+			english_translation: "", 
+		},
+		links: {
+			lyrics: "",
+			youtube: "",
+		},
+	},
 ];
