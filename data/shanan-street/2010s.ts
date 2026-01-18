@@ -1,6 +1,4 @@
-import type { SongList } from "../../timeline/types";
-
-export const shananstreet2010s: SongList = [
+export const shananstreet2010s = [
 	{
 		name: "קובלנה על מפלגות ישראל",
 		artist: "שאנן סטריט (סולו)",

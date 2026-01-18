@@ -1,6 +1,4 @@
-import type { SongList } from "../../timeline/types";
-
-export const ramallahunderground2020s: SongList = [
+export const ramallahunderground2020s = [
 	{
 		name: "970",
 		artist: "רמאללה אנדרגראונד (Ramallah Underground)",

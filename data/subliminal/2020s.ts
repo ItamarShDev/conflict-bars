@@ -1,6 +1,4 @@
-import type { SongList } from "../../timeline/types";
-
-export const subliminal2020s: SongList = [
+export const subliminal2020s = [
 	{
 		name: "Intro",
 		artist: "Subliminal (סאבלימינל)",
@@ -22,11 +20,11 @@ export const subliminal2020s: SongList = [
 		language: "Hebrew",
 		published_date: "2023",
 		lyric_sample: {
-				hebrew: "שיר דתי-לאומי על אלוהים וארץ ישראל",
-				english_translation: "Religious-national song about God and Israel",
+			hebrew: "שיר דתי-לאומי על אלוהים וארץ ישראל",
+			english_translation: "Religious-national song about God and Israel",
 		},
 		links: {
-				youtube: "https://www.youtube.com/results?search_query=subliminal+avinu",
+			youtube: "https://www.youtube.com/results?search_query=subliminal+avinu",
 		},
 	},
 	{
@@ -35,11 +33,12 @@ export const subliminal2020s: SongList = [
 		language: "Hebrew",
 		published_date: "2025",
 		lyric_sample: {
-				hebrew: "סינגל חדש על בריאות וחיוניות",
-				english_translation: "New single about health and vitality",
+			hebrew: "סינגל חדש על בריאות וחיוניות",
+			english_translation: "New single about health and vitality",
 		},
 		links: {
-				youtube: "https://www.youtube.com/results?search_query=subliminal+or+habriut",
+			youtube:
+				"https://www.youtube.com/results?search_query=subliminal+or+habriut",
 		},
 	},
 	{
@@ -48,11 +47,14 @@ export const subliminal2020s: SongList = [
 		language: "Hebrew",
 		published_date: "2025-03",
 		lyric_sample: {
-				hebrew: "אל תירא ישראל / אנחנו כאן בשבילך / גם כשקשה / נעמוד חזק ביחד - שיר תמיכה ועידוד לעם ישראל",
-				english_translation: "Don't be afraid Israel / We are here for you / Even when it's hard / We will stand strong together - song of support and encouragement for Israeli people",
+			hebrew:
+				"אל תירא ישראל / אנחנו כאן בשבילך / גם כשקשה / נעמוד חזק ביחד - שיר תמיכה ועידוד לעם ישראל",
+			english_translation:
+				"Don't be afraid Israel / We are here for you / Even when it's hard / We will stand strong together - song of support and encouragement for Israeli people",
 		},
 		links: {
-				youtube: "https://www.youtube.com/results?search_query=subliminal+al+tira+yisrael",
+			youtube:
+				"https://www.youtube.com/results?search_query=subliminal+al+tira+yisrael",
 		},
 	},
 	{
@@ -65,7 +67,8 @@ export const subliminal2020s: SongList = [
 		artist: "Subliminal (סאבלימינל)",
 		published_date: "2020s",
 		lyric_sample: {
-				hebrew: "בבתים: / אני יכול אני יכול, / &quot;יכול מה&quot;?!לזרום / פותח את הפה במקום מילים",
+			hebrew:
+				"בבתים: / אני יכול אני יכול, / &quot;יכול מה&quot;?!לזרום / פותח את הפה במקום מילים",
 		},
 	},
 	{
@@ -83,7 +86,8 @@ export const subliminal2020s: SongList = [
 		artist: "Subliminal (סאבלימינל)",
 		published_date: "2020s",
 		lyric_sample: {
-				hebrew: "על סף ביתך   אני עומד / לא אכנס   רק אסתכל / כי קצת עדיין  מסתבך,   להתמודד / עם השנים, הכעסים, הזיכרון שמתבגר",
+			hebrew:
+				"על סף ביתך   אני עומד / לא אכנס   רק אסתכל / כי קצת עדיין  מסתבך,   להתמודד / עם השנים, הכעסים, הזיכרון שמתבגר",
 		},
 	},
 	{
@@ -122,11 +126,13 @@ export const subliminal2020s: SongList = [
 		language: "Hebrew",
 		published_date: "2023",
 		lyric_sample: {
-				hebrew: "ביצוע חי של שיר התקווה במופע האיחוד הלאומי",
-				english_translation: "Live performance of Hope song at national unity concert",
+			hebrew: "ביצוע חי של שיר התקווה במופע האיחוד הלאומי",
+			english_translation:
+				"Live performance of Hope song at national unity concert",
 		},
 		links: {
-				youtube: "https://www.youtube.com/results?search_query=subliminal+hatikvah+live+menorah",
+			youtube:
+				"https://www.youtube.com/results?search_query=subliminal+hatikvah+live+menorah",
 		},
 	},
 	{
@@ -139,7 +145,8 @@ export const subliminal2020s: SongList = [
 		artist: "סאבלימינל",
 		published_date: "2023",
 		lyric_sample: {
-				hebrew: "איפה שאני לא הולך / אני חוזר אליך / בלילות כשזה כואב / אני כותב עליך",
+			hebrew:
+				"איפה שאני לא הולך / אני חוזר אליך / בלילות כשזה כואב / אני כותב עליך",
 		},
 	},
 	{
@@ -148,11 +155,14 @@ export const subliminal2020s: SongList = [
 		language: "Hebrew",
 		published_date: "2023-10",
 		lyric_sample: {
-				hebrew: "ערב טוב יא עזה, עוד יום עוד נאצי מת / נובה על החוף, גולני על הפרלמנט / אומרים ליחיא סינוואר / כן ראינו מלחמה / בום ביי ביי ביץ' הזמן שלך נגמר",
-				english_translation: "Good evening Gaza, another day another Nazi dead / Nova on the beach, Golani in parliament / Tell Yahya Sinwar / Yes we've seen war / Boom bye bye b*tch your time is up",
+			hebrew:
+				"ערב טוב יא עזה, עוד יום עוד נאצי מת / נובה על החוף, גולני על הפרלמנט / אומרים ליחיא סינוואר / כן ראינו מלחמה / בום ביי ביי ביץ' הזמן שלך נגמר",
+			english_translation:
+				"Good evening Gaza, another day another Nazi dead / Nova on the beach, Golani in parliament / Tell Yahya Sinwar / Yes we've seen war / Boom bye bye b*tch your time is up",
 		},
 		links: {
-				youtube: "https://www.youtube.com/results?search_query=subliminal+zeh+aleinu",
+			youtube:
+				"https://www.youtube.com/results?search_query=subliminal+zeh+aleinu",
 		},
 	},
 	{
@@ -165,7 +175,8 @@ export const subliminal2020s: SongList = [
 		artist: "Subliminal (סאבלימינל)",
 		published_date: "2020s",
 		lyric_sample: {
-				hebrew: "תמונות צרחות סירנות ועיריות / חי במדינה בלי שלום / רגשות אשם על כל דם שנשפך / כל חייל שנשלח",
+			hebrew:
+				"תמונות צרחות סירנות ועיריות / חי במדינה בלי שלום / רגשות אשם על כל דם שנשפך / כל חייל שנשלח",
 		},
 	},
 	{
@@ -173,7 +184,7 @@ export const subliminal2020s: SongList = [
 		artist: "Subliminal (סאבלימינל)",
 		published_date: "2020s",
 		lyric_sample: {
-				hebrew: "Well, קודם כל נחזיק יד ביד / אשת חייל יש לי, מפקדת!",
+			hebrew: "Well, קודם כל נחזיק יד ביד / אשת חייל יש לי, מפקדת!",
 		},
 	},
 	{
@@ -186,7 +197,7 @@ export const subliminal2020s: SongList = [
 		artist: "Subliminal (סאבלימינל)",
 		published_date: "2020s",
 		lyric_sample: {
-				hebrew: "השמיים הם הגבול וכמה שתקפוץ 'תה לא תגיע",
+			hebrew: "השמיים הם הגבול וכמה שתקפוץ 'תה לא תגיע",
 		},
 	},
 	{
@@ -220,11 +231,12 @@ export const subliminal2020s: SongList = [
 		language: "Hebrew",
 		published_date: "2023",
 		lyric_sample: {
-				hebrew: "שיר על אחדות עם ישראל בעת משבר",
-				english_translation: "Song about unity of Israeli people during crisis",
+			hebrew: "שיר על אחדות עם ישראל בעת משבר",
+			english_translation: "Song about unity of Israeli people during crisis",
 		},
 		links: {
-				youtube: "https://www.youtube.com/results?search_query=subliminal+meuchadim",
+			youtube:
+				"https://www.youtube.com/results?search_query=subliminal+meuchadim",
 		},
 	},
 	{
@@ -237,7 +249,8 @@ export const subliminal2020s: SongList = [
 		artist: "Subliminal (סאבלימינל)",
 		published_date: "2020s",
 		lyric_sample: {
-				hebrew: "השמש תידום בין עזה לרפיח / ישובו לעיר חיילים בהמון / לא ידע שהלכת להביא את השלום / בנות על הצריח במקום חיילים",
+			hebrew:
+				"השמש תידום בין עזה לרפיח / ישובו לעיר חיילים בהמון / לא ידע שהלכת להביא את השלום / בנות על הצריח במקום חיילים",
 		},
 	},
 	{
@@ -245,7 +258,8 @@ export const subliminal2020s: SongList = [
 		artist: "Subliminal (סאבלימינל)",
 		published_date: "2020s",
 		lyric_sample: {
-				hebrew: "השמש תידום בין עזה לרפיח / ישובו לעיר חיילים בהמון / לא ידע שהלכת להביא את השלום / בנות על הצריח במקום חיילים",
+			hebrew:
+				"השמש תידום בין עזה לרפיח / ישובו לעיר חיילים בהמון / לא ידע שהלכת להביא את השלום / בנות על הצריח במקום חיילים",
 		},
 	},
 	{
@@ -254,11 +268,13 @@ export const subliminal2020s: SongList = [
 		language: "Hebrew",
 		published_date: "2023",
 		lyric_sample: {
-				hebrew: "רמיקס של שני שירים קלאסיים, על תקווה ודינמיקה",
-				english_translation: "Remix of two classic songs, about hope and dynamics",
+			hebrew: "רמיקס של שני שירים קלאסיים, על תקווה ודינמיקה",
+			english_translation:
+				"Remix of two classic songs, about hope and dynamics",
 		},
 		links: {
-				youtube: "https://www.youtube.com/results?search_query=subliminal+prachim+zazim+remix",
+			youtube:
+				"https://www.youtube.com/results?search_query=subliminal+prachim+zazim+remix",
 		},
 	},
 	{
@@ -287,11 +303,13 @@ export const subliminal2020s: SongList = [
 		language: "Hebrew",
 		published_date: "2025",
 		lyric_sample: {
-				hebrew: "אלבום חדש עם שירים פטריוטיים על הגנה על הגבולות",
-				english_translation: "New album with patriotic songs about defending borders",
+			hebrew: "אלבום חדש עם שירים פטריוטיים על הגנה על הגבולות",
+			english_translation:
+				"New album with patriotic songs about defending borders",
 		},
 		links: {
-				youtube: "https://www.youtube.com/results?search_query=subliminal+guardians+threshold",
+			youtube:
+				"https://www.youtube.com/results?search_query=subliminal+guardians+threshold",
 		},
 	},
 	{
@@ -299,7 +317,7 @@ export const subliminal2020s: SongList = [
 		artist: "שי 360 (עם סאבלימינל)",
 		published_date: "2020s",
 		lyric_sample: {
-				hebrew: "מה אני אני רק בן אדם",
+			hebrew: "מה אני אני רק בן אדם",
 		},
 	},
 	{

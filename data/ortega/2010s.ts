@@ -1,6 +1,4 @@
-import type { SongList } from "../../timeline/types";
-
-export const ortega2010s: SongList = [
+export const ortega2010s = [
 	{
 		name: "OTG MIXTAPE 2010",
 		artist: "אורטגה (Ortega - יונתן יהודאי)",

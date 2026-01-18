@@ -1,12 +1,11 @@
-import type { SongList } from "../../timeline/types";
-
-export const ravidplotnik2010s: SongList = [
+export const ravidplotnik2010s = [
 	{
 		name: "בור ועם הארץ",
 		artist: "רביד פלוטניק (נצ'י נצ')",
 		published_date: "2015",
 		lyric_sample: {
-				hebrew: "עמוק בפנים אותה תחושה עזה כן / יום יום כל העולם שותה לי ת'דם ות'דלק",
+			hebrew:
+				"עמוק בפנים אותה תחושה עזה כן / יום יום כל העולם שותה לי ת'דם ות'דלק",
 		},
 	},
 	{
@@ -19,7 +18,7 @@ export const ravidplotnik2010s: SongList = [
 		artist: "רביד פלוטניק (נצ'י נצ')",
 		published_date: "2015",
 		lyric_sample: {
-				hebrew: "וואלק אדם לאדם זאב",
+			hebrew: "וואלק אדם לאדם זאב",
 		},
 	},
 	{
@@ -32,7 +31,8 @@ export const ravidplotnik2010s: SongList = [
 		artist: "רביד פלוטניק (נצ'י נצ')",
 		published_date: "2017",
 		lyric_sample: {
-				hebrew: "פתיחה: / מי יודע אם אראה את פנייך / שוב / הכחשה הולכת, הכחשה תשוב",
+			hebrew:
+				"פתיחה: / מי יודע אם אראה את פנייך / שוב / הכחשה הולכת, הכחשה תשוב",
 		},
 	},
 ];

@@ -1,6 +1,4 @@
-import type { SongList } from "../../timeline/types";
-
-export const sagol592000s: SongList = [
+export const sagol592000s = [
 	{
 		name: "Shoah Business",
 		artist: "סאגול 59 (Sagol 59 - חן רותם)",
@@ -17,11 +15,12 @@ export const sagol592000s: SongList = [
 		language: "Hebrew",
 		published_date: "2006",
 		lyric_sample: {
-				hebrew: "השלום מתפרק כמו שיוקו פירקה את הביטלס … דם של ילדים נשפך לנהרות",
-				english_translation: "Peace is falling apart like Yoko broke up the Beatles … children’s blood is flowing like rivers.",
+			hebrew: "השלום מתפרק כמו שיוקו פירקה את הביטלס … דם של ילדים נשפך לנהרות",
+			english_translation:
+				"Peace is falling apart like Yoko broke up the Beatles … children’s blood is flowing like rivers.",
 		},
 		links: {
-				lyrics: "https://genius.com/Sagol-59-59-veidat-pisga-lyrics",
+			lyrics: "https://genius.com/Sagol-59-59-veidat-pisga-lyrics",
 		},
 	},
 ];

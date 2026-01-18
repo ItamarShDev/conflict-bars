@@ -1,6 +1,4 @@
-import type { SongList } from "../../timeline/types";
-
-export const mooki2020s: SongList = [
+export const mooki2020s = [
 	{
 		name: "Shma Israel",
 		artist: "מוקי (Mook E / מוקי ד')",

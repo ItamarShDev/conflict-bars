@@ -1,12 +1,11 @@
-import type { SongList } from "../../timeline/types";
-
-export const shadiamansour2010s: SongList = [
+export const shadiamansour2010s = [
 	{
 		name: "Al Kufiyyeh 3arabeyyeh (The Kufiya is Arab)",
 		artist: "Shadia Mansour",
 		published_date: "2010",
 		links: {
-				youtube: "https://www.youtube.com/results?search_query=Shadia+Mansour+Al+Kufiyyeh+3arabeyyeh",
+			youtube:
+				"https://www.youtube.com/results?search_query=Shadia+Mansour+Al+Kufiyyeh+3arabeyyeh",
 		},
 	},
 	{
@@ -14,7 +13,8 @@ export const shadiamansour2010s: SongList = [
 		artist: "Shadia Mansour",
 		published_date: "2011",
 		links: {
-				youtube: "https://www.youtube.com/results?search_query=Shadia+Mansour+Kulun+Andun+Dababat",
+			youtube:
+				"https://www.youtube.com/results?search_query=Shadia+Mansour+Kulun+Andun+Dababat",
 		},
 	},
 	{
@@ -22,7 +22,8 @@ export const shadiamansour2010s: SongList = [
 		artist: "Shadia Mansour",
 		published_date: "2014",
 		links: {
-				youtube: "https://www.youtube.com/results?search_query=Shadia+Mansour+Somos+Sur",
+			youtube:
+				"https://www.youtube.com/results?search_query=Shadia+Mansour+Somos+Sur",
 		},
 	},
 ];

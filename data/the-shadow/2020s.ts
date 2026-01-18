@@ -1,6 +1,4 @@
-import type { SongList } from "../../timeline/types";
-
-export const theshadow2020s: SongList = [
+export const theshadow2020s = [
 	{
 		name: "We Will Prevail",
 		artist: "הצל וראפרים שונים",

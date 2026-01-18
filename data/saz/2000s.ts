@@ -1,6 +1,4 @@
-import type { SongList } from "../../timeline/types";
-
-export const saz2000s: SongList = [
+export const saz2000s = [
 	{
 		name: "סאמיק יא סאז",
 		artist: "סאז (SAZ)",
