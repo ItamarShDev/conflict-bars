@@ -10,6 +10,7 @@ interface YearGroupProps {
 	index: number;
 	lang: "en" | "he";
 	yearColors?: string[];
+	highlightTerm?: string;
 }
 
 export function YearGroup({
@@ -19,13 +20,20 @@ export function YearGroup({
 	index,
 	lang,
 	yearColors = [],
+	highlightTerm,
 }: YearGroupProps) {
 	const songs = entries.filter((e) => e.type === "song");
 	const conflicts = entries.filter((e) => e.type === "conflict");
 
 	return (
 		<>
-			<SongsColumn index={index} songs={songs} lang={lang} year={year} />
+			<SongsColumn
+				index={index}
+				songs={songs}
+				lang={lang}
+				year={year}
+				highlightTerm={highlightTerm}
+			/>
 			<YearMarker
 				index={index}
 				year={year}

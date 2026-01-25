@@ -1,5 +1,5 @@
 import { useMutation } from "convex/react";
-import { useState } from "react";
+import { type ReactNode, useState } from "react";
 import { SubmitSongForm } from "@/components/SubmitSongForm";
 import { translations } from "@/components/timeline/translations";
 import { api } from "../../../convex/_generated/api";
@@ -18,6 +18,7 @@ interface SongTimelineEntryProps {
 	className?: string;
 	showMarginTop?: boolean;
 	variant?: "full" | "compact";
+	highlightTerm?: string;
 }
 
 export function SongEntry({
@@ -27,6 +28,7 @@ export function SongEntry({
 	className,
 	showMarginTop = true,
 	variant = "full",
+	highlightTerm,
 }: SongTimelineEntryProps) {
 	const submitSong = useMutation(api.mutations.submitSongEditSuggestion);
 	const [isEditModalOpen, setIsEditModalOpen] = useState(false);
@@ -81,6 +83,37 @@ export function SongEntry({
 			? (lyricSample?.hebrew ?? lyricSample?.english_translation)
 			: (lyricSample?.english_translation ?? lyricSample?.hebrew);
 
+	const normalizedHighlight = highlightTerm?.trim();
+	const escapeRegex = (value: string) =>
+		value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+	const highlightText = (text?: string): ReactNode => {
+		if (!text || !normalizedHighlight) return text;
+		const pattern = new RegExp(`(${escapeRegex(normalizedHighlight)})`, "ig");
+		const nodes: ReactNode[] = [];
+		let lastIndex = 0;
+		text.replace(pattern, (match, _group, offset) => {
+			if (offset > lastIndex) {
+				nodes.push(
+					<span key={`t-${offset}`}>{text.slice(lastIndex, offset)}</span>,
+				);
+			}
+			nodes.push(
+				<mark
+					key={`h-${offset}`}
+					className="bg-yellow-200 text-slate-900 dark:bg-yellow-300/60 dark:text-slate-900"
+				>
+					{match}
+				</mark>,
+			);
+			lastIndex = offset + match.length;
+			return match;
+		});
+		if (lastIndex < text.length) {
+			nodes.push(<span key={`t-${lastIndex}`}>{text.slice(lastIndex)}</span>);
+		}
+		return nodes;
+	};
+
 	return (
 		<>
 			<div className={`${containerClasses} group`}>
@@ -123,13 +156,17 @@ export function SongEntry({
 					>
 						{lang === "he" ? (
 							<>
-								<span className={artistClass}>{songObj.artist}</span>
-								<h3 className={titleClass}>{songObj.name}</h3>
+								<span className={artistClass}>
+									{highlightText(songObj.artist)}
+								</span>
+								<h3 className={titleClass}>{highlightText(songObj.name)}</h3>
 							</>
 						) : (
 							<>
-								<h3 className={titleClass}>{songObj.name}</h3>
-								<span className={artistClass}>{songObj.artist}</span>
+								<h3 className={titleClass}>{highlightText(songObj.name)}</h3>
+								<span className={artistClass}>
+									{highlightText(songObj.artist)}
+								</span>
 							</>
 						)}
 					</div>
@@ -141,7 +178,7 @@ export function SongEntry({
 							className={`text-sm text-(--color-muted-foreground) leading-relaxed italic text-start`}
 							dir={lang === "he" && lyricSample?.hebrew ? "rtl" : "ltr"}
 						>
-							"{lyricContent}"
+							"{highlightText(lyricContent)}"
 						</p>
 					</div>
 				)}

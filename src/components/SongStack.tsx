@@ -17,11 +17,17 @@ type SongStackProps = {
 	songs: SongStackItem[];
 	lang: "en" | "he";
 	year: number;
+	highlightTerm?: string;
 };
 
 const OVERLAY_TRANSITION_MS = 350;
 
-export function SongStack({ songs, lang, year }: SongStackProps) {
+export function SongStack({
+	songs,
+	lang,
+	year,
+	highlightTerm,
+}: SongStackProps) {
 	const t = translations[lang];
 	const [isExpanded, setIsExpanded] = useState(false);
 	const [isOverlayVisible, setIsOverlayVisible] = useState(false);
@@ -124,6 +130,7 @@ export function SongStack({ songs, lang, year }: SongStackProps) {
 					lang={lang}
 					isExpanded={isExpanded}
 					isOverlayVisible={isOverlayVisible}
+					highlightTerm={highlightTerm}
 				/>
 			</div>
 
@@ -135,6 +142,7 @@ export function SongStack({ songs, lang, year }: SongStackProps) {
 					isExpanded={isExpanded}
 					onClose={closeStack}
 					songCountText={songCountText}
+					highlightTerm={highlightTerm}
 				/>
 			)}
 		</>

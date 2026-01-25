@@ -6,9 +6,16 @@ interface SongsColumnProps {
 	lang: "en" | "he";
 	year: number;
 	index: number;
+	highlightTerm?: string;
 }
 
-export function SongsColumn({ songs, lang, year, index }: SongsColumnProps) {
+export function SongsColumn({
+	songs,
+	lang,
+	year,
+	index,
+	highlightTerm,
+}: SongsColumnProps) {
 	const songItems = songs.filter((e) => e.type === "song");
 
 	if (songItems.length === 0) {
@@ -28,6 +35,7 @@ export function SongsColumn({ songs, lang, year, index }: SongsColumnProps) {
 				}))}
 				lang={lang}
 				year={year}
+				highlightTerm={highlightTerm}
 			/>
 		</div>
 	);

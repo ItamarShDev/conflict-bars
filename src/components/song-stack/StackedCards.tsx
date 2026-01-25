@@ -12,6 +12,7 @@ type StackedCardsProps = {
 	lang: "en" | "he";
 	isExpanded: boolean;
 	isOverlayVisible: boolean;
+	highlightTerm?: string;
 };
 
 const STACK_TRANSLATE = -40;
@@ -31,6 +32,7 @@ export function StackedCards({
 	lang,
 	isExpanded,
 	isOverlayVisible,
+	highlightTerm,
 }: StackedCardsProps) {
 	return (
 		<div
@@ -75,6 +77,7 @@ export function StackedCards({
 							showMarginTop={idx === 0}
 							className={`${isExpanded ? "" : "pointer-events-none px-3 py-3 text-sm"} ${lang === "he" ? "ml-4 mr-auto" : "mr-4 ml-auto"}`}
 							variant="compact"
+							highlightTerm={highlightTerm}
 						/>
 					</div>
 				);

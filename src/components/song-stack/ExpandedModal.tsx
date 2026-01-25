@@ -16,6 +16,7 @@ type ExpandedModalProps = {
 	isExpanded: boolean;
 	onClose: () => void;
 	songCountText: string;
+	highlightTerm?: string;
 };
 
 export function ExpandedModal({
@@ -25,6 +26,7 @@ export function ExpandedModal({
 	isExpanded,
 	onClose,
 	songCountText,
+	highlightTerm,
 }: ExpandedModalProps) {
 	const t = translations[lang];
 	return (
@@ -70,6 +72,7 @@ export function ExpandedModal({
 								showMarginTop={false}
 								className="ml-0 mr-0 w-full max-w-full bg-(--color-card-background) text-left shadow-xl border border-(--color-border)"
 								variant="full"
+								highlightTerm={highlightTerm}
 							/>
 						))}
 					</div>

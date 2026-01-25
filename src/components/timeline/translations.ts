@@ -2,6 +2,12 @@ export const translations = {
 	en: {
 		title: "Conflict Bars",
 		subtitle: "Direction is the political leaning of the artist",
+		search: {
+			label: "Search songs",
+			placeholder: "Search songs by name, artist, or lyrics",
+			noResults: "No songs match your search yet.",
+			results: "Found {{count}} song(s)",
+		},
 		lyrics: "Lyrics",
 		info: "Info",
 		conflict: "Conflict",
@@ -75,6 +81,12 @@ export const translations = {
 	he: {
 		title: "חרוזים מסוכסכים",
 		subtitle: "בכיוון הנטייה הפוליטית",
+		search: {
+			label: "חיפוש שירים",
+			placeholder: "חפשו שירים לפי שם, אמן או מילים",
+			noResults: "אין שירים שמתאימים לחיפוש.",
+			results: "נמצאו {{count}} שירים",
+		},
 		lyrics: "מילים",
 		info: "מידע",
 		conflict: "סכסוך",

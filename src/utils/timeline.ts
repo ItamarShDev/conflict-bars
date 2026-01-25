@@ -59,8 +59,25 @@ export type YearGroup = [number, TimelineEntryItem[]];
 export function getEntriesByYear(
 	timeline: SongList,
 	conflicts: EventsTimeline[],
+	searchTerm?: string,
 ): YearGroup[] {
+	const normalizedSearch = searchTerm?.trim().toLowerCase();
+	const matchesSearch = (song: Song) => {
+		if (!normalizedSearch) return true;
+		const haystacks = [
+			song.name,
+			song.artist,
+			...(song.collaborators ?? []),
+			song.lyric_sample?.hebrew,
+			song.lyric_sample?.english_translation,
+		];
+		return haystacks.some((value) =>
+			value?.toLowerCase().includes(normalizedSearch),
+		);
+	};
+
 	const songEntries = timeline
+		.filter(matchesSearch)
 		.flatMap((t) => {
 			const year = parseStartYear(t.published_date);
 			return {
