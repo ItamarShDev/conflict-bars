@@ -70,6 +70,7 @@ export function SongEntry({
 	]
 		.filter(Boolean)
 		.join(" ");
+	const editButtonPosition = "top-1 left-1 -translate-x-1/2 -translate-y-1/2";
 
 	const titleClass = isCompact
 		? "text-lg font-bold leading-snug text-(--color-card-foreground)"
@@ -123,7 +124,7 @@ export function SongEntry({
 						e.stopPropagation();
 						setIsEditModalOpen(true);
 					}}
-					className="absolute -top-4 -left-4 flex items-center justify-center w-8 h-8 rounded-full bg-blue-500 hover:bg-blue-600 text-white transition-opacity opacity-0 group-hover:opacity-100 shadow-lg z-20 cursor-pointer"
+					className={`absolute ${editButtonPosition} flex items-center justify-center w-8 h-8 rounded-full bg-blue-500 hover:bg-blue-600 text-white transition-opacity opacity-0 group-hover:opacity-100 shadow-lg z-30 cursor-pointer`}
 					title={t.editSuggestion.buttonTitle}
 					aria-label={t.editSuggestion.buttonAria}
 				>
@@ -219,7 +220,12 @@ export function SongEntry({
 						className="absolute inset-0 cursor-default"
 						aria-label={t.submitSongForm.modalCloseAria}
 					/>
-					<div className="relative z-10 w-full max-w-2xl overflow-y-auto rounded-xl border border-neutral-700 bg-neutral-950 p-6 shadow-2xl">
+					<div
+						className="relative z-10 w-full max-w-2xl overflow-y-auto rounded-xl border border-neutral-700 bg-neutral-950 p-6 pb-8 shadow-2xl max-h-[calc(100vh-1rem)]"
+						style={{
+							paddingBottom: "calc(env(safe-area-inset-bottom, 0px) + 2rem)",
+						}}
+					>
 						<div className="mb-4 flex items-center justify-between">
 							<h2 className="text-lg font-semibold">
 								{t.submitSongForm.editTitle}
