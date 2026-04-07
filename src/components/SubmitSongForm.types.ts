@@ -9,7 +9,7 @@ export type SubmitSongFormProps = {
 	translations: SubmitSongFormTranslations;
 	lang?: "en" | "he";
 	editSong?: {
-		_id: Id<"songs">;
+		_id?: Id<"songs">;
 		name: string;
 		artist: string;
 		published_date: string;

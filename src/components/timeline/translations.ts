@@ -77,6 +77,20 @@ export const translations = {
 			close: "Close",
 			songsLabel: "songs",
 		},
+		filters: {
+			toggle: "Filters",
+			clearAll: "Clear all",
+			leaning: {
+				label: "Political leaning",
+				left: "Left",
+				right: "Right",
+				center: "Center",
+				unknown: "Unknown",
+			},
+			decade: {
+				label: "Decade",
+			},
+		},
 	},
 	he: {
 		title: "חרוזים מסוכסכים",
@@ -155,9 +169,24 @@ export const translations = {
 			close: "סגור",
 			songsLabel: "שירים",
 		},
+		filters: {
+			toggle: "סינון",
+			clearAll: "נקה הכל",
+			leaning: {
+				label: "נטייה פוליטית",
+				left: "שמאל",
+				right: "ימין",
+				center: "מרכז",
+				unknown: "לא ידוע",
+			},
+			decade: {
+				label: "עשור",
+			},
+		},
 	},
 };
 
 export type SubmitSongFormTranslations =
 	(typeof translations)["en"]["submitSongForm"];
 export type HelpModalTranslations = (typeof translations)["en"]["helpModal"];
+export type FiltersTranslations = (typeof translations)["en"]["filters"];

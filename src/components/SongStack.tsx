@@ -2,13 +2,13 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { translations } from "@/components/timeline/translations";
-import type { Song } from "../../timeline/types";
+import type { FileSong } from "../../timeline/types";
 import { ExpandedModal } from "./song-stack/ExpandedModal";
 import { getSongCountText } from "./song-stack/SongCountLabel";
 import { StackedCards } from "./song-stack/StackedCards";
 
 type SongStackItem = {
-	song: Song;
+	song: FileSong;
 	timestamp: string;
 	leaning: "left" | "right" | "center" | "unknown";
 };

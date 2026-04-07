@@ -2,6 +2,7 @@
 import { usePreloadedQuery } from "convex/react";
 import { useMemo, useState } from "react";
 import { SubmitSongModal } from "@/components/SubmitSongModal";
+import { FilterPanel } from "@/components/timeline/FilterPanel";
 import { HelpModal } from "@/components/timeline/HelpModal";
 import { TimelineHeader } from "@/components/timeline/TimelineHeader";
 import { translations } from "@/components/timeline/translations";
@@ -11,18 +12,15 @@ import {
 	convertConvexEventsToTimeline,
 } from "@/utils/convex-helpers";
 import { getEntriesByYear } from "@/utils/timeline";
-import type {
-	PreloadedEvents,
-	PreloadedSongList,
-} from "../../../timeline/types";
+import type { FileSongList, PreloadedEvents } from "../../../timeline/types";
 
 export function Timeline({
 	lang,
-	preloadedSongs,
+	songs,
 	convexEvents,
 }: {
 	lang: "en" | "he";
-	preloadedSongs: PreloadedSongList;
+	songs: FileSongList;
 	convexEvents: PreloadedEvents;
 }) {
 	const t = translations[lang];
@@ -30,12 +28,20 @@ export function Timeline({
 	const events = convertConvexEventsToTimeline(_events);
 	const yearEventColors = buildYearEventColors(events);
 
-	const _songs = usePreloadedQuery(preloadedSongs);
 	const [searchTerm, setSearchTerm] = useState("");
+	const [selectedLeanings, setSelectedLeanings] = useState<string[]>([]);
+	const [selectedDecades, setSelectedDecades] = useState<number[]>([]);
 
 	const yearGroups = useMemo(
-		() => getEntriesByYear(_songs, events, searchTerm),
-		[_songs, events, searchTerm],
+		() =>
+			getEntriesByYear(
+				songs,
+				events,
+				searchTerm,
+				selectedLeanings,
+				selectedDecades,
+			),
+		[songs, events, searchTerm, selectedLeanings, selectedDecades],
 	);
 
 	const filteredSongCount = useMemo(
@@ -48,8 +54,10 @@ export function Timeline({
 		[yearGroups],
 	);
 
+	const hasActiveFilters =
+		selectedLeanings.length > 0 || selectedDecades.length > 0;
 	const searchCountText =
-		searchTerm.trim().length > 0
+		searchTerm.trim().length > 0 || hasActiveFilters
 			? t.search.results.replace("{{count}}", String(filteredSongCount))
 			: null;
 	return (
@@ -73,7 +81,7 @@ export function Timeline({
 					onChange={(event) => setSearchTerm(event.target.value)}
 					placeholder={t.search.placeholder}
 					dir={lang === "he" ? "rtl" : "ltr"}
-					className="mt-2 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-base text-slate-900 shadow-sm outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-50"
+					className="mt-2 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-base text-slate-900 shadow-sm outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 dark:border-slate-700 dark:bg-gray-800 dark:text-slate-50"
 					aria-label={t.search.label}
 				/>
 				{searchCountText && (
@@ -82,6 +90,15 @@ export function Timeline({
 					</p>
 				)}
 			</div>
+
+			<FilterPanel
+				lang={lang}
+				translations={t.filters}
+				selectedLeanings={selectedLeanings}
+				onLeaningsChange={setSelectedLeanings}
+				selectedDecades={selectedDecades}
+				onDecadesChange={setSelectedDecades}
+			/>
 
 			<div
 				className={`w-full mt-10 grid grid-rows-[${yearGroups.length}] grid-cols-[1fr_30px_1fr] sm:grid-cols-[1fr_50px_1fr] pb-24`}
@@ -102,7 +119,7 @@ export function Timeline({
 					);
 				})}
 			</div>
-			{searchTerm.trim() && filteredSongCount === 0 && (
+			{(searchTerm.trim() || hasActiveFilters) && filteredSongCount === 0 && (
 				<p className="mt-4 text-center text-sm text-slate-600 dark:text-slate-300">
 					{t.search.noResults}
 				</p>

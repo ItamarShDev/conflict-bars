@@ -3,11 +3,15 @@ import {
 	detectOverlappingConflicts,
 	parseConflictsForTimeline,
 } from "../../timeline/conflict-utils";
-import type { EventsTimeline, Song, SongList } from "../../timeline/types";
+import type {
+	EventsTimeline,
+	FileSong,
+	FileSongList,
+} from "../../timeline/types";
 
 // Helper to determine political leaning
 function getArtistLeaning(
-	artist: Song["artist_details"],
+	artist: FileSong["artist_details"],
 ): "left" | "right" | "center" | "unknown" {
 	const affiliation = artist?.affiliation?.toLowerCase();
 	if (!affiliation) {
@@ -28,7 +32,7 @@ export type TimelineEntryItem =
 			type: "song";
 			year: number;
 			timestamp: string;
-			song: Song; // Song type from timeline
+			song: FileSong;
 			leaning: "left" | "right" | "center" | "unknown";
 			position: number;
 	  }
@@ -57,12 +61,14 @@ export type TimelineEntryItem =
 export type YearGroup = [number, TimelineEntryItem[]];
 
 export function getEntriesByYear(
-	timeline: SongList,
+	timeline: FileSongList,
 	conflicts: EventsTimeline[],
 	searchTerm?: string,
+	leanings?: string[],
+	decades?: number[],
 ): YearGroup[] {
 	const normalizedSearch = searchTerm?.trim().toLowerCase();
-	const matchesSearch = (song: Song) => {
+	const matchesSearch = (song: FileSong) => {
 		if (!normalizedSearch) return true;
 		const haystacks = [
 			song.name,
@@ -76,8 +82,22 @@ export function getEntriesByYear(
 		);
 	};
 
+	const matchesFilters = (song: FileSong) => {
+		const year = parseStartYear(song.published_date);
+		if (Number.isFinite(year) && decades && decades.length > 0) {
+			const decade = Math.floor(year / 10) * 10;
+			if (!decades.includes(decade)) return false;
+		}
+		if (leanings && leanings.length > 0) {
+			const leaning = getArtistLeaning(song.artist_details);
+			if (!leanings.includes(leaning)) return false;
+		}
+		return true;
+	};
+
 	const songEntries = timeline
 		.filter(matchesSearch)
+		.filter(matchesFilters)
 		.flatMap((t) => {
 			const year = parseStartYear(t.published_date);
 			return {

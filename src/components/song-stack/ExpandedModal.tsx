@@ -1,10 +1,10 @@
 import { translations } from "@/components/timeline/translations";
-import type { Song } from "../../../timeline/types";
+import type { FileSong } from "../../../timeline/types";
 import { SongEntry } from "../timeline/SongEntry";
 import { ModalHeader } from "./ModalHeader";
 
 type SongStackItem = {
-	song: Song;
+	song: FileSong;
 	timestamp: string;
 	leaning: "left" | "right" | "center" | "unknown";
 };

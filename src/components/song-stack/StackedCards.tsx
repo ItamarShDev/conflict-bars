@@ -1,8 +1,8 @@
-import type { Song } from "../../../timeline/types";
+import type { FileSong } from "../../../timeline/types";
 import { SongEntry } from "../timeline/SongEntry";
 
 type SongStackItem = {
-	song: Song;
+	song: FileSong;
 	timestamp: string;
 	leaning: "left" | "right" | "center" | "unknown";
 };

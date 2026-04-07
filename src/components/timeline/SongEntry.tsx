@@ -3,7 +3,8 @@ import { type ReactNode, useState } from "react";
 import { SubmitSongForm } from "@/components/SubmitSongForm";
 import { translations } from "@/components/timeline/translations";
 import { api } from "../../../convex/_generated/api";
-import type { Song } from "../../../timeline/types";
+import type { Id } from "../../../convex/_generated/dataModel";
+import type { FileSong } from "../../../timeline/types";
 
 export type SongTranslations = {
 	lyrics: string;
@@ -12,7 +13,7 @@ export type SongTranslations = {
 };
 
 interface SongTimelineEntryProps {
-	song: Song | Record<string, unknown>;
+	song: FileSong | Record<string, unknown>;
 	lang: "en" | "he";
 	leaning: "left" | "right" | "center" | "unknown";
 	className?: string;
@@ -40,7 +41,7 @@ export function SongEntry({
 			center: "border-yellow-400",
 			unknown: "border-gray-600",
 		};
-	const songObj = song as Song;
+	const songObj = song as FileSong & { _id?: Id<"songs"> };
 	const isSongObject = typeof song === "object" && song !== null;
 	const hasSongIdentity =
 		isSongObject &&

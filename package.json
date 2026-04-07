@@ -3,6 +3,9 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
+		"generate-songs": "tsx scripts/generate-songs-json.ts",
+		"predev": "npm run generate-songs",
+		"prebuild": "npm run generate-songs",
 		"dev": "next dev",
 		"build": "next build --turbopack",
 		"start": "next start",

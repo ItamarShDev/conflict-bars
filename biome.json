@@ -6,7 +6,8 @@
 			"!**/node_modules",
 			"!**/.next",
 			"!**/convex/_generated",
-			"!**/.vscode"
+			"!**/.vscode",
+			"!**/data/songs-generated.json"
 		]
 	},
 	"linter": {

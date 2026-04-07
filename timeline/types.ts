@@ -22,3 +22,22 @@ export type EventsTimeline = {
 };
 
 export type ConvexEvent = (typeof api.events.getAllEvents._returnType)[number];
+
+export type FileSongArtistDetails = {
+	affiliation?: string;
+	era?: string;
+	notes?: string;
+};
+
+export type FileSong = {
+	name: string;
+	artist: string;
+	artist_details?: FileSongArtistDetails;
+	collaborators?: string[];
+	published_date: string;
+	language?: string;
+	lyric_sample?: { hebrew?: string; english_translation?: string };
+	links?: { lyrics?: string; song_info?: string; youtube?: string };
+};
+
+export type FileSongList = FileSong[];
