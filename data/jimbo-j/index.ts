@@ -1,3 +1,3 @@
-import { jimboJ2010s } from "./2010s";
+import { jimboJ2020s } from "./2020s";
 
-export const jimboJ = [...jimboJ2010s];
+export const jimboJSongs = [...jimboJ2020s];

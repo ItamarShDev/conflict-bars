@@ -32,4 +32,44 @@ export const dam2010s = [
 				"I am the spinster, I am the infertile, I am the divorced / In the shadow of a man, but not the shadow of a wall.",
 		},
 	},
+	{
+		name: "Ana Mish Khain (I'm Not a Traitor / אנא מש ח'אין)",
+		artist: "DAM (דאם) - Da Arabian MCs",
+		language: "Arabic",
+		published_date: "2010",
+		lyric_sample: {
+			hebrew:
+				"אנחנו מהנגב, אנחנו מיפו / מעין חוד, אנחנו מעכו / מנצרת, אנחנו מרמלה",
+			english_translation:
+				"We are from the Negev, we are from Jaffa / From Ein Hod, we are from Akko / From Nazareth, we are from Ramle.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=F0vXblLBWoQ",
+		},
+	},
+	{
+		name: "Risale min Zinzane (A Letter from the Cell / رسالة من زنزانة)",
+		artist: "DAM (דאם) - Da Arabian MCs",
+		language: "Arabic",
+		published_date: "2011",
+		lyric_sample: {
+			hebrew: "מכתב מתא כלא - על אסירים פלסטינים, מבוסס על סיפורים אמיתיים",
+			english_translation:
+				"A letter from prison - about Palestinian prisoners, based on true stories.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=1RPGQ3bWj2Y",
+		},
+	},
+	{
+		name: "Muwaten Mustahdaf (Targeted Citizen / מואטן מוסתהדף)",
+		artist: "DAM (דאם) - Da Arabian MCs",
+		language: "Arabic",
+		published_date: "2010",
+		lyric_sample: {
+			hebrew: "על האפליה המשפטית הישראלית כלפי פלסטינים",
+			english_translation:
+				"About Israeli legal discrimination against Palestinians.",
+		},
+	},
 ];

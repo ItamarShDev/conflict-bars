@@ -106,4 +106,44 @@ export const hadagNahash2000s = [
 			lyrics: "https://genius.com/Hadag-nahash-shirat-hasticker-lyrics",
 		},
 	},
+	{
+		name: "הנה אני בא (Hine Ani Ba / Here I Come)",
+		artist: "Hadag Nahash (הדג נחש)",
+		language: "Hebrew",
+		published_date: "2006",
+		lyric_sample: {
+			hebrew:
+				"ירושלים, עיר שווה פיצוץ / הולך במדרחוב מרגיש כמו קיבוץ גלויות / אלף תרבויות, לכל אחד יש אח ותשעה בנים",
+			english_translation:
+				"Jerusalem, a city worth an explosion / Walking in the pedestrian mall feeling like an ingathering of exiles / A thousand cultures, everyone has a brother and nine sons.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=vKKMSmRAJxo",
+		},
+	},
+	{
+		name: "בלה בליסימה (Bella Bellissima)",
+		artist: "Hadag Nahash (הדג נחש)",
+		language: "Hebrew",
+		published_date: "2006",
+		lyric_sample: {
+			hebrew: "ביקורת על מדינת משטרה והיחס לאזרח",
+			english_translation:
+				"Criticism of a police state and treatment of citizens.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=K0l6PjnOAfI",
+		},
+	},
+	{
+		name: "שלום/סלאם/Peace (Shalom/Salaam/Peace)",
+		artist: "Hadag Nahash (הדג נחש)",
+		language: "Hebrew/Arabic/English",
+		published_date: "2006",
+		lyric_sample: {
+			hebrew: "קריאה מפורשת לשלום בין ישראלים לפלסטינים",
+			english_translation:
+				"An explicit call for peace between Israelis and Palestinians.",
+		},
+	},
 ];

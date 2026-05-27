@@ -20,4 +20,19 @@ export const systemAli2010s = [
 				"https://www.youtube.com/results?search_query=system+ali+vayina+war+live",
 		},
 	},
+	{
+		name: "Maharajan (מהרג'אן / مهرجان)",
+		artist: "System Ali (סיסטם עלי)",
+		language: "Hebrew/Arabic/Russian/Yiddish/Amharic/English",
+		published_date: "2019",
+		lyric_sample: {
+			hebrew:
+				"פסטיבל רחוב בנקודת המפגש בין שירים רוסיים, מוזיקה ערבית קלאסית, טקסטים מקראיים וקלזמר",
+			english_translation:
+				"Street festival at the crossroads of Russian songs, classical Arabic music, Biblical texts and klezmer.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=UhQ5_XrcGqQ",
+		},
+	},
 ];

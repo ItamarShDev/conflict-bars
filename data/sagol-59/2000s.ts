@@ -23,4 +23,16 @@ export const sagol592000s = [
 			lyrics: "https://genius.com/Sagol-59-59-veidat-pisga-lyrics",
 		},
 	},
+	{
+		name: "Dai La'Milchama (די למלחמה / Enough War)",
+		artist: "Sagol 59 (סאגול 59)",
+		language: "Hebrew",
+		published_date: "2002",
+		lyric_sample: {
+			hebrew:
+				"אנחנו רוצים לחיות בשלום, די למלחמה / שיר מחאה תקופת האינתיפאדה השנייה",
+			english_translation:
+				"We want to live in peace, enough war / Protest song from the Second Intifada period.",
+		},
+	},
 ];

@@ -14,4 +14,18 @@ export const tamernafar2010s = [
 			youtube: "https://www.youtube.com/watch?v=R-mTGlGJz9A",
 		},
 	},
+	{
+		name: "Ana Mish Politi (I'm Not Political / אני לא פוליטי)",
+		artist: "Tamer Nafar (תאמר נפאר)",
+		language: "Arabic/Hebrew",
+		published_date: "2016",
+		lyric_sample: {
+			hebrew: "ביצוע מעורר מחלוקת בטקס אופיר 2016, שילוב שירה של דרויש",
+			english_translation:
+				"Controversial performance at the Ophir Awards 2016, incorporating Darwish poetry.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=3K0XBnhm0V4",
+		},
+	},
 ];

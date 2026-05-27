@@ -75,4 +75,33 @@ export const dam2000s = [
 				"I was born here, my grandfather was born here / And here you destroyed our houses with your very hands.",
 		},
 	},
+	{
+		name: "Innocent Criminals (Posheem Hapim me Peshaa)",
+		artist: "DAM (דאם)",
+		language: "Arabic/Hebrew",
+		published_date: "2000",
+		lyric_sample: {
+			hebrew:
+				"כשיהודים מפגינים, השוטרים משתמשים באלות / כשערבים מפגינים, השוטרים לוקחים את נשמתם",
+			english_translation:
+				"When Jews protest, the police use batons / When Arabs protest, the police take their lives.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=XcC_8nVBCGQ",
+		},
+	},
+	{
+		name: "Mali Huriye (I Don't Have Freedom)",
+		artist: "DAM (דאם) - Da Arabian MCs",
+		language: "Arabic",
+		published_date: "2006",
+		lyric_sample: {
+			hebrew: "למה כל ילדי העולם חופשיים ולא אנחנו?",
+			english_translation:
+				"Why are all the children of the world free but not us?",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=KhGnCaehFwU",
+		},
+	},
 ];

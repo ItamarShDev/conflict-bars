@@ -140,4 +140,33 @@ export const hadagNahash2010s = [
 			lyrics: "https://genius.com/Hadag-nahash-shemesh-annotated",
 		},
 	},
+	{
+		name: "אני מאמין (Ani Ma'amin / I Believe)",
+		artist: "Hadag Nahash (הדג נחש)",
+		language: "Hebrew",
+		published_date: "2010",
+		lyric_sample: {
+			hebrew:
+				"וזה לא מזיז לאף אחד ת'תחת ואני לא יכול לסחוב את המשקולת הזו לכל מקום שאלך",
+			english_translation:
+				"And nobody gives a damn and I can't carry this weight everywhere I go.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=dkMH4bPqbaQ",
+		},
+	},
+	{
+		name: "עוד יהיה טוב (Od Yihiye Tov / Things Will Get Better)",
+		artist: "Hadag Nahash (הדג נחש)",
+		language: "Hebrew",
+		published_date: "2017",
+		lyric_sample: {
+			hebrew: "מתייחס לחסמים, התנחלויות, אפליה נגד מיעוטים והמפלגות הפוליטיות",
+			english_translation:
+				"Addresses checkpoints, settlements, discrimination against minorities and political parties.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=YwNUYXfCYpI",
+		},
+	},
 ];
