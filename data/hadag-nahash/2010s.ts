@@ -4,11 +4,6 @@ export const hadagNahash2010s = [
 		artist: "Hadag Nahash (הדג נחש)",
 		language: "Hebrew/English",
 		published_date: "2010s",
-		lyric_sample: {
-			hebrew: "מבט ציני על מיתוג ודימוי המדינה בחו״ל",
-			english_translation:
-				"Cynical look at branding and image of the country abroad",
-		},
 		links: {
 			youtube:
 				"https://www.youtube.com/results?search_query=hadag+nahash+welcome+izrael",
@@ -19,11 +14,6 @@ export const hadagNahash2010s = [
 		artist: "Hadag Nahash (הדג נחש)",
 		language: "Hebrew",
 		published_date: "2013",
-		lyric_sample: {
-			hebrew: "פרודיה–מחאה על ציונות ומיתוסים לאומיים, ביקורת על הנרטיב הלאומי",
-			english_translation:
-				"Parody-protest about Zionism and national myths, critique of national narrative",
-		},
 		links: {
 			youtube:
 				"https://www.youtube.com/results?search_query=hadag+nahash+gabi+dabi",
@@ -34,8 +24,8 @@ export const hadagNahash2010s = [
 		artist: "הדג נחש",
 		published_date: "2013",
 		lyric_sample: {
-			hebrew:
-				"<span  onmouseover=\"sCI('Am/G','S6F3E2`S4F2E3`S3F2E4`S2F1E1`S1F0E0',1,'',1,159);\" onmouseout='CO()' id=\"c_159\" class=\"c_C\">Am/G</span>: xxx010 / השכמה! / מעבר: / לא מאמין בנשק מאמין בשירה",
+			hebrew: "לא מאמין בנשק מאמין בשירה",
+			english_translation: "Don't believe in weapons, believe in song.",
 		},
 		links: {
 			lyrics: "https://genius.com/Hadag-nahash-zman-lehitorer-lyrics",
@@ -46,12 +36,6 @@ export const hadagNahash2010s = [
 		artist: "Hadag Nahash (הדג נחש)",
 		language: "Hebrew",
 		published_date: "2014",
-		lyric_sample: {
-			hebrew:
-				"שיר מחאה על מצב חברתי־פוליטי, כולל קליפ עם כתוביות אנגליות רשמיות",
-			english_translation:
-				"Protest song about social-political situation, including music video with official English subtitles",
-		},
 		links: {
 			youtube:
 				"https://www.youtube.com/results?search_query=hadag+nahash+voting+feet",
@@ -62,11 +46,6 @@ export const hadagNahash2010s = [
 		artist: "Hadag Nahash (הדג נחש)",
 		language: "Hebrew",
 		published_date: "2014",
-		lyric_sample: {
-			hebrew: "טקסט ישיר על המדינה כשטח אש, תקציבים לביטחון",
-			english_translation:
-				"Direct text about the country as a war zone, budgets for security",
-		},
 		links: {
 			youtube:
 				"https://www.youtube.com/results?search_query=hadag+nahash+war+movie",
@@ -89,11 +68,6 @@ export const hadagNahash2010s = [
 		artist: "Hadag Nahash (הדג נחש)",
 		language: "Hebrew",
 		published_date: "2015",
-		lyric_sample: {
-			hebrew: "ירושלים כאיקון של קדושה/אלימות/עוני–עושר; עיר תחת מתח מתמיד",
-			english_translation:
-				"Jerusalem as icon of holiness/violence/poverty-wealth; city under constant tension",
-		},
 		links: {
 			youtube:
 				"https://www.youtube.com/results?search_query=hadag+nahash+city+of+god",
@@ -104,11 +78,6 @@ export const hadagNahash2010s = [
 		artist: "Hadag Nahash (הדג נחש)",
 		language: "Hebrew",
 		published_date: "2013",
-		lyric_sample: {
-			hebrew: "כתב־אישום נגד הפוליטיקה הישראלית, ביקורת חריפה על מערכת הממשל",
-			english_translation:
-				"Indictment against Israeli politics, sharp criticism of the government system",
-		},
 		links: {
 			youtube:
 				"https://www.youtube.com/results?search_query=hadag+nahash+complaint+parties",
@@ -119,11 +88,6 @@ export const hadagNahash2010s = [
 		artist: "Hadag Nahash (הדג נחש)",
 		language: "Hebrew",
 		published_date: "2004",
-		lyric_sample: {
-			hebrew: "גרסת 2004 הפכה לאבן־דרך של מחאה; ב־2019 יצאה הקלטה מחודשת",
-			english_translation:
-				"2004 version became a landmark of protest; 2019 saw a re-recorded version",
-		},
 		links: {
 			youtube:
 				"https://www.youtube.com/results?search_query=hadag+nahash+sticker+song",
@@ -161,9 +125,10 @@ export const hadagNahash2010s = [
 		language: "Hebrew",
 		published_date: "2017",
 		lyric_sample: {
-			hebrew: "מתייחס לחסמים, התנחלויות, אפליה נגד מיעוטים והמפלגות הפוליטיות",
+			hebrew:
+				"מאז צמחנו מחסומים כמו גנגסטרים / בנינו פיס בהתנחלויות והפלינו מיעוטים",
 			english_translation:
-				"Addresses checkpoints, settlements, discrimination against minorities and political parties.",
+				"Since then we've grown checkpoints like gangsters / built houses in settlements and discriminated minorities.",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=YwNUYXfCYpI",

@@ -38,9 +38,9 @@ export const shabakSamech90s = [
 		artist: "שב\"ק ס'",
 		published_date: "1997",
 		lyric_sample: {
-			hebrew: "מתאר אווירה אפוקליפטית של מתח וחרדה קיומית",
+			hebrew: "המדינה בלהבות ויש אש ברחובות / כי זה להיות או לא להיות במסיבה",
 			english_translation:
-				"Describes an apocalyptic atmosphere of tension and existential anxiety.",
+				"The country is in flames and there's fire in the streets / to be or not to be at this party.",
 		},
 	},
 	{
@@ -49,9 +49,9 @@ export const shabakSamech90s = [
 		language: "Hebrew",
 		published_date: "1998",
 		lyric_sample: {
-			hebrew: "ביקורת חריפה על הממסד, השלטון והפערים החברתיים",
+			hebrew: "האימפריה של הראפ ממלכת האדמה / מה-ש ועד ה-ב מפשיטים את האומה",
 			english_translation:
-				"Sharp criticism of the establishment, government and social gaps.",
+				"The empire of rap, kingdom of the earth / from Sh to B stripping the nation.",
 		},
 	},
 	{
@@ -59,10 +59,5 @@ export const shabakSamech90s = [
 		artist: "Shabak Samech (שבק ס)",
 		language: "Hebrew",
 		published_date: "1998",
-		lyric_sample: {
-			hebrew: "שימוש בטרמינולוגיה צבאית לתיאור באטל ראפ, המשקף את המציאות",
-			english_translation:
-				"Using military terminology to describe a rap battle, reflecting the reality.",
-		},
 	},
 ];

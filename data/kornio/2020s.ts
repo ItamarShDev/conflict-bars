@@ -1,17 +1,16 @@
 export const kornio2020s = [
 	{
-		name: "אל תירא ישראל (Al Tira Yisrael / Don't Be Afraid Israel)",
-		artist: "Kornio (קורניו)",
+		name: "אל תירא ישראל (Al Tira Yisrael / Fear Not, Israel)",
+		artist: "Subliminal & HaTzel (סאבלימינל והצל) ft. Itzik Shamli",
 		language: "Hebrew",
-		published_date: "2023",
+		published_date: "2025",
 		lyric_sample: {
-			hebrew:
-				"שיר שנכתב על ידי לוחם מילואים בגדוד צנחנים בגבול הצפון, מבטא את נקודת המבט של המילואימניק",
+			hebrew: "והעיקר לא לפחד כלל / אנחנו דור הניצחון",
 			english_translation:
-				"Song written by a reservist paratrooper on the northern border, expressing the perspective of the reserve soldier.",
+				"And the main thing is not to be afraid at all / We are the victory generation.",
 		},
 		links: {
-			youtube: "https://www.youtube.com/watch?v=BqyGsVTBTgA",
+			youtube: "https://www.youtube.com/watch?v=j8RJfJtskjE",
 		},
 	},
 ];

@@ -127,9 +127,10 @@ export const hadagNahash2000s = [
 		language: "Hebrew",
 		published_date: "2006",
 		lyric_sample: {
-			hebrew: "ביקורת על מדינת משטרה והיחס לאזרח",
+			hebrew:
+				"על המחבל היא מיד נשכבת / ומגננת בגופה על טרוריסט אבל גם אדם / שבלי גופה היה גופה",
 			english_translation:
-				"Criticism of a police state and treatment of citizens.",
+				"She immediately lay on the attacker / protecting with her body a terrorist but also a human / who without her body would be a corpse.",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=K0l6PjnOAfI",
@@ -141,9 +142,10 @@ export const hadagNahash2000s = [
 		language: "Hebrew/Arabic/English",
 		published_date: "2006",
 		lyric_sample: {
-			hebrew: "קריאה מפורשת לשלום בין ישראלים לפלסטינים",
+			hebrew:
+				"שלום סלאם פיס / אפשרי גם כאן / לא רק בפריס או בניס / אף אחד לא רוצה למות אבל אם כבר חייבים אז לא עדיף בליוייס במקום במדים",
 			english_translation:
-				"An explicit call for peace between Israelis and Palestinians.",
+				"Shalom Salaam Peace / possible here too / not just in Paris or Nice / Nobody wants to die but if we must then isn't it better in Levi's than in uniforms.",
 		},
 	},
 ];

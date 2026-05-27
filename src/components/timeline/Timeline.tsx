@@ -1,5 +1,4 @@
 "use client";
-import { usePreloadedQuery } from "convex/react";
 import { useMemo, useState } from "react";
 import { SubmitSongModal } from "@/components/SubmitSongModal";
 import { FilterPanel } from "@/components/timeline/FilterPanel";
@@ -7,25 +6,21 @@ import { HelpModal } from "@/components/timeline/HelpModal";
 import { TimelineHeader } from "@/components/timeline/TimelineHeader";
 import { translations } from "@/components/timeline/translations";
 import { YearGroup } from "@/components/timeline/YearGroup";
-import {
-	buildYearEventColors,
-	convertConvexEventsToTimeline,
-} from "@/utils/convex-helpers";
+import { buildYearEventColors } from "@/utils/convex-helpers";
 import { getEntriesByYear } from "@/utils/timeline";
-import type { FileSongList, PreloadedEvents } from "../../../timeline/types";
+import type { EventsTimeline, FileSongList } from "../../../timeline/types";
 
 export function Timeline({
 	lang,
 	songs,
-	convexEvents,
+	events: eventsInput,
 }: {
 	lang: "en" | "he";
 	songs: FileSongList;
-	convexEvents: PreloadedEvents;
+	events: EventsTimeline[];
 }) {
 	const t = translations[lang];
-	const _events = usePreloadedQuery(convexEvents);
-	const events = convertConvexEventsToTimeline(_events);
+	const events = eventsInput;
 	const yearEventColors = buildYearEventColors(events);
 
 	const [searchTerm, setSearchTerm] = useState("");

@@ -1,13 +1,18 @@
 export const butzer2020s = [
 	{
-		name: "אחים בדם (Achim B'Dam / Brothers in Blood)",
+		name: "עדרים (Adarim / Herds)",
 		artist: "Butzer (בוצר)",
 		language: "Hebrew",
-		published_date: "2023",
+		published_date: "2012",
 		lyric_sample: {
-			hebrew: "שיר על האחדות המאולצת שנוצרה בעם בעקבות אסון 7 באוקטובר",
+			hebrew:
+				"כמה זמן נהלך במדבר, נאחז בעבר / כמה זמן נהרג על עתיד שבין עדרים אינו אחיד",
 			english_translation:
-				"Song about the forced unity created among the people following the October 7 disaster.",
+				"How long will we walk in the desert, holding on to the past / How long will we kill for a future that between herds is not unified.",
+		},
+		links: {
+			youtube:
+				"https://www.youtube.com/results?search_query=butzer+adarim+%D7%A2%D7%93%D7%A8%D7%99%D7%9D",
 		},
 	},
 ];

@@ -52,11 +52,6 @@ export const dam2010s = [
 		artist: "DAM (דאם) - Da Arabian MCs",
 		language: "Arabic",
 		published_date: "2011",
-		lyric_sample: {
-			hebrew: "מכתב מתא כלא - על אסירים פלסטינים, מבוסס על סיפורים אמיתיים",
-			english_translation:
-				"A letter from prison - about Palestinian prisoners, based on true stories.",
-		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=1RPGQ3bWj2Y",
 		},
@@ -66,10 +61,5 @@ export const dam2010s = [
 		artist: "DAM (דאם) - Da Arabian MCs",
 		language: "Arabic",
 		published_date: "2010",
-		lyric_sample: {
-			hebrew: "על האפליה המשפטית הישראלית כלפי פלסטינים",
-			english_translation:
-				"About Israeli legal discrimination against Palestinians.",
-		},
 	},
 ];
