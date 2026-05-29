@@ -4,6 +4,12 @@ export const hadagNahash2010s = [
 		artist: "Hadag Nahash (הדג נחש)",
 		language: "Hebrew/English",
 		published_date: "2010s",
+		lyric_sample: {
+			hebrew:
+				"מתגייסים, בר מצוות, בריתות, יש לכם למה לצפות, אז בלי הבדל דת גזע ומין",
+			english_translation:
+				"Enlistments, bar mitzvahs, circumcisions — you have something to look forward to, without distinction of religion, race, or gender.",
+		},
 		links: {
 			youtube:
 				"https://www.youtube.com/results?search_query=hadag+nahash+welcome+izrael",
@@ -14,6 +20,10 @@ export const hadagNahash2010s = [
 		artist: "Hadag Nahash (הדג נחש)",
 		language: "Hebrew",
 		published_date: "2013",
+		lyric_sample: {
+			hebrew:
+				"קודם כל זו טלויזיה חינוכית / ניסיתי להדגיש שאין שלום אין בטחון / רק לא לירושלים ב-2002 אמרתי",
+		},
 		links: {
 			youtube:
 				"https://www.youtube.com/results?search_query=hadag+nahash+gabi+dabi",
@@ -36,6 +46,11 @@ export const hadagNahash2010s = [
 		artist: "Hadag Nahash (הדג נחש)",
 		language: "Hebrew",
 		published_date: "2014",
+		lyric_sample: {
+			hebrew: "שומר על ראש בריא גם במיטה חולה / מדליק מדורות כי השמש לא עולה",
+			english_translation:
+				"Keeping a healthy head even in a sick bed / Lighting bonfires because the sun won't rise.",
+		},
 		links: {
 			youtube:
 				"https://www.youtube.com/results?search_query=hadag+nahash+voting+feet",
@@ -46,6 +61,11 @@ export const hadagNahash2010s = [
 		artist: "Hadag Nahash (הדג נחש)",
 		language: "Hebrew",
 		published_date: "2014",
+		lyric_sample: {
+			hebrew: "כל המדינה בממ”ד / טילים נופלים פה בזה אחר זה",
+			english_translation:
+				"The whole country is in the safe room / Missiles falling here one after another.",
+		},
 		links: {
 			youtube:
 				"https://www.youtube.com/results?search_query=hadag+nahash+war+movie",
@@ -68,6 +88,10 @@ export const hadagNahash2010s = [
 		artist: "Hadag Nahash (הדג נחש)",
 		language: "Hebrew",
 		published_date: "2015",
+		lyric_sample: {
+			hebrew:
+				"ירושלים של זהב של אמת וכזב / גם של ערק ג&#039;ראס דבש דם וחלב / ירושלים של נחושת של קודש ובושת / ירושלים של אור אור גנוז אורגינלי",
+		},
 		links: {
 			youtube:
 				"https://www.youtube.com/results?search_query=hadag+nahash+city+of+god",
@@ -78,6 +102,11 @@ export const hadagNahash2010s = [
 		artist: "Hadag Nahash (הדג נחש)",
 		language: "Hebrew",
 		published_date: "2013",
+		lyric_sample: {
+			hebrew: "כי למרות שהמצב יותר ויותר מסוכן / לא יהיה שלטון בלתי אם שלטונן",
+			english_translation:
+				"Because even though the situation is getting more and more dangerous / There will be no rule other than their rule.",
+		},
 		links: {
 			youtube:
 				"https://www.youtube.com/results?search_query=hadag+nahash+complaint+parties",
@@ -88,6 +117,10 @@ export const hadagNahash2010s = [
 		artist: "Hadag Nahash (הדג נחש)",
 		language: "Hebrew",
 		published_date: "2004",
+		lyric_sample: {
+			hebrew: "דור שלם דורש שלום",
+			english_translation: "An entire generation demands peace.",
+		},
 		links: {
 			youtube:
 				"https://www.youtube.com/results?search_query=hadag+nahash+sticker+song",
