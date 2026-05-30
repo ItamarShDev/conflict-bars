@@ -5,9 +5,10 @@ export const hadagNahash2010s = [
 		language: "Hebrew/English",
 		published_date: "2010s",
 		lyric_sample: {
-			hebrew: "מבט ציני על מיתוג ודימוי המדינה בחו״ל",
+			hebrew:
+				"מתגייסים, בר מצוות, בריתות, יש לכם למה לצפות, אז בלי הבדל דת גזע ומין",
 			english_translation:
-				"Cynical look at branding and image of the country abroad",
+				"Enlistments, bar mitzvahs, circumcisions — you have something to look forward to, without distinction of religion, race, or gender.",
 		},
 		links: {
 			youtube:
@@ -20,9 +21,8 @@ export const hadagNahash2010s = [
 		language: "Hebrew",
 		published_date: "2013",
 		lyric_sample: {
-			hebrew: "פרודיה–מחאה על ציונות ומיתוסים לאומיים, ביקורת על הנרטיב הלאומי",
-			english_translation:
-				"Parody-protest about Zionism and national myths, critique of national narrative",
+			hebrew:
+				"קודם כל זו טלויזיה חינוכית / ניסיתי להדגיש שאין שלום אין בטחון / רק לא לירושלים ב-2002 אמרתי",
 		},
 		links: {
 			youtube:
@@ -34,8 +34,8 @@ export const hadagNahash2010s = [
 		artist: "הדג נחש",
 		published_date: "2013",
 		lyric_sample: {
-			hebrew:
-				"<span  onmouseover=\"sCI('Am/G','S6F3E2`S4F2E3`S3F2E4`S2F1E1`S1F0E0',1,'',1,159);\" onmouseout='CO()' id=\"c_159\" class=\"c_C\">Am/G</span>: xxx010 / השכמה! / מעבר: / לא מאמין בנשק מאמין בשירה",
+			hebrew: "לא מאמין בנשק מאמין בשירה",
+			english_translation: "Don't believe in weapons, believe in song.",
 		},
 		links: {
 			lyrics: "https://genius.com/Hadag-nahash-zman-lehitorer-lyrics",
@@ -47,10 +47,9 @@ export const hadagNahash2010s = [
 		language: "Hebrew",
 		published_date: "2014",
 		lyric_sample: {
-			hebrew:
-				"שיר מחאה על מצב חברתי־פוליטי, כולל קליפ עם כתוביות אנגליות רשמיות",
+			hebrew: "שומר על ראש בריא גם במיטה חולה / מדליק מדורות כי השמש לא עולה",
 			english_translation:
-				"Protest song about social-political situation, including music video with official English subtitles",
+				"Keeping a healthy head even in a sick bed / Lighting bonfires because the sun won't rise.",
 		},
 		links: {
 			youtube:
@@ -63,9 +62,9 @@ export const hadagNahash2010s = [
 		language: "Hebrew",
 		published_date: "2014",
 		lyric_sample: {
-			hebrew: "טקסט ישיר על המדינה כשטח אש, תקציבים לביטחון",
+			hebrew: "כל המדינה בממ”ד / טילים נופלים פה בזה אחר זה",
 			english_translation:
-				"Direct text about the country as a war zone, budgets for security",
+				"The whole country is in the safe room / Missiles falling here one after another.",
 		},
 		links: {
 			youtube:
@@ -90,9 +89,8 @@ export const hadagNahash2010s = [
 		language: "Hebrew",
 		published_date: "2015",
 		lyric_sample: {
-			hebrew: "ירושלים כאיקון של קדושה/אלימות/עוני–עושר; עיר תחת מתח מתמיד",
-			english_translation:
-				"Jerusalem as icon of holiness/violence/poverty-wealth; city under constant tension",
+			hebrew:
+				"ירושלים של זהב של אמת וכזב / גם של ערק ג&#039;ראס דבש דם וחלב / ירושלים של נחושת של קודש ובושת / ירושלים של אור אור גנוז אורגינלי",
 		},
 		links: {
 			youtube:
@@ -105,9 +103,9 @@ export const hadagNahash2010s = [
 		language: "Hebrew",
 		published_date: "2013",
 		lyric_sample: {
-			hebrew: "כתב־אישום נגד הפוליטיקה הישראלית, ביקורת חריפה על מערכת הממשל",
+			hebrew: "כי למרות שהמצב יותר ויותר מסוכן / לא יהיה שלטון בלתי אם שלטונן",
 			english_translation:
-				"Indictment against Israeli politics, sharp criticism of the government system",
+				"Because even though the situation is getting more and more dangerous / There will be no rule other than their rule.",
 		},
 		links: {
 			youtube:
@@ -120,9 +118,8 @@ export const hadagNahash2010s = [
 		language: "Hebrew",
 		published_date: "2004",
 		lyric_sample: {
-			hebrew: "גרסת 2004 הפכה לאבן־דרך של מחאה; ב־2019 יצאה הקלטה מחודשת",
-			english_translation:
-				"2004 version became a landmark of protest; 2019 saw a re-recorded version",
+			hebrew: "דור שלם דורש שלום",
+			english_translation: "An entire generation demands peace.",
 		},
 		links: {
 			youtube:
@@ -138,6 +135,36 @@ export const hadagNahash2010s = [
 		},
 		links: {
 			lyrics: "https://genius.com/Hadag-nahash-shemesh-annotated",
+		},
+	},
+	{
+		name: "אני מאמין (Ani Ma'amin / I Believe)",
+		artist: "Hadag Nahash (הדג נחש)",
+		language: "Hebrew",
+		published_date: "2010",
+		lyric_sample: {
+			hebrew:
+				"וזה לא מזיז לאף אחד ת'תחת ואני לא יכול לסחוב את המשקולת הזו לכל מקום שאלך",
+			english_translation:
+				"And nobody gives a damn and I can't carry this weight everywhere I go.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=dkMH4bPqbaQ",
+		},
+	},
+	{
+		name: "עוד יהיה טוב (Od Yihiye Tov / Things Will Get Better)",
+		artist: "Hadag Nahash (הדג נחש)",
+		language: "Hebrew",
+		published_date: "2017",
+		lyric_sample: {
+			hebrew:
+				"מאז צמחנו מחסומים כמו גנגסטרים / בנינו פיס בהתנחלויות והפלינו מיעוטים",
+			english_translation:
+				"Since then we've grown checkpoints like gangsters / built houses in settlements and discriminated minorities.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=YwNUYXfCYpI",
 		},
 	},
 ];

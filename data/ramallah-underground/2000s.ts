@@ -1,17 +1,17 @@
 export const ramallahUnderground2000s = [
 	{
-		name: "Sijen ib Sijen",
-		artist: "Ramallah Underground (رام الله أندرجراوند)",
+		name: "Sijen ib Sijen (Wall by Wall / سجن ب سجن)",
+		artist: "Ramallah Underground (رام الله تحت الأرض)",
 		language: "Arabic",
-		published_date: "2002",
-		lyric_sample: {
-			hebrew: "קולקטיב מוזיקלי מרמאללה, שירים על התנגדות לכיבוש ישראלי",
-			english_translation:
-				"Musical collective from Ramallah, songs about resistance to Israeli occupation",
-		},
+		published_date: "2007",
 		links: {
-			youtube:
-				"https://www.youtube.com/results?search_query=ramallah+underground+sijen",
+			youtube: "https://www.youtube.com/watch?v=VCYfN4w9CW0",
 		},
+	},
+	{
+		name: "3 on 3 (From the Cave)",
+		artist: "Ramallah Underground (رام الله تحت الأرض)",
+		language: "Arabic/English",
+		published_date: "2007",
 	},
 ];

@@ -4,8 +4,9 @@ export const hadagNahash2020s = [
 		artist: "הדג נחש (Hadag Nahash)",
 		published_date: "2020s",
 		lyric_sample: {
-			hebrew:
-				"I need you boo / I gotta see you boo / And the hearts all over / The world tonight",
+			hebrew: "שומר על ראש בריא גם במיטה חולה / מדליק מדורות כי השמש לא עולה",
+			english_translation:
+				"Keeping a healthy head even in a sick bed / Lighting bonfires because the sun won't rise.",
 		},
 	},
 	{
@@ -27,6 +28,11 @@ export const hadagNahash2020s = [
 		name: "בומבה” (2020)",
 		artist: "הדג נחש",
 		published_date: "2020s",
+		lyric_sample: {
+			hebrew: "אולי כבר תאמר מה בדבר אברה? / אולי כבר תחזיר אותו בחזרה?",
+			english_translation:
+				"Maybe you will finally say what about Avera? / Maybe you will finally bring him back?",
+		},
 	},
 	{
 		name: "גבי ודבי (היפ־הופ ציוני)",

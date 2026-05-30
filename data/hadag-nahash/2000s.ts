@@ -106,4 +106,46 @@ export const hadagNahash2000s = [
 			lyrics: "https://genius.com/Hadag-nahash-shirat-hasticker-lyrics",
 		},
 	},
+	{
+		name: "הנה אני בא (Hine Ani Ba / Here I Come)",
+		artist: "Hadag Nahash (הדג נחש)",
+		language: "Hebrew",
+		published_date: "2006",
+		lyric_sample: {
+			hebrew:
+				"ירושלים, עיר שווה פיצוץ / הולך במדרחוב מרגיש כמו קיבוץ גלויות / אלף תרבויות, לכל אחד יש אח ותשעה בנים",
+			english_translation:
+				"Jerusalem, a city worth an explosion / Walking in the pedestrian mall feeling like an ingathering of exiles / A thousand cultures, everyone has a brother and nine sons.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=vKKMSmRAJxo",
+		},
+	},
+	{
+		name: "בלה בליסימה (Bella Bellissima)",
+		artist: "Hadag Nahash (הדג נחש)",
+		language: "Hebrew",
+		published_date: "2006",
+		lyric_sample: {
+			hebrew:
+				"על המחבל היא מיד נשכבת / ומגננת בגופה על טרוריסט אבל גם אדם / שבלי גופה היה גופה",
+			english_translation:
+				"She immediately lay on the attacker / protecting with her body a terrorist but also a human / who without her body would be a corpse.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=K0l6PjnOAfI",
+		},
+	},
+	{
+		name: "שלום/סלאם/Peace (Shalom/Salaam/Peace)",
+		artist: "Hadag Nahash (הדג נחש)",
+		language: "Hebrew/Arabic/English",
+		published_date: "2006",
+		lyric_sample: {
+			hebrew:
+				"שלום סלאם פיס / אפשרי גם כאן / לא רק בפריס או בניס / אף אחד לא רוצה למות אבל אם כבר חייבים אז לא עדיף בליוייס במקום במדים",
+			english_translation:
+				"Shalom Salaam Peace / possible here too / not just in Paris or Nice / Nobody wants to die but if we must then isn't it better in Levi's than in uniforms.",
+		},
+	},
 ];

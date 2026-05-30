@@ -35,4 +35,19 @@ export const ravidplotnik2010s = [
 				"פתיחה: / מי יודע אם אראה את פנייך / שוב / הכחשה הולכת, הכחשה תשוב",
 		},
 	},
+	{
+		name: "צדיק אחד בסדום (Tzadik Echad b'Sdom / One Righteous in Sodom)",
+		artist: "Ravid Plotnik (רביד פלוטניק)",
+		language: "Hebrew",
+		published_date: "2011",
+		links: {
+			youtube: "https://www.youtube.com/watch?v=MzK5J7HYF8E",
+		},
+	},
+	{
+		name: "שפל וגיאות (Shefel ve'Ge'ut / Ebb and Tide)",
+		artist: "Ravid Plotnik (רביד פלוטניק)",
+		language: "Hebrew",
+		published_date: "2017",
+	},
 ];

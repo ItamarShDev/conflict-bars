@@ -1,18 +1,26 @@
 export const shadiaMansour2000s = [
 	{
-		name: "Palestinian Hip Hop",
+		name: "Al Kufiyyeh 3arabeyyeh (The Kufiyeh is Arab)",
 		artist: "Shadia Mansour (شادية منصور)",
 		language: "Arabic",
-		published_date: "2000s",
+		published_date: "2009",
 		lyric_sample: {
 			hebrew:
-				"הגברת הראשונה של ההיפ-הופ הערבי, מילים פוליטיות על קולוניזציה ציונית ומחיקה תרבותית",
+				"מהמא אתפננו פיהא / מהמא ע'ירו בלונא / כופייה ערבייה ביצ'ל ערבייה",
 			english_translation:
-				"First lady of Arab hip-hop, political lyrics about Zionist colonization and cultural erasure",
+				"No matter how they design it / no matter how they change its color / the kufiyyeh is Arab and will stay Arab.",
 		},
 		links: {
-			youtube:
-				"https://www.youtube.com/results?search_query=shadia+mansour+palestinian+hip+hop",
+			youtube: "https://www.youtube.com/watch?v=7ROzipMljXY",
+		},
+	},
+	{
+		name: "Bade Salam (I Want Peace / بدي سلام)",
+		artist: "Shadia Mansour (شادية منصور) ft. Mahmoud Jrere (DAM)",
+		language: "Arabic",
+		published_date: "2007",
+		links: {
+			youtube: "https://www.youtube.com/watch?v=z6nFiGJPbWA",
 		},
 	},
 ];

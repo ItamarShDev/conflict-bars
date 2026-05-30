@@ -24,8 +24,11 @@ export function Timeline({
 	convexEvents: PreloadedEvents;
 }) {
 	const t = translations[lang];
-	const _events = usePreloadedQuery(convexEvents);
-	const events = convertConvexEventsToTimeline(_events);
+	const convexEventsData = usePreloadedQuery(convexEvents);
+	const events = useMemo(
+		() => convertConvexEventsToTimeline(convexEventsData),
+		[convexEventsData],
+	);
 	const yearEventColors = buildYearEventColors(events);
 
 	const [searchTerm, setSearchTerm] = useState("");
