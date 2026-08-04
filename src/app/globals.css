@@ -136,6 +136,21 @@ html[data-theme="boombox"] .boombox-song-card {
 		4px 5px 0 rgba(14, 14, 16, 0.16);
 }
 
+html[data-theme="boombox"] .boombox-submit-trigger,
+html[data-theme="boombox"] .boombox-help-trigger {
+	background-color: var(--color-accent);
+}
+
+html[data-theme="boombox"] .boombox-submit-trigger:hover,
+html[data-theme="boombox"] .boombox-help-trigger:hover {
+	background-color: var(--color-accent-hover);
+}
+
+html[data-theme="boombox"] .boombox-submit-trigger:focus-visible,
+html[data-theme="boombox"] .boombox-help-trigger:focus-visible {
+	--tw-ring-color: var(--color-accent);
+}
+
 html[data-theme="boombox"] .boombox-song-artist {
 	display: block;
 	border-top: 1px solid color-mix(in srgb, var(--color-accent) 60%, transparent);
