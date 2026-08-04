@@ -62,7 +62,7 @@ export function SongEntry({
 	const orientationClass =
 		lang === "he" ? "ml-2 sm:ml-4 mr-auto" : "mr-2 sm:mr-4 ml-auto";
 	const containerClasses = [
-		"relative w-full min-w-0 sm:max-w-md bg-(--color-card-background) border border-(--color-border) rounded-lg shadow-sm transition-transform duration-200 overflow-visible",
+		"boombox-song-card relative w-full min-w-0 sm:max-w-md rounded-lg border border-(--color-border) bg-(--color-song-background) text-(--color-song-foreground) shadow-sm transition-transform duration-200 overflow-visible",
 		leaningColor[leaning],
 		orientationClass,
 		showMarginTop ? "mt-4" : "",
@@ -72,8 +72,8 @@ export function SongEntry({
 		.filter(Boolean)
 		.join(" ");
 	const titleClass = isCompact
-		? "text-lg font-bold leading-snug text-(--color-card-foreground)"
-		: "text-xl font-bold leading-snug text-(--color-card-foreground)";
+		? "text-lg font-bold leading-snug text-(--color-song-foreground)"
+		: "text-xl font-bold leading-snug text-(--color-song-foreground)";
 	const artistClass = isCompact
 		? "text-[0.7rem] uppercase tracking-wide text-(--color-muted-foreground)"
 		: "text-sm text-(--color-muted-foreground)";
@@ -156,7 +156,7 @@ export function SongEntry({
 					>
 						{lang === "he" ? (
 							<>
-								<span className={artistClass}>
+								<span className={`${artistClass} boombox-song-artist`}>
 									{highlightText(songObj.artist)}
 								</span>
 								<h3 className={titleClass}>{highlightText(songObj.name)}</h3>
@@ -164,7 +164,7 @@ export function SongEntry({
 						) : (
 							<>
 								<h3 className={titleClass}>{highlightText(songObj.name)}</h3>
-								<span className={artistClass}>
+								<span className={`${artistClass} boombox-song-artist`}>
 									{highlightText(songObj.artist)}
 								</span>
 							</>

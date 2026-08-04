@@ -43,17 +43,17 @@ export function YearMarker({
 		<div className="relative col-span-full min-w-0 sm:col-span-1 sm:col-start-2 sm:order-2">
 			<div className="flex items-center gap-3 py-1 sm:hidden">
 				<div
-					className="h-0.5 min-w-6 flex-1 rounded-full bg-slate-200 dark:bg-slate-700"
+					className="h-0.5 min-w-6 flex-1 rounded-full bg-(--color-border)"
 					style={hasColors ? { background: horizontalGradient } : undefined}
 					aria-hidden
 				/>
 				{showYear && (
-					<div className="text-center text-sm font-semibold tabular-nums text-slate-700 dark:text-slate-300">
+					<div className="font-display text-center text-sm font-semibold tabular-nums text-(--color-year-foreground)">
 						{year}
 					</div>
 				)}
 				<div
-					className="h-0.5 min-w-6 flex-1 rounded-full bg-slate-200 dark:bg-slate-700"
+					className="h-0.5 min-w-6 flex-1 rounded-full bg-(--color-border)"
 					style={hasColors ? { background: horizontalGradient } : undefined}
 					aria-hidden
 				/>
@@ -65,10 +65,10 @@ export function YearMarker({
 						style={{ background: gradient }}
 					/>
 				) : (
-					<div className="absolute inset-y-0 z-0 w-0.5 border border-slate-200 dark:border-slate-700" />
+					<div className="absolute inset-y-0 z-0 w-0.5 border border-(--color-border)" />
 				)}
 				{showYear && (
-					<div className="z-10 bg-(--color-background) text-center text-sm font-semibold tabular-nums text-slate-700 dark:text-slate-300">
+					<div className="font-display z-10 bg-(--color-background) text-center text-sm font-semibold tabular-nums text-(--color-year-foreground)">
 						{year}
 					</div>
 				)}

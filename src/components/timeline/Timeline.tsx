@@ -65,7 +65,7 @@ export function Timeline({
 			: null;
 	return (
 		<div className="relative px-2 sm:px-4">
-			<TimelineHeader title={t.title} lang={lang} />
+			<TimelineHeader title={t.title} themeToggle={t.themeToggle} />
 			<HelpModal translations={t.helpModal} lang={lang} />
 
 			<div
@@ -73,7 +73,7 @@ export function Timeline({
 			>
 				<label
 					htmlFor="timeline-search"
-					className="block text-sm font-medium text-slate-700 dark:text-slate-200"
+					className="block text-sm font-medium text-(--color-foreground)"
 				>
 					{t.search.label}
 				</label>
@@ -84,11 +84,11 @@ export function Timeline({
 					onChange={(event) => setSearchTerm(event.target.value)}
 					placeholder={t.search.placeholder}
 					dir={lang === "he" ? "rtl" : "ltr"}
-					className="mt-2 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-base text-slate-900 shadow-sm outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 dark:border-slate-700 dark:bg-gray-800 dark:text-slate-50"
+					className="mt-2 w-full rounded-lg border border-(--color-control-border) bg-(--color-control-background) px-3 py-2 text-base text-(--color-control-foreground) shadow-sm outline-none transition focus:border-(--color-accent) focus:ring-2 focus:ring-(--color-accent)"
 					aria-label={t.search.label}
 				/>
 				{searchCountText && (
-					<p className="mt-2 text-sm text-slate-600 dark:text-slate-300">
+					<p className="mt-2 text-sm text-(--color-muted-foreground)">
 						{searchCountText}
 					</p>
 				)}
@@ -120,7 +120,7 @@ export function Timeline({
 				})}
 			</div>
 			{(searchTerm.trim() || hasActiveFilters) && filteredSongCount === 0 && (
-				<p className="mt-4 text-center text-sm text-slate-600 dark:text-slate-300">
+				<p className="mt-4 text-center text-sm text-(--color-muted-foreground)">
 					{t.search.noResults}
 				</p>
 			)}

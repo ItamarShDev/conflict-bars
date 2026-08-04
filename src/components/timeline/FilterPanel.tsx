@@ -94,7 +94,7 @@ export function FilterPanel({
 					type="button"
 					onClick={() => setIsOpen((prev) => !prev)}
 					aria-expanded={isOpen}
-					className="flex min-h-11 items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-700 shadow-sm transition hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800 sm:min-h-0 sm:py-1.5"
+					className="flex min-h-11 items-center gap-1.5 rounded-lg border border-(--color-control-border) bg-(--color-control-background) px-3 py-2 text-sm font-medium text-(--color-control-foreground) shadow-sm transition hover:bg-(--color-muted) sm:min-h-0 sm:py-1.5"
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -138,7 +138,7 @@ export function FilterPanel({
 					<button
 						type="button"
 						onClick={clearAll}
-						className="min-h-10 px-1 text-sm text-slate-500 underline hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 sm:min-h-0 sm:px-0 sm:text-xs"
+						className="min-h-10 px-1 text-sm text-(--color-control-muted) underline hover:text-(--color-foreground) sm:min-h-0 sm:px-0 sm:text-xs"
 					>
 						{t.clearAll}
 					</button>
@@ -146,9 +146,9 @@ export function FilterPanel({
 			</div>
 
 			{isOpen && (
-				<div className="mt-3 rounded-lg border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-700 dark:bg-slate-900">
+				<div className="mt-3 rounded-lg border border-(--color-control-border) bg-(--color-control-background) p-4 text-(--color-control-foreground) shadow-sm">
 					<div className="mb-4">
-						<p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+						<p className="mb-2 text-xs font-semibold uppercase tracking-wide text-(--color-muted-foreground)">
 							{t.leaning.label}
 						</p>
 						<div className="flex flex-wrap gap-2">
@@ -170,7 +170,7 @@ export function FilterPanel({
 					</div>
 
 					<div>
-						<p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+						<p className="mb-2 text-xs font-semibold uppercase tracking-wide text-(--color-muted-foreground)">
 							{t.decade.label}
 						</p>
 						<div className="flex flex-wrap gap-2">
@@ -184,7 +184,7 @@ export function FilterPanel({
 										className={`min-h-10 rounded-full border px-3 py-1.5 text-sm font-medium transition sm:min-h-0 sm:py-1 ${
 											isActive
 												? "border-emerald-500 bg-emerald-500 text-white"
-												: "border-slate-300 text-slate-600 hover:bg-slate-50 dark:border-slate-600 dark:text-slate-300 dark:hover:bg-slate-800"
+												: "border-(--color-control-border) text-(--color-muted-foreground) hover:bg-(--color-muted)"
 										}`}
 									>
 										{DECADE_LABELS[decade]}
