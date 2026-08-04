@@ -33,13 +33,13 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en" suppressHydrationWarning>
+		<html lang="en" className={heebo.variable} suppressHydrationWarning>
 			<head>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<script>{`(() => { try { const theme = localStorage.getItem("conflict-bars-theme"); if (theme === "boombox") document.documentElement.dataset.theme = theme; } catch {} })();`}</script>
 			</head>
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} ${heebo.variable} antialiased bg-(--color-background) text-(--color-foreground)`}
+				className={`${geistSans.variable} ${geistMono.variable} antialiased bg-(--color-background) text-(--color-foreground)`}
 			>
 				<ConvexClientProvider>
 					<ThemeProvider>{children}</ThemeProvider>

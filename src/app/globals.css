@@ -75,7 +75,7 @@ html[data-theme="boombox"] {
 	--color-control-background: #f4f0e7;
 	--color-control-foreground: #292724;
 	--color-control-border: #b8b0a2;
-	--font-display: "Heebo", "Heebo Fallback", system-ui, sans-serif;
+	--font-display: var(--font-heebo), system-ui, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {

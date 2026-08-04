@@ -11,12 +11,15 @@ interface TimelineHeaderProps {
 export function TimelineHeader({ title, themeToggle }: TimelineHeaderProps) {
 	const { theme, setTheme } = useTheme();
 	return (
-		<div className="relative mx-auto my-5 flex max-w-5xl items-center justify-center sm:my-7">
+		<div className="relative mx-auto my-5 flex max-w-5xl flex-col items-center justify-center gap-2 sm:my-7 sm:flex-row sm:gap-0">
 			<h1 className="text-center text-2xl font-bold tracking-tight text-(--color-foreground) sm:text-3xl">
 				{title}
 			</h1>
-			<div className="absolute end-0 top-1/2 -translate-y-1/2">
-				<div className="flex items-center rounded-full border border-(--color-control-border) bg-(--color-control-background) p-0.5 text-xs text-(--color-control-foreground) shadow-sm">
+			<div className="relative sm:absolute sm:end-0 sm:top-1/2 sm:-translate-y-1/2">
+				<fieldset
+					aria-label={themeToggle.label}
+					className="flex items-center rounded-full border border-(--color-control-border) bg-(--color-control-background) p-0.5 text-xs text-(--color-control-foreground) shadow-sm"
+				>
 					{(["classic", "boombox"] as const).map((option) => (
 						<button
 							key={option}
@@ -32,7 +35,7 @@ export function TimelineHeader({ title, themeToggle }: TimelineHeaderProps) {
 							{themeToggle[option]}
 						</button>
 					))}
-				</div>
+				</fieldset>
 			</div>
 		</div>
 	);
