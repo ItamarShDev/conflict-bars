@@ -99,11 +99,13 @@ function formatSubmitterMessage(payload: SongSubmissionEmailPayload) {
 }
 
 export async function sendThankYouMail(payload: SongSubmissionEmailPayload) {
+	await sendAdminMail(payload);
+
 	if (!payload.submitterEmail) {
-		return NextResponse.json({ status: "error" });
+		return NextResponse.json({ status: "success" });
 	}
 
-	const mail = "itamarsharifytech@gmail.com";
+	const mail = notificationEmail;
 	const transporter = nodemailer.createTransport({
 		service: "gmail",
 		auth: {
@@ -120,7 +122,6 @@ export async function sendThankYouMail(payload: SongSubmissionEmailPayload) {
 	};
 
 	await transporter.sendMail(mailOptions);
-	await sendAdminMail(payload);
 	return NextResponse.json({ status: "success" });
 }
 
@@ -136,7 +137,8 @@ export async function sendAdminMail(payload: SongSubmissionEmailPayload) {
 
 	const mailOptions = {
 		to: mail,
-		from: payload.submitterEmail ?? mail,
+		from: mail,
+		replyTo: payload.submitterEmail || undefined,
 		subject: `New song submission: ${payload.songName} by ${payload.artist}`,
 		text: formatAdminMessage(payload),
 	};

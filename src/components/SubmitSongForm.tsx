@@ -149,15 +149,19 @@ export function SubmitSongForm({
 			setStatus("success");
 			onSuccess?.();
 			form.reset();
-			await sendThankYouMail({
-				submitterEmail: email,
-				songName,
-				artist,
-				publishedDate,
-				language,
-				lyricSample,
-				links,
-			});
+			try {
+				await sendThankYouMail({
+					submitterEmail: email,
+					songName,
+					artist,
+					publishedDate,
+					language,
+					lyricSample,
+					links,
+				});
+			} catch (error) {
+				console.error("Failed to send submission email", error);
+			}
 		} catch (error) {
 			console.error("Failed to submit song", error);
 			setStatus("error");
