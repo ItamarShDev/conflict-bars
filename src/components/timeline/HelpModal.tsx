@@ -36,7 +36,7 @@ export function HelpModal({ translations, lang }: HelpModalProps) {
 		<>
 			<button
 				type="button"
-				className="fixed top-6 right-6 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-neutral-800 text-lg font-semibold text-white shadow-lg transition hover:bg-neutral-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300"
+				className="fixed end-4 top-6 z-50 flex h-11 w-11 items-center justify-center rounded-full bg-neutral-800 text-lg font-semibold text-white shadow-lg transition hover:bg-neutral-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300 sm:end-6"
 				onClick={() => setIsOpen(true)}
 				aria-label={translations.buttonAria}
 				aria-haspopup="dialog"
@@ -63,7 +63,7 @@ export function HelpModal({ translations, lang }: HelpModalProps) {
 						aria-labelledby={titleId}
 						aria-describedby={descriptionId}
 						dir={isRtl ? "rtl" : "ltr"}
-						className="relative z-10 w-full max-w-xl rounded-xl border border-neutral-700 bg-neutral-950 p-6 shadow-2xl"
+						className="relative z-10 max-h-[calc(100vh-2rem)] w-full max-w-xl overflow-y-auto rounded-xl border border-neutral-700 bg-neutral-950 p-4 shadow-2xl sm:p-6"
 					>
 						<div className="mb-4 flex items-center justify-between">
 							<h2

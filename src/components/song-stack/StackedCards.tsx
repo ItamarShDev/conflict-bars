@@ -62,7 +62,7 @@ export function StackedCards({
 				return (
 					<div
 						key={`${entry.song.artist}-${entry.song.name}-${idx}`}
-						className={`transition-transform duration-300 rotate-(--rotate) translate-y-(--translate-y) scale-(--scale) hover:rotate-(--hover-rotate)`}
+						className="transition-transform duration-300 rotate-(--rotate) translate-y-(--translate-y) scale-(--scale) hover:rotate-(--hover-rotate) max-sm:rotate-0 max-sm:translate-y-0 max-sm:scale-100 max-sm:hover:rotate-0"
 						style={{
 							"--rotate": rotationStyle,
 							"--translate-y": translateStyle,

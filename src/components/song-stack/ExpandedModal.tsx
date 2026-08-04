@@ -50,9 +50,8 @@ export function ExpandedModal({
 			}}
 		>
 			<div
-				className={`mx-auto flex w-full max-w-5xl flex-col px-3 sm:px-4 py-6 sm:py-10 transition-all duration-500 ease-out ${isExpanded ? "translate-y-0 scale-100 opacity-100" : "translate-y-6 scale-95 opacity-0"}`}
+				className={`mx-auto flex max-h-[calc(100vh-1rem)] min-w-0 w-full max-w-5xl flex-col overflow-hidden px-3 py-6 transition-all duration-500 ease-out sm:px-4 sm:py-10 ${isExpanded ? "translate-y-0 scale-100 opacity-100" : "translate-y-6 scale-95 opacity-0"}`}
 				role="document"
-				style={{ maxHeight: "calc(100vh - 2rem)" }}
 			>
 				<ModalHeader
 					lang={lang}
@@ -61,8 +60,8 @@ export function ExpandedModal({
 					closeLabel={t.stack.close}
 					onClose={onClose}
 				/>
-				<div className="mt-4 sm:mt-8 flex-1 overflow-y-auto overflow-x-visible pt-4 sm:pt-6 px-1 sm:px-2">
-					<div className="grid gap-4 sm:gap-6 md:grid-cols-2 overflow-visible">
+				<div className="mt-4 min-h-0 flex-1 overflow-x-hidden overflow-y-auto px-1 pt-4 sm:mt-8 sm:px-2 sm:pt-6">
+					<div className="grid min-w-0 gap-4 sm:gap-6 md:grid-cols-2">
 						{songs.map((entry, idx) => (
 							<SongEntry
 								key={`${entry.song.artist}-${entry.song.name}-expanded-${idx}`}
@@ -70,7 +69,7 @@ export function ExpandedModal({
 								lang={lang}
 								leaning={entry.leaning}
 								showMarginTop={false}
-								className="ml-0 mr-0 w-full max-w-full bg-(--color-card-background) text-left shadow-xl border border-(--color-border)"
+								className="ml-0 mr-0 w-full max-w-full bg-(--color-card-background) text-start shadow-xl border border-(--color-border)"
 								variant="full"
 								highlightTerm={highlightTerm}
 							/>
