@@ -1,5 +1,4 @@
 "use server";
-import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 export interface SongSubmissionEmailPayload {
@@ -102,7 +101,7 @@ export async function sendThankYouMail(payload: SongSubmissionEmailPayload) {
 	await sendAdminMail(payload);
 
 	if (!payload.submitterEmail) {
-		return NextResponse.json({ status: "success" });
+		return { status: "success" };
 	}
 
 	const mail = notificationEmail;
@@ -122,7 +121,7 @@ export async function sendThankYouMail(payload: SongSubmissionEmailPayload) {
 	};
 
 	await transporter.sendMail(mailOptions);
-	return NextResponse.json({ status: "success" });
+	return { status: "success" };
 }
 
 export async function sendAdminMail(payload: SongSubmissionEmailPayload) {
