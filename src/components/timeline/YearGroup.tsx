@@ -7,7 +7,6 @@ interface YearGroupProps {
 	year: number;
 	entries: TimelineEntryItem[];
 	showYear: boolean;
-	index: number;
 	lang: "en" | "he";
 	yearColors?: string[];
 	highlightTerm?: string;
@@ -17,7 +16,6 @@ export function YearGroup({
 	year,
 	entries,
 	showYear,
-	index,
 	lang,
 	yearColors = [],
 	highlightTerm,
@@ -26,21 +24,15 @@ export function YearGroup({
 	const conflicts = entries.filter((e) => e.type === "conflict");
 
 	return (
-		<>
+		<div className="col-span-full grid min-w-0 grid-cols-1 gap-0 sm:grid-cols-subgrid">
+			<YearMarker year={year} showYear={showYear} yearColors={yearColors} />
+			<ConflictsColumn lang={lang} conflicts={conflicts} />
 			<SongsColumn
-				index={index}
 				songs={songs}
 				lang={lang}
 				year={year}
 				highlightTerm={highlightTerm}
 			/>
-			<YearMarker
-				index={index}
-				year={year}
-				showYear={showYear}
-				yearColors={yearColors}
-			/>
-			<ConflictsColumn index={index} conflicts={conflicts} lang={lang} />
-		</>
+		</div>
 	);
 }

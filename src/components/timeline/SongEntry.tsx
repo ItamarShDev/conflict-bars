@@ -62,7 +62,7 @@ export function SongEntry({
 	const orientationClass =
 		lang === "he" ? "ml-2 sm:ml-4 mr-auto" : "mr-2 sm:mr-4 ml-auto";
 	const containerClasses = [
-		"relative w-full max-w-[calc(100vw-4rem)] sm:max-w-md bg-(--color-card-background) border border-(--color-border) rounded-lg shadow-sm transition-transform duration-200 overflow-visible",
+		"relative w-full min-w-0 sm:max-w-md bg-(--color-card-background) border border-(--color-border) rounded-lg shadow-sm transition-transform duration-200 overflow-visible",
 		leaningColor[leaning],
 		orientationClass,
 		showMarginTop ? "mt-4" : "",
@@ -125,7 +125,7 @@ export function SongEntry({
 						e.stopPropagation();
 						setIsEditModalOpen(true);
 					}}
-					className={`absolute ${editButtonPosition} flex items-center justify-center w-8 h-8 rounded-full bg-blue-500 hover:bg-blue-600 text-white transition-opacity opacity-0 group-hover:opacity-100 shadow-lg z-30 cursor-pointer`}
+					className={`absolute ${editButtonPosition} flex h-10 w-10 items-center justify-center rounded-full bg-blue-500 text-white opacity-100 shadow-lg transition-opacity hover:bg-blue-600 sm:h-8 sm:w-8 sm:opacity-0 sm:group-hover:opacity-100 z-30 cursor-pointer`}
 					title={t.editSuggestion.buttonTitle}
 					aria-label={t.editSuggestion.buttonAria}
 				>

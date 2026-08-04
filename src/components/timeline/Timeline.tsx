@@ -64,7 +64,7 @@ export function Timeline({
 			? t.search.results.replace("{{count}}", String(filteredSongCount))
 			: null;
 	return (
-		<div className="relative overflow-x-hidden px-2 sm:px-4">
+		<div className="relative px-2 sm:px-4">
 			<TimelineHeader title={t.title} lang={lang} />
 			<HelpModal translations={t.helpModal} lang={lang} />
 
@@ -103,14 +103,11 @@ export function Timeline({
 				onDecadesChange={setSelectedDecades}
 			/>
 
-			<div
-				className={`w-full mt-10 grid grid-rows-[${yearGroups.length}] grid-cols-[1fr_30px_1fr] sm:grid-cols-[1fr_50px_1fr] pb-24`}
-			>
+			<div className="mt-10 grid w-full grid-cols-1 gap-4 pb-32 sm:grid-cols-[1fr_50px_1fr] sm:gap-0 sm:pb-24">
 				{yearGroups.map(([year, entries], idx) => {
 					const showYear = idx === 0 || year !== yearGroups[idx - 1]?.[0];
 					return (
 						<YearGroup
-							index={idx}
 							key={year}
 							year={year}
 							entries={entries}
@@ -130,6 +127,7 @@ export function Timeline({
 			<SubmitSongModal
 				label={t.submitSongButton}
 				translations={t.submitSongForm}
+				lang={lang}
 			/>
 		</div>
 	);

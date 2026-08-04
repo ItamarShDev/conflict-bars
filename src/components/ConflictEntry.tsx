@@ -42,7 +42,7 @@ export function ConflictEntry({ conflict, lang }: ConflictTimelineEntryProps) {
 
 	return (
 		<div
-			className={`z-0 ml-1 sm:ml-2 mr-2 sm:mr-10 bg-slate-100 dark:bg-neutral-800 border-slate-300 dark:border-slate-600 border rounded-lg p-3 sm:p-5 shadow-sm transition-all duration-200 hover:z-50 hover:ring-2 hover:ring-(--color-accent) hover:shadow-lg focus:outline-none focus:z-50 focus:ring-2 focus:ring-(--color-accent) focus:shadow-lg text-start`}
+			className={`z-0 mx-0 bg-slate-100 dark:bg-neutral-800 border-slate-300 dark:border-slate-600 border rounded-lg p-3 sm:ml-2 sm:mr-10 sm:p-5 shadow-sm transition-all duration-200 hover:z-50 hover:ring-2 hover:ring-(--color-accent) hover:shadow-lg focus:outline-none focus:z-50 focus:ring-2 focus:ring-(--color-accent) focus:shadow-lg text-start`}
 			style={{ borderColor: color }}
 		>
 			<div className="flex gap-2 sm:gap-3 items-start h-full">

@@ -5,7 +5,6 @@ interface SongsColumnProps {
 	songs: TimelineEntryItem[];
 	lang: "en" | "he";
 	year: number;
-	index: number;
 	highlightTerm?: string;
 }
 
@@ -13,7 +12,6 @@ export function SongsColumn({
 	songs,
 	lang,
 	year,
-	index,
 	highlightTerm,
 }: SongsColumnProps) {
 	const songItems = songs.filter((e) => e.type === "song");
@@ -24,7 +22,7 @@ export function SongsColumn({
 
 	return (
 		<div
-			className={`col-1 me-1 sm:me-4 mb-4 row-${index + 1} ${lang === "he" ? "me-0 ms-1 sm:ms-4" : ""}`}
+			className={`col-span-full min-w-0 mb-4 sm:col-span-1 sm:col-start-1 sm:order-1 sm:me-4 ${lang === "he" ? "me-0 ms-1 sm:ms-4" : "me-1"}`}
 			aria-hidden={songItems.length === 0}
 		>
 			<SongStack

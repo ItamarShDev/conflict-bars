@@ -175,8 +175,8 @@ export function SubmitSongForm({
 				{isEditMode ? t.editTitle : t.title}
 			</h2>
 			<form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
-				<div className={`grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-2`}>
-					<label className="flex flex-col gap-1.5 sm:gap-2">
+				<div className="grid min-w-0 grid-cols-1 gap-3 sm:gap-4 md:grid-cols-2">
+					<label className="flex min-w-0 flex-col gap-1.5 sm:gap-2">
 						<span className="text-xs sm:text-sm font-medium text-neutral-300">
 							{t.fields.displayName}
 						</span>
@@ -187,7 +187,7 @@ export function SubmitSongForm({
 							className="rounded border border-neutral-700 bg-neutral-950 px-2.5 sm:px-3 py-1.5 sm:py-2 text-sm sm:text-base text-neutral-100"
 						/>
 					</label>
-					<label className="flex flex-col gap-1.5 sm:gap-2">
+					<label className="flex min-w-0 flex-col gap-1.5 sm:gap-2">
 						<span className="text-xs sm:text-sm font-medium text-neutral-300">
 							{t.fields.email}
 						</span>
@@ -199,7 +199,7 @@ export function SubmitSongForm({
 							className="rounded border border-neutral-700 bg-neutral-950 px-2.5 sm:px-3 py-1.5 sm:py-2 text-sm sm:text-base text-neutral-100"
 						/>
 					</label>
-					<label className="flex flex-col gap-1.5 sm:gap-2">
+					<label className="flex min-w-0 flex-col gap-1.5 sm:gap-2">
 						<span className="text-xs sm:text-sm font-medium text-neutral-300">
 							{t.fields.songName}
 						</span>
@@ -216,7 +216,7 @@ export function SubmitSongForm({
 							}`}
 						/>
 					</label>
-					<label className="flex flex-col gap-1.5 sm:gap-2">
+					<label className="flex min-w-0 flex-col gap-1.5 sm:gap-2">
 						<span className="text-xs sm:text-sm font-medium text-neutral-300">
 							{t.fields.artist}
 						</span>
@@ -242,9 +242,9 @@ export function SubmitSongForm({
 				</div>
 
 				<div
-					className={`grid grid-cols-1 gap-4 md:grid-cols-2 ${lang === "he" ? "flex flex-col-reverse" : ""}`}
+					className={`grid min-w-0 grid-cols-1 gap-4 md:grid-cols-2 ${lang === "he" ? "flex flex-col-reverse" : ""}`}
 				>
-					<label className="flex flex-col gap-2">
+					<label className="flex min-w-0 flex-col gap-2">
 						<span className="text-sm font-medium text-neutral-300">
 							{t.fields.publishedDate}
 						</span>
@@ -263,7 +263,7 @@ export function SubmitSongForm({
 							}`}
 						/>
 					</label>
-					<label className="flex flex-col gap-2">
+					<label className="flex min-w-0 flex-col gap-2">
 						<span className="text-sm font-medium text-neutral-300">
 							{t.fields.language}
 						</span>
@@ -283,9 +283,9 @@ export function SubmitSongForm({
 				</div>
 
 				<div
-					className={`grid grid-cols-1 gap-4 md:grid-cols-2 ${lang === "he" ? "flex flex-col-reverse" : ""}`}
+					className={`grid min-w-0 grid-cols-1 gap-4 md:grid-cols-2 ${lang === "he" ? "flex flex-col-reverse" : ""}`}
 				>
-					<label className="flex flex-col gap-2">
+					<label className="flex min-w-0 flex-col gap-2">
 						<span className="text-sm font-medium text-neutral-300">
 							{t.fields.lyricHebrew}
 						</span>
@@ -302,7 +302,7 @@ export function SubmitSongForm({
 							}`}
 						/>
 					</label>
-					<label className="flex flex-col gap-2">
+					<label className="flex min-w-0 flex-col gap-2">
 						<span className="text-sm font-medium text-neutral-300">
 							{t.fields.lyricEnglish}
 						</span>
@@ -311,15 +311,15 @@ export function SubmitSongForm({
 							rows={3}
 							defaultValue={editSong?.lyric_sample?.english_translation || ""}
 							dir="ltr"
-							className="rounded border border-neutral-700 bg-neutral-950 px-3 py-2 text-neutral-100"
+							className="min-w-0 rounded border border-neutral-700 bg-neutral-950 px-3 py-2 text-neutral-100"
 						/>
 					</label>
 				</div>
 
 				<div
-					className={`grid grid-cols-1 gap-4 md:grid-cols-3 ${lang === "he" ? "flex flex-col-reverse" : ""}`}
+					className={`grid min-w-0 grid-cols-1 gap-4 md:grid-cols-3 ${lang === "he" ? "flex flex-col-reverse" : ""}`}
 				>
-					<label className="flex flex-col gap-2">
+					<label className="flex min-w-0 flex-col gap-2">
 						<span className="text-sm font-medium text-neutral-300">
 							{t.fields.linkLyrics}
 						</span>
@@ -328,10 +328,10 @@ export function SubmitSongForm({
 							type="url"
 							defaultValue={editSong?.links?.lyrics || ""}
 							dir={lang === "he" ? "rtl" : "ltr"}
-							className="rounded border border-neutral-700 bg-neutral-950 px-3 py-2 text-neutral-100"
+							className="min-w-0 rounded border border-neutral-700 bg-neutral-950 px-3 py-2 text-neutral-100"
 						/>
 					</label>
-					<label className="flex flex-col gap-2">
+					<label className="flex min-w-0 flex-col gap-2">
 						<span className="text-sm font-medium text-neutral-300">
 							{t.fields.linkInfo}
 						</span>
@@ -340,10 +340,10 @@ export function SubmitSongForm({
 							type="url"
 							defaultValue={editSong?.links?.song_info || ""}
 							dir={lang === "he" ? "rtl" : "ltr"}
-							className="rounded border border-neutral-700 bg-neutral-950 px-3 py-2 text-neutral-100"
+							className="min-w-0 rounded border border-neutral-700 bg-neutral-950 px-3 py-2 text-neutral-100"
 						/>
 					</label>
-					<label className="flex flex-col gap-2">
+					<label className="flex min-w-0 flex-col gap-2">
 						<span className="text-sm font-medium text-neutral-300">
 							{t.fields.linkYoutube}
 						</span>
@@ -352,7 +352,7 @@ export function SubmitSongForm({
 							type="url"
 							defaultValue={editSong?.links?.youtube || ""}
 							dir={lang === "he" ? "rtl" : "ltr"}
-							className="rounded border border-neutral-700 bg-neutral-950 px-3 py-2 text-neutral-100"
+							className="min-w-0 rounded border border-neutral-700 bg-neutral-950 px-3 py-2 text-neutral-100"
 						/>
 					</label>
 				</div>
