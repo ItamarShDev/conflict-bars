@@ -144,7 +144,7 @@ export function SongEntry({
 				</button>
 				{hasSongIdentity && (
 					<div
-						className={
+						className={`ps-14 sm:ps-0 ${
 							lang === "he"
 								? isCompact
 									? "flex flex-col gap-0.5"
@@ -152,7 +152,7 @@ export function SongEntry({
 								: isCompact
 									? "flex flex-col gap-0.5"
 									: "flex flex-col gap-1"
-						}
+						}`}
 					>
 						{lang === "he" ? (
 							<>
