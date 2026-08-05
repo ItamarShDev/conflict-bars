@@ -62,9 +62,9 @@ export function ExpandedModal({
 				/>
 				<div className="mt-4 min-h-0 flex-1 overflow-x-hidden overflow-y-auto px-1 pt-4 sm:mt-8 sm:px-2 sm:pt-6">
 					<div className="grid min-w-0 gap-4 sm:gap-6 md:grid-cols-2">
-						{songs.map((entry, idx) => (
+						{songs.map((entry) => (
 							<SongEntry
-								key={`${entry.song.artist}-${entry.song.name}-expanded-${idx}`}
+								key={`${entry.song.artist}-${entry.song.name}-${entry.song.published_date}-expanded`}
 								song={entry.song}
 								lang={lang}
 								leaning={entry.leaning}

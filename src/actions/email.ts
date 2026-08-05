@@ -124,7 +124,7 @@ export async function sendThankYouMail(payload: SongSubmissionEmailPayload) {
 	return { status: "success" };
 }
 
-export async function sendAdminMail(payload: SongSubmissionEmailPayload) {
+async function sendAdminMail(payload: SongSubmissionEmailPayload) {
 	const mail = notificationEmail;
 	const transporter = nodemailer.createTransport({
 		service: "gmail",
