@@ -15,7 +15,7 @@ export function ConflictsColumn({ conflicts, lang }: ConflictsColumnProps) {
 
 	return (
 		<div
-			className={`col-span-full min-w-0 sm:col-span-1 sm:col-start-3 sm:order-3 sm:me-4 ${lang === "he" ? "mr-0 ml-1 sm:ml-4" : "me-1"}`}
+			className={`col-span-full min-w-0 sm:col-span-1 sm:col-start-3 sm:order-3 ${lang === "he" ? "ms-0 me-2 sm:me-6" : "me-0 ms-2 sm:ms-6"}`}
 		>
 			{conflictItems.map((conflictEntry) => {
 				const conflictDetails = conflictEntry.conflictEntry;
@@ -26,7 +26,7 @@ export function ConflictsColumn({ conflicts, lang }: ConflictsColumnProps) {
 					<div
 						key={conflictDetails.id}
 						data-conflict-id={conflictDetails.id}
-						className="mb-3 sm:mb-4"
+						className="mb-4 sm:mb-6"
 					>
 						<ConflictEntry conflict={conflictDetails} lang={lang} />
 					</div>

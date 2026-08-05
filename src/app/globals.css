@@ -5,118 +5,111 @@ body {
 	height: 100%;
 }
 
-/* System dark mode configuration - using CSS variables with media query */
 :root {
-	--color-background: white;
-	--color-foreground: #0f172a;
-	--color-card-background: #f8fafc;
-	--color-card-foreground: #0f172a;
-	--color-song-background: #f8fafc;
-	--color-song-foreground: #0f172a;
-	--color-conflict-background: #f1f5f9;
-	--color-conflict-foreground: #0f172a;
-	--color-conflict-border: #cbd5e1;
-	--color-year-foreground: #334155;
-	--color-muted-foreground: #475569;
-	--color-control-muted: #64748b;
-	--color-muted: #e2e8f0;
-	--color-accent: #0284c7;
-	--color-accent-hover: #0369a1;
-	--color-border: #e2e8f0;
-	--color-control-background: #ffffff;
-	--color-control-foreground: #334155;
-	--color-control-border: #e2e8f0;
+	--color-background: #09090b;
+	--color-foreground: #f4f4f5;
+	--color-card-background: rgba(24, 24, 27, 0.72);
+	--color-card-foreground: #f4f4f5;
+	--color-song-background: rgba(6, 43, 55, 0.55);
+	--color-song-foreground: #e0fdff;
+	--color-conflict-background: rgba(55, 10, 20, 0.55);
+	--color-conflict-foreground: #fff0f3;
+	--color-conflict-border: rgba(255, 255, 255, 0.12);
+	--color-year-foreground: #a1a1aa;
+	--color-muted-foreground: #a1a1aa;
+	--color-control-muted: #71717a;
+	--color-muted: rgba(255, 255, 255, 0.1);
+	--color-accent: #00f0ff;
+	--color-accent-hover: #33f7ff;
+	--color-border: rgba(255, 255, 255, 0.12);
+	--color-control-background: rgba(24, 24, 27, 0.8);
+	--color-control-foreground: #f4f4f5;
+	--color-control-border: rgba(255, 255, 255, 0.15);
 	--font-display:
-		system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial,
-		"Noto Sans", sans-serif;
+		var(--font-heebo), system-ui, -apple-system, "Segoe UI", Roboto,
+		"Helvetica Neue", Arial, "Noto Sans", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
 	:root {
-		--color-background: #18181b;
-		--color-foreground: #f1f5f9;
-		--color-card-background: #1e293b;
-		--color-card-foreground: #f8fafc;
-		--color-song-background: #1e293b;
-		--color-song-foreground: #f8fafc;
-		--color-conflict-background: #262626;
-		--color-conflict-foreground: #f8fafc;
-		--color-conflict-border: #475569;
-		--color-year-foreground: #cbd5e1;
-		--color-muted-foreground: #94a3b8;
-		--color-control-muted: #94a3b8;
-		--color-muted: #334155;
-		--color-accent: #38bdf8;
-		--color-accent-hover: #0ea5e9;
-		--color-border: #334155;
-		--color-control-background: #18181b;
-		--color-control-foreground: #e2e8f0;
-		--color-control-border: #334155;
+		--color-background: #f4f0e7;
+		--color-foreground: #171719;
+		--color-card-background: rgba(255, 255, 255, 0.78);
+		--color-card-foreground: #171719;
+		--color-song-background: rgba(230, 245, 255, 0.78);
+		--color-song-foreground: #0a1a2a;
+		--color-conflict-background: rgba(255, 230, 235, 0.78);
+		--color-conflict-foreground: #2a0a10;
+		--color-conflict-border: rgba(0, 0, 0, 0.1);
+		--color-year-foreground: #625d54;
+		--color-muted-foreground: #625d54;
+		--color-control-muted: #625d54;
+		--color-muted: rgba(0, 0, 0, 0.08);
+		--color-accent: #0066ff;
+		--color-accent-hover: #0052cc;
+		--color-border: rgba(0, 0, 0, 0.1);
+		--color-control-background: rgba(255, 255, 255, 0.85);
+		--color-control-foreground: #292724;
+		--color-control-border: rgba(0, 0, 0, 0.12);
 	}
 }
 
+body {
+	background-color: var(--color-background);
+	color: var(--color-foreground);
+	background-image:
+		radial-gradient(
+			circle at 50% 0%,
+			color-mix(in srgb, var(--color-accent) 20%, transparent) 0%,
+			transparent 50%
+		),
+		linear-gradient(
+			to right,
+			color-mix(in srgb, var(--color-accent) 6%, transparent) 1px,
+			transparent 1px
+		),
+		linear-gradient(
+			to bottom,
+			color-mix(in srgb, var(--color-accent) 6%, transparent) 1px,
+			transparent 1px
+		);
+	background-size:
+		100% 100%,
+		40px 40px,
+		40px 40px;
+}
+
+/* Boombox theme overrides */
 html[data-theme="boombox"] {
-	--color-background: #edeae3;
-	--color-foreground: #171719;
-	--color-card-background: #edeae3;
-	--color-card-foreground: #171719;
+	--color-background: #0e0e10;
+	--color-foreground: #edeae3;
+	--color-card-background: #0e0e10;
+	--color-card-foreground: #edeae3;
 	--color-song-background: #0e0e10;
 	--color-song-foreground: #edeae3;
-	--color-conflict-background: #f4f0e7;
-	--color-conflict-foreground: #292724;
-	--color-conflict-border: #b8b0a2;
-	--color-year-foreground: #4a443b;
-	--color-muted-foreground: #625d54;
-	--color-control-muted: #625d54;
-	--color-muted: #d7d0c4;
-	--color-accent: #b68a2c;
-	--color-accent-hover: #8f6b20;
-	--color-border: #b8b0a2;
-	--color-control-background: #f4f0e7;
-	--color-control-foreground: #292724;
-	--color-control-border: #b8b0a2;
+	--color-conflict-background: #171719;
+	--color-conflict-foreground: #edeae3;
+	--color-conflict-border: #4a453d;
+	--color-year-foreground: #d7d0c4;
+	--color-muted-foreground: #b8b0a2;
+	--color-control-muted: #b8b0a2;
+	--color-muted: #393631;
+	--color-accent: #c49a3a;
+	--color-accent-hover: #dfb957;
+	--color-border: #4a453d;
+	--color-control-background: #171719;
+	--color-control-foreground: #edeae3;
+	--color-control-border: #4a453d;
 	--font-display: var(--font-heebo), system-ui, sans-serif;
-}
-
-@media (prefers-color-scheme: dark) {
-	html[data-theme="boombox"] {
-		--color-background: #0e0e10;
-		--color-foreground: #edeae3;
-		--color-card-background: #0e0e10;
-		--color-card-foreground: #edeae3;
-		--color-song-background: #0e0e10;
-		--color-song-foreground: #edeae3;
-		--color-conflict-background: #171719;
-		--color-conflict-foreground: #edeae3;
-		--color-conflict-border: #4a453d;
-		--color-year-foreground: #d7d0c4;
-		--color-muted-foreground: #b8b0a2;
-		--color-control-muted: #b8b0a2;
-		--color-muted: #393631;
-		--color-accent: #c49a3a;
-		--color-accent-hover: #dfb957;
-		--color-border: #4a453d;
-		--color-control-background: #171719;
-		--color-control-foreground: #edeae3;
-		--color-control-border: #4a453d;
-	}
 }
 
 html[data-theme="boombox"] body {
 	background-image:
-		radial-gradient(rgba(20, 18, 15, 0.08) 0.6px, transparent 0.8px),
-		linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent 45%);
+		radial-gradient(rgba(255, 255, 255, 0.06) 0.6px, transparent 0.8px),
+		linear-gradient(135deg, rgba(255, 255, 255, 0.03), transparent 45%);
 	background-size:
 		5px 5px,
 		100% 100%;
-}
-
-@media (prefers-color-scheme: dark) {
-	html[data-theme="boombox"] body {
-		background-image:
-			radial-gradient(rgba(255, 255, 255, 0.06) 0.6px, transparent 0.8px),
-			linear-gradient(135deg, rgba(255, 255, 255, 0.03), transparent 45%);
-	}
 }
 
 html[data-theme="boombox"] h1,
@@ -129,6 +122,123 @@ html[data-theme="boombox"] h3 {
 	font-family: var(--font-display);
 }
 
+/* Glass card utility */
+.glass-card {
+	background: color-mix(in srgb, var(--color-card-background) 82%, transparent);
+	backdrop-filter: blur(16px);
+	-webkit-backdrop-filter: blur(16px);
+	border: 1px solid var(--color-border);
+	box-shadow:
+		0 4px 30px rgba(0, 0, 0, 0.25),
+		inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+@media (prefers-color-scheme: light) {
+	.glass-card {
+		box-shadow:
+			0 4px 30px rgba(0, 0, 0, 0.08),
+			inset 0 1px 0 rgba(255, 255, 255, 0.6);
+	}
+}
+
+/* Neon leaning accents */
+.neon-left {
+	border-left: 3px solid #ff2a6d;
+	box-shadow: -6px 0 18px rgba(255, 42, 109, 0.35);
+}
+
+.neon-right {
+	border-left: 3px solid #00a8ff;
+	box-shadow: -6px 0 18px rgba(0, 168, 255, 0.35);
+}
+
+.neon-center {
+	border-left: 3px solid #fcee0a;
+	box-shadow: -6px 0 18px rgba(252, 238, 10, 0.35);
+}
+
+.neon-unknown {
+	border-left: 3px solid #a1a1aa;
+	box-shadow: -6px 0 18px rgba(161, 161, 170, 0.25);
+}
+
+/* Conflict cards glow red/orange */
+.conflict-glow {
+	border-left: 3px solid #ff4d00;
+	box-shadow: -6px 0 22px rgba(255, 77, 0, 0.3);
+}
+
+/* Year spine */
+.year-spine {
+	background: linear-gradient(
+		to bottom,
+		transparent,
+		color-mix(in srgb, var(--color-accent) 60%, transparent) 20%,
+		color-mix(in srgb, var(--color-accent) 60%, transparent) 80%,
+		transparent
+	);
+	filter: drop-shadow(
+		0 0 6px color-mix(in srgb, var(--color-accent) 70%, transparent)
+	);
+}
+
+/* Equalizer animation */
+@keyframes eq-bar {
+	0%,
+	100% {
+		transform: scaleY(0.25);
+	}
+	50% {
+		transform: scaleY(1);
+	}
+}
+
+.eq-bar {
+	transform-origin: bottom;
+	animation: eq-bar 1.2s ease-in-out infinite;
+}
+
+.eq-bar:nth-child(2) {
+	animation-duration: 0.9s;
+	animation-delay: 0.1s;
+}
+
+.eq-bar:nth-child(3) {
+	animation-duration: 1.1s;
+	animation-delay: 0.2s;
+}
+
+/* Control bar */
+.control-bar {
+	background: color-mix(
+		in srgb,
+		var(--color-control-background) 86%,
+		transparent
+	);
+	backdrop-filter: blur(18px);
+	-webkit-backdrop-filter: blur(18px);
+	border: 1px solid var(--color-control-border);
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+@media (prefers-color-scheme: light) {
+	.control-bar {
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+	}
+}
+
+/* Floating action buttons */
+.fab {
+	background: linear-gradient(
+		135deg,
+		var(--color-accent),
+		var(--color-accent-hover)
+	);
+	color: #09090b;
+	box-shadow: 0 0 20px color-mix(in srgb, var(--color-accent) 50%, transparent);
+}
+
+/* Boombox legacy card overrides */
 html[data-theme="boombox"] .boombox-song-card {
 	border-radius: 0.2rem;
 	box-shadow:
@@ -198,7 +308,7 @@ html[data-theme="boombox"] .boombox-conflict-card {
 /* Ensure proper RTL font rendering for Hebrew */
 [dir="rtl"] {
 	font-family:
-		system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial,
-		"Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-		"Segoe UI Symbol", "Noto Color Emoji";
+		var(--font-heebo), system-ui, -apple-system, "Segoe UI", Roboto,
+		"Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }

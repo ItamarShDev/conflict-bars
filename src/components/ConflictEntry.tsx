@@ -24,7 +24,6 @@ interface ConflictTimelineEntryProps {
 
 export function ConflictEntry({ conflict, lang }: ConflictTimelineEntryProps) {
 	const t = translations[lang];
-	// Use Hebrew translations if language is Hebrew, otherwise use English
 	const title =
 		lang === "he" && conflict.title_he ? conflict.title_he : conflict.title;
 	const reason =
@@ -42,10 +41,14 @@ export function ConflictEntry({ conflict, lang }: ConflictTimelineEntryProps) {
 
 	return (
 		<div
-			className={`boombox-conflict-card relative z-0 mx-0 rounded-lg border border-(--color-conflict-border) bg-(--color-conflict-background) p-3 text-(--color-conflict-foreground) shadow-sm transition-all duration-200 hover:z-50 hover:ring-2 hover:ring-(--color-accent) hover:shadow-lg focus:outline-none focus:z-50 focus:ring-2 focus:ring-(--color-accent) focus:shadow-lg sm:ml-2 sm:mr-10 sm:p-5 text-start`}
-			style={{ borderColor: color }}
+			className="boombox-conflict-card glass-card relative z-0 rounded-xl border border-(--color-conflict-border) bg-(--color-conflict-background) p-4 text-(--color-conflict-foreground) shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_40px_rgba(255,77,0,0.12)] focus:outline-none focus:ring-2 focus:ring-(--color-accent) sm:p-5 text-start"
+			style={{
+				borderLeftWidth: 3,
+				borderLeftColor: color,
+				boxShadow: `-6px 0 22px color-mix(in srgb, ${color} 30%, transparent)`,
+			}}
 		>
-			<div className="flex gap-2 sm:gap-3 items-start h-full">
+			<div className="flex gap-2 items-start h-full sm:gap-3">
 				<div className="flex-1 min-w-0 space-y-3 sm:space-y-4">
 					<div>
 						<ConflictTimestamp timestamp={conflict.timestamp} />

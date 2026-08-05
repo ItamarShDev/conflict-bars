@@ -15,23 +15,23 @@ export function ModalHeader({
 }: ModalHeaderProps) {
 	return (
 		<div
-			className={`flex items-start justify-between ${lang === "he" ? "flex-row-reverse" : ""}`}
+			className={`flex items-start justify-between rounded-2xl border border-(--color-control-border) bg-(--color-control-background)/80 p-4 backdrop-blur-md sm:p-5 ${lang === "he" ? "flex-row-reverse" : ""}`}
 		>
 			<button
 				type="button"
 				onClick={onClose}
-				className="rounded-full border border-white/30 bg-white/10 px-4 py-1 text-sm font-medium text-white transition hover:bg-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+				className="rounded-full border border-(--color-control-border) bg-(--color-control-background) px-4 py-1.5 text-sm font-black text-(--color-foreground) transition hover:border-(--color-accent) hover:text-(--color-accent) focus:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent)"
 			>
 				{closeLabel}
 			</button>
 			<div>
 				<h2
-					className={`mt-1 text-2xl font-semibold text-white ${lang === "he" ? "text-right" : ""}`}
+					className={`font-display text-2xl font-black text-(--color-foreground) ${lang === "he" ? "text-right" : ""}`}
 					dir={lang === "he" ? "rtl" : undefined}
 				>
 					{year}
 				</h2>
-				<p className="text-sm uppercase tracking-wide text-slate-200/80">
+				<p className="text-sm font-bold uppercase tracking-wider text-(--color-muted-foreground)">
 					{songCountText}
 				</p>
 			</div>

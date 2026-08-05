@@ -22,7 +22,7 @@ export function SongsColumn({
 
 	return (
 		<div
-			className={`col-span-full min-w-0 mb-4 sm:col-span-1 sm:col-start-1 sm:order-1 sm:me-4 ${lang === "he" ? "me-0 ms-1 sm:ms-4" : "me-1"}`}
+			className={`col-span-full min-w-0 sm:col-span-1 sm:col-start-1 sm:order-1 ${lang === "he" ? "me-0 ms-2 sm:ms-6" : "me-2 sm:me-6"}`}
 			aria-hidden={songItems.length === 0}
 		>
 			<SongStack

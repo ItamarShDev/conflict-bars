@@ -24,7 +24,7 @@ export function YearGroup({
 	const conflicts = entries.filter((e) => e.type === "conflict");
 
 	return (
-		<div className="col-span-full grid min-w-0 grid-cols-1 gap-0 sm:grid-cols-subgrid">
+		<div className="col-span-full grid min-w-0 grid-cols-1 gap-2 sm:grid-cols-subgrid sm:gap-0">
 			<YearMarker year={year} showYear={showYear} yearColors={yearColors} />
 			<ConflictsColumn lang={lang} conflicts={conflicts} />
 			<SongsColumn

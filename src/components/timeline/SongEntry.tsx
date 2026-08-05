@@ -22,6 +22,14 @@ interface SongTimelineEntryProps {
 	highlightTerm?: string;
 }
 
+const NEON_BY_LEANING: Record<"left" | "right" | "center" | "unknown", string> =
+	{
+		left: "neon-left",
+		right: "neon-right",
+		center: "neon-center",
+		unknown: "neon-unknown",
+	};
+
 export function SongEntry({
 	song,
 	lang,
@@ -34,13 +42,7 @@ export function SongEntry({
 	const submitSong = useMutation(api.mutations.submitSongEditSuggestion);
 	const [isEditModalOpen, setIsEditModalOpen] = useState(false);
 	const t = translations[lang];
-	const leaningColor: Record<"left" | "right" | "center" | "unknown", string> =
-		{
-			left: "border-red-600",
-			right: "border-blue-600",
-			center: "border-yellow-400",
-			unknown: "border-gray-600",
-		};
+
 	const songObj = song as FileSong & { _id?: Id<"songs"> };
 	const isSongObject = typeof song === "object" && song !== null;
 	const hasSongIdentity =
@@ -59,24 +61,21 @@ export function SongEntry({
 			? songObj.links
 			: undefined;
 
-	const orientationClass =
-		lang === "he" ? "ml-2 sm:ml-4 mr-auto" : "mr-2 sm:mr-4 ml-auto";
 	const containerClasses = [
-		"boombox-song-card relative w-full min-w-0 sm:max-w-md rounded-lg border border-(--color-border) bg-(--color-song-background) text-(--color-song-foreground) shadow-sm transition-transform duration-200 overflow-visible",
-		leaningColor[leaning],
-		orientationClass,
-		showMarginTop ? "mt-4" : "",
+		"boombox-song-card glass-card relative w-full min-w-0 rounded-xl text-(--color-song-foreground) transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_40px_rgba(0,240,255,0.12)]",
+		NEON_BY_LEANING[leaning],
+		showMarginTop ? "mt-3 sm:mt-4" : "",
 		isCompact ? "p-3 space-y-2" : "p-4 sm:p-5 space-y-3 sm:space-y-4",
 		className ?? "",
 	]
 		.filter(Boolean)
 		.join(" ");
 	const titleClass = isCompact
-		? "text-lg font-bold leading-snug text-(--color-song-foreground)"
-		: "text-xl font-bold leading-snug text-(--color-song-foreground)";
+		? "text-lg font-black leading-snug text-(--color-song-foreground)"
+		: "text-xl font-black leading-snug text-(--color-song-foreground)";
 	const artistClass = isCompact
-		? "text-[0.7rem] uppercase tracking-wide text-(--color-muted-foreground)"
-		: "text-sm text-(--color-muted-foreground)";
+		? "text-[0.7rem] font-bold uppercase tracking-widest text-(--color-muted-foreground)"
+		: "text-sm font-bold uppercase tracking-wider text-(--color-muted-foreground)";
 
 	const lyricContent =
 		lang === "he"
@@ -100,7 +99,7 @@ export function SongEntry({
 			nodes.push(
 				<mark
 					key={`h-${offset}`}
-					className="bg-yellow-200 text-slate-900 dark:bg-yellow-300/60 dark:text-slate-900"
+					className="rounded-sm bg-(--color-accent) px-0.5 font-bold text-[#09090b]"
 				>
 					{match}
 				</mark>,
@@ -123,7 +122,7 @@ export function SongEntry({
 						e.stopPropagation();
 						setIsEditModalOpen(true);
 					}}
-					className="absolute start-2 top-2 z-30 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-blue-500 text-white opacity-100 shadow-lg transition-opacity hover:bg-blue-600 sm:start-1 sm:top-1 sm:h-8 sm:w-8 sm:-translate-x-1/2 sm:-translate-y-1/2 sm:opacity-0 sm:group-hover:opacity-100"
+					className="absolute start-3 top-3 z-30 flex h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-(--color-accent) text-[#09090b] shadow-[0_0_12px_rgba(0,240,255,0.5)] transition hover:scale-110 hover:bg-(--color-accent-hover) sm:start-2 sm:top-2 sm:h-8 sm:w-8 sm:-translate-x-1/2 sm:-translate-y-1/2 sm:opacity-0 sm:group-hover:opacity-100"
 					title={t.editSuggestion.buttonTitle}
 					aria-label={t.editSuggestion.buttonAria}
 				>
@@ -144,7 +143,7 @@ export function SongEntry({
 				</button>
 				{hasSongIdentity && (
 					<div
-						className={`ps-14 sm:ps-0 ${
+						className={`ps-12 sm:ps-0 ${
 							lang === "he"
 								? isCompact
 									? "flex flex-col gap-0.5"
@@ -173,9 +172,9 @@ export function SongEntry({
 				)}
 
 				{!isCompact && lyricSample && lyricContent && (
-					<div className="pt-2 border-t border-(--color-border)">
+					<div className="pt-3 border-t border-(--color-border)">
 						<p
-							className={`text-sm text-(--color-muted-foreground) leading-relaxed italic text-start`}
+							className={`text-sm leading-relaxed italic text-(--color-muted-foreground) text-start`}
 							dir={lang === "he" && lyricSample?.hebrew ? "rtl" : "ltr"}
 						>
 							"{highlightText(lyricContent)}"
@@ -185,20 +184,35 @@ export function SongEntry({
 
 				{!isCompact && links && (
 					<div
-						className={`flex gap-3 text-sm pt-2 border-t border-(--color-border) ${lang === "he" ? "flex-row-reverse" : ""} no-underline hover:underline text-(--color-accent) hover:text-(--color-accent-hover) font-medium`}
+						className={`flex flex-wrap gap-2 pt-3 border-t border-(--color-border) ${lang === "he" ? "flex-row-reverse" : ""}`}
 					>
 						{links?.lyrics && (
-							<a href={links.lyrics} target="_blank" rel="noreferrer">
+							<a
+								href={links.lyrics}
+								target="_blank"
+								rel="noreferrer"
+								className="rounded-full border border-(--color-control-border) bg-(--color-control-background) px-3 py-1 text-xs font-bold text-(--color-accent) transition hover:border-(--color-accent) hover:bg-(--color-accent) hover:text-[#09090b] hover:shadow-[0_0_12px_rgba(0,240,255,0.25)]"
+							>
 								{t.lyrics}
 							</a>
 						)}
 						{links?.song_info && (
-							<a href={links.song_info} target="_blank" rel="noreferrer">
+							<a
+								href={links.song_info}
+								target="_blank"
+								rel="noreferrer"
+								className="rounded-full border border-(--color-control-border) bg-(--color-control-background) px-3 py-1 text-xs font-bold text-(--color-accent) transition hover:border-(--color-accent) hover:bg-(--color-accent) hover:text-[#09090b] hover:shadow-[0_0_12px_rgba(0,240,255,0.25)]"
+							>
 								{t.info}
 							</a>
 						)}
 						{links?.youtube && (
-							<a href={links.youtube} target="_blank" rel="noreferrer">
+							<a
+								href={links.youtube}
+								target="_blank"
+								rel="noreferrer"
+								className="rounded-full border border-(--color-control-border) bg-(--color-control-background) px-3 py-1 text-xs font-bold text-(--color-accent) transition hover:border-(--color-accent) hover:bg-(--color-accent) hover:text-[#09090b] hover:shadow-[0_0_12px_rgba(0,240,255,0.25)]"
+							>
 								{t.youtube}
 							</a>
 						)}
@@ -220,19 +234,19 @@ export function SongEntry({
 						aria-label={t.submitSongForm.modalCloseAria}
 					/>
 					<div
-						className="relative z-10 w-full max-w-2xl overflow-y-auto rounded-xl border border-neutral-700 bg-neutral-950 p-6 pb-8 shadow-2xl max-h-[calc(100vh-1rem)]"
+						className="relative z-10 w-full max-w-2xl overflow-y-auto rounded-2xl border border-(--color-control-border) glass-card p-6 pb-8 max-h-[calc(100vh-1rem)]"
 						style={{
 							paddingBottom: "calc(env(safe-area-inset-bottom, 0px) + 2rem)",
 						}}
 					>
 						<div className="mb-4 flex items-center justify-between">
-							<h2 className="text-lg font-semibold">
+							<h2 className="text-lg font-black">
 								{t.submitSongForm.editTitle}
 							</h2>
 							<button
 								type="button"
 								onClick={() => setIsEditModalOpen(false)}
-								className="rounded-full p-2 text-neutral-400 transition hover:bg-neutral-800 hover:text-neutral-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300"
+								className="rounded-full p-2 text-(--color-muted-foreground) transition hover:bg-(--color-muted) hover:text-(--color-foreground) focus:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent)"
 								aria-label={t.submitSongForm.modalCloseAria}
 							>
 								&#x2715;

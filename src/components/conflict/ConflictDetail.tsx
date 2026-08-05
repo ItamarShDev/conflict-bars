@@ -6,11 +6,11 @@ export function ConflictDetail({
 	content: string;
 }) {
 	return (
-		<div className="text-sm text-(--color-conflict-foreground) leading-relaxed">
-			<strong className="block text-(--color-conflict-foreground) font-semibold mb-1">
+		<div className="text-sm leading-relaxed text-(--color-conflict-foreground)">
+			<strong className="mb-1 block text-xs font-black uppercase tracking-wider text-(--color-foreground)">
 				{label}
 			</strong>
-			<p className="text-[var(--color-muted-foreground)]">{content}</p>
+			<p className="text-(--color-muted-foreground)">{content}</p>
 		</div>
 	);
 }

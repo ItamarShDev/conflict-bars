@@ -41,39 +41,39 @@ export function YearMarker({
 		: undefined;
 	return (
 		<div className="relative col-span-full min-w-0 sm:col-span-1 sm:col-start-2 sm:order-2">
-			<div className="flex items-center gap-3 py-1 sm:hidden">
+			<div className="flex items-center gap-3 py-2 sm:hidden">
 				<div
-					className="h-0.5 min-w-6 flex-1 rounded-full bg-(--color-border)"
+					className="h-1 min-w-8 flex-1 rounded-full bg-(--color-border)"
 					style={hasColors ? { background: horizontalGradient } : undefined}
 					aria-hidden
 				/>
 				{showYear && (
-					<div className="font-display text-center text-sm font-semibold tabular-nums text-(--color-year-foreground)">
+					<div className="font-display rounded-full bg-(--color-control-background) px-3 py-1 text-center text-sm font-black tabular-nums tracking-tight text-(--color-year-foreground) ring-1 ring-(--color-border)">
 						{year}
 					</div>
 				)}
 				<div
-					className="h-0.5 min-w-6 flex-1 rounded-full bg-(--color-border)"
+					className="h-1 min-w-8 flex-1 rounded-full bg-(--color-border)"
 					style={hasColors ? { background: horizontalGradient } : undefined}
 					aria-hidden
 				/>
 			</div>
-			<div className="relative hidden h-full min-h-8 flex-col items-center gap-3 sm:flex">
+			<div className="relative hidden h-full min-h-10 flex-col items-center gap-4 sm:flex">
 				{hasColors ? (
 					<div
-						className="absolute inset-y-0 z-0 w-0.5 rounded-full"
+						className="year-spine absolute inset-y-0 z-0 w-1 rounded-full"
 						style={{ background: gradient }}
 					/>
 				) : (
-					<div className="absolute inset-y-0 z-0 w-0.5 border border-(--color-border)" />
+					<div className="year-spine absolute inset-y-0 z-0 w-1 rounded-full opacity-40" />
 				)}
 				{showYear && (
-					<div className="font-display z-10 bg-(--color-background) text-center text-sm font-semibold tabular-nums text-(--color-year-foreground)">
+					<div className="font-display z-10 rounded-full bg-(--color-background) px-3 py-1 text-center text-lg font-black tabular-nums tracking-tighter text-(--color-year-foreground) ring-1 ring-(--color-border) shadow-[0_0_15px_rgba(0,240,255,0.15)]">
 						{year}
 					</div>
 				)}
 				<div
-					className="z-10 h-3 w-3 rounded-full border-2 border-white bg-slate-400 dark:border-zinc-900"
+					className="z-10 h-4 w-4 rounded-full border-2 border-(--color-background) bg-(--color-accent) shadow-[0_0_12px_rgba(0,240,255,0.6)]"
 					aria-hidden
 				/>
 			</div>

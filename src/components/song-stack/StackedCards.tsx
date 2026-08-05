@@ -79,7 +79,7 @@ export function StackedCards({
 							lang={lang}
 							leaning={entry.leaning}
 							showMarginTop={idx === 0}
-							className={`${isExpanded ? "" : "pointer-events-none px-3 py-3 text-sm"} ${lang === "he" ? "ml-4 mr-auto" : "mr-4 ml-auto"}`}
+							className={`${isExpanded ? "" : "pointer-events-none px-3 py-3 text-sm"}`}
 							variant="compact"
 							highlightTerm={highlightTerm}
 						/>

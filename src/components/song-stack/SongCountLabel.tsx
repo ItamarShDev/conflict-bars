@@ -29,9 +29,9 @@ export function SongCountLabel({
 	songsLabel,
 }: SongCountLabelProps) {
 	return (
-		<div className="mt-3 flex items-center gap-2 text-xs font-medium text-(--color-muted-foreground)">
+		<div className="mt-3 flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-(--color-muted-foreground)">
 			<span
-				className={`rounded-full bg-(--color-muted)/70 px-2 py-0.5 text-(--color-foreground)/80 ${lang === "he" ? "text-right" : ""}`}
+				className="rounded-full bg-(--color-accent)/10 px-3 py-1 text-(--color-accent) ring-1 ring-(--color-accent)/30"
 				dir={lang === "he" ? "rtl" : undefined}
 			>
 				{getSongCountText(lang, songCount, songsLabel)}

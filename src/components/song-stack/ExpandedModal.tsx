@@ -32,7 +32,7 @@ export function ExpandedModal({
 	return (
 		<dialog
 			open={isExpanded}
-			className={`fixed inset-0 z-50 flex h-screen w-full items-center justify-center bg-transparent p-0 backdrop-grayscale-100 backdrop-blur-sm transition-all duration-300 ${isExpanded ? "opacity-100" : "opacity-0"}`}
+			className={`fixed inset-0 z-50 flex h-screen w-full items-center justify-center bg-black/70 p-0 backdrop-blur-sm transition-all duration-300 ${isExpanded ? "opacity-100" : "opacity-0"}`}
 			aria-modal="true"
 			onCancel={(event) => {
 				event.preventDefault();
@@ -50,7 +50,7 @@ export function ExpandedModal({
 			}}
 		>
 			<div
-				className={`mx-auto flex max-h-[calc(100vh-1rem)] min-w-0 w-full max-w-5xl flex-col overflow-hidden px-3 py-6 transition-all duration-500 ease-out sm:px-4 sm:py-10 ${isExpanded ? "translate-y-0 scale-100 opacity-100" : "translate-y-6 scale-95 opacity-0"}`}
+				className={`glass-card mx-auto flex max-h-[calc(100vh-1rem)] min-w-0 w-full max-w-5xl flex-col overflow-hidden rounded-2xl border border-(--color-control-border) px-3 py-5 transition-all duration-500 ease-out sm:px-5 sm:py-8 ${isExpanded ? "translate-y-0 scale-100 opacity-100" : "translate-y-6 scale-95 opacity-0"}`}
 				role="document"
 			>
 				<ModalHeader
@@ -60,7 +60,7 @@ export function ExpandedModal({
 					closeLabel={t.stack.close}
 					onClose={onClose}
 				/>
-				<div className="mt-4 min-h-0 flex-1 overflow-x-hidden overflow-y-auto px-1 pt-4 sm:mt-8 sm:px-2 sm:pt-6">
+				<div className="mt-4 min-h-0 flex-1 overflow-x-hidden overflow-y-auto px-1 pt-4 sm:mt-6 sm:px-2 sm:pt-6">
 					<div className="grid min-w-0 gap-4 sm:gap-6 md:grid-cols-2">
 						{songs.map((entry) => (
 							<SongEntry
@@ -69,7 +69,7 @@ export function ExpandedModal({
 								lang={lang}
 								leaning={entry.leaning}
 								showMarginTop={false}
-								className="ml-0 mr-0 w-full max-w-full bg-(--color-card-background) text-start shadow-xl border border-(--color-border)"
+								className="ml-0 mr-0 w-full max-w-full"
 								variant="full"
 								highlightTerm={highlightTerm}
 							/>
