@@ -1,4 +1,5 @@
 import type { FileSong } from "../../../timeline/types";
+import { useTheme } from "../ThemeProvider";
 import { SongEntry } from "../timeline/SongEntry";
 
 type SongStackItem = {
@@ -17,6 +18,7 @@ type StackedCardsProps = {
 
 const STACK_TRANSLATE = -40;
 const STACK_ROTATIONS = [-1.8, 1.2, -0.9, 1.6];
+const BOOMBOX_ROTATIONS = [-2.4, 1.8, -1.3, 2.1];
 const STACK_SCALES = [0.94, 0.96, 0.92, 0.95];
 
 declare module "react" {
@@ -34,6 +36,8 @@ export function StackedCards({
 	isOverlayVisible,
 	highlightTerm,
 }: StackedCardsProps) {
+	const { theme } = useTheme();
+	const rotations = theme === "boombox" ? BOOMBOX_ROTATIONS : STACK_ROTATIONS;
 	return (
 		<div
 			className={`transition-all duration-300 ease-out pt-6 ${isOverlayVisible ? "pointer-events-none" : ""} ${isExpanded ? "opacity-0 scale-95" : "opacity-100 scale-100"}`}
@@ -45,11 +49,11 @@ export function StackedCards({
 					0,
 				);
 
-				const rotation = STACK_ROTATIONS[rotationSeed % STACK_ROTATIONS.length];
+				const rotation = rotations[rotationSeed % rotations.length];
 				const yTranslate = (idx - songs.length / 2) * STACK_TRANSLATE;
 
 				const hoveredRotation =
-					STACK_ROTATIONS[(rotationSeed + 1) % STACK_ROTATIONS.length];
+					rotations[(rotationSeed + 1) % rotations.length];
 
 				const rotationStyle = isExpanded ? "0deg" : `${rotation}deg`;
 				const hoveredRotationStyle = isExpanded

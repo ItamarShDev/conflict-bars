@@ -42,7 +42,7 @@ export function ConflictEntry({ conflict, lang }: ConflictTimelineEntryProps) {
 
 	return (
 		<div
-			className={`relative z-0 mx-0 bg-slate-100 dark:bg-neutral-800 border-slate-300 dark:border-slate-600 border rounded-lg p-3 sm:ml-2 sm:mr-10 sm:p-5 shadow-sm transition-all duration-200 hover:z-50 hover:ring-2 hover:ring-(--color-accent) hover:shadow-lg focus:outline-none focus:z-50 focus:ring-2 focus:ring-(--color-accent) focus:shadow-lg text-start`}
+			className={`boombox-conflict-card relative z-0 mx-0 rounded-lg border border-(--color-conflict-border) bg-(--color-conflict-background) p-3 text-(--color-conflict-foreground) shadow-sm transition-all duration-200 hover:z-50 hover:ring-2 hover:ring-(--color-accent) hover:shadow-lg focus:outline-none focus:z-50 focus:ring-2 focus:ring-(--color-accent) focus:shadow-lg sm:ml-2 sm:mr-10 sm:p-5 text-start`}
 			style={{ borderColor: color }}
 		>
 			<div className="flex gap-2 sm:gap-3 items-start h-full">
@@ -53,7 +53,7 @@ export function ConflictEntry({ conflict, lang }: ConflictTimelineEntryProps) {
 						<ConflictReason reason={reason} />
 					</div>
 					{(description || effects) && (
-						<div className="space-y-2 sm:space-y-3 pt-2 border-t border-slate-300 dark:border-slate-500 text-start">
+						<div className="space-y-2 border-t border-(--color-conflict-border) pt-2 text-start sm:space-y-3">
 							{description && (
 								<ConflictDetail label={t.description} content={description} />
 							)}
@@ -62,7 +62,7 @@ export function ConflictEntry({ conflict, lang }: ConflictTimelineEntryProps) {
 							)}
 						</div>
 					)}
-					<div className="pt-2 border-t border-slate-300 dark:border-slate-500">
+					<div className="border-t border-(--color-conflict-border) pt-2">
 						<ConflictLinks
 							wikipediaUrl={conflict.wikipedia_url}
 							wikipediaLabel={t.wikipedia}

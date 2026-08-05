@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Heebo } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import { ConvexClientProvider } from "@/components/ConvexClientProvider";
@@ -15,6 +15,12 @@ const geistMono = Geist_Mono({
 	subsets: ["latin"],
 });
 
+const heebo = Heebo({
+	variable: "--font-heebo",
+	subsets: ["latin", "hebrew"],
+	weight: ["800", "900"],
+});
+
 export const metadata: Metadata = {
 	title: "Conflict Bars",
 	description:
@@ -27,9 +33,10 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en">
+		<html lang="en" className={heebo.variable} suppressHydrationWarning>
 			<head>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<script>{`(() => { try { const theme = localStorage.getItem("conflict-bars-theme"); if (theme === "boombox") document.documentElement.dataset.theme = theme; } catch {} })();`}</script>
 			</head>
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased bg-(--color-background) text-(--color-foreground)`}

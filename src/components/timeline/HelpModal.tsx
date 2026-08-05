@@ -36,7 +36,7 @@ export function HelpModal({ translations, lang }: HelpModalProps) {
 		<>
 			<button
 				type="button"
-				className="fixed end-4 top-6 z-50 flex h-11 w-11 items-center justify-center rounded-full bg-neutral-800 text-lg font-semibold text-white shadow-lg transition hover:bg-neutral-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300 sm:end-6"
+				className="boombox-help-trigger fixed end-4 top-6 z-50 flex h-11 w-11 items-center justify-center rounded-full bg-neutral-800 text-lg font-semibold text-white shadow-lg transition hover:bg-neutral-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300 sm:end-6"
 				onClick={() => setIsOpen(true)}
 				aria-label={translations.buttonAria}
 				aria-haspopup="dialog"

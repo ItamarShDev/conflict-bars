@@ -1,6 +1,11 @@
 export const translations = {
 	en: {
 		title: "Conflict Bars",
+		themeToggle: {
+			label: "Visual theme",
+			classic: "Classic",
+			boombox: "Boombox",
+		},
 		subtitle: "Direction is the political leaning of the artist",
 		search: {
 			label: "Search songs",
@@ -94,6 +99,11 @@ export const translations = {
 	},
 	he: {
 		title: "חרוזים מסוכסכים",
+		themeToggle: {
+			label: "ערכת נושא",
+			classic: "קלאסי",
+			boombox: "בומבוקס",
+		},
 		subtitle: "בכיוון הנטייה הפוליטית",
 		search: {
 			label: "חיפוש שירים",

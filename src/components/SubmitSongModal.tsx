@@ -41,7 +41,7 @@ export function SubmitSongModal({
 			<button
 				type="button"
 				onClick={() => setIsOpen(true)}
-				className="fixed bottom-4 end-4 z-40 min-h-11 rounded-full bg-emerald-500 px-4 py-2 text-sm font-semibold text-black shadow-lg transition hover:bg-emerald-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300 sm:bottom-6 sm:end-6 sm:min-h-0 sm:px-5 sm:py-3 sm:text-base"
+				className="boombox-submit-trigger fixed bottom-4 end-4 z-40 min-h-11 rounded-full bg-emerald-500 px-4 py-2 text-sm font-semibold text-black shadow-lg transition hover:bg-emerald-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300 sm:bottom-6 sm:end-6 sm:min-h-0 sm:px-5 sm:py-3 sm:text-base"
 			>
 				{label}
 			</button>
