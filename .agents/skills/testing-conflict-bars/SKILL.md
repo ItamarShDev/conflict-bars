@@ -16,12 +16,51 @@ If no `npx convex dev` login is available, you can unblock the page with a throw
 
 1. Write a small `node:http` server on `127.0.0.1:3210` that answers `POST /api/query` with
    `{"status":"success","value": <array of events>}`. Events can be converted from the legacy
-   `timeline/conflicts.ts` data into the Convex event shape (`_id`, `_creationTime`, `title`, `title_he`, `reason`, `reason_he`, …).
+   `timeline/conflicts.ts` data into the Convex event shape (`_id`, `_creationTime`, `start`, `end`, `title`, `title_he`, `reason`, `reason_he`, …).
 2. Create an untracked `.env.local` in the repo root:
    ```
    NEXT_PUBLIC_CONVEX_URL=http://127.0.0.1:3210
    CONVEX_URL=http://127.0.0.1:3210
    ```
+
+### Shim request/response details
+
+`preloadQuery` (convex/nextjs) uses `ConvexHttpClient` and sends a `POST /api/query` body like:
+
+```json
+{
+  "path": "events/getAllEvents",
+  "format": "convex_encoded_json",
+  "args": [{}]
+}
+```
+
+A working shim only needs to return the Convex-encoded JSON value:
+
+```js
+import { convexToJson } from "/path/to/repo/node_modules/convex/dist/esm/values/index.js";
+
+const events = legacyConflicts.map((c, i) => ({
+  _id: `event${i}`,
+  _creationTime: Date.now(),
+  start: c.time.start,
+  end: c.time.end,
+  title: c.conflict.title,
+  title_he: c.conflict.title_he,
+  reason: c.conflict.reason,
+  reason_he: c.conflict.reason_he,
+  description: c.conflict.description,
+  description_he: c.conflict.description_he,
+  effects: c.conflict.effects,
+  effects_he: c.conflict.effects_he,
+  wikipedia_url: c.conflict.wikipedia_url,
+}));
+
+const value = convexToJson(events); // plain JSON array of objects for string-only fields
+res.end(JSON.stringify({ status: "success", value }));
+```
+
+No `WebSocket` support is needed for the server render; the browser `ConvexProvider` will attempt WebSocket reconnection, but read-only timeline rendering still works.
 
 **Known limitation:** the browser Convex client (`useQuery` / `useMutation`) talks over a **WebSocket**, which an HTTP shim cannot serve. The console will loop
 `WebSocket closed with code 1006 / Attempting reconnect`. Consequences:
@@ -61,6 +100,15 @@ typically `29229` on the Devin box; check `curl http://localhost:29229/json/list
 **Important:** resizing or maximising the Chrome window **clears** the override — re-apply it after
 any `wmctrl` call. Shrinking the window to ~532px wide while emulating 375px makes the recording
 look like a phone.
+
+### Devin mouse-coordinate gotcha
+
+On a 1600×1200 display, the test harness maps its 1024×768 coordinate space to the real screen, but
+clicks near the browser window chrome (close/maximise buttons or title bar) can hit the Chrome frame
+instead of the intended page control. When the recording needs precise clicks on small fixed controls
+(e.g. the `?` help button or `Submit a song` button), prefer driving the click with
+`document.querySelector(...).click()` via the DevTools console and capturing the resulting state
+with screenshots. Always verify the actual cursor/element with `document.elementFromPoint(x, y)`.
 
 ## Measuring horizontal overflow honestly
 
