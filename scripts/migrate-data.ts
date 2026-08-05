@@ -203,8 +203,7 @@ async function run() {
 
 	// Phase 1: Ensure all artists from political affiliation file exist in database
 	console.log("📊 Phase 1: Creating/updating all artists in database...");
-	const artistsCreated = 0;
-	let artistsUpdated = 0;
+	let artistsEnsured = 0;
 
 	for (const [artistName, artistData] of Object.entries(
 		artistPoliticalAffiliation,
@@ -213,7 +212,7 @@ async function run() {
 			// Always use forceUpdate=true in Phase 1 to ensure Hebrew names are extracted and saved
 			const artistId = await ensureArtist(artistName, artistData, true);
 			if (artistId) {
-				artistsUpdated++;
+				artistsEnsured++;
 				console.log(`✓ Artist ensured: ${artistName}`);
 			}
 		} catch (error) {
@@ -221,9 +220,7 @@ async function run() {
 		}
 	}
 
-	console.log(
-		`\n✅ Phase 1 complete: ${artistsCreated} created, ${artistsUpdated} updated\n`,
-	);
+	console.log(`\n✅ Phase 1 complete: ${artistsEnsured} artists ensured\n`);
 
 	// Phase 2: Migrate songs
 	console.log("🎵 Phase 2: Migrating songs...");
@@ -251,12 +248,12 @@ async function run() {
 		`\n✅ Phase 2 complete: ${successCount} succeeded, ${errorCount} failed\n`,
 	);
 	console.log(
-		`\n🎉 Total migration complete:\n   - ${artistsCreated + artistsUpdated} artists\n   - ${successCount} songs\n`,
+		`\n🎉 Total migration complete:\n   - ${artistsEnsured} artists\n   - ${successCount} songs\n`,
 	);
 
 	if (!forceUpdate && errorCount > 0) {
 		console.log(
-			"💡 Tip: Run with --force flag to overwrite conflicting data:\n   npm run db:migrate -- --force\n",
+			"💡 Tip: Run with --force flag to overwrite conflicting data:\n   npm run migrate:force\n",
 		);
 	}
 
