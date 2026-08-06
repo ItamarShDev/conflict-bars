@@ -18,23 +18,20 @@ const DECADE_LABELS: Record<Decade, string> = {
 
 const LEANING_STYLES: Record<Leaning, { active: string; inactive: string }> = {
 	left: {
-		active: "bg-[#c84d60] text-white border-[#c84d60]",
-		inactive:
-			"border-[#c84d60]/50 text-[#c84d60] hover:bg-[#c84d60]/10 dark:text-[#d66a7a]",
+		active: "bg-[#e63946] text-white border-[#e63946]",
+		inactive: "border-[#e63946] text-[#e63946] hover:bg-[#e63946]/10",
 	},
 	right: {
-		active: "bg-[#3d8ec7] text-white border-[#3d8ec7]",
-		inactive:
-			"border-[#3d8ec7]/50 text-[#3d8ec7] hover:bg-[#3d8ec7]/10 dark:text-[#6aa9d6]",
+		active: "bg-[#2563eb] text-white border-[#2563eb]",
+		inactive: "border-[#2563eb] text-[#2563eb] hover:bg-[#2563eb]/10",
 	},
 	center: {
-		active: "bg-[#c9a32b] text-[#1c1c19] border-[#c9a32b]",
-		inactive:
-			"border-[#c9a32b]/50 text-[#a8831e] hover:bg-[#c9a32b]/10 dark:text-[#d4b44a]",
+		active: "bg-[#f59e0b] text-[#161613] border-[#f59e0b]",
+		inactive: "border-[#f59e0b] text-[#b45309] hover:bg-[#f59e0b]/10",
 	},
 	unknown: {
-		active: "bg-[#7d7872] text-[#1c1c19] border-[#7d7872]",
-		inactive: "border-[#7d7872]/50 text-[#7d7872] hover:bg-[#7d7872]/10",
+		active: "bg-[#737373] text-[#f5f3ee] border-[#737373]",
+		inactive: "border-[#737373] text-[#737373] hover:bg-[#737373]/10",
 	},
 };
 
@@ -83,13 +80,15 @@ export function FilterPanel({
 	const leaningLabel = (leaning: Leaning) => t.leaning[leaning];
 
 	return (
-		<div className={`w-full ${lang === "he" ? "text-right" : "text-left"}`}>
+		<div
+			className={`mt-4 w-full ${lang === "he" ? "text-right" : "text-left"}`}
+		>
 			<div className="flex items-center gap-3">
 				<button
 					type="button"
 					onClick={() => setIsOpen((prev) => !prev)}
 					aria-expanded={isOpen}
-					className="flex min-h-10 items-center gap-2 rounded-full border border-(--color-control-border) bg-(--color-control-background) px-4 py-2 text-sm font-bold uppercase tracking-wide text-(--color-control-foreground) shadow-sm transition hover:border-(--color-accent) hover:text-(--color-accent)"
+					className="flex min-h-10 items-center gap-2 border-2 border-(--color-control-border) bg-(--color-control-background) px-4 py-2 text-sm font-black uppercase tracking-wide text-(--color-control-foreground) transition hover:border-(--color-accent) hover:bg-(--color-control-foreground)/10 hover:text-(--color-accent)"
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -109,7 +108,7 @@ export function FilterPanel({
 					</svg>
 					{t.toggle}
 					{hasActiveFilters && (
-						<span className="ml-1 flex h-5 w-5 items-center justify-center rounded-full bg-(--color-accent) text-[10px] font-black text-[#1c1c19]">
+						<span className="ml-1 flex h-5 w-5 items-center justify-center bg-(--color-accent) text-[10px] font-black text-[#161613]">
 							{selectedLeanings.length + selectedDecades.length}
 						</span>
 					)}
@@ -133,7 +132,7 @@ export function FilterPanel({
 					<button
 						type="button"
 						onClick={clearAll}
-						className="text-sm font-bold text-(--color-control-muted) underline transition hover:text-(--color-accent) sm:text-xs"
+						className="text-sm font-black text-(--color-control-muted) underline transition hover:text-(--color-accent)"
 					>
 						{t.clearAll}
 					</button>
@@ -141,9 +140,9 @@ export function FilterPanel({
 			</div>
 
 			{isOpen && (
-				<div className="mt-4 grid gap-5 rounded-2xl border border-(--color-control-border) bg-(--color-control-background)/60 p-4 backdrop-blur-md sm:p-5">
+				<div className="mt-4 grid gap-5 border-2 border-(--color-control-border) bg-(--color-control-background) p-4 md:p-5">
 					<div>
-						<p className="mb-3 text-xs font-black uppercase tracking-widest text-(--color-muted-foreground)">
+						<p className="mb-3 text-xs font-black uppercase tracking-widest text-(--color-control-muted)">
 							{t.leaning.label}
 						</p>
 						<div className="flex flex-wrap gap-2">
@@ -155,7 +154,7 @@ export function FilterPanel({
 										type="button"
 										key={leaning}
 										onClick={() => toggleLeaning(leaning)}
-										className={`min-h-10 rounded-full border px-3 py-1.5 text-sm font-bold transition-all sm:min-h-0 sm:py-1 ${
+										className={`min-h-10 border-2 px-3 py-1.5 text-sm font-black transition ${
 											isActive ? styles.active : styles.inactive
 										}`}
 									>
@@ -167,7 +166,7 @@ export function FilterPanel({
 					</div>
 
 					<div>
-						<p className="mb-3 text-xs font-black uppercase tracking-widest text-(--color-muted-foreground)">
+						<p className="mb-3 text-xs font-black uppercase tracking-widest text-(--color-control-muted)">
 							{t.decade.label}
 						</p>
 						<div className="flex flex-wrap gap-2">
@@ -178,10 +177,10 @@ export function FilterPanel({
 										type="button"
 										key={decade}
 										onClick={() => toggleDecade(decade)}
-										className={`min-h-10 rounded-full border px-3 py-1.5 text-sm font-bold transition-all sm:min-h-0 sm:py-1 ${
+										className={`min-h-10 border-2 px-3 py-1.5 text-sm font-black transition ${
 											isActive
-												? "border-(--color-accent) bg-(--color-accent) text-[#1c1c19]"
-												: "border-(--color-control-border) text-(--color-muted-foreground) hover:border-(--color-accent) hover:text-(--color-accent)"
+												? "border-(--color-accent) bg-(--color-accent) text-[#161613]"
+												: "border-(--color-control-border) text-(--color-control-muted) hover:border-(--color-accent) hover:text-(--color-accent)"
 										}`}
 									>
 										{DECADE_LABELS[decade]}

@@ -62,7 +62,7 @@ export function SongEntry({
 			: undefined;
 
 	const containerClasses = [
-		"boombox-song-card glass-card relative w-full min-w-0 rounded-xl text-(--color-song-foreground) transition-all duration-200 hover:-translate-y-0.5",
+		"boombox-song-card glass-card relative w-full min-w-0 text-(--color-song-foreground)",
 		LEANING_BORDER[leaning],
 		showMarginTop ? "mt-3 sm:mt-4" : "",
 		isCompact ? "p-3 space-y-2" : "p-4 sm:p-5 space-y-3 sm:space-y-4",
@@ -99,7 +99,7 @@ export function SongEntry({
 			nodes.push(
 				<mark
 					key={`h-${offset}`}
-					className="rounded-sm bg-(--color-accent) px-0.5 font-bold text-[#1c1c19]"
+					className="rounded-sm bg-(--color-accent) px-0.5 font-bold text-[#161613]"
 				>
 					{match}
 				</mark>,
@@ -122,7 +122,7 @@ export function SongEntry({
 						e.stopPropagation();
 						setIsEditModalOpen(true);
 					}}
-					className="absolute start-3 top-3 z-30 flex h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-(--color-accent) text-[#1c1c19] transition hover:scale-110 hover:bg-(--color-accent-hover) sm:start-2 sm:top-2 sm:h-8 sm:w-8 sm:-translate-x-1/2 sm:-translate-y-1/2 sm:opacity-0 sm:group-hover:opacity-100"
+					className="absolute start-3 top-3 z-30 flex h-9 w-9 cursor-pointer items-center justify-center bg-(--color-accent) text-[#161613] transition hover:bg-(--color-accent-hover) sm:start-2 sm:top-2 sm:h-8 sm:w-8 sm:-translate-x-1/2 sm:-translate-y-1/2 sm:opacity-0 sm:group-hover:opacity-100"
 					title={t.editSuggestion.buttonTitle}
 					aria-label={t.editSuggestion.buttonAria}
 				>
@@ -191,7 +191,7 @@ export function SongEntry({
 								href={links.lyrics}
 								target="_blank"
 								rel="noreferrer"
-								className="rounded-full border border-(--color-control-border) bg-(--color-control-background) px-3 py-1 text-xs font-bold text-(--color-accent) transition hover:border-(--color-accent) hover:bg-(--color-accent) hover:text-[#1c1c19]"
+								className="border-2 border-(--color-control-border) bg-(--color-control-background) px-3 py-1 text-xs font-black text-(--color-accent) transition hover:border-(--color-accent) hover:bg-(--color-accent) hover:text-[#161613]"
 							>
 								{t.lyrics}
 							</a>
@@ -201,7 +201,7 @@ export function SongEntry({
 								href={links.song_info}
 								target="_blank"
 								rel="noreferrer"
-								className="rounded-full border border-(--color-control-border) bg-(--color-control-background) px-3 py-1 text-xs font-bold text-(--color-accent) transition hover:border-(--color-accent) hover:bg-(--color-accent) hover:text-[#1c1c19]"
+								className="border-2 border-(--color-control-border) bg-(--color-control-background) px-3 py-1 text-xs font-black text-(--color-accent) transition hover:border-(--color-accent) hover:bg-(--color-accent) hover:text-[#161613]"
 							>
 								{t.info}
 							</a>
@@ -211,7 +211,7 @@ export function SongEntry({
 								href={links.youtube}
 								target="_blank"
 								rel="noreferrer"
-								className="rounded-full border border-(--color-control-border) bg-(--color-control-background) px-3 py-1 text-xs font-bold text-(--color-accent) transition hover:border-(--color-accent) hover:bg-(--color-accent) hover:text-[#1c1c19]"
+								className="border-2 border-(--color-control-border) bg-(--color-control-background) px-3 py-1 text-xs font-black text-(--color-accent) transition hover:border-(--color-accent) hover:bg-(--color-accent) hover:text-[#161613]"
 							>
 								{t.youtube}
 							</a>
@@ -234,7 +234,7 @@ export function SongEntry({
 						aria-label={t.submitSongForm.modalCloseAria}
 					/>
 					<div
-						className="relative z-10 w-full max-w-2xl overflow-y-auto rounded-2xl border border-(--color-control-border) glass-card p-6 pb-8 max-h-[calc(100vh-1rem)]"
+						className="relative z-10 w-full max-w-2xl overflow-y-auto border-2 border-(--color-control-border) glass-card p-6 pb-8 max-h-[calc(100vh-1rem)]"
 						style={{
 							paddingBottom: "calc(env(safe-area-inset-bottom, 0px) + 2rem)",
 						}}
@@ -246,7 +246,7 @@ export function SongEntry({
 							<button
 								type="button"
 								onClick={() => setIsEditModalOpen(false)}
-								className="rounded-full p-2 text-(--color-muted-foreground) transition hover:bg-(--color-muted) hover:text-(--color-foreground) focus:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent)"
+								className="p-2 text-(--color-muted-foreground) transition hover:bg-(--color-card-foreground)/10 hover:text-(--color-card-foreground) focus:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent)"
 								aria-label={t.submitSongForm.modalCloseAria}
 							>
 								&#x2715;

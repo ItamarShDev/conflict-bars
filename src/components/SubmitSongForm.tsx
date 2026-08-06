@@ -172,11 +172,11 @@ export function SubmitSongForm({
 	const t = translations;
 
 	const inputBase =
-		"min-w-0 rounded-xl border px-3 py-2 text-sm sm:text-base bg-(--color-control-background) text-(--color-control-foreground) outline-none transition placeholder:text-(--color-control-muted) focus:border-(--color-accent) focus:ring-2 focus:ring-(--color-accent)";
+		"min-w-0 border-2 border-(--color-control-border) px-3 py-2 text-sm sm:text-base bg-(--color-control-background) text-(--color-control-foreground) outline-none transition placeholder:text-(--color-control-muted) focus:border-(--color-accent)";
 
 	return (
-		<div className="glass-card rounded-2xl border border-(--color-control-border) p-4 text-start sm:p-6">
-			<h2 className="mb-3 font-display text-lg font-black text-(--color-foreground) sm:mb-4 sm:text-xl">
+		<div className="glass-card border-2 border-(--color-control-border) p-4 text-start sm:p-6">
+			<h2 className="mb-3 font-display text-lg font-black text-(--color-card-foreground) sm:mb-4 sm:text-xl">
 				{isEditMode ? t.editTitle : t.title}
 			</h2>
 			<form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
@@ -368,7 +368,7 @@ export function SubmitSongForm({
 					<button
 						type="submit"
 						disabled={status === "submitting"}
-						className="w-full rounded-full bg-(--color-accent) px-6 py-2.5 font-black text-[#1c1c19] transition hover:bg-(--color-accent-hover) disabled:opacity-50 sm:w-auto"
+						className="w-full bg-(--color-accent) px-6 py-2.5 font-black text-[#161613] transition hover:bg-(--color-accent-hover) disabled:opacity-50 sm:w-auto"
 					>
 						{status === "submitting" ? t.buttons.submitting : t.buttons.submit}
 					</button>

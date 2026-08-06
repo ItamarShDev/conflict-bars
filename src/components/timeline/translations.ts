@@ -66,7 +66,7 @@ export const translations = {
 					right: "The songs released in that same period appear beside it",
 				},
 				borders:
-					"Card borders indicate political leaning — red for left, blue for right, gray for unknown.",
+					"Card borders indicate political leaning — red for left, blue for right, yellow for center, gray for unknown.",
 				submissions:
 					"Want to contribute? Use the Submit a Song button to share missing tracks or context.",
 			},
@@ -172,7 +172,7 @@ export const translations = {
 					right: "השירים שיצאו באותה תקופה מופיעים לידו",
 				},
 				borders:
-					"מסגרת הכרטיס מציינת נטייה פוליטית — אדום לשמאל, כחול לימין, אפור ללא ידוע.",
+					"מסגרת הכרטיס מציינת נטייה פוליטית — אדום לשמאל, כחול לימין, צהוב למרכז, אפור ללא ידוע.",
 				submissions:
 					"רוצים להוסיף? לחצו על כפתור הוסף שיר ושלחו שיר או מידע שחסר.",
 			},

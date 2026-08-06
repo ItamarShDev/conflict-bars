@@ -11,16 +11,6 @@ interface TimelineHeaderProps {
 	lang: "en" | "he";
 }
 
-function Equalizer() {
-	return (
-		<div className="flex h-6 items-end gap-[3px]" aria-hidden="true">
-			<span className="eq-bar h-4 w-1 rounded-full bg-(--color-accent)" />
-			<span className="eq-bar h-4 w-1 rounded-full bg-(--color-accent)" />
-			<span className="eq-bar h-4 w-1 rounded-full bg-(--color-accent)" />
-		</div>
-	);
-}
-
 export function TimelineHeader({
 	title,
 	subtitle,
@@ -29,24 +19,21 @@ export function TimelineHeader({
 }: TimelineHeaderProps) {
 	const { theme, setTheme } = useTheme();
 	return (
-		<header className="control-bar sticky top-0 z-40 mx-auto mb-6 flex w-full max-w-6xl flex-col gap-3 rounded-b-2xl px-4 py-4 sm:mb-8 sm:flex-row sm:items-center sm:justify-between sm:rounded-b-3xl sm:px-6 sm:py-5">
-			<div className="flex items-center gap-3">
-				<Equalizer />
-				<div>
-					<h1 className="font-display text-2xl font-black leading-none tracking-tight text-(--color-foreground) sm:text-4xl">
-						{title}
-					</h1>
-					<p className="mt-1 text-xs font-medium uppercase tracking-widest text-(--color-muted-foreground)">
-						{subtitle}
-					</p>
-				</div>
+		<header className="control-bar sticky top-0 z-30 flex w-full flex-col gap-3 border-0 border-b-4 border-(--color-accent) px-4 py-4 ps-14 md:flex-row md:items-center md:justify-between md:ps-20 md:py-5">
+			<div>
+				<h1 className="font-display text-2xl font-black leading-none tracking-tight text-(--color-control-foreground) md:text-4xl">
+					{title}
+				</h1>
+				<p className="mt-1 text-xs font-black uppercase tracking-widest text-(--color-control-muted)">
+					{subtitle}
+				</p>
 			</div>
 
-			<div className="flex items-center gap-2 sm:gap-3">
+			<div className="flex items-center gap-2 md:gap-3">
 				<LanguageSwitcher lang={lang} />
 				<fieldset
 					aria-label={themeToggle.label}
-					className="flex items-center rounded-full border border-(--color-control-border) bg-(--color-control-background) p-0.5 text-xs text-(--color-control-foreground) shadow-inner"
+					className="flex items-center border-2 border-(--color-control-border) p-0.5 text-xs text-(--color-control-foreground)"
 				>
 					{(["classic", "boombox"] as const).map((option) => (
 						<button
@@ -54,10 +41,10 @@ export function TimelineHeader({
 							type="button"
 							onClick={() => setTheme(option)}
 							aria-pressed={theme === option}
-							className={`rounded-full px-3 py-1.5 font-semibold transition-all ${
+							className={`px-3 py-1.5 text-xs font-black uppercase tracking-wider transition ${
 								theme === option
-									? "bg-(--color-accent) text-[#1c1c19]"
-									: "hover:bg-(--color-muted)"
+									? "bg-(--color-accent) text-[#161613]"
+									: "hover:bg-(--color-control-foreground)/10"
 							}`}
 						>
 							{themeToggle[option]}

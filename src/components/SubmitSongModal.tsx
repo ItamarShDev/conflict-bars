@@ -41,7 +41,7 @@ export function SubmitSongModal({
 			<button
 				type="button"
 				onClick={() => setIsOpen(true)}
-				className="boombox-submit-trigger fab fixed bottom-4 end-4 z-40 min-h-11 rounded-full px-4 py-2 text-sm font-black transition hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent) sm:bottom-6 sm:end-6 sm:min-h-0 sm:px-6 sm:py-3 sm:text-base"
+				className="boombox-submit-trigger fab fixed bottom-4 end-4 z-40 min-h-11 px-4 py-2 text-sm font-black transition hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent) sm:bottom-6 sm:end-6 sm:min-h-0 sm:px-6 sm:py-3 sm:text-base"
 			>
 				{label}
 			</button>
@@ -59,7 +59,7 @@ export function SubmitSongModal({
 						className="absolute inset-0 cursor-default"
 						aria-label={translations.modalCloseAria}
 					/>
-					<div className="glass-card relative z-10 w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-2xl border border-(--color-control-border) p-4 sm:p-6 shadow-2xl">
+					<div className="glass-card relative z-10 w-full max-w-2xl max-h-[90vh] overflow-y-auto border-2 border-(--color-control-border) p-4 sm:p-6">
 						<div className="mb-3 sm:mb-4 flex items-center justify-between">
 							<h2 className="font-display text-base font-black sm:text-lg">
 								{translations.title}
@@ -67,7 +67,7 @@ export function SubmitSongModal({
 							<button
 								type="button"
 								onClick={() => setIsOpen(false)}
-								className="rounded-full p-2 text-(--color-muted-foreground) transition hover:bg-(--color-muted) hover:text-(--color-foreground) focus:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent)"
+								className="p-2 text-(--color-muted-foreground) transition hover:bg-(--color-card-foreground)/10 hover:text-(--color-card-foreground) focus:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent)"
 								aria-label={translations.modalCloseAria}
 							>
 								&#x2715;

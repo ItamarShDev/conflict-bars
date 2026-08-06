@@ -11,7 +11,7 @@ export function LanguageSwitcher({ lang }: { lang: "en" | "he" }) {
 	return (
 		<Link
 			href={nextPath}
-			className="flex h-8 items-center rounded-full border border-(--color-control-border) bg-(--color-control-background) px-3 text-xs font-bold uppercase tracking-wider text-(--color-control-foreground) transition hover:bg-(--color-muted) hover:text-(--color-accent)"
+			className="flex h-8 items-center border-2 border-(--color-control-border) bg-(--color-control-background) px-3 text-xs font-black uppercase tracking-wider text-(--color-control-foreground) transition hover:bg-(--color-control-foreground)/10 hover:text-(--color-accent)"
 		>
 			{lang === "en" ? "EN / עב" : "עב / EN"}
 		</Link>
