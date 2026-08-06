@@ -5,6 +5,15 @@ const nextConfig: NextConfig = {
 	env: {
 		LIGHTNINGCSS_WASM: "1",
 	},
+	async redirects() {
+		return [
+			{
+				source: "/",
+				destination: "/en",
+				permanent: false,
+			},
+		];
+	},
 };
 
 export default nextConfig;
