@@ -18,20 +18,28 @@ const DECADE_LABELS: Record<Decade, string> = {
 
 const LEANING_STYLES: Record<Leaning, { active: string; inactive: string }> = {
 	left: {
-		active: "bg-[#e63946] text-white border-[#e63946]",
-		inactive: "border-[#e63946] text-[#e63946] hover:bg-[#e63946]/10",
+		active:
+			"bg-(--color-leaning-left) text-[#fffdf5] border-(--color-leaning-left)",
+		inactive:
+			"border-(--color-leaning-left) text-(--color-leaning-left) hover:bg-(--color-leaning-left)/10",
 	},
 	right: {
-		active: "bg-[#2563eb] text-white border-[#2563eb]",
-		inactive: "border-[#2563eb] text-[#2563eb] hover:bg-[#2563eb]/10",
+		active:
+			"bg-(--color-leaning-right) text-[#fffdf5] border-(--color-leaning-right)",
+		inactive:
+			"border-(--color-leaning-right) text-(--color-leaning-right) hover:bg-(--color-leaning-right)/10",
 	},
 	center: {
-		active: "bg-[#f59e0b] text-[#161613] border-[#f59e0b]",
-		inactive: "border-[#f59e0b] text-[#b45309] hover:bg-[#f59e0b]/10",
+		active:
+			"bg-(--color-leaning-center) text-(--color-card-foreground) border-(--color-leaning-center)",
+		inactive:
+			"border-(--color-leaning-center) text-[#b8860b] hover:bg-(--color-leaning-center)/10",
 	},
 	unknown: {
-		active: "bg-[#737373] text-[#f5f3ee] border-[#737373]",
-		inactive: "border-[#737373] text-[#737373] hover:bg-[#737373]/10",
+		active:
+			"bg-(--color-leaning-unknown) text-(--color-card-foreground) border-(--color-leaning-unknown)",
+		inactive:
+			"border-(--color-leaning-unknown) text-(--color-leaning-unknown) hover:bg-(--color-leaning-unknown)/10",
 	},
 };
 
@@ -88,7 +96,7 @@ export function FilterPanel({
 					type="button"
 					onClick={() => setIsOpen((prev) => !prev)}
 					aria-expanded={isOpen}
-					className="flex min-h-10 items-center gap-2 border-2 border-(--color-control-border) bg-(--color-control-background) px-4 py-2 text-sm font-black uppercase tracking-wide text-(--color-control-foreground) transition hover:border-(--color-accent) hover:bg-(--color-control-foreground)/10 hover:text-(--color-accent)"
+					className="control-bar flex min-h-10 items-center gap-2 px-4 py-2 text-sm font-black uppercase tracking-wide transition hover:border-(--color-accent) hover:text-(--color-accent)"
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -108,7 +116,7 @@ export function FilterPanel({
 					</svg>
 					{t.toggle}
 					{hasActiveFilters && (
-						<span className="ml-1 flex h-5 w-5 items-center justify-center bg-(--color-accent) text-[10px] font-black text-[#161613]">
+						<span className="ml-1 flex h-5 w-5 items-center justify-center bg-(--color-accent) text-[10px] font-black text-[#fffdf5]">
 							{selectedLeanings.length + selectedDecades.length}
 						</span>
 					)}
@@ -140,7 +148,7 @@ export function FilterPanel({
 			</div>
 
 			{isOpen && (
-				<div className="mt-4 grid gap-5 border-2 border-(--color-control-border) bg-(--color-control-background) p-4 md:p-5">
+				<div className="control-bar mt-4 grid gap-5 p-4 md:p-5">
 					<div>
 						<p className="mb-3 text-xs font-black uppercase tracking-widest text-(--color-control-muted)">
 							{t.leaning.label}
@@ -154,7 +162,7 @@ export function FilterPanel({
 										type="button"
 										key={leaning}
 										onClick={() => toggleLeaning(leaning)}
-										className={`min-h-10 border-2 px-3 py-1.5 text-sm font-black transition ${
+										className={`min-h-10 border-2 px-3 py-1.5 text-sm font-black transition wobble-sm ${
 											isActive ? styles.active : styles.inactive
 										}`}
 									>
@@ -177,9 +185,9 @@ export function FilterPanel({
 										type="button"
 										key={decade}
 										onClick={() => toggleDecade(decade)}
-										className={`min-h-10 border-2 px-3 py-1.5 text-sm font-black transition ${
+										className={`min-h-10 border-2 px-3 py-1.5 text-sm font-black transition wobble-sm ${
 											isActive
-												? "border-(--color-accent) bg-(--color-accent) text-[#161613]"
+												? "border-(--color-accent) bg-(--color-accent) text-[#fffdf5]"
 												: "border-(--color-control-border) text-(--color-control-muted) hover:border-(--color-accent) hover:text-(--color-accent)"
 										}`}
 									>

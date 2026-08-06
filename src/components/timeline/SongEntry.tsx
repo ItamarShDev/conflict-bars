@@ -64,6 +64,7 @@ export function SongEntry({
 	const containerClasses = [
 		"boombox-song-card glass-card relative w-full min-w-0 text-(--color-song-foreground)",
 		LEANING_BORDER[leaning],
+		isCompact ? "" : "tape",
 		showMarginTop ? "mt-3 sm:mt-4" : "",
 		isCompact ? "p-3 space-y-2" : "p-4 sm:p-5 space-y-3 sm:space-y-4",
 		className ?? "",
@@ -99,7 +100,7 @@ export function SongEntry({
 			nodes.push(
 				<mark
 					key={`h-${offset}`}
-					className="rounded-sm bg-(--color-accent) px-0.5 font-bold text-[#161613]"
+					className="rounded-sm bg-(--color-accent) px-0.5 font-bold text-[#fffdf5]"
 				>
 					{match}
 				</mark>,
@@ -122,7 +123,7 @@ export function SongEntry({
 						e.stopPropagation();
 						setIsEditModalOpen(true);
 					}}
-					className="absolute start-3 top-3 z-30 flex h-9 w-9 cursor-pointer items-center justify-center bg-(--color-accent) text-[#161613] transition hover:bg-(--color-accent-hover) sm:start-2 sm:top-2 sm:h-8 sm:w-8 sm:-translate-x-1/2 sm:-translate-y-1/2 sm:opacity-0 sm:group-hover:opacity-100"
+					className="absolute start-3 top-3 z-30 flex h-9 w-9 cursor-pointer items-center justify-center bg-(--color-accent) text-[#fffdf5] transition hover:bg-(--color-accent-hover) sm:start-2 sm:top-2 sm:h-8 sm:w-8 sm:-translate-x-1/2 sm:-translate-y-1/2 sm:opacity-0 sm:group-hover:opacity-100"
 					title={t.editSuggestion.buttonTitle}
 					aria-label={t.editSuggestion.buttonAria}
 				>
@@ -191,7 +192,7 @@ export function SongEntry({
 								href={links.lyrics}
 								target="_blank"
 								rel="noreferrer"
-								className="border-2 border-(--color-control-border) bg-(--color-control-background) px-3 py-1 text-xs font-black text-(--color-accent) transition hover:border-(--color-accent) hover:bg-(--color-accent) hover:text-[#161613]"
+								className="border-2 border-(--color-control-border) bg-(--color-control-background) px-3 py-1 text-xs font-black text-(--color-accent) transition wobble-sm hover:border-(--color-accent) hover:bg-(--color-accent) hover:text-[#fffdf5]"
 							>
 								{t.lyrics}
 							</a>
@@ -201,7 +202,7 @@ export function SongEntry({
 								href={links.song_info}
 								target="_blank"
 								rel="noreferrer"
-								className="border-2 border-(--color-control-border) bg-(--color-control-background) px-3 py-1 text-xs font-black text-(--color-accent) transition hover:border-(--color-accent) hover:bg-(--color-accent) hover:text-[#161613]"
+								className="border-2 border-(--color-control-border) bg-(--color-control-background) px-3 py-1 text-xs font-black text-(--color-accent) transition wobble-sm hover:border-(--color-accent) hover:bg-(--color-accent) hover:text-[#fffdf5]"
 							>
 								{t.info}
 							</a>
@@ -211,7 +212,7 @@ export function SongEntry({
 								href={links.youtube}
 								target="_blank"
 								rel="noreferrer"
-								className="border-2 border-(--color-control-border) bg-(--color-control-background) px-3 py-1 text-xs font-black text-(--color-accent) transition hover:border-(--color-accent) hover:bg-(--color-accent) hover:text-[#161613]"
+								className="border-2 border-(--color-control-border) bg-(--color-control-background) px-3 py-1 text-xs font-black text-(--color-accent) transition wobble-sm hover:border-(--color-accent) hover:bg-(--color-accent) hover:text-[#fffdf5]"
 							>
 								{t.youtube}
 							</a>

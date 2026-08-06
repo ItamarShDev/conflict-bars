@@ -49,7 +49,7 @@ export function YearRail({
 					type="button"
 					onClick={onPrevious}
 					aria-label={t.previous}
-					className="flex h-10 w-full items-center justify-center text-sm font-black text-(--color-foreground) transition hover:bg-(--color-foreground)/10 hover:text-(--color-accent) md:h-12"
+					className="flex h-10 w-full items-center justify-center text-sm font-black text-(--color-foreground) transition wobble-sm hover:bg-(--color-foreground)/10 hover:text-(--color-accent) md:h-12"
 				>
 					<span aria-hidden="true">▲</span>
 				</button>
@@ -57,7 +57,7 @@ export function YearRail({
 					type="button"
 					onClick={onTogglePlay}
 					aria-label={isPlaying ? t.pause : t.play}
-					className="flex h-12 w-full items-center justify-center bg-(--color-accent) text-sm font-black text-[#161613] transition hover:bg-(--color-accent-hover) md:h-14"
+					className="flex h-12 w-full items-center justify-center sticker text-sm font-black transition hover:bg-(--color-accent-hover) md:h-14"
 				>
 					{isPlaying ? "‖" : "▶"}
 				</button>
@@ -65,7 +65,7 @@ export function YearRail({
 					type="button"
 					onClick={onNext}
 					aria-label={t.next}
-					className="flex h-10 w-full items-center justify-center text-sm font-black text-(--color-foreground) transition hover:bg-(--color-foreground)/10 hover:text-(--color-accent) md:h-12"
+					className="flex h-10 w-full items-center justify-center text-sm font-black text-(--color-foreground) transition wobble-sm hover:bg-(--color-foreground)/10 hover:text-(--color-accent) md:h-12"
 				>
 					<span aria-hidden="true">▼</span>
 				</button>
@@ -81,9 +81,9 @@ export function YearRail({
 							type="button"
 							onClick={() => onSelect(year)}
 							aria-pressed={isActive}
-							className={`year-label flex h-12 w-full shrink-0 items-center justify-center border-b border-(--color-foreground)/20 text-xs font-black tabular-nums tracking-widest transition md:h-14 md:text-sm ${
+							className={`year-label flex h-14 w-full shrink-0 items-center justify-center border-b border-(--color-foreground)/20 text-xs font-black tabular-nums tracking-widest transition odd:translate-x-0.5 even:-translate-x-0.5 wobble-sm md:h-16 md:text-sm ${
 								isActive
-									? "bg-(--color-accent) text-[#161613]"
+									? "sticker !flex"
 									: "text-(--color-year-foreground) hover:bg-(--color-foreground)/10 hover:text-(--color-foreground)"
 							}`}
 						>

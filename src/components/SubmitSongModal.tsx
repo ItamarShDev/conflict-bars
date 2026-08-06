@@ -59,7 +59,7 @@ export function SubmitSongModal({
 						className="absolute inset-0 cursor-default"
 						aria-label={translations.modalCloseAria}
 					/>
-					<div className="glass-card relative z-10 w-full max-w-2xl max-h-[90vh] overflow-y-auto border-2 border-(--color-control-border) p-4 sm:p-6">
+					<div className="glass-card relative z-10 w-full max-w-2xl max-h-[90vh] overflow-y-auto border-2 border-(--color-control-border) p-4 sm:p-6 tape">
 						<div className="mb-3 sm:mb-4 flex items-center justify-between">
 							<h2 className="font-display text-base font-black sm:text-lg">
 								{translations.title}

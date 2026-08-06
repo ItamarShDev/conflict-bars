@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
 		return [
 			{
 				source: "/",
-				destination: "/en",
+				destination: "/he",
 				permanent: false,
 			},
 		];

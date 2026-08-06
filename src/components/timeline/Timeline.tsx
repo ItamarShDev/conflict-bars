@@ -143,7 +143,7 @@ export function Timeline({
 				translations={t.timeTravel}
 			/>
 
-			<main className="min-h-screen pl-14 md:pl-20">
+			<main className="min-h-screen ps-14 md:ps-20">
 				<div className="control-bar mx-4 mb-6 mt-4 border-0 border-b-4 border-(--color-accent) p-4 md:mx-6 md:mb-8 md:mt-6 md:p-6">
 					<div className={`${lang === "he" ? "text-right" : "text-left"}`}>
 						<label

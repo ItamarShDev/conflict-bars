@@ -45,13 +45,13 @@ export const YearSection = forwardRef<HTMLDivElement, YearSectionProps>(
 				ref={ref}
 				id={`year-${year}`}
 				data-year={year}
-				className={`relative min-h-[60vh] scroll-mt-20 border-b-4 border-(--color-foreground)/20 px-4 py-10 transition-opacity md:min-h-[70vh] md:px-6 md:py-16 ${
+				className={`relative min-h-[60vh] scroll-mt-20 px-4 py-10 transition-opacity md:min-h-[70vh] md:px-6 md:py-16 ${
 					isActive ? "opacity-100" : "opacity-90"
 				}`}
 			>
 				<div className="mb-8 md:mb-12">
 					<div
-						className="inline-block border-2 border-(--color-foreground)/30 bg-(--color-background) px-3 py-1 text-5xl font-black tabular-nums tracking-tighter text-(--color-foreground) md:px-4 md:py-2 md:text-8xl"
+						className="sticker px-3 py-1 text-5xl font-black tabular-nums tracking-tighter md:px-4 md:py-2 md:text-8xl rotate-2"
 						style={
 							yearColors.length > 0
 								? { borderBottomWidth: 8, borderBottomColor: yearColors[0] }
@@ -62,12 +62,14 @@ export const YearSection = forwardRef<HTMLDivElement, YearSectionProps>(
 					</div>
 				</div>
 
-				<div className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8">
+				<div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
 					<div className="min-w-0">
 						{conflict ? (
-							<ConflictEntry conflict={conflict} lang={lang} />
+							<div className="-rotate-1">
+								<ConflictEntry conflict={conflict} lang={lang} />
+							</div>
 						) : (
-							<div className="glass-card flex min-h-[12rem] items-center justify-center p-6 text-center">
+							<div className="glass-card flex min-h-[12rem] items-center justify-center p-6 text-center -rotate-1 tape">
 								<p className="text-sm font-black uppercase tracking-widest text-(--color-muted-foreground)">
 									{t.timeTravel.noConflict}
 								</p>
@@ -79,19 +81,23 @@ export const YearSection = forwardRef<HTMLDivElement, YearSectionProps>(
 						{songs.length > 0 ? (
 							<div className="space-y-4 md:space-y-6">
 								{songs.map((entry, idx) => (
-									<SongEntry
+									<div
 										key={`${entry.song.artist}-${entry.song.name}-${entry.song.published_date}`}
-										song={entry.song}
-										lang={lang}
-										leaning={entry.leaning}
-										variant="full"
-										showMarginTop={idx === 0}
-										highlightTerm={highlightTerm}
-									/>
+										className={idx % 2 === 0 ? "rotate-1" : "-rotate-1"}
+									>
+										<SongEntry
+											song={entry.song}
+											lang={lang}
+											leaning={entry.leaning}
+											variant="full"
+											showMarginTop={idx === 0}
+											highlightTerm={highlightTerm}
+										/>
+									</div>
 								))}
 							</div>
 						) : (
-							<div className="glass-card flex min-h-[12rem] items-center justify-center p-6 text-center">
+							<div className="glass-card flex min-h-[12rem] items-center justify-center p-6 text-center tape">
 								<p className="text-sm font-black uppercase tracking-widest text-(--color-muted-foreground)">
 									{t.timeTravel.noSongs}
 								</p>

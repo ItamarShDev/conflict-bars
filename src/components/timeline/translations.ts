@@ -3,7 +3,7 @@ export const translations = {
 		title: "Conflict Bars",
 		themeToggle: {
 			label: "Visual theme",
-			classic: "Classic",
+			classic: "Zine",
 			boombox: "Boombox",
 		},
 		subtitle: "Direction is the political leaning of the artist",
@@ -110,7 +110,7 @@ export const translations = {
 		title: "חרוזים מסוכסכים",
 		themeToggle: {
 			label: "ערכת נושא",
-			classic: "קלאסי",
+			classic: "זין",
 			boombox: "בומבוקס",
 		},
 		subtitle: "בכיוון הנטייה הפוליטית",

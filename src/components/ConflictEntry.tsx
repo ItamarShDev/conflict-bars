@@ -41,7 +41,7 @@ export function ConflictEntry({ conflict, lang }: ConflictTimelineEntryProps) {
 
 	return (
 		<div
-			className="boombox-conflict-card glass-card relative z-1 border-2 border-(--color-conflict-border) bg-(--color-conflict-background) p-4 text-(--color-conflict-foreground) focus:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent) sm:p-5 text-start"
+			className="boombox-conflict-card glass-card relative z-1 border-2 border-(--color-conflict-border) bg-(--color-conflict-background) p-4 text-(--color-conflict-foreground) tape focus:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent) sm:p-5 text-start"
 			style={{
 				borderLeftWidth: 6,
 				borderLeftColor: color,

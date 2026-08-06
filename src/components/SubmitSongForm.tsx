@@ -172,7 +172,7 @@ export function SubmitSongForm({
 	const t = translations;
 
 	const inputBase =
-		"min-w-0 border-2 border-(--color-control-border) px-3 py-2 text-sm sm:text-base bg-(--color-control-background) text-(--color-control-foreground) outline-none transition placeholder:text-(--color-control-muted) focus:border-(--color-accent)";
+		"min-w-0 border-2 border-(--color-control-border) px-3 py-2 text-sm sm:text-base bg-(--color-control-background) text-(--color-control-foreground) outline-none transition placeholder:text-(--color-control-muted) focus:border-(--color-accent) wobble-sm";
 
 	return (
 		<div className="glass-card border-2 border-(--color-control-border) p-4 text-start sm:p-6">
@@ -368,7 +368,7 @@ export function SubmitSongForm({
 					<button
 						type="submit"
 						disabled={status === "submitting"}
-						className="w-full bg-(--color-accent) px-6 py-2.5 font-black text-[#161613] transition hover:bg-(--color-accent-hover) disabled:opacity-50 sm:w-auto"
+						className="w-full bg-(--color-accent) px-6 py-2.5 font-black text-[#fffdf5] transition wobble-sm hover:bg-(--color-accent-hover) disabled:opacity-50 sm:w-auto"
 					>
 						{status === "submitting" ? t.buttons.submitting : t.buttons.submit}
 					</button>

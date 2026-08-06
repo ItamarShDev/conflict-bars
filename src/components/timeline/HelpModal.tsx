@@ -63,7 +63,7 @@ export function HelpModal({ translations, lang }: HelpModalProps) {
 						aria-labelledby={titleId}
 						aria-describedby={descriptionId}
 						dir={isRtl ? "rtl" : "ltr"}
-						className="glass-card relative z-10 max-h-[calc(100vh-2rem)] w-full max-w-xl overflow-y-auto border-2 border-(--color-control-border) p-5 sm:p-7"
+						className="glass-card relative z-10 max-h-[calc(100vh-2rem)] w-full max-w-xl overflow-y-auto border-2 border-(--color-control-border) p-5 sm:p-7 tape"
 					>
 						<div className="mb-4 flex items-center justify-between">
 							<h2
@@ -99,7 +99,7 @@ export function HelpModal({ translations, lang }: HelpModalProps) {
 							<button
 								type="button"
 								onClick={() => setIsOpen(false)}
-								className="bg-(--color-accent) px-5 py-2 text-sm font-black text-[#161613] transition hover:bg-(--color-accent-hover) focus:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent)"
+								className="bg-(--color-accent) px-5 py-2 text-sm font-black text-[#fffdf5] transition wobble-sm hover:bg-(--color-accent-hover) focus:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent)"
 							>
 								{translations.close}
 							</button>

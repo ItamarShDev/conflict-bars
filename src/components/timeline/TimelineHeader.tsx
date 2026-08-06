@@ -33,7 +33,7 @@ export function TimelineHeader({
 				<LanguageSwitcher lang={lang} />
 				<fieldset
 					aria-label={themeToggle.label}
-					className="flex items-center border-2 border-(--color-control-border) p-0.5 text-xs text-(--color-control-foreground)"
+					className="flex items-center border-2 border-(--color-control-border) bg-(--color-control-background) p-0.5 text-xs text-(--color-control-foreground) wobble-sm"
 				>
 					{(["classic", "boombox"] as const).map((option) => (
 						<button
@@ -41,9 +41,9 @@ export function TimelineHeader({
 							type="button"
 							onClick={() => setTheme(option)}
 							aria-pressed={theme === option}
-							className={`px-3 py-1.5 text-xs font-black uppercase tracking-wider transition ${
+							className={`px-3 py-1.5 text-xs font-black uppercase tracking-wider transition wobble-sm ${
 								theme === option
-									? "bg-(--color-accent) text-[#161613]"
+									? "bg-(--color-accent) text-[#fffdf5]"
 									: "hover:bg-(--color-control-foreground)/10"
 							}`}
 						>
