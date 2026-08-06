@@ -36,7 +36,7 @@ export function HelpModal({ translations, lang }: HelpModalProps) {
 		<>
 			<button
 				type="button"
-				className="boombox-help-trigger fab fixed end-4 top-4 z-50 flex h-11 w-11 items-center justify-center rounded-full text-lg font-black shadow-lg transition hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent) sm:end-6 sm:top-5"
+				className="boombox-help-trigger fab fixed end-4 top-4 z-50 flex h-11 w-11 items-center justify-center rounded-full text-lg font-black transition hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent) sm:end-6 sm:top-5"
 				onClick={() => setIsOpen(true)}
 				aria-label={translations.buttonAria}
 				aria-haspopup="dialog"
@@ -99,7 +99,7 @@ export function HelpModal({ translations, lang }: HelpModalProps) {
 							<button
 								type="button"
 								onClick={() => setIsOpen(false)}
-								className="rounded-full bg-(--color-accent) px-5 py-2 text-sm font-black text-[#09090b] shadow-[0_0_18px_rgba(0,240,255,0.35)] transition hover:bg-(--color-accent-hover) focus:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent)"
+								className="rounded-full bg-(--color-accent) px-5 py-2 text-sm font-black text-[#1c1c19] transition hover:bg-(--color-accent-hover) focus:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent)"
 							>
 								{translations.close}
 							</button>

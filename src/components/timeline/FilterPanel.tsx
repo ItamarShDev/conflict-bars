@@ -16,36 +16,25 @@ const DECADE_LABELS: Record<Decade, string> = {
 	2020: "2020s",
 };
 
-const NEON_STYLES: Record<
-	Leaning,
-	{ active: string; inactive: string; glow: string }
-> = {
+const LEANING_STYLES: Record<Leaning, { active: string; inactive: string }> = {
 	left: {
-		active:
-			"bg-[#ff2a6d] text-white border-[#ff2a6d] shadow-[0_0_18px_rgba(255,42,109,0.5)]",
+		active: "bg-[#c84d60] text-white border-[#c84d60]",
 		inactive:
-			"border-[#ff2a6d]/50 text-[#ff2a6d] hover:bg-[#ff2a6d]/10 dark:text-[#ff5c8d]",
-		glow: "shadow-[0_0_12px_rgba(255,42,109,0.35)]",
+			"border-[#c84d60]/50 text-[#c84d60] hover:bg-[#c84d60]/10 dark:text-[#d66a7a]",
 	},
 	right: {
-		active:
-			"bg-[#00a8ff] text-white border-[#00a8ff] shadow-[0_0_18px_rgba(0,168,255,0.5)]",
+		active: "bg-[#3d8ec7] text-white border-[#3d8ec7]",
 		inactive:
-			"border-[#00a8ff]/50 text-[#00a8ff] hover:bg-[#00a8ff]/10 dark:text-[#4dc2ff]",
-		glow: "shadow-[0_0_12px_rgba(0,168,255,0.35)]",
+			"border-[#3d8ec7]/50 text-[#3d8ec7] hover:bg-[#3d8ec7]/10 dark:text-[#6aa9d6]",
 	},
 	center: {
-		active:
-			"bg-[#fcee0a] text-[#09090b] border-[#fcee0a] shadow-[0_0_18px_rgba(252,238,10,0.5)]",
+		active: "bg-[#c9a32b] text-[#1c1c19] border-[#c9a32b]",
 		inactive:
-			"border-[#fcee0a]/50 text-[#d4c908] hover:bg-[#fcee0a]/10 dark:text-[#fcee0a]",
-		glow: "shadow-[0_0_12px_rgba(252,238,10,0.35)]",
+			"border-[#c9a32b]/50 text-[#a8831e] hover:bg-[#c9a32b]/10 dark:text-[#d4b44a]",
 	},
 	unknown: {
-		active:
-			"bg-[#a1a1aa] text-[#09090b] border-[#a1a1aa] shadow-[0_0_18px_rgba(161,161,170,0.4)]",
-		inactive: "border-[#a1a1aa]/50 text-[#71717a] hover:bg-[#a1a1aa]/10",
-		glow: "shadow-[0_0_12px_rgba(161,161,170,0.25)]",
+		active: "bg-[#7d7872] text-[#1c1c19] border-[#7d7872]",
+		inactive: "border-[#7d7872]/50 text-[#7d7872] hover:bg-[#7d7872]/10",
 	},
 };
 
@@ -120,7 +109,7 @@ export function FilterPanel({
 					</svg>
 					{t.toggle}
 					{hasActiveFilters && (
-						<span className="ml-1 flex h-5 w-5 items-center justify-center rounded-full bg-(--color-accent) text-[10px] font-black text-[#09090b]">
+						<span className="ml-1 flex h-5 w-5 items-center justify-center rounded-full bg-(--color-accent) text-[10px] font-black text-[#1c1c19]">
 							{selectedLeanings.length + selectedDecades.length}
 						</span>
 					)}
@@ -160,16 +149,14 @@ export function FilterPanel({
 						<div className="flex flex-wrap gap-2">
 							{LEANINGS.map((leaning) => {
 								const isActive = selectedLeanings.includes(leaning);
-								const styles = NEON_STYLES[leaning];
+								const styles = LEANING_STYLES[leaning];
 								return (
 									<button
 										type="button"
 										key={leaning}
 										onClick={() => toggleLeaning(leaning)}
 										className={`min-h-10 rounded-full border px-3 py-1.5 text-sm font-bold transition-all sm:min-h-0 sm:py-1 ${
-											isActive
-												? `${styles.active} ${styles.glow}`
-												: styles.inactive
+											isActive ? styles.active : styles.inactive
 										}`}
 									>
 										{leaningLabel(leaning)}
@@ -193,7 +180,7 @@ export function FilterPanel({
 										onClick={() => toggleDecade(decade)}
 										className={`min-h-10 rounded-full border px-3 py-1.5 text-sm font-bold transition-all sm:min-h-0 sm:py-1 ${
 											isActive
-												? "border-(--color-accent) bg-(--color-accent) text-[#09090b] shadow-[0_0_18px_rgba(0,240,255,0.4)]"
+												? "border-(--color-accent) bg-(--color-accent) text-[#1c1c19]"
 												: "border-(--color-control-border) text-(--color-muted-foreground) hover:border-(--color-accent) hover:text-(--color-accent)"
 										}`}
 									>

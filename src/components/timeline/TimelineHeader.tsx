@@ -56,7 +56,7 @@ export function TimelineHeader({
 							aria-pressed={theme === option}
 							className={`rounded-full px-3 py-1.5 font-semibold transition-all ${
 								theme === option
-									? "bg-(--color-accent) text-[#09090b] shadow-[0_0_12px_rgba(0,240,255,0.35)]"
+									? "bg-(--color-accent) text-[#1c1c19]"
 									: "hover:bg-(--color-muted)"
 							}`}
 						>

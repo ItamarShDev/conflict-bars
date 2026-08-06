@@ -57,13 +57,13 @@ export const translations = {
 		helpModal: {
 			buttonLabel: "How it works",
 			buttonAria: "Open site explanation",
-			modalTitle: "How to read this timeline",
+			modalTitle: "How to travel through time",
 			description: {
 				intro:
-					"This site visualizes key moments in the Israeli hip-hop scene alongside major conflicts.",
+					"This site pairs key moments in Israeli hip-hop with the historical events that shaped them.",
 				columns: {
-					left: "Left column: Israeli major conflicts",
-					right: "Right column: Songs released in the same period",
+					left: "Pick a year to see the conflict that was happening then",
+					right: "The songs released in that same period appear beside it",
 				},
 				borders:
 					"Card borders indicate political leaning — red for left, blue for right, gray for unknown.",
@@ -71,6 +71,15 @@ export const translations = {
 					"Want to contribute? Use the Submit a Song button to share missing tracks or context.",
 			},
 			close: "Close",
+		},
+		timeTravel: {
+			play: "Play",
+			pause: "Pause",
+			previous: "Previous year",
+			next: "Next year",
+			selectYear: "Select year",
+			noConflict: "No recorded conflict for this year.",
+			noSongs: "No songs recorded for this year.",
 		},
 		editSuggestion: {
 			buttonTitle: "Suggest edit",
@@ -154,13 +163,13 @@ export const translations = {
 		helpModal: {
 			buttonLabel: "איך זה עובד",
 			buttonAria: "פתח הסבר על האתר",
-			modalTitle: "איך לקרוא את הציר",
+			modalTitle: "איך לטייל בזמן",
 			description: {
 				intro:
-					"האתר מציג אירועים מרכזיים בסצנת ההיפ-הופ הישראלי לצד סכסוכים משמעותיים.",
+					"האתר מציג רגעים מרכזיים בהיפ-הופ הישראלי לצד האירועים ההיסטוריים שעיצבו אותם.",
 				columns: {
-					left: "צד שמאל: סכסוכים מרכזיים בישראל",
-					right: "צד ימין: שירים שיצאו באותה תקופה",
+					left: "בחרו שנה כדי לראות את הסכסוך שהתרחש בה",
+					right: "השירים שיצאו באותה תקופה מופיעים לידו",
 				},
 				borders:
 					"מסגרת הכרטיס מציינת נטייה פוליטית — אדום לשמאל, כחול לימין, אפור ללא ידוע.",
@@ -168,6 +177,15 @@ export const translations = {
 					"רוצים להוסיף? לחצו על כפתור הוסף שיר ושלחו שיר או מידע שחסר.",
 			},
 			close: "סגור",
+		},
+		timeTravel: {
+			play: "הפעל",
+			pause: "השהה",
+			previous: "שנה קודמת",
+			next: "שנה הבאה",
+			selectYear: "בחרו שנה",
+			noConflict: "אין סכסוך מתועד לשנה זו.",
+			noSongs: "אין שירים מתועדים לשנה זו.",
 		},
 		editSuggestion: {
 			buttonTitle: "הצע עריכה",

@@ -13,7 +13,7 @@ export function ConflictLinks({
 				href={wikipediaUrl}
 				target="_blank"
 				rel="noreferrer"
-				className="rounded-full border border-(--color-control-border) bg-(--color-control-background) px-3 py-1 font-bold text-(--color-accent) transition hover:border-(--color-accent) hover:bg-(--color-accent) hover:text-[#09090b] hover:shadow-[0_0_12px_rgba(0,240,255,0.25)]"
+				className="rounded-full border border-(--color-control-border) bg-(--color-control-background) px-3 py-1 font-bold text-(--color-accent) transition hover:border-(--color-accent) hover:bg-(--color-accent) hover:text-[#1c1c19]"
 			>
 				{wikipediaLabel}
 			</a>

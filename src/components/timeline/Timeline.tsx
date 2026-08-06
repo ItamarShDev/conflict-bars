@@ -1,12 +1,14 @@
 "use client";
+
 import { usePreloadedQuery } from "convex/react";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { SubmitSongModal } from "@/components/SubmitSongModal";
 import { FilterPanel } from "@/components/timeline/FilterPanel";
 import { HelpModal } from "@/components/timeline/HelpModal";
 import { TimelineHeader } from "@/components/timeline/TimelineHeader";
+import { TimeStage } from "@/components/timeline/TimeStage";
 import { translations } from "@/components/timeline/translations";
-import { YearGroup } from "@/components/timeline/YearGroup";
+import { YearScrubber } from "@/components/timeline/YearScrubber";
 import {
 	buildYearEventColors,
 	convertConvexEventsToTimeline,
@@ -34,6 +36,8 @@ export function Timeline({
 	const [searchTerm, setSearchTerm] = useState("");
 	const [selectedLeanings, setSelectedLeanings] = useState<string[]>([]);
 	const [selectedDecades, setSelectedDecades] = useState<number[]>([]);
+	const [selectedYear, setSelectedYear] = useState<number | null>(null);
+	const [isPlaying, setIsPlaying] = useState(false);
 
 	const yearGroups = useMemo(
 		() =>
@@ -46,6 +50,31 @@ export function Timeline({
 			),
 		[songs, events, searchTerm, selectedLeanings, selectedDecades],
 	);
+
+	const years = useMemo(() => yearGroups.map(([y]) => y), [yearGroups]);
+
+	useEffect(() => {
+		if (yearGroups.length === 0) {
+			setSelectedYear(null);
+			return;
+		}
+		if (!selectedYear || !years.includes(selectedYear)) {
+			setSelectedYear(years[0]);
+		}
+	}, [yearGroups, selectedYear, years]);
+
+	useEffect(() => {
+		if (!isPlaying || !selectedYear) {
+			return;
+		}
+		const interval = window.setInterval(() => {
+			const index = years.indexOf(selectedYear);
+			const next =
+				index >= 0 && index < years.length - 1 ? years[index + 1] : years[0];
+			setSelectedYear(next);
+		}, 3500);
+		return () => window.clearInterval(interval);
+	}, [isPlaying, selectedYear, years]);
 
 	const filteredSongCount = useMemo(
 		() =>
@@ -63,6 +92,11 @@ export function Timeline({
 		searchTerm.trim().length > 0 || hasActiveFilters
 			? t.search.results.replace("{{count}}", String(filteredSongCount))
 			: null;
+
+	const selectedEntries = useMemo(() => {
+		if (!selectedYear) return [];
+		return yearGroups.find(([y]) => y === selectedYear)?.[1] ?? [];
+	}, [selectedYear, yearGroups]);
 
 	return (
 		<div className="relative min-h-screen px-2 pb-32 sm:px-4 sm:pb-24">
@@ -89,7 +123,7 @@ export function Timeline({
 						onChange={(event) => setSearchTerm(event.target.value)}
 						placeholder={t.search.placeholder}
 						dir={lang === "he" ? "rtl" : "ltr"}
-						className="mt-2 w-full rounded-xl border border-(--color-control-border) bg-(--color-control-background) px-4 py-3 text-base text-(--color-control-foreground) shadow-inner outline-none transition placeholder:text-(--color-control-muted) focus:border-(--color-accent) focus:ring-2 focus:ring-(--color-accent) focus:shadow-[0_0_20px_rgba(0,240,255,0.2)]"
+						className="mt-2 w-full rounded-xl border border-(--color-control-border) bg-(--color-control-background) px-4 py-3 text-base text-(--color-control-foreground) shadow-inner outline-none transition placeholder:text-(--color-control-muted) focus:border-(--color-accent) focus:ring-2 focus:ring-(--color-accent)"
 						aria-label={t.search.label}
 					/>
 					{searchCountText && (
@@ -109,27 +143,36 @@ export function Timeline({
 				/>
 			</div>
 
-			<div className="mx-auto mt-8 grid w-full max-w-6xl grid-cols-1 gap-6 sm:mt-12 sm:grid-cols-[1fr_60px_1fr] sm:gap-0">
-				{yearGroups.map(([year, entries], idx) => {
-					const showYear = idx === 0 || year !== yearGroups[idx - 1]?.[0];
-					return (
-						<YearGroup
-							key={year}
-							year={year}
-							entries={entries}
-							showYear={showYear}
-							yearColors={yearEventColors[year] ?? []}
-							lang={lang}
-							highlightTerm={searchTerm}
-						/>
-					);
-				})}
-			</div>
+			<YearScrubber
+				years={years}
+				selectedYear={selectedYear}
+				onSelect={(year) => {
+					setIsPlaying(false);
+					setSelectedYear(year);
+				}}
+				isPlaying={isPlaying}
+				onTogglePlay={() => setIsPlaying((prev) => !prev)}
+				isRtl={lang === "he"}
+				translations={t.timeTravel}
+			/>
+
+			{selectedYear && (
+				<TimeStage
+					year={selectedYear}
+					yearColors={yearEventColors[selectedYear] ?? []}
+					entries={selectedEntries}
+					lang={lang}
+					highlightTerm={searchTerm}
+					translations={t}
+				/>
+			)}
+
 			{(searchTerm.trim() || hasActiveFilters) && filteredSongCount === 0 && (
 				<p className="mt-6 text-center text-sm font-medium text-(--color-muted-foreground)">
 					{t.search.noResults}
 				</p>
 			)}
+
 			<SubmitSongModal
 				label={t.submitSongButton}
 				translations={t.submitSongForm}

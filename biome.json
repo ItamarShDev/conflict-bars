@@ -7,7 +7,8 @@
 			"!**/.next",
 			"!**/convex/_generated",
 			"!**/.vscode",
-			"!**/data/songs-generated.json"
+			"!**/data/songs-generated.json",
+			"!**/.convex"
 		]
 	},
 	"linter": {

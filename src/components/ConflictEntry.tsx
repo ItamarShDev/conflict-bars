@@ -41,11 +41,10 @@ export function ConflictEntry({ conflict, lang }: ConflictTimelineEntryProps) {
 
 	return (
 		<div
-			className="boombox-conflict-card glass-card relative z-0 rounded-xl border border-(--color-conflict-border) bg-(--color-conflict-background) p-4 text-(--color-conflict-foreground) shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_40px_rgba(255,77,0,0.12)] focus:outline-none focus:ring-2 focus:ring-(--color-accent) sm:p-5 text-start"
+			className="boombox-conflict-card glass-card relative z-0 rounded-xl border border-(--color-conflict-border) bg-(--color-conflict-background) p-4 text-(--color-conflict-foreground) transition-all duration-200 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-(--color-accent) sm:p-5 text-start"
 			style={{
-				borderLeftWidth: 3,
+				borderLeftWidth: 4,
 				borderLeftColor: color,
-				boxShadow: `-6px 0 22px color-mix(in srgb, ${color} 30%, transparent)`,
 			}}
 		>
 			<div className="flex gap-2 items-start h-full sm:gap-3">
