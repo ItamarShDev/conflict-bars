@@ -81,9 +81,9 @@ export function YearRail({
 							type="button"
 							onClick={() => onSelect(year)}
 							aria-pressed={isActive}
-							className={`year-label flex h-14 w-full shrink-0 items-center justify-center border-b border-(--color-foreground)/20 text-xs font-black tabular-nums tracking-widest transition odd:translate-x-0.5 even:-translate-x-0.5 wobble-sm md:h-16 md:text-sm ${
+							className={`year-label flex h-14 w-full shrink-0 items-center justify-center border-b border-(--color-foreground)/20 text-xs font-black tabular-nums tracking-widest transition md:h-16 md:wobble-sm md:text-sm ${
 								isActive
-									? "sticker !flex"
+									? "bg-(--color-accent) text-[#fffdf5] shadow-[4px_4px_0_rgba(0,0,0,0.18)]"
 									: "text-(--color-year-foreground) hover:bg-(--color-foreground)/10 hover:text-(--color-foreground)"
 							}`}
 						>
