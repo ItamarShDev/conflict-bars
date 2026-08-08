@@ -36,7 +36,7 @@ export function HelpModal({ translations, lang }: HelpModalProps) {
 		<>
 			<button
 				type="button"
-				className="boombox-help-trigger fixed end-4 top-6 z-50 flex h-11 w-11 items-center justify-center rounded-full bg-neutral-800 text-lg font-semibold text-white shadow-lg transition hover:bg-neutral-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300 sm:end-6"
+				className="boombox-help-trigger fab fixed end-4 top-4 z-50 flex h-11 w-11 items-center justify-center text-lg font-black transition hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent) sm:end-6 sm:top-5"
 				onClick={() => setIsOpen(true)}
 				aria-label={translations.buttonAria}
 				aria-haspopup="dialog"
@@ -63,19 +63,19 @@ export function HelpModal({ translations, lang }: HelpModalProps) {
 						aria-labelledby={titleId}
 						aria-describedby={descriptionId}
 						dir={isRtl ? "rtl" : "ltr"}
-						className="relative z-10 max-h-[calc(100vh-2rem)] w-full max-w-xl overflow-y-auto rounded-xl border border-neutral-700 bg-neutral-950 p-4 shadow-2xl sm:p-6"
+						className="glass-card relative z-10 max-h-[calc(100vh-2rem)] w-full max-w-xl overflow-y-auto border-2 border-(--color-control-border) p-5 sm:p-7 tape"
 					>
 						<div className="mb-4 flex items-center justify-between">
 							<h2
 								id={titleId}
-								className="text-lg font-semibold text-neutral-100"
+								className="font-display text-xl font-black text-(--color-card-foreground)"
 							>
 								{translations.modalTitle}
 							</h2>
 							<button
 								type="button"
 								onClick={() => setIsOpen(false)}
-								className="rounded-full p-2 text-neutral-400 transition hover:bg-neutral-800 hover:text-neutral-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300"
+								className="p-2 text-(--color-muted-foreground) transition hover:bg-(--color-card-foreground)/10 hover:text-(--color-card-foreground) focus:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent)"
 								aria-label={translations.close}
 							>
 								&#x2715;
@@ -83,7 +83,7 @@ export function HelpModal({ translations, lang }: HelpModalProps) {
 						</div>
 						<div
 							id={descriptionId}
-							className="space-y-4 text-sm text-neutral-200"
+							className="space-y-4 text-sm leading-relaxed text-(--color-muted-foreground)"
 						>
 							<p>{translations.description.intro}</p>
 							<ul
@@ -99,7 +99,7 @@ export function HelpModal({ translations, lang }: HelpModalProps) {
 							<button
 								type="button"
 								onClick={() => setIsOpen(false)}
-								className="rounded-full bg-emerald-500 px-4 py-2 text-sm font-semibold text-black transition hover:bg-emerald-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300"
+								className="bg-(--color-accent) px-5 py-2 text-sm font-black text-[#fffdf5] transition wobble-sm hover:bg-(--color-accent-hover) focus:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent)"
 							>
 								{translations.close}
 							</button>

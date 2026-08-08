@@ -8,12 +8,12 @@ export function ConflictLinks({
 	if (!wikipediaUrl) return null;
 
 	return (
-		<div className="flex gap-1 mt-1 text-xs">
+		<div className="mt-1 flex gap-2 text-xs">
 			<a
 				href={wikipediaUrl}
 				target="_blank"
 				rel="noreferrer"
-				className="text-[var(--color-accent)] hover:text-[var(--color-accent-hover)] underline"
+				className="border-2 border-(--color-control-border) bg-(--color-control-background) px-3 py-1 font-black text-(--color-accent) transition hover:border-(--color-accent) hover:bg-(--color-accent) hover:text-[#161613]"
 			>
 				{wikipediaLabel}
 			</a>

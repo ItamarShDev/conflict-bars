@@ -1,12 +1,14 @@
 "use client";
+
 import { usePreloadedQuery } from "convex/react";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { SubmitSongModal } from "@/components/SubmitSongModal";
 import { FilterPanel } from "@/components/timeline/FilterPanel";
 import { HelpModal } from "@/components/timeline/HelpModal";
 import { TimelineHeader } from "@/components/timeline/TimelineHeader";
 import { translations } from "@/components/timeline/translations";
-import { YearGroup } from "@/components/timeline/YearGroup";
+import { YearRail } from "@/components/timeline/YearRail";
+import { YearSection } from "@/components/timeline/YearSection";
 import {
 	buildYearEventColors,
 	convertConvexEventsToTimeline,
@@ -34,6 +36,8 @@ export function Timeline({
 	const [searchTerm, setSearchTerm] = useState("");
 	const [selectedLeanings, setSelectedLeanings] = useState<string[]>([]);
 	const [selectedDecades, setSelectedDecades] = useState<number[]>([]);
+	const [selectedYear, setSelectedYear] = useState<number | null>(null);
+	const [isPlaying, setIsPlaying] = useState(false);
 
 	const yearGroups = useMemo(
 		() =>
@@ -47,14 +51,78 @@ export function Timeline({
 		[songs, events, searchTerm, selectedLeanings, selectedDecades],
 	);
 
+	const displayYearGroups = useMemo(
+		() =>
+			yearGroups.filter(([, entries]) =>
+				entries.some((entry) => entry.type === "conflict"),
+			),
+		[yearGroups],
+	);
+	const years = useMemo(
+		() => displayYearGroups.map(([y]) => y),
+		[displayYearGroups],
+	);
+	const sectionRefs = useRef<Record<number, HTMLDivElement | null>>({});
+
+	useEffect(() => {
+		if (displayYearGroups.length === 0) {
+			setSelectedYear(null);
+			return;
+		}
+		if (!selectedYear || !years.includes(selectedYear)) {
+			setSelectedYear(years[0]);
+		}
+	}, [displayYearGroups, selectedYear, years]);
+
+	useEffect(() => {
+		if (!isPlaying || !selectedYear) {
+			return;
+		}
+		const interval = window.setInterval(() => {
+			const index = years.indexOf(selectedYear);
+			const next =
+				index >= 0 && index < years.length - 1 ? years[index + 1] : years[0];
+			setSelectedYear(next);
+			sectionRefs.current[next]?.scrollIntoView({
+				behavior: "smooth",
+				block: "start",
+			});
+		}, 4000);
+		return () => window.clearInterval(interval);
+	}, [isPlaying, selectedYear, years]);
+
+	const selectYear = (year: number) => {
+		setIsPlaying(false);
+		setSelectedYear(year);
+		sectionRefs.current[year]?.scrollIntoView({
+			behavior: "smooth",
+			block: "start",
+		});
+	};
+
+	const goPrevious = () => {
+		if (!selectedYear) return;
+		const index = years.indexOf(selectedYear);
+		const prev = index > 0 ? years[index - 1] : years[years.length - 1];
+		selectYear(prev);
+	};
+
+	const goNext = () => {
+		if (!selectedYear) return;
+		const index = years.indexOf(selectedYear);
+		const next =
+			index >= 0 && index < years.length - 1 ? years[index + 1] : years[0];
+		selectYear(next);
+	};
+
 	const filteredSongCount = useMemo(
 		() =>
-			yearGroups.reduce(
+			displayYearGroups.reduce(
 				(count, [, entries]) =>
 					count + entries.filter((entry) => entry.type === "song").length,
 				0,
 			),
-		[yearGroups],
+		[displayYearGroups],
 	);
 
 	const hasActiveFilters =
@@ -63,67 +131,89 @@ export function Timeline({
 		searchTerm.trim().length > 0 || hasActiveFilters
 			? t.search.results.replace("{{count}}", String(filteredSongCount))
 			: null;
+
 	return (
-		<div className="relative px-2 sm:px-4">
-			<TimelineHeader title={t.title} themeToggle={t.themeToggle} />
+		<div className="relative min-h-screen">
+			<TimelineHeader
+				title={t.title}
+				subtitle={t.subtitle}
+				themeToggle={t.themeToggle}
+				lang={lang}
+			/>
 			<HelpModal translations={t.helpModal} lang={lang} />
 
-			<div
-				className={`mx-auto mt-4 w-full max-w-3xl ${lang === "he" ? "text-right" : "text-left"}`}
-			>
-				<label
-					htmlFor="timeline-search"
-					className="block text-sm font-medium text-(--color-foreground)"
-				>
-					{t.search.label}
-				</label>
-				<input
-					id="timeline-search"
-					type="search"
-					value={searchTerm}
-					onChange={(event) => setSearchTerm(event.target.value)}
-					placeholder={t.search.placeholder}
-					dir={lang === "he" ? "rtl" : "ltr"}
-					className="mt-2 w-full rounded-lg border border-(--color-control-border) bg-(--color-control-background) px-3 py-2 text-base text-(--color-control-foreground) shadow-sm outline-none transition focus:border-(--color-accent) focus:ring-2 focus:ring-(--color-accent)"
-					aria-label={t.search.label}
-				/>
-				{searchCountText && (
-					<p className="mt-2 text-sm text-(--color-muted-foreground)">
-						{searchCountText}
-					</p>
-				)}
-			</div>
-
-			<FilterPanel
-				lang={lang}
-				translations={t.filters}
-				selectedLeanings={selectedLeanings}
-				onLeaningsChange={setSelectedLeanings}
-				selectedDecades={selectedDecades}
-				onDecadesChange={setSelectedDecades}
+			<YearRail
+				years={years}
+				selectedYear={selectedYear}
+				onSelect={selectYear}
+				isPlaying={isPlaying}
+				onTogglePlay={() => setIsPlaying((prev) => !prev)}
+				onPrevious={goPrevious}
+				onNext={goNext}
+				translations={t.timeTravel}
 			/>
 
-			<div className="mt-10 grid w-full grid-cols-1 gap-4 pb-32 sm:grid-cols-[1fr_50px_1fr] sm:gap-0 sm:pb-24">
-				{yearGroups.map(([year, entries], idx) => {
-					const showYear = idx === 0 || year !== yearGroups[idx - 1]?.[0];
-					return (
-						<YearGroup
+			<main className="min-h-screen ps-14 md:ps-20">
+				<div className="control-bar mx-4 mb-6 mt-4 border-0 border-b-4 border-(--color-accent) p-4 md:mx-6 md:mb-8 md:mt-6 md:p-6">
+					<div className={`${lang === "he" ? "text-right" : "text-left"}`}>
+						<label
+							htmlFor="timeline-search"
+							className="text-xs font-black uppercase tracking-widest text-(--color-control-muted)"
+						>
+							{t.search.label}
+						</label>
+						<input
+							id="timeline-search"
+							type="search"
+							value={searchTerm}
+							onChange={(event) => setSearchTerm(event.target.value)}
+							placeholder={t.search.placeholder}
+							dir={lang === "he" ? "rtl" : "ltr"}
+							className="mt-2 w-full border-2 border-(--color-control-border) bg-(--color-control-background) px-4 py-3 text-base text-(--color-control-foreground) outline-none transition placeholder:text-(--color-control-muted) focus:border-(--color-accent) focus:bg-(--color-control-background)"
+							aria-label={t.search.label}
+						/>
+						{searchCountText && (
+							<p className="mt-2 text-sm font-black text-(--color-accent)">
+								{searchCountText}
+							</p>
+						)}
+					</div>
+
+					<FilterPanel
+						lang={lang}
+						translations={t.filters}
+						selectedLeanings={selectedLeanings}
+						onLeaningsChange={setSelectedLeanings}
+						selectedDecades={selectedDecades}
+						onDecadesChange={setSelectedDecades}
+					/>
+				</div>
+
+				<div className="pb-32 md:pb-24">
+					{displayYearGroups.map(([year, entries]) => (
+						<YearSection
 							key={year}
 							year={year}
-							entries={entries}
-							showYear={showYear}
 							yearColors={yearEventColors[year] ?? []}
+							entries={entries}
 							lang={lang}
 							highlightTerm={searchTerm}
+							translations={t}
+							ref={(el) => {
+								sectionRefs.current[year] = el;
+							}}
+							isActive={year === selectedYear}
 						/>
-					);
-				})}
-			</div>
-			{(searchTerm.trim() || hasActiveFilters) && filteredSongCount === 0 && (
-				<p className="mt-4 text-center text-sm text-(--color-muted-foreground)">
-					{t.search.noResults}
-				</p>
-			)}
+					))}
+				</div>
+
+				{(searchTerm.trim() || hasActiveFilters) && filteredSongCount === 0 && (
+					<p className="py-12 text-center text-sm font-black uppercase tracking-widest text-(--color-year-foreground)">
+						{t.search.noResults}
+					</p>
+				)}
+			</main>
+
 			<SubmitSongModal
 				label={t.submitSongButton}
 				translations={t.submitSongForm}

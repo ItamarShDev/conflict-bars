@@ -41,7 +41,7 @@ export function SubmitSongModal({
 			<button
 				type="button"
 				onClick={() => setIsOpen(true)}
-				className="boombox-submit-trigger fixed bottom-4 end-4 z-40 min-h-11 rounded-full bg-emerald-500 px-4 py-2 text-sm font-semibold text-black shadow-lg transition hover:bg-emerald-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300 sm:bottom-6 sm:end-6 sm:min-h-0 sm:px-5 sm:py-3 sm:text-base"
+				className="boombox-submit-trigger fab fixed bottom-4 end-4 z-40 min-h-11 px-4 py-2 text-sm font-black transition hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent) sm:bottom-6 sm:end-6 sm:min-h-0 sm:px-6 sm:py-3 sm:text-base"
 			>
 				{label}
 			</button>
@@ -59,15 +59,15 @@ export function SubmitSongModal({
 						className="absolute inset-0 cursor-default"
 						aria-label={translations.modalCloseAria}
 					/>
-					<div className="relative z-10 w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-xl border border-neutral-700 bg-neutral-950 p-4 sm:p-6 shadow-2xl">
+					<div className="glass-card relative z-10 w-full max-w-2xl max-h-[90vh] overflow-y-auto border-2 border-(--color-control-border) p-4 sm:p-6 tape">
 						<div className="mb-3 sm:mb-4 flex items-center justify-between">
-							<h2 className="text-base sm:text-lg font-semibold">
+							<h2 className="font-display text-base font-black sm:text-lg">
 								{translations.title}
 							</h2>
 							<button
 								type="button"
 								onClick={() => setIsOpen(false)}
-								className="rounded-full p-2 text-neutral-400 transition hover:bg-neutral-800 hover:text-neutral-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300"
+								className="p-2 text-(--color-muted-foreground) transition hover:bg-(--color-card-foreground)/10 hover:text-(--color-card-foreground) focus:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent)"
 								aria-label={translations.modalCloseAria}
 							>
 								&#x2715;

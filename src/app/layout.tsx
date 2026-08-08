@@ -36,7 +36,6 @@ export default function RootLayout({
 		<html lang="en" className={heebo.variable} suppressHydrationWarning>
 			<head>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<script>{`(() => { try { const theme = localStorage.getItem("conflict-bars-theme"); if (theme === "boombox") document.documentElement.dataset.theme = theme; } catch {} })();`}</script>
 			</head>
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased bg-(--color-background) text-(--color-foreground)`}

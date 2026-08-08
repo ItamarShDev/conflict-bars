@@ -171,28 +171,29 @@ export function SubmitSongForm({
 
 	const t = translations;
 
+	const inputBase =
+		"min-w-0 border-2 border-(--color-control-border) px-3 py-2 text-sm sm:text-base bg-(--color-control-background) text-(--color-control-foreground) outline-none transition placeholder:text-(--color-control-muted) focus:border-(--color-accent) wobble-sm";
+
 	return (
-		<div
-			className={`border border-neutral-700 rounded-lg p-4 sm:p-6 bg-neutral-900/50 text-start`}
-		>
-			<h2 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-neutral-100">
+		<div className="glass-card border-2 border-(--color-control-border) p-4 text-start sm:p-6">
+			<h2 className="mb-3 font-display text-lg font-black text-(--color-card-foreground) sm:mb-4 sm:text-xl">
 				{isEditMode ? t.editTitle : t.title}
 			</h2>
 			<form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
 				<div className="grid min-w-0 grid-cols-1 gap-3 sm:gap-4 md:grid-cols-2">
 					<label className="flex min-w-0 flex-col gap-1.5 sm:gap-2">
-						<span className="text-xs sm:text-sm font-medium text-neutral-300">
+						<span className="text-xs font-black uppercase tracking-wider text-(--color-muted-foreground)">
 							{t.fields.displayName}
 						</span>
 						<input
 							name="displayName"
 							type="text"
 							placeholder={t.placeholders.displayNameOptional}
-							className="rounded border border-neutral-700 bg-neutral-950 px-2.5 sm:px-3 py-1.5 sm:py-2 text-sm sm:text-base text-neutral-100"
+							className={inputBase}
 						/>
 					</label>
 					<label className="flex min-w-0 flex-col gap-1.5 sm:gap-2">
-						<span className="text-xs sm:text-sm font-medium text-neutral-300">
+						<span className="text-xs font-black uppercase tracking-wider text-(--color-muted-foreground)">
 							{t.fields.email}
 						</span>
 						<input
@@ -200,11 +201,11 @@ export function SubmitSongForm({
 							type="email"
 							defaultValue={prefillEmail}
 							dir="ltr"
-							className="rounded border border-neutral-700 bg-neutral-950 px-2.5 sm:px-3 py-1.5 sm:py-2 text-sm sm:text-base text-neutral-100"
+							className={inputBase}
 						/>
 					</label>
 					<label className="flex min-w-0 flex-col gap-1.5 sm:gap-2">
-						<span className="text-xs sm:text-sm font-medium text-neutral-300">
+						<span className="text-xs font-black uppercase tracking-wider text-(--color-muted-foreground)">
 							{t.fields.songName}
 						</span>
 						<input
@@ -213,15 +214,15 @@ export function SubmitSongForm({
 							required
 							defaultValue={editSong?.name || ""}
 							dir={lang === "he" ? "rtl" : "ltr"}
-							className={`rounded border px-2.5 sm:px-3 py-1.5 sm:py-2 text-sm sm:text-base bg-neutral-950 text-neutral-100 ${
+							className={`${inputBase} ${
 								missingFields.has("songName")
 									? "border-red-500"
-									: "border-neutral-700"
+									: "border-(--color-control-border)"
 							}`}
 						/>
 					</label>
 					<label className="flex min-w-0 flex-col gap-1.5 sm:gap-2">
-						<span className="text-xs sm:text-sm font-medium text-neutral-300">
+						<span className="text-xs font-black uppercase tracking-wider text-(--color-muted-foreground)">
 							{t.fields.artist}
 						</span>
 						<input
@@ -232,24 +233,18 @@ export function SubmitSongForm({
 							value={artistValue}
 							onChange={(e) => setArtistValue(e.target.value)}
 							list={isEditMode ? undefined : artistListId}
-							className={`rounded border px-2.5 sm:px-3 py-1.5 sm:py-2 text-sm sm:text-base ${
+							className={`${inputBase} ${
 								missingFields.has("artist")
 									? "border-red-500"
-									: "border-neutral-700"
-							} ${
-								isEditMode
-									? "bg-neutral-900 text-neutral-100 cursor-not-allowed opacity-100"
-									: "bg-neutral-950 text-neutral-100"
-							}`}
+									: "border-(--color-control-border)"
+							} ${isEditMode ? "cursor-not-allowed opacity-70" : ""}`}
 						/>
 					</label>
 				</div>
 
-				<div
-					className={`grid min-w-0 grid-cols-1 gap-4 md:grid-cols-2 ${lang === "he" ? "flex flex-col-reverse" : ""}`}
-				>
+				<div className="grid min-w-0 grid-cols-1 gap-4 md:grid-cols-2">
 					<label className="flex min-w-0 flex-col gap-2">
-						<span className="text-sm font-medium text-neutral-300">
+						<span className="text-xs font-black uppercase tracking-wider text-(--color-muted-foreground)">
 							{t.fields.publishedDate}
 						</span>
 						<input
@@ -260,15 +255,15 @@ export function SubmitSongForm({
 							placeholder={t.placeholders.publishedYear}
 							required
 							defaultValue={editSong?.published_date || ""}
-							className={`rounded border px-3 py-2 bg-neutral-950 text-neutral-100 ${
+							className={`${inputBase} ${
 								missingFields.has("publishedDate")
 									? "border-red-500"
-									: "border-neutral-700"
+									: "border-(--color-control-border)"
 							}`}
 						/>
 					</label>
 					<label className="flex min-w-0 flex-col gap-2">
-						<span className="text-sm font-medium text-neutral-300">
+						<span className="text-xs font-black uppercase tracking-wider text-(--color-muted-foreground)">
 							{t.fields.language}
 						</span>
 						<input
@@ -277,20 +272,18 @@ export function SubmitSongForm({
 							required
 							defaultValue={editSong?.language || ""}
 							list={languageListId}
-							className={`rounded border px-3 py-2 bg-neutral-950 text-neutral-100 ${
+							className={`${inputBase} ${
 								missingFields.has("language")
 									? "border-red-500"
-									: "border-neutral-700"
+									: "border-(--color-control-border)"
 							}`}
 						/>
 					</label>
 				</div>
 
-				<div
-					className={`grid min-w-0 grid-cols-1 gap-4 md:grid-cols-2 ${lang === "he" ? "flex flex-col-reverse" : ""}`}
-				>
+				<div className="grid min-w-0 grid-cols-1 gap-4 md:grid-cols-2">
 					<label className="flex min-w-0 flex-col gap-2">
-						<span className="text-sm font-medium text-neutral-300">
+						<span className="text-xs font-black uppercase tracking-wider text-(--color-muted-foreground)">
 							{t.fields.lyricHebrew}
 						</span>
 						<textarea
@@ -299,15 +292,15 @@ export function SubmitSongForm({
 							required
 							defaultValue={editSong?.lyric_sample?.hebrew || ""}
 							dir="rtl"
-							className={`rounded border px-3 py-2 bg-neutral-950 text-neutral-100 ${
+							className={`${inputBase} ${
 								missingFields.has("lyricHebrew")
 									? "border-red-500"
-									: "border-neutral-700"
+									: "border-(--color-control-border)"
 							}`}
 						/>
 					</label>
 					<label className="flex min-w-0 flex-col gap-2">
-						<span className="text-sm font-medium text-neutral-300">
+						<span className="text-xs font-black uppercase tracking-wider text-(--color-muted-foreground)">
 							{t.fields.lyricEnglish}
 						</span>
 						<textarea
@@ -315,16 +308,14 @@ export function SubmitSongForm({
 							rows={3}
 							defaultValue={editSong?.lyric_sample?.english_translation || ""}
 							dir="ltr"
-							className="min-w-0 rounded border border-neutral-700 bg-neutral-950 px-3 py-2 text-neutral-100"
+							className={inputBase}
 						/>
 					</label>
 				</div>
 
-				<div
-					className={`grid min-w-0 grid-cols-1 gap-4 md:grid-cols-3 ${lang === "he" ? "flex flex-col-reverse" : ""}`}
-				>
+				<div className="grid min-w-0 grid-cols-1 gap-4 md:grid-cols-3">
 					<label className="flex min-w-0 flex-col gap-2">
-						<span className="text-sm font-medium text-neutral-300">
+						<span className="text-xs font-black uppercase tracking-wider text-(--color-muted-foreground)">
 							{t.fields.linkLyrics}
 						</span>
 						<input
@@ -332,11 +323,11 @@ export function SubmitSongForm({
 							type="url"
 							defaultValue={editSong?.links?.lyrics || ""}
 							dir={lang === "he" ? "rtl" : "ltr"}
-							className="min-w-0 rounded border border-neutral-700 bg-neutral-950 px-3 py-2 text-neutral-100"
+							className={inputBase}
 						/>
 					</label>
 					<label className="flex min-w-0 flex-col gap-2">
-						<span className="text-sm font-medium text-neutral-300">
+						<span className="text-xs font-black uppercase tracking-wider text-(--color-muted-foreground)">
 							{t.fields.linkInfo}
 						</span>
 						<input
@@ -344,11 +335,11 @@ export function SubmitSongForm({
 							type="url"
 							defaultValue={editSong?.links?.song_info || ""}
 							dir={lang === "he" ? "rtl" : "ltr"}
-							className="min-w-0 rounded border border-neutral-700 bg-neutral-950 px-3 py-2 text-neutral-100"
+							className={inputBase}
 						/>
 					</label>
 					<label className="flex min-w-0 flex-col gap-2">
-						<span className="text-sm font-medium text-neutral-300">
+						<span className="text-xs font-black uppercase tracking-wider text-(--color-muted-foreground)">
 							{t.fields.linkYoutube}
 						</span>
 						<input
@@ -356,24 +347,28 @@ export function SubmitSongForm({
 							type="url"
 							defaultValue={editSong?.links?.youtube || ""}
 							dir={lang === "he" ? "rtl" : "ltr"}
-							className="min-w-0 rounded border border-neutral-700 bg-neutral-950 px-3 py-2 text-neutral-100"
+							className={inputBase}
 						/>
 					</label>
 				</div>
 
-				<div className="flex items-center justify-end gap-4">
+				<div className="flex flex-col-reverse items-center justify-end gap-4 sm:flex-row">
 					<div>
 						{status === "success" && (
-							<span className="text-sm text-emerald-400">{t.success}</span>
+							<span className="text-sm font-bold text-emerald-400">
+								{t.success}
+							</span>
 						)}
 						{status === "error" && errorMessage && (
-							<span className="text-sm text-red-400">{errorMessage}</span>
+							<span className="text-sm font-bold text-red-400">
+								{errorMessage}
+							</span>
 						)}
 					</div>
 					<button
 						type="submit"
 						disabled={status === "submitting"}
-						className="rounded bg-emerald-500 px-4 py-2 font-semibold text-black disabled:opacity-50"
+						className="w-full bg-(--color-accent) px-6 py-2.5 font-black text-[#fffdf5] transition wobble-sm hover:bg-(--color-accent-hover) disabled:opacity-50 sm:w-auto"
 					>
 						{status === "submitting" ? t.buttons.submitting : t.buttons.submit}
 					</button>

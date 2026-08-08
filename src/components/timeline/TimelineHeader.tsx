@@ -1,24 +1,39 @@
 "use client";
 
 import { useTheme } from "@/components/ThemeProvider";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 import type { translations } from "./translations";
 
 interface TimelineHeaderProps {
 	title: string;
+	subtitle: string;
 	themeToggle: (typeof translations)["en"]["themeToggle"];
+	lang: "en" | "he";
 }
 
-export function TimelineHeader({ title, themeToggle }: TimelineHeaderProps) {
+export function TimelineHeader({
+	title,
+	subtitle,
+	themeToggle,
+	lang,
+}: TimelineHeaderProps) {
 	const { theme, setTheme } = useTheme();
 	return (
-		<div className="relative mx-auto my-5 flex max-w-5xl flex-col items-center justify-center gap-2 sm:my-7 sm:flex-row sm:gap-0">
-			<h1 className="text-center text-2xl font-bold tracking-tight text-(--color-foreground) sm:text-3xl">
-				{title}
-			</h1>
-			<div className="relative sm:absolute sm:end-0 sm:top-1/2 sm:-translate-y-1/2">
+		<header className="control-bar sticky top-0 z-30 flex w-full flex-col gap-3 border-0 border-b-4 border-(--color-accent) px-4 py-4 ps-14 md:flex-row md:items-center md:justify-between md:ps-20 md:py-5">
+			<div>
+				<h1 className="font-display text-2xl font-black leading-none tracking-tight text-(--color-control-foreground) md:text-4xl">
+					{title}
+				</h1>
+				<p className="mt-1 text-xs font-black uppercase tracking-widest text-(--color-control-muted)">
+					{subtitle}
+				</p>
+			</div>
+
+			<div className="flex items-center gap-2 md:gap-3">
+				<LanguageSwitcher lang={lang} />
 				<fieldset
 					aria-label={themeToggle.label}
-					className="flex items-center rounded-full border border-(--color-control-border) bg-(--color-control-background) p-0.5 text-xs text-(--color-control-foreground) shadow-sm"
+					className="flex items-center border-2 border-(--color-control-border) bg-(--color-control-background) p-0.5 text-xs text-(--color-control-foreground) wobble-sm"
 				>
 					{(["classic", "boombox"] as const).map((option) => (
 						<button
@@ -26,10 +41,10 @@ export function TimelineHeader({ title, themeToggle }: TimelineHeaderProps) {
 							type="button"
 							onClick={() => setTheme(option)}
 							aria-pressed={theme === option}
-							className={`rounded-full px-2 py-1 font-medium transition-colors ${
+							className={`px-3 py-1.5 text-xs font-black uppercase tracking-wider transition wobble-sm ${
 								theme === option
-									? "bg-(--color-accent) text-white"
-									: "hover:bg-(--color-muted)"
+									? "bg-(--color-accent) text-[#fffdf5]"
+									: "hover:bg-(--color-control-foreground)/10"
 							}`}
 						>
 							{themeToggle[option]}
@@ -37,6 +52,6 @@ export function TimelineHeader({ title, themeToggle }: TimelineHeaderProps) {
 					))}
 				</fieldset>
 			</div>
-		</div>
+		</header>
 	);
 }

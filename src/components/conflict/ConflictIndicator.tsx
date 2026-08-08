@@ -1,8 +1,8 @@
 export function ConflictIndicator({ color }: { color?: string }) {
 	return (
 		<div
-			className="absolute end-1 top-1 h-1 w-1 rounded-full border border-(--color-background) shadow"
-			style={color ? { background: color } : undefined}
+			className="absolute end-2 top-2 h-2.5 w-2.5 rounded-full border border-(--color-background)"
+			style={color ? { background: color, color } : undefined}
 		/>
 	);
 }
