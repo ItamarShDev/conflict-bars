@@ -5,11 +5,24 @@ import type { HelpModalTranslations } from "@/components/timeline/translations";
 
 type HelpModalProps = {
 	translations: HelpModalTranslations;
+	stats: HelpModalStats;
 	lang: "en" | "he";
 	className?: string;
 };
 
-export function HelpModal({ translations, lang, className }: HelpModalProps) {
+export type HelpModalStats = {
+	songCount: number;
+	artistCount: number;
+	startYear: number;
+	endYear: number;
+};
+
+export function HelpModal({
+	translations,
+	stats,
+	lang,
+	className,
+}: HelpModalProps) {
 	const [isOpen, setIsOpen] = useState(false);
 	const titleId = useId();
 	const descriptionId = useId();
@@ -87,6 +100,13 @@ export function HelpModal({ translations, lang, className }: HelpModalProps) {
 							className="space-y-4 text-sm leading-relaxed text-(--color-muted-foreground)"
 						>
 							<p>{translations.description.intro}</p>
+							<p>
+								{translations.description.catalog
+									.replace("{{songs}}", String(stats.songCount))
+									.replace("{{artists}}", String(stats.artistCount))
+									.replace("{{startYear}}", String(stats.startYear))
+									.replace("{{endYear}}", String(stats.endYear))}
+							</p>
 							<ul
 								className={`${isRtl ? "list-disc pr-6" : "list-disc pl-6"} space-y-2`}
 							>
