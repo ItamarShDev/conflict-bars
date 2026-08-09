@@ -6,9 +6,10 @@ import type { HelpModalTranslations } from "@/components/timeline/translations";
 type HelpModalProps = {
 	translations: HelpModalTranslations;
 	lang: "en" | "he";
+	className?: string;
 };
 
-export function HelpModal({ translations, lang }: HelpModalProps) {
+export function HelpModal({ translations, lang, className }: HelpModalProps) {
 	const [isOpen, setIsOpen] = useState(false);
 	const titleId = useId();
 	const descriptionId = useId();
@@ -36,7 +37,7 @@ export function HelpModal({ translations, lang }: HelpModalProps) {
 		<>
 			<button
 				type="button"
-				className="boombox-help-trigger fab fixed end-4 top-4 z-50 flex h-11 w-11 items-center justify-center text-lg font-black transition hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent) sm:end-6 sm:top-5"
+				className={`boombox-help-trigger fab flex h-11 w-11 items-center justify-center text-lg font-black transition hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent) ${className ?? "fixed end-4 top-4 z-50 sm:end-6 sm:top-5"}`}
 				onClick={() => setIsOpen(true)}
 				aria-label={translations.buttonAria}
 				aria-haspopup="dialog"

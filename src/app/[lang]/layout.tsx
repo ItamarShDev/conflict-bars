@@ -14,12 +14,16 @@ export async function generateMetadata({
 		? "ציר זמן אינטראקטיבי לחקר אמני היפ־הופ ישראליים ואירועים מרכזיים לאורך השנים"
 		: "An interactive timeline exploring Israeli hip-hop artists and key events across years and decades";
 
-	const base = "https://conflictbars.vercel.app";
+	const base = "https://conflictbars.org";
 	const url = `${base}/${lang}`;
 
 	return {
+		metadataBase: new URL(base),
 		title: siteTitle,
 		description,
+		icons: {
+			icon: "/favicon.svg",
+		},
 		openGraph: {
 			type: "website",
 			siteName: siteTitle,
