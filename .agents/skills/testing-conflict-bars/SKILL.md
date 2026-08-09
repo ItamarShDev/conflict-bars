@@ -112,6 +112,30 @@ suddenly 500s with `Environment variable NEXT_PUBLIC_CONVEX_URL is not set`, jus
 Beware `pkill -f next` right after spawning a new dev server — it kills the one you just started.
 Prefer `setsid nohup npm run dev &` and verify with `curl -o /dev/null -w '%{http_code}'`.
 
+## Card/song counts must be re-baselined after any `data/` change
+
+`data/songs-generated.json` is generated and gitignored, and `loadFileSongs()` reads it directly at
+request time. Two failure modes to watch for:
+
+1. **Stale dev-server bundle.** If `npm run generate-songs` (or a data commit) changes the JSON while
+   `next dev` is running, one route can keep serving an older snapshot while another serves the new
+   one — e.g. `/en` reporting 149 cards and `/he` reporting 153 at the same time. This is a testing
+   artifact, not a product bug. Before trusting counts, kill the dev server, `rm -rf .next/dev`, and
+   restart. A hard browser reload alone is NOT enough.
+2. **The shared checkout can move under you.** In a lead/tester split the lead may commit new data
+   mid-run. Always re-derive expected counts from the JSON at the *current* HEAD immediately before
+   asserting, and record the commit SHA in the report. Handy one-liner:
+
+```
+git log --oneline -1 && node -e 'const s=require("./data/songs-generated.json");console.log(s.length)'
+```
+
+Also note `.env.local` is gitignored and can disappear during cleanup/commits; if the dev server
+suddenly 500s with `Environment variable NEXT_PUBLIC_CONVEX_URL is not set`, just recreate it.
+
+Beware `pkill -f next` right after spawning a new dev server — it kills the one you just started.
+Prefer `setsid nohup npm run dev &` and verify with `curl -o /dev/null -w '%{http_code}'`.
+
 ### The song counter only renders when a filter or search is active
 `Timeline.tsx` computes `searchCountText` as `null` unless `searchTerm` is non-empty or a
 leaning/decade filter is set, so on a clean page load there is **no** `Found N song(s)` text to
