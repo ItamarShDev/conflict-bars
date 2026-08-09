@@ -301,6 +301,16 @@ html[data-theme="boombox"] h3 {
 	transform: rotate(180deg);
 }
 
+/* Hide scrollbars while keeping overflow scroll functional */
+.no-scrollbar::-webkit-scrollbar {
+	display: none;
+}
+
+.no-scrollbar {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
 [dir="rtl"] .year-label {
 	transform: rotate(0deg);
 }
