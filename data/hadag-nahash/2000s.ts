@@ -77,6 +77,7 @@ export const hadagNahash2000s = [
 				"Jerusalem, a city worth an explosion / Walking in the pedestrian mall feeling like an ingathering of exiles / A thousand cultures, everyone has a brother and nine sons.",
 		},
 		links: {
+			lyrics: "https://genius.com/Hadag-nahash-hineh-ani-ba-lyrics",
 			youtube: "https://www.youtube.com/watch?v=JNwJFLkoX80",
 		},
 	},
@@ -92,6 +93,7 @@ export const hadagNahash2000s = [
 				"She immediately lay on the attacker / protecting with her body a terrorist but also a human / who without her body would be a corpse.",
 		},
 		links: {
+			lyrics: "https://genius.com/Hadag-nahash-bella-belisima-lyrics",
 			youtube: "https://www.youtube.com/watch?v=0S9hDbW-CJE",
 		},
 	},
@@ -107,6 +109,7 @@ export const hadagNahash2000s = [
 				"Shalom Salaam Peace / possible here too / not just in Paris or Nice / Nobody wants to die but if we must then isn't it better in Levi's than in uniforms.",
 		},
 		links: {
+			lyrics: "https://genius.com/Hadag-nahash-shalom-salaam-peace-lyrics",
 			youtube: "https://www.youtube.com/watch?v=O4EaIYnsk4k",
 		},
 	},

@@ -10,6 +10,7 @@ export const shabjdeed2010s = [
 				"They took me in a jeep to the Moscovia (Russian Compound detention center) / Interrogations and beatings, but the head stays up high.",
 		},
 		links: {
+			lyrics: "https://genius.com/Shabjdeed-carlo-lyrics",
 			youtube: "https://www.youtube.com/watch?v=shTbSKNOYE4",
 		},
 	},
@@ -24,6 +25,7 @@ export const shabjdeed2010s = [
 				"The load on our shoulders is heavy, living under pressure / Every day is survival, but we are still here.",
 		},
 		links: {
+			lyrics: "https://genius.com/Shabjdeed-hamlana-lyrics",
 			youtube: "https://www.youtube.com/watch?v=rZ7ZnJYynN8",
 		},
 	},
@@ -38,6 +40,7 @@ export const shabjdeed2010s = [
 				"Palestinian rapper from Akka, song about resistance and life under occupation",
 		},
 		links: {
+			lyrics: "https://genius.com/Shabjdeed-and-al-nather-mtaktak-lyrics",
 			youtube: "https://www.youtube.com/watch?v=jEHtO_c_UdI",
 		},
 	},
@@ -52,6 +55,7 @@ export const shabjdeed2010s = [
 				"We stand like mountains against the crushers / We'd rather eat shit than take dirty money.",
 		},
 		links: {
+			lyrics: "https://genius.com/Shabjdeed-and-al-nather-sindibad-lyrics",
 			youtube: "https://www.youtube.com/watch?v=qmvo1VmQ1EA",
 		},
 	},

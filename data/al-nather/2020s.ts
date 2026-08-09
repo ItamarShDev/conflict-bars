@@ -10,6 +10,7 @@ export const alNather2020s = [
 				"Unofficial Palestinian anthem for Palestinian youth, voice of young generation in resistance",
 		},
 		links: {
+			lyrics: "https://genius.com/Daboor-inn-ann-lyrics",
 			youtube: "https://www.youtube.com/watch?v=FKvKnuvXUSU",
 		},
 	},

@@ -12,6 +12,7 @@ export const shadiamansour2010s = [
 		artist: "Shadia Mansour (شادية منصور)",
 		published_date: "2011",
 		links: {
+			lyrics: "https://genius.com/Shadia-mansour-kellon-andon-dabbabet-lyrics",
 			youtube: "https://www.youtube.com/watch?v=A1dCUlCNBus",
 		},
 	},

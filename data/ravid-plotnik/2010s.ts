@@ -8,6 +8,7 @@ export const ravidplotnik2010s = [
 				"עמוק בפנים אותה תחושה עזה כן / יום יום כל העולם שותה לי ת'דם ות'דלק",
 		},
 		links: {
+			lyrics: "https://genius.com/Ravid-plotnik-boor-veam-haaretz-lyrics",
 			youtube: "https://www.youtube.com/watch?v=Q7ajZiT1Yms",
 		},
 	},
@@ -24,6 +25,7 @@ export const ravidplotnik2010s = [
 			hebrew: "וואלק אדם לאדם זאב",
 		},
 		links: {
+			lyrics: "https://genius.com/Ravid-plotnik-kol-hazman-hazeh-lyrics",
 			youtube: "https://www.youtube.com/watch?v=Ey_K97x15ek",
 		},
 	},
@@ -32,6 +34,7 @@ export const ravidplotnik2010s = [
 		artist: "Ravid Plotnik (רביד פלוטניק)",
 		published_date: "2017",
 		links: {
+			lyrics: "https://genius.com/Ravid-plotnik-medinat-mishtara-lyrics",
 			youtube: "https://www.youtube.com/watch?v=NvBvp9YHZd4",
 		},
 	},
@@ -44,6 +47,7 @@ export const ravidplotnik2010s = [
 				"פתיחה: / מי יודע אם אראה את פנייך / שוב / הכחשה הולכת, הכחשה תשוב",
 		},
 		links: {
+			lyrics: "https://genius.com/Ravid-plotnik-nitraeh-bagilgul-haba-lyrics",
 			youtube: "https://www.youtube.com/watch?v=Maf6BaEhCzY",
 		},
 	},

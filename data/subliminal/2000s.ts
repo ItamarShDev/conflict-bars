@@ -36,6 +36,8 @@ export const subliminal2000s = [
 				"ובלב תל אביב היה שוב פיגוע / ובלב תל אביב היה שוב פיגוע / ובלב תל אביב היה שוב פיגוע",
 		},
 		links: {
+			lyrics:
+				"https://genius.com/Subliminal-bidiuk-kshehashavtem-shehakol-nigmar-lyrics",
 			youtube: "https://www.youtube.com/watch?v=hVE9m0nhUI4",
 		},
 	},
@@ -49,6 +51,7 @@ export const subliminal2000s = [
 				"Jerusalem is not for sale / Murder, terror, another attack, another casualty.",
 		},
 		links: {
+			lyrics: "https://genius.com/Subliminal-vehatzel-bor-lelo-tachtit-lyrics",
 			youtube: "https://www.youtube.com/watch?v=Qr6KAk1-9O8",
 		},
 	},
@@ -132,6 +135,7 @@ export const subliminal2000s = [
 				"My God, I wish you would come down to me, they're chasing me in my life, my enemies are united wanting to destroy me, we are nursing and arming the haters",
 		},
 		links: {
+			lyrics: "https://genius.com/Subliminal-and-hatzel-hafred-umshol-lyrics",
 			youtube: "https://www.youtube.com/watch?v=AhMz6cM25C8",
 		},
 	},
@@ -161,6 +165,7 @@ export const subliminal2000s = [
 				"The sun is hidden in the black clouds\nrain and thunders and windows shut closed",
 		},
 		links: {
+			lyrics: "https://genius.com/Subliminal-ze-hegia-ad-lekan-lyrics",
 			youtube: "https://www.youtube.com/watch?v=Z8WJjOP9p_c",
 		},
 	},
@@ -199,6 +204,8 @@ export const subliminal2000s = [
 				"I am a Zionist, I am proud, I am a Jew / You won't be able to stop me.",
 		},
 		links: {
+			lyrics:
+				"https://genius.com/Subliminal-and-hatzel-lo-tazlichu-laatzor-oti-lyrics",
 			youtube: "https://www.youtube.com/watch?v=WpAUhXSKpTg",
 		},
 	},
@@ -213,6 +220,7 @@ export const subliminal2000s = [
 				"Six million brothers, now they are stars / We are the shield, we are the sword, we are the life.",
 		},
 		links: {
+			lyrics: "https://genius.com/Subliminal-lanetzach-lyrics",
 			youtube: "https://www.youtube.com/watch?v=K9lpTSUABMc",
 		},
 	},
@@ -229,6 +237,7 @@ export const subliminal2000s = [
 				"Because if we lay down our weapons, brother, our end is near / Therefore we will respond with war to every enemy / But when the time of peace arrives, we will live here safely / We will lay down our weapons and sing for the family.",
 		},
 		links: {
+			lyrics: "https://genius.com/Subliminal-prachim-bakane-lyrics",
 			song_info: "https://he.wikipedia.org/wiki/פרחים_בקנה",
 			youtube: "https://www.youtube.com/watch?v=Mh94v1zosyg",
 		},

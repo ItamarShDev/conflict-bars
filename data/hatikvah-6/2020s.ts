@@ -9,6 +9,7 @@ export const hatikvah62020s = [
 				"Tribute to IDF combat soldiers; the video was filmed with cadets of the Bahad 1 officers' school.",
 		},
 		links: {
+			lyrics: "https://genius.com/Hatikva-6-6-himnon-halochem-lyrics",
 			youtube: "https://www.youtube.com/watch?v=V5SpIgH7VHI",
 			song_info: "https://he.wikipedia.org/wiki/התקווה_6",
 		},

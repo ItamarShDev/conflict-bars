@@ -10,6 +10,7 @@ export const hadagNahash2020s = [
 				"Maybe you will finally say what about Avera? / Maybe you will finally bring him back?",
 		},
 		links: {
+			lyrics: "https://genius.com/Hadag-nahash-bomba-lyrics",
 			youtube: "https://www.youtube.com/watch?v=paUVXs5QhVo",
 		},
 	},

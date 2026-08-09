@@ -11,7 +11,8 @@ export const shabakSamech90s = [
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=LZrmkf27yJE",
-			lyrics: "https://genius.com/Shabak-samech-beiskey-hashin-lyrics",
+			lyrics:
+				"https://genius.com/Shabak-samech-in-the-sheen-biz-beiskey-hasheen-lyrics",
 		},
 	},
 	{
@@ -40,6 +41,7 @@ export const shabakSamech90s = [
 				"The country is in flames and there's fire in the streets / to be or not to be at this party.",
 		},
 		links: {
+			lyrics: "https://genius.com/Shabak-samech-yihie-pitzutz-lyrics",
 			youtube: "https://www.youtube.com/watch?v=eFFnVF3uBZw",
 		},
 	},
@@ -54,6 +56,7 @@ export const shabakSamech90s = [
 				"The empire of rap, kingdom of the earth / from Sh to B stripping the nation.",
 		},
 		links: {
+			lyrics: "https://genius.com/Shabak-samech-imperia-lyrics",
 			youtube: "https://www.youtube.com/watch?v=RMV85V8l1TE",
 		},
 	},
@@ -63,6 +66,8 @@ export const shabakSamech90s = [
 		language: "Hebrew",
 		published_date: "1998",
 		links: {
+			lyrics:
+				"https://genius.com/Shabak-samech-milchemet-microphone-hazahav-lyrics",
 			youtube: "https://www.youtube.com/watch?v=1tJ1vH-r8Js",
 		},
 	},

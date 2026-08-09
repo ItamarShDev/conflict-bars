@@ -4,5 +4,8 @@ export const stormtrap2010s = [
 		artist: "Stormtrap / Asifeh (عاصفة)",
 		language: "Arabic",
 		published_date: "2010",
+		links: {
+			youtube: "https://www.youtube.com/watch?v=ZAXczID4q4s",
+		},
 	},
 ];

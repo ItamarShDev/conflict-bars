@@ -9,6 +9,7 @@ export const mcAbdul2020s = [
 				"I want freedom for the population / Two million prisoners living in this location / Shouting at the wall but nothing is ever-changing / That's life under an occupation.",
 		},
 		links: {
+			lyrics: "https://genius.com/Mc-abdul-shouting-at-the-wall-lyrics",
 			youtube: "https://www.youtube.com/watch?v=l8qay1Al7Dc",
 		},
 	},

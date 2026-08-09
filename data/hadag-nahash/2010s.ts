@@ -66,7 +66,6 @@ export const hadagNahash2010s = [
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=Veg2o5Rkp9E",
-			lyrics: "https://genius.com/Hadag-nahash-ir-haelohim-lyrics",
 		},
 	},
 	{
@@ -109,6 +108,7 @@ export const hadagNahash2010s = [
 				"Since then we've grown checkpoints like gangsters / built houses in settlements and discriminated minorities.",
 		},
 		links: {
+			lyrics: "https://genius.com/Hadag-nahash-od-yihye-tov-lyrics",
 			youtube: "https://www.youtube.com/watch?v=7H8sdmR2GMw",
 		},
 	},

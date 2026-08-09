@@ -5,6 +5,7 @@ export const systemAli2010s = [
 		language: "Hebrew/Arabic/Russian/Yiddish/Amharic/English",
 		published_date: "2019",
 		links: {
+			lyrics: "https://genius.com/System-ali-maharjan-lyrics",
 			youtube: "https://www.youtube.com/watch?v=xCiw3EJyOxY",
 		},
 	},
@@ -20,6 +21,7 @@ export const systemAli2010s = [
 				"Multilingual perspective on life and identity in Jaffa, with civic protest against gentrification and housing rights",
 		},
 		links: {
+			lyrics: "https://genius.com/System-ali-ein-kmo-yaffo-lyrics",
 			youtube: "https://www.youtube.com/watch?v=SAdYoHf6Ivc",
 		},
 	},

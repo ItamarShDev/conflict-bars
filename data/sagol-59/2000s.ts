@@ -10,6 +10,7 @@ export const sagol592000s = [
 				"Described as the first Jewish-Arab hip hop collaboration; released during the Second Intifada, it called on the leaders of both nations to resume peace talks.",
 		},
 		links: {
+			lyrics: "https://genius.com/Sagol-59-59-summit-meeting-lyrics",
 			youtube: "https://www.youtube.com/watch?v=kh1KAq4QZHA",
 			song_info: "https://en.wikipedia.org/wiki/Sagol_59",
 		},
@@ -25,6 +26,7 @@ export const sagol592000s = [
 				"Closing track of the album 'Shnei HaTzdadim shel Sagol 59'; written in memory of Sagol's DJ Ben Blutstein, who was killed in the July 2002 bombing of the Hebrew University cafeteria on Mount Scopus.",
 		},
 		links: {
+			lyrics: "https://genius.com/Sagol-59-59-big-ben-lyrics",
 			youtube: "https://www.youtube.com/watch?v=u9EB9qWDYZc",
 			song_info: "https://mima.co.il/fact_page.php?song_id=423",
 		},

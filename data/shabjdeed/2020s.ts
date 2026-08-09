@@ -39,6 +39,7 @@ export const shabjdeed2020s = [
 				"Inn Ann... the patrol cars are coming, hide the stash / They want us to live in fear, but we are not moving.",
 		},
 		links: {
+			lyrics: "https://genius.com/Daboor-inn-ann-lyrics",
 			youtube: "https://www.youtube.com/watch?v=FKvKnuvXUSU",
 		},
 	},

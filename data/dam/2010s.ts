@@ -10,6 +10,7 @@ export const dam2010s = [
 				"Billions of dollars that go into dividing the Arab world / Whenever anyone tries to make a change, they're punished.",
 		},
 		links: {
+			lyrics: "https://genius.com/Dam-ben-haana-wa-maana-lyrics",
 			youtube: "https://www.youtube.com/watch?v=B4A5szVtWnw",
 		},
 	},
@@ -24,6 +25,7 @@ export const dam2010s = [
 				"Of course we want to go to the moon, but we cannot do it with the occupation. / And who's responsible for the occupation as well? America.",
 		},
 		links: {
+			lyrics: "https://genius.com/Dam-debka-on-the-moon-lyrics",
 			youtube: "https://www.youtube.com/watch?v=iskU73JvmZ0",
 		},
 	},
@@ -38,6 +40,7 @@ export const dam2010s = [
 				"I am the spinster, I am the infertile, I am the divorced / In the shadow of a man, but not the shadow of a wall.",
 		},
 		links: {
+			lyrics: "https://genius.com/Dam-who-you-r-lyrics",
 			youtube: "https://www.youtube.com/watch?v=CZll1ioI3xg",
 		},
 	},
@@ -53,6 +56,7 @@ export const dam2010s = [
 				"We are from the Negev, we are from Jaffa / From Ein Hod, we are from Akko / From Nazareth, we are from Ramle.",
 		},
 		links: {
+			lyrics: "https://genius.com/Dam-im-not-a-traitor-lyrics",
 			youtube: "https://www.youtube.com/watch?v=gH0IGvzH5G8",
 		},
 	},
@@ -62,6 +66,7 @@ export const dam2010s = [
 		language: "Arabic",
 		published_date: "2011",
 		links: {
+			lyrics: "https://genius.com/Dam-a-letter-from-prison-lyrics",
 			youtube: "https://www.youtube.com/watch?v=R6Kq-NeHqlE",
 		},
 	},
@@ -71,6 +76,7 @@ export const dam2010s = [
 		language: "Arabic",
 		published_date: "2010",
 		links: {
+			lyrics: "https://genius.com/Dam-muwaten-mustahdaf-lyrics",
 			youtube: "https://www.youtube.com/watch?v=j8AsLBHwNsE",
 		},
 	},

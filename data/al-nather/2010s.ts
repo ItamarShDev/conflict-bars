@@ -11,6 +11,7 @@ export const alNather2010s = [
 				"With staccato trap beats, song about Palestinian resistance, included in BBC's list of greatest hip-hop songs of all time",
 		},
 		links: {
+			lyrics: "https://genius.com/Shabjdeed-and-al-nather-mtaktak-lyrics",
 			youtube: "https://www.youtube.com/watch?v=jEHtO_c_UdI",
 		},
 	},

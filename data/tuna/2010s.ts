@@ -46,6 +46,7 @@ export const tuna2010s = [
 			hebrew: "וגם    שמע אולי מוקדם להתלכלך / חנוך רוזן ,סאדם חוסיין",
 		},
 		links: {
+			lyrics: "https://genius.com/Tuna-gam-zeh-yaavor-lyrics",
 			youtube: "https://www.youtube.com/watch?v=3PJmE-ucx_o",
 		},
 	},
@@ -68,6 +69,7 @@ export const tuna2010s = [
 			hebrew: "מסתובבות לך בראש כמו חיילות בעזריאלי",
 		},
 		links: {
+			lyrics: "https://genius.com/Tuna-rock-30-lyrics",
 			youtube: "https://www.youtube.com/watch?v=GIRbXNousaI",
 		},
 	},

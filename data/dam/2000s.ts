@@ -10,6 +10,7 @@ export const dam2000s = [
 				"Closing title track of DAM's debut album 'Ihda'' (2006), widely described as the first Palestinian hip-hop album.",
 		},
 		links: {
+			lyrics: "https://genius.com/Dam-dedication-lyrics",
 			youtube: "https://www.youtube.com/watch?v=PQrQMOZI9uI",
 			song_info: "https://en.wikipedia.org/wiki/Ihda%27",
 		},
@@ -26,7 +27,7 @@ export const dam2000s = [
 				"Who's a terrorist? I'm a terrorist? How am I a terrorist while I live in my country? / You've taken everything I own while I'm living in my homeland.",
 		},
 		links: {
-			lyrics: "https://genius.com/DAM-whos-the-terrorist-lyrics",
+			lyrics: "https://genius.com/Dam-whos-the-terrorist-lyrics",
 			youtube: "https://www.youtube.com/watch?v=OgSVXjNLFgo",
 		},
 	},
@@ -55,6 +56,7 @@ export const dam2000s = [
 				"When Jews protest, the police use batons / When Arabs protest, the police take their lives.",
 		},
 		links: {
+			lyrics: "https://genius.com/Dam-poshim-hapim-mipesha-lyrics",
 			youtube: "https://www.youtube.com/watch?v=aA_Lu_NkojE",
 		},
 	},
@@ -69,6 +71,7 @@ export const dam2000s = [
 				"Why are all the children of the world free but not us?",
 		},
 		links: {
+			lyrics: "https://genius.com/Dam-i-dont-have-freedom-lyrics",
 			youtube: "https://www.youtube.com/watch?v=GhmpxCWVMBM",
 		},
 	},

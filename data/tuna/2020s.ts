@@ -10,6 +10,7 @@ export const tuna2020s = [
 				"Even if it doesn’t look good, and all the stars show there’s a reason to worry",
 		},
 		links: {
+			lyrics: "https://genius.com/Tuna-kol-hakohavim-lyrics",
 			youtube: "https://www.youtube.com/watch?v=doYvXHat8gU",
 		},
 	},
@@ -25,6 +26,7 @@ export const tuna2020s = [
 				"They told me how they sang “Cowboy” there throughout the captivity\nLife hasn’t returned to living yet, it’s still hard to swallow\nOn that day evil also visited us",
 		},
 		links: {
+			lyrics: "https://genius.com/Tuna-rosh-lemala-lyrics",
 			youtube: "https://www.youtube.com/watch?v=Vjusx05G9sI",
 		},
 	},
@@ -53,6 +55,7 @@ export const tuna2020s = [
 				"אווירת דם, אווירת דמשק / זה לא שלפני זה קודם היה לי / בפרק הקודם שדדתי בנק בשביל קניות / כדלקמן, זו מלחמה",
 		},
 		links: {
+			lyrics: "https://genius.com/Tuna-hatov-hara-veachotcha-lyrics",
 			youtube: "https://www.youtube.com/watch?v=zI_AdTKsIx0",
 		},
 	},
