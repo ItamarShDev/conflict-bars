@@ -14,4 +14,19 @@ export const dugri2020s = [
 				"https://www.timesofisrael.com/podcast-this-arab-and-jew-talk-straight-in-raps-and-in-person/",
 		},
 	},
+	{
+		name: "I AM",
+		artist: "DUGRI (UR & SAZ)",
+		collaborators: ["Uriya Rosenman", 'Sameh "SAZ" Zakout'],
+		published_date: "2022-03-22",
+		lyric_sample: {
+			english_translation:
+				"An official DUGRI video about the Jewish-Israeli and Palestinian-Israeli duo's dialogue on the conflict, the Nakba, and shared identity.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=oEbEMvhxJYk",
+			song_info:
+				"https://forward.com/opinion/484353/rap-battle-palestinian-israeli-duo-friendship-peace-movement/",
+		},
+	},
 ];

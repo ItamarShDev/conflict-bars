@@ -13,4 +13,18 @@ export const mcGaza2010s = [
 				"https://scroll.in/video/875236/watch-palestinian-rapper-mc-gaza-pays-a-tribute-to-journalist-killed-by-israeli-snipers",
 		},
 	},
+	{
+		name: "My Extraordinary Homeland",
+		artist: "MC Gaza (إم سي غزة)",
+		language: "Arabic",
+		published_date: "2015",
+		lyric_sample: {
+			english_translation:
+				"An official 2015 music video pairs MC Gaza's song with Gaza city scenes and parkour over rubble from the bombardment after Operation Protective Edge.",
+		},
+		links: {
+			song_info:
+				"https://theworld.org/stories/2016/07/30/meet-gaza-rapper-trying-break-out-and-make-it-big",
+		},
+	},
 ];

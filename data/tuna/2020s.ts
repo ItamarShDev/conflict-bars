@@ -75,4 +75,21 @@ export const tuna2020s = [
 			lyrics: "https://vaadhavibe.bandcamp.com/track/--76",
 		},
 	},
+	{
+		name: "רובים ותלתלים (Rovim VeTaltalim / Rifles and Curls)",
+		artist: "Tuna (טונה)",
+		language: "Hebrew",
+		published_date: "2025-05-30",
+		lyric_sample: {
+			hebrew: "בין כל הבלאגן, האש והטילים / גיטרה וקלידים כולנו חיילים",
+			english_translation:
+				"Amid all the mess, the fire and the missiles / guitar and keys, we are all soldiers.",
+		},
+		links: {
+			lyrics:
+				"https://he.wikipedia.org/wiki/%D7%A8%D7%95%D7%91%D7%99%D7%9D_%D7%95%D7%AA%D7%9C%D7%AA%D7%9C%D7%99%D7%9D_(%D7%A9%D7%99%D7%A8)",
+			song_info:
+				"https://he.wikipedia.org/wiki/%D7%A8%D7%95%D7%91%D7%99%D7%9D_%D7%95%D7%AA%D7%9C%D7%AA%D7%9C%D7%99%D7%9D",
+		},
+	},
 ];

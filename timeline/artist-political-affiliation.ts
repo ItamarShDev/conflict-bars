@@ -318,6 +318,102 @@ export const artistPoliticalAffiliation: Record<
 		notes:
 			"Ahmed Shamaly; Gaza rapper who recorded half of his debut EP in the Jabalia refugee camp during the war before leaving for Egypt.",
 	},
+	"Static (סטטיק)": {
+		era: "2020s–present",
+		affiliation: "Center / War response",
+		notes:
+			"Israeli rapper whose song 'Helem Krav' addresses a combat soldier's experience during the 2023–2024 war.",
+	},
+	"Jo Passive (ג'ו פאסיב)": {
+		era: "2020s–present",
+		affiliation: "Center / War response",
+		notes:
+			"Israeli rapper whose songs commemorate people killed or abducted during the 2023–2024 war.",
+	},
+	"Amir Aviram (אמיר אבירם)": {
+		era: "2020s–present",
+		affiliation: "Center / War response",
+		notes:
+			"Israeli artist whose song 'Ariel' commemorates a soldier killed during the 2023–2024 war.",
+	},
+	"Aner (ענר) & Shaanan Street (שאנן סטריט)": {
+		era: "2020s–present",
+		affiliation: "Center / Social commentary",
+		notes:
+			"Co-billed Israeli release addressing internal social hostility during wartime.",
+	},
+	"Shaanan Street (שאנן סטריט) & Roi Doron (רועי דורון)": {
+		era: "2020s–present",
+		affiliation: "Center / Social commentary",
+		notes:
+			"Co-billed Israeli release documented in contemporary reporting; no broader political label is inferred.",
+	},
+	"Zeev Tana (זאב טנא) & Shaanan Street (שאנן סטריט)": {
+		era: "2020s–present",
+		affiliation: "Center / Social commentary",
+		notes:
+			"Co-billed Israeli release associated with October 7; the exact Shaanan Street performance credit remains qualified by conflicting sources.",
+	},
+	"Ori Comay (אורי קומאי)": {
+		era: "2020s–present",
+		affiliation: "Center / War response",
+		notes:
+			"Israeli artist whose release with Dudu Faruk responds to the wartime period.",
+	},
+	"Ohav Givati (אוהב גבעתי)": {
+		era: "2020s–present",
+		affiliation: "Center / War response",
+		notes:
+			"Israeli rapper and reserve officer whose project documents a fighter's return from the Gaza war and supports rehabilitation for soldiers.",
+	},
+	"Shahar Swissa (שחר סוויסה)": {
+		era: "2000s–present",
+		affiliation: "Center / War response",
+		notes:
+			"Israeli rapper whose song lists hostages held in Gaza as part of a Hostages and Missing Families Forum campaign.",
+	},
+	MWR: {
+		era: "2000s",
+		affiliation: "Palestinian / Social justice",
+		notes:
+			"Palestinian hip-hop group whose documented work addresses Palestinian identity, racism, and occupation.",
+	},
+	"Makimakkuk (ماكي مكوك)": {
+		era: "2020s–present",
+		affiliation: "Palestinian left / Anti-occupation",
+		notes:
+			"Ramallah-based rapper and producer whose release is dedicated to Palestine and addresses wartime destruction and resistance.",
+	},
+	"Fawzi & Daboor (فوزي ودابور)": {
+		era: "2020s–present",
+		affiliation: "Palestinian left / Anti-occupation",
+		notes:
+			"BLTNM co-billed Palestinian release addressing life under occupation during the Gaza war.",
+	},
+	"Refugees of Rap": {
+		era: "2010s–present",
+		affiliation: "Palestinian left / Anti-occupation",
+		notes:
+			"Syrian-Palestinian rap group from Yarmouk whose work addresses exile, occupation, injustice, and return.",
+	},
+	"Gaza Youth Breaks Out (GYBO) rap team": {
+		era: "2010s",
+		affiliation: "Palestinian / Social justice",
+		notes:
+			"Gaza youth rap team documented in connection with the flotilla movement and grassroots cultural activism.",
+	},
+	"Belly (Ahmad Balshe)": {
+		era: "2000s–present",
+		affiliation: "Palestinian diaspora / Social commentary",
+		notes:
+			"Palestinian-Canadian rapper whose song addresses medical destruction and civilian suffering in Gaza.",
+	},
+	"HEARTBEAT + WBC: HIP HOP HUDNA": {
+		era: "2010s",
+		affiliation: "Center / Coexistence advocacy",
+		notes:
+			"Israeli, Palestinian, and German youth collective whose joint project was created around cross-community dialogue and a hudna.",
+	},
 	"DARG Team (درج تيم)": {
 		era: "2000s–present",
 		affiliation: "Palestinian left / Anti-occupation",

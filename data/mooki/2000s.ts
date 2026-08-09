@@ -33,4 +33,19 @@ export const mooki2000s = [
 				"https://www.tab4u.com/tabs/songs/1967_%D7%9E%D7%95%D7%A7%D7%99_-_%D7%A9%D7%99%D7%A8_%D7%9E%D7%9C%D7%97%D7%9E%D7%94.html",
 		},
 	},
+	{
+		name: "האדמה בוכה (HaAdama Bocha / The Earth Cries)",
+		artist: "Mooki (מוקי)",
+		collaborators: ["Yuval Banay (יובל בנאי)"],
+		language: "Hebrew",
+		published_date: "2001",
+		lyric_sample: {
+			english_translation:
+				"A 2001 Mooki collaboration with Yuval Banay addressing the division between those for us and against us; the lyric source is currently access-blocked.",
+		},
+		links: {
+			song_info:
+				"https://pizmonet.co.il/wiki/%D7%94%D7%90%D7%93%D7%9E%D7%94_%D7%91%D7%95%D7%9B%D7%94",
+		},
+	},
 ];

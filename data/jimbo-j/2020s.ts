@@ -100,4 +100,20 @@ export const jimboJ2020s = [
 			song_info: "https://he.wikipedia.org/wiki/הכל_טוב_(אלבום_של_ג'ימבו_ג'יי)",
 		},
 	},
+	{
+		name: "במקום בו אני גר (BaMakom Bo Ani Gar / In the Place Where I Live)",
+		artist: "Jimbo J (ג'ימבו ג')",
+		collaborators: ["Spa band (להקת ספא)"],
+		language: "Hebrew",
+		published_date: "2023-12-14",
+		lyric_sample: {
+			english_translation:
+				"Track 7 on the rap/hip-hop album 'אה וואו', dedicated to the memory of Guy Iluz, the sound technician who worked with Jimbo J and the Spa band and was abducted to Gaza and murdered in captivity. The song describes daily life in the Gaza-border region during the war.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=2tjMLHtBklY",
+			song_info:
+				"https://he.wikipedia.org/wiki/%D7%90%D7%94_%D7%95%D7%90%D7%95_(%D7%90%D7%9C%D7%91%D7%95%D7%95%D7%9D)",
+		},
+	},
 ];
