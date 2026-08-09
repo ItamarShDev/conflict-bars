@@ -140,3 +140,21 @@ To locate the culprit, iterate elements whose `getBoundingClientRect().right > c
   end-to-end submission test. Without it, only read-only file-backed rendering can be tested.
 - `GMAIL` (Gmail app password used by `src/actions/email.ts`) — required to verify submission
   notification emails. Not available by default.
+
+## RTL and Hebrew-input gotchas
+
+- The OS keyboard layout may not support Hebrew, so `computer.type` with Hebrew Unicode may not enter characters in form inputs.
+- Workaround: use `browser_console` to set the input value and dispatch `new Event('input', { bubbles: true })`. In React-controlled inputs this is usually enough to trigger `onChange`.
+- For `/he` the search input is `dir="rtl"`, so Hebrew text displays correctly. For `/en` the input is `dir="ltr"`, so Hebrew text appears visually reversed.
+- `LanguageSwitcher` DOM text is `עברית / English` on `/he` and `English / עברית` on `/en`. In an RTL context the slash and Latin text may be reordered by the Unicode bidi algorithm, so trust `textContent` for assertions.
+
+## CDP device-metrics persistence
+
+- `Emulation.setDeviceMetricsOverride` with `mobile: true` can persist across reloads.
+- `Emulation.clearDeviceMetricsOverride` should be followed by `Page.reload` to take effect.
+- Maximising the Chrome window does **not** always clear the override; if it persists, open a fresh tab or explicitly set a desktop viewport and reload.
+- Use `document.documentElement.scrollWidth <= document.documentElement.clientWidth` (not `window.innerWidth`) to check horizontal overflow after overriding.
+
+## Favicon metadata
+
+- Next.js may render two `<link rel="icon">` tags from `icons: { icon: "/favicon.svg" }`: one auto-generated `.ico` with a query parameter and one `/favicon.svg`. Both should resolve; verify `/favicon.svg` returns an SVG response.
