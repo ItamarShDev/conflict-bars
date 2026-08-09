@@ -63,4 +63,19 @@ export const dam2010s = [
 			youtube: "https://www.youtube.com/watch?v=j8AsLBHwNsE",
 		},
 	},
+	{
+		name: "Mama, I Fell in Love with a Jew",
+		artist: "DAM (דאם)",
+		language: "English",
+		published_date: "2012-12-14",
+		lyric_sample: {
+			hebrew:
+				"Her skin is white, my skin is brown / She was going up, I was going down",
+			english_translation: "(English original)",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=7zxX_yWM2us",
+			lyrics: "https://www.antiwarsongs.org/canzone.php?id=69195&lang=en",
+		},
+	},
 ];

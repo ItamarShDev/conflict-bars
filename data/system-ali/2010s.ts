@@ -25,4 +25,18 @@ export const systemAli2010s = [
 			youtube: "https://www.youtube.com/watch?v=SAdYoHf6Ivc",
 		},
 	},
+	{
+		name: "בית נטוש (Bayit Natush / Abandoned House)",
+		artist: "System Ali (סיסטם עלי)",
+		language: "Hebrew/Arabic",
+		published_date: "2019-09-01",
+		lyric_sample: {
+			english_translation:
+				"Closing track of the album 'מהרג'אן'. It opens as a cover of Yehuda Poliker and Yaakov Gilad's 'חלון לים התיכון' and stops on the word 'abandoned', turning into rap in Hebrew and Arabic that deals with both the Nakba and Jewish immigration to Jaffa, per the Hebrew Wikipedia article on the band.",
+		},
+		links: {
+			song_info: "https://he.wikipedia.org/wiki/סיסטם_עאלי",
+			lyrics: "https://levgroupmedia.bandcamp.com/album/-",
+		},
+	},
 ];

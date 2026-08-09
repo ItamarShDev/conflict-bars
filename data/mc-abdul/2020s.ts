@@ -26,4 +26,19 @@ export const mcAbdul2020s = [
 			youtube: "https://www.youtube.com/watch?v=UnwLtBRLOUg",
 		},
 	},
+	{
+		name: "Palestine (Freeverse)",
+		artist: "MC Abdul",
+		language: "English",
+		published_date: "2021-05-15",
+		lyric_sample: {
+			hebrew:
+				"Palestine's been occupied for decades / Been our home for centuries",
+			english_translation: "(English original)",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=GVAl_BWa2kU",
+			lyrics: "https://www.antiwarsongs.org/canzone.php?id=67637&lang=en",
+		},
+	},
 ];

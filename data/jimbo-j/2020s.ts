@@ -15,4 +15,89 @@ export const jimboJ2020s = [
 			youtube: "https://www.youtube.com/watch?v=LrxTdtDNGaY",
 		},
 	},
+	{
+		name: "מפרש לבן (Mifras Lavan / White Sail)",
+		artist: "Jimbo J (ג'ימבו ג')",
+		language: "Hebrew",
+		published_date: "2025-03-17",
+		lyric_sample: {
+			english_translation:
+				"The first text Habaron wrote after 7 October 2023, per the Hebrew Wikipedia article on the album 'הכל טוב'; he was evacuated with his family from Kibbutz Or HaNer for eight months. The article calls it an 'anthem of reproach' and notes it mentions Guy Illouz, the band's stage technician who was abducted and killed.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=g1N0aQNIPMk",
+			song_info: "https://he.wikipedia.org/wiki/הכל_טוב_(אלבום_של_ג'ימבו_ג'יי)",
+		},
+	},
+	{
+		name: "100",
+		artist: "Jimbo J (ג'ימבו ג')",
+		language: "Hebrew",
+		published_date: "2025-11-25",
+		lyric_sample: {
+			hebrew: "חייגנו מאה מאה פעמים מאה מאה לא עונים",
+			english_translation:
+				"We dialled 100, a hundred times, 100 — nobody answers.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=X95_XRbRgM0",
+			song_info: "https://he.wikipedia.org/wiki/הכל_טוב_(אלבום_של_ג'ימבו_ג'יי)",
+		},
+	},
+	{
+		name: "מאז שזה קרה (Me'az SheZe Kara / Since It Happened)",
+		artist: "Jimbo J (ג'ימבו ג')",
+		language: "Hebrew",
+		published_date: "2026-01-13",
+		lyric_sample: {
+			english_translation:
+				"Opening track of 'הכל טוב', a concept album written under the direct influence of 7 October and the ensuing war; per Hebrew Wikipedia it describes the social and physical changes in the western Negev after the war broke out, including 'grief tourism' and explaining the events to foreign delegations.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=S9YnK5eVhJw",
+			song_info: "https://he.wikipedia.org/wiki/הכל_טוב_(אלבום_של_ג'ימבו_ג'יי)",
+		},
+	},
+	{
+		name: "תודעת שירות (Toda'at Sherut / Service Mindset)",
+		artist: "Jimbo J (ג'ימבו ג')",
+		language: "Hebrew",
+		published_date: "2026-01-13",
+		lyric_sample: {
+			english_translation:
+				"Per Hebrew Wikipedia, the song is about the abrupt switch between civilian life and reserve duty: gear sent to the front, conditions in Khan Yunis, and victory slogans set against ongoing pain.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=cmOrFYeIeyg",
+			song_info: "https://he.wikipedia.org/wiki/הכל_טוב_(אלבום_של_ג'ימבו_ג'יי)",
+		},
+	},
+	{
+		name: "שוב נא הביתה (Shuv Na HaBaita / Please Come Back Home)",
+		artist: "Jimbo J (ג'ימבו ג')",
+		language: "Hebrew",
+		published_date: "2026-01-13",
+		lyric_sample: {
+			english_translation:
+				"Per Hebrew Wikipedia, the track documents the family's evacuation on the morning of 7 October — the hurried packing, leaving under fire, and the eight months displaced from Kibbutz Or HaNer.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=8lQqb8Tyc2s",
+			song_info: "https://he.wikipedia.org/wiki/הכל_טוב_(אלבום_של_ג'ימבו_ג'יי)",
+		},
+	},
+	{
+		name: "אבא למה (Abba Lama / Daddy, Why)",
+		artist: "Jimbo J (ג'ימבו ג')",
+		language: "Hebrew",
+		published_date: "2026-01-13",
+		lyric_sample: {
+			english_translation:
+				"Closing track of 'הכל טוב', built as a dialogue between a father in the western Negev and his young daughter, who asks about the war, the soldiers and the gun, per Hebrew Wikipedia.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=bAfCINbYPjk",
+			song_info: "https://he.wikipedia.org/wiki/הכל_טוב_(אלבום_של_ג'ימבו_ג'יי)",
+		},
+	},
 ];

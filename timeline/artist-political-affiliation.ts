@@ -66,7 +66,7 @@ export const artistPoliticalAffiliation: Record<
 		era: "2010s–present",
 		affiliation: "Left-leaning",
 		notes:
-			"Known for sharp storytelling, social critique, and satire of Israeli politics.",
+			"Omer Habaron; known for sharp storytelling and satire of Israeli politics. A resident of Kibbutz Or HaNer in the Gaza envelope, evacuated for eight months after 7 October 2023; his album 'הכל טוב' documents the war from the western Negev.",
 	},
 	"Cohen@Mushon (כהן@מושון)": {
 		era: "2000s–2010s",
@@ -222,7 +222,7 @@ export const artistPoliticalAffiliation: Record<
 		notes:
 			"Erez Sharon; veteran rapper whose catalogue mixes protest and humour. Released 'Shiva BeOktober' four days after the October 7 attack and co-wrote 'Choref 23' with Odeya.",
 	},
-	"Benia Bar Avi (בניה בר אבי)": {
+	"Benia Barabi (בניה ברבי)": {
 		era: "2020s–present",
 		affiliation: "Right-leaning / Nationalist",
 		notes:
@@ -271,7 +271,7 @@ export const artistPoliticalAffiliation: Record<
 			"Emerged after October 7, 2023; known for patriotic and encouraging themes during wartime.",
 	},
 	"Ravid Plotnik (רביד פלוטניק)": {
-		era: "2020s–present",
+		era: "2010s–present",
 		affiliation: "Center / War response",
 		notes:
 			"Rapper addressing daily reality under war; songs about living in extraordinary conditions.",
@@ -299,5 +299,65 @@ export const artistPoliticalAffiliation: Record<
 		affiliation: "Center / War response",
 		notes:
 			"Israeli rapper and reservist who served in Gaza; writes about combat experience, loss of friends, and internal Israeli division.",
+	},
+	"Quami (קוואמי)": {
+		era: "1990s–present",
+		affiliation: "Center-left / Social commentary",
+		notes:
+			"Eyal Friedman; Galei Tzahal editor and one of the first Israeli hip-hop broadcasters. Songs criticise leaders on both sides of the conflict and the limits of public debate about the army.",
+	},
+	"DUGRI (UR & SAZ)": {
+		era: "2020s–present",
+		affiliation: "Center / Coexistence advocacy",
+		notes:
+			"Duo of Uriya Rosenman (Jewish Israeli) and Sameh Zakout (Palestinian citizen of Israel); rap dialogues confronting each side's grievances directly.",
+	},
+	"Shamaly (شمالي)": {
+		era: "2020s–present",
+		affiliation: "Palestinian left / Anti-occupation",
+		notes:
+			"Ahmed Shamaly; Gaza rapper who recorded half of his debut EP in the Jabalia refugee camp during the war before leaving for Egypt.",
+	},
+	"DARG Team (درج تيم)": {
+		era: "2000s–present",
+		affiliation: "Palestinian left / Anti-occupation",
+		notes:
+			"Da Arabian Revolutionary Guys, formed 2004 in northern Gaza City; songs on the blockade and the 2008–2009 Gaza war.",
+	},
+	"MC Gaza (إم سي غزة)": {
+		era: "2010s–present",
+		affiliation: "Palestinian left / Anti-occupation",
+		notes:
+			"Ibrahim Ghunaim; Gaza rapper who filmed at the Gaza fence during the 2018 Great March of Return.",
+	},
+	"Jowan Safadi (جوان صفدي)": {
+		era: "2000s–present",
+		affiliation: "Palestinian left / Anti-occupation",
+		notes:
+			"Nazareth-based singer and rapper; satirical songs on Palestinian identity inside Israel, Arab politics and war.",
+	},
+	"Iron Sheik (Will Youmans)": {
+		era: "2000s",
+		affiliation: "Palestinian diaspora left / Anti-occupation",
+		notes:
+			"Palestinian-American rapper and academic; narrative songs on the Nakba, exile and the occupation.",
+	},
+	"Ragtop (Nizar Wattad)": {
+		era: "2000s",
+		affiliation: "Palestinian diaspora left / Anti-occupation",
+		notes:
+			"Palestinian-American rapper and co-producer of the 2006 'Free the P' compilation, the first hip-hop compilation dedicated to Palestinian freedom.",
+	},
+	"El Far3i (الفرعي)": {
+		era: "2000s–present",
+		affiliation: "Palestinian left / Anti-occupation",
+		notes:
+			"Tareq Abu Kwaik; Palestinian-Jordanian rapper and singer, member of El Morabba3 and 47SOUL circles; wartime singles about Gaza.",
+	},
+	"The Synaptik (السينابتيك)": {
+		era: "2010s–present",
+		affiliation: "Palestinian left / Anti-occupation",
+		notes:
+			"Laith Al Husseini; Jerusalem-born, Ramallah-based rapper and physician known for ironic accounts of life under occupation.",
 	},
 } as const;

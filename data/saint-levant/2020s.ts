@@ -31,4 +31,18 @@ export const saintLevant2020s = [
 			song_info: "https://en.wikipedia.org/wiki/Deira_(album)",
 		},
 	},
+	{
+		name: "From Gaza, With Love",
+		artist: "Saint Levant (سانت ليفانت)",
+		language: "English",
+		published_date: "2023-03-06",
+		lyric_sample: {
+			hebrew: "I came from Gaza with love",
+			english_translation: "(English original)",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=ih0_hqUWOTc",
+			lyrics: "https://genius.com/Saint-levant-from-gaza-with-love-lyrics",
+		},
+	},
 ];

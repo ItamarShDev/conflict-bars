@@ -34,4 +34,21 @@ export const kla62000s = [
 			song_info: "https://he.wikipedia.org/wiki/אולסטארז",
 		},
 	},
+	{
+		name: "פצצת זמן (Ptzatzat Zman / Time Bomb)",
+		artist: "Kla 6 (כלא 6)",
+		language: "Hebrew",
+		published_date: "2004",
+		lyric_sample: {
+			hebrew:
+				"אני מעדיף שיהיה שלום וטוב במקום טרור / בשביל שלא אשב בבית ואחשוב על מה לכתוב ובפחות פיגועים",
+			english_translation:
+				"I would rather there be peace and goodness instead of terror / so I don't sit at home wondering what to write about, and with fewer attacks.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=D69xYwzUQME",
+			lyrics:
+				"https://shironet.mako.co.il/artist?lang=1&prfid=1166&type=lyrics&wrkid=10435",
+		},
+	},
 ];

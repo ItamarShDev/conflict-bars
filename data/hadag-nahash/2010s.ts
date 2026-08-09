@@ -119,4 +119,33 @@ export const hadagNahash2010s = [
 			youtube: "https://www.youtube.com/watch?v=7H8sdmR2GMw",
 		},
 	},
+	{
+		name: "יוצא לדרך (Yotze LaDerech / Setting Out)",
+		artist: "Hadag Nahash (הדג נחש)",
+		language: "Hebrew",
+		published_date: "2018-03-09",
+		lyric_sample: {
+			hebrew: "אחרי הפצצה השלישית אותו בוקר ידעתי שדי",
+			english_translation:
+				"After the third bomb that same morning I knew that was enough.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=IXVZUFaixFw",
+			lyrics: "https://hadagnahash.bandcamp.com/track/--34",
+		},
+	},
+	{
+		name: "אצבע משולשת (Etzba Meshuleshet / Middle Finger)",
+		artist: "Hadag Nahash (הדג נחש)",
+		language: "Hebrew",
+		published_date: "2018-03-09",
+		lyric_sample: {
+			hebrew: "לא אשיר לכם שיר על מלחמות / כי קצתי בקרבות",
+			english_translation:
+				"I will not sing you a song about wars / because I am sick of battles.",
+		},
+		links: {
+			lyrics: "https://hadagnahash.bandcamp.com/track/--27",
+		},
+	},
 ];

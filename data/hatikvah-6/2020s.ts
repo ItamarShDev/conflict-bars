@@ -30,4 +30,19 @@ export const hatikvah62020s = [
 			song_info: "https://he.wikipedia.org/wiki/גיבורי_על_(שיר)",
 		},
 	},
+	{
+		name: "השמש תחזור (HaShemesh Tachzor / The Sun Will Return)",
+		artist: "Hatikva 6 (התקווה 6)",
+		language: "Hebrew",
+		published_date: "2023-12-13",
+		lyric_sample: {
+			hebrew: "נחכה שהשמש תחזור תחזיר לנו ת'אור",
+			english_translation:
+				"We'll wait for the sun to return and give us back the light.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=A_VrsevsKlY",
+			song_info: "https://www.kan.org.il/content/kan-news/culture/654093/",
+		},
+	},
 ];
