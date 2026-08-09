@@ -320,55 +320,55 @@ export const artistPoliticalAffiliation: Record<
 	},
 	"Static (סטטיק)": {
 		era: "2020s–present",
-		affiliation: "Center / War response",
+		affiliation: "Israeli / War response",
 		notes:
 			"Israeli rapper whose song 'Helem Krav' addresses a combat soldier's experience during the 2023–2024 war.",
 	},
 	"Jo Passive (ג'ו פאסיב)": {
 		era: "2020s–present",
-		affiliation: "Center / War response",
+		affiliation: "Israeli / War response",
 		notes:
 			"Israeli rapper whose songs commemorate people killed or abducted during the 2023–2024 war.",
 	},
 	"Amir Aviram (אמיר אבירם)": {
 		era: "2020s–present",
-		affiliation: "Center / War response",
+		affiliation: "Israeli / War response",
 		notes:
 			"Israeli artist whose song 'Ariel' commemorates a soldier killed during the 2023–2024 war.",
 	},
 	"Aner (ענר) & Shaanan Street (שאנן סטריט)": {
 		era: "2020s–present",
-		affiliation: "Center / Social commentary",
+		affiliation: "Left-wing / Liberal",
 		notes:
 			"Co-billed Israeli release addressing internal social hostility during wartime.",
 	},
 	"Shaanan Street (שאנן סטריט) & Roi Doron (רועי דורון)": {
 		era: "2020s–present",
-		affiliation: "Center / Social commentary",
+		affiliation: "Left-wing / Liberal",
 		notes:
 			"Co-billed Israeli release documented in contemporary reporting; no broader political label is inferred.",
 	},
 	"Zeev Tana (זאב טנא) & Shaanan Street (שאנן סטריט)": {
 		era: "2020s–present",
-		affiliation: "Center / Social commentary",
+		affiliation: "Left-wing / Liberal",
 		notes:
 			"Co-billed Israeli release associated with October 7; the exact Shaanan Street performance credit remains qualified by conflicting sources.",
 	},
 	"Ori Comay (אורי קומאי)": {
 		era: "2020s–present",
-		affiliation: "Center / War response",
+		affiliation: "Israeli / War response",
 		notes:
 			"Israeli artist whose release with Dudu Faruk responds to the wartime period.",
 	},
 	"Ohav Givati (אוהב גבעתי)": {
 		era: "2020s–present",
-		affiliation: "Center / War response",
+		affiliation: "Israeli / War response",
 		notes:
 			"Israeli rapper and reserve officer whose project documents a fighter's return from the Gaza war and supports rehabilitation for soldiers.",
 	},
 	"Shahar Swissa (שחר סוויסה)": {
 		era: "2000s–present",
-		affiliation: "Center / War response",
+		affiliation: "Israeli / War response",
 		notes:
 			"Israeli rapper whose song lists hostages held in Gaza as part of a Hostages and Missing Families Forum campaign.",
 	},

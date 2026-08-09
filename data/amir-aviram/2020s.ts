@@ -1,13 +1,13 @@
 export const amirAviram2020s = [
 	{
-		name: "אריאל (לזכרו של סרן אריאל רייך) (Ariel)",
+		name: "אריאל (Ariel)",
 		artist: "Amir Aviram (אמיר אבירם)",
 		language: "Hebrew",
 		published_date: "2023-12-19",
 		lyric_sample: {
 			hebrew: "אריאל / רק לפני חודש התארסת / היית כל כך מאושר",
 			english_translation:
-				"Ariel / just a month ago you got engaged / you were so happy.",
+				"A memorial song for Ariel Reich, who was killed during the 2023–2024 war; the sources differ on his military rank.",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=nz1xYzogqqI",
