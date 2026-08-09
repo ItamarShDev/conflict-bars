@@ -33,4 +33,18 @@ export const shabjdeed2020s = [
 				"Inn Ann... the patrol cars are coming, hide the stash / They want us to live in fear, but we are not moving.",
 		},
 	},
+	{
+		name: "Nasheed (نشيد)",
+		artist: "Shabjdeed (شبجديد)",
+		language: "Arabic",
+		published_date: "2023-12-04",
+		collaborators: ["Al Nather (النثر)"],
+		lyric_sample: {
+			english_translation:
+				"In war there are no angels, only a banished devil / And if the resurrection came, we would line up ready for death.",
+		},
+		links: {
+			lyrics: "https://bltnm.bandcamp.com/track/nasheed",
+		},
+	},
 ];

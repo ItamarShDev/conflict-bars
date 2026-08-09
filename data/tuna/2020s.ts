@@ -55,4 +55,19 @@ export const tuna2020s = [
 				"אין בכלל מלאכים בשמיים / אני כאן איתך, ממש בינתיים / להחזיק את הראש מעל המים / לראות הכל, לעצום עיניים",
 		},
 	},
+	{
+		name: "בין העיר לפרדס (Bein Ha'ir LaPardes / Between the City and the Orchard)",
+		artist: "Tuna (טונה)",
+		language: "Hebrew",
+		published_date: "2024-03-29",
+		lyric_sample: {
+			hebrew:
+				"צה״ל נכנס לעזה, נסעתי קצת לאבא / על רקע צ׳קלקה פקה פקה, מד״א, זק״א / אז אין מקום אחד כרגע אין מקום בטוח",
+			english_translation:
+				"The IDF went into Gaza, I drove over to my dad's / Sirens in the background, MDA, ZAKA / So there is no single place right now, no safe place.",
+		},
+		links: {
+			lyrics: "https://vaadhavibe.bandcamp.com/track/--76",
+		},
+	},
 ];

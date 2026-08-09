@@ -335,4 +335,28 @@ export const artistPoliticalAffiliation: Record<
 		notes:
 			"Rapper addressing daily reality under war; songs about living in extraordinary conditions.",
 	},
+	"MC Abdul": {
+		era: "2020s–present",
+		affiliation: "Palestinian left / Anti-occupation",
+		notes:
+			"Rapper from Gaza who began releasing at age 12; songs about blockade, freedom, and life under bombardment.",
+	},
+	"Saint Levant (سانت ليفانت)": {
+		era: "2020s–present",
+		affiliation: "Palestinian left / Anti-occupation",
+		notes:
+			"Jerusalem-born, Gaza-raised rapper; multilingual work centred on displacement and the Palestinian right of return.",
+	},
+	"Haykal (هيكل)": {
+		era: "2020s–present",
+		affiliation: "Palestinian left / Anti-occupation",
+		notes:
+			"Palestinian rapper working with the Ramallah experimental scene; verses on colonisation and the war in Gaza.",
+	},
+	"Noam Tsuriely (נועם צוריאלי)": {
+		era: "2020s–present",
+		affiliation: "Center / War response",
+		notes:
+			"Israeli rapper and reservist who served in Gaza; writes about combat experience, loss of friends, and internal Israeli division.",
+	},
 } as const;
