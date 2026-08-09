@@ -4,6 +4,7 @@ import { usePreloadedQuery } from "convex/react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { SubmitSongModal } from "@/components/SubmitSongModal";
 import { FilterPanel } from "@/components/timeline/FilterPanel";
+import type { HelpModalStats } from "@/components/timeline/HelpModal";
 import { TimelineHeader } from "@/components/timeline/TimelineHeader";
 import { translations } from "@/components/timeline/translations";
 import { YearRail } from "@/components/timeline/YearRail";
@@ -49,6 +50,15 @@ export function Timeline({
 			),
 		[songs, events, searchTerm, selectedLeanings, selectedDecades],
 	);
+	const catalogStats: HelpModalStats = useMemo(() => {
+		const years = songs.map((song) => Number(song.published_date.slice(0, 4)));
+		return {
+			songCount: songs.length,
+			artistCount: new Set(songs.map((song) => song.artist)).size,
+			startYear: Math.min(...years),
+			endYear: Math.max(...years),
+		};
+	}, [songs]);
 
 	const years = useMemo(() => yearGroups.map(([y]) => y), [yearGroups]);
 	const sectionRefs = useRef<Record<number, HTMLDivElement | null>>({});
@@ -157,6 +167,7 @@ export function Timeline({
 				subtitle={t.subtitle}
 				themeToggle={t.themeToggle}
 				helpModal={t.helpModal}
+				stats={catalogStats}
 				lang={lang}
 			/>
 

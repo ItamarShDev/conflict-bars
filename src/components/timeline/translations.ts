@@ -67,6 +67,8 @@ export const translations = {
 				},
 				borders:
 					"Card borders indicate political leaning — red for left, blue for right, yellow for center, gray for unknown.",
+				catalog:
+					"The timeline currently covers {{songs}} songs by {{artists}} artists, spanning {{startYear}}–{{endYear}}.",
 				submissions:
 					"Want to contribute? Use the Submit a Song button to share missing tracks or context.",
 			},
@@ -173,6 +175,8 @@ export const translations = {
 				},
 				borders:
 					"מסגרת הכרטיס מציינת נטייה פוליטית — אדום לשמאל, כחול לימין, צהוב למרכז, אפור ללא ידוע.",
+				catalog:
+					"ציר הזמן כולל כעת {{songs}} שירים של {{artists}} אמנים, ומשתרע על פני השנים {{startYear}}–{{endYear}}.",
 				submissions:
 					"רוצים להוסיף? לחצו על כפתור הוסף שיר ושלחו שיר או מידע שחסר.",
 			},
