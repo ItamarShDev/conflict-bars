@@ -144,6 +144,27 @@ nothing was silently dropped), select **all four decade chips** — the decade b
 catalog, so the counter must equal the total record count. Otherwise count `.boombox-song-card`
 elements in the DOM.
 
+### DOM audits silently under-count while a search/filter is active
+`Timeline.tsx` removes non-matching cards from the DOM entirely, so any `querySelectorAll`
+(`.boombox-song-card`, lyric blocks, link rows) run while a search term or leaning/decade chip is
+active audits only the *filtered* subset. A whole-catalog audit that returns `cards: 1` after a
+spot-check search is this bug, not a data loss. **Always clear the search/filters before running a
+programmatic whole-catalog assertion**, and re-assert the expected total (e.g. 137) at the top of
+the script as a guard.
+
+Clearing the box reliably: click *directly inside the `input[type="search"]`* then `ctrl+a` +
+`Delete`. A `triple_click` aimed at approximate coordinates often lands on page body text instead
+and selects/highlights the timeline rather than the field — the screenshot then shows a fully
+blue-selected page and the filter is still applied. On `/he` the input is RTL, so its visible text
+sits on the *right* edge of the field; click near the right side of the box, not the left.
+
+### Delete temporary scripts before running `npm run lint`
+`npm run lint` is `biome check .` over the whole repo, so a throwaway `scripts/tmp-*.ts`
+ground-truth or fixture script will fail the lint regression check with errors that have nothing to
+do with the PR (unused vars, `let` that should be `const`, etc.). Delete the temp script and confirm
+`git status --porcelain` is empty *before* running lint/build, otherwise you will report a false
+regression failure.
+
 ### Rebuilding the shim's event data
 `/tmp/events.json` (input to `convex-shim.mjs`) does not survive box restarts. Regenerate it with a
 throwaway tsx script that imports `israeliConflicts` from `timeline/conflicts.ts` — note the export
