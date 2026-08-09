@@ -1,5 +1,21 @@
 export const hadagNahash2010s = [
 	{
+		name: "אני מאמין (Ani Ma'amin / I Believe)",
+		artist: "Hadag Nahash (הדג נחש)",
+		language: "Hebrew",
+		published_date: "2010-03",
+		lyric_sample: {
+			hebrew:
+				"אני מאמין שנכון להיום חלקינו באי השגת השלום / משמעותי וגדול לא פחות מחלקן של כל המדינות השכנות / ועוד אני מאמין שאנחנו הולכים סחור / שאין סיכוי שעוד מלחמה תעזור",
+			english_translation:
+				"I believe that as of today our share in the failure to achieve peace / is no less significant or large than that of all the neighboring countries / and I also believe we are going in circles / that there is no chance another war will help.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=HTkmOPkuIpo",
+			lyrics: "https://genius.com/Hadag-nahash-ani-maamin-lyrics",
+		},
+	},
+	{
 		name: "זמן להתעורר",
 		artist: "Hadag Nahash (הדג נחש)",
 		published_date: "2013",
@@ -33,9 +49,10 @@ export const hadagNahash2010s = [
 		language: "Hebrew",
 		published_date: "2014",
 		lyric_sample: {
-			hebrew: "כל המדינה בממ”ד / טילים נופלים פה בזה אחר זה",
+			hebrew:
+				"המדינה שלי היא שטח אש / זו לא מטאפורה ולא תיאוריה / מצטיינת בלהתחמש / מפחדת לעשות היסטוריה",
 			english_translation:
-				"The whole country is in the safe room / Missiles falling here one after another.",
+				"My country is a live-fire zone / this is not a metaphor and not a theory / it excels at arming itself / and is afraid to make history.",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=Up1HpdHpFyk",
@@ -48,7 +65,9 @@ export const hadagNahash2010s = [
 		published_date: "2010",
 		lyric_sample: {
 			hebrew:
-				"בן אדם למה זה ליבך כמו קרח / לירות בבני אדם איך אתה מסוגל / לא רוצה לראות עוד בן אדם שימות / כל דם שנשפך מותיר שובל ריקנות",
+				"כל צד טוען שרק אצלו האמת / ובכל יום שעובר עוד חף מפשע מת / הורג אנשים לא אכפת לך כלל / לירות בבני אדם איך אתה מסוגל",
+			english_translation:
+				"Each side claims the truth is only on its side / and every passing day another innocent dies / you kill people and you don't care at all / how can you shoot human beings?",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=Rz-xsKZYnPw",
@@ -62,7 +81,7 @@ export const hadagNahash2010s = [
 		published_date: "2015",
 		lyric_sample: {
 			hebrew:
-				"ירושלים של זהב של אמת וכזב / גם של ערק ג&#039;ראס דבש דם וחלב / ירושלים של נחושת של קודש ובושת / ירושלים של אור אור גנוז אורגינלי",
+				"ירושלים של זהב של אמת וכזב / גם של ערק ג'ראס דבש דם וחלב / ירושלים של נחושת של קודש ובושת / ירושלים של אור אור גנוז אורגינלי",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=Veg2o5Rkp9E",
@@ -82,18 +101,6 @@ export const hadagNahash2010s = [
 			youtube: "https://www.youtube.com/watch?v=Yk7pPBpDDTo",
 			lyrics:
 				"https://genius.com/Hadag-nahash-kovlana-al-miflagot-israel-lyrics",
-		},
-	},
-	{
-		name: "שמש",
-		artist: "Hadag Nahash (הדג נחש)",
-		published_date: "2013",
-		lyric_sample: {
-			hebrew: "אל המקום שבו זרם בי הדם",
-		},
-		links: {
-			youtube: "https://www.youtube.com/watch?v=bFt6LfnmHlU",
-			lyrics: "https://genius.com/Hadag-nahash-shemesh-annotated",
 		},
 	},
 	{

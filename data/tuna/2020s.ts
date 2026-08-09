@@ -60,15 +60,6 @@ export const tuna2020s = [
 		},
 	},
 	{
-		name: "מלאכים",
-		artist: "Tuna (טונה)",
-		published_date: "2024",
-		lyric_sample: {
-			hebrew:
-				"אין בכלל מלאכים בשמיים / אני כאן איתך, ממש בינתיים / להחזיק את הראש מעל המים / לראות הכל, לעצום עיניים",
-		},
-	},
-	{
 		name: "בין העיר לפרדס (Bein Ha'ir LaPardes / Between the City and the Orchard)",
 		artist: "Tuna (טונה)",
 		language: "Hebrew",

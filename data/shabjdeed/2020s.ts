@@ -1,58 +1,10 @@
 export const shabjdeed2020s = [
 	{
-		name: "6Rns",
-		artist: "Shabjdeed (شبجديد)",
-		published_date: "2020-01-24",
-		lyric_sample: {
-			hebrew:
-				"נוסע בטרנזיט דרך המחסום, החיים הם פקק אחד גדול / מחכים לאישור, מחכים לחיות.",
-			english_translation:
-				"Driving in a transit through the checkpoint, life is one big traffic jam / Waiting for a permit, waiting to live.",
-		},
-		links: {
-			youtube: "https://www.youtube.com/watch?v=h0ZSJmEaMkU",
-		},
-	},
-	{
-		name: "Sultan",
-		artist: "Shabjdeed (شبجديد)",
-		published_date: "2024",
-		lyric_sample: {
-			hebrew:
-				"אנחנו הסולטאנים של העיר הזאת, למרות המחסומים / אף אחד לא יכול לקחת את הכתר מהראש שלי.",
-			english_translation:
-				"We are the sultans of this city, despite the checkpoints / No one can take the crown off my head.",
-		},
-		links: {
-			youtube: "https://www.youtube.com/watch?v=H4FGH-PFzRM",
-		},
-	},
-	{
-		name: "Inn Ann",
-		artist: "Shabjdeed (شبجديد)",
-		language: "Arabic",
-		published_date: "2021",
-		lyric_sample: {
-			hebrew:
-				"אן אן... הניידות באות, תחביא את הסחורה / הם רוצים שנחיה בפחד, אבל אנחנו לא זזים.",
-			english_translation:
-				"Inn Ann... the patrol cars are coming, hide the stash / They want us to live in fear, but we are not moving.",
-		},
-		links: {
-			lyrics: "https://genius.com/Daboor-inn-ann-lyrics",
-			youtube: "https://www.youtube.com/watch?v=FKvKnuvXUSU",
-		},
-	},
-	{
 		name: "Nasheed (نشيد)",
 		artist: "Shabjdeed (شبجديد)",
+		collaborators: ["Al Nather (النثر)"],
 		language: "Arabic",
 		published_date: "2023-12-04",
-		collaborators: ["Al Nather (النثر)"],
-		lyric_sample: {
-			english_translation:
-				"In war there are no angels, only a banished devil / And if the resurrection came, we would line up ready for death.",
-		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=_U6SB1dVF1s",
 			lyrics: "https://bltnm.bandcamp.com/track/nasheed",

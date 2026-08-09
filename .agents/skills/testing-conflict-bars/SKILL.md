@@ -88,6 +88,30 @@ Gotchas seen when copying a repo tree: a stray `node_modules/node_modules` symli
 the filesystem root makes Turbopack fail with `Module not found: Can't resolve 'scheduler'`. Delete
 that nested symlink and `rm -rf .next` before starting. Give the copy its own `.env.local`.
 
+## Card/song counts must be re-baselined after any `data/` change
+
+`data/songs-generated.json` is generated and gitignored, and `loadFileSongs()` reads it directly at
+request time. Two failure modes to watch for:
+
+1. **Stale dev-server bundle.** If `npm run generate-songs` (or a data commit) changes the JSON while
+   `next dev` is running, one route can keep serving an older snapshot while another serves the new
+   one — e.g. `/en` reporting 149 cards and `/he` reporting 153 at the same time. This is a testing
+   artifact, not a product bug. Before trusting counts, kill the dev server, `rm -rf .next/dev`, and
+   restart. A hard browser reload alone is NOT enough.
+2. **The shared checkout can move under you.** In a lead/tester split the lead may commit new data
+   mid-run. Always re-derive expected counts from the JSON at the *current* HEAD immediately before
+   asserting, and record the commit SHA in the report. Handy one-liner:
+
+```
+git log --oneline -1 && node -e 'const s=require("./data/songs-generated.json");console.log(s.length)'
+```
+
+Also note `.env.local` is gitignored and can disappear during cleanup/commits; if the dev server
+suddenly 500s with `Environment variable NEXT_PUBLIC_CONVEX_URL is not set`, just recreate it.
+
+Beware `pkill -f next` right after spawning a new dev server — it kills the one you just started.
+Prefer `setsid nohup npm run dev &` and verify with `curl -o /dev/null -w '%{http_code}'`.
+
 ## Driving exact viewports (mobile / tablet / desktop)
 
 Chrome enforces a minimum window width around 500 CSS px, so you cannot get a 375px viewport by
@@ -133,6 +157,40 @@ To locate the culprit, iterate elements whose `getBoundingClientRect().right > c
   Hebrew submit button in dev. That is not a product bug.
 - The expanded song modal's Close control is white text on `bg-white/10`; over a light backdrop it
   is nearly invisible in light mode. Pre-existing — don't attribute it to a layout PR.
+
+## Verifying `links` (YouTube / Genius / lyrics) at scale
+
+Song cards render one anchor per truthy value in `links` (`lyrics`, `song_info`, `youtube`). Cards
+with no links omit the row entirely, so "no empty link row" is checkable in the DOM.
+
+- **Assert by anchor *label*, not by hostname.** Lyrics links are not all Genius (also
+  lyricstranslate, bandcamp, shirrim, songtexte), so a hostname regex undercounts and silently
+  reclassifies some lyrics links as "Info". Counting the rendered label is exact and locale-aware:
+  English `Lyrics` / `YouTube` / `Info`, Hebrew `מילים` / `יוטיוב` / `מידע`. These label counts
+  should equal the source counts from `data/songs-generated.json`.
+- **Verify all YouTube links cheaply via oEmbed** instead of only spot-checking a few. A deleted or
+  private video returns HTTP 404/401, a live one returns JSON with `title` + `author_name`:
+  `https://www.youtube.com/oembed?format=json&url=<encoded watch URL>`
+  Then token-match the returned `title` against the card's song name to catch *right artist, wrong
+  song*. Expect false positives from transliteration/translation: a card named `נולדתי פה` legitimately
+  maps to a video titled "Born Here", and `Kulun 'Andun Dababat` to "Kollon 3endon Dababaat" — check
+  those by eye rather than treating them as mismatches.
+- **genius.com returns 403 to this VM** (Cloudflare human-check), in the browser *and* via curl, and
+  the `r.jina.ai` text proxy is also blocked for genius.com. Report Genius content checks as
+  environment-blocked/untested rather than as failures. lyricstranslate.com and bandcamp also
+  bot-challenge CLI requests but load fine in the real browser — recheck a 403 in the browser before
+  calling a link dead. A genuine dead link looks different: songtexte.com served a real
+  "Seite nicht gefunden (404)" page.
+- The Wayback availability API (`https://archive.org/wayback/available?url=...`) is a useful
+  independent existence signal for blocked domains, but it is **flaky for exact-URL queries** and
+  produced false "no snapshot" results here. Re-query individually before reporting a URL as
+  unarchived, and never state a link is fabricated on a single negative.
+- Removing a record's only *lyrics* link does not make the record link-less if it still has a
+  YouTube link — the "cards with no links" total stays put. Recompute that number from the data
+  rather than adjusting it by hand.
+- One track credited to several artists is stored as one record per artist (e.g. "Inn Ann" for
+  Al Nather / Daboor / Shabjdeed), so the same URL legitimately appears on multiple cards. This is
+  intended, not duplication.
 
 ## Devin Secrets Needed
 

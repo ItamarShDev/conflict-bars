@@ -90,11 +90,6 @@ export const artistPoliticalAffiliation: Record<
 		affiliation: "Apolitical / Satirical",
 		notes: "Often playful and ironic, not strongly political.",
 	},
-	"Noroz (נורוז)": {
-		era: "2020s–present",
-		affiliation: "Apolitical / Street culture",
-		notes: "Focuses on drill/trap lifestyle themes rather than politics.",
-	},
 	"Boi Ecchi (בוי אקי)": {
 		era: "2020s–present",
 		affiliation: "Apolitical / Internet culture",
@@ -155,18 +150,6 @@ export const artistPoliticalAffiliation: Record<
 		notes:
 			"Rapper and producer known for social commentary and critique of Israeli society.",
 	},
-	"Nigel Hadmor (נייג'ל האדמו\"ר)": {
-		era: "1990s",
-		affiliation: "Center-left / Political response",
-		notes:
-			"Early Israeli rapper, immediate response to Rabin assassination, documented political trauma.",
-	},
-	"Silverdone (סילברדון)": {
-		era: "1990s",
-		affiliation: "Center-left / Security concerns",
-		notes:
-			"Early hip-hop artist addressing security situation and state concerns during 1990s.",
-	},
 	"Fishy Hagadol (פישי הגדול)": {
 		era: "2000s",
 		affiliation: "Left-leaning / Media critique",
@@ -184,18 +167,6 @@ export const artistPoliticalAffiliation: Record<
 		affiliation: "Left-leaning / Peace activism",
 		notes:
 			"Collaborator on peace-oriented projects, worked with Palestinian rappers on coexistence themes.",
-	},
-	"Axsom (אקסום)": {
-		era: "2010s",
-		affiliation: "Left-leaning / Anti-corruption",
-		notes:
-			"Rapper known for sharp critiques of government corruption and state theft.",
-	},
-	"Loukatz (לוקץ')": {
-		era: "2010s–present",
-		affiliation: "Center-left / Political satire",
-		notes:
-			"Known for satirical commentary on political discourse and peace rhetoric.",
 	},
 	"Ness Ve Stilla (נס וסטילה)": {
 		era: "2020s–present",
@@ -232,12 +203,6 @@ export const artistPoliticalAffiliation: Record<
 		affiliation: "Palestinian left / Anti-occupation",
 		notes:
 			"Palestinian rapper; collaborations on resistance themes and Palestinian identity.",
-	},
-	"Ortega (אורטגה)": {
-		era: "2000s–present",
-		affiliation: "Center-left / Social commentary",
-		notes:
-			"Veteran rapper in Israeli hip-hop scene, known for collaborations and political commentary.",
 	},
 	"Hatikva 6 (התקווה 6)": {
 		era: "2003–present",

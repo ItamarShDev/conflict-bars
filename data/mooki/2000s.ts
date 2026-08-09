@@ -1,26 +1,19 @@
 export const mooki2000s = [
 	{
-		name: "עוקר הרים",
-		artist: "Mooki (מוקי)",
-		published_date: "2005",
-		lyric_sample: {
-			hebrew: "לרקד על דם דם דם",
-		},
-	},
-	{
 		name: "מדברים על שלום (Medabrim Al Shalom / Talking About Peace)",
 		artist: "Mooki (מוקי)",
 		language: "Hebrew",
-		published_date: "2002",
+		published_date: "2001",
 		lyric_sample: {
 			hebrew:
-				"כולם מדברים על שלום, אף אחד לא מדבר על צדק... ואם אין צדק, אז על איזה שלום אתם מדברים?",
+				"כולם מדברים על שלום, אף אחד לא מדבר על צדק / לאחד זה גן עדן, לאחר גיהנום / כמה אצבעות על ההדק?",
 			english_translation:
-				"Everyone's talking about peace, nobody is talking about justice... and if there's no justice, then what peace are you talking about?",
+				"Everyone talks about peace, nobody talks about justice / for one it's heaven, for the other hell / how many fingers on the trigger?",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=BCNctor2Dek",
 			lyrics: "https://genius.com/Mooki-medabrim-al-shalom-lyrics",
+			song_info: "https://he.wikipedia.org/wiki/מדברים_על_שלום",
 		},
 	},
 ];

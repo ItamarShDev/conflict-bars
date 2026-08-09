@@ -1,96 +1,52 @@
 export const subliminal2020s = [
 	{
-		name: "אבינו (Avinu / Our Father)",
+		name: "זה עלינו (Zeh Aleinu / It's On Us)",
 		artist: "Subliminal (סאבלימינל)",
+		collaborators: ["The Shadow (הצל)", "Raviv Kaner (רביב כנר)"],
 		language: "Hebrew",
-		published_date: "2023",
+		published_date: "2024-01-29",
 		lyric_sample: {
-			hebrew: "שיר דתי-לאומי על אלוהים וארץ ישראל",
-			english_translation: "Religious-national song about God and Israel",
+			hebrew:
+				"גם כשהלב נשבר / תדע תמיד יבוא מחר / והתקווה מין העפר / היא תצמח היא תבוא זה עלינו",
+			english_translation:
+				"Even when the heart breaks / know that tomorrow will always come / and hope will grow out of the dust / it will come — it's on us.",
 		},
 		links: {
-			youtube: "https://www.youtube.com/watch?v=efHekdRUOJs",
-		},
-	},
-	{
-		name: "אור הבריאות (Or Habriut / Light of Health)",
-		artist: "Subliminal (סאבלימינל)",
-		language: "Hebrew",
-		published_date: "2025",
-		lyric_sample: {
-			hebrew: "סינגל חדש על בריאות וחיוניות",
-			english_translation: "New single about health and vitality",
-		},
-		links: {
-			youtube: "https://www.youtube.com/watch?v=9oA97tkkL2I",
+			youtube: "https://www.youtube.com/watch?v=gpoX7w2RayQ",
+			lyrics: "https://yosmusic.com/סאבלימינל-והצל-רביב-כנר-זה-עלינו/",
 		},
 	},
 	{
 		name: "אל תירא ישראל (Al Tira Yisrael / Don't Be Afraid Israel)",
 		artist: "Subliminal (סאבלימינל)",
+		collaborators: ["The Shadow (הצל)", "Itzik Shamli (איציק שמלי)"],
 		language: "Hebrew",
-		published_date: "2025-03",
+		published_date: "2025-03-04",
 		lyric_sample: {
-			hebrew:
-				"אל תירא ישראל / אנחנו כאן בשבילך / גם כשקשה / נעמוד חזק ביחד - שיר תמיכה ועידוד לעם ישראל",
+			hebrew: "והעיקר לא לפחד כלל",
 			english_translation:
-				"Don't be afraid Israel / We are here for you / Even when it's hard / We will stand strong together - song of support and encouragement for Israeli people",
+				'"And the main thing is not to be afraid at all" — the Rabbi Nachman line that recurs as the single\'s refrain; the track pairs biblical imagery with the current fighting and closes on "the victory generation, 2025".',
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=ha-8LO0seaM",
+			song_info: "https://he.wikipedia.org/wiki/אל_תירא_ישראל",
 		},
 	},
 	{
-		name: "התקווה - מתוך מופע האיחוד במנורה (Hatikvah - Live)",
+		name: "אבינו (Avinu / Our Father)",
 		artist: "Subliminal (סאבלימינל)",
+		collaborators: ["The Shadow (הצל)"],
 		language: "Hebrew",
-		published_date: "2023",
-		lyric_sample: {
-			hebrew: "ביצוע חי של שיר התקווה במופע האיחוד הלאומי",
-			english_translation:
-				"Live performance of Hope song at national unity concert",
-		},
-		links: {
-			youtube: "https://www.youtube.com/watch?v=9gI-ttwZeoQ",
-		},
-	},
-	{
-		name: "זה עלינו (Zeh Aleinu / It's On Us)",
-		artist: "Subliminal (סאבלימינל)",
-		language: "Hebrew",
-		published_date: "2023-10",
+		published_date: "2025-06",
 		lyric_sample: {
 			hebrew:
-				"ערב טוב יא עזה, עוד יום עוד נאצי מת / נובה על החוף, גולני על הפרלמנט / אומרים ליחיא סינוואר / כן ראינו מלחמה / בום ביי ביי ביץ' הזמן שלך נגמר",
+				"שמור על חיילינו שם בשטח האויב / שמור על ארצנו תורתנו שמור על הלב / שמור בטחוננו כאן בין הנהר לבין הים",
 			english_translation:
-				"Good evening Gaza, another day another Nazi dead / Nova on the beach, Golani in parliament / Tell Yahya Sinwar / Yes we've seen war / Boom bye bye b*tch your time is up",
+				"Watch over our soldiers there in enemy territory / watch over our land, our Torah, watch over the heart / keep us safe here between the river and the sea.",
 		},
 		links: {
-			youtube: "https://www.youtube.com/watch?v=gpoX7w2RayQ",
-		},
-	},
-	{
-		name: "מאוחדים (Meuchadim / United / Unity)",
-		artist: "Subliminal (סאבלימינל)",
-		language: "Hebrew",
-		published_date: "2023",
-		lyric_sample: {
-			hebrew: "שיר על אחדות עם ישראל בעת משבר",
-			english_translation: "Song about unity of Israeli people during crisis",
-		},
-		links: {
-			youtube: "https://www.youtube.com/watch?v=q56ne3SW7Iw",
-		},
-	},
-	{
-		name: "שומרי הסף (Shomrei Hasaf / Guardians of the Threshold)",
-		artist: "Subliminal (סאבלימינל)",
-		language: "Hebrew",
-		published_date: "2025",
-		lyric_sample: {
-			hebrew: "אלבום חדש עם שירים פטריוטיים על הגנה על הגבולות",
-			english_translation:
-				"New album with patriotic songs about defending borders",
+			youtube: "https://www.youtube.com/watch?v=efHekdRUOJs",
+			lyrics: "https://www.nagnu.co.il/אומנים/סאבלימינל_והצל/אבינו",
 		},
 	},
 ];

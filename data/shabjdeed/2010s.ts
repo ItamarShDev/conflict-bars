@@ -1,13 +1,14 @@
 export const shabjdeed2010s = [
 	{
-		name: "Carlo",
+		name: "Carlo (كارلو)",
 		artist: "Shabjdeed (شبجديد)",
+		collaborators: ["Al Nather (النثر)"],
+		language: "Arabic",
 		published_date: "2017",
 		lyric_sample: {
-			hebrew:
-				"לקחו אותי בג'יפ למסקוביה (מגרש הרוסים) / חקירות ומכות, אבל הראש נשאר למעלה.",
+			hebrew: "بين ابن القدس و ابن الرام / في جدار",
 			english_translation:
-				"They took me in a jeep to the Moscovia (Russian Compound detention center) / Interrogations and beatings, but the head stays up high.",
+				"Between the son of Jerusalem and the son of Ram / there is a wall.",
 		},
 		links: {
 			lyrics: "https://genius.com/Shabjdeed-carlo-lyrics",
@@ -15,48 +16,19 @@ export const shabjdeed2010s = [
 		},
 	},
 	{
-		name: "Hmlana",
+		name: "Mtaktak (متكتك)",
 		artist: "Shabjdeed (شبجديد)",
-		published_date: "2018",
-		lyric_sample: {
-			hebrew:
-				"העומס על הכתפיים שלנו כבד, חיים תחת לחץ / כל יום הוא הישרדות, אבל אנחנו עדיין כאן.",
-			english_translation:
-				"The load on our shoulders is heavy, living under pressure / Every day is survival, but we are still here.",
-		},
-		links: {
-			lyrics: "https://genius.com/Shabjdeed-hamlana-lyrics",
-			youtube: "https://www.youtube.com/watch?v=rZ7ZnJYynN8",
-		},
-	},
-	{
-		name: "Mtaktak",
-		artist: "Shabjdeed (شبجديد)",
+		collaborators: ["Al Nather (النثر)"],
 		language: "Arabic",
 		published_date: "2019",
 		lyric_sample: {
-			hebrew: "ראפר פלסטיני מכפר עקב, שיר על התנגדות וחיים תחת כיבוש",
+			hebrew: "بدك جيش عشان تفوت على مخيم / منحكيش اسماء اذا حدا طلب",
 			english_translation:
-				"Palestinian rapper from Akka, song about resistance and life under occupation",
+				"You need an army just to enter a refugee camp / we name no names if anyone asks.",
 		},
 		links: {
 			lyrics: "https://genius.com/Shabjdeed-and-al-nather-mtaktak-lyrics",
 			youtube: "https://www.youtube.com/watch?v=jEHtO_c_UdI",
-		},
-	},
-	{
-		name: "Sindibad",
-		artist: "Shabjdeed (شبجديد)",
-		published_date: "2019-08-18",
-		lyric_sample: {
-			hebrew:
-				"אנחנו עומדים כמו הרים מול המגרסות / נעדיף לאכול חרא מאשר לקחת כסף מלוכלך.",
-			english_translation:
-				"We stand like mountains against the crushers / We'd rather eat shit than take dirty money.",
-		},
-		links: {
-			lyrics: "https://genius.com/Shabjdeed-and-al-nather-sindibad-lyrics",
-			youtube: "https://www.youtube.com/watch?v=qmvo1VmQ1EA",
 		},
 	},
 ];
