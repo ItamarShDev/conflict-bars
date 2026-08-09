@@ -110,7 +110,7 @@ export const translations = {
 		title: "חרוזים מסוכסכים",
 		themeToggle: {
 			label: "ערכת נושא",
-			classic: "זין",
+			classic: "פאנזין",
 			boombox: "בומבוקס",
 		},
 		subtitle: "בכיוון הנטייה הפוליטית",

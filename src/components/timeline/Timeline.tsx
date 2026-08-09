@@ -4,7 +4,6 @@ import { usePreloadedQuery } from "convex/react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { SubmitSongModal } from "@/components/SubmitSongModal";
 import { FilterPanel } from "@/components/timeline/FilterPanel";
-import { HelpModal } from "@/components/timeline/HelpModal";
 import { TimelineHeader } from "@/components/timeline/TimelineHeader";
 import { translations } from "@/components/timeline/translations";
 import { YearRail } from "@/components/timeline/YearRail";
@@ -105,6 +104,35 @@ export function Timeline({
 		selectYear(next);
 	};
 
+	useEffect(() => {
+		if (yearGroups.length === 0) return;
+		const observer = new IntersectionObserver(
+			(entries) => {
+				const visible = entries
+					.filter((entry) => entry.isIntersecting)
+					.sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+				if (visible) {
+					const year = Number(visible.target.getAttribute("data-year"));
+					if (!Number.isNaN(year)) {
+						setSelectedYear(year);
+					}
+				}
+			},
+			{
+				root: null,
+				rootMargin: "-40% 0px -40% 0px",
+				threshold: 0,
+			},
+		);
+
+		for (const [year] of yearGroups) {
+			const el = sectionRefs.current[year];
+			if (el) observer.observe(el);
+		}
+
+		return () => observer.disconnect();
+	}, [yearGroups]);
+
 	const filteredSongCount = useMemo(
 		() =>
 			yearGroups.reduce(
@@ -128,9 +156,9 @@ export function Timeline({
 				title={t.title}
 				subtitle={t.subtitle}
 				themeToggle={t.themeToggle}
+				helpModal={t.helpModal}
 				lang={lang}
 			/>
-			<HelpModal translations={t.helpModal} lang={lang} />
 
 			<YearRail
 				years={years}
