@@ -1,13 +1,16 @@
 export const fishyHagadol2000s = [
 	{
-		name: "הכל שקוף (Hakol Sakaif / Everything is Transparent)",
+		name: "עוד אח אחד (Od Ach Echad / One More Brother)",
 		artist: "Fishy Hagadol (פישי הגדול)",
 		language: "Hebrew",
 		published_date: "2000",
 		lyric_sample: {
-			hebrew: "הכל שקוף, התקשורת משקרת, השלטון מסתיר את האמת, הפיגועים והמלחמה",
+			hebrew: "עוד אח אחד ירד אל הקבר / מאמא בוכה היא בצעקות שבר",
 			english_translation:
-				"Everything is transparent, the media lies, the government hides the truth, the attacks and war",
+				"Protest song about bloodshed, recorded in 1996 and released on the debut album 'HaSandak' (2000). Hadag Nahash's 2009 remake credits Fishy and adds lines asking whether 'the war on the borders' can be separated from the violence at home.",
+		},
+		links: {
+			song_info: "https://he.wikipedia.org/wiki/עוד_אח_אחד",
 		},
 	},
 ];
