@@ -25,6 +25,9 @@ export const metadata: Metadata = {
 	title: "Conflict Bars",
 	description:
 		"An interactive timeline exploring Israeli hip-hop artists and key events across years and decades",
+	icons: {
+		icon: "/favicon.svg",
+	},
 };
 
 export default function RootLayout({

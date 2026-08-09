@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="32" height="32" role="img" aria-label="Conflict Bars icon">
+  <title>Conflict Bars icon</title>
+  <rect width="100" height="100" rx="24" fill="#fffdf5" stroke="#1c1b18" stroke-width="6" />
+  <rect x="22" y="58" width="14" height="26" rx="4" fill="#ff2d55" />
+  <rect x="43" y="38" width="14" height="46" rx="4" fill="#00aaff" />
+  <rect x="64" y="18" width="14" height="66" rx="4" fill="#ffd500" />
+</svg>

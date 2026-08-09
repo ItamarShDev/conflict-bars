@@ -30,21 +30,6 @@ export const subliminal2010s = [
 		},
 	},
 	{
-		name: "אדון עולם עד מתי (Adon Olam Ad Matai / God Almighty, When Will It End?)",
-		artist: "Subliminal (סאבלימינל)",
-		language: "Hebrew",
-		published_date: "2007",
-		lyric_sample: {
-			hebrew:
-				"דקת דומיה לא תספיק לשישה מליון / אף פעם לא נוכל לקלוט את גודל האסון - שיר היפ-הופ ראשון על השואה",
-			english_translation:
-				"A minute of silence won't be enough for six million / We can never comprehend the magnitude of the disaster - first hip-hop song about the Holocaust",
-		},
-		links: {
-			youtube: "https://www.youtube.com/watch?v=gXLOlQK2r-I",
-		},
-	},
-	{
 		name: "בדיוק כשחשבתם שהכל נגמר (Bediuk Kshechashavtem Shehacol Nigmar / Just When You Thought It Was Over)",
 		artist: "Subliminal (סאבלימינל)",
 		language: "Hebrew",

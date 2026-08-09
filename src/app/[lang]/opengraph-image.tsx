@@ -7,19 +7,92 @@ export const size = {
 };
 
 export const contentType = "image/png";
-export const alt = "Conflict Bars – Interactive Israeli hip-hop timeline";
+export const alt = "חרוזים מסוכסכים – ציר זמן אינטראקטיבי";
+
+function fixRTL(text: string) {
+	return text
+		.split(/\s+/)
+		.map((word) => Array.from(word).reverse().join(""))
+		.reverse()
+		.join(" ");
+}
 
 const descriptionByLang: Record<string, string> = {
-	en: "An interactive timeline exploring Israeli hip-hop artists and key events across years and decades",
-	he: "ציר זמן אינטראקטיבי לחקר אמני היפ־הופ ישראליים ואירועים מרכזיים לאורך השנים",
+	en: "Interactive timeline of Israeli hip-hop and the conflicts that shaped it",
+	he: "ציר זמן אינטראקטיבי של היפ-הופ ישראלי והסכסוכים שעיצבו אותו",
 };
 
-export default function Image() {
-	// Force English for OG images since Hebrew doesn't render properly in next/og
-	const lang = "en";
-	const isHebrew = false;
-	const translation = translations[lang];
-	const description = descriptionByLang[lang];
+const baseUrl = "conflictbars.org";
+
+async function loadHeebo() {
+	const weights = [400, 700, 900] as const;
+	return Promise.all(
+		weights.map(async (weight) => {
+			const css = await fetch(
+				`https://fonts.googleapis.com/css2?family=Heebo:wght@${weight}`,
+			).then((res) => res.text());
+			const match = css.match(
+				/src: url\(([^)]+)\) format\('(?:truetype|opentype)'\)/,
+			);
+			if (!match) {
+				throw new Error(`Could not load Heebo ${weight}`);
+			}
+			const data = await fetch(match[1]).then((res) => res.arrayBuffer());
+			return {
+				name: "Heebo",
+				data,
+				weight,
+				style: "normal" as const,
+			};
+		}),
+	);
+}
+
+export default async function Image({
+	params,
+}: {
+	params: Promise<{ lang: string }>;
+}) {
+	const { lang } = await params;
+	const isHebrew = lang !== "en";
+	const activeLang = isHebrew ? "he" : "en";
+	const translation = translations[activeLang];
+	const description = isHebrew
+		? fixRTL(descriptionByLang[activeLang])
+		: descriptionByLang[activeLang];
+
+	const colors = {
+		background: "#1c1b18",
+		foreground: "#f4f1ea",
+		accent: "#ff2d55",
+		cardBg: "#fffdf5",
+		border: "#1c1b18",
+		left: "#ff2d55",
+		right: "#00aaff",
+		context: "#9e9a93",
+	};
+
+	const cards = [
+		{
+			label: isHebrew ? "סכסוך" : "Conflict",
+			caption: isHebrew
+				? "אירוע מרכזי מחזית הסכסוך"
+				: "Headline event from the conflict",
+			borderColor: colors.left,
+		},
+		{
+			label: isHebrew ? "שיר" : "Song",
+			caption: isHebrew ? "קול אמנים מהתקופה" : "Artists' voices from the era",
+			borderColor: colors.right,
+		},
+		{
+			label: isHebrew ? "הקשר" : "Context",
+			caption: isHebrew
+				? "סיכום ההשפעה והתגובה"
+				: "Impact and response summary",
+			borderColor: colors.context,
+		},
+	];
 
 	return new ImageResponse(
 		<div
@@ -29,170 +102,150 @@ export default function Image() {
 				justifyContent: "space-between",
 				width: "100%",
 				height: "100%",
-				background: "linear-gradient(135deg, #0f172a, #1e293b)",
-				padding: "64px",
-				color: "#f8fafc",
-				fontFamily:
-					'"Geist", "Segoe UI", "Helvetica Neue", "Arial", "Noto Sans Hebrew", sans-serif',
-				direction: isHebrew ? "rtl" : "ltr",
+				direction: "ltr",
+				fontFamily: '"Heebo", "Noto Sans Hebrew", sans-serif',
+				color: colors.foreground,
+				padding: 64,
+				backgroundColor: colors.background,
+				backgroundImage: [
+					"radial-gradient(circle at 50% 0%, rgba(255,45,85,0.08) 0%, transparent 55%)",
+					"repeating-linear-gradient(90deg, rgba(244,241,234,0.04) 0, transparent 1px, transparent 80px)",
+					"repeating-linear-gradient(0deg, rgba(244,241,234,0.04) 0, transparent 1px, transparent 80px)",
+				].join(", "),
+				backgroundSize: "100% 100%, 80px 80px, 80px 80px",
 			}}
 		>
-			<header
-				style={{
-					display: "flex",
-					flexDirection: isHebrew ? "row-reverse" : "row",
-					alignItems: "center",
-					gap: "16px",
-				}}
-			>
-				<div
-					style={{
-						background: "rgba(2, 132, 199, 0.2)",
-						border: "1px solid rgba(56, 189, 248, 0.4)",
-						color: "#38bdf8",
-						padding: "8px 18px",
-						borderRadius: "9999px",
-						fontSize: 28,
-						fontWeight: 600,
-						textAlign: isHebrew ? "right" : "left",
-					}}
-				>
-					{isHebrew ? "סצנת היפ־הופ ישראלית" : "Israeli Hip-Hop Scene"}
-				</div>
-				<div
-					style={{
-						opacity: 0.6,
-						fontSize: 24,
-						textAlign: isHebrew ? "right" : "left",
-					}}
-				>
-					{isHebrew ? "חרוזים מסוכסכים" : "Conflict Bars"}
-				</div>
-			</header>
-			<main
-				style={{
-					display: "flex",
-					flexDirection: "column",
-					gap: "32px",
-				}}
-			>
-				<div
-					style={{
-						fontSize: 86,
-						fontWeight: 700,
-						lineHeight: 1.05,
-						textAlign: isHebrew ? "right" : "left",
-					}}
-				>
-					{translation.title}
-				</div>
-				<div
-					style={{
-						fontSize: 32,
-						lineHeight: 1.4,
-						opacity: 0.85,
-						maxWidth: "80%",
-						textAlign: isHebrew ? "right" : "left",
-					}}
-				>
-					{description}
-				</div>
+			<header style={{ display: "flex", flexDirection: "column", gap: 32 }}>
 				<div
 					style={{
 						display: "flex",
-						flexDirection: isHebrew ? "row-reverse" : "row",
-						gap: "20px",
+						alignItems: "center",
+						gap: 16,
 					}}
 				>
-					{[
-						{
-							label: isHebrew ? "סכסוך" : "Conflict",
-							borderColor: "#ef4444",
-							background: "rgba(239, 68, 68, 0.15)",
-							caption: isHebrew
-								? "אירוע מרכזי מחזית הסכסוך"
-								: "Headline event from the conflict",
-						},
-						{
-							label: isHebrew ? "שיר" : "Song",
-							borderColor: "#3b82f6",
-							background: "rgba(59, 130, 246, 0.15)",
-							caption: isHebrew
-								? "קול אמנים מהתקופה"
-								: "Artists' voices from the era",
-						},
-						{
-							label: isHebrew ? "הקשר" : "Context",
-							borderColor: "#64748b",
-							background: "rgba(100, 116, 139, 0.2)",
-							caption: isHebrew
-								? "סיכום ההשפעה והתגובה"
-								: "Impact and response summary",
-						},
-					].map((card) => (
+					<div
+						style={{
+							background: colors.accent,
+							color: colors.cardBg,
+							padding: "10px 22px",
+							border: `2px solid ${colors.border}`,
+							borderRadius: "255px 15px 225px 15px / 15px 225px 15px 255px",
+							boxShadow: "5px 5px 0 rgba(0,0,0,0.18)",
+							fontSize: 26,
+							fontWeight: 800,
+						}}
+					>
+						{isHebrew
+							? fixRTL("סצנת היפ-הופ הישראלית")
+							: "Israeli Hip-Hop Scene"}
+					</div>
+					<div style={{ fontSize: 24, opacity: 0.7, fontWeight: 400 }}>
+						{isHebrew ? fixRTL(translation.title) : translation.title}
+					</div>
+				</div>
+
+				<h1
+					style={{
+						fontSize: 86,
+						fontWeight: 900,
+						lineHeight: 1.05,
+						margin: 0,
+					}}
+				>
+					{isHebrew ? fixRTL(translation.title) : translation.title}
+				</h1>
+
+				<p
+					style={{
+						fontSize: 26,
+						lineHeight: 1.4,
+						opacity: 0.85,
+						maxWidth: "95%",
+					}}
+				>
+					{description}
+				</p>
+			</header>
+
+			<div
+				style={{
+					display: "flex",
+					gap: 24,
+					alignItems: "stretch",
+				}}
+			>
+				{cards.map((card) => (
+					<div
+						key={card.label}
+						style={{
+							position: "relative",
+							display: "flex",
+							flexDirection: "column",
+							justifyContent: "space-between",
+							flex: 1,
+							minHeight: 0,
+							background: colors.cardBg,
+							color: colors.border,
+							border: `3px solid ${card.borderColor}`,
+							borderRadius: "16px 255px 16px 225px / 255px 16px 225px 16px",
+							boxShadow: "6px 6px 0 rgba(0,0,0,0.18)",
+							padding: 32,
+							overflow: "hidden",
+						}}
+					>
 						<div
-							key={card.label}
 							style={{
-								display: "flex",
-								flexDirection: "column",
-								justifyContent: "space-between",
-								width: "33%",
-								borderRadius: "24px",
-								border: `2px solid ${card.borderColor}`,
-								background: card.background,
-								padding: "24px",
-								color: "#f8fafc",
+								position: "absolute",
+								top: -14,
+								left: 24,
+								width: 80,
+								height: 24,
+								background: "rgba(255,255,255,0.35)",
+								border: "1px solid rgba(0,0,0,0.08)",
+								transform: "rotate(-35deg)",
+							}}
+						/>
+						<div style={{ fontSize: 36, fontWeight: 800 }}>
+							{isHebrew ? fixRTL(card.label) : card.label}
+						</div>
+						<div
+							style={{
+								fontSize: 24,
+								fontWeight: 400,
+								opacity: 0.85,
+								lineHeight: 1.35,
 							}}
 						>
-							<div
-								style={{
-									fontSize: 30,
-									fontWeight: 600,
-									textAlign: isHebrew ? "right" : "left",
-								}}
-							>
-								{card.label}
-							</div>
-							<div
-								style={{
-									fontSize: 24,
-									opacity: 0.85,
-									lineHeight: 1.35,
-									textAlign: isHebrew ? "right" : "left",
-								}}
-							>
-								{card.caption}
-							</div>
+							{isHebrew ? fixRTL(card.caption) : card.caption}
 						</div>
-					))}
-				</div>
-			</main>
+					</div>
+				))}
+			</div>
+
 			<footer
 				style={{
 					display: "flex",
-					flexDirection: isHebrew ? "row-reverse" : "row",
 					justifyContent: "space-between",
 					alignItems: "center",
-					borderTop: "1px solid rgba(148, 163, 184, 0.4)",
-					paddingTop: "24px",
+					borderTop: "2px solid rgba(244,241,234,0.3)",
+					paddingTop: 24,
 					fontSize: 24,
 					opacity: 0.8,
 				}}
 			>
-				<span>
-					{isHebrew
-						? "conflictbars.vercel.app/he"
-						: "conflictbars.vercel.app/en"}
+				<span style={{ fontWeight: 700 }}>
+					{isHebrew ? `${baseUrl}/he` : `${baseUrl}/en`}
 				</span>
 				<span>
 					{isHebrew
-						? "אמנות, פוליטיקה וקולות מרובים ברגע אחד"
+						? fixRTL("אמנות, פוליטיקה וקולות מרובים ברגע אחד")
 						: "Art, politics, and many voices in one moment"}
 				</span>
 			</footer>
 		</div>,
 		{
 			...size,
+			fonts: await loadHeebo(),
 		},
 	);
 }

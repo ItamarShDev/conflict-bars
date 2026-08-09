@@ -19,15 +19,6 @@ export const subliminal2000s = [
 		},
 	},
 	{
-		name: "אדון עולם עד מתי",
-		artist: "Subliminal (סאבלימינל)",
-		published_date: "2005",
-		lyric_sample: {
-			hebrew:
-				"אדון עולם    אשר מלך / בטרם כל    יציר נברא / לעת נעשה    בחפצו כל / אזי מלך   אזי מלך  שמו נקרא",
-		},
-	},
-	{
 		name: "אור הבריאות",
 		artist: "Subliminal (סאבלימינל)",
 		published_date: "2002",
