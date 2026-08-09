@@ -12,6 +12,7 @@ export const odeya2020s = [
 				"That someone up above fell asleep on watch / And I asked who even cares about the soldiers / About the holy army, about the angels of the Nova.",
 		},
 		links: {
+			youtube: "https://www.youtube.com/watch?v=opz9Kn2i8Fs",
 			song_info: "https://he.wikipedia.org/wiki/חורף_23",
 		},
 	},

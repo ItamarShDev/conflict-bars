@@ -16,6 +16,7 @@ export const ravidPlotnik2020s = [
 				"Track 11 on the album 'HaDerech LiShvil HaZahav'; on keeping a daily routine while the war goes on.",
 		},
 		links: {
+			youtube: "https://www.youtube.com/watch?v=3kXnjsLfIVs",
 			song_info:
 				"https://www.albumoftheyear.org/album/1152483-ravid-plotnik--.php",
 		},

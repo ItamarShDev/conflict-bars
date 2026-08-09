@@ -9,6 +9,7 @@ export const tamernafar2020s = [
 				"Fight the occupation coming straight from the curfew",
 		},
 		links: {
+			youtube: "https://www.youtube.com/watch?v=X8NqDqcXFD4",
 			lyrics:
 				"https://songtexte.com/songtext/tamer-nafar/rock-it-like-a-palestinian-44f0c8cd.html",
 		},
@@ -24,6 +25,7 @@ export const tamernafar2020s = [
 				"That was a tank attack, that was a gas attack. Never a heart attack because the beat never goes off",
 		},
 		links: {
+			youtube: "https://www.youtube.com/watch?v=6kJl_pEhvxM",
 			lyrics:
 				"https://lyricstranslate.com/en/tamer-nafar-beat-never-goes-lyrics.html",
 		},

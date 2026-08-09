@@ -10,5 +10,8 @@ export const jimboJ2020s = [
 			english_translation:
 				"We left Tel Aviv, moved to the Otef (envelope) / The farmers thirst for rain, but rockets drip instead.",
 		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=LrxTdtDNGaY",
+		},
 	},
 ];

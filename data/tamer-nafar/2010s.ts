@@ -4,5 +4,8 @@ export const tamerNafar2010s = [
 		artist: "Tamer Nafar (תאמר נפאר)",
 		language: "Arabic/Hebrew",
 		published_date: "2013",
+		links: {
+			youtube: "https://www.youtube.com/watch?v=WjVoyfCkzvA",
+		},
 	},
 ];

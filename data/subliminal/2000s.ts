@@ -10,6 +10,7 @@ export const subliminal2000s = [
 				"Here in the promised land of the forefathers / Every corner is promised and the wounded earth screams.",
 		},
 		links: {
+			youtube: "https://www.youtube.com/watch?v=4pOPSZVNMt4",
 			lyrics: "https://genius.com/Subliminal-eretz-ahuva-lyrics",
 		},
 	},
@@ -22,6 +23,9 @@ export const subliminal2000s = [
 			english_translation:
 				"In our hands are light and fire, everyone is a small miracle / And we are all a strong light.",
 		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=JIjnSTshpc0",
+		},
 	},
 	{
 		name: "בדיוק כשחשבתם שהכל נגמר",
@@ -30,6 +34,9 @@ export const subliminal2000s = [
 		lyric_sample: {
 			hebrew:
 				"ובלב תל אביב היה שוב פיגוע / ובלב תל אביב היה שוב פיגוע / ובלב תל אביב היה שוב פיגוע",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=hVE9m0nhUI4",
 		},
 	},
 	{
@@ -40,6 +47,9 @@ export const subliminal2000s = [
 			hebrew: "ירושלים לא למכירה / רצח, טרור, עוד פיגוע, עוד הרוג",
 			english_translation:
 				"Jerusalem is not for sale / Murder, terror, another attack, another casualty.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=Qr6KAk1-9O8",
 		},
 	},
 	{
@@ -67,6 +77,9 @@ export const subliminal2000s = [
 			english_translation:
 				"We are here to stay, we won't move from here / Zionism in the blood, the Star of David on me, protected.",
 		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=eC91Q8z_qf8",
+		},
 	},
 	{
 		name: "האור",
@@ -76,6 +89,9 @@ export const subliminal2000s = [
 			hebrew: "נלחם כדי לשרוד, לא כדי לנצח / הטרור דופק בדלת, מי יפתח?",
 			english_translation:
 				"Fighting to survive, not to win / Terror is knocking at the door, who will answer?",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=MCfT1AikhCY",
 		},
 	},
 	{
@@ -87,6 +103,9 @@ export const subliminal2000s = [
 			english_translation:
 				"Did we do the army? We did. Did we do reserves? We did.",
 		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=t2a9LYXN9TY",
+		},
 	},
 	{
 		name: "הפינאלי",
@@ -96,6 +115,9 @@ export const subliminal2000s = [
 			hebrew: "תל אביב, חיפה, ירושלים, באר שבע / כולם ביחד, מגן דוד אחד גדול",
 			english_translation:
 				"Tel Aviv, Haifa, Jerusalem, Be'er Sheva / Everyone together, one big Star of David.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=Z760vU8ezg4",
 		},
 	},
 	{
@@ -108,6 +130,9 @@ export const subliminal2000s = [
 				"אלוהי הלוואי תרד אלי, רודפים אותי בחיי, אויבי מאוחדים רוצים להשמידי, אנחנו מניקים ומחמשים את השונאים",
 			english_translation:
 				"My God, I wish you would come down to me, they're chasing me in my life, my enemies are united wanting to destroy me, we are nursing and arming the haters",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=AhMz6cM25C8",
 		},
 	},
 	{
@@ -147,6 +172,9 @@ export const subliminal2000s = [
 			hebrew:
 				"תמונות צרחות סירנות ועיריות / חי במדינה בלי שלום / רגשות אשם על כל דם שנשפך / כל חייל שנשלח",
 		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=zgotr_6vcYM",
+		},
 	},
 	{
 		name: "לא פוחד",
@@ -156,6 +184,9 @@ export const subliminal2000s = [
 			hebrew: "פה זה לא אירופה פה זה ישראל / אז תתפלל לפני שאתה מתרגל",
 			english_translation:
 				"Here is not Europe, here is Israel / So pray before you get used to it.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=nGwQrLyJefw",
 		},
 	},
 	{
@@ -167,6 +198,9 @@ export const subliminal2000s = [
 			english_translation:
 				"I am a Zionist, I am proud, I am a Jew / You won't be able to stop me.",
 		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=WpAUhXSKpTg",
+		},
 	},
 	{
 		name: "לנצח",
@@ -177,6 +211,9 @@ export const subliminal2000s = [
 				"שישה מיליון אחים, עכשיו הם כוכבים / אנחנו המגן, אנחנו החרב, אנחנו החיים",
 			english_translation:
 				"Six million brothers, now they are stars / We are the shield, we are the sword, we are the life.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=K9lpTSUABMc",
 		},
 	},
 	{
@@ -205,6 +242,9 @@ export const subliminal2000s = [
 				"רחובות זועמים, צפירות עולות ויורדות / פיגועים, חדשות, וכולם בחובות",
 			english_translation:
 				"Angry streets, sirens rising and falling / Terror attacks, news, and everyone is in debt.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=CPp27ziVmtY",
 		},
 	},
 	{

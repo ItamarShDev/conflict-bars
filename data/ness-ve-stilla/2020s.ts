@@ -10,6 +10,7 @@ export const nessVeStilla2020s = [
 				"Swords and strikes, revenge on Hamas, unity of Israeli people after October 7",
 		},
 		links: {
+			youtube: "https://www.youtube.com/watch?v=1rk3n9V-aQs",
 			song_info: "https://en.wikipedia.org/wiki/Harbu_Darbu",
 		},
 	},

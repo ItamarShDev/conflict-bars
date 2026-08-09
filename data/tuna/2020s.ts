@@ -9,6 +9,9 @@ export const tuna2020s = [
 			english_translation:
 				"Even if it doesn’t look good, and all the stars show there’s a reason to worry",
 		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=doYvXHat8gU",
+		},
 	},
 	{
 		name: "Rosh Lemal'a (ראש למעלה)",
@@ -20,6 +23,9 @@ export const tuna2020s = [
 				'הן סיפרו לי איך הן שרו שמה "קאובוי" כל השבי\nהחיים עוד לא חזרו לחיות, עוד קצת קשה לבלוע\nביום ההוא גם אצלנו ביקר הרוע',
 			english_translation:
 				"They told me how they sang “Cowboy” there throughout the captivity\nLife hasn’t returned to living yet, it’s still hard to swallow\nOn that day evil also visited us",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=Vjusx05G9sI",
 		},
 	},
 	{
@@ -34,6 +40,7 @@ export const tuna2020s = [
 				"Half the city is freaking out that they’re one second from dying\nA crowd of people outside — they’re not fans, just the product of tyrants’ work",
 		},
 		links: {
+			youtube: "https://www.youtube.com/watch?v=qd1VGjkJcTY",
 			lyrics: "https://genius.com/Tuna-shuvo-shel-mordechai-lyrics",
 		},
 	},
@@ -44,6 +51,9 @@ export const tuna2020s = [
 		lyric_sample: {
 			hebrew:
 				"אווירת דם, אווירת דמשק / זה לא שלפני זה קודם היה לי / בפרק הקודם שדדתי בנק בשביל קניות / כדלקמן, זו מלחמה",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=zI_AdTKsIx0",
 		},
 	},
 	{
@@ -67,6 +77,7 @@ export const tuna2020s = [
 				"The IDF went into Gaza, I drove over to my dad's / Sirens in the background, MDA, ZAKA / So there is no single place right now, no safe place.",
 		},
 		links: {
+			youtube: "https://www.youtube.com/watch?v=R9cVn4bMjIk",
 			lyrics: "https://vaadhavibe.bandcamp.com/track/--76",
 		},
 	},

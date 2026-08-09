@@ -9,5 +9,8 @@ export const alNather2020s = [
 			english_translation:
 				"Unofficial Palestinian anthem for Palestinian youth, voice of young generation in resistance",
 		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=FKvKnuvXUSU",
+		},
 	},
 ];

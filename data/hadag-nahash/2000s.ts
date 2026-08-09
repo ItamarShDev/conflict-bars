@@ -8,6 +8,7 @@ export const hadagNahash2000s = [
 				"קודם כל זו טלויזיה חינוכית / ניסיתי להדגיש שאין שלום אין בטחון / רק לא לירושלים ב-2002 אמרתי",
 		},
 		links: {
+			youtube: "https://www.youtube.com/watch?v=70i9PvrsvJ0",
 			lyrics: "https://genius.com/Hadag-nahash-gabby-vedebby-lyrics",
 		},
 	},
@@ -21,6 +22,7 @@ export const hadagNahash2000s = [
 				"Who will sign for peace here? Who will bring security? / Everyone is in suits.",
 		},
 		links: {
+			youtube: "https://www.youtube.com/watch?v=-H8RVojLECM",
 			lyrics: "https://genius.com/Hadag-nahash-halifot-lyrics",
 		},
 	},
@@ -32,6 +34,7 @@ export const hadagNahash2000s = [
 			hebrew: "בלי להתקדם, רק לנסות לצוף",
 		},
 		links: {
+			youtube: "https://www.youtube.com/watch?v=qHM3uTxvPRg",
 			lyrics: "https://genius.com/Hadag-nahash-lo-frayerim-lyrics",
 		},
 	},
@@ -45,6 +48,9 @@ export const hadagNahash2000s = [
 			english_translation:
 				"In the news the broadcaster is already shouting, he's hoarse again... he only has bad news in stock / Another terror attack, another unemployed person, another idiot cursing.",
 		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=ZdCAI51MDCU",
+		},
 	},
 	{
 		name: "שירת הסטיקר",
@@ -55,6 +61,7 @@ export const hadagNahash2000s = [
 				'דור שלם דורש שלום     תנו לצה"ל לנצח / עם חזק עושה שלום     תנו לצה"ל לכסח / אין שלום עם ערבים אל תתנו להם רובים / אין ערבים    אין פיגועים',
 		},
 		links: {
+			youtube: "https://www.youtube.com/watch?v=QflL6R2-k-8",
 			lyrics: "https://genius.com/Hadag-nahash-shirat-hasticker-lyrics",
 		},
 	},
@@ -69,6 +76,9 @@ export const hadagNahash2000s = [
 			english_translation:
 				"Jerusalem, a city worth an explosion / Walking in the pedestrian mall feeling like an ingathering of exiles / A thousand cultures, everyone has a brother and nine sons.",
 		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=JNwJFLkoX80",
+		},
 	},
 	{
 		name: "בלה בליסימה (Bella Bellissima)",
@@ -81,6 +91,9 @@ export const hadagNahash2000s = [
 			english_translation:
 				"She immediately lay on the attacker / protecting with her body a terrorist but also a human / who without her body would be a corpse.",
 		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=0S9hDbW-CJE",
+		},
 	},
 	{
 		name: "שלום/סלאם/Peace (Shalom/Salaam/Peace)",
@@ -92,6 +105,9 @@ export const hadagNahash2000s = [
 				"שלום סלאם פיס / אפשרי גם כאן / לא רק בפריס או בניס / אף אחד לא רוצה למות אבל אם כבר חייבים אז לא עדיף בליוייס במקום במדים",
 			english_translation:
 				"Shalom Salaam Peace / possible here too / not just in Paris or Nice / Nobody wants to die but if we must then isn't it better in Levi's than in uniforms.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=O4EaIYnsk4k",
 		},
 	},
 ];

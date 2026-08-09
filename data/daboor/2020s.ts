@@ -9,5 +9,8 @@ export const daboor2020s = [
 			english_translation:
 				"Song about Palestinian identity and life in Gaza Strip, voice of resistance",
 		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=FKvKnuvXUSU",
+		},
 	},
 ];

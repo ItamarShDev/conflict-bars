@@ -9,6 +9,9 @@ export const shabjdeed2010s = [
 			english_translation:
 				"They took me in a jeep to the Moscovia (Russian Compound detention center) / Interrogations and beatings, but the head stays up high.",
 		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=shTbSKNOYE4",
+		},
 	},
 	{
 		name: "Hmlana",
@@ -19,6 +22,9 @@ export const shabjdeed2010s = [
 				"העומס על הכתפיים שלנו כבד, חיים תחת לחץ / כל יום הוא הישרדות, אבל אנחנו עדיין כאן.",
 			english_translation:
 				"The load on our shoulders is heavy, living under pressure / Every day is survival, but we are still here.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=rZ7ZnJYynN8",
 		},
 	},
 	{
@@ -31,6 +37,9 @@ export const shabjdeed2010s = [
 			english_translation:
 				"Palestinian rapper from Akka, song about resistance and life under occupation",
 		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=jEHtO_c_UdI",
+		},
 	},
 	{
 		name: "Sindibad",
@@ -41,6 +50,9 @@ export const shabjdeed2010s = [
 				"אנחנו עומדים כמו הרים מול המגרסות / נעדיף לאכול חרא מאשר לקחת כסף מלוכלך.",
 			english_translation:
 				"We stand like mountains against the crushers / We'd rather eat shit than take dirty money.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=qmvo1VmQ1EA",
 		},
 	},
 ];

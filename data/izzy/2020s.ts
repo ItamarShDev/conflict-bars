@@ -10,6 +10,9 @@ export const izzy2020s = [
 			english_translation:
 				"My whole head is spinning, my country is under attack\nAnd a father who suddenly sees his daughter being kidnapped",
 		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=GAdS-TWD53Y",
+		},
 	},
 	{
 		name: "לחיי הזמנים הקשים (LeChayey HaZmanim HaKashim / To the Hard Times)",
@@ -19,6 +22,9 @@ export const izzy2020s = [
 		lyric_sample: {
 			english_translation:
 				"Single released during the Israel-Hamas war about the hardships and falls endured personally and as a people.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=viHtF3OmBi4",
 		},
 	},
 ];

@@ -45,6 +45,9 @@ export const tuna2010s = [
 		lyric_sample: {
 			hebrew: "וגם    שמע אולי מוקדם להתלכלך / חנוך רוזן ,סאדם חוסיין",
 		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=3PJmE-ucx_o",
+		},
 	},
 	{
 		name: 'י"א 2',
@@ -53,6 +56,9 @@ export const tuna2010s = [
 		lyric_sample: {
 			hebrew: "מסתובבות לך בראש כמו חיילות בעזריאלי",
 		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=iXmrn2vYS6g",
+		},
 	},
 	{
 		name: "רוק 30",
@@ -60,6 +66,9 @@ export const tuna2010s = [
 		published_date: "2015",
 		lyric_sample: {
 			hebrew: "מסתובבות לך בראש כמו חיילות בעזריאלי",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=GIRbXNousaI",
 		},
 	},
 ];

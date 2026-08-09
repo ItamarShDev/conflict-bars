@@ -10,6 +10,7 @@ export const kla62000s = [
 				"Rap remake of Meni Begger's 1981 song, released ahead of the Gaza disengagement plan; it became identified with the protest against the evacuation of Gush Katif.",
 		},
 		links: {
+			youtube: "https://www.youtube.com/watch?v=XrBkpLDyXjQ",
 			song_info: "https://he.wikipedia.org/wiki/זה_היה_ביתי",
 		},
 	},
@@ -29,6 +30,7 @@ export const kla62000s = [
 				"Patriotic posse cut from the Tact Family compilation 'Allstars' (2004), recorded during the Second Intifada.",
 		},
 		links: {
+			youtube: "https://www.youtube.com/watch?v=Dq3otxDyF8A",
 			song_info: "https://he.wikipedia.org/wiki/אולסטארז",
 		},
 	},

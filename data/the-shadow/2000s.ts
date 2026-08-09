@@ -11,6 +11,7 @@ export const theShadow2000s = [
 				"My mother earth, not mine is all that was mine, even my country, my danger, has become a punching bag.",
 		},
 		links: {
+			youtube: "https://www.youtube.com/watch?v=26CeXRrfNdU",
 			lyrics:
 				"https://lyricstranslate.com/en/biladi-%D7%91%D7%99%D7%9C%D7%90%D7%93%D7%99-my-country.html",
 		},
@@ -27,6 +28,7 @@ export const theShadow2000s = [
 				"Lights out, the Shadow enters, words, sounds, troubles. Bundles of troubles, God collapsed, missiles fall, borders.",
 		},
 		links: {
+			youtube: "https://www.youtube.com/watch?v=tjaKaMFw63Y",
 			lyrics: "https://genius.com/Hatzel-hazioni-haacharon-lyrics",
 		},
 	},
@@ -37,6 +39,9 @@ export const theShadow2000s = [
 		lyric_sample: {
 			hebrew:
 				"פתיחה: / ברוך שעשני גבר, אחושרמוטה גבר / וכל עוד הזיקפה לא תיפול / מותר לי לעשות הכל",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=QUen9bPnI0I",
 		},
 	},
 ];

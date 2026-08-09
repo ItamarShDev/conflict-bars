@@ -9,6 +9,9 @@ export const dam2010s = [
 			english_translation:
 				"Billions of dollars that go into dividing the Arab world / Whenever anyone tries to make a change, they're punished.",
 		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=B4A5szVtWnw",
+		},
 	},
 	{
 		name: "Dabke on the Moon",
@@ -20,6 +23,9 @@ export const dam2010s = [
 			english_translation:
 				"Of course we want to go to the moon, but we cannot do it with the occupation. / And who's responsible for the occupation as well? America.",
 		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=iskU73JvmZ0",
+		},
 	},
 	{
 		name: "Who You Are",
@@ -30,6 +36,9 @@ export const dam2010s = [
 				"אני הרווקה, אני העקרה, אני הגרושה / בצל של גבר, אבל לא בצל של גדר.",
 			english_translation:
 				"I am the spinster, I am the infertile, I am the divorced / In the shadow of a man, but not the shadow of a wall.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=CZll1ioI3xg",
 		},
 	},
 	{
@@ -43,17 +52,26 @@ export const dam2010s = [
 			english_translation:
 				"We are from the Negev, we are from Jaffa / From Ein Hod, we are from Akko / From Nazareth, we are from Ramle.",
 		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=gH0IGvzH5G8",
+		},
 	},
 	{
 		name: "Risale min Zinzane (A Letter from the Cell / رسالة من زنزانة)",
 		artist: "DAM (דאם)",
 		language: "Arabic",
 		published_date: "2011",
+		links: {
+			youtube: "https://www.youtube.com/watch?v=R6Kq-NeHqlE",
+		},
 	},
 	{
 		name: "Muwaten Mustahdaf (Targeted Citizen / מואטן מוסתהדף)",
 		artist: "DAM (דאם)",
 		language: "Arabic",
 		published_date: "2010",
+		links: {
+			youtube: "https://www.youtube.com/watch?v=j8AsLBHwNsE",
+		},
 	},
 ];

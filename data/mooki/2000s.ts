@@ -19,6 +19,7 @@ export const mooki2000s = [
 				"Everyone's talking about peace, nobody is talking about justice... and if there's no justice, then what peace are you talking about?",
 		},
 		links: {
+			youtube: "https://www.youtube.com/watch?v=BCNctor2Dek",
 			lyrics: "https://genius.com/Mooki-medabrim-al-shalom-lyrics",
 		},
 	},

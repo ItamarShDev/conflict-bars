@@ -10,6 +10,7 @@ export const shai3602010s = [
 				"I'm on the wrong side of the map, activists with knives got me trapped / This international hypocrisy won't get us far",
 		},
 		links: {
+			youtube: "https://www.youtube.com/watch?v=FP2OCs1fRgQ",
 			song_info:
 				"https://www.mako.co.il/music-news/singles/Article-96cdf1934a33921006.htm",
 		},
@@ -24,6 +25,7 @@ export const shai3602010s = [
 				"From the album 'Shalom Haters'; laments the human suffering of both sides of the Israeli-Palestinian conflict and calls on listeners not to be afraid to think for themselves.",
 		},
 		links: {
+			youtube: "https://www.youtube.com/watch?v=IO5LojKJbAo",
 			song_info:
 				"https://www.mako.co.il/music-news/singles/Article-a874a49a5cae331006.htm",
 		},

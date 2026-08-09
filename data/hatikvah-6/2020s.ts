@@ -9,6 +9,7 @@ export const hatikvah62020s = [
 				"Tribute to IDF combat soldiers; the video was filmed with cadets of the Bahad 1 officers' school.",
 		},
 		links: {
+			youtube: "https://www.youtube.com/watch?v=V5SpIgH7VHI",
 			song_info: "https://he.wikipedia.org/wiki/התקווה_6",
 		},
 	},
@@ -24,6 +25,7 @@ export const hatikvah62020s = [
 				"The neighbour upstairs is a contractor but he's been on reserve duty for a month / Her brother, a senior tech worker, is now a sniper on rooftops in Gaza",
 		},
 		links: {
+			youtube: "https://www.youtube.com/watch?v=aYGd4HOend4",
 			song_info: "https://he.wikipedia.org/wiki/גיבורי_על_(שיר)",
 		},
 	},

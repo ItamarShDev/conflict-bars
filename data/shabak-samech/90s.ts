@@ -10,6 +10,7 @@ export const shabakSamech90s = [
 				"...the majority that deals with corruption / like in the Knesset, I can't anymore.",
 		},
 		links: {
+			youtube: "https://www.youtube.com/watch?v=LZrmkf27yJE",
 			lyrics: "https://genius.com/Shabak-samech-beiskey-hashin-lyrics",
 		},
 	},
@@ -25,6 +26,7 @@ export const shabakSamech90s = [
 				"Seven in the crosshairs enter here with a swing / with full power that no one will understand.",
 		},
 		links: {
+			youtube: "https://www.youtube.com/watch?v=sYS3zpkQDHM",
 			lyrics: "https://genius.com/Shabak-samech-hamedina-balehavot-lyrics",
 		},
 	},
@@ -37,6 +39,9 @@ export const shabakSamech90s = [
 			english_translation:
 				"The country is in flames and there's fire in the streets / to be or not to be at this party.",
 		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=eFFnVF3uBZw",
+		},
 	},
 	{
 		name: "אימפריה (Imperia)",
@@ -48,11 +53,17 @@ export const shabakSamech90s = [
 			english_translation:
 				"The empire of rap, kingdom of the earth / from Sh to B stripping the nation.",
 		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=RMV85V8l1TE",
+		},
 	},
 	{
 		name: "מלחמת מיקרופון (Milchemet Microfon / Microphone War)",
 		artist: "Shabak Samech (שבק ס)",
 		language: "Hebrew",
 		published_date: "1998",
+		links: {
+			youtube: "https://www.youtube.com/watch?v=1tJ1vH-r8Js",
+		},
 	},
 ];

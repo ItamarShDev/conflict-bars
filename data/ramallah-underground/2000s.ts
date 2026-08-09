@@ -4,11 +4,17 @@ export const ramallahUnderground2000s = [
 		artist: "Ramallah Underground (رام الله أندرجراوند)",
 		language: "Arabic",
 		published_date: "2007",
+		links: {
+			youtube: "https://www.youtube.com/watch?v=jlRVdbMZSJk",
+		},
 	},
 	{
 		name: "3 on 3 (From the Cave)",
 		artist: "Ramallah Underground (رام الله أندرجراوند)",
 		language: "Arabic/English",
 		published_date: "2007",
+		links: {
+			youtube: "https://www.youtube.com/watch?v=CC0ELkFMORM",
+		},
 	},
 ];

@@ -10,5 +10,8 @@ export const alNather2010s = [
 			english_translation:
 				"With staccato trap beats, song about Palestinian resistance, included in BBC's list of greatest hip-hop songs of all time",
 		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=jEHtO_c_UdI",
+		},
 	},
 ];

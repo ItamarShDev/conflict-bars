@@ -11,6 +11,7 @@ export const noamTsuriely2020s = [
 				"The sixth of October, this is my people, tearing itself apart from within / We picked sides, we called each other traitors.",
 		},
 		links: {
+			youtube: "https://www.youtube.com/watch?v=mQvLEYH-Er0",
 			song_info: "https://www.ynet.co.il/entertainment/article/b1af4ri11c",
 		},
 	},

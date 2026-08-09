@@ -10,6 +10,7 @@ export const dam2000s = [
 				"Closing title track of DAM's debut album 'Ihda'' (2006), widely described as the first Palestinian hip-hop album.",
 		},
 		links: {
+			youtube: "https://www.youtube.com/watch?v=PQrQMOZI9uI",
 			song_info: "https://en.wikipedia.org/wiki/Ihda%27",
 		},
 	},
@@ -38,6 +39,9 @@ export const dam2000s = [
 			english_translation:
 				"I was born here, my grandfather was born here / And here you destroyed our houses with your very hands.",
 		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=zIo6lyP9tTE",
+		},
 	},
 	{
 		name: "Innocent Criminals (Posheem Hapim me Peshaa)",
@@ -50,6 +54,9 @@ export const dam2000s = [
 			english_translation:
 				"When Jews protest, the police use batons / When Arabs protest, the police take their lives.",
 		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=aA_Lu_NkojE",
+		},
 	},
 	{
 		name: "Mali Huriye (I Don't Have Freedom)",
@@ -60,6 +67,9 @@ export const dam2000s = [
 			hebrew: "למה כל ילדי העולם חופשיים ולא אנחנו?",
 			english_translation:
 				"Why are all the children of the world free but not us?",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=GhmpxCWVMBM",
 		},
 	},
 ];

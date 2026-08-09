@@ -7,6 +7,9 @@ export const ravidplotnik2010s = [
 			hebrew:
 				"עמוק בפנים אותה תחושה עזה כן / יום יום כל העולם שותה לי ת'דם ות'דלק",
 		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=Q7ajZiT1Yms",
+		},
 	},
 	{
 		name: "ג'רוזלם",
@@ -20,11 +23,17 @@ export const ravidplotnik2010s = [
 		lyric_sample: {
 			hebrew: "וואלק אדם לאדם זאב",
 		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=Ey_K97x15ek",
+		},
 	},
 	{
 		name: "מדינת משטרה",
 		artist: "Ravid Plotnik (רביד פלוטניק)",
 		published_date: "2017",
+		links: {
+			youtube: "https://www.youtube.com/watch?v=NvBvp9YHZd4",
+		},
 	},
 	{
 		name: "נתראה בגלגול הבא",
@@ -33,6 +42,9 @@ export const ravidplotnik2010s = [
 		lyric_sample: {
 			hebrew:
 				"פתיחה: / מי יודע אם אראה את פנייך / שוב / הכחשה הולכת, הכחשה תשוב",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=Maf6BaEhCzY",
 		},
 	},
 	{

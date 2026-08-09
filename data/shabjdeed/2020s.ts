@@ -9,6 +9,9 @@ export const shabjdeed2020s = [
 			english_translation:
 				"Driving in a transit through the checkpoint, life is one big traffic jam / Waiting for a permit, waiting to live.",
 		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=h0ZSJmEaMkU",
+		},
 	},
 	{
 		name: "Sultan",
@@ -19,6 +22,9 @@ export const shabjdeed2020s = [
 				"אנחנו הסולטאנים של העיר הזאת, למרות המחסומים / אף אחד לא יכול לקחת את הכתר מהראש שלי.",
 			english_translation:
 				"We are the sultans of this city, despite the checkpoints / No one can take the crown off my head.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=H4FGH-PFzRM",
 		},
 	},
 	{
@@ -32,6 +38,9 @@ export const shabjdeed2020s = [
 			english_translation:
 				"Inn Ann... the patrol cars are coming, hide the stash / They want us to live in fear, but we are not moving.",
 		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=FKvKnuvXUSU",
+		},
 	},
 	{
 		name: "Nasheed (نشيد)",
@@ -44,6 +53,7 @@ export const shabjdeed2020s = [
 				"In war there are no angels, only a banished devil / And if the resurrection came, we would line up ready for death.",
 		},
 		links: {
+			youtube: "https://www.youtube.com/watch?v=_U6SB1dVF1s",
 			lyrics: "https://bltnm.bandcamp.com/track/nasheed",
 		},
 	},

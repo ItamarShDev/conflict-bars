@@ -4,6 +4,9 @@ export const systemAli2010s = [
 		artist: "System Ali (סיסטם עלי)",
 		language: "Hebrew/Arabic/Russian/Yiddish/Amharic/English",
 		published_date: "2019",
+		links: {
+			youtube: "https://www.youtube.com/watch?v=xCiw3EJyOxY",
+		},
 	},
 	{
 		name: "אין כמו יפו (Ain Kmo Yafo / There's Nothing Like Jaffa)",
@@ -15,6 +18,9 @@ export const systemAli2010s = [
 				"זווית רב־לשונית על מרקם חיים וזהות ביפו, עם קו מחאה אזרחי על ג'נטריפיקציה וזכויות דיור",
 			english_translation:
 				"Multilingual perspective on life and identity in Jaffa, with civic protest against gentrification and housing rights",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=SAdYoHf6Ivc",
 		},
 	},
 ];
