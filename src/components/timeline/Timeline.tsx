@@ -51,28 +51,18 @@ export function Timeline({
 		[songs, events, searchTerm, selectedLeanings, selectedDecades],
 	);
 
-	const displayYearGroups = useMemo(
-		() =>
-			yearGroups.filter(([, entries]) =>
-				entries.some((entry) => entry.type === "conflict"),
-			),
-		[yearGroups],
-	);
-	const years = useMemo(
-		() => displayYearGroups.map(([y]) => y),
-		[displayYearGroups],
-	);
+	const years = useMemo(() => yearGroups.map(([y]) => y), [yearGroups]);
 	const sectionRefs = useRef<Record<number, HTMLDivElement | null>>({});
 
 	useEffect(() => {
-		if (displayYearGroups.length === 0) {
+		if (years.length === 0) {
 			setSelectedYear(null);
 			return;
 		}
 		if (!selectedYear || !years.includes(selectedYear)) {
 			setSelectedYear(years[0]);
 		}
-	}, [displayYearGroups, selectedYear, years]);
+	}, [selectedYear, years]);
 
 	useEffect(() => {
 		if (!isPlaying || !selectedYear) {
@@ -117,12 +107,12 @@ export function Timeline({
 
 	const filteredSongCount = useMemo(
 		() =>
-			displayYearGroups.reduce(
+			yearGroups.reduce(
 				(count, [, entries]) =>
 					count + entries.filter((entry) => entry.type === "song").length,
 				0,
 			),
-		[displayYearGroups],
+		[yearGroups],
 	);
 
 	const hasActiveFilters =
@@ -190,7 +180,7 @@ export function Timeline({
 				</div>
 
 				<div className="pb-32 md:pb-24">
-					{displayYearGroups.map(([year, entries]) => (
+					{yearGroups.map(([year, entries]) => (
 						<YearSection
 							key={year}
 							year={year}
