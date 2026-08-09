@@ -112,6 +112,35 @@ suddenly 500s with `Environment variable NEXT_PUBLIC_CONVEX_URL is not set`, jus
 Beware `pkill -f next` right after spawning a new dev server — it kills the one you just started.
 Prefer `setsid nohup npm run dev &` and verify with `curl -o /dev/null -w '%{http_code}'`.
 
+### The song counter only renders when a filter or search is active
+`Timeline.tsx` computes `searchCountText` as `null` unless `searchTerm` is non-empty or a
+leaning/decade filter is set, so on a clean page load there is **no** `Found N song(s)` text to
+assert against. To get an on-screen number equal to the whole catalog (a nice visual proof that
+nothing was silently dropped), select **all four decade chips** — the decade buckets partition the
+catalog, so the counter must equal the total record count. Otherwise count `.boombox-song-card`
+elements in the DOM.
+
+### Rebuilding the shim's event data
+`/tmp/events.json` (input to `convex-shim.mjs`) does not survive box restarts. Regenerate it with a
+throwaway tsx script that imports `israeliConflicts` from `timeline/conflicts.ts` — note the export
+is named `israeliConflicts`, not `conflicts`. The script must live **inside the repo** (e.g.
+`scripts/tmp-mkevents.ts`, then delete it) because tsx resolves relative imports from the file's own
+directory; a script in `/tmp` fails with `Cannot find module './timeline/conflicts'`. There are 11
+events, whose start years are the 11 conflict years.
+
+### Expected section count = union of song years and conflict years
+Sections are the union, so the count is NOT the number of song years. Conflict years with zero songs
+(e.g. 1991, 1993, 2005) still render a section containing only the conflict card — that is correct,
+not an "empty section". Derive it explicitly:
+
+```
+python3 -c "
+import json
+cy={int(str(e['start'])[:4]) for e in json.load(open('/tmp/events.json'))}
+sy={int(str(s['published_date'])[:4]) for s in json.load(open('data/songs-generated.json'))}
+print('sections',len(cy|sy),'conflict',len(cy&(cy|sy)),'noConflict',len(sy-cy))"
+```
+
 ## Driving exact viewports (mobile / tablet / desktop)
 
 Chrome enforces a minimum window width around 500 CSS px, so you cannot get a 375px viewport by
@@ -191,6 +220,60 @@ with no links omit the row entirely, so "no empty link row" is checkable in the 
 - One track credited to several artists is stored as one record per artist (e.g. "Inn Ann" for
   Al Nather / Daboor / Shabjdeed), so the same URL legitimately appears on multiple cards. This is
   intended, not duplication.
+
+## Auditing `lyric_sample` rendering
+
+`SongEntry.tsx` picks the lyric per locale with a fallback: `/he` prefers `hebrew` then
+`english_translation`, `/en` the reverse. Consequences when auditing data that has partial samples:
+
+- A record with **only** `english_translation` still renders on `/he` (via fallback), but `dir` is
+  set to `"rtl"` only when `lang === "he" && lyricSample.hebrew`, so English-only samples correctly
+  render `dir="ltr"` inside the RTL card. Verify the text stays within the card rect rather than
+  assuming breakage.
+- The block is guarded by `lyricSample && lyricContent`, so a sample whose fields are all empty
+  renders nothing at all — there is no empty-quotes block to hunt for. Assert this positively:
+  count lyric blocks and compare to the number of records with a non-empty sample.
+- **The component adds its own wrapping `"` quotes.** If the data value itself starts or ends with a
+  quote character (straight or curly), the card visibly renders a doubled quote such as
+  `""Our fathers...` or `...its day"."`. This is a data-hygiene issue, not a component bug, and it is
+  easy to miss because it only shows in pixels. Scan the source for it, remembering that which field
+  renders depends on locale:
+
+```
+python3 -c "
+import json
+Q='\"\u201c\u201d'
+for s in json.load(open('data/songs-generated.json')):
+    for k,v in (s.get('lyric_sample') or {}).items():
+        if not v: continue
+        v=v.strip()
+        if v[0] in Q or v[-1] in Q or (v[-1]=='.' and v[-2] in Q):
+            print(k, s['artist'], s['name'])"
+```
+
+Prose-summary samples (allowed by `AGENTS.md` when only context exists, not lyrics) are the most
+likely offenders because they quote a refrain at the end.
+
+## Leaning borders: assert the border is painted, not just the class
+
+After deletions from `timeline/artist-political-affiliation.ts`, "no broken leaning border" needs two
+checks: every card carries a `leaning-*` class, **and** the accent border actually paints. Read
+computed styles and require a non-zero width and a non-transparent colour — the accent is 8px on one
+side only (left in LTR, mirrored to right in RTL), so take `max(borderLeftWidth, borderRightWidth)`:
+
+| leaning | accent colour |
+|---|---|
+| left | `rgb(255, 45, 85)` pink |
+| right | `rgb(0, 170, 255)` blue |
+| center | `rgb(255, 213, 0)` yellow |
+| unknown | `rgb(158, 154, 147)` grey |
+
+Grey `unknown` is a *painted* border, not a missing one. It recurs for artists whose affiliation
+string contains no `left`/`right`/`center` substring — historically Shabak Samech
+(`Counterculture / Apolitical`), Saz (`Palestinian / Coexistence advocacy`) and Noroz. Screenshot a
+section that mixes an unknown card with a classified one so the difference is visibly a colour
+choice. Whether grey is the desired presentation for apolitical artists is a standing product
+question, not a bug to report each run.
 
 ## Devin Secrets Needed
 

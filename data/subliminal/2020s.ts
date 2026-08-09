@@ -25,7 +25,7 @@ export const subliminal2020s = [
 		lyric_sample: {
 			hebrew: "והעיקר לא לפחד כלל",
 			english_translation:
-				'"And the main thing is not to be afraid at all" — the Rabbi Nachman line that recurs as the single\'s refrain; the track pairs biblical imagery with the current fighting and closes on "the victory generation, 2025".',
+				"The Rabbi Nachman line “and the main thing is not to be afraid at all” recurs as the single’s refrain; the track pairs biblical imagery with the current fighting and closes on “the victory generation, 2025”.",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=ha-8LO0seaM",
