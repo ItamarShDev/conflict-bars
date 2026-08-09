@@ -9,9 +9,5 @@ export const silverdone1990s = [
 			english_translation:
 				"The state is in danger, everything is falling apart, the attacks don't stop, we return home",
 		},
-		links: {
-			youtube:
-				"https://www.youtube.com/results?search_query=silverdone+medina+besikana",
-		},
 	},
 ];

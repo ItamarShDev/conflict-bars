@@ -119,6 +119,12 @@ export const artistPoliticalAffiliation: Record<
 		notes:
 			"Pioneering Palestinian hip hop group from Lod; lyrics address occupation, inequality, and identity; known for activist stance and collaborations.",
 	},
+	"Tamer Nafar (תאמר נפאר)": {
+		era: "1990s–present",
+		affiliation: "Palestinian left / Anti-occupation / Social justice",
+		notes:
+			"Founding member and frontman of DAM; solo work and acting continue the group's anti-occupation and identity themes.",
+	},
 	"Itzik Shamli (איציק שמלי)": {
 		era: "1990s–present",
 		affiliation: "Center-right / Patriotic",

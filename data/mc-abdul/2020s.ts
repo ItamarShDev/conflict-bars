@@ -8,8 +8,5 @@ export const mcAbdul2020s = [
 			english_translation:
 				"I want freedom for the population / Two million prisoners living in this location / Shouting at the wall but nothing is ever-changing / That's life under an occupation.",
 		},
-		links: {
-			youtube: "https://www.youtube.com/watch?v=cRRJxVqZQSQ",
-		},
 	},
 ];

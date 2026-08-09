@@ -9,8 +9,5 @@ export const ortega2000s = [
 			english_translation:
 				"Album produced by Borgore, veteran rapper in Israeli hip-hop scene",
 		},
-		links: {
-			youtube: "https://www.youtube.com/results?search_query=ortega+04:47",
-		},
 	},
 ];

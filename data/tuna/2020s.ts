@@ -9,9 +9,6 @@ export const tuna2020s = [
 			english_translation:
 				"Even if it doesn’t look good, and all the stars show there’s a reason to worry",
 		},
-		links: {
-			lyrics: "https://genius.com/Tuna-kol-hakohavim-lyrics",
-		},
 	},
 	{
 		name: "Rosh Lemal'a (ראש למעלה)",
@@ -23,9 +20,6 @@ export const tuna2020s = [
 				'הן סיפרו לי איך הן שרו שמה "קאובוי" כל השבי\nהחיים עוד לא חזרו לחיות, עוד קצת קשה לבלוע\nביום ההוא גם אצלנו ביקר הרוע',
 			english_translation:
 				"They told me how they sang “Cowboy” there throughout the captivity\nLife hasn’t returned to living yet, it’s still hard to swallow\nOn that day evil also visited us",
-		},
-		links: {
-			lyrics: "https://genius.com/Tuna-rosh-lemala-lyrics",
 		},
 	},
 	{
@@ -45,7 +39,7 @@ export const tuna2020s = [
 	},
 	{
 		name: "הטוב, הרע ואחותך",
-		artist: "טונה",
+		artist: "Tuna (טונה)",
 		published_date: "2021",
 		lyric_sample: {
 			hebrew:
@@ -54,20 +48,11 @@ export const tuna2020s = [
 	},
 	{
 		name: "מלאכים",
-		artist: "טונה",
+		artist: "Tuna (טונה)",
 		published_date: "2024",
 		lyric_sample: {
 			hebrew:
 				"אין בכלל מלאכים בשמיים / אני כאן איתך, ממש בינתיים / להחזיק את הראש מעל המים / לראות הכל, לעצום עיניים",
-		},
-	},
-	{
-		name: "ראש למעלה” (2025)",
-		artist: "טונה",
-		published_date: "2020s",
-		lyric_sample: {
-			hebrew:
-				"פתיחה: / לעולם לא להביט למטה / העולם הוא חבל דק מאוד / לנשום עמוק, להיות מי שאתה",
 		},
 	},
 ];

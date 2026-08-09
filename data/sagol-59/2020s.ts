@@ -1,10 +1,5 @@
 export const sagol592020s = [
 	{
-		name: "Big Ben",
-		artist: "סאגול 59 (Sagol 59 - חן רותם)",
-		published_date: "2020s",
-	},
-	{
 		name: "Judoka",
 		artist: "Sagol 59 (סגול 59)",
 		language: "Hebrew/Arabic",
@@ -19,10 +14,5 @@ export const sagol592020s = [
 			lyrics: "https://genius.com/Sagol-59-59-judoka-lyrics",
 			youtube: "https://www.youtube.com/watch?v=L2nTbpb2EK4",
 		},
-	},
-	{
-		name: "ועידת פסגה” (עם תאמר נפאר ושאנן סטריט)",
-		artist: "סגול 59",
-		published_date: "2020s",
 	},
 ];

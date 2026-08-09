@@ -1,7 +1,7 @@
 export const ravidplotnik2010s = [
 	{
 		name: "בור ועם הארץ",
-		artist: "רביד פלוטניק (נצ'י נצ')",
+		artist: "Ravid Plotnik (רביד פלוטניק)",
 		published_date: "2015",
 		lyric_sample: {
 			hebrew:
@@ -10,12 +10,12 @@ export const ravidplotnik2010s = [
 	},
 	{
 		name: "ג'רוזלם",
-		artist: "רביד פלוטניק (נצ'י נצ')",
+		artist: "Ravid Plotnik (רביד פלוטניק)",
 		published_date: "2015",
 	},
 	{
 		name: "כל הזמן הזה",
-		artist: "רביד פלוטניק (נצ'י נצ')",
+		artist: "Ravid Plotnik (רביד פלוטניק)",
 		published_date: "2015",
 		lyric_sample: {
 			hebrew: "וואלק אדם לאדם זאב",
@@ -23,12 +23,12 @@ export const ravidplotnik2010s = [
 	},
 	{
 		name: "מדינת משטרה",
-		artist: "רביד פלוטניק (נצ'י נצ')",
+		artist: "Ravid Plotnik (רביד פלוטניק)",
 		published_date: "2017",
 	},
 	{
 		name: "נתראה בגלגול הבא",
-		artist: "רביד פלוטניק (נצ'י נצ')",
+		artist: "Ravid Plotnik (רביד פלוטניק)",
 		published_date: "2017",
 		lyric_sample: {
 			hebrew:
@@ -40,9 +40,6 @@ export const ravidplotnik2010s = [
 		artist: "Ravid Plotnik (רביד פלוטניק)",
 		language: "Hebrew",
 		published_date: "2011",
-		links: {
-			youtube: "https://www.youtube.com/watch?v=MzK5J7HYF8E",
-		},
 	},
 	{
 		name: "שפל וגיאות (Shefel ve'Ge'ut / Ebb and Tide)",

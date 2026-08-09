@@ -10,9 +10,5 @@ export const eyalGolan2020s = [
 			english_translation:
 				"Oh my land, our heritage / Our spirit will not fall now / Around us iron of swords / And a dove will spread its wings / The hope of 2000 years / We will yet go out to sing in the streets",
 		},
-		links: {
-			youtube:
-				"https://www.youtube.com/results?search_query=eyal+golan+am+yisrael+chai",
-		},
 	},
 ];

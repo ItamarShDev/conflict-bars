@@ -9,14 +9,6 @@ export const shabakSamech2020s = [
 			english_translation:
 				"May we only hear good news, Amen. May we know better days than these, Amen.",
 		},
-		links: {
-			lyrics: "https://genius.com/Shabak-samech-amen-lyrics",
-		},
-	},
-	{
-		name: "המדינה בלהבות",
-		artist: "שב״ק ס׳",
-		published_date: "2020s",
 	},
 	{
 		name: "כולם עושים את זה (Kulam Osim Et Ze)",

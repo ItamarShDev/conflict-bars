@@ -1,6 +1,6 @@
 export const theShadow2000s = [
 	{
-		name: "בילדי (Biladi)",
+		name: "בילאדי (Biladi)",
 		artist: "Subliminal & The Shadow",
 		language: "Hebrew",
 		published_date: "2002-06-20",
@@ -17,7 +17,7 @@ export const theShadow2000s = [
 	},
 	{
 		name: "הציוני האחרון (Hazioni Ha'acharon)",
-		artist: "The Shadow",
+		artist: "The Shadow (הצל)",
 		language: "Hebrew",
 		published_date: "2008-01-01",
 		lyric_sample: {
@@ -31,23 +31,8 @@ export const theShadow2000s = [
 		},
 	},
 	{
-		name: "התקווה (Hatikva)",
-		artist: "Subliminal & The Shadow",
-		language: "Hebrew",
-		published_date: "2002-03-15",
-		lyric_sample: {
-			hebrew:
-				"אני ראיתי כמה הם הלכו, יותר מדי מהם לא חזרו... התקווה בראשנו, אהבה בנפשנו, החלום ברוחנו אז לעד.",
-			english_translation:
-				"I saw how many they went, too many of them did not return... The hope in our heads, the love in our souls, the dream in our spirits forever.",
-		},
-		links: {
-			lyrics: "https://genius.com/Subliminal-and-hatzel-hatikva-lyrics",
-		},
-	},
-	{
 		name: "לא שם זין",
-		artist: "הצל (סולו)",
+		artist: "The Shadow (הצל)",
 		published_date: "2007",
 		lyric_sample: {
 			hebrew:

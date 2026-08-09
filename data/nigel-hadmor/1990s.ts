@@ -9,9 +9,5 @@ export const nigelHadmor1990s = [
 			english_translation:
 				"Rabin fell, the land trembles, what happened to us, what is this conflict that never ends",
 		},
-		links: {
-			youtube:
-				"https://www.youtube.com/results?search_query=nigel+hadmor+rabin",
-		},
 	},
 ];

@@ -1,11 +1,7 @@
 export const hatikvah62010s = [
 	{
 		name: "Most Israeli (Hachi Yisraeli)",
-		artist: "Hatikvah 6",
+		artist: "Hatikvah 6 (התיכווה 6)",
 		published_date: "2015",
-		links: {
-			youtube:
-				"https://www.youtube.com/results?search_query=Hatikvah+6+Hachi+Yisraeli",
-		},
 	},
 ];

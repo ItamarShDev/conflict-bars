@@ -9,8 +9,5 @@ export const ortega2020s = [
 			english_translation:
 				"Collaborations with various artists, describes political and social situation",
 		},
-		links: {
-			youtube: "https://www.youtube.com/results?search_query=ortega+black+gold",
-		},
 	},
 ];

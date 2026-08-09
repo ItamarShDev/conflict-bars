@@ -10,15 +10,12 @@ export const tuna2010s = [
 			english_translation:
 				"The situation in the country is not good / Everyone is stressed, everyone is depressed / But we're still here, still alive.",
 		},
-		links: {
-			lyrics: "https://genius.com/Tuna-matzav-lyrics",
-		},
 	},
 	{
 		name: "Seret Aravi (סרט ערבי)",
 		artist: "Tuna (טונה)",
 		language: "Hebrew/Arabic",
-		published_date: "2015",
+		published_date: "2015-08-06",
 		lyric_sample: {
 			hebrew:
 				"יא איבני, יא באבה, יום באסאל, יום סבבה / חם כמו פינג׳אן שעל האש, יעני לבה",
@@ -40,13 +37,10 @@ export const tuna2010s = [
 			english_translation:
 				"Charity is not just money / Charity is being human / Charity is going back home.",
 		},
-		links: {
-			lyrics: "https://genius.com/Tuna-tzedaka-lyrics",
-		},
 	},
 	{
 		name: "גם זה יעבור",
-		artist: "טונה",
+		artist: "Tuna (טונה)",
 		published_date: "2015",
 		lyric_sample: {
 			hebrew: "וגם    שמע אולי מוקדם להתלכלך / חנוך רוזן ,סאדם חוסיין",
@@ -54,24 +48,15 @@ export const tuna2010s = [
 	},
 	{
 		name: 'י"א 2',
-		artist: "טונה",
+		artist: "Tuna (טונה)",
 		published_date: "2015",
 		lyric_sample: {
 			hebrew: "מסתובבות לך בראש כמו חיילות בעזריאלי",
 		},
 	},
 	{
-		name: "סרט ערבי",
-		artist: "טונה",
-		published_date: "2017",
-		lyric_sample: {
-			hebrew:
-				"ואללה כולם פה בסרט ערבי / ואללה כולם פה בסרט ערבי / ואללה כולם פה בסרט ערבי / I come in peace",
-		},
-	},
-	{
 		name: "רוק 30",
-		artist: "טונה",
+		artist: "Tuna (טונה)",
 		published_date: "2015",
 		lyric_sample: {
 			hebrew: "מסתובבות לך בראש כמו חיילות בעזריאלי",

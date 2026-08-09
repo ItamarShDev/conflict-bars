@@ -1,7 +1,7 @@
 export const dam2010s = [
 	{
 		name: "Ben Haana Wa Maana",
-		artist: "DAM (דאם) - Da Arabian MCs",
+		artist: "DAM (דאם)",
 		published_date: "2019",
 		lyric_sample: {
 			hebrew:
@@ -12,7 +12,7 @@ export const dam2010s = [
 	},
 	{
 		name: "Dabke on the Moon",
-		artist: "DAM (דאם) - Da Arabian MCs",
+		artist: "DAM (דאם)",
 		published_date: "2013",
 		lyric_sample: {
 			hebrew:
@@ -23,7 +23,7 @@ export const dam2010s = [
 	},
 	{
 		name: "Who You Are",
-		artist: "DAM (דאם) - Da Arabian MCs",
+		artist: "DAM (דאם)",
 		published_date: "2015",
 		lyric_sample: {
 			hebrew:
@@ -34,7 +34,7 @@ export const dam2010s = [
 	},
 	{
 		name: "Ana Mish Khain (I'm Not a Traitor / אנא מש ח'אין)",
-		artist: "DAM (דאם) - Da Arabian MCs",
+		artist: "DAM (דאם)",
 		language: "Arabic",
 		published_date: "2010",
 		lyric_sample: {
@@ -43,22 +43,16 @@ export const dam2010s = [
 			english_translation:
 				"We are from the Negev, we are from Jaffa / From Ein Hod, we are from Akko / From Nazareth, we are from Ramle.",
 		},
-		links: {
-			youtube: "https://www.youtube.com/watch?v=F0vXblLBWoQ",
-		},
 	},
 	{
 		name: "Risale min Zinzane (A Letter from the Cell / رسالة من زنزانة)",
-		artist: "DAM (דאם) - Da Arabian MCs",
+		artist: "DAM (דאם)",
 		language: "Arabic",
 		published_date: "2011",
-		links: {
-			youtube: "https://www.youtube.com/watch?v=1RPGQ3bWj2Y",
-		},
 	},
 	{
 		name: "Muwaten Mustahdaf (Targeted Citizen / מואטן מוסתהדף)",
-		artist: "DAM (דאם) - Da Arabian MCs",
+		artist: "DAM (דאם)",
 		language: "Arabic",
 		published_date: "2010",
 	},

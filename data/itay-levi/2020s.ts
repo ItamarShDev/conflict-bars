@@ -10,9 +10,5 @@ export const itayLevi2020s = [
 			english_translation:
 				"Only you saw me / in your heart / when you cried with me / the pain spilled / you wiped me / we went through everything and will go through this too / I have no other place",
 		},
-		links: {
-			youtube:
-				"https://www.youtube.com/results?search_query=itay+levi+ein+li+makom+acher",
-		},
 	},
 ];

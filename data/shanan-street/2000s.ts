@@ -9,9 +9,5 @@ export const shananStreet2000s = [
 			english_translation:
 				"Summit meeting between leaders, call for peace during the Second Intifada",
 		},
-		links: {
-			youtube:
-				"https://www.youtube.com/results?search_query=shanan+street+summit+meeting",
-		},
 	},
 ];

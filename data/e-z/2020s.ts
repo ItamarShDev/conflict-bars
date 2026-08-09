@@ -10,9 +10,5 @@ export const ez2020s = [
 			english_translation:
 				"My whole head is spinning, my country is under attack\nAnd a father who suddenly sees his daughter being kidnapped",
 		},
-		links: {
-			youtube:
-				"https://www.youtube.com/results?search_query=e-z+october+seventh",
-		},
 	},
 ];

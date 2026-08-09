@@ -9,9 +9,6 @@ export const noroz2020s = [
 			english_translation:
 				"Drill life, it's our way / Drill life, it's our voice.",
 		},
-		links: {
-			lyrics: "https://genius.com/Noroz-drill-life-lyrics",
-		},
 	},
 	{
 		name: "Street Vibes (ויברציות רחוב)",
@@ -22,9 +19,6 @@ export const noroz2020s = [
 			hebrew: "ויברציות רחוב, זה הקול שלנו / ויברציות רחוב, זה החיים שלנו",
 			english_translation:
 				"Street vibes, it's our voice / Street vibes, it's our life.",
-		},
-		links: {
-			lyrics: "https://genius.com/Noroz-street-vibes-lyrics",
 		},
 	},
 	{
@@ -37,13 +31,10 @@ export const noroz2020s = [
 			english_translation:
 				"Trap anthem, it's our way / Trap anthem, it's our voice.",
 		},
-		links: {
-			lyrics: "https://genius.com/Noroz-trap-anthem-lyrics",
-		},
 	},
 	{
 		name: "אנחנו מנצחים",
-		artist: "נורוז",
+		artist: "Noroz (נורוז)",
 		published_date: "2023",
 		lyric_sample: {
 			hebrew:

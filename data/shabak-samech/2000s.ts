@@ -1,7 +1,7 @@
 export const shabakSamech2000s = [
 	{
 		name: "C'naan 2000",
-		artist: 'שבק"ס (Shabak Samech)',
+		artist: "Shabak Samech (שבק ס)",
 		published_date: "2000",
 		lyric_sample: {
 			hebrew: "לא חשוב מה, לא חשוב מי / יהיה פה שלום בעזרת השם",
@@ -33,9 +33,6 @@ export const shabakSamech2000s = [
 				"הדרך ארוכה ומפותלת / אני נופל וקם, נופל וקם... אף פעם לא אפסיק ללכת",
 			english_translation:
 				"The road is long and winding / I fall and get up, fall and get up... I will never stop walking.",
-		},
-		links: {
-			lyrics: "https://genius.com/Shabak-samech-nofel-vekam-lyrics",
 		},
 	},
 ];

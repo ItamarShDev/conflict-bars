@@ -29,13 +29,8 @@ export const shabakSamech90s = [
 		},
 	},
 	{
-		name: "Shin Business",
-		artist: 'שבק"ס (Shabak Samech)',
-		published_date: "1995",
-	},
-	{
 		name: "יהיה פיצוץ",
-		artist: "שב\"ק ס'",
+		artist: "Shabak Samech (שבק ס)",
 		published_date: "1997",
 		lyric_sample: {
 			hebrew: "המדינה בלהבות ויש אש ברחובות / כי זה להיות או לא להיות במסיבה",

@@ -10,9 +10,5 @@ export const butzer2020s = [
 			english_translation:
 				"How long will we walk in the desert, holding on to the past / How long will we kill for a future that between herds is not unified.",
 		},
-		links: {
-			youtube:
-				"https://www.youtube.com/results?search_query=butzer+adarim+%D7%A2%D7%93%D7%A8%D7%99%D7%9D",
-		},
 	},
 ];

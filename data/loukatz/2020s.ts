@@ -1,7 +1,7 @@
 export const loukatz2020s = [
 	{
 		name: "מכתב לאמא",
-		artist: "איתי לוקץ'",
+		artist: "Loukatz (לוקץ')",
 		published_date: "2023",
 		lyric_sample: {
 			hebrew:

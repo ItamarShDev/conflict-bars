@@ -1,7 +1,7 @@
 export const saz2000s = [
 	{
 		name: "סאמיק יא סאז",
-		artist: "סאז (SAZ)",
+		artist: "Saz",
 		published_date: "2008",
 	},
 ];
