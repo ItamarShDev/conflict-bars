@@ -10,8 +10,6 @@ export const tamernafar2020s = [
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=X8NqDqcXFD4",
-			lyrics:
-				"https://songtexte.com/songtext/tamer-nafar/rock-it-like-a-palestinian-44f0c8cd.html",
 		},
 	},
 	{
