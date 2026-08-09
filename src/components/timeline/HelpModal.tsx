@@ -64,7 +64,7 @@ export function HelpModal({ translations, lang, className }: HelpModalProps) {
 						aria-labelledby={titleId}
 						aria-describedby={descriptionId}
 						dir={isRtl ? "rtl" : "ltr"}
-						className="glass-card relative z-10 max-h-[calc(100vh-2rem)] w-full max-w-xl overflow-y-auto border-2 border-(--color-control-border) p-5 sm:p-7 tape"
+						className="glass-card relative z-10 max-h-[calc(100vh-2rem)] w-full max-w-xl overflow-y-auto border-2 border-(--color-control-border) p-5 sm:p-7 no-scrollbar tape"
 					>
 						<div className="mb-4 flex items-center justify-between">
 							<h2
