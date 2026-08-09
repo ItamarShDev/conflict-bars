@@ -15,4 +15,19 @@ export const daboor2020s = [
 			youtube: "https://www.youtube.com/watch?v=FKvKnuvXUSU",
 		},
 	},
+	{
+		name: "Sheikh Jarrah (الشيخ جراح)",
+		artist: "Daboor (دابور)",
+		language: "Arabic",
+		published_date: "2021-05-11",
+		lyric_sample: {
+			hebrew: "في صوت رصاص زغرد في الشيخ جراح",
+			english_translation:
+				"There's a sound of gunfire ululating in Sheikh Jarrah.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=74H-dZP-4TY",
+			lyrics: "https://kalimat.anghami.com/lyrics/110002472",
+		},
+	},
 ];

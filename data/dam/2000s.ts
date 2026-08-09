@@ -65,4 +65,20 @@ export const dam2000s = [
 			youtube: "https://www.youtube.com/watch?v=GhmpxCWVMBM",
 		},
 	},
+	{
+		name: "Born Here (هون انولدت / כאן נולדתי)",
+		artist: "DAM (דאם)",
+		collaborators: ["Abeer al-Zinati (Sabreena da Witch)"],
+		language: "Arabic",
+		published_date: "2006",
+		lyric_sample: {
+			hebrew: "عنا الهدم بيوت زي الهمس تكون / كلما نضل بسكوت بدان الشعب بتفوت",
+			english_translation:
+				"Here, demolishing houses is like a whisper / as long as we stay silent it keeps passing through our people's ears.",
+		},
+		links: {
+			lyrics: "https://genius.com/Dam-born-here-lyrics",
+			song_info: "http://news.bbc.co.uk/2/hi/middle_east/6487833.stm",
+		},
+	},
 ];

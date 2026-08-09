@@ -109,4 +109,20 @@ export const hadagNahash2000s = [
 			youtube: "https://www.youtube.com/watch?v=JNwJFLkoX80",
 		},
 	},
+	{
+		name: "רק פה (Rak Po / Only Here)",
+		artist: "Hadag Nahash (הדג נחש)",
+		language: "Hebrew",
+		published_date: "2004-12",
+		lyric_sample: {
+			hebrew: 'ואם אתה בחו"ל נמצא ועל פיצוץ שומע? / אז רק לפה פתאום אני מתגעגע',
+			english_translation:
+				"And if you are abroad and hear about a bombing? / then suddenly it's only here that I long for.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=hsCjy0PiHqM",
+			song_info:
+				"https://www.haaretz.co.il/gallery/2004-06-03/ty-article/0000017f-db8a-db22-a17f-ffbb17350000",
+		},
+	},
 ];
