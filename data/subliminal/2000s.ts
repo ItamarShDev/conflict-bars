@@ -1,17 +1,5 @@
 export const subliminal2000s = [
 	{
-		name: "אינתיפאדה (Intifada)",
-		artist: "Subliminal (סאבלימינל)",
-		language: "Hebrew",
-		published_date: "2006-03-03",
-		lyric_sample: {
-			hebrew:
-				"קמתם עלינו, קיבלתם אינתיפאדה / ערבים ויהודים משחקים בקאזאזאדה / אחד דוקר, השני יורה, המצב רק מחמיר / אחים שלי היקרים, הגיע הזמן להחזיר.",
-			english_translation:
-				"You rose against us, you got an Intifada / Arabs and Jews are playing 'kazazada' (a clash) / One stabs, the other shoots, the situation only gets worse / My dear brothers, it's time to return fire.",
-		},
-	},
-	{
 		name: "ארץ אהובה (Eretz Ahuva / Beloved Land)",
 		artist: "Subliminal (סאבלימינל)",
 		language: "Hebrew",
@@ -194,8 +182,9 @@ export const subliminal2000s = [
 	{
 		name: "פרחים בקנה (Prachim BaKaneh / Flowers in the Cannon)",
 		artist: "Subliminal (סאבלימינל)",
+		collaborators: ["The Shadow (הצל)", "Tact Family (משפחת תאקט)"],
 		language: "Hebrew",
-		published_date: "2006-03-03",
+		published_date: "2003",
 		lyric_sample: {
 			hebrew:
 				"כי אם נניח את נשקנו, אחי, סופנו קרב / לכן נשיב במלחמה לכל אויב / אך כשתגיע עת השלום, נחיה פה בבטחה / נניח את נשקנו ונשיר למשפחה.",
@@ -203,6 +192,7 @@ export const subliminal2000s = [
 				"Because if we lay down our weapons, brother, our end is near / Therefore we will respond with war to every enemy / But when the time of peace arrives, we will live here safely / We will lay down our weapons and sing for the family.",
 		},
 		links: {
+			song_info: "https://he.wikipedia.org/wiki/פרחים_בקנה",
 			youtube: "https://www.youtube.com/watch?v=Mh94v1zosyg",
 		},
 	},

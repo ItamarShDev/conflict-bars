@@ -65,17 +65,6 @@ export const subliminal2020s = [
 		},
 	},
 	{
-		name: "פרחים בקנה + זזים עם הבאס (Prachim Bakane + Zazim Im Habass)",
-		artist: "Subliminal (סאבלימינל)",
-		language: "Hebrew",
-		published_date: "2023",
-		lyric_sample: {
-			hebrew: "רמיקס של שני שירים קלאסיים, על תקווה ודינמיקה",
-			english_translation:
-				"Remix of two classic songs, about hope and dynamics",
-		},
-	},
-	{
 		name: "שומרי הסף (Shomrei Hasaf / Guardians of the Threshold)",
 		artist: "Subliminal (סאבלימינל)",
 		language: "Hebrew",

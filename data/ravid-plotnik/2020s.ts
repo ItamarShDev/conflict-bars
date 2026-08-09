@@ -5,15 +5,19 @@ export const ravidPlotnik2020s = [
 		published_date: "2024",
 	},
 	{
-		name: "שגרה בזמן מלחמה (Routine During War)",
+		name: "שגרה בזמן מלחמה (Shigra BeZman Milchama / Routine During War)",
 		artist: "Ravid Plotnik (רביד פלוטניק)",
+		collaborators: ["Taboo Plus"],
 		language: "Hebrew",
-		published_date: "2025",
+		published_date: "2025-01-10",
 		lyric_sample: {
-			hebrew:
-				"שיר חדש מראשית 2025 שעוסק במציאות היומיומית תחת מלחמה, על חיים בתנאים חריגים",
+			hebrew: "מתוך האלבום 'הדרך לשביל הזהב'; עוסק במציאות היומיומית תחת מלחמה",
 			english_translation:
-				"New song from early 2025 dealing with daily reality under war, about living in extraordinary conditions",
+				"Track 11 on the album 'HaDerech LiShvil HaZahav'; on keeping a daily routine while the war goes on.",
+		},
+		links: {
+			song_info:
+				"https://www.albumoftheyear.org/album/1152483-ravid-plotnik--.php",
 		},
 	},
 ];

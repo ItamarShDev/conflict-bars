@@ -1,12 +1,16 @@
 export const dam2000s = [
 	{
-		name: "Dedication",
+		name: "Ihda' (اهداء / Dedication)",
 		artist: "DAM (דאם)",
-		published_date: "2006",
+		collaborators: ["Ibrahim Sakalla"],
+		language: "Arabic",
+		published_date: "2006-11",
 		lyric_sample: {
-			hebrew: "זה מוקדש לעמי, לאדמתי... לדם הפלסטיני שעדיין הולך בראש מורם.",
 			english_translation:
-				"This is dedicated to my people, to my land... To Palestinian blood which is still walking with its head held high.",
+				"Closing title track of DAM's debut album 'Ihda'' (2006), widely described as the first Palestinian hip-hop album.",
+		},
+		links: {
+			song_info: "https://en.wikipedia.org/wiki/Ihda%27",
 		},
 	},
 	{

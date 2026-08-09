@@ -62,12 +62,6 @@ export const artistPoliticalAffiliation: Record<
 		notes:
 			"Mix of satire and social commentary, often mocks political establishment.",
 	},
-	"Rabid Plotnik (רביד פלוטניק)": {
-		era: "2010s–present",
-		affiliation: "Center-left / Social critique",
-		notes:
-			"Touches on discrimination, everyday struggles, less explicitly partisan.",
-	},
 	"Jimbo J (ג'ימבו ג')": {
 		era: "2010s–present",
 		affiliation: "Left-leaning",
@@ -154,12 +148,6 @@ export const artistPoliticalAffiliation: Record<
 		affiliation: "Center-left / Cultural bridge",
 		notes:
 			"Musician and rapper known for blending Arabic and Hebrew music, promoting coexistence and cultural dialogue.",
-	},
-	"Yosef Dayan (יוסף דיין)": {
-		era: "2010s–present",
-		affiliation: "Left-leaning / Social critique",
-		notes:
-			"Rapper known for sharp social and political commentary, critiques of government and society.",
 	},
 	"Adi Ulmansky (עדי אולמנסקי)": {
 		era: "2000s–present",
@@ -251,23 +239,11 @@ export const artistPoliticalAffiliation: Record<
 		notes:
 			"Veteran rapper in Israeli hip-hop scene, known for collaborations and political commentary.",
 	},
-	"Hatikvah 6 (התיכווה 6)": {
-		era: "2020s–present",
-		affiliation: "Right-leaning / Nationalist",
+	"Hatikva 6 (התקווה 6)": {
+		era: "2003–present",
+		affiliation: "Center / Patriotic mainstream",
 		notes:
-			"Emerged after October 7, 2023; known for patriotic and militaristic themes celebrating Israeli resilience.",
-	},
-	"Maor Askenazi (מאור אשכנזי)": {
-		era: "2020s–present",
-		affiliation: "Center / War response",
-		notes:
-			"Collaborated with Nova massacre survivor Noam Cohen; songs about trauma and survival after October 7.",
-	},
-	"Hanan Ben Ari (חנן בן ארי)": {
-		era: "2020s–present",
-		affiliation: "Right-leaning / Nationalist",
-		notes:
-			"Singer-rapper known for patriotic songs addressing Israel directly; prominent after October 7.",
+			"Reggae and hip-hop band from Ramat HaSharon; released tributes to IDF combat soldiers in 2021 and to reservists during the 2023-2024 war.",
 	},
 	"Odeya (אודיה)": {
 		era: "2020s–present",
@@ -275,29 +251,11 @@ export const artistPoliticalAffiliation: Record<
 		notes:
 			"Rapper responding to October 7 events; inspired by classic war songs, documents contemporary trauma.",
 	},
-	"Eyal Golan (אייל גולן)": {
-		era: "2020s–present",
-		affiliation: "Right-leaning / Nationalist",
-		notes:
-			"Singer-rapper known for patriotic themes; 'Am Yisrael Chai' became one of most popular post-October 7 songs.",
-	},
-	"Aviv Gefen (אביב גפן)": {
-		era: "2020s–present",
+	"Izzy (איזי)": {
+		era: "2000s–present",
 		affiliation: "Center / War response",
 		notes:
-			"Collaborated with Gaza hostage survivor Mia Limberg; songs about captivity and return.",
-	},
-	"Itay Levi (איתי לוי)": {
-		era: "2020s–present",
-		affiliation: "Center / War response",
-		notes:
-			"Singer-rapper expressing emotional responses to October 7; songs about national trauma and resilience.",
-	},
-	"E-Z": {
-		era: "2020s–present",
-		affiliation: "Center / War response",
-		notes:
-			"Rapper responding to October 7 events; created memorial songs for victims.",
+			"Erez Sharon; veteran rapper whose catalogue mixes protest and humour. Released 'Shiva BeOktober' four days after the October 7 attack and co-wrote 'Choref 23' with Odeya.",
 	},
 	"Benia Bar Avi (בניה בר אבי)": {
 		era: "2020s–present",
@@ -317,11 +275,29 @@ export const artistPoliticalAffiliation: Record<
 		notes:
 			"Palestinian-Israeli rapper from Jaffa; multilingual artist addressing gentrification, housing rights, and urban resistance.",
 	},
-	"IZ (איזי)": {
-		era: "2020s–present",
-		affiliation: "Center / War response",
+	Saz: {
+		era: "2000s–present",
+		affiliation: "Palestinian / Coexistence advocacy",
 		notes:
-			"Rapper responding to October 7 events; created memorial songs for victims.",
+			"Sameh Zakout, Palestinian rapper and actor from Ramla; themes of Palestinian and Arab identity with calls for a peaceful resolution. Half of the Israeli-Palestinian duo Dugri with Uriya Rosenman.",
+	},
+	"Shai 360 (שי 360)": {
+		era: "2000s–present",
+		affiliation: "Right-leaning / Pro-Israel advocacy",
+		notes:
+			"Shai Haddad; former member of the Tact Family label. Released English-language advocacy tracks defending Israel's international image, including 'United' (2010, on the Gaza flotilla) and the album 'Shalom Haters'.",
+	},
+	"Boikutt / Muqata'a (مقاطعة)": {
+		era: "2000s–present",
+		affiliation: "Palestinian left / Anti-occupation",
+		notes:
+			"Ramallah-based producer and rapper, co-founder of Ramallah Underground; sample-based work on occupation, erasure and Palestinian archives.",
+	},
+	"Stormtrap / Asifeh (عاصفة)": {
+		era: "2000s–present",
+		affiliation: "Palestinian left / Anti-occupation",
+		notes:
+			"Ramallah Underground co-founder; electronic and hip-hop work on life under occupation and in the West Bank cities.",
 	},
 	"Hype Crew (היפ קרו)": {
 		era: "2020s–present",
