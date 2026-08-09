@@ -1,36 +1,33 @@
 export const hatikvah62020s = [
 	{
-		name: "Hymn of the Warrior (Hamnon Halochem)",
-		artist: "Hatikvah 6",
-		published_date: "2021",
-		links: {
-			youtube:
-				"https://www.youtube.com/results?search_query=Hatikvah+6+Hamnon+Halochem",
+		name: "המנון הלוחם (Himnon HaLochem / The Warrior's Anthem)",
+		artist: "Hatikva 6 (התקווה 6)",
+		language: "Hebrew",
+		published_date: "2021-04",
+		lyric_sample: {
+			english_translation:
+				"Tribute to IDF combat soldiers; the video was filmed with cadets of the Bahad 1 officers' school.",
 		},
-	},
-	{
-		name: "Super Heroes (Giborei Al)",
-		artist: "Hatikvah 6",
-		published_date: "2023",
 		links: {
-			youtube:
-				"https://www.youtube.com/results?search_query=Hatikvah+6+Super+Heroes",
+			lyrics: "https://genius.com/Hatikva-6-6-himnon-halochem-lyrics",
+			youtube: "https://www.youtube.com/watch?v=V5SpIgH7VHI",
+			song_info: "https://he.wikipedia.org/wiki/התקווה_6",
 		},
 	},
 	{
 		name: "גיבורי על (Giborei Al / Superheroes)",
-		artist: "Hatikvah 6 (התיכווה 6)",
+		artist: "Hatikva 6 (התקווה 6)",
 		language: "Hebrew",
-		published_date: "2023",
+		published_date: "2024-02-19",
 		lyric_sample: {
 			hebrew:
-				"כולנו נראים רגילים אבל / אנחנו עם של גיבורי-על / בכל אחד מאתנו מתחבא חייל / מוכן להציל את העולם",
+				"השכן מלמעלה קבלן עבודות אבל חודש כבר במילואים / אחיה איש הייטק בכיר עכשיו הוא צלף על גגות ברצועה",
 			english_translation:
-				"We all look ordinary but / we are a nation of superheroes / in each of us hides a soldier / ready to save the world",
+				"The neighbour upstairs is a contractor but he's been on reserve duty for a month / Her brother, a senior tech worker, is now a sniper on rooftops in Gaza",
 		},
 		links: {
-			youtube:
-				"https://www.youtube.com/results?search_query=hatikvah+6+superheroes",
+			youtube: "https://www.youtube.com/watch?v=aYGd4HOend4",
+			song_info: "https://he.wikipedia.org/wiki/גיבורי_על_(שיר)",
 		},
 	},
 ];

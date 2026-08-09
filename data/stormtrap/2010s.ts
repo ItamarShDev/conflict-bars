@@ -5,8 +5,7 @@ export const stormtrap2010s = [
 		language: "Arabic",
 		published_date: "2010",
 		links: {
-			youtube:
-				"https://www.youtube.com/results?search_query=stormtrap+asifeh+what+happened+yesterday",
+			youtube: "https://www.youtube.com/watch?v=ZAXczID4q4s",
 		},
 	},
 ];

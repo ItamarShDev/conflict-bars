@@ -1,17 +1,13 @@
 export const sagol592020s = [
 	{
-		name: "Big Ben",
-		artist: "סאגול 59 (Sagol 59 - חן רותם)",
-		published_date: "2020s",
-	},
-	{
 		name: "Judoka",
 		artist: "Sagol 59 (סגול 59)",
+		collaborators: ["Hasan M.C. (חסן M.C.)"],
 		language: "Hebrew/Arabic",
-		published_date: "2021",
+		published_date: "2022-01",
 		lyric_sample: {
 			hebrew:
-				'"Our fathers taught us, thousands of years ago, that when God created man, he created him as everybody\'s neighbor. Neighbor is not a geographic term. It is a moral concept" … סגול וחסן אמ.סי … בלוד … ירושלים',
+				"“Our fathers taught us, thousands of years ago, that when God created man, he created him as everybody’s neighbor. Neighbor is not a geographic term. It is a moral concept” … סגול וחסן אמ.סי … בלוד … ירושלים",
 			english_translation:
 				"“Our fathers taught us… when God created man, he created him as everybody’s neighbor. Neighbor is not a geographic term, it is a moral concept” … Sagol and Hasan M.C. … in Lod … Jerusalem.",
 		},
@@ -19,10 +15,5 @@ export const sagol592020s = [
 			lyrics: "https://genius.com/Sagol-59-59-judoka-lyrics",
 			youtube: "https://www.youtube.com/watch?v=L2nTbpb2EK4",
 		},
-	},
-	{
-		name: "ועידת פסגה” (עם תאמר נפאר ושאנן סטריט)",
-		artist: "סגול 59",
-		published_date: "2020s",
 	},
 ];

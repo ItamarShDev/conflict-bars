@@ -1,16 +1,16 @@
-export const tamernafar2000s = [
+export const tamerNafar2000s = [
 	{
-		name: "Innocent Criminals (Posheem Hapim me Peshaa)",
-		artist: "Tamer Nafar",
-		published_date: "2000",
+		name: "אמא אל תבכי (Ima Al Tivki / Mom, Don't Cry)",
+		artist: "Tamer Nafar (תאמר נפאר)",
+		collaborators: ["TN Team", "Cholo (צ'ולו)"],
+		language: "Hebrew",
+		published_date: "2001",
 		lyric_sample: {
-			hebrew: "פושעים חפים מפשע - שיר על הגזענות והאפליה שחווים ערבים בישראל",
 			english_translation:
-				"Innocent Criminals - a song about racism and discrimination faced by Arabs in Israel",
+				"Track 11 of the Mad Man label compilation 'Mikrofon LaMaximum 2', released during the Second Intifada; one of the earliest Hebrew-language recordings by Tamer Nafar's TN Team, before DAM.",
 		},
 		links: {
-			lyrics: "https://lyricstranslate.com/en/dam-lyrics.html",
-			youtube: "https://www.youtube.com/watch?v=XcC_8nVBCGQ",
+			song_info: "https://he.wikipedia.org/wiki/צ'ולו",
 		},
 	},
 ];

@@ -1,65 +1,66 @@
 export const dam2010s = [
 	{
-		name: "Ben Haana Wa Maana",
-		artist: "DAM (דאם) - Da Arabian MCs",
-		published_date: "2019",
-		lyric_sample: {
-			hebrew:
-				"מיליארדים של דולרים שהולכים על לפלג את העולם הערבי / כל פעם שמישהו מנסה לעשות שינוי, הוא נענש.",
-			english_translation:
-				"Billions of dollars that go into dividing the Arab world / Whenever anyone tries to make a change, they're punished.",
-		},
-	},
-	{
-		name: "Dabke on the Moon",
-		artist: "DAM (דאם) - Da Arabian MCs",
+		name: "Dabke on the Moon (ندبك عالقمر)",
+		artist: "DAM (דאם)",
+		language: "Arabic",
 		published_date: "2013",
 		lyric_sample: {
 			hebrew:
-				"בטח שאנחנו רוצים לעלות לירח, אבל אי אפשר עם הכיבוש. / ומי אחראי לכיבוש הזה גם כן? אמריקה.",
+				"جهز الصحن الفضائي / كاسيت علادلعونه / الكل يوقف بسطر / ويدبك على القمر",
 			english_translation:
-				"Of course we want to go to the moon, but we cannot do it with the occupation. / And who's responsible for the occupation as well? America.",
+				"Prepare the spaceship / and the Ala Dal'ona song / everyone stand in one line / and let's dance dabke on the moon.",
+		},
+		links: {
+			lyrics: "https://genius.com/Dam-debka-on-the-moon-lyrics",
+			youtube: "https://www.youtube.com/watch?v=iskU73JvmZ0",
 		},
 	},
 	{
-		name: "Who You Are",
-		artist: "DAM (דאם) - Da Arabian MCs",
-		published_date: "2015",
-		lyric_sample: {
-			hebrew:
-				"אני הרווקה, אני העקרה, אני הגרושה / בצל של גבר, אבל לא בצל של גדר.",
-			english_translation:
-				"I am the spinster, I am the infertile, I am the divorced / In the shadow of a man, but not the shadow of a wall.",
-		},
-	},
-	{
-		name: "Ana Mish Khain (I'm Not a Traitor / אנא מש ח'אין)",
-		artist: "DAM (דאם) - Da Arabian MCs",
+		name: "Ana Mish Khain (انا مش خاين / I'm Not a Traitor)",
+		artist: "DAM (דאם)",
 		language: "Arabic",
 		published_date: "2010",
 		lyric_sample: {
 			hebrew:
-				"אנחנו מהנגב, אנחנו מיפו / מעין חוד, אנחנו מעכו / מנצרת, אנחנו מרמלה",
+				"انا من النقب انا من يافا / من عين حوض انا من عكا / من الجواريش انا من الناصره / انا من الرمله",
 			english_translation:
-				"We are from the Negev, we are from Jaffa / From Ein Hod, we are from Akko / From Nazareth, we are from Ramle.",
+				"I'm from the Negev, I'm from Jaffa / from Ein Hod, I'm from Acre / from Jawarish, I'm from Nazareth / I'm from Ramla.",
 		},
 		links: {
-			youtube: "https://www.youtube.com/watch?v=F0vXblLBWoQ",
+			lyrics: "https://genius.com/Dam-im-not-a-traitor-lyrics",
+			youtube: "https://www.youtube.com/watch?v=gH0IGvzH5G8",
 		},
 	},
 	{
-		name: "Risale min Zinzane (A Letter from the Cell / رسالة من زنزانة)",
-		artist: "DAM (דאם) - Da Arabian MCs",
+		name: "Risale min Zinzane (رسالة من زنزانة / A Letter from the Cell)",
+		artist: "DAM (דאם)",
 		language: "Arabic",
 		published_date: "2011",
+		lyric_sample: {
+			hebrew:
+				"لا تبكي يما خسارة على دموعك لا تبكي يما / مطر دموعك بيطفي النار الي فيا",
+			english_translation:
+				"Don't cry, mother, your tears are too precious, don't cry / the rain of your tears puts out the fire inside me.",
+		},
 		links: {
-			youtube: "https://www.youtube.com/watch?v=1RPGQ3bWj2Y",
+			lyrics: "https://genius.com/Dam-a-letter-from-prison-lyrics",
+			youtube: "https://www.youtube.com/watch?v=R6Kq-NeHqlE",
 		},
 	},
 	{
-		name: "Muwaten Mustahdaf (Targeted Citizen / מואטן מוסתהדף)",
-		artist: "DAM (דאם) - Da Arabian MCs",
+		name: "Muwaten Mustahdaf (مواطن مستهدف / Targeted Citizen)",
+		artist: "DAM (דאם)",
 		language: "Arabic",
 		published_date: "2010",
+		lyric_sample: {
+			hebrew:
+				"رحت عالمقابلة، قالولي: أسمك؟ قلت: محمود / قالولي: غيّرو لأشي مقبول، قلتلهم: مرفوض / قالولي: وأنت كمان مرفوض",
+			english_translation:
+				"I went to the interview, they asked my name, I said Mahmoud / they said change it to something acceptable, I said refused / they said then you are refused too.",
+		},
+		links: {
+			lyrics: "https://genius.com/Dam-muwaten-mustahdaf-lyrics",
+			youtube: "https://www.youtube.com/watch?v=j8AsLBHwNsE",
+		},
 	},
 ];

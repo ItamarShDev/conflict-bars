@@ -11,8 +11,7 @@ export const beniaBarAvi2020s = [
 				"The prophets envisioned something different for you, someone fell asleep on watch, where is the dream, there is no truth and no peace, there is no justice either, only a crack",
 		},
 		links: {
-			youtube:
-				"https://www.youtube.com/results?search_query=benia+bar+avi+from+river+to+sea",
+			youtube: "https://www.youtube.com/watch?v=VONgC529Wz8",
 		},
 	},
 ];

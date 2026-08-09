@@ -11,6 +11,7 @@ export const tuna2020s = [
 		},
 		links: {
 			lyrics: "https://genius.com/Tuna-kol-hakohavim-lyrics",
+			youtube: "https://www.youtube.com/watch?v=doYvXHat8gU",
 		},
 	},
 	{
@@ -26,6 +27,7 @@ export const tuna2020s = [
 		},
 		links: {
 			lyrics: "https://genius.com/Tuna-rosh-lemala-lyrics",
+			youtube: "https://www.youtube.com/watch?v=Vjusx05G9sI",
 		},
 	},
 	{
@@ -40,34 +42,37 @@ export const tuna2020s = [
 				"Half the city is freaking out that they’re one second from dying\nA crowd of people outside — they’re not fans, just the product of tyrants’ work",
 		},
 		links: {
+			youtube: "https://www.youtube.com/watch?v=qd1VGjkJcTY",
 			lyrics: "https://genius.com/Tuna-shuvo-shel-mordechai-lyrics",
 		},
 	},
 	{
 		name: "הטוב, הרע ואחותך",
-		artist: "טונה",
+		artist: "Tuna (טונה)",
 		published_date: "2021",
 		lyric_sample: {
 			hebrew:
 				"אווירת דם, אווירת דמשק / זה לא שלפני זה קודם היה לי / בפרק הקודם שדדתי בנק בשביל קניות / כדלקמן, זו מלחמה",
 		},
-	},
-	{
-		name: "מלאכים",
-		artist: "טונה",
-		published_date: "2024",
-		lyric_sample: {
-			hebrew:
-				"אין בכלל מלאכים בשמיים / אני כאן איתך, ממש בינתיים / להחזיק את הראש מעל המים / לראות הכל, לעצום עיניים",
+		links: {
+			lyrics: "https://genius.com/Tuna-hatov-hara-veachotcha-lyrics",
+			youtube: "https://www.youtube.com/watch?v=zI_AdTKsIx0",
 		},
 	},
 	{
-		name: "ראש למעלה” (2025)",
-		artist: "טונה",
-		published_date: "2020s",
+		name: "בין העיר לפרדס (Bein Ha'ir LaPardes / Between the City and the Orchard)",
+		artist: "Tuna (טונה)",
+		language: "Hebrew",
+		published_date: "2024-03-29",
 		lyric_sample: {
 			hebrew:
-				"פתיחה: / לעולם לא להביט למטה / העולם הוא חבל דק מאוד / לנשום עמוק, להיות מי שאתה",
+				"צה״ל נכנס לעזה, נסעתי קצת לאבא / על רקע צ׳קלקה פקה פקה, מד״א, זק״א / אז אין מקום אחד כרגע אין מקום בטוח",
+			english_translation:
+				"The IDF went into Gaza, I drove over to my dad's / Sirens in the background, MDA, ZAKA / So there is no single place right now, no safe place.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=R9cVn4bMjIk",
+			lyrics: "https://vaadhavibe.bandcamp.com/track/--76",
 		},
 	},
 ];

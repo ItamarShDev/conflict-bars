@@ -1,107 +1,68 @@
 export const dam2000s = [
 	{
-		name: "Dedication",
-		artist: "DAM (דאם) - Da Arabian MCs",
-		published_date: "2006",
-		lyric_sample: {
-			hebrew: "זה מוקדש לעמי, לאדמתי... לדם הפלסטיני שעדיין הולך בראש מורם.",
-			english_translation:
-				"This is dedicated to my people, to my land... To Palestinian blood which is still walking with its head held high.",
-		},
-	},
-	{
-		name: "Mwallon (מוואלון)",
+		name: "Ihda' (اهداء / Dedication)",
 		artist: "DAM (דאם)",
+		collaborators: ["Ibrahim Sakalla"],
 		language: "Arabic",
-		published_date: "2005",
+		published_date: "2006-11",
 		lyric_sample: {
 			hebrew:
-				"מוואלון, זה שיר של המחוקים / מוואלון, זה קול של הדיכוי / מוואלון, זה אנחנו",
+				"مهدي لشعبي لأرضي لوطني / للدم الفلسطيني العربي / مرفوع الهامة يمشي / هادا البيت البيت البيت",
 			english_translation:
-				"Mwallon, it's a song of the erased / Mwallon, it's the voice of oppression / Mwallon, it's us.",
+				"Dedicated to my people, my land, my homeland / to Palestinian Arab blood / walking with its head held high / this house, this house, this house.",
 		},
 		links: {
-			lyrics: "https://genius.com/DAM-mwallon-lyrics",
+			lyrics: "https://genius.com/Dam-dedication-lyrics",
+			youtube: "https://www.youtube.com/watch?v=PQrQMOZI9uI",
+			song_info: "https://en.wikipedia.org/wiki/Ihda%27",
 		},
 	},
 	{
-		name: "Occupation (כיבוש)",
+		name: "Who's the Terrorist? (مين إرهابي / מי הטרוריסט?)",
 		artist: "DAM (דאם)",
-		language: "Arabic/Hebrew",
-		published_date: "2003",
-		lyric_sample: {
-			hebrew: "כיבוש, זה לא רק מילה / כיבוש זה חיים של מיליונים / כיבוש זה הכל",
-			english_translation:
-				"Occupation, it's not just a word / Occupation is the life of millions / Occupation is everything.",
-		},
-		links: {
-			lyrics: "https://genius.com/DAM-occupation-lyrics",
-		},
-	},
-	{
-		name: "Who's the Terrorist? (מי הטרוריסט?)",
-		artist: "DAM (דאם)",
-		language: "Arabic/Hebrew",
+		language: "Arabic",
 		published_date: "2001",
 		lyric_sample: {
 			hebrew:
-				"מי טרוריסט? אני טרוריסט? איך אני טרוריסט כשאני חי בארצי? / לקחתם כל מה ששייך לי בזמן שאני חי במולדתי.",
+				"مين أرهابي؟ أنا أرهابي؟ / كيف أرهابي وانا عايش ببلادي! / مين أرهابي؟ أنت أرهابي / ماكلني وانا عايش ببلادي!",
 			english_translation:
-				"Who's a terrorist? I'm a terrorist? How am I a terrorist while I live in my country? / You've taken everything I own while I'm living in my homeland.",
+				"Who is a terrorist? I am a terrorist? / How can I be a terrorist if I live in my homeland? / Who is a terrorist? You are a terrorist / You have taken everything I own in my land.",
 		},
 		links: {
-			lyrics: "https://genius.com/DAM-whos-the-terrorist-lyrics",
+			lyrics: "https://genius.com/Dam-whos-the-terrorist-lyrics",
 			youtube: "https://www.youtube.com/watch?v=OgSVXjNLFgo",
 		},
 	},
 	{
-		name: 'מי ארהבי?" (מי טרוריסט?)',
-		artist: "דאם (DAM)",
-		published_date: "2001",
-		lyric_sample: {
-			hebrew:
-				"מי טרוריסט? אני טרוריסט? איך אני טרוריסט כשאני חי בארצי? / לקחתם כל מה ששייך לי בזמן שאני חי במולדתי.",
-			english_translation:
-				"Who's a terrorist? I'm a terrorist? How am I a terrorist while I live in my country? / You've taken everything I own while I'm living in my homeland.",
-		},
-	},
-	{
-		name: "נולדתי פה",
-		artist: "דאם (DAM)",
-		published_date: "2004",
-		lyric_sample: {
-			hebrew: "נולדתי פה, סבא שלי נולד פה / וכאן הרסתם לנו את הבתים במו ידיכם.",
-			english_translation:
-				"I was born here, my grandfather was born here / And here you destroyed our houses with your very hands.",
-		},
-	},
-	{
-		name: "Innocent Criminals (Posheem Hapim me Peshaa)",
+		name: "Innocent Criminals (פושעים חפים מפשע)",
 		artist: "DAM (דאם)",
-		language: "Arabic/Hebrew",
+		language: "Hebrew",
 		published_date: "2000",
 		lyric_sample: {
 			hebrew:
-				"כשיהודים מפגינים, השוטרים משתמשים באלות / כשערבים מפגינים, השוטרים לוקחים את נשמתם",
+				"האחרים מפגינים השוטרים לוקחים ביד אלות / הערבים מפגינים השוטרים לוקחים ת'נפשות",
 			english_translation:
-				"When Jews protest, the police use batons / When Arabs protest, the police take their lives.",
+				"When others protest the police pick up batons / when Arabs protest the police take their souls.",
 		},
 		links: {
-			youtube: "https://www.youtube.com/watch?v=XcC_8nVBCGQ",
+			lyrics: "https://genius.com/Dam-poshim-hapim-mipesha-lyrics",
+			youtube: "https://www.youtube.com/watch?v=aA_Lu_NkojE",
 		},
 	},
 	{
-		name: "Mali Huriye (I Don't Have Freedom)",
-		artist: "DAM (דאם) - Da Arabian MCs",
+		name: "Mali Huriye (ما إلي حرية / I Don't Have Freedom)",
+		artist: "DAM (דאם)",
 		language: "Arabic",
 		published_date: "2006",
 		lyric_sample: {
-			hebrew: "למה כל ילדי העולם חופשיים ולא אנחנו?",
+			hebrew:
+				"وين ما اروح باشوف حدود ساجنه الأنسانيه / ليه أطفال العالم حره وأنا ما الي حريه؟",
 			english_translation:
-				"Why are all the children of the world free but not us?",
+				"Wherever I go I see borders imprisoning humanity / why are the world's children free and I have no freedom?",
 		},
 		links: {
-			youtube: "https://www.youtube.com/watch?v=KhGnCaehFwU",
+			lyrics: "https://genius.com/Dam-i-dont-have-freedom-lyrics",
+			youtube: "https://www.youtube.com/watch?v=GhmpxCWVMBM",
 		},
 	},
 ];

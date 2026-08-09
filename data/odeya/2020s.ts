@@ -1,17 +1,19 @@
 export const odeya2020s = [
 	{
-		name: "חורף 23 (Choref 23 / The Winter of 23)",
+		name: "חורף 23 (Choref 23 / Winter of 23)",
 		artist: "Odeya (אודיה)",
+		collaborators: ["Izzy (איזי)"],
 		language: "Hebrew",
-		published_date: "2023",
+		published_date: "2023-10-22",
 		lyric_sample: {
 			hebrew:
-				"בהשראת השיר הקלאסי 'חורף 73' על מלחמת יום הכיפורים, מספר את סיפור החורף של 2023",
+				"שמישהו למעלה נרדם בשמירה / ואני שאלתי מי בכלל דואג לחיילים / לצבא הקדוש למלאכים של הנובה",
 			english_translation:
-				"Inspired by the classic song 'Winter 73' about the Yom Kippur War, tells the story of winter 2023",
+				"That someone up above fell asleep on watch / And I asked who even cares about the soldiers / About the holy army, about the angels of the Nova.",
 		},
 		links: {
-			youtube: "https://www.youtube.com/results?search_query=odeya+choref+23",
+			youtube: "https://www.youtube.com/watch?v=opz9Kn2i8Fs",
+			song_info: "https://he.wikipedia.org/wiki/חורף_23",
 		},
 	},
 ];

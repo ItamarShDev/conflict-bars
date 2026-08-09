@@ -101,47 +101,45 @@ export const YearSection = forwardRef<HTMLDivElement, YearSectionProps>(
 					</div>
 				</div>
 
-				{conflict ? (
-					<div
-						className={`flex flex-col ${rowDirection} items-start gap-6 md:gap-8`}
-					>
-						{/* Left songs */}
-						<div className="order-2 flex min-w-0 flex-1 flex-col gap-4 md:order-1 md:gap-6">
-							<SongStack
-								songs={leftSongs}
-								lang={lang}
-								highlightTerm={highlightTerm}
-							/>
-						</div>
+				<div
+					className={`flex flex-col ${rowDirection} items-start gap-6 md:gap-8`}
+				>
+					{/* Left songs */}
+					<div className="order-2 flex min-w-0 flex-1 flex-col gap-4 md:order-1 md:gap-6">
+						<SongStack
+							songs={leftSongs}
+							lang={lang}
+							highlightTerm={highlightTerm}
+						/>
+					</div>
 
-						{/* Conflict + center/unknown */}
-						<div className="order-1 flex min-w-0 flex-1 flex-col gap-4 md:order-2 md:gap-6">
+					{/* Conflict + center/unknown */}
+					<div className="order-1 flex min-w-0 flex-1 flex-col gap-4 md:order-2 md:gap-6">
+						{conflict ? (
 							<div className="md:-rotate-1">
 								<ConflictEntry conflict={conflict} lang={lang} />
 							</div>
-							<SongStack
-								songs={centerSongs}
-								lang={lang}
-								highlightTerm={highlightTerm}
-							/>
-						</div>
+						) : (
+							<p className="text-center text-xs font-black uppercase tracking-widest text-(--color-muted-foreground)">
+								{t.timeTravel.noConflict}
+							</p>
+						)}
+						<SongStack
+							songs={centerSongs}
+							lang={lang}
+							highlightTerm={highlightTerm}
+						/>
+					</div>
 
-						{/* Right songs */}
-						<div className="order-3 flex min-w-0 flex-1 flex-col gap-4 md:gap-6">
-							<SongStack
-								songs={rightSongs}
-								lang={lang}
-								highlightTerm={highlightTerm}
-							/>
-						</div>
+					{/* Right songs */}
+					<div className="order-3 flex min-w-0 flex-1 flex-col gap-4 md:gap-6">
+						<SongStack
+							songs={rightSongs}
+							lang={lang}
+							highlightTerm={highlightTerm}
+						/>
 					</div>
-				) : (
-					<div className="glass-card flex min-h-[12rem] items-center justify-center p-6 text-center -rotate-1 tape">
-						<p className="text-sm font-black uppercase tracking-widest text-(--color-muted-foreground)">
-							{t.timeTravel.noConflict}
-						</p>
-					</div>
-				)}
+				</div>
 			</section>
 		);
 	},

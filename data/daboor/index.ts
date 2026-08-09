@@ -1,3 +1,3 @@
-import { daboor2010s } from "./2010s";
+import { daboor2020s } from "./2020s";
 
-export const daboorSongs = [...daboor2010s];
+export const daboorSongs = [...daboor2020s];

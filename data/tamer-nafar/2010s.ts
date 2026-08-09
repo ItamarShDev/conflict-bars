@@ -5,7 +5,7 @@ export const tamerNafar2010s = [
 		language: "Arabic/Hebrew",
 		published_date: "2013",
 		links: {
-			youtube: "https://www.youtube.com/watch?v=W0s7pXjIFkY",
+			youtube: "https://www.youtube.com/watch?v=WjVoyfCkzvA",
 		},
 	},
 ];

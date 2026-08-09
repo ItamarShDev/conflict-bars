@@ -4,8 +4,7 @@ export const saz2020s = [
 		artist: "Saz",
 		published_date: "2021",
 		links: {
-			youtube:
-				"https://www.youtube.com/results?search_query=Saz+Uriya+Rosenman+Dugri",
+			youtube: "https://www.youtube.com/watch?v=vuUxnfL9I_Y",
 		},
 	},
 ];

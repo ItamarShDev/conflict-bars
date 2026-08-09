@@ -10,13 +10,8 @@ export const shabakSamech2020s = [
 				"May we only hear good news, Amen. May we know better days than these, Amen.",
 		},
 		links: {
-			lyrics: "https://genius.com/Shabak-samech-amen-lyrics",
+			youtube: "https://www.youtube.com/watch?v=XjvxMcZwmG4",
 		},
-	},
-	{
-		name: "המדינה בלהבות",
-		artist: "שב״ק ס׳",
-		published_date: "2020s",
 	},
 	{
 		name: "כולם עושים את זה (Kulam Osim Et Ze)",
@@ -30,6 +25,7 @@ export const shabakSamech2020s = [
 				"If the head of the government is a thief, what will the tail say? The rabbi is also involved, the whole court is behind him.",
 		},
 		links: {
+			youtube: "https://www.youtube.com/watch?v=SnGP2Qx3ddg",
 			lyrics: "https://genius.com/Shabak-samech-koolam-osim-et-ze-lyrics",
 		},
 	},

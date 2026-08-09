@@ -62,12 +62,6 @@ export const artistPoliticalAffiliation: Record<
 		notes:
 			"Mix of satire and social commentary, often mocks political establishment.",
 	},
-	"Rabid Plotnik (רביד פלוטניק)": {
-		era: "2010s–present",
-		affiliation: "Center-left / Social critique",
-		notes:
-			"Touches on discrimination, everyday struggles, less explicitly partisan.",
-	},
 	"Jimbo J (ג'ימבו ג')": {
 		era: "2010s–present",
 		affiliation: "Left-leaning",
@@ -96,11 +90,6 @@ export const artistPoliticalAffiliation: Record<
 		affiliation: "Apolitical / Satirical",
 		notes: "Often playful and ironic, not strongly political.",
 	},
-	"Noroz (נורוז)": {
-		era: "2020s–present",
-		affiliation: "Apolitical / Street culture",
-		notes: "Focuses on drill/trap lifestyle themes rather than politics.",
-	},
 	"Boi Ecchi (בוי אקי)": {
 		era: "2020s–present",
 		affiliation: "Apolitical / Internet culture",
@@ -118,6 +107,12 @@ export const artistPoliticalAffiliation: Record<
 		affiliation: "Palestinian left / Anti-occupation / Social justice",
 		notes:
 			"Pioneering Palestinian hip hop group from Lod; lyrics address occupation, inequality, and identity; known for activist stance and collaborations.",
+	},
+	"Tamer Nafar (תאמר נפאר)": {
+		era: "1990s–present",
+		affiliation: "Palestinian left / Anti-occupation / Social justice",
+		notes:
+			"Founding member and frontman of DAM; solo work and acting continue the group's anti-occupation and identity themes.",
 	},
 	"Itzik Shamli (איציק שמלי)": {
 		era: "1990s–present",
@@ -149,29 +144,11 @@ export const artistPoliticalAffiliation: Record<
 		notes:
 			"Musician and rapper known for blending Arabic and Hebrew music, promoting coexistence and cultural dialogue.",
 	},
-	"Yosef Dayan (יוסף דיין)": {
-		era: "2010s–present",
-		affiliation: "Left-leaning / Social critique",
-		notes:
-			"Rapper known for sharp social and political commentary, critiques of government and society.",
-	},
 	"Adi Ulmansky (עדי אולמנסקי)": {
 		era: "2000s–present",
 		affiliation: "Center-left / Social commentary",
 		notes:
 			"Rapper and producer known for social commentary and critique of Israeli society.",
-	},
-	"Nigel Hadmor (נייג'ל האדמו\"ר)": {
-		era: "1990s",
-		affiliation: "Center-left / Political response",
-		notes:
-			"Early Israeli rapper, immediate response to Rabin assassination, documented political trauma.",
-	},
-	"Silverdone (סילברדון)": {
-		era: "1990s",
-		affiliation: "Center-left / Security concerns",
-		notes:
-			"Early hip-hop artist addressing security situation and state concerns during 1990s.",
 	},
 	"Fishy Hagadol (פישי הגדול)": {
 		era: "2000s",
@@ -190,18 +167,6 @@ export const artistPoliticalAffiliation: Record<
 		affiliation: "Left-leaning / Peace activism",
 		notes:
 			"Collaborator on peace-oriented projects, worked with Palestinian rappers on coexistence themes.",
-	},
-	"Axsom (אקסום)": {
-		era: "2010s",
-		affiliation: "Left-leaning / Anti-corruption",
-		notes:
-			"Rapper known for sharp critiques of government corruption and state theft.",
-	},
-	"Loukatz (לוקץ')": {
-		era: "2010s–present",
-		affiliation: "Center-left / Political satire",
-		notes:
-			"Known for satirical commentary on political discourse and peace rhetoric.",
 	},
 	"Ness Ve Stilla (נס וסטילה)": {
 		era: "2020s–present",
@@ -239,29 +204,11 @@ export const artistPoliticalAffiliation: Record<
 		notes:
 			"Palestinian rapper; collaborations on resistance themes and Palestinian identity.",
 	},
-	"Ortega (אורטגה)": {
-		era: "2000s–present",
-		affiliation: "Center-left / Social commentary",
+	"Hatikva 6 (התקווה 6)": {
+		era: "2003–present",
+		affiliation: "Center / Patriotic mainstream",
 		notes:
-			"Veteran rapper in Israeli hip-hop scene, known for collaborations and political commentary.",
-	},
-	"Hatikvah 6 (התיכווה 6)": {
-		era: "2020s–present",
-		affiliation: "Right-leaning / Nationalist",
-		notes:
-			"Emerged after October 7, 2023; known for patriotic and militaristic themes celebrating Israeli resilience.",
-	},
-	"Maor Askenazi (מאור אשכנזי)": {
-		era: "2020s–present",
-		affiliation: "Center / War response",
-		notes:
-			"Collaborated with Nova massacre survivor Noam Cohen; songs about trauma and survival after October 7.",
-	},
-	"Hanan Ben Ari (חנן בן ארי)": {
-		era: "2020s–present",
-		affiliation: "Right-leaning / Nationalist",
-		notes:
-			"Singer-rapper known for patriotic songs addressing Israel directly; prominent after October 7.",
+			"Reggae and hip-hop band from Ramat HaSharon; released tributes to IDF combat soldiers in 2021 and to reservists during the 2023-2024 war.",
 	},
 	"Odeya (אודיה)": {
 		era: "2020s–present",
@@ -269,29 +216,11 @@ export const artistPoliticalAffiliation: Record<
 		notes:
 			"Rapper responding to October 7 events; inspired by classic war songs, documents contemporary trauma.",
 	},
-	"Eyal Golan (אייל גולן)": {
-		era: "2020s–present",
-		affiliation: "Right-leaning / Nationalist",
-		notes:
-			"Singer-rapper known for patriotic themes; 'Am Yisrael Chai' became one of most popular post-October 7 songs.",
-	},
-	"Aviv Gefen (אביב גפן)": {
-		era: "2020s–present",
+	"Izzy (איזי)": {
+		era: "2000s–present",
 		affiliation: "Center / War response",
 		notes:
-			"Collaborated with Gaza hostage survivor Mia Limberg; songs about captivity and return.",
-	},
-	"Itay Levi (איתי לוי)": {
-		era: "2020s–present",
-		affiliation: "Center / War response",
-		notes:
-			"Singer-rapper expressing emotional responses to October 7; songs about national trauma and resilience.",
-	},
-	"E-Z": {
-		era: "2020s–present",
-		affiliation: "Center / War response",
-		notes:
-			"Rapper responding to October 7 events; created memorial songs for victims.",
+			"Erez Sharon; veteran rapper whose catalogue mixes protest and humour. Released 'Shiva BeOktober' four days after the October 7 attack and co-wrote 'Choref 23' with Odeya.",
 	},
 	"Benia Bar Avi (בניה בר אבי)": {
 		era: "2020s–present",
@@ -311,11 +240,29 @@ export const artistPoliticalAffiliation: Record<
 		notes:
 			"Palestinian-Israeli rapper from Jaffa; multilingual artist addressing gentrification, housing rights, and urban resistance.",
 	},
-	"IZ (איזי)": {
-		era: "2020s–present",
-		affiliation: "Center / War response",
+	Saz: {
+		era: "2000s–present",
+		affiliation: "Palestinian / Coexistence advocacy",
 		notes:
-			"Rapper responding to October 7 events; created memorial songs for victims.",
+			"Sameh Zakout, Palestinian rapper and actor from Ramla; themes of Palestinian and Arab identity with calls for a peaceful resolution. Half of the Israeli-Palestinian duo Dugri with Uriya Rosenman.",
+	},
+	"Shai 360 (שי 360)": {
+		era: "2000s–present",
+		affiliation: "Right-leaning / Pro-Israel advocacy",
+		notes:
+			"Shai Haddad; former member of the Tact Family label. Released English-language advocacy tracks defending Israel's international image, including 'United' (2010, on the Gaza flotilla) and the album 'Shalom Haters'.",
+	},
+	"Boikutt / Muqata'a (مقاطعة)": {
+		era: "2000s–present",
+		affiliation: "Palestinian left / Anti-occupation",
+		notes:
+			"Ramallah-based producer and rapper, co-founder of Ramallah Underground; sample-based work on occupation, erasure and Palestinian archives.",
+	},
+	"Stormtrap / Asifeh (عاصفة)": {
+		era: "2000s–present",
+		affiliation: "Palestinian left / Anti-occupation",
+		notes:
+			"Ramallah Underground co-founder; electronic and hip-hop work on life under occupation and in the West Bank cities.",
 	},
 	"Hype Crew (היפ קרו)": {
 		era: "2020s–present",
@@ -328,5 +275,29 @@ export const artistPoliticalAffiliation: Record<
 		affiliation: "Center / War response",
 		notes:
 			"Rapper addressing daily reality under war; songs about living in extraordinary conditions.",
+	},
+	"MC Abdul": {
+		era: "2020s–present",
+		affiliation: "Palestinian left / Anti-occupation",
+		notes:
+			"Rapper from Gaza who began releasing at age 12; songs about blockade, freedom, and life under bombardment.",
+	},
+	"Saint Levant (سانت ليفانت)": {
+		era: "2020s–present",
+		affiliation: "Palestinian left / Anti-occupation",
+		notes:
+			"Jerusalem-born, Gaza-raised rapper; multilingual work centred on displacement and the Palestinian right of return.",
+	},
+	"Haykal (هيكل)": {
+		era: "2020s–present",
+		affiliation: "Palestinian left / Anti-occupation",
+		notes:
+			"Palestinian rapper working with the Ramallah experimental scene; verses on colonisation and the war in Gaza.",
+	},
+	"Noam Tsuriely (נועם צוריאלי)": {
+		era: "2020s–present",
+		affiliation: "Center / War response",
+		notes:
+			"Israeli rapper and reservist who served in Gaza; writes about combat experience, loss of friends, and internal Israeli division.",
 	},
 } as const;
