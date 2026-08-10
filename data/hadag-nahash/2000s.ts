@@ -21,9 +21,9 @@ export const hadagNahash2000s = [
 		published_date: "2003",
 		lyric_sample: {
 			hebrew:
-				"ניסיתי להדגיש שאין שלום אין בטחון / ונמאס לחיות בחרדה / הרצל שם לי קרטון על הלשון ואמר: / ”אם תיקחו אין זו אגדה“",
+				"ניסיתי להדגיש שאין שלום אין בטחון / ונמאס לחיות בחרדה / הרצל שם לי קרטון על הלשון ואמר: / אם תיקחו אין זו אגדה",
 			english_translation:
-				"I tried to stress that there's no peace, no security / and that living in dread is unbearable / Herzl put a tab of acid on my tongue and said: / 'If you take it, it is no dream'.",
+				"I tried to stress that there's no peace, no security / and that living in dread is unbearable / Herzl put a tab of acid on my tongue and said: / If you take it, it is no dream.",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=70i9PvrsvJ0",
