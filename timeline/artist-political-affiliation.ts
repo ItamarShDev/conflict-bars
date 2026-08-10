@@ -170,9 +170,9 @@ export const artistPoliticalAffiliation: Record<
 	},
 	"Shotei HaNevuah (שוטי הנבואה)": {
 		era: "1990s–present",
-		affiliation: "Counterculture / Apolitical",
+		affiliation: "Counterculture / Peace-leaning",
 		notes:
-			"Eclectic reggae/rock/hip-hop collective; generally countercultural and humorous, with occasional peace and social themes.",
+			"Eclectic reggae/rock/hip-hop collective; generally countercultural and humorous, with peace and coexistence themes on their 2000 debut.",
 	},
 	"Ness Ve Stilla (נס וסטילה)": {
 		era: "2020s–present",
