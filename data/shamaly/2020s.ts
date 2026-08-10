@@ -29,4 +29,32 @@ export const shamaly2020s = [
 				"https://www.thenationalnews.com/arts-culture/music-stage/2024/10/24/palestinian-rapper-shamaly-gaza-refugee/",
 		},
 	},
+	{
+		name: "Sa7",
+		artist: "Shamaly (شمالي)",
+		language: "Arabic",
+		published_date: "2024-10-15",
+		lyric_sample: {
+			english_translation:
+				"Track on the Bdl Faqed EP, released by Gaza label Manjam during the Gaza-war period; the EP documents five months of the conflict.",
+		},
+		links: {
+			song_info:
+				"https://thisisyungmea.com/bdl-faqed-by-shamaly-a-story-from-gaza-told-in-music/",
+		},
+	},
+	{
+		name: "Bastana Feek (Waiting for You)",
+		artist: "Shamaly (شمالي)",
+		language: "Arabic",
+		published_date: "2024-10-15",
+		lyric_sample: {
+			english_translation:
+				"Shamaly wrote this track during the war while sheltering in Rafah; reporting describes its connection and uncertainty amid the crisis.",
+		},
+		links: {
+			song_info:
+				"https://www.thenationalnews.com/arts-culture/music-stage/2024/10/24/palestinian-rapper-shamaly-gaza-refugee/",
+		},
+	},
 ];

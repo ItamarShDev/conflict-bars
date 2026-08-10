@@ -45,4 +45,18 @@ export const saintLevant2020s = [
 			lyrics: "https://genius.com/Saint-levant-from-gaza-with-love-lyrics",
 		},
 	},
+	{
+		name: "Nirvana in Gaza",
+		artist: "Saint Levant (سانت ليفانت)",
+		language: "English/Arabic/French",
+		published_date: "2020-11-27",
+		lyric_sample: {
+			english_translation:
+				"Kuffiyeh to cover our faces / From Gaza to yaffa they with me.",
+		},
+		links: {
+			lyrics: "https://www.letras.mus.br/saint-levant/nirvana-in-gaza/",
+			song_info: "https://en.wikipedia.org/wiki/Saint_Levant_discography",
+		},
+	},
 ];

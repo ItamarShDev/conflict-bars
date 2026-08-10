@@ -41,4 +41,34 @@ export const mcAbdul2020s = [
 			lyrics: "https://www.antiwarsongs.org/canzone.php?id=67637&lang=en",
 		},
 	},
+	{
+		name: "Let It Rain",
+		artist: "MC Abdul",
+		language: "English",
+		published_date: "2024-11-01",
+		lyric_sample: {
+			english_translation:
+				"I want to call my mother; I hope she charged her phone. I hope my brother is not alone.",
+		},
+		links: {
+			lyrics:
+				"https://www.rollingstone.com/music/music-features/mc-abdul-palestine-gaza-rap-1234980971/",
+			song_info: "https://audiomack.com/mca-rap/song/let-it-rain-6866289",
+		},
+	},
+	{
+		name: "Through My Eyes",
+		artist: "MC Abdul",
+		language: "English",
+		published_date: "2025-04-11",
+		lyric_sample: {
+			english_translation:
+				"An officially released MC Abdul track documented by the Grammy Recording Academy and dated April 11, 2025 by Soundcharts.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=ycQmyX1-7WE",
+			song_info:
+				"https://qa.grammy.com/videos/mc-abdul-through-my-eyes-performance",
+		},
+	},
 ];

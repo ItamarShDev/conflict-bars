@@ -78,4 +78,21 @@ export const dam2010s = [
 			lyrics: "https://www.antiwarsongs.org/canzone.php?id=69195&lang=en",
 		},
 	},
+	{
+		name: "طريق جوليانو (Tareeq Juliano / Juliano's Way)",
+		artist: "DAM (דאם)",
+		collaborators: ["Juliano's Students (The Freedom Theatre, Jenin)"],
+		language: "Arabic/English",
+		published_date: "2012-04-04",
+		lyric_sample: {
+			hebrew: "الفن ثورة, احنا من اليوم وطالع مش مقاومين بس, أحنا فنانين",
+			english_translation:
+				"Art is revolution; from today onward we are not only resistance fighters, we are artists.",
+		},
+		links: {
+			lyrics:
+				"http://revolutionaryarabraptheindex.blogspot.com/2012/04/dam-ft-julianos-students-julianos-way.html",
+			youtube: "https://www.youtube.com/watch?v=hwz4GpJZ6tQ",
+		},
+	},
 ];
