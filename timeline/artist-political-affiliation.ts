@@ -170,7 +170,7 @@ export const artistPoliticalAffiliation: Record<
 	},
 	"Shotei HaNevuah (שוטי הנבואה)": {
 		era: "1990s–present",
-		affiliation: "Counterculture / Peace-leaning",
+		affiliation: "Counterculture / Left-leaning",
 		notes:
 			"Eclectic reggae/rock/hip-hop collective; generally countercultural and humorous, with peace and coexistence themes on their 2000 debut.",
 	},
