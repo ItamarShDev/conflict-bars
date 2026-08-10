@@ -125,4 +125,20 @@ export const hadagNahash2000s = [
 				"https://www.haaretz.co.il/gallery/2004-06-03/ty-article/0000017f-db8a-db22-a17f-ffbb17350000",
 		},
 	},
+	{
+		name: "מספרים (Misparim / Numbers)",
+		artist: "Hadag Nahash (הדג נחש)",
+		language: "Hebrew",
+		published_date: "2003-01",
+		lyric_sample: {
+			hebrew:
+				"אחד הוא מספר המדינות מהירדן לים / שתיים - מספר המדינות שיום אחד יהיו כאן",
+			english_translation:
+				"One is the number of states from the Jordan to the sea / Two — the number of states that one day will be here.",
+		},
+		links: {
+			lyrics: "https://genius.com/Hadag-nahash-misparim-lyrics",
+			youtube: "https://www.youtube.com/watch?v=YDI9GHauE34",
+		},
+	},
 ];
