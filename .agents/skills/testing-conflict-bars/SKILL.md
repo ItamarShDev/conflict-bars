@@ -329,8 +329,10 @@ question, not a bug to report each run.
 
 ## RTL and Hebrew-input gotchas
 
-- The OS keyboard layout may not support Hebrew, so `computer.type` with Hebrew Unicode may not enter characters in form inputs.
-- Workaround: use `browser_console` to set the input value and dispatch `new Event('input', { bubbles: true })`. In React-controlled inputs this is usually enough to trigger `onChange`.
+- The OS keyboard layout may not support Hebrew, so `computer.type` with Hebrew Unicode may not enter characters in form inputs. Observed failure mode: typing a Hebrew search term silently enters only **spaces** (`value: "  "`), the filter never applies, and the card count stays at the full catalog — which can be misread as "search is broken" or as a passing whole-catalog audit. Always echo back `document.querySelector('input[type="search"]').value` after typing to confirm what actually landed in the field.
+- **Best workaround for search: type the Latin transliteration instead.** Song `name` values follow the convention `"עברית (Transliteration / Translation)"`, and the search matches on name/artist/lyrics, so ASCII fragments like `Banu Hoshech`, `HaAdama Bocha`, `Misparim`, `Shafui Milchama`, `Yerushalayim` isolate a Hebrew-titled record with one card and keep the interaction fully user-visible in the recording (the match even renders inside a `<mark>`). Prefer this over console injection, which looks like devtools trickery on video.
+- Fallback: use `browser_console` to set the input value and dispatch `new Event('input', { bubbles: true })`. In React-controlled inputs this is usually enough to trigger `onChange`.
+- Note that `ירושלים` alone is ambiguous — several records share it. Disambiguate with the transliteration, e.g. `ירושלים (Yerushalayim` or just `Yerushalayim`.
 - For `/he` the search input is `dir="rtl"`, so Hebrew text displays correctly. For `/en` the input is `dir="ltr"`, so Hebrew text appears visually reversed.
 - `LanguageSwitcher` DOM text is `עברית / English` on `/he` and `English / עברית` on `/en`. In an RTL context the slash and Latin text may be reordered by the Unicode bidi algorithm, so trust `textContent` for assertions.
 
@@ -339,6 +341,14 @@ question, not a bug to report each run.
 - `Emulation.setDeviceMetricsOverride` with `mobile: true` can persist across reloads.
 - `Emulation.clearDeviceMetricsOverride` should be followed by `Page.reload` to take effect.
 - Maximising the Chrome window does **not** always clear the override; if it persists, open a fresh tab or explicitly set a desktop viewport and reload.
+- **`clearDeviceMetricsOverride` alone may return `{"result":{}}` and still leave the page at 375×812** even after `F5`, leaving the rest of the run stuck in a narrow viewport (a huge blank area to the right of the app in every later screenshot). The reliable escape is to first *disable* the override by setting zero metrics, then clear, then reload:
+  ```py
+  send("Emulation.setDeviceMetricsOverride",
+       {"width": 0, "height": 0, "deviceScaleFactor": 0, "mobile": False})
+  send("Emulation.clearDeviceMetricsOverride", {})
+  ```
+  Per the CDP spec width/height `0` means "override disabled". Always confirm with `window.innerWidth` (expect ~1024, not 375) **before** taking any further desktop screenshots.
+- A helper that picks `pages[0]` from `/json/list` can target the wrong tab when you have opened extra tabs (e.g. to check external links). Iterate over **all** `type == "page"` targets, or close extra tabs first, otherwise the override appears not to clear.
 - Use `document.documentElement.scrollWidth <= document.documentElement.clientWidth` (not `window.innerWidth`) to check horizontal overflow after overriding.
 
 ## Favicon metadata
