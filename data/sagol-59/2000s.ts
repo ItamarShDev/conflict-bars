@@ -31,4 +31,23 @@ export const sagol592000s = [
 			song_info: "https://mima.co.il/fact_page.php?song_id=423",
 		},
 	},
+	{
+		name: "ירושלים (Yerushalayim / Jerusalem)",
+		artist: "Sagol 59 (סגול 59)",
+		collaborators: ["Rebel Sun (רבל סאן)", "Sha'anan Streett (שאנן סטריט)"],
+		language: "Hebrew",
+		published_date: "2008",
+		lyric_sample: {
+			hebrew: "חיילים על קו התפר, לחוצים כמו כפתורים בשלט",
+			english_translation:
+				"Soldiers on the seam line, tense/pressed like buttons on a remote control.",
+		},
+		links: {
+			lyrics:
+				"https://azlyrics.biz/other/%d7%a1%d7%92%d7%95%d7%9c-59-lyrics/%d7%a1%d7%92%d7%95%d7%9c-59-yerushalayim-%d7%99%d7%a8%d7%95%d7%a9%d7%9c%d7%99%d7%9d-sagol-59-lyrics/",
+			song_info:
+				"https://he.wikipedia.org/wiki/%D7%AA%D7%A2%D7%A9%D7%95_%D7%9E%D7%A7%D7%95%D7%9D",
+			youtube: "https://www.youtube.com/watch?v=P-PGWQ_aTzM",
+		},
+	},
 ];

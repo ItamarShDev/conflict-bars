@@ -118,4 +118,20 @@ export const subliminal2000s = [
 			youtube: "https://www.youtube.com/watch?v=Mh94v1zosyg",
 		},
 	},
+	{
+		name: "באנו חושך לגרש (Banu Hoshech Legaresh / We Came to Drive Out the Darkness)",
+		artist: "Subliminal & The Shadow",
+		language: "Hebrew",
+		published_date: "2002",
+		lyric_sample: {
+			hebrew: "על שני עמים יד ביד וראש מורם / שלום, סאלאם, פיס לכולם בעולם",
+			english_translation:
+				"About two peoples hand in hand and heads held high / Shalom, Salaam, peace to everyone in the world.",
+		},
+		links: {
+			lyrics:
+				"https://genius.com/Subliminal-and-hatzel-banu-hoshech-legaresh-lyrics",
+			youtube: "https://www.youtube.com/watch?v=JIjnSTshpc0",
+		},
+	},
 ];
