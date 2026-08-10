@@ -168,6 +168,12 @@ export const artistPoliticalAffiliation: Record<
 		notes:
 			"Collaborator on peace-oriented projects, worked with Palestinian rappers on coexistence themes.",
 	},
+	"Shotei HaNevuah (שוטי הנבואה)": {
+		era: "1990s–present",
+		affiliation: "Counterculture / Apolitical",
+		notes:
+			"Eclectic reggae/rock/hip-hop collective; generally countercultural and humorous, with occasional peace and social themes.",
+	},
 	"Ness Ve Stilla (נס וסטילה)": {
 		era: "2020s–present",
 		affiliation: "Right-leaning / Nationalist",
