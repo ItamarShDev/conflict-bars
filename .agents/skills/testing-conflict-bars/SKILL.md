@@ -320,6 +320,23 @@ section that mixes an unknown card with a classified one so the difference is vi
 choice. Whether grey is the desired presentation for apolitical artists is a standing product
 question, not a bug to report each run.
 
+## Testing OG/Twitter card metadata locally without a real Convex deployment
+
+`npm run build` and `npm run start` can be tested without a real Convex URL by using a throwaway HTTP shim on `127.0.0.1:3210`:
+
+1. Set the env vars when starting the production server:
+   ```
+   NEXT_PUBLIC_CONVEX_URL=http://127.0.0.1:3210 CONVEX_URL=http://127.0.0.1:3210 npm run start
+   ```
+2. The shim must answer `POST /api/query` for `path: "events:getAllEvents"` (note the **colon** in `events:getAllEvents`) with `{"status":"success","value":[]}`.
+3. With an empty events array the page renders; the timeline will be song-only, which is enough to verify `<head>` metadata and the `opengraph-image` / `twitter-image` routes.
+4. Useful assertions:
+   - `curl -sL http://localhost:3000/<lang>` and grep for `og:image` / `twitter:image` URLs.
+   - `curl -I http://localhost:3000/<lang>/opengraph-image.png` should 404.
+   - `curl -I http://localhost:3000/<lang>/opengraph-image` should return `content-type: image/png` and the body is a 1200x630 PNG (use `identify` from ImageMagick).
+   - The bare `opengraph-image` route is what Next.js emits in `og:image`; the `.png` variant does not exist because the source file is `opengraph-image.tsx`.
+5. The metadata image URLs include a query-string hash that Next.js derives from the metadata source; changing comments/exports in `twitter-image.tsx` or strings in `opengraph-image.tsx` can change the hash and force cache re-fetches.
+
 ## Devin Secrets Needed
 
 - `NEXT_PUBLIC_CONVEX_URL` / Convex deploy key — required for any real query, mutation or
