@@ -22,7 +22,7 @@ const descriptionByLang: Record<string, string> = {
 	he: "ציר זמן אינטראקטיבי של היפ-הופ ישראלי והסכסוכים שעיצבו אותו",
 };
 
-const baseUrl = "conflictbars.org";
+const baseUrl = "www.conflictbars.org";
 
 async function loadHeebo() {
 	const weights = [400, 700, 900] as const;
