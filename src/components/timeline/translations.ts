@@ -107,6 +107,16 @@ export const translations = {
 				label: "Decade",
 			},
 		},
+		nav: {
+			beeswarm: "Beeswarm",
+			timeline: "Timeline",
+		},
+		beeswarm: {
+			title: "Beeswarm",
+			subtitle: "Songs released by year and political leaning",
+			description:
+				"A beeswarm view of Israeli hip-hop releases, colored by the artist's political leaning.",
+		},
 	},
 	he: {
 		title: "חרוזים מסוכסכים",
@@ -214,6 +224,16 @@ export const translations = {
 			decade: {
 				label: "עשור",
 			},
+		},
+		nav: {
+			beeswarm: "Beeswarm",
+			timeline: "ציר זמן",
+		},
+		beeswarm: {
+			title: "Beeswarm",
+			subtitle: "שירים שיצאו לפי שנה ונטייה פוליטית",
+			description:
+				"תצוגת Beeswarm של שירי היפ־הופ ישראליים, צבועים לפי הנטייה הפוליטית של האמן.",
 		},
 	},
 };

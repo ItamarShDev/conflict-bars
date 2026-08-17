@@ -10,7 +10,7 @@ import type {
 } from "../../timeline/types";
 
 // Helper to determine political leaning
-function getArtistLeaning(
+export function getArtistLeaning(
 	artist: FileSong["artist_details"],
 ): "left" | "right" | "center" | "unknown" {
 	const affiliation = artist?.affiliation?.toLowerCase();
@@ -25,6 +25,16 @@ function getArtistLeaning(
 
 function parseStartYear(timestamp: string): number {
 	return new Date(timestamp).getFullYear();
+}
+
+export function getCatalogStats(songs: FileSongList) {
+	const years = songs.map((song) => Number(song.published_date.slice(0, 4)));
+	return {
+		songCount: songs.length,
+		artistCount: new Set(songs.map((song) => song.artist)).size,
+		startYear: Math.min(...years),
+		endYear: Math.max(...years),
+	};
 }
 
 export type TimelineEntryItem =
