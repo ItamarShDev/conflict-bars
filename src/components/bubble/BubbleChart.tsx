@@ -89,11 +89,16 @@ export function BubbleChart({ songs, lang }: BubbleChartProps) {
 		const maxCount = Math.max(...bubbles.map((b) => b.count));
 
 		const margin = { top: 24, right: 28, bottom: 76, left: 72 };
-		const width = 760;
 		const rowHeight = 56;
+		const minWidth = 760;
+		const baseYearGap = 28;
 		const plotLeft = margin.left;
-		const plotRight = width - margin.right;
-		const plotWidth = plotRight - plotLeft;
+		const plotWidth = Math.max(
+			yearSpan * baseYearGap,
+			minWidth - margin.left - margin.right,
+		);
+		const plotRight = plotLeft + plotWidth;
+		const width = plotRight + margin.right;
 		const plotBottom = margin.top + (LEANINGS.length - 1) * rowHeight + 16;
 		const height = plotBottom + margin.bottom;
 
@@ -103,7 +108,7 @@ export function BubbleChart({ songs, lang }: BubbleChartProps) {
 			margin.top + LEANING_ORDER[leaning] * rowHeight;
 
 		const yearGap = plotWidth / yearSpan;
-		const maxR = Math.min(yearGap / 2 - 4, rowHeight / 2 - 8);
+		const maxR = Math.min(Math.max(yearGap / 2 - 4, 8), rowHeight / 2 - 8);
 		const minR = 4;
 		const scale = maxCount > 1 ? (maxR - minR) / Math.sqrt(maxCount - 1) : 0;
 
@@ -198,7 +203,8 @@ export function BubbleChart({ songs, lang }: BubbleChartProps) {
 				<div className="overflow-x-auto">
 					<svg
 						viewBox={`0 0 ${width} ${height}`}
-						className="h-auto min-w-[760px] w-full"
+						className="h-auto w-full"
+						style={{ minWidth: width }}
 						role="img"
 						aria-label={`${t.bubble.subtitle}: ${minYear}-${maxYear}`}
 					>
