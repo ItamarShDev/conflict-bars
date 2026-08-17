@@ -60,6 +60,7 @@ export function BubbleChart({ songs, lang }: BubbleChartProps) {
 		const years = parsed.map((item) => item.year);
 		const minYear = Math.min(...years);
 		const maxYear = Math.max(...years);
+		const yearSpan = Math.max(1, maxYear - minYear);
 
 		const bubblesByKey = new Map<string, Bubble>();
 		for (const item of parsed) {
@@ -87,26 +88,28 @@ export function BubbleChart({ songs, lang }: BubbleChartProps) {
 		);
 		const maxCount = Math.max(...bubbles.map((b) => b.count));
 
-		const margin = { top: 40, right: 48, bottom: 72, left: 64 };
-		const width = 600;
-		const rowHeight = 32;
-		const innerWidth = width - margin.left - margin.right;
-		const innerHeight = (maxYear - minYear + 1) * rowHeight;
-		const height = innerHeight + margin.top + margin.bottom;
+		const margin = { top: 24, right: 28, bottom: 76, left: 72 };
+		const width = 760;
+		const rowHeight = 56;
+		const plotLeft = margin.left;
+		const plotRight = width - margin.right;
+		const plotWidth = plotRight - plotLeft;
+		const plotBottom = margin.top + (LEANINGS.length - 1) * rowHeight + 16;
+		const height = plotBottom + margin.bottom;
 
-		const xFor = (leaning: Leaning) =>
-			margin.left +
-			(LEANING_ORDER[leaning] / (LEANINGS.length - 1)) * innerWidth;
-		const yFor = (year: number) => margin.top + (year - minYear) * rowHeight;
+		const xFor = (year: number) =>
+			plotLeft + ((year - minYear) / yearSpan) * plotWidth;
+		const yFor = (leaning: Leaning) =>
+			margin.top + LEANING_ORDER[leaning] * rowHeight;
 
-		const colGap = innerWidth / (LEANINGS.length - 1);
-		const maxR = Math.min(colGap / 2 - 8, rowHeight / 2 - 2);
-		const minR = 6;
+		const yearGap = plotWidth / yearSpan;
+		const maxR = Math.min(yearGap / 2 - 4, rowHeight / 2 - 8);
+		const minR = 4;
 		const scale = maxCount > 1 ? (maxR - minR) / Math.sqrt(maxCount - 1) : 0;
 
 		for (const bubble of bubbles) {
-			bubble.x = xFor(bubble.leaning);
-			bubble.y = yFor(bubble.year);
+			bubble.x = xFor(bubble.year);
+			bubble.y = yFor(bubble.leaning);
 			bubble.r = minR + Math.sqrt(bubble.count - 1) * scale;
 		}
 
@@ -120,15 +123,24 @@ export function BubbleChart({ songs, lang }: BubbleChartProps) {
 			totals[item.leaning]++;
 		}
 
+		const leaningY: Record<Leaning, number> = {
+			left: yFor("left"),
+			center: yFor("center"),
+			right: yFor("right"),
+			unknown: yFor("unknown"),
+		};
+
 		return {
 			bubbles,
 			minYear,
 			maxYear,
+			yearSpan,
 			width,
 			height,
 			margin,
-			rowHeight,
-			innerWidth,
+			plotRight,
+			plotBottom,
+			leaningY,
 			totals,
 		};
 	}, [songs]);
@@ -145,13 +157,21 @@ export function BubbleChart({ songs, lang }: BubbleChartProps) {
 		bubbles,
 		minYear,
 		maxYear,
+		yearSpan,
 		width,
 		height,
 		margin,
-		rowHeight,
-		innerWidth,
+		plotRight,
+		plotBottom,
+		leaningY,
 		totals,
 	} = layout;
+
+	const yearTicks = Array.from(
+		{ length: maxYear - minYear + 1 },
+		(_, i) => minYear + i,
+	);
+	const labelStep = Math.max(1, Math.ceil(yearSpan / 16));
 
 	return (
 		<div className="space-y-6">
@@ -174,99 +194,99 @@ export function BubbleChart({ songs, lang }: BubbleChartProps) {
 				))}
 			</div>
 
-			<div className="control-bar rounded-lg border-2 border-(--color-control-border) bg-(--color-control-background) p-4">
-				<svg
-					viewBox={`0 0 ${width} ${height}`}
-					className="h-auto w-full"
-					role="img"
-					aria-label={`${t.bubble.subtitle}: ${minYear}-${maxYear}`}
-				>
-					{/* Horizontal grid lines + year labels */}
-					{Array.from({ length: maxYear - minYear + 1 }, (_, i) => {
-						const year = minYear + i;
-						const y = margin.top + i * rowHeight;
-						return (
-							<g key={year}>
-								<line
-									x1={margin.left}
-									y1={y}
-									x2={width - margin.right}
-									y2={y}
-									stroke="var(--color-control-border)"
-									strokeOpacity={0.25}
-									strokeWidth={1}
-								/>
+			<div className="control-bar overflow-x-auto rounded-lg border-2 border-(--color-control-border) bg-(--color-control-background) p-4">
+				<div className="overflow-x-auto">
+					<svg
+						viewBox={`0 0 ${width} ${height}`}
+						className="h-auto min-w-[760px] w-full"
+						role="img"
+						aria-label={`${t.bubble.subtitle}: ${minYear}-${maxYear}`}
+					>
+						{/* Leaning labels */}
+						{LEANINGS.map((leaning) => (
+							<text
+								key={leaning}
+								x={margin.left - 12}
+								y={leaningY[leaning]}
+								textAnchor="end"
+								dominantBaseline="middle"
+								fontSize={12}
+								fontWeight={900}
+								style={{ fill: LEANING_COLORS[leaning] }}
+							>
+								{leaningLabels[leaning]}
+							</text>
+						))}
+
+						{/* Baseline */}
+						<line
+							x1={margin.left}
+							y1={plotBottom}
+							x2={plotRight}
+							y2={plotBottom}
+							stroke="var(--color-control-foreground)"
+							strokeWidth={1}
+						/>
+
+						{/* Year labels */}
+						{yearTicks.map((year) => {
+							if ((year - minYear) % labelStep !== 0 && year !== maxYear) {
+								return null;
+							}
+							const x =
+								margin.left +
+								((year - minYear) / yearSpan) *
+									(width - margin.left - margin.right);
+							const y = plotBottom + 14;
+							return (
 								<text
-									x={margin.left - 12}
+									key={year}
+									x={x}
 									y={y}
 									textAnchor="end"
-									dominantBaseline="middle"
-									fontSize={12}
+									dominantBaseline="hanging"
+									fontSize={10}
 									fontWeight={900}
-									style={{ fill: "var(--color-control-foreground)" }}
+									transform={`rotate(-45, ${x}, ${y})`}
+									style={{
+										fill: "var(--color-control-foreground)",
+										direction: "ltr",
+									}}
 								>
 									{year}
 								</text>
-							</g>
-						);
-					})}
+							);
+						})}
 
-					{/* Vertical column lines + x-axis labels */}
-					{LEANINGS.map((leaning, i) => {
-						const x = margin.left + (i / (LEANINGS.length - 1)) * innerWidth;
-						return (
-							<g key={leaning}>
-								<line
-									x1={x}
-									y1={margin.top}
-									x2={x}
-									y2={height - margin.bottom}
-									stroke="var(--color-control-border)"
-									strokeOpacity={0.25}
+						{/* Bubbles */}
+						{bubbles.map((bubble) => {
+							const songNames = bubble.songs
+								.slice(0, 5)
+								.map((s) => s.name)
+								.join(", ");
+							const more =
+								bubble.count > 5 ? `, +${bubble.count - 5} more` : "";
+
+							return (
+								<circle
+									key={`${bubble.year}-${bubble.leaning}`}
+									cx={bubble.x}
+									cy={bubble.y}
+									r={bubble.r}
+									fill={LEANING_COLORS[bubble.leaning]}
+									fillOpacity={0.85}
+									stroke="var(--color-control-background)"
 									strokeWidth={1}
-								/>
-								<text
-									x={x}
-									y={height - 24}
-									textAnchor="middle"
-									fontSize={14}
-									fontWeight={900}
-									style={{ fill: LEANING_COLORS[leaning] }}
 								>
-									{leaningLabels[leaning]}
-								</text>
-							</g>
-						);
-					})}
-
-					{/* Bubbles */}
-					{bubbles.map((bubble) => {
-						const songNames = bubble.songs
-							.slice(0, 5)
-							.map((s) => s.name)
-							.join(", ");
-						const more = bubble.count > 5 ? `, +${bubble.count - 5} more` : "";
-
-						return (
-							<circle
-								key={`${bubble.year}-${bubble.leaning}`}
-								cx={bubble.x}
-								cy={bubble.y}
-								r={bubble.r}
-								fill={LEANING_COLORS[bubble.leaning]}
-								fillOpacity={0.9}
-								stroke="var(--color-control-foreground)"
-								strokeWidth={0.5}
-								strokeOpacity={0.2}
-							>
-								<title>
-									{`${bubble.year} · ${leaningLabels[bubble.leaning]} · ${bubble.count} songs`}
-									{bubble.count > 0 ? `\n${songNames}${more}` : ""}
-								</title>
-							</circle>
-						);
-					})}
-				</svg>
+									<title>
+										{`${bubble.year} · ${leaningLabels[bubble.leaning]} · ${bubble.count} songs`}
+										{bubble.count > 0 ? `\n${songNames}${more}` : ""}
+									</title>
+								</circle>
+							);
+						})}
+					</svg>
+				</div>
 			</div>
 		</div>
 	);
