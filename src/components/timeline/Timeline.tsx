@@ -164,7 +164,7 @@ export function Timeline({
 				helpModal={t.helpModal}
 				stats={catalogStats}
 				lang={lang}
-				nav={{ href: `/${lang}/beeswarm`, label: t.nav.beeswarm }}
+				nav={{ href: `/${lang}/bubble`, label: t.nav.bubble }}
 			/>
 
 			<YearRail

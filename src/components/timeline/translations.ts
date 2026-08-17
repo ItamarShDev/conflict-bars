@@ -108,14 +108,14 @@ export const translations = {
 			},
 		},
 		nav: {
-			beeswarm: "Beeswarm",
+			bubble: "Bubbles",
 			timeline: "Timeline",
 		},
-		beeswarm: {
-			title: "Beeswarm",
+		bubble: {
+			title: "Bubbles",
 			subtitle: "Songs released by year and political leaning",
 			description:
-				"A beeswarm view of Israeli hip-hop releases, colored by the artist's political leaning.",
+				"A bubble view of Israeli hip-hop releases, sized by count and colored by the artist's political leaning.",
 		},
 	},
 	he: {
@@ -226,14 +226,14 @@ export const translations = {
 			},
 		},
 		nav: {
-			beeswarm: "Beeswarm",
+			bubble: "בועות",
 			timeline: "ציר זמן",
 		},
-		beeswarm: {
-			title: "Beeswarm",
+		bubble: {
+			title: "בועות",
 			subtitle: "שירים שיצאו לפי שנה ונטייה פוליטית",
 			description:
-				"תצוגת Beeswarm של שירי היפ־הופ ישראליים, צבועים לפי הנטייה הפוליטית של האמן.",
+				"תצוגת בועות של שירי היפ־הופ ישראליים, בגודל לפי כמות וצבועים לפי הנטייה הפוליטית של האמן.",
 		},
 	},
 };

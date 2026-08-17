@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { BeeswarmChart } from "@/components/beeswarm/BeeswarmChart";
+import { BubbleChart } from "@/components/bubble/BubbleChart";
 import { TimelineHeader } from "@/components/timeline/TimelineHeader";
 import { translations } from "@/components/timeline/translations";
 import { loadFileSongs } from "@/utils/file-songs";
@@ -16,12 +16,12 @@ export async function generateMetadata({
 	const t = translations[activeLang];
 
 	return {
-		title: `${t.beeswarm.title} - ${t.title}`,
-		description: t.beeswarm.description,
+		title: `${t.bubble.title} - ${t.title}`,
+		description: t.bubble.description,
 	};
 }
 
-export default async function BeeswarmPage({
+export default async function BubblePage({
 	params,
 }: {
 	params: Promise<{ lang: string }>;
@@ -36,8 +36,8 @@ export default async function BeeswarmPage({
 	return (
 		<div className="relative min-h-screen">
 			<TimelineHeader
-				title={t.beeswarm.title}
-				subtitle={t.beeswarm.subtitle}
+				title={t.bubble.title}
+				subtitle={t.bubble.subtitle}
 				themeToggle={t.themeToggle}
 				helpModal={t.helpModal}
 				stats={stats}
@@ -47,7 +47,7 @@ export default async function BeeswarmPage({
 
 			<main className="min-h-screen ps-14 pt-4 md:ps-20 md:pt-6">
 				<div className="mx-4 md:mx-6">
-					<BeeswarmChart songs={songs} lang={lang} />
+					<BubbleChart songs={songs} lang={lang} />
 				</div>
 			</main>
 		</div>
