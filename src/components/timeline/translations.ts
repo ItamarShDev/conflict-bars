@@ -108,14 +108,14 @@ export const translations = {
 			},
 		},
 		nav: {
-			bubble: "Bubbles",
+			bubble: "Chart",
 			timeline: "Timeline",
 		},
 		bubble: {
-			title: "Bubbles",
-			subtitle: "Songs released by year and political leaning",
+			title: "Releases by political leaning",
+			subtitle: "Songs per year — left above the line, right below",
 			description:
-				"A bubble view of Israeli hip-hop releases, sized by count and colored by the artist's political leaning.",
+				"Israeli hip-hop releases counted per year by the artist's political leaning, with conflict periods marked behind the bars.",
 		},
 	},
 	he: {
@@ -226,14 +226,14 @@ export const translations = {
 			},
 		},
 		nav: {
-			bubble: "בועות",
+			bubble: "תרשים",
 			timeline: "ציר זמן",
 		},
 		bubble: {
-			title: "בועות",
-			subtitle: "שירים שיצאו לפי שנה ונטייה פוליטית",
+			title: "שירים לפי נטייה פוליטית",
+			subtitle: "שירים לפי שנה — שמאל מעל הקו, ימין מתחת",
 			description:
-				"תצוגת בועות של שירי היפ־הופ ישראליים, בגודל לפי כמות וצבועים לפי הנטייה הפוליטית של האמן.",
+				"מספר שירי ההיפ־הופ הישראליים שיצאו בכל שנה לפי הנטייה הפוליטית של האמן, עם תקופות הסכסוך מסומנות ברקע.",
 		},
 	},
 };
