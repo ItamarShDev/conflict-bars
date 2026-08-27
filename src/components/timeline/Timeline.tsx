@@ -13,7 +13,7 @@ import {
 	buildYearEventColors,
 	convertConvexEventsToTimeline,
 } from "@/utils/convex-helpers";
-import { getEntriesByYear } from "@/utils/timeline";
+import { getCatalogStats, getEntriesByYear } from "@/utils/timeline";
 import type { FileSongList, PreloadedEvents } from "../../../timeline/types";
 
 export function Timeline({
@@ -50,15 +50,10 @@ export function Timeline({
 			),
 		[songs, events, searchTerm, selectedLeanings, selectedDecades],
 	);
-	const catalogStats: HelpModalStats = useMemo(() => {
-		const years = songs.map((song) => Number(song.published_date.slice(0, 4)));
-		return {
-			songCount: songs.length,
-			artistCount: new Set(songs.map((song) => song.artist)).size,
-			startYear: Math.min(...years),
-			endYear: Math.max(...years),
-		};
-	}, [songs]);
+	const catalogStats: HelpModalStats = useMemo(
+		() => getCatalogStats(songs),
+		[songs],
+	);
 
 	const years = useMemo(() => yearGroups.map(([y]) => y), [yearGroups]);
 	const sectionRefs = useRef<Record<number, HTMLDivElement | null>>({});
@@ -169,6 +164,7 @@ export function Timeline({
 				helpModal={t.helpModal}
 				stats={catalogStats}
 				lang={lang}
+				nav={{ href: `/${lang}/bubble`, label: t.nav.bubble }}
 			/>
 
 			<YearRail

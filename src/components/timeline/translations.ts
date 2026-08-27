@@ -107,6 +107,16 @@ export const translations = {
 				label: "Decade",
 			},
 		},
+		nav: {
+			bubble: "Chart",
+			timeline: "Timeline",
+		},
+		bubble: {
+			title: "Releases by political leaning",
+			subtitle: "Songs per year — left above the line, right below",
+			description:
+				"Israeli hip-hop releases counted per year by the artist's political leaning, with conflict periods marked behind the bars.",
+		},
 	},
 	he: {
 		title: "חרוזים מסוכסכים",
@@ -214,6 +224,16 @@ export const translations = {
 			decade: {
 				label: "עשור",
 			},
+		},
+		nav: {
+			bubble: "תרשים",
+			timeline: "ציר זמן",
+		},
+		bubble: {
+			title: "שירים לפי נטייה פוליטית",
+			subtitle: "שירים לפי שנה — שמאל מעל הקו, ימין מתחת",
+			description:
+				"מספר שירי ההיפ־הופ הישראליים שיצאו בכל שנה לפי הנטייה הפוליטית של האמן, עם תקופות הסכסוך מסומנות ברקע.",
 		},
 	},
 };

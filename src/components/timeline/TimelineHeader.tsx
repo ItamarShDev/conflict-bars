@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useTheme } from "@/components/ThemeProvider";
 import { HelpModal, type HelpModalStats } from "./HelpModal";
 import { LanguageSwitcher } from "./LanguageSwitcher";
@@ -9,8 +10,9 @@ interface TimelineHeaderProps {
 	title: string;
 	subtitle: string;
 	themeToggle: (typeof translations)["en"]["themeToggle"];
-	helpModal: (typeof translations)["en"]["helpModal"];
-	stats: HelpModalStats;
+	helpModal?: (typeof translations)["en"]["helpModal"];
+	stats?: HelpModalStats;
+	nav?: { href: string; label: string };
 	lang: "en" | "he";
 }
 
@@ -20,6 +22,7 @@ export function TimelineHeader({
 	themeToggle,
 	helpModal,
 	stats,
+	nav,
 	lang,
 }: TimelineHeaderProps) {
 	const { theme, setTheme } = useTheme();
@@ -35,12 +38,22 @@ export function TimelineHeader({
 			</div>
 
 			<div className="flex items-center gap-2 md:gap-3">
-				<HelpModal
-					translations={helpModal}
-					stats={stats}
-					lang={lang}
-					className="z-30 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-2 border-(--color-control-border) bg-(--color-control-background) text-sm font-black text-(--color-control-foreground) hover:bg-(--color-control-foreground)/10 hover:text-(--color-accent) md:h-10 md:w-10"
-				/>
+				{nav && (
+					<Link
+						href={nav.href}
+						className="z-30 flex h-9 shrink-0 items-center justify-center rounded-full border-2 border-(--color-control-border) bg-(--color-control-background) px-3 text-sm font-black text-(--color-control-foreground) hover:bg-(--color-control-foreground)/10 hover:text-(--color-accent) md:h-10"
+					>
+						{nav.label}
+					</Link>
+				)}
+				{helpModal && stats && (
+					<HelpModal
+						translations={helpModal}
+						stats={stats}
+						lang={lang}
+						className="z-30 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-2 border-(--color-control-border) bg-(--color-control-background) text-sm font-black text-(--color-control-foreground) hover:bg-(--color-control-foreground)/10 hover:text-(--color-accent) md:h-10 md:w-10"
+					/>
+				)}
 				<LanguageSwitcher lang={lang} />
 				<fieldset
 					aria-label={themeToggle.label}
