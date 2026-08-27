@@ -159,7 +159,7 @@ export function BubbleChart({ songs, lang, bands }: BubbleChartProps) {
 				const x2 = Math.min(xOfDate(band.end), plotRight);
 				return { ...band, x1, width: x2 - x1 };
 			})
-			.filter((band) => band.width > 0)
+			.filter((band) => band.width >= 0)
 			.map((band) => {
 				const textWidth = band.label.length * 5;
 				const center = Math.min(
