@@ -72,19 +72,9 @@ export function BubbleChart({ songs, lang, bands }: BubbleChartProps) {
 			<div className="control-bar rounded-lg border-2 border-(--color-control-border) bg-(--color-control-background) p-4">
 				<div dir="ltr">
 					{isMobile ? (
-						<DivergingRows
-							data={data}
-							bands={bands}
-							labels={labels}
-							ariaLabel={chartProps.ariaLabel}
-						/>
+						<DivergingRows {...chartProps} />
 					) : (
-						<DivergingColumns
-							data={data}
-							bands={bands}
-							labels={labels}
-							ariaLabel={chartProps.ariaLabel}
-						/>
+						<DivergingColumns {...chartProps} />
 					)}
 				</div>
 			</div>

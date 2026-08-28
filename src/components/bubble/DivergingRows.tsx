@@ -38,7 +38,14 @@ export default function DivergingRows({
 	const yOfDate = (year: number) => plotTop + (year - minYear) * ROW_HEIGHT;
 	const rowY = (index: number) =>
 		plotTop + index * ROW_HEIGHT + (ROW_HEIGHT - BAR_THICKNESS) / 2;
-	const tickStep = (max: number) => (max > 12 ? 5 : max > 6 ? 2 : 1);
+	const tickStep = (max: number) => {
+		const minimumStep = max > 12 ? 5 : max > 6 ? 2 : 1;
+		return (
+			[1, 2, 5, 10, 20].find(
+				(step) => step >= minimumStep && step * unit >= 14,
+			) ?? 20
+		);
+	};
 	const ticks = [
 		...Array.from(
 			{ length: Math.floor(leftMax / tickStep(leftMax)) },
@@ -197,6 +204,7 @@ export default function DivergingRows({
 							dominantBaseline="middle"
 							fontSize={9}
 							fontWeight={900}
+							style={{ fill: "var(--color-control-foreground)" }}
 						>
 							{bucket.year}
 						</text>
