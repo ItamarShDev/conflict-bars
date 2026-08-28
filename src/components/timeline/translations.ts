@@ -113,7 +113,7 @@ export const translations = {
 		},
 		bubble: {
 			title: "Releases by political leaning",
-			subtitle: "Songs per year — left above the line, right below",
+			subtitle: "Songs per year — left vs right",
 			description:
 				"Israeli hip-hop releases counted per year by the artist's political leaning, with conflict periods marked behind the bars.",
 		},
@@ -231,7 +231,7 @@ export const translations = {
 		},
 		bubble: {
 			title: "שירים לפי נטייה פוליטית",
-			subtitle: "שירים לפי שנה — שמאל מעל הקו, ימין מתחת",
+			subtitle: "שירים לפי שנה — שמאל מול ימין",
 			description:
 				"מספר שירי ההיפ־הופ הישראליים שיצאו בכל שנה לפי הנטייה הפוליטית של האמן, עם תקופות הסכסוך מסומנות ברקע.",
 		},
