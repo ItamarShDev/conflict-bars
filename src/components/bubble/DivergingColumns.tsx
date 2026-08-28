@@ -68,6 +68,7 @@ export default function DivergingColumns({
 		ticks.push({ value, y: zeroY + value * unit });
 	}
 
+	let lastLabelEnd = plotLeft;
 	const visibleBands = bands
 		.map((band) => {
 			const x1 = Math.max(xOfDate(band.start), plotLeft);
@@ -81,7 +82,12 @@ export default function DivergingColumns({
 				Math.max(band.x1 + band.width / 2, plotLeft + textWidth / 2),
 				plotRight - textWidth / 2,
 			);
-			return { ...band, labelX: center };
+			const showLabel =
+				band.width > 44 && center - textWidth / 2 >= lastLabelEnd + 6;
+			if (showLabel) {
+				lastLabelEnd = center + textWidth / 2;
+			}
+			return { ...band, labelX: center, showLabel };
 		});
 
 	const tooltip = (
@@ -112,7 +118,7 @@ export default function DivergingColumns({
 						>
 							<title>{band.title}</title>
 						</rect>
-						{band.width > 44 && (
+						{band.showLabel && (
 							<text
 								x={band.labelX}
 								y={MARGIN.top - 12}
