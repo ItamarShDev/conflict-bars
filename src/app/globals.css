@@ -219,7 +219,7 @@ html[data-theme="boombox"] h3 {
 	font-weight: 900;
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
-	color: #fffdf5;
+	color: #1c1b18;
 	background: var(--event-color);
 	border: 2px solid var(--color-border);
 }
