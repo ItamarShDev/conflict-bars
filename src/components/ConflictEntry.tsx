@@ -1,9 +1,9 @@
+import type { CSSProperties } from "react";
 import { translations } from "@/components/timeline/translations";
 import { eventColor } from "@/utils/colors";
 import type { ConflictEntry as ConflictEntryType } from "../../timeline/conflict-utils";
 import { ConflictDetail } from "./conflict/ConflictDetail";
 import { ConflictHeader } from "./conflict/ConflictHeader";
-import { ConflictIndicator } from "./conflict/ConflictIndicator";
 import { ConflictLinks } from "./conflict/ConflictLinks";
 import { ConflictReason } from "./conflict/ConflictReason";
 import { ConflictTimestamp } from "./conflict/ConflictTimestamp";
@@ -41,16 +41,16 @@ export function ConflictEntry({ conflict, lang }: ConflictTimelineEntryProps) {
 
 	return (
 		<div
-			className="boombox-conflict-card glass-card relative z-1 border-2 border-(--color-conflict-border) bg-(--color-conflict-background) p-4 text-(--color-conflict-foreground) tape focus:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent) sm:p-5 text-start"
-			style={{
-				borderLeftWidth: 6,
-				borderLeftColor: color,
-			}}
+			className="boombox-conflict-card event-card relative z-1 p-4 pt-5 text-(--color-conflict-foreground) focus:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent) sm:p-5 sm:pt-6 text-start"
+			style={{ "--event-color": color } as CSSProperties}
 		>
 			<div className="flex gap-2 items-start h-full sm:gap-3">
 				<div className="flex-1 min-w-0 space-y-3 sm:space-y-4">
 					<div>
-						<ConflictTimestamp timestamp={conflict.timestamp} />
+						<div className="mb-2 flex items-center justify-between gap-2">
+							<span className="event-card-label">{t.eventLabel}</span>
+							<ConflictTimestamp timestamp={conflict.timestamp} />
+						</div>
 						<ConflictHeader title={title} />
 						<ConflictReason reason={reason} />
 					</div>
@@ -72,7 +72,6 @@ export function ConflictEntry({ conflict, lang }: ConflictTimelineEntryProps) {
 					</div>
 				</div>
 			</div>
-			<ConflictIndicator color={color} />
 		</div>
 	);
 }

@@ -173,6 +173,57 @@ html[data-theme="boombox"] h3 {
 	}
 }
 
+/* Newspaper clipping — events. Square, ruled, tinted by the event color. */
+.event-card {
+	--event-color: var(--color-accent);
+	color: var(--color-conflict-foreground);
+	background-color: color-mix(
+		in srgb,
+		var(--event-color) 10%,
+		var(--color-conflict-background)
+	);
+	background-image: repeating-linear-gradient(
+		0deg,
+		transparent 0,
+		transparent 27px,
+		color-mix(in srgb, var(--event-color) 18%, transparent) 27px,
+		color-mix(in srgb, var(--event-color) 18%, transparent) 28px
+	);
+	border: 2px dashed
+		color-mix(in srgb, var(--event-color) 55%, var(--color-border));
+	border-top: 10px double var(--event-color);
+	border-radius: 0;
+	box-shadow: -6px 6px 0 color-mix(in srgb, var(--event-color) 35%, transparent);
+}
+
+.event-card::before {
+	content: "";
+	position: absolute;
+	top: -0.75rem;
+	left: 50%;
+	width: 1rem;
+	height: 1rem;
+	border-radius: 9999px;
+	background: var(--event-color);
+	border: 2px solid var(--color-border);
+	box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.25);
+	transform: translateX(-50%);
+	z-index: 2;
+	pointer-events: none;
+}
+
+.event-card-label {
+	display: inline-block;
+	padding: 0.125rem 0.5rem;
+	font-size: 0.65rem;
+	font-weight: 900;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	color: #fffdf5;
+	background: var(--event-color);
+	border: 2px solid var(--color-border);
+}
+
 /* Hand-cut sticker / badge */
 .sticker {
 	display: inline-flex;
