@@ -14,6 +14,7 @@ interface TimelineHeaderProps {
 	stats?: HelpModalStats;
 	nav?: { href: string; label: string };
 	lang: "en" | "he";
+	railOffset?: boolean;
 }
 
 export function TimelineHeader({
@@ -24,11 +25,16 @@ export function TimelineHeader({
 	stats,
 	nav,
 	lang,
+	railOffset = true,
 }: TimelineHeaderProps) {
 	const { theme, setTheme } = useTheme();
 	return (
-		<header className="control-bar sticky top-0 z-30 flex w-full flex-col gap-3 border-0 border-b-4 border-(--color-accent) px-4 py-4 ps-14 md:flex-row md:items-center md:justify-between md:ps-20 md:py-5">
-			<div>
+		<header
+			className={`control-bar sticky top-0 z-30 flex w-full flex-col gap-3 border-0 border-b-4 border-(--color-accent) px-4 py-4 md:flex-row md:items-center md:justify-between md:py-5 ${
+				railOffset ? "ps-14 md:ps-20" : ""
+			}`}
+		>
+			<div className="min-w-0">
 				<h1 className="font-display text-2xl font-black leading-none tracking-tight text-(--color-control-foreground) md:text-4xl">
 					{title}
 				</h1>
@@ -37,7 +43,7 @@ export function TimelineHeader({
 				</p>
 			</div>
 
-			<div className="flex items-center gap-2 md:gap-3">
+			<div className="flex flex-wrap items-center gap-2 md:flex-nowrap md:gap-3">
 				{nav && (
 					<Link
 						href={nav.href}

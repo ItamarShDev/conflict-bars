@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import {
-	BubbleChart,
-	type ConflictBand,
-} from "@/components/bubble/BubbleChart";
+import { BubbleChart } from "@/components/bubble/BubbleChart";
+import type { ConflictBand } from "@/components/bubble/chart-data";
 import { TimelineHeader } from "@/components/timeline/TimelineHeader";
 import { translations } from "@/components/timeline/translations";
 import { loadFileSongs } from "@/utils/file-songs";
@@ -72,10 +70,11 @@ export default async function BubblePage({
 				helpModal={t.helpModal}
 				stats={stats}
 				lang={lang}
+				railOffset={false}
 				nav={{ href: `/${lang}`, label: t.nav.timeline }}
 			/>
 
-			<main className="min-h-screen ps-14 pt-4 md:ps-20 md:pt-6">
+			<main className="min-h-screen pt-4 md:pt-6">
 				<div className="mx-4 md:mx-6">
 					<BubbleChart
 						songs={songs}
