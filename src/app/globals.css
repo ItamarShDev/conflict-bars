@@ -220,8 +220,8 @@ html[data-theme="boombox"] h3 {
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
 	color: #1c1b18;
-	background: var(--event-color);
-	border: 2px solid var(--color-border);
+	background: color-mix(in srgb, var(--event-color) 45%, #fffdf5);
+	border: 2px solid var(--event-color);
 }
 
 /* Hand-cut sticker / badge */
