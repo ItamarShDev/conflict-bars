@@ -2,7 +2,7 @@ export const shadiamansour2010s = [
 	{
 		name: "We Have to Change (لازم نتغير / Lazem Netghayyar)",
 		artist: "Shadia Mansour (شادية منصور)",
-		collaborators: ["Omar Offendum"],
+		collaborators: ["Omar Offendum (Omar Chakaki)"],
 		// The collaborator confirms April, not the exact first-release day.
 		published_date: "2013-04",
 		lyric_sample: {
