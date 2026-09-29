@@ -1,5 +1,19 @@
 export const mcAbdul2020s = [
 	{
+		name: "Wait for Me",
+		artist: "MC Abdul",
+		collaborators: ["Nai Barghouti"],
+		// Audio single date; the official video followed on June 10.
+		published_date: "2026-06-05",
+		lyric_sample: {
+			english_translation: "Hide and seek from the F16",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=ZHD0QPEkCpw",
+			song_info: "https://open.spotify.com/album/4duiGyBEuWMrNuN1IfH4u8",
+		},
+	},
+	{
 		name: "Shouting at the Wall",
 		artist: "MC Abdul",
 		language: "Arabic/English",

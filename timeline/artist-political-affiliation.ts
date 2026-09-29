@@ -6,6 +6,30 @@ export const artistPoliticalAffiliation: Record<
 		notes: string;
 	}
 > = {
+	"Nono, Shrek, Cohen, Eden Derso & Ori Shochat": {
+		era: "2020s",
+		affiliation: "Unknown",
+		notes:
+			"Collaborators on ERAN's S.O.S mental-health campaign. No shared political affiliation assigned.",
+	},
+	"Omer Adam & ShrekDiMC": {
+		era: "2020s",
+		affiliation: "Unknown",
+		notes:
+			"Collaborated on the 2023 memorial recording HaSimcha / Medabrim Al Shalom. No shared political affiliation assigned.",
+	},
+	"GUETTA (גואטה)": {
+		era: "2010s",
+		affiliation: "Unknown",
+		notes:
+			"Producer of Hadashot with Pele Ozen and Shanan Street. Political affiliation not established by this recording.",
+	},
+	Macklemore: {
+		era: "2020s",
+		affiliation: "Unknown",
+		notes:
+			"Included for HIND'S HALL 2 with Palestinian collaborators, including MC Abdul. No partisan affiliation assigned.",
+	},
 	"Shabak Samech (שבק ס)": {
 		era: "1990s–present",
 		affiliation: "Counterculture / Apolitical",
