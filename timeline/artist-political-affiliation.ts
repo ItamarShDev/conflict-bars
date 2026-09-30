@@ -24,6 +24,12 @@ export const artistPoliticalAffiliation: Record<
 		notes:
 			"Producer of Hadashot with Pele Ozen and Shanan Street. Political affiliation not established by this recording.",
 	},
+	Kneecap: {
+		era: "2020s",
+		affiliation: "Unknown",
+		notes:
+			"Included for Palestine with West Bank rapper Fawzi. An Irish-led collaboration; no partisan affiliation assigned.",
+	},
 	Macklemore: {
 		era: "2020s",
 		affiliation: "Unknown",

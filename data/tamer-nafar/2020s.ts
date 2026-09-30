@@ -1,5 +1,18 @@
 export const tamernafar2020s = [
 	{
+		name: "Go There",
+		artist: "Tamer Nafar (תאמר נפאר)",
+		language: "English",
+		published_date: "2022-02-24",
+		lyric_sample: {
+			english_translation: "Everyone is bleeding",
+		},
+		links: {
+			lyrics: "https://www.arabnews.com/node/2044261/lifestyle",
+			song_info: "https://gaana.com/album/go-there-english-5861-1432",
+		},
+	},
+	{
 		name: "Rock it like a Palestinian",
 		artist: "Tamer Nafar (תאמר נפאר)",
 		published_date: "2020",

@@ -1,5 +1,20 @@
 export const jimboJ2020s = [
 	{
+		name: "בומים (Boomim / Booms)",
+		artist: "Jimbo J (ג'ימבו ג')",
+		language: "Hebrew",
+		// Original single date, before October 7 and the later album release.
+		published_date: "2023-08-21",
+		lyric_sample: {
+			hebrew: "בומים בייבי בואי ניסע מכאן",
+			english_translation: "Booms, baby, let's leave here.",
+		},
+		links: {
+			lyrics: "https://patiphon.co.il/music/egf8683DGY",
+			song_info: "https://ototoy.jp/_/default/p/1771451",
+		},
+	},
+	{
 		name: "עזבנו את תל אביב (Azavnu et Tel Aviv)",
 		artist: "Jimbo J (ג'ימבו ג')",
 		language: "Hebrew",

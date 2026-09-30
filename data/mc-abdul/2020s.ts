@@ -1,5 +1,21 @@
 export const mcAbdul2020s = [
 	{
+		name: "What Is It Worth?",
+		artist: "MC Abdul",
+		language: "English",
+		// One-minute social-video release responding to the August 2022 fighting.
+		published_date: "2022-08-08",
+		lyric_sample: {
+			english_translation: "Living my life under siege",
+		},
+		links: {
+			lyrics:
+				"https://www.thenationalnews.com/arts-culture/music/2022/08/08/teen-rapper-mc-abdul-responds-to-attacks-on-gaza-with-new-song-what-is-it-worth/",
+			song_info:
+				"https://me.mashable.com/culture/18667/13-year-old-rapper-release-new-single-what-is-it-worth-amid-attacks-on-gaza",
+		},
+	},
+	{
 		name: "Wait for Me",
 		artist: "MC Abdul",
 		collaborators: ["Nai Barghouti"],
