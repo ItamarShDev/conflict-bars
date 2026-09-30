@@ -1,5 +1,21 @@
 export const shabjdeed2020s = [
 	{
+		name: "Kattal (كتال)",
+		artist: "Shabjdeed (شبجديد)",
+		collaborators: ["Touch", "Smokaholic"],
+		language: "Arabic",
+		published_date: "2026-05-05",
+		lyric_sample: {
+			hebrew: "بعد الحرب نعود نحن",
+			english_translation: "After the war, we return.",
+		},
+		links: {
+			song_info: "https://bltnm.bandcamp.com/track/kattal",
+			lyrics:
+				"https://mena.rollingstone.com/music/music-album-reviews/shabjdeed-touch-smokaholic-kattal-review/",
+		},
+	},
+	{
 		name: "Nasheed (نشيد)",
 		artist: "Shabjdeed (شبجديد)",
 		collaborators: ["Al Nather (النثر)"],

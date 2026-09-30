@@ -1,5 +1,21 @@
 export const shabjdeed2010s = [
 	{
+		name: "Fi Harb (في حرب / There's a War)",
+		artist: "Shabjdeed (شبجديد)",
+		collaborators: ["Riyadiyat", "Al Nather (النثر)"],
+		language: "Arabic",
+		published_date: "2019-12-31",
+		lyric_sample: {
+			english_translation:
+				"Published translation (SceneNoise): Missiles from Gaza are reaching Antarctica",
+		},
+		links: {
+			song_info: "https://bltnm.bandcamp.com/track/fi-harb",
+			lyrics:
+				"https://scenenoise.com/New-Music/shabjdeed-ventures-into-drill-with-riyadiyat-in-latest-single-fi-harb",
+		},
+	},
+	{
 		name: "Carlo (كارلو)",
 		artist: "Shabjdeed (شبجديد)",
 		collaborators: ["Al Nather (النثر)"],

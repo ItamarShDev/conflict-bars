@@ -1,5 +1,23 @@
 export const subliminal2020s = [
 	{
+		name: "עם הנצח (Am HaNetzach)",
+		artist: "Subliminal (סאבלימינל)",
+		collaborators: ["The Shadow (הצל)"],
+		language: "Hebrew",
+		// Released before October 7; not a response to the ensuing war.
+		published_date: "2023-03-30",
+		lyric_sample: {
+			hebrew:
+				"הקשר (לא ציטוט מהשיר): קריאה לאחדות בישראל בזמן פילוג פנימי, עם התייחסויות לביטחון ולהישרדות לאומית.",
+			english_translation:
+				"Context (not lyrics): A call for Israeli unity during domestic political division, with references to security and national survival.",
+		},
+		links: {
+			lyrics: "https://e.walla.co.il/item/3569322",
+			song_info: "https://www.top-charts.com/s/m-hntskh-subliminal-the-shadow",
+		},
+	},
+	{
 		name: "זה עלינו (Zeh Aleinu / It's On Us)",
 		artist: "Subliminal (סאבלימינל)",
 		collaborators: ["The Shadow (הצל)", "Raviv Kaner (רביב כנר)"],

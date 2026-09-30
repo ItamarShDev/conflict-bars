@@ -1,5 +1,23 @@
 export const saintLevant2020s = [
 	{
+		name: "DALOONA",
+		artist: "Saint Levant (سانت ليفانت)",
+		collaborators: ["47SOUL", "Shadi Alborini", "Qasem AlNajjar"],
+		language: "Arabic",
+		// Original single date; later appearances do not constitute a new song.
+		published_date: "2024-11-25",
+		lyric_sample: {
+			english_translation:
+				"Published English translation: I belong to an unbreakable people",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=NdONzDuKzq0",
+			lyrics: "https://www.youtube.com/watch?v=NdONzDuKzq0",
+			song_info:
+				"https://music.apple.com/tr/album/daloona-feat-shadi-alborini-qasem-alnajjar-single/1779793812",
+		},
+	},
+	{
 		name: "Deira (ديرة)",
 		artist: "Saint Levant (سانت ليفانت)",
 		language: "Arabic/English/French",

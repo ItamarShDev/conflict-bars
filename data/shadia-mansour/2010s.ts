@@ -1,5 +1,21 @@
 export const shadiamansour2010s = [
 	{
+		name: "We Have to Change (لازم نتغير / Lazem Netghayyar)",
+		artist: "Shadia Mansour (شادية منصور)",
+		collaborators: ["Omar Offendum (Omar Chakaki)"],
+		// The collaborator confirms April, not the exact first-release day.
+		published_date: "2013-04",
+		lyric_sample: {
+			hebrew:
+				"הקשר (לא ציטוט מהשיר): הקליפ מוקדש לג'וליאנו מר חמיס, ממייסדי תיאטרון החופש בג'נין.",
+			english_translation:
+				"Context (not lyrics): The collaboration's video is dedicated to Juliano Mer Khamis, associated with the Freedom Theatre in Jenin.",
+		},
+		links: {
+			song_info: "http://offendum.blogspot.com/2013/04/we-have-to-change.html",
+		},
+	},
+	{
 		name: "Al Kufiyyeh 3arabeyyeh (The Kufiya is Arab)",
 		artist: "Shadia Mansour (شادية منصور)",
 		published_date: "2010-03-18",
