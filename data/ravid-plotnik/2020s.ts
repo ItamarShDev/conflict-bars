@@ -1,5 +1,21 @@
 export const ravidPlotnik2020s = [
 	{
+		name: "בחשכה (הכל זה גם וגם) (BeChashecha / In the Dark)",
+		artist: "Ravid Plotnik (רביד פלוטניק)",
+		language: "Hebrew",
+		published_date: "2025-01-10",
+		lyric_sample: {
+			hebrew:
+				"רקע: ביקורת כלכליסט קושרת את השיר לאזכרות, לפצועים ולהלוויות בימים שלאחר 7 באוקטובר.",
+			english_translation:
+				"Context: Calcalist's review connects this track to memorials, wounded people and funerals in the days following October 7.",
+		},
+		links: {
+			lyrics: "https://ravidplotnik.bandcamp.com/track/--87",
+			song_info: "https://www.calcalist.co.il/style/article/hywpybuwyl",
+		},
+	},
+	{
 		name: "שגרה בזמן מלחמה (Shigra BeZman Milchama / Routine During War)",
 		artist: "Ravid Plotnik (רביד פלוטניק)",
 		collaborators: ["Taboo Plus"],

@@ -1,5 +1,22 @@
 export const shabjdeed2020s = [
 	{
+		name: "SA7BI (صاحبي / My Friend)",
+		artist: "Shabjdeed (شبجديد)",
+		language: "Arabic",
+		published_date: "2025-04-12",
+		lyric_sample: {
+			hebrew:
+				"רקע: SceneNoise מפרש את השיר כעוסק גם בבגידה אישית וגם בבגידה בפלסטין.",
+			english_translation:
+				"Context: SceneNoise reads the song as addressing both personal betrayal and the betrayal of Palestine.",
+		},
+		links: {
+			lyrics: "https://bltnm.bandcamp.com/track/sa7bi",
+			song_info:
+				"https://scenenoise.com/New-Music/SA7BI-Shabjdeed-s-Line-in-the-Sand",
+		},
+	},
+	{
 		name: "Kattal (كتال)",
 		artist: "Shabjdeed (شبجديد)",
 		collaborators: ["Touch", "Smokaholic"],
