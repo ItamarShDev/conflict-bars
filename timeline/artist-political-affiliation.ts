@@ -6,6 +6,12 @@ export const artistPoliticalAffiliation: Record<
 		notes: string;
 	}
 > = {
+	"Teapacks (טיפקס)": {
+		era: "1980s–present",
+		affiliation: "Unknown",
+		notes:
+			"Scene-adjacent pop/hip-hop act. Kobi Oz links Ma Asita? to the Oslo Accords; no political affiliation assigned.",
+	},
 	"Nono, Shrek, Cohen, Eden Derso & Ori Shochat": {
 		era: "2020s",
 		affiliation: "Unknown",
