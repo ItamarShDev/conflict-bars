@@ -8,7 +8,8 @@ export const tamernafar2020s = [
 			english_translation: "Everyone is bleeding",
 		},
 		links: {
-			lyrics: "https://www.arabnews.com/node/2044261/lifestyle",
+			lyrics:
+				"https://lyrics.jspinyin.net/lyrics-tamer-nafar-%D7%AA%D7%90%D7%9E%D7%A8-%D7%A0%D7%A4%D7%90%D7%A8/",
 			song_info: "https://gaana.com/album/go-there-english-5861-1432",
 		},
 	},
@@ -37,8 +38,7 @@ export const tamernafar2020s = [
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=6kJl_pEhvxM",
-			lyrics:
-				"https://lyricstranslate.com/en/tamer-nafar-beat-never-goes-lyrics.html",
+			lyrics: "https://www.youtube.com/watch?v=6kJl_pEhvxM",
 		},
 	},
 	{
@@ -88,7 +88,6 @@ export const tamernafar2020s = [
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=d1lxAWfthtE",
-			lyrics: "https://www.antiwarsongs.org/canzone.php?id=66244&lang=en",
 		},
 	},
 ];

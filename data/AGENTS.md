@@ -15,6 +15,7 @@ Purpose: fast orientation for adding songs in `data/`.
   published_date: "YYYY" | "YYYYs",
   language?: "Hebrew" | "Arabic" | "English" | ..., 
   lyric_sample?: { hebrew?: string; english_translation?: string },
+  full_lyrics?: { hebrew?: string; english_translation?: string },
   links?: { lyrics?: string; song_info?: string; youtube?: string },
 }
 ```
@@ -24,6 +25,13 @@ Purpose: fast orientation for adding songs in `data/`.
 2) Open/create era file for song year; append entry inside exported array.
 3) Ensure `index.ts` re-exports era array (add if missing).
 4) Prefer richer data (lyrics, translation, links) per AGENTS guide.
+
+## Full lyrics
+- Put supplied or licensed complete texts in `full_lyrics`, not `lyric_sample`.
+- Use multiline template strings to preserve verses and stanza breaks.
+- Both languages are optional; omit missing text rather than substituting an excerpt or summary.
+- Keep `links.lyrics` as the source link. Run `npm run generate-songs` after editing.
+- Without complete text, song cards open `links.lyrics` directly. Verify the URL matches the song and performer and includes lyrics, not just metadata or excerpts. Use `links.song_info` for context articles. Never construct unverified URL slugs.
 
 ## Cross-checks
 - Keep naming consistent with Convex artist names when possible.

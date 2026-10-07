@@ -6,6 +6,8 @@ export const shadiaMansour2000s = [
 		language: "Arabic",
 		published_date: "2007",
 		links: {
+			lyrics:
+				"http://revolutionaryarabraptheindex.blogspot.com/2014/05/shadia-mansour-ft-mahmoud-jrere-of-dam.html",
 			youtube: "https://www.youtube.com/watch?v=b8jgb4KQzsk",
 		},
 	},

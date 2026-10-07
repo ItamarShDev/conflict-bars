@@ -5,6 +5,8 @@ export const boikutt2010s = [
 		language: "Arabic",
 		published_date: "2011",
 		links: {
+			lyrics:
+				"http://revolutionaryarabraptheindex.blogspot.com/2014/05/boikutt-ignite.html",
 			youtube: "https://www.youtube.com/watch?v=iLY19_4hu98",
 		},
 	},

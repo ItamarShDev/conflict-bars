@@ -86,6 +86,8 @@ export function getEntriesByYear(
 			...(song.collaborators ?? []),
 			song.lyric_sample?.hebrew,
 			song.lyric_sample?.english_translation,
+			song.full_lyrics?.hebrew,
+			song.full_lyrics?.english_translation,
 		];
 		return haystacks.some((value) =>
 			value?.toLowerCase().includes(normalizedSearch),

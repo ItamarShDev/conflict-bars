@@ -27,7 +27,8 @@ export const hadagNahash2000s = [
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=70i9PvrsvJ0",
-			lyrics: "https://genius.com/Hadag-nahash-gabby-vedebby-lyrics",
+			lyrics:
+				"https://www.tab4u.com/lyrics/songs/1240_%D7%94%D7%93%D7%92_%D7%A0%D7%97%D7%A9_-_%D7%92%D7%91%D7%99_%D7%95%D7%93%D7%91%D7%99.html",
 		},
 	},
 	{
@@ -42,7 +43,8 @@ export const hadagNahash2000s = [
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=qHM3uTxvPRg",
-			lyrics: "https://genius.com/Hadag-nahash-lo-frayerim-lyrics",
+			lyrics:
+				"https://www.tab4u.com/lyrics/songs/1241_%D7%94%D7%93%D7%92_%D7%A0%D7%97%D7%A9_-_%D7%9C%D7%90_%D7%A4%D7%A8%D7%90%D7%99%D7%99%D7%A8%D7%99%D7%9D.html",
 		},
 	},
 	{
@@ -74,7 +76,8 @@ export const hadagNahash2000s = [
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=QflL6R2-k-8",
-			lyrics: "https://genius.com/Hadag-nahash-shirat-hasticker-lyrics",
+			lyrics:
+				"https://www.tab4u.com/lyrics/songs/1242_%D7%94%D7%93%D7%92_%D7%A0%D7%97%D7%A9_-_%D7%A9%D7%99%D7%A8%D7%AA_%D7%94%D7%A1%D7%98%D7%99%D7%A7%D7%A8.html",
 		},
 	},
 	{

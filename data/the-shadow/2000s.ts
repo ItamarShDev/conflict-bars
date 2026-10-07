@@ -13,7 +13,7 @@ export const theShadow2000s = [
 		links: {
 			youtube: "https://www.youtube.com/watch?v=26CeXRrfNdU",
 			lyrics:
-				"https://lyricstranslate.com/en/biladi-%D7%91%D7%99%D7%9C%D7%90%D7%93%D7%99-my-country.html",
+				"https://www.allthelyrics.com/lyrics/subliminal/biladi-lyrics-1220867.html",
 		},
 	},
 	{

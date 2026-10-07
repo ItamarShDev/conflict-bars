@@ -46,7 +46,8 @@ export const mooki2000s = [
 				"A man is only a man, and what is between blood and blood? / They divide the world into for-us and against-them —",
 		},
 		links: {
-			lyrics: "https://genius.com/Mooki-haadama-bocha-lyrics",
+			lyrics:
+				"https://www.nagnu.co.il/%D7%90%D7%95%D7%9E%D7%A0%D7%99%D7%9D/%D7%9E%D7%95%D7%A7%D7%99/%D7%94%D7%90%D7%93%D7%9E%D7%94_%D7%91%D7%95%D7%9B%D7%94/%D7%90%D7%A7%D7%95%D7%A8%D7%93%D7%99%D7%9D",
 			song_info:
 				"https://pizmonet.co.il/wiki/%D7%94%D7%90%D7%93%D7%9E%D7%94_%D7%91%D7%95%D7%9B%D7%94",
 			youtube: "https://www.youtube.com/watch?v=Tgjmb1PCX6k",

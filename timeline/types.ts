@@ -37,6 +37,7 @@ export type FileSong = {
 	published_date: string;
 	language?: string;
 	lyric_sample?: { hebrew?: string; english_translation?: string };
+	full_lyrics?: { hebrew?: string; english_translation?: string };
 	links?: { lyrics?: string; song_info?: string; youtube?: string };
 };
 

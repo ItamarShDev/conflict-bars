@@ -9,8 +9,6 @@ export const mcAbdul2020s = [
 			english_translation: "Living my life under siege",
 		},
 		links: {
-			lyrics:
-				"https://www.thenationalnews.com/arts-culture/music/2022/08/08/teen-rapper-mc-abdul-responds-to-attacks-on-gaza-with-new-song-what-is-it-worth/",
 			song_info:
 				"https://me.mashable.com/culture/18667/13-year-old-rapper-release-new-single-what-is-it-worth-amid-attacks-on-gaza",
 		},
@@ -39,7 +37,7 @@ export const mcAbdul2020s = [
 				"I want freedom for the population / Two million prisoners living in this location / Shouting at the wall but nothing is ever-changing / That's life under an occupation.",
 		},
 		links: {
-			lyrics: "https://genius.com/Mc-abdul-shouting-at-the-wall-lyrics",
+			lyrics: "https://www.antiwarsongs.org/canzone.php?id=67301&lang=it",
 			youtube: "https://www.youtube.com/watch?v=l8qay1Al7Dc",
 		},
 	},
@@ -53,6 +51,7 @@ export const mcAbdul2020s = [
 				"Released weeks before October 7 by the Gaza-born rapper; frames the pen and the microphone as his response to life under blockade.",
 		},
 		links: {
+			lyrics: "https://www.youtube.com/watch?v=UnwLtBRLOUg",
 			youtube: "https://www.youtube.com/watch?v=UnwLtBRLOUg",
 		},
 	},
@@ -81,8 +80,7 @@ export const mcAbdul2020s = [
 				"I want to call my mother; I hope she charged her phone. I hope my brother is not alone.",
 		},
 		links: {
-			lyrics:
-				"https://www.rollingstone.com/music/music-features/mc-abdul-palestine-gaza-rap-1234980971/",
+			lyrics: "https://www.antiwarsongs.org/canzone.php?id=67695&lang=en",
 			song_info: "https://audiomack.com/mca-rap/song/let-it-rain-6866289",
 		},
 	},

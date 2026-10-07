@@ -35,6 +35,7 @@ export const tamerNafar2010s = [
 				"Closing track and theme song of the Junction 48 soundtrack, a film about a Palestinian rapper in the mixed Jewish-Arab city of Lyd/Lod.",
 		},
 		links: {
+			lyrics: "https://www.youtube.com/watch?v=8-4R4QhXJX0",
 			youtube: "https://www.youtube.com/watch?v=8-4R4QhXJX0",
 			song_info:
 				"https://deadline.com/2016/04/junction-48-rapper-tamer-nafar-music-video-if-only-1201736017/",

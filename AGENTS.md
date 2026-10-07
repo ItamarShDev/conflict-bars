@@ -71,7 +71,7 @@ This doc orients AI/automation agents to work safely and effectively on Conflict
 3) First time: `npm run migrate` (songs/artists) and `npm run migrate:events` (conflicts)
 4) `npm run dev` → http://localhost:3000 (redirects to `/he`)
 
-Checks before opening a PR: `npm run generate-songs`, `npm run lint` (Biome), `npm run typecheck`, `npm run build`. Formatting fixes: `npm run format` or `npx biome check --write <paths>`.
+Checks before opening a PR: `npm run generate-songs`, `npm test` (Vitest), `npm run lint` (Biome), `npm run typecheck`, `npm run build`. Formatting fixes: `npm run format` or `npx biome check --write <paths>`.
 Other: `npm run db:clear`, `npm run reset-data`, `npm run migrate:language`, `npx convex dashboard`.
 
 ## Contribution Guidance for Agents

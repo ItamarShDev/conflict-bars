@@ -43,8 +43,6 @@ export const tuna2020s = [
 				"Amid all the mess, the fire and the missiles / guitar and keys, we are all soldiers.",
 		},
 		links: {
-			lyrics:
-				"https://he.wikipedia.org/wiki/%D7%A8%D7%95%D7%91%D7%99%D7%9D_%D7%95%D7%AA%D7%9C%D7%AA%D7%9C%D7%99%D7%9D_(%D7%A9%D7%99%D7%A8)",
 			song_info:
 				"https://he.wikipedia.org/wiki/%D7%A8%D7%95%D7%91%D7%99%D7%9D_%D7%95%D7%AA%D7%9C%D7%AA%D7%9C%D7%99%D7%9D",
 		},
