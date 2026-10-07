@@ -30,7 +30,7 @@ export const ravidPlotnik2020s = [
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=C9eH_-NsOFw",
-			lyrics: "https://ravidplotnik.bandcamp.com/album/--7",
+			lyrics: "https://ravidplotnik.bandcamp.com/track/--79",
 		},
 	},
 ];

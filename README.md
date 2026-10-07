@@ -91,6 +91,7 @@ Open http://localhost:3000 — `/` redirects to `/he` (see `next.config.ts`); `/
 - `npm run dev` / `npm run build` / `npm run start`
 - `npm run generate-songs` — rebuild `data/songs-generated.json` from `data/`
 - `npm run lint` — Biome check; `npm run format` — Biome write; `npm run typecheck` — `tsc --noEmit`
+- `npm test` — run the Vitest regression suite (include with lint, typecheck and build before opening a PR)
 - `npm run migrate`, `migrate:force`, `migrate:events`, `migrate:language` — Convex data migrations
 - `npm run db:clear`, `reset-data`, `reset-data:force` — clear/reseed Convex songs
 - `npx convex dev`, `npx convex dashboard`

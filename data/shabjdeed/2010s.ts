@@ -25,7 +25,7 @@ export const shabjdeed2010s = [
 				"Between the son of Jerusalem and the son of Ram / there is a wall.",
 		},
 		links: {
-			lyrics: "https://bltnm.bandcamp.com/album/carlo-seer-sa3",
+			lyrics: "https://bltnm.bandcamp.com/track/carlo",
 			youtube: "https://www.youtube.com/watch?v=shTbSKNOYE4",
 		},
 	},

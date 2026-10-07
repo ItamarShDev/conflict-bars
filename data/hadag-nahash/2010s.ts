@@ -57,7 +57,7 @@ export const hadagNahash2010s = [
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=Up1HpdHpFyk",
-			lyrics: "https://hadagnahash.bandcamp.com/album/welcome-to-izrael",
+			lyrics: "https://hadagnahash.bandcamp.com/track/--31",
 		},
 	},
 	{

@@ -13,6 +13,7 @@
 		"format": "biome format --write .",
 		"format:check": "biome format .",
 		"typecheck": "tsc --noEmit",
+		"test": "vitest run",
 		"migrate": "tsx scripts/migrate-data.ts",
 		"migrate:force": "tsx scripts/migrate-data.ts --force",
 		"migrate:events": "tsx scripts/migrate-events.ts",
