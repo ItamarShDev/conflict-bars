@@ -3,32 +3,16 @@ export const shabakSamech2020s = [
 		name: "אמן (Amen)",
 		artist: "Shabak Samech (שבק ס)",
 		language: "Hebrew",
-		published_date: "2024-01-01",
+		published_date: "2024-11-17",
 		lyric_sample: {
-			hebrew: "שנשמע רק בשורות טובות, אמן. שנדע ימים טובים מאלה, אמן.",
-			english_translation:
-				"May we only hear good news, Amen. May we know better days than these, Amen.",
+			hebrew: "אמן אני אומר אמן על כל מה שיש",
+			english_translation: "Amen, I say amen for all that is.",
 		},
 		links: {
+			song_info: "https://e.walla.co.il/item/3705039",
 			lyrics:
 				"https://bagels.tv/%D7%A9%D7%91%D7%A7-%D7%A1-%D7%90%D6%B8%D7%9E%D6%B5%D7%9F/",
 			youtube: "https://www.youtube.com/watch?v=XjvxMcZwmG4",
-		},
-	},
-	{
-		name: "כולם עושים את זה (Kulam Osim Et Ze)",
-		artist: "Shabak Samech (שבק ס)",
-		language: "Hebrew",
-		published_date: "2022-09-15",
-		lyric_sample: {
-			hebrew:
-				"אם בממשלה הראש גנב, מה יגיד אז הזנב? גם הרב הוא מעורב, כל החצר מאחוריו.",
-			english_translation:
-				"If the head of the government is a thief, what will the tail say? The rabbi is also involved, the whole court is behind him.",
-		},
-		links: {
-			youtube: "https://www.youtube.com/watch?v=SnGP2Qx3ddg",
-			lyrics: "https://genius.com/Shabak-samech-koolam-osim-et-ze-lyrics",
 		},
 	},
 ];

@@ -14,17 +14,4 @@ export const izzy2020s = [
 			youtube: "https://www.youtube.com/watch?v=GAdS-TWD53Y",
 		},
 	},
-	{
-		name: "לחיי הזמנים הקשים (LeChayey HaZmanim HaKashim / To the Hard Times)",
-		artist: "Izzy (איזי)",
-		language: "Hebrew",
-		published_date: "2024-02-12",
-		lyric_sample: {
-			english_translation:
-				"Single released during the Israel-Hamas war about the hardships and falls endured personally and as a people.",
-		},
-		links: {
-			youtube: "https://www.youtube.com/watch?v=viHtF3OmBi4",
-		},
-	},
 ];

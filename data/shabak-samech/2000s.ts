@@ -1,25 +1,16 @@
 export const shabakSamech2000s = [
 	{
-		name: "C'naan 2000",
-		artist: "Shabak Samech (שבק ס)",
-		published_date: "2000",
-		lyric_sample: {
-			hebrew: "לא חשוב מה, לא חשוב מי / יהיה פה שלום בעזרת השם",
-			english_translation:
-				"It doesn't matter what, it doesn't matter who / There will be peace here, with God's help.",
-		},
-	},
-	{
 		name: "Ein Kavod - אין כבוד",
 		artist: "Shabak Samech (שבק ס)",
 		language: "Hebrew",
-		published_date: "2001-03-22",
+		published_date: "2000",
 		lyric_sample: {
 			hebrew: "עיניים להם אבל הם לא יראו / אוזניים להם אבל הם לא ישמעו",
 			english_translation:
 				"They have eyes but they do not see / they have ears but they do not hear.",
 		},
 		links: {
+			song_info: "https://he.israel-music.com/shabak_samech/cnaan_2000/",
 			youtube: "https://www.youtube.com/watch?v=8yaFRsZc1M4",
 			lyrics: "https://genius.com/Shabak-samech-ein-kavod-lyrics",
 		},
@@ -56,23 +47,6 @@ export const shabakSamech2000s = [
 		links: {
 			youtube: "https://www.youtube.com/watch?v=OPHjm2qVMzM",
 			lyrics: "https://shirrim.com/song-lyrics/בום-קרנבל/",
-		},
-	},
-	{
-		name: "Nofel Ve'kam - נופל וקם",
-		artist: "Shabak Samech (שבק ס)",
-		language: "Hebrew",
-		published_date: "2000-10-15",
-		lyric_sample: {
-			hebrew:
-				"הדרך ארוכה ומפותלת / אני נופל וקם, נופל וקם... אף פעם לא אפסיק ללכת",
-			english_translation:
-				"The road is long and winding / I fall and get up, fall and get up... I will never stop walking.",
-		},
-		links: {
-			lyrics:
-				"https://www.tab4u.com/lyrics/songs/2567_%D7%A9%D7%91%26quot%3B%D7%A7_%D7%A1%26%2339%3B_-_%D7%A0%D7%95%D7%A4%D7%9C_%D7%95%D7%A7%D7%9D.html",
-			youtube: "https://www.youtube.com/watch?v=8glXPD07-Zk",
 		},
 	},
 ];
