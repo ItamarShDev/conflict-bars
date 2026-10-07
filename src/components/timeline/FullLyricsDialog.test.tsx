@@ -83,6 +83,34 @@ describe("full lyrics dialog", () => {
 });
 
 describe("song card lyrics button", () => {
+	it.each(["en", "he"] as const)(
+		"centers every song action label in %s with consistent button heights",
+		(lang) => {
+			const html = renderToStaticMarkup(
+				<SongEntry
+					song={{
+						...song,
+						links: {
+							lyrics: "https://example.com/lyrics",
+							song_info: "https://example.com/info",
+							youtube: "https://example.com/video",
+						},
+					}}
+					lang={lang}
+					leaning="unknown"
+				/>,
+			);
+			const actions = html.match(
+				/<(?:button|a)\b[^>]*class="inline-flex[^"]*"[^>]*>/g,
+			);
+			expect(actions).toHaveLength(4);
+			for (const action of actions ?? []) {
+				expect(action).toContain("min-h-11 items-center justify-center");
+				expect(action).toContain("text-center");
+			}
+		},
+	);
+
 	it.each(["full", "compact"] as const)(
 		"renders on a %s card with no links or full text",
 		(variant) => {

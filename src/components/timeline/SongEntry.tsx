@@ -196,7 +196,7 @@ export function SongEntry({
 								setIsLyricsOpen(true);
 							}}
 							aria-haspopup="dialog"
-							className="min-h-11 border-2 border-(--color-control-border) bg-(--color-accent) px-3 py-1 text-xs font-black text-[#fffdf5] transition hover:bg-(--color-accent-hover) focus-visible:outline-2 focus-visible:outline-(--color-accent)"
+							className="inline-flex min-h-11 items-center justify-center border-2 border-(--color-control-border) bg-(--color-accent) px-3 py-1 text-center text-xs font-black text-[#fffdf5] transition hover:bg-(--color-accent-hover) focus-visible:outline-2 focus-visible:outline-(--color-accent)"
 						>
 							{t.fullLyrics.button}
 						</button>
@@ -205,7 +205,7 @@ export function SongEntry({
 								href={links.lyrics}
 								target="_blank"
 								rel="noreferrer"
-								className="border-2 border-(--color-control-border) bg-(--color-control-background) px-3 py-1 text-xs font-black text-(--color-accent) transition wobble-sm hover:border-(--color-accent) hover:bg-(--color-accent) hover:text-[#fffdf5]"
+								className="inline-flex min-h-11 items-center justify-center border-2 border-(--color-control-border) bg-(--color-control-background) px-3 py-1 text-center text-xs font-black text-(--color-accent) transition wobble-sm hover:border-(--color-accent) hover:bg-(--color-accent) hover:text-[#fffdf5]"
 							>
 								{t.lyrics}
 							</a>
@@ -215,7 +215,7 @@ export function SongEntry({
 								href={links.song_info}
 								target="_blank"
 								rel="noreferrer"
-								className="border-2 border-(--color-control-border) bg-(--color-control-background) px-3 py-1 text-xs font-black text-(--color-accent) transition wobble-sm hover:border-(--color-accent) hover:bg-(--color-accent) hover:text-[#fffdf5]"
+								className="inline-flex min-h-11 items-center justify-center border-2 border-(--color-control-border) bg-(--color-control-background) px-3 py-1 text-center text-xs font-black text-(--color-accent) transition wobble-sm hover:border-(--color-accent) hover:bg-(--color-accent) hover:text-[#fffdf5]"
 							>
 								{t.info}
 							</a>
@@ -225,7 +225,7 @@ export function SongEntry({
 								href={links.youtube}
 								target="_blank"
 								rel="noreferrer"
-								className="border-2 border-(--color-control-border) bg-(--color-control-background) px-3 py-1 text-xs font-black text-(--color-accent) transition wobble-sm hover:border-(--color-accent) hover:bg-(--color-accent) hover:text-[#fffdf5]"
+								className="inline-flex min-h-11 items-center justify-center border-2 border-(--color-control-border) bg-(--color-control-background) px-3 py-1 text-center text-xs font-black text-(--color-accent) transition wobble-sm hover:border-(--color-accent) hover:bg-(--color-accent) hover:text-[#fffdf5]"
 							>
 								{t.youtube}
 							</a>
