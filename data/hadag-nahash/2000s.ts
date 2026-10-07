@@ -94,22 +94,6 @@ export const hadagNahash2000s = [
 		},
 	},
 	{
-		name: "הנה אני בא (Hine Ani Ba / Here I Come)",
-		artist: "Hadag Nahash (הדג נחש)",
-		language: "Hebrew",
-		published_date: "2006",
-		lyric_sample: {
-			hebrew:
-				"ירושלים, עיר שווה פיצוץ / הולך במדרחוב מרגיש כמו קיבוץ גלויות / אלף תרבויות, לכל אחד יש אח ותשע אחיות / ערבים בסדר חרדים בחדר",
-			english_translation:
-				"Jerusalem, a city worth blowing up / walking down the pedestrian mall feeling like an ingathering of exiles / a thousand cultures, everyone has a brother and nine sisters / Arabs are fine, the ultra-Orthodox are in the room.",
-		},
-		links: {
-			lyrics: "https://genius.com/Hadag-nahash-hineh-ani-ba-lyrics",
-			youtube: "https://www.youtube.com/watch?v=JNwJFLkoX80",
-		},
-	},
-	{
 		name: "רק פה (Rak Po / Only Here)",
 		artist: "Hadag Nahash (הדג נחש)",
 		language: "Hebrew",

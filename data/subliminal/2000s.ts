@@ -17,23 +17,6 @@ export const subliminal2000s = [
 		},
 	},
 	{
-		name: "בור ללא תחתית",
-		artist: "Subliminal (סאבלימינל)",
-		collaborators: ["The Shadow (הצל)"],
-		language: "Hebrew",
-		published_date: "2002",
-		lyric_sample: {
-			hebrew:
-				"אז תגידו למה אי אפשר לחיות ביחד?! / למה לסובב אחורה את הראש נהיה סימן לפחד?!",
-			english_translation:
-				"So tell me, why can't we live together?! / Why has turning your head around become a sign of fear?!",
-		},
-		links: {
-			lyrics: "https://genius.com/Subliminal-vehatzel-bor-lelo-tachtit-lyrics",
-			youtube: "https://www.youtube.com/watch?v=Qr6KAk1-9O8",
-		},
-	},
-	{
 		name: "הפרד ומשול (Hafred U'Mshol / Divide and Rule)",
 		artist: "Subliminal (סאבלימינל)",
 		language: "Hebrew",

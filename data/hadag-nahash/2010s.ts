@@ -16,34 +16,6 @@ export const hadagNahash2010s = [
 		},
 	},
 	{
-		name: "זמן להתעורר",
-		artist: "Hadag Nahash (הדג נחש)",
-		published_date: "2013",
-		lyric_sample: {
-			hebrew: "לא מאמין בנשק מאמין בשירה",
-			english_translation: "Don't believe in weapons, believe in song.",
-		},
-		links: {
-			youtube: "https://www.youtube.com/watch?v=MPRPzhvdSqU",
-			lyrics: "https://genius.com/Hadag-nahash-zman-lehitorer-lyrics",
-		},
-	},
-	{
-		name: "מצביעים ברגליים (Voting With Feet)",
-		artist: "Hadag Nahash (הדג נחש)",
-		language: "Hebrew",
-		published_date: "2014",
-		lyric_sample: {
-			hebrew: "שומר על ראש בריא גם במיטה חולה / מדליק מדורות כי השמש לא עולה",
-			english_translation:
-				"Keeping a healthy head even in a sick bed / Lighting bonfires because the sun won't rise.",
-		},
-		links: {
-			youtube: "https://www.youtube.com/watch?v=OeZrFrBsVss",
-			lyrics: "https://genius.com/Hadag-nahash-matzbiim-braglaim-lyrics",
-		},
-	},
-	{
 		name: "סרט מלחמה (War Movie)",
 		artist: "Hadag Nahash (הדג נחש)",
 		language: "Hebrew",
@@ -85,22 +57,6 @@ export const hadagNahash2010s = [
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=Veg2o5Rkp9E",
-		},
-	},
-	{
-		name: "קובלנה על מפלגות ישראל (Complaint About Israeli Parties)",
-		artist: "Hadag Nahash (הדג נחש)",
-		language: "Hebrew",
-		published_date: "2013",
-		lyric_sample: {
-			hebrew: "כי למרות שהמצב יותר ויותר מסוכן / לא יהיה שלטון בלתי אם שלטונן",
-			english_translation:
-				"Because even though the situation is getting more and more dangerous / There will be no rule other than their rule.",
-		},
-		links: {
-			youtube: "https://www.youtube.com/watch?v=Yk7pPBpDDTo",
-			lyrics:
-				"https://genius.com/Hadag-nahash-kovlana-al-miflagot-israel-lyrics",
 		},
 	},
 	{
