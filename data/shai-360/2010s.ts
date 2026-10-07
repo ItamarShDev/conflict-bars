@@ -10,6 +10,8 @@ export const shai3602010s = [
 				"I'm on the wrong side of the map, activists with knives got me trapped / This international hypocrisy won't get us far",
 		},
 		links: {
+			lyrics:
+				"https://www.mako.co.il/music-news/singles/Article-96cdf1934a33921006.htm",
 			youtube: "https://www.youtube.com/watch?v=FP2OCs1fRgQ",
 			song_info:
 				"https://www.mako.co.il/music-news/singles/Article-96cdf1934a33921006.htm",

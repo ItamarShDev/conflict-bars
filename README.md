@@ -91,6 +91,7 @@ Open http://localhost:3000 — `/` redirects to `/he` (see `next.config.ts`); `/
 - `npm run dev` / `npm run build` / `npm run start`
 - `npm run generate-songs` — rebuild `data/songs-generated.json` from `data/`
 - `npm run lint` — Biome check; `npm run format` — Biome write; `npm run typecheck` — `tsc --noEmit`
+- `npm test` — run the Vitest regression suite (include with lint, typecheck and build before opening a PR)
 - `npm run migrate`, `migrate:force`, `migrate:events`, `migrate:language` — Convex data migrations
 - `npm run db:clear`, `reset-data`, `reset-data:force` — clear/reseed Convex songs
 - `npx convex dev`, `npx convex dashboard`
@@ -107,11 +108,32 @@ Open http://localhost:3000 — `/` redirects to `/he` (see `next.config.ts`); `/
   language?: "Hebrew" | "Arabic" | "English" | "Hebrew/Arabic" | ...,
   published_date: "YYYY" | "YYYY-MM" | "YYYY-MM-DD",
   lyric_sample?: { hebrew?: string; english_translation?: string },
+  full_lyrics?: { hebrew?: string; english_translation?: string },
   links?: { lyrics?: string; song_info?: string; youtube?: string },
 }
 ```
 
 `published_date` is parsed with `new Date()`, so decade placeholders like `"2020s"` do not render — always use a real year.
+
+### Full lyrics
+
+Song cards link directly to external lyrics through `links.lyrics`, including
+compact cards. A song without a source shows **Lyrics link unavailable** instead
+of an empty dialog. Keep only links to the matching song's lyrics (or an official
+lyric video/description), not articles that merely quote excerpts.
+
+For songs with supplied or licensed full text, a **Full lyrics** button shows
+Hebrew and English in an on-site dialog. Store complete texts in `full_lyrics` on
+the existing record in
+`data/<artist>/<era>.ts`; use multiline template strings to preserve line breaks
+and blank lines between verses. `predev` / `prebuild` include these fields in the
+generated song catalog without a database migration.
+
+Only add supplied or licensed complete lyrics and translations. Keep
+`lyric_sample` for excerpts/context, and `links.lyrics` for the external source;
+neither is treated as full lyrics. In the dialog, missing languages display an
+explicit not-yet-added message, with the source link when available. No complete
+lyrics have been copied into the catalog.
 
 ### Political leaning
 

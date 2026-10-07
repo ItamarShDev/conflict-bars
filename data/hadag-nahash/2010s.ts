@@ -12,7 +12,8 @@ export const hadagNahash2010s = [
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=HTkmOPkuIpo",
-			lyrics: "https://genius.com/Hadag-nahash-ani-maamin-lyrics",
+			lyrics:
+				"https://en.tab4u.com/lyrics/songs/4205_%D7%94%D7%93%D7%92_%D7%A0%D7%97%D7%A9_-_%D7%90%D7%A0%D7%99_%D7%9E%D7%90%D7%9E%D7%99%D7%9F.html",
 		},
 	},
 	{
@@ -56,7 +57,7 @@ export const hadagNahash2010s = [
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=Up1HpdHpFyk",
-			lyrics: "https://genius.com/Hadag-nahash-seret-milchama-lyrics",
+			lyrics: "https://hadagnahash.bandcamp.com/track/--31",
 		},
 	},
 	{
@@ -84,6 +85,8 @@ export const hadagNahash2010s = [
 				"ירושלים של זהב של אמת וכזב / גם של ערק ג'ראס דבש דם וחלב / ירושלים של נחושת של קודש ובושת / ירושלים של אור אור גנוז אורגינלי",
 		},
 		links: {
+			lyrics:
+				"https://m.tab4u.com/lyrics/songs/72053_%D7%94%D7%93%D7%92_%D7%A0%D7%97%D7%A9_-_%D7%A2%D7%99%D7%A8_%D7%94%D7%90%D7%9C%D7%95%D7%94%D7%99%D7%9D.html",
 			youtube: "https://www.youtube.com/watch?v=Veg2o5Rkp9E",
 		},
 	},
@@ -115,7 +118,7 @@ export const hadagNahash2010s = [
 				"Since then we've grown checkpoints like gangsters / built houses in settlements and discriminated minorities.",
 		},
 		links: {
-			lyrics: "https://genius.com/Hadag-nahash-od-yihye-tov-lyrics",
+			lyrics: "https://hadagnahash.bandcamp.com/track/--30",
 			youtube: "https://www.youtube.com/watch?v=7H8sdmR2GMw",
 		},
 	},

@@ -5,6 +5,7 @@ export const hypeCrew2020s = [
 		language: "Hebrew",
 		published_date: "2023",
 		links: {
+			lyrics: "https://www.youtube.com/watch?v=U70w7SR8ITQ",
 			youtube: "https://www.youtube.com/watch?v=U70w7SR8ITQ",
 		},
 	},

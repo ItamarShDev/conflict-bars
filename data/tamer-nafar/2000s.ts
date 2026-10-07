@@ -10,6 +10,8 @@ export const tamerNafar2000s = [
 				"Track 11 of the Mad Man label compilation 'Mikrofon LaMaximum 2', released during the Second Intifada; one of the earliest Hebrew-language recordings by Tamer Nafar's TN Team, before DAM.",
 		},
 		links: {
+			lyrics:
+				"https://www.lirikcinta.com/d/dam/ima-al-tivkimama-dont-cry-%d7%90%d7%9e%d7%90-%d7%90%d7%9c-%d7%aa%d7%91%d7%9b%d7%99-dam/",
 			song_info: "https://he.wikipedia.org/wiki/צ'ולו",
 		},
 	},

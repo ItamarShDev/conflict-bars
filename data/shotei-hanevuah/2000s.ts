@@ -12,7 +12,7 @@ export const shoteiHanevuah2000s = [
 		},
 		links: {
 			lyrics:
-				"https://www.nagnu.co.il/%D7%90%D7%95%D7%9E%D7%A0%D7%99%D7%9D/%D7%A9%D7%95%D7%98%D7%99_%D7%94%D7%A0%D7%91%D7%95%D7%90%D7%94/%D7%A4%D7%A0%D7%90%D7%9F",
+				"https://shironet.mako.co.il/artist?lang=1&prfid=1255&type=lyrics&wrkid=3993",
 			song_info:
 				"https://he.wikipedia.org/wiki/%D7%A9%D7%95%D7%98%D7%99_%D7%94%D7%A0%D7%91%D7%95%D7%90%D7%94_(%D7%90%D7%9C%D7%91%D7%95%D7%9D)",
 		},
@@ -30,7 +30,7 @@ export const shoteiHanevuah2000s = [
 		},
 		links: {
 			lyrics:
-				"https://www.nagnu.co.il/%D7%90%D7%95%D7%9E%D7%A0%D7%99%D7%9D/%D7%A9%D7%95%D7%98%D7%99_%D7%94%D7%A0%D7%91%D7%95%D7%90%D7%94/%D7%A4%D7%94_%D7%91%D7%99%D7%A4%D7%95",
+				"https://en.tab4u.com/lyrics/songs/2563_%D7%A9%D7%95%D7%98%D7%99_%D7%94%D7%A0%D7%91%D7%95%D7%90%D7%94_-_%D7%A4%D7%94_%D7%91%D7%99%D7%A4%D7%95.html",
 			song_info:
 				"https://he.wikipedia.org/wiki/%D7%A9%D7%95%D7%98%D7%99_%D7%94%D7%A0%D7%91%D7%95%D7%90%D7%94_(%D7%90%D7%9C%D7%91%D7%95%D7%9D)",
 		},

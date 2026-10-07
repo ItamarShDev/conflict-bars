@@ -36,7 +36,8 @@ export const systemAli2010s = [
 		},
 		links: {
 			song_info: "https://he.wikipedia.org/wiki/סיסטם_עאלי",
-			lyrics: "https://levgroupmedia.bandcamp.com/album/-",
+			lyrics:
+				"https://shironet.mako.co.il/artist?lang=1&prfid=10680&type=lyrics&wrkid=49526",
 		},
 	},
 ];

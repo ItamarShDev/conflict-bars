@@ -10,6 +10,8 @@ export const kla62000s = [
 				"Rap remake of Meni Begger's 1981 song, released ahead of the Gaza disengagement plan; it became identified with the protest against the evacuation of Gush Katif.",
 		},
 		links: {
+			lyrics:
+				"https://shirrim.com/song-chrods/%d7%96%d7%94-%d7%94%d7%99%d7%94-%d7%91%d7%99%d7%aa%d7%99-2/",
 			youtube: "https://www.youtube.com/watch?v=XrBkpLDyXjQ",
 			song_info: "https://he.wikipedia.org/wiki/זה_היה_ביתי",
 		},
@@ -48,7 +50,7 @@ export const kla62000s = [
 		links: {
 			youtube: "https://www.youtube.com/watch?v=D69xYwzUQME",
 			lyrics:
-				"https://shironet.mako.co.il/artist?lang=1&prfid=1166&type=lyrics&wrkid=10435",
+				"https://shironet.mako.co.il/artist?lang=1&prfid=1045&type=lyrics&wrkid=10435",
 		},
 	},
 ];

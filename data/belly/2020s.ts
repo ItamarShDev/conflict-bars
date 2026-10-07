@@ -26,8 +26,10 @@ export const belly2020s = [
 		},
 		links: {
 			lyrics:
-				"https://variety.com/2024/music/news/palestinian-belly-96-miles-from-bethlehem-album-gaza-1236017859/",
+				"https://lyrics.lol/artist/1362-Belly/lyrics/10468288-Patience-vs-Patients",
 			youtube: "https://www.youtube.com/watch?v=u88qcsHNQHY",
+			song_info:
+				"https://variety.com/2024/music/news/palestinian-belly-96-miles-from-bethlehem-album-gaza-1236017859/",
 		},
 	},
 ];

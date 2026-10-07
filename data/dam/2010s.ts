@@ -27,7 +27,8 @@ export const dam2010s = [
 				"I'm from the Negev, I'm from Jaffa / from Ein Hod, I'm from Acre / from Jawarish, I'm from Nazareth / I'm from Ramla.",
 		},
 		links: {
-			lyrics: "https://genius.com/Dam-im-not-a-traitor-lyrics",
+			lyrics:
+				"http://revolutionaryarabraptheindex.blogspot.com/2014/07/dam-im-not-traitor.html",
 			youtube: "https://www.youtube.com/watch?v=gH0IGvzH5G8",
 		},
 	},

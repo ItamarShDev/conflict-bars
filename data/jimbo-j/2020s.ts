@@ -40,6 +40,8 @@ export const jimboJ2020s = [
 				"The first text Habaron wrote after 7 October 2023, per the Hebrew Wikipedia article on the album 'הכל טוב'; he was evacuated with his family from Kibbutz Or HaNer for eight months. The article calls it an 'anthem of reproach' and notes it mentions Guy Illouz, the band's stage technician who was abducted and killed.",
 		},
 		links: {
+			lyrics:
+				"https://www.nagnu.co.il/%D7%90%D7%95%D7%9E%D7%A0%D7%99%D7%9D/%D7%92'%D7%99%D7%9E%D7%91%D7%95_%D7%92'%D7%99%D7%99/%D7%9E%D7%A4%D7%A8%D7%A9_%D7%9C%D7%91%D7%9F/%D7%90%D7%A7%D7%95%D7%A8%D7%93%D7%99%D7%9D",
 			youtube: "https://www.youtube.com/watch?v=g1N0aQNIPMk",
 			song_info: "https://he.wikipedia.org/wiki/הכל_טוב_(אלבום_של_ג'ימבו_ג'יי)",
 		},
@@ -69,6 +71,7 @@ export const jimboJ2020s = [
 				"Opening track of 'הכל טוב', a concept album written under the direct influence of 7 October and the ensuing war; per Hebrew Wikipedia it describes the social and physical changes in the western Negev after the war broke out, including 'grief tourism' and explaining the events to foreign delegations.",
 		},
 		links: {
+			lyrics: "https://www.youtube.com/watch?v=S9YnK5eVhJw",
 			youtube: "https://www.youtube.com/watch?v=S9YnK5eVhJw",
 			song_info: "https://he.wikipedia.org/wiki/הכל_טוב_(אלבום_של_ג'ימבו_ג'יי)",
 		},
@@ -83,6 +86,7 @@ export const jimboJ2020s = [
 				"Per Hebrew Wikipedia, the song is about the abrupt switch between civilian life and reserve duty: gear sent to the front, conditions in Khan Yunis, and victory slogans set against ongoing pain.",
 		},
 		links: {
+			lyrics: "https://www.youtube.com/watch?v=cmOrFYeIeyg",
 			youtube: "https://www.youtube.com/watch?v=cmOrFYeIeyg",
 			song_info: "https://he.wikipedia.org/wiki/הכל_טוב_(אלבום_של_ג'ימבו_ג'יי)",
 		},

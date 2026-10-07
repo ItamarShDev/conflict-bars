@@ -12,7 +12,7 @@ export const saintLevant2020s = [
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=NdONzDuKzq0",
-			lyrics: "https://www.youtube.com/watch?v=NdONzDuKzq0",
+			lyrics: "https://www.lyricsbull.com/daloona-lyrics-saint-levant/",
 			song_info:
 				"https://music.apple.com/tr/album/daloona-feat-shadi-alborini-qasem-alnajjar-single/1779793812",
 		},
@@ -44,7 +44,7 @@ export const saintLevant2020s = [
 				"Recorded with the Gazan group Sol Band; incorporates the Palestinian anthem 'Mawtini' and takes its title from a Mahmoud Darwish poem.",
 		},
 		links: {
-			lyrics: "https://genius.com/Saint-levant-on-this-land-lyrics",
+			lyrics: "https://deira.saintlevant.com/on-this-land/",
 			youtube: "https://www.youtube.com/watch?v=ZTLjEkPGZRI",
 			song_info: "https://en.wikipedia.org/wiki/Deira_(album)",
 		},

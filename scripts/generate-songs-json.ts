@@ -14,6 +14,7 @@ type RawSong = {
 	published_date?: unknown;
 	language?: unknown;
 	lyric_sample?: unknown;
+	full_lyrics?: unknown;
 	links?: unknown;
 };
 

@@ -10,6 +10,8 @@ export const quami2000s = [
 				"That leaders on every side profit when they say that war is for the good of the nation.",
 		},
 		links: {
+			lyrics:
+				"https://downloadmp3flac.com/songs/kshe-elohim-amar-bekef-kshlvhym-mr-bkyp-by-quami-qvvmy",
 			youtube: "https://www.youtube.com/watch?v=cqhmGJwrKMc",
 			song_info: "https://he.wikipedia.org/wiki/קוואמי",
 		},

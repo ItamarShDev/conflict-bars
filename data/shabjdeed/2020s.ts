@@ -12,7 +12,7 @@ export const shabjdeed2020s = [
 		links: {
 			song_info: "https://bltnm.bandcamp.com/track/kattal",
 			lyrics:
-				"https://mena.rollingstone.com/music/music-album-reviews/shabjdeed-touch-smokaholic-kattal-review/",
+				"https://matchlyric.com/smokaholic-shabjdeed-%D8%B4%D8%A8-%D8%AC%D8%AF%D9%8A%D8%AF-touch-pse-%D8%AA%D8%AA%D8%B4-kattal-%D9%83%D8%AA%D8%A7%D9%84",
 		},
 	},
 	{

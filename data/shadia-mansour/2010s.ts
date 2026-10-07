@@ -12,6 +12,7 @@ export const shadiamansour2010s = [
 				"Context (not lyrics): The collaboration's video is dedicated to Juliano Mer Khamis, associated with the Freedom Theatre in Jenin.",
 		},
 		links: {
+			lyrics: "https://www.letras.mus.br/shadia-mansour/lezim-netghayar/",
 			song_info: "http://offendum.blogspot.com/2013/04/we-have-to-change.html",
 		},
 	},
@@ -20,6 +21,8 @@ export const shadiamansour2010s = [
 		artist: "Shadia Mansour (شادية منصور)",
 		published_date: "2010-03-18",
 		links: {
+			lyrics:
+				"https://www.letras.com/shadia-mansour/al-kufiyyeh-3arabeyyeh-feat-m1/",
 			youtube: "https://www.youtube.com/watch?v=21OXQ4m1-Bo",
 		},
 	},
@@ -37,6 +40,7 @@ export const shadiamansour2010s = [
 		artist: "Shadia Mansour (شادية منصور)",
 		published_date: "2014",
 		links: {
+			lyrics: "https://www.letras.com/ana-tijoux/somos-sur/english.html",
 			youtube: "https://www.youtube.com/watch?v=EKGUJXzxNqc",
 		},
 	},
