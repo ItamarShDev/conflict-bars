@@ -1,10 +1,11 @@
 "use client";
 
-import { useQuery } from "convex/react";
+import { useConvex, useQuery } from "convex/react";
 import { useEffect, useId, useMemo, useState } from "react";
 import { api } from "../../convex/_generated/api";
 import type { Id } from "../../convex/_generated/dataModel";
 import { sendThankYouMail } from "../actions/email";
+import { resolveSubmissionArtist } from "../utils/submission-artist";
 import type { SubmitSongFormProps } from "./SubmitSongForm.types";
 
 type SubmissionStatus = "idle" | "submitting" | "success" | "error";
@@ -18,6 +19,7 @@ export function SubmitSongForm({
 }: SubmitSongFormProps) {
 	const songs = useQuery(api.songs.getAllSongs) ?? [];
 	const artists = useQuery(api.artists.getAllArtists) ?? [];
+	const convex = useConvex();
 	const [status, setStatus] = useState<SubmissionStatus>("idle");
 	const [errorMessage, setErrorMessage] = useState<string | null>(null);
 	const [prefillEmail, setPrefillEmail] = useState<string>("");
@@ -107,14 +109,6 @@ export function SubmitSongForm({
 			return;
 		}
 
-		const artistId = artistNameToId.get(artist.toLowerCase());
-		if (!artistId) {
-			setMissingFields(new Set(["artist"]));
-			setStatus("error");
-			setErrorMessage(translations.errors.required);
-			return;
-		}
-
 		const lyricSample =
 			lyricHebrew || lyricEnglish
 				? {
@@ -133,6 +127,24 @@ export function SubmitSongForm({
 				: undefined;
 
 		try {
+			const artistId = await resolveSubmissionArtist(
+				artist,
+				artistNameToId,
+				editSong,
+				async (normalized) =>
+					(
+						await convex.query(api.internal.artists.getByNormalizedName, {
+							normalized,
+						})
+					)?._id,
+				(args) => convex.mutation(api.mutations.upsertArtist, args),
+			);
+			if (!artistId) {
+				setMissingFields(new Set(["artist"]));
+				setStatus("error");
+				setErrorMessage(translations.errors.required);
+				return;
+			}
 			await submitSong({
 				songId: editSong?._id,
 				userDisplayName: displayName,

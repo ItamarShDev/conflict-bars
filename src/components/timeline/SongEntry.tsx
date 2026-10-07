@@ -260,6 +260,7 @@ export function SongEntry({
 								_id: songObj._id,
 								name: songObj.name,
 								artist: songObj.artist,
+								artist_details: songObj.artist_details,
 								published_date: songObj.published_date,
 								language: songObj.language,
 								lyric_sample: songObj.lyric_sample,
