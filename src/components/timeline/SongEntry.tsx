@@ -1,6 +1,7 @@
 import { useMutation } from "convex/react";
 import { type ReactNode, useState } from "react";
 import { SubmitSongForm } from "@/components/SubmitSongForm";
+import { FullLyricsDialog } from "@/components/timeline/FullLyricsDialog";
 import { translations } from "@/components/timeline/translations";
 import { api } from "../../../convex/_generated/api";
 import type { Id } from "../../../convex/_generated/dataModel";
@@ -41,6 +42,7 @@ export function SongEntry({
 }: SongTimelineEntryProps) {
 	const submitSong = useMutation(api.mutations.submitSongEditSuggestion);
 	const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+	const [isLyricsOpen, setIsLyricsOpen] = useState(false);
 	const t = translations[lang];
 
 	const songObj = song as FileSong & { _id?: Id<"songs"> };
@@ -183,10 +185,21 @@ export function SongEntry({
 					</div>
 				)}
 
-				{!isCompact && links && (
+				{hasSongIdentity && (
 					<div
 						className={`flex flex-wrap gap-2 pt-3 border-t border-(--color-border) ${lang === "he" ? "flex-row-reverse" : ""}`}
 					>
+						<button
+							type="button"
+							onClick={(event) => {
+								event.stopPropagation();
+								setIsLyricsOpen(true);
+							}}
+							aria-haspopup="dialog"
+							className="min-h-11 border-2 border-(--color-control-border) bg-(--color-accent) px-3 py-1 text-xs font-black text-[#fffdf5] transition hover:bg-(--color-accent-hover) focus-visible:outline-2 focus-visible:outline-(--color-accent)"
+						>
+							{t.fullLyrics.button}
+						</button>
 						{links?.lyrics && (
 							<a
 								href={links.lyrics}
@@ -220,6 +233,14 @@ export function SongEntry({
 					</div>
 				)}
 			</div>
+
+			{hasSongIdentity && isLyricsOpen && (
+				<FullLyricsDialog
+					song={songObj}
+					lang={lang}
+					onClose={() => setIsLyricsOpen(false)}
+				/>
+			)}
 
 			{hasSongIdentity && isEditModalOpen && (
 				<div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4">
