@@ -1,5 +1,20 @@
 export const hadagNahash2010s = [
 	{
+		name: "War (מלחמה)",
+		artist: "Hadag Nahash (הדג נחש)",
+		language: "English",
+		published_date: "2010-02",
+		lyric_sample: {
+			hebrew:
+				"רקע: כתבת הבכורה בוואלה מ-2010 מתארת את השיר כעוסק בעוינות נרכשת בין ישראלים לפלסטינים.",
+			english_translation:
+				"Context: Walla's 2010 premiere describes the song as addressing learned hostility between Israelis and Palestinians.",
+		},
+		links: {
+			song_info: "https://e.walla.co.il/item/1643615",
+		},
+	},
+	{
 		name: "אני מאמין (Ani Ma'amin / I Believe)",
 		artist: "Hadag Nahash (הדג נחש)",
 		language: "Hebrew",

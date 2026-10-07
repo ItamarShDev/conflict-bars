@@ -6,6 +6,12 @@ export const artistPoliticalAffiliation: Record<
 		notes: string;
 	}
 > = {
+	R3D: {
+		era: "2020s",
+		affiliation: "Unknown",
+		notes:
+			"Palestinian rapper credited on Umro2 with Shabjdeed and producer Al Nather. No political affiliation assigned.",
+	},
 	"Teapacks (טיפקס)": {
 		era: "1980s–present",
 		affiliation: "Unknown",
