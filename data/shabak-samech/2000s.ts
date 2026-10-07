@@ -70,7 +70,8 @@ export const shabakSamech2000s = [
 				"The road is long and winding / I fall and get up, fall and get up... I will never stop walking.",
 		},
 		links: {
-			lyrics: "https://genius.com/Shabak-samech-nofel-vekam-lyrics",
+			lyrics:
+				"https://www.tab4u.com/lyrics/songs/2567_%D7%A9%D7%91%26quot%3B%D7%A7_%D7%A1%26%2339%3B_-_%D7%A0%D7%95%D7%A4%D7%9C_%D7%95%D7%A7%D7%9D.html",
 			youtube: "https://www.youtube.com/watch?v=8glXPD07-Zk",
 		},
 	},

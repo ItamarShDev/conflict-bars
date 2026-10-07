@@ -46,6 +46,8 @@ export const subliminal2020s = [
 				"The Rabbi Nachman line “and the main thing is not to be afraid at all” recurs as the single’s refrain; the track pairs biblical imagery with the current fighting and closes on “the victory generation, 2025”.",
 		},
 		links: {
+			lyrics:
+				"https://shironet.mako.co.il/artist?lang=1&prfid=24558&type=lyrics&wrkid=63230",
 			youtube: "https://www.youtube.com/watch?v=ha-8LO0seaM",
 			song_info: "https://he.wikipedia.org/wiki/אל_תירא_ישראל",
 		},

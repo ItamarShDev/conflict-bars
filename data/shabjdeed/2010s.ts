@@ -11,8 +11,6 @@ export const shabjdeed2010s = [
 		},
 		links: {
 			song_info: "https://bltnm.bandcamp.com/track/fi-harb",
-			lyrics:
-				"https://scenenoise.com/New-Music/shabjdeed-ventures-into-drill-with-riyadiyat-in-latest-single-fi-harb",
 		},
 	},
 	{
@@ -27,7 +25,7 @@ export const shabjdeed2010s = [
 				"Between the son of Jerusalem and the son of Ram / there is a wall.",
 		},
 		links: {
-			lyrics: "https://genius.com/Shabjdeed-carlo-lyrics",
+			lyrics: "https://bltnm.bandcamp.com/album/carlo-seer-sa3",
 			youtube: "https://www.youtube.com/watch?v=shTbSKNOYE4",
 		},
 	},

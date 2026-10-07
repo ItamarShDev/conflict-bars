@@ -14,6 +14,7 @@ export const translations = {
 			results: "Found {{count}} song(s)",
 		},
 		lyrics: "Lyrics",
+		lyricsUnavailable: "Lyrics link unavailable",
 		fullLyrics: {
 			button: "Full lyrics",
 			title: "Full lyrics",
@@ -144,6 +145,7 @@ export const translations = {
 			results: "נמצאו {{count}} שירים",
 		},
 		lyrics: "מילים",
+		lyricsUnavailable: "קישור למילים לא זמין",
 		fullLyrics: {
 			button: "מילים מלאות",
 			title: "מילים מלאות",

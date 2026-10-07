@@ -54,6 +54,15 @@ export function SongEntry({
 		!!songObj.name &&
 		!!songObj.artist;
 	const isCompact = variant === "compact";
+	const hasFullLyrics =
+		hasSongIdentity &&
+		Boolean(
+			songObj.full_lyrics?.hebrew?.trim() ||
+				songObj.full_lyrics?.english_translation?.trim(),
+		);
+	const lyricsLink = hasSongIdentity
+		? songObj.links?.lyrics?.trim()
+		: undefined;
 	const lyricSample =
 		isSongObject && !isCompact && "lyric_sample" in songObj
 			? songObj.lyric_sample
@@ -189,20 +198,36 @@ export function SongEntry({
 					<div
 						className={`flex flex-wrap gap-2 pt-3 border-t border-(--color-border) ${lang === "he" ? "flex-row-reverse" : ""}`}
 					>
-						<button
-							type="button"
-							onClick={(event) => {
-								event.stopPropagation();
-								setIsLyricsOpen(true);
-							}}
-							aria-haspopup="dialog"
-							className="inline-flex min-h-11 items-center justify-center border-2 border-(--color-control-border) bg-(--color-accent) px-3 py-1 text-center text-xs font-black text-[#fffdf5] transition hover:bg-(--color-accent-hover) focus-visible:outline-2 focus-visible:outline-(--color-accent)"
-						>
-							{t.fullLyrics.button}
-						</button>
-						{links?.lyrics && (
+						{hasFullLyrics ? (
+							<button
+								type="button"
+								onClick={(event) => {
+									event.stopPropagation();
+									setIsLyricsOpen(true);
+								}}
+								aria-haspopup="dialog"
+								className="inline-flex min-h-11 items-center justify-center border-2 border-(--color-control-border) bg-(--color-accent) px-3 py-1 text-center text-xs font-black text-[#fffdf5] transition hover:bg-(--color-accent-hover) focus-visible:outline-2 focus-visible:outline-(--color-accent)"
+							>
+								{t.fullLyrics.button}
+							</button>
+						) : lyricsLink ? (
 							<a
-								href={links.lyrics}
+								href={lyricsLink}
+								target="_blank"
+								rel="noreferrer"
+								onClick={(event) => event.stopPropagation()}
+								className="inline-flex min-h-11 items-center justify-center border-2 border-(--color-control-border) bg-(--color-accent) px-3 py-1 text-center text-xs font-black text-[#fffdf5] transition hover:bg-(--color-accent-hover) focus-visible:outline-2 focus-visible:outline-(--color-accent)"
+							>
+								{t.lyrics}
+							</a>
+						) : (
+							<span className="inline-flex min-h-11 items-center text-xs text-(--color-muted-foreground)">
+								{t.lyricsUnavailable}
+							</span>
+						)}
+						{hasFullLyrics && lyricsLink && (
+							<a
+								href={lyricsLink}
 								target="_blank"
 								rel="noreferrer"
 								className="inline-flex min-h-11 items-center justify-center border-2 border-(--color-control-border) bg-(--color-control-background) px-3 py-1 text-center text-xs font-black text-(--color-accent) transition wobble-sm hover:border-(--color-accent) hover:bg-(--color-accent) hover:text-[#fffdf5]"
@@ -234,7 +259,7 @@ export function SongEntry({
 				)}
 			</div>
 
-			{hasSongIdentity && isLyricsOpen && (
+			{hasFullLyrics && isLyricsOpen && (
 				<FullLyricsDialog
 					song={songObj}
 					lang={lang}

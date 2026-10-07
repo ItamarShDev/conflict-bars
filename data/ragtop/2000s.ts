@@ -11,8 +11,6 @@ export const ragtop2000s = [
 			english_translation: "(English original)",
 		},
 		links: {
-			lyrics:
-				"https://www.aljazeera.com/news/2006/3/24/us-rappers-sing-for-palestine",
 			song_info:
 				"https://www.popmatters.com/various-artists-free-the-p-2495692251.html",
 		},

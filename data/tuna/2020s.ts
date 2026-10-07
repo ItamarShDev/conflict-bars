@@ -10,7 +10,7 @@ export const tuna2020s = [
 				"Even if it doesn’t look good, and all the stars show there’s a reason to worry",
 		},
 		links: {
-			lyrics: "https://genius.com/Tuna-kol-hakohavim-lyrics",
+			lyrics: "https://www.youtube.com/watch?v=doYvXHat8gU",
 			youtube: "https://www.youtube.com/watch?v=doYvXHat8gU",
 		},
 	},
@@ -86,8 +86,6 @@ export const tuna2020s = [
 				"Amid all the mess, the fire and the missiles / guitar and keys, we are all soldiers.",
 		},
 		links: {
-			lyrics:
-				"https://he.wikipedia.org/wiki/%D7%A8%D7%95%D7%91%D7%99%D7%9D_%D7%95%D7%AA%D7%9C%D7%AA%D7%9C%D7%99%D7%9D_(%D7%A9%D7%99%D7%A8)",
 			song_info:
 				"https://he.wikipedia.org/wiki/%D7%A8%D7%95%D7%91%D7%99%D7%9D_%D7%95%D7%AA%D7%9C%D7%AA%D7%9C%D7%99%D7%9D",
 		},

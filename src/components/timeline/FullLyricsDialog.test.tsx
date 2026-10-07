@@ -90,6 +90,7 @@ describe("song card lyrics button", () => {
 				<SongEntry
 					song={{
 						...song,
+						full_lyrics: { english_translation: "Complete supplied text" },
 						links: {
 							lyrics: "https://example.com/lyrics",
 							song_info: "https://example.com/info",
@@ -112,25 +113,87 @@ describe("song card lyrics button", () => {
 	);
 
 	it.each(["full", "compact"] as const)(
-		"renders on a %s card with no links or full text",
+		"shows an unavailable state on a %s card with no links or full text",
 		(variant) => {
 			const html = renderToStaticMarkup(
 				<SongEntry song={song} lang="en" leaning="unknown" variant={variant} />,
 			);
-			expect(html).toContain('aria-haspopup="dialog"');
-			expect(html).toContain(translations.en.fullLyrics.button);
+			expect(html).not.toContain('aria-haspopup="dialog"');
+			expect(html).toContain(translations.en.lyricsUnavailable);
 		},
 	);
 
-	it("renders the Hebrew button and preserves external lyrics links", () => {
+	it.each(["en", "he"] as const)(
+		"opens external lyrics directly in %s",
+		(lang) => {
+			const html = renderToStaticMarkup(
+				<SongEntry
+					song={{ ...song, links: { lyrics: "https://example.com/source" } }}
+					lang={lang}
+					leaning="left"
+				/>,
+			);
+			expect(html).toContain(translations[lang].lyrics);
+			expect(html).toContain('href="https://example.com/source"');
+			expect(html).toContain('target="_blank" rel="noreferrer"');
+			expect(html).not.toContain('aria-haspopup="dialog"');
+			expect(html.match(/href="https:\/\/example.com\/source"/g)).toHaveLength(
+				1,
+			);
+			expect(html).not.toContain(translations[lang].lyricsUnavailable);
+		},
+	);
+
+	it("keeps the external lyrics action on compact cards while hiding other links", () => {
 		const html = renderToStaticMarkup(
 			<SongEntry
-				song={{ ...song, links: { lyrics: "https://example.com/source" } }}
+				song={{
+					...song,
+					links: {
+						lyrics: "https://example.com/source",
+						song_info: "https://example.com/info",
+						youtube: "https://example.com/video",
+					},
+				}}
 				lang="he"
 				leaning="left"
+				variant="compact"
 			/>,
 		);
-		expect(html).toContain(translations.he.fullLyrics.button);
+		expect(html).toContain('href="https://example.com/source"');
+		expect(html).not.toContain('href="https://example.com/info"');
+		expect(html).not.toContain('href="https://example.com/video"');
+	});
+
+	it.each(["en", "he"] as const)(
+		"retains the full-text dialog action for supplied text in %s",
+		(lang) => {
+			const html = renderToStaticMarkup(
+				<SongEntry
+					song={{ ...song, full_lyrics: { hebrew: "טקסט שסופק" } }}
+					lang={lang}
+					leaning="left"
+				/>,
+			);
+			expect(html).toContain('aria-haspopup="dialog"');
+			expect(html).toContain(translations[lang].fullLyrics.button);
+			expect(html).not.toContain(translations[lang].lyricsUnavailable);
+		},
+	);
+
+	it("does not open a dialog for whitespace-only full text", () => {
+		const html = renderToStaticMarkup(
+			<SongEntry
+				song={{
+					...song,
+					full_lyrics: { hebrew: " \n", english_translation: " \t" },
+					links: { lyrics: "https://example.com/source" },
+				}}
+				lang="en"
+				leaning="unknown"
+			/>,
+		);
+		expect(html).not.toContain('aria-haspopup="dialog"');
 		expect(html).toContain('href="https://example.com/source"');
 	});
 });

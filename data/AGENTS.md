@@ -31,6 +31,7 @@ Purpose: fast orientation for adding songs in `data/`.
 - Use multiline template strings to preserve verses and stanza breaks.
 - Both languages are optional; omit missing text rather than substituting an excerpt or summary.
 - Keep `links.lyrics` as the source link. Run `npm run generate-songs` after editing.
+- Without complete text, song cards open `links.lyrics` directly. Verify the URL matches the song and performer and includes lyrics, not just metadata or excerpts. Use `links.song_info` for context articles. Never construct unverified URL slugs.
 
 ## Cross-checks
 - Keep naming consistent with Convex artist names when possible.

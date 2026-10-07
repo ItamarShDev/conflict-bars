@@ -13,7 +13,7 @@ export const kneecap2020s = [
 		},
 		links: {
 			song_info: "https://kneecap.bandcamp.com/track/palestine-feat-fawzi",
-			lyrics: "https://www.highsnobiety.com/p/kneecap-band-interview/",
+			lyrics: "https://www.songlyrics.com/kneecap/palestine-lyrics/",
 		},
 	},
 ];

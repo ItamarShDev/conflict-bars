@@ -11,7 +11,8 @@ export const macklemore2020s = [
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=bjtDsd0g468",
-			lyrics: "https://www.youtube.com/watch?v=bjtDsd0g468",
+			lyrics:
+				"https://www.lyrics.my/artists/macklemore/lyrics/hind-s-hall-2-feat-anees-mc-abdul-amer-zahr",
 			song_info:
 				"https://music.apple.com/us/album/hinds-hall-2-feat-anees-mc-abdul-amer-zahr-single/1769283727",
 		},

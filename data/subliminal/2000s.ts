@@ -45,7 +45,8 @@ export const subliminal2000s = [
 				"My God, I wish you would come down to me / they hound me all my life / my enemies are united and want to destroy me / and we nurse and arm those who hate us.",
 		},
 		links: {
-			lyrics: "https://genius.com/Subliminal-and-hatzel-hafred-umshol-lyrics",
+			lyrics:
+				"https://lyrics.lol/artist/10624-subliminal/lyrics/2901764-hafred-ve-meshol",
 			youtube: "https://www.youtube.com/watch?v=AhMz6cM25C8",
 		},
 	},
@@ -62,7 +63,8 @@ export const subliminal2000s = [
 				"The silence is gone, the sounds of war are back / another soldier comes home wrapped in what? In the flag of the state / blood and a tear soak into the ground.",
 		},
 		links: {
-			lyrics: "https://genius.com/Subliminal-and-hatzel-hatikva-lyrics",
+			lyrics:
+				"https://www.tab4u.com/lyrics/songs/78457_%D7%A1%D7%90%D7%91%D7%9C%D7%99%D7%9E%D7%99%D7%A0%D7%9C%2C_%D7%94%D7%A6%D7%9C_%D7%95%D7%A1%D7%99%D7%95%D7%95%D7%9F_-_%D7%94%D7%AA%D7%A7%D7%95%D7%95%D7%94.html",
 			youtube: "https://www.youtube.com/watch?v=hybBJ0InVSA",
 		},
 	},
@@ -96,7 +98,7 @@ export const subliminal2000s = [
 		},
 		links: {
 			lyrics:
-				"https://genius.com/Subliminal-and-hatzel-lo-tazlichu-laatzor-oti-lyrics",
+				"https://shironet.mako.co.il/artist?lang=1&prfid=749&type=lyrics&wrkid=3434",
 			youtube: "https://www.youtube.com/watch?v=WpAUhXSKpTg",
 		},
 	},

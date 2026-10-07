@@ -116,17 +116,23 @@ Open http://localhost:3000 — `/` redirects to `/he` (see `next.config.ts`); `/
 
 ### Full lyrics
 
-Every song card has a **Full lyrics** button showing Hebrew and English in an
-on-site dialog. Store complete texts in `full_lyrics` on the existing record in
+Song cards link directly to external lyrics through `links.lyrics`, including
+compact cards. A song without a source shows **Lyrics link unavailable** instead
+of an empty dialog. Keep only links to the matching song's lyrics (or an official
+lyric video/description), not articles that merely quote excerpts.
+
+For songs with supplied or licensed full text, a **Full lyrics** button shows
+Hebrew and English in an on-site dialog. Store complete texts in `full_lyrics` on
+the existing record in
 `data/<artist>/<era>.ts`; use multiline template strings to preserve line breaks
 and blank lines between verses. `predev` / `prebuild` include these fields in the
 generated song catalog without a database migration.
 
 Only add supplied or licensed complete lyrics and translations. Keep
 `lyric_sample` for excerpts/context, and `links.lyrics` for the external source;
-neither is treated as full lyrics. Missing languages display an explicit
-not-yet-added message, with the existing source link when available. No complete
-lyrics have been added to the catalog yet.
+neither is treated as full lyrics. In the dialog, missing languages display an
+explicit not-yet-added message, with the source link when available. No complete
+lyrics have been copied into the catalog.
 
 ### Political leaning
 

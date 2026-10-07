@@ -26,6 +26,8 @@ export const hatikvah62020s = [
 				"The neighbour upstairs is a contractor but he's been on reserve duty for a month / Her brother, a senior tech worker, is now a sniper on rooftops in Gaza",
 		},
 		links: {
+			lyrics:
+				"https://www.hebreuavecdan.com/atelier/hatikva-shesh-super-heros/",
 			youtube: "https://www.youtube.com/watch?v=aYGd4HOend4",
 			song_info: "https://he.wikipedia.org/wiki/גיבורי_על_(שיר)",
 		},
@@ -41,6 +43,8 @@ export const hatikvah62020s = [
 				"We'll wait for the sun to return and give us back the light.",
 		},
 		links: {
+			lyrics:
+				"https://shironet.mako.co.il/artist?lang=1&prfid=5629&type=lyrics&wrkid=59481",
 			youtube: "https://www.youtube.com/watch?v=A_VrsevsKlY",
 			song_info: "https://www.kan.org.il/content/kan-news/culture/654093/",
 		},
