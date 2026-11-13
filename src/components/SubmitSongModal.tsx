@@ -2,6 +2,7 @@
 
 import { useMutation } from "convex/react";
 import { useEffect, useState } from "react";
+import { createModalPortal } from "@/components/ModalPortal";
 import { SubmitSongForm } from "@/components/SubmitSongForm";
 import type { SubmitSongFormTranslations } from "@/components/timeline/translations";
 import { api } from "../../convex/_generated/api";
@@ -46,44 +47,45 @@ export function SubmitSongModal({
 				{label}
 			</button>
 
-			{isOpen && (
-				<div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-3 sm:px-4">
-					<button
-						type="button"
-						onClick={() => setIsOpen(false)}
-						onKeyDown={(event) => {
-							if (event.key === "Enter" || event.key === " ") {
-								setIsOpen(false);
-							}
-						}}
-						className="absolute inset-0 cursor-default"
-						aria-label={translations.modalCloseAria}
-					/>
-					<div className="glass-card relative z-10 w-full max-w-2xl max-h-[90vh] overflow-y-auto border-2 border-(--color-control-border) p-4 sm:p-6 no-scrollbar tape">
-						<div className="mb-3 sm:mb-4 flex items-center justify-between">
-							<h2 className="font-display text-base font-black sm:text-lg">
-								{translations.title}
-							</h2>
-							<button
-								type="button"
-								onClick={() => setIsOpen(false)}
-								className="p-2 text-(--color-muted-foreground) transition hover:bg-(--color-card-foreground)/10 hover:text-(--color-card-foreground) focus:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent)"
-								aria-label={translations.modalCloseAria}
-							>
-								&#x2715;
-							</button>
-						</div>
-						<SubmitSongForm
-							submitSong={submitSong}
-							lang={lang}
-							translations={translations}
-							onSuccess={() => {
-								setIsOpen(false);
+			{isOpen &&
+				createModalPortal(
+					<div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-3 sm:px-4">
+						<button
+							type="button"
+							onClick={() => setIsOpen(false)}
+							onKeyDown={(event) => {
+								if (event.key === "Enter" || event.key === " ") {
+									setIsOpen(false);
+								}
 							}}
+							className="absolute inset-0 cursor-default"
+							aria-label={translations.modalCloseAria}
 						/>
-					</div>
-				</div>
-			)}
+						<div className="glass-card relative z-10 w-full max-w-2xl max-h-[90vh] overflow-y-auto border-2 border-(--color-control-border) p-4 sm:p-6 no-scrollbar tape">
+							<div className="mb-3 sm:mb-4 flex items-center justify-between">
+								<h2 className="font-display text-base font-black sm:text-lg">
+									{translations.title}
+								</h2>
+								<button
+									type="button"
+									onClick={() => setIsOpen(false)}
+									className="p-2 text-(--color-muted-foreground) transition hover:bg-(--color-card-foreground)/10 hover:text-(--color-card-foreground) focus:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent)"
+									aria-label={translations.modalCloseAria}
+								>
+									&#x2715;
+								</button>
+							</div>
+							<SubmitSongForm
+								submitSong={submitSong}
+								lang={lang}
+								translations={translations}
+								onSuccess={() => {
+									setIsOpen(false);
+								}}
+							/>
+						</div>
+					</div>,
+				)}
 		</>
 	);
 }

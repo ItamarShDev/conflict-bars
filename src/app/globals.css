@@ -745,13 +745,34 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-title span + span {
 	border-radius: 50%;
 }
 .pass-it-on .pass-it-on-disclosure-mark {
-	flex: 0 0 auto;
-	line-height: 1;
-	transition: transform 160ms ease;
+	position: relative;
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	flex: 0 0 1rem;
 }
-.pass-it-on .pass-it-on-song-disclosure[open] .pass-it-on-disclosure-mark,
-.pass-it-on .pass-it-on-event-disclosure[open] .pass-it-on-disclosure-mark {
-	transform: rotate(45deg);
+.pass-it-on .pass-it-on-disclosure-mark::before,
+.pass-it-on .pass-it-on-disclosure-mark::after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 0.68rem;
+	height: 2px;
+	border-radius: 2px;
+	background: currentColor;
+	content: "";
+	transform: translate(-50%, -50%);
+}
+.pass-it-on .pass-it-on-disclosure-mark::after {
+	transform: translate(-50%, -50%) rotate(90deg);
+}
+.pass-it-on
+	.pass-it-on-song-disclosure[open]
+	.pass-it-on-disclosure-mark::after,
+.pass-it-on
+	.pass-it-on-event-disclosure[open]
+	.pass-it-on-disclosure-mark::after {
+	opacity: 0;
 }
 .pass-it-on .pass-it-on-song-actions .boombox-song-artist {
 	text-align: start;
@@ -1627,7 +1648,6 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-track-number {
 }
 .pass-it-on .pass-it-on-disclosure-mark {
 	color: var(--pass-muted);
-	font-size: 1rem;
 }
 .pass-it-on .pass-it-on-song-content {
 	border-top: 1px solid var(--pass-rule);
@@ -1888,8 +1908,7 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-track-number {
 	.pass-it-on .pass-it-on-cta,
 	.pass-it-on .pass-it-on-cassette,
 	.pass-it-on .pass-it-on-event-disclosure,
-	.pass-it-on .pass-it-on-year-reel,
-	.pass-it-on .pass-it-on-disclosure-mark {
+	.pass-it-on .pass-it-on-year-reel {
 		transition: none;
 	}
 	.pass-it-on .pass-it-on-cassette,

@@ -91,6 +91,11 @@ describe("Pass It On year rendering", () => {
 			expect(html).toContain("2009-03-10");
 			expect(html.match(/class="pass-it-on-song-disclosure/g)).toHaveLength(2);
 			expect(html.match(/class="pass-it-on-event-disclosure/g)).toHaveLength(2);
+			expect(html).not.toContain("＋");
+			expect(html).toContain(
+				'class="pass-it-on-disclosure-mark" aria-hidden="true"></span>',
+			);
+			expect(html.match(/class="pass-it-on-disclosure-mark"/g)).toHaveLength(4);
 			expect(html).toContain("pass-it-on-leaning-left");
 			expect(html).toContain("pass-it-on-leaning-right");
 		},

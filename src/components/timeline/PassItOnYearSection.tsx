@@ -49,9 +49,7 @@ function EventDetails({
 						)}
 					</span>
 				</span>
-				<span className="pass-it-on-disclosure-mark" aria-hidden="true">
-					＋
-				</span>
+				<span className="pass-it-on-disclosure-mark" aria-hidden="true" />
 			</summary>
 			<div className="pass-it-on-event-content">
 				<p className="pass-it-on-filed-under">{filedUnder}</p>
@@ -197,9 +195,7 @@ export function PassItOnYearSection({
 											<span
 												className="pass-it-on-disclosure-mark"
 												aria-hidden="true"
-											>
-												＋
-											</span>
+											/>
 										</summary>
 										<div className="pass-it-on-song-content">
 											<SongEntry
