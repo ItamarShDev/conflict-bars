@@ -21,6 +21,7 @@ interface SongTimelineEntryProps {
 	showMarginTop?: boolean;
 	variant?: "full" | "compact";
 	highlightTerm?: string;
+	hideHeader?: boolean;
 }
 
 const LEANING_BORDER: Record<"left" | "right" | "center" | "unknown", string> =
@@ -39,6 +40,7 @@ export function SongEntry({
 	showMarginTop = true,
 	variant = "full",
 	highlightTerm,
+	hideHeader = false,
 }: SongTimelineEntryProps) {
 	const submitSong = useMutation(api.mutations.submitSongEditSuggestion);
 	const [isEditModalOpen, setIsEditModalOpen] = useState(false);
@@ -153,7 +155,7 @@ export function SongEntry({
 						/>
 					</svg>
 				</button>
-				{hasSongIdentity && (
+				{hasSongIdentity && !hideHeader && (
 					<div
 						className={`ps-12 sm:ps-0 ${
 							lang === "he"

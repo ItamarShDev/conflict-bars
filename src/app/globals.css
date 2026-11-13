@@ -401,3 +401,1511 @@ html[data-theme="boombox"] h3 {
 		"Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
 		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+/*  Pass It On archive styles  */
+@font-face {
+	font-family: "Pass It On Serif";
+	src: url("/pass-it-on/instrument-serif-regular.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Pass It On Serif";
+	src: url("/pass-it-on/instrument-serif-italic.woff2") format("woff2");
+	font-style: italic;
+	font-weight: 400;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Pass It On Hebrew";
+	src: url("/pass-it-on/gveret-levin.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+}
+.pass-it-on .pass-it-on-hero-inner {
+	position: relative;
+	z-index: 1;
+	display: grid;
+	min-height: inherit;
+	align-items: center;
+	margin-inline: auto;
+}
+.pass-it-on .pass-it-on-hero-copy {
+	position: relative;
+	z-index: 2;
+}
+.pass-it-on .pass-it-on-title {
+	margin: 0;
+	font-family: "Pass It On Serif", Georgia, serif;
+	font-size: clamp(4rem, 8vw, 7rem);
+	font-weight: 400;
+	letter-spacing: -0.055em;
+	line-height: 0.8;
+}
+.pass-it-on .pass-it-on-title span + span {
+	margin-top: 0.08em;
+	font-style: italic;
+}
+html[data-theme="boombox"] .pass-it-on .pass-it-on-title span + span {
+	color: #f0cf67;
+}
+.pass-it-on .pass-it-on-cta {
+	display: inline-flex;
+	gap: 1.2rem;
+	margin-top: 1.6rem;
+	padding: 0.7rem 1rem;
+	font-weight: 800;
+	text-decoration: none;
+	transition:
+		background-color 180ms ease,
+		transform 180ms ease;
+}
+.pass-it-on .pass-it-on-cta:hover {
+	transform: translateY(-2px);
+}
+.pass-it-on .pass-it-on-cta:focus-visible {
+	outline: 3px solid var(--pass-blue);
+	outline-offset: 3px;
+}
+.pass-it-on .pass-it-on-hero-art {
+	position: relative;
+	margin-inline: auto;
+}
+.pass-it-on .pass-it-on-j-card {
+	line-height: 1.5;
+}
+.pass-it-on .pass-it-on-j-card p + p {
+	font-weight: 600;
+}
+.pass-it-on .pass-it-on-hero-ribbon {
+	position: absolute;
+	z-index: 0;
+	width: 100%;
+	height: 100%;
+	inset: 0;
+	overflow: visible;
+	pointer-events: none;
+}
+.pass-it-on .pass-it-on-hero-ribbon path:first-child,
+.pass-it-on .pass-it-on-hero-ribbon-stitch {
+	fill: none;
+	vector-effect: non-scaling-stroke;
+}
+.pass-it-on .pass-it-on-ribbon-narrow {
+	display: none;
+}
+.pass-it-on .pass-it-on-chronology {
+	position: relative;
+	padding: clamp(3.5rem, 7vw, 6rem) clamp(1rem, 5vw, 5rem) 5rem;
+	background: var(--pass-paper);
+	scroll-margin-top: calc(var(--pass-it-on-sticky-offset, 0px) + 1rem);
+}
+.pass-it-on .pass-it-on-chronology-header {
+	margin: 0 auto 2rem;
+}
+.pass-it-on .pass-it-on-controls {
+	display: grid;
+	align-items: end;
+}
+.pass-it-on .pass-it-on-search-filter {
+	min-width: 0;
+}
+.pass-it-on .pass-it-on-control-label {
+	display: block;
+	text-transform: uppercase;
+}
+.pass-it-on .pass-it-on-search-input {
+	width: 100%;
+	padding: 0.75rem 0.9rem;
+	font-size: 1rem;
+}
+.pass-it-on .pass-it-on-search-input:focus-visible,
+.pass-it-on button:focus-visible,
+.pass-it-on a:focus-visible,
+.pass-it-on .pass-it-on-view-control button:focus-visible,
+.pass-it-on .pass-it-on-rail-arrow:focus-visible,
+.pass-it-on .pass-it-on-advance:focus-visible,
+.pass-it-on .pass-it-on-year-button:focus-visible,
+.pass-it-on .pass-it-on-song-summary:focus-visible,
+.pass-it-on .pass-it-on-event-summary:focus-visible {
+	outline: 3px solid var(--pass-blue);
+	outline-offset: 3px;
+}
+.pass-it-on .pass-it-on-search-filter > div:last-child {
+	margin-top: 0.75rem;
+}
+.pass-it-on .pass-it-on-search-filter .control-bar {
+	border-color: var(--pass-rule);
+	background: var(--pass-paper);
+	color: var(--pass-ink);
+}
+.pass-it-on .pass-it-on-view-control {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+.pass-it-on .pass-it-on-view-control > div {
+	display: flex;
+}
+.pass-it-on .pass-it-on-view-control button {
+	flex: 1 1 auto;
+	border: 0;
+	background: transparent;
+	padding: 0.65rem 0.85rem;
+	font-weight: 800;
+}
+.pass-it-on .pass-it-on-search-note {
+	grid-column: 1 / -1;
+	max-width: 55rem;
+	margin: -0.6rem 0 0;
+	font-size: 0.8rem;
+	line-height: 1.5;
+}
+.pass-it-on .pass-it-on-year-rail {
+	position: sticky;
+	z-index: 20;
+	display: grid;
+	align-items: center;
+	gap: 1rem;
+	margin-inline: calc(-1 * clamp(1rem, 5vw, 5rem));
+	border-block: 1px solid var(--pass-rule);
+	backdrop-filter: blur(12px);
+	padding: 0.55rem clamp(0.75rem, 3vw, 2rem);
+}
+.pass-it-on .pass-it-on-rail-controls {
+	display: flex;
+	align-items: center;
+	gap: 0.45rem;
+}
+.pass-it-on .pass-it-on-rail-arrow {
+	font-weight: 800;
+}
+.pass-it-on .pass-it-on-advance {
+	font-size: 0.8rem;
+	font-weight: 800;
+}
+.pass-it-on .pass-it-on-rail-arrow {
+	width: 2.65rem;
+	font-size: 1.5rem;
+	line-height: 1;
+}
+.pass-it-on .pass-it-on-advance {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.45rem;
+}
+.pass-it-on .pass-it-on-rail-arrow:disabled,
+.pass-it-on .pass-it-on-advance:disabled {
+	cursor: not-allowed;
+	opacity: 0.55;
+}
+.pass-it-on .pass-it-on-rail-years {
+	display: flex;
+	min-width: 0;
+	align-items: center;
+	gap: 0.45rem;
+	margin: 0;
+	overflow-x: auto;
+	padding: 0.25rem 0.1rem;
+	scrollbar-width: thin;
+	scroll-snap-type: x proximity;
+}
+[dir="rtl"] .pass-it-on .pass-it-on-rail-controls .pass-it-on-rail-arrow span {
+	display: inline-block;
+	transform: scaleX(-1);
+}
+.pass-it-on .pass-it-on-rail-years li {
+	flex: 0 0 auto;
+	list-style: none;
+	scroll-snap-align: center;
+}
+.pass-it-on .pass-it-on-year-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-variant-numeric: tabular-nums;
+}
+.pass-it-on .pass-it-on-year-markers {
+	display: inline-flex;
+	gap: 0.15rem;
+}
+.pass-it-on .pass-it-on-year-markers i {
+	border-radius: 50%;
+	background: var(--pass-rule);
+}
+.pass-it-on .pass-it-on-marker-music[data-active="true"] {
+	background: #b04c37;
+}
+.pass-it-on .pass-it-on-marker-history[data-active="true"] {
+	background: var(--pass-blue);
+}
+.pass-it-on .pass-it-on-count {
+	margin: 1rem 0 0.25rem;
+	text-align: center;
+}
+.pass-it-on .pass-it-on-years {
+	position: relative;
+}
+.pass-it-on .pass-it-on-year {
+	position: relative;
+	margin: 0 auto;
+	border-bottom: 1px solid var(--pass-rule);
+}
+.pass-it-on .pass-it-on-year-spool {
+	display: flex;
+	width: fit-content;
+	align-items: center;
+}
+.pass-it-on .pass-it-on-year-spool > span:first-child {
+	display: grid;
+	place-items: center;
+	font-variant-numeric: tabular-nums;
+}
+.pass-it-on .pass-it-on-year-columns {
+	display: grid;
+}
+.pass-it-on .pass-it-on-year-columns-music,
+.pass-it-on .pass-it-on-year-columns-history {
+	grid-template-columns: minmax(0, 1fr);
+	max-width: 52rem;
+	margin-inline: auto;
+}
+.pass-it-on .pass-it-on-lane > h3 {
+	display: flex;
+	align-items: center;
+	gap: 0.55rem;
+	margin: 0 0 1rem;
+	text-transform: uppercase;
+}
+.pass-it-on .pass-it-on-lane-marker {
+	border-radius: 50%;
+	background: #b04c37;
+}
+.pass-it-on .pass-it-on-history-lane .pass-it-on-lane-marker {
+	background: var(--pass-blue);
+}
+.pass-it-on .pass-it-on-ribbon-spine {
+	justify-content: center;
+	padding-block: 2rem;
+}
+.pass-it-on .pass-it-on-ribbon-spine span {
+	width: 0.5rem;
+	border: 1px solid rgb(52 47 40 / 20%);
+	border-radius: 999px;
+	background: var(--pass-yellow);
+	box-shadow: inset 0 0 0 1px rgb(255 255 255 / 28%);
+}
+.pass-it-on .pass-it-on-song-list,
+.pass-it-on .pass-it-on-event-list {
+	display: grid;
+	align-content: start;
+}
+.pass-it-on .pass-it-on-song-disclosure,
+.pass-it-on .pass-it-on-event-disclosure {
+	min-width: 0;
+}
+.pass-it-on .pass-it-on-song-summary,
+.pass-it-on .pass-it-on-event-summary {
+	position: relative;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	list-style: none;
+}
+.pass-it-on .pass-it-on-song-summary::-webkit-details-marker,
+.pass-it-on .pass-it-on-event-summary::-webkit-details-marker {
+	display: none;
+}
+.pass-it-on .pass-it-on-track-number {
+	flex: 0 0 auto;
+}
+.pass-it-on .pass-it-on-song-summary-copy {
+	display: grid;
+	min-width: 0;
+}
+.pass-it-on .pass-it-on-event-heading {
+	display: grid;
+	min-width: 0;
+	flex: 1 1 auto;
+	gap: 0.22rem;
+}
+.pass-it-on .pass-it-on-song-date {
+	flex: 0 0 auto;
+	font-variant-numeric: tabular-nums;
+}
+.pass-it-on .pass-it-on-leaning {
+	display: inline-flex;
+	flex: 0 0 auto;
+	align-items: center;
+	font-weight: 700;
+}
+.pass-it-on .pass-it-on-leaning-dot {
+	border-radius: 50%;
+}
+.pass-it-on .pass-it-on-disclosure-mark {
+	flex: 0 0 auto;
+	line-height: 1;
+	transition: transform 160ms ease;
+}
+.pass-it-on .pass-it-on-song-disclosure[open] .pass-it-on-disclosure-mark,
+.pass-it-on .pass-it-on-event-disclosure[open] .pass-it-on-disclosure-mark {
+	transform: rotate(45deg);
+}
+.pass-it-on .pass-it-on-song-actions .boombox-song-artist {
+	text-align: start;
+}
+.pass-it-on .pass-it-on-song-actions button:focus-visible {
+	opacity: 1;
+}
+.pass-it-on .pass-it-on-event-tape {
+	position: absolute;
+}
+.pass-it-on .pass-it-on-event-dates {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 0.35rem;
+	font-variant-numeric: tabular-nums;
+}
+.pass-it-on .pass-it-on-event-content {
+	display: grid;
+}
+.pass-it-on .pass-it-on-filed-under {
+	margin: 0;
+	font-weight: 700;
+}
+.pass-it-on .pass-it-on-event-content h4 {
+	margin: 0 0 0.25rem;
+	font-weight: 900;
+}
+.pass-it-on .pass-it-on-event-content p:not(.pass-it-on-filed-under) {
+	margin: 0;
+	line-height: 1.6;
+}
+.pass-it-on .pass-it-on-source-link {
+	width: fit-content;
+	color: var(--pass-blue);
+	font-size: 0.8rem;
+	font-weight: 800;
+}
+.pass-it-on .pass-it-on-lane-empty {
+	margin: 0;
+	line-height: 1.55;
+}
+.pass-it-on .pass-it-on-empty {
+	line-height: 1.55;
+}
+.pass-it-on .pass-it-on-credits {
+	max-width: 70rem;
+	margin: 0 auto;
+	border-top: 1px solid var(--pass-rule);
+	color: var(--pass-muted);
+	font-size: 0.76rem;
+	line-height: 1.6;
+	padding: 1.5rem clamp(1rem, 5vw, 5rem) 3rem;
+}
+.pass-it-on .pass-it-on-credits summary {
+	width: fit-content;
+	cursor: pointer;
+	font-weight: 800;
+}
+.pass-it-on .pass-it-on-credits details > div {
+	max-width: 52rem;
+	padding-block: 0.75rem;
+}
+.pass-it-on .pass-it-on-credits p {
+	margin: 0.45rem 0;
+}
+.pass-it-on .pass-it-on-credits a {
+	color: var(--pass-blue);
+	font-weight: 700;
+}
+@media (max-width: 760px) {
+	.pass-it-on .pass-it-on-chronology {
+		padding-inline: 1rem;
+	}
+
+	.pass-it-on {
+		--pass-it-on-sticky-offset: 8rem;
+	}
+
+	.pass-it-on .pass-it-on-search-note {
+		grid-column: auto;
+		margin-top: 0;
+	}
+
+	.pass-it-on .pass-it-on-year-columns-all {
+		position: relative;
+	}
+
+	.pass-it-on .pass-it-on-year-columns-all .pass-it-on-ribbon-spine {
+		position: absolute;
+		inset-block: 0;
+		inset-inline-start: 0.2rem;
+		width: 0.45rem;
+		justify-content: stretch;
+		padding: 0;
+	}
+
+	.pass-it-on .pass-it-on-year-columns-all .pass-it-on-ribbon-spine span {
+		width: 100%;
+		min-height: 100%;
+		margin: 0;
+		border-radius: 999px;
+	}
+
+	.pass-it-on .pass-it-on-ribbon-spine {
+		height: 1.4rem;
+		justify-content: flex-start;
+		padding: 0;
+	}
+
+	.pass-it-on .pass-it-on-ribbon-spine span {
+		width: 3.5rem;
+		margin-inline-start: 1.2rem;
+		border-radius: 999px;
+	}
+
+	.pass-it-on .pass-it-on-song-summary {
+		min-height: 4.5rem;
+		padding: 0.75rem;
+	}
+
+	.pass-it-on .pass-it-on-event-summary {
+		min-height: 4.5rem;
+		gap: 0.5rem;
+		padding: 0.75rem;
+	}
+
+	.pass-it-on .pass-it-on-song-date {
+		max-width: 4.7rem;
+		text-align: center;
+	}
+
+	.pass-it-on .pass-it-on-leaning {
+		font-size: 0.62rem;
+	}
+}
+@media (max-width: 420px) {
+	.pass-it-on .pass-it-on-song-summary {
+		flex-wrap: wrap;
+	}
+
+	.pass-it-on .pass-it-on-song-summary-copy {
+		flex-basis: calc(100% - 3rem);
+	}
+
+	.pass-it-on .pass-it-on-song-date {
+		margin-inline-start: 2.1rem;
+	}
+}
+.pass-it-on {
+	--pass-it-on-sticky-offset: 0px;
+	--pass-sky: #bce5ef;
+	--pass-ink: #2b241d;
+	--pass-paper: #f8f2e4;
+	--pass-paper-hi: #fffaf0;
+	--pass-muted: #6b5f51;
+	--pass-yellow: #f5d873;
+	--pass-blue: #23596a;
+	--pass-note: #e2f1f5;
+	--pass-note-tape: rgb(245 216 115 / 85%);
+	--pass-rule: rgb(74 58 40 / 20%);
+	background: var(--pass-paper);
+	color: var(--pass-ink);
+	font-family: Arial, Helvetica, sans-serif;
+}
+html[data-theme="boombox"] .pass-it-on {
+	--pass-sky: #14272b;
+	--pass-ink: #f4eee1;
+	--pass-paper: #202b2b;
+	--pass-paper-hi: #273332;
+	--pass-muted: #d0c6b3;
+	--pass-yellow: #e6c658;
+	--pass-blue: #a7c4e6;
+	--pass-note: #263b42;
+	--pass-note-tape: rgb(230 198 88 / 82%);
+	--pass-rule: rgb(244 238 225 / 24%);
+}
+.pass-it-on .pass-it-on-utility-row {
+	position: relative;
+	z-index: 10;
+	display: flex;
+	min-height: 3.25rem;
+	align-items: center;
+	justify-content: flex-end;
+	border: 0;
+	background: var(--pass-sky);
+	padding: 0.4rem clamp(1rem, 5vw, 3.5rem);
+}
+.pass-it-on .pass-it-on-utility-controls {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 0.4rem;
+}
+.pass-it-on .pass-it-on-utility-button,
+.pass-it-on .pass-it-on-utility-row a {
+	display: inline-flex;
+	min-width: 2.75rem;
+	min-height: 2.75rem;
+	flex: 0 0 auto;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid rgb(74 58 40 / 35%);
+	border-radius: 999px;
+	background: rgb(255 250 240 / 82%);
+	box-shadow: none;
+	color: #342f28;
+	font-size: 0.78rem;
+	font-weight: 700;
+	padding: 0.4rem 0.8rem;
+	text-decoration: none;
+	transform: none;
+	animation: none;
+}
+.pass-it-on .pass-it-on-help-button {
+	width: 2.75rem;
+	padding: 0;
+}
+.pass-it-on .pass-it-on-utility-theme {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.15rem;
+	border: 1px solid rgb(74 58 40 / 35%);
+	border-radius: 999px;
+	background: rgb(255 250 240 / 82%);
+	padding: 0.2rem;
+}
+.pass-it-on .pass-it-on-theme-option {
+	min-height: 2.25rem;
+	border: 0;
+	border-radius: 999px;
+	background: transparent;
+	color: #342f28;
+	font-size: 0.68rem;
+	font-weight: 700;
+	padding: 0.35rem 0.65rem;
+}
+.pass-it-on .pass-it-on-theme-option.is-active {
+	background: #342f28;
+	color: #fffaf0;
+}
+.pass-it-on .pass-it-on-hero {
+	position: relative;
+	isolation: isolate;
+	min-height: min(740px, calc(100svh - 3.25rem));
+	overflow: hidden;
+	background:
+		radial-gradient(ellipse at 12% 8%, rgb(255 255 255 / 72%), transparent 36%),
+		radial-gradient(ellipse at 78% 36%, rgb(246 216 115 / 30%), transparent 34%),
+		linear-gradient(150deg, #c9eef2 0%, var(--pass-sky) 52%, #a9d8e3 100%);
+	color: #2b241d;
+}
+html[data-theme="boombox"] .pass-it-on .pass-it-on-hero {
+	background:
+		radial-gradient(ellipse at 12% 8%, rgb(255 255 255 / 9%), transparent 36%),
+		linear-gradient(150deg, #20343a 0%, var(--pass-sky) 65%, #20343a 100%);
+	color: var(--pass-ink);
+}
+.pass-it-on .pass-it-on-hero::after {
+	position: absolute;
+	z-index: 2;
+	inset-inline: 0;
+	bottom: -1px;
+	height: 22px;
+	background: var(--pass-paper);
+	clip-path: polygon(
+		0 42%,
+		2% 54%,
+		4% 37%,
+		7% 58%,
+		10% 41%,
+		13% 56%,
+		16% 36%,
+		19% 54%,
+		22% 40%,
+		25% 59%,
+		28% 39%,
+		31% 54%,
+		34% 38%,
+		37% 60%,
+		40% 40%,
+		43% 55%,
+		46% 37%,
+		49% 58%,
+		52% 40%,
+		55% 54%,
+		58% 36%,
+		61% 57%,
+		64% 40%,
+		67% 55%,
+		70% 37%,
+		73% 58%,
+		76% 40%,
+		79% 56%,
+		82% 38%,
+		85% 57%,
+		88% 39%,
+		91% 55%,
+		94% 37%,
+		97% 57%,
+		100% 42%,
+		100% 100%,
+		0 100%
+	);
+	content: "";
+	pointer-events: none;
+}
+.pass-it-on .pass-it-on-hero-inner {
+	width: min(100% - 2rem, 1240px);
+	grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+	gap: clamp(1.5rem, 4vw, 4rem);
+	padding-block: 2rem 8.25rem;
+}
+.pass-it-on .pass-it-on-hero-copy {
+	max-width: 38rem;
+}
+.pass-it-on .pass-it-on-kicker {
+	margin: 0;
+	color: var(--pass-muted);
+	font-family: "Courier New", Courier, monospace;
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+}
+.pass-it-on h1.pass-it-on-title {
+	margin: 1rem 0 0;
+	color: var(--pass-ink);
+	font-family: "Pass It On Serif", Georgia, serif;
+	font-size: clamp(4rem, 8.4vw, 7.875rem);
+	font-style: italic;
+	font-weight: 400;
+	letter-spacing: -0.055em;
+	line-height: 0.84;
+}
+.pass-it-on .pass-it-on-title span {
+	display: block;
+}
+.pass-it-on .pass-it-on-title span + span {
+	margin-inline-start: 0.4em;
+	color: #735b40;
+}
+html[data-theme="boombox"] .pass-it-on h1.pass-it-on-title span + span {
+	color: #e7c86c;
+}
+.pass-it-on[dir="rtl"] h1.pass-it-on-title {
+	font-family: "Pass It On Hebrew", cursive;
+	font-size: clamp(3.25rem, 7vw, 5.625rem);
+	font-style: normal;
+	letter-spacing: 0;
+	line-height: 1.08;
+}
+.pass-it-on .pass-it-on-hebrew {
+	width: fit-content;
+	margin: 1rem 0 0;
+	color: #a3432f;
+	font-family: "Pass It On Hebrew", cursive;
+	font-size: clamp(1.9rem, 3vw, 2.25rem);
+	line-height: 1;
+	transform: rotate(-4deg);
+}
+.pass-it-on .pass-it-on-hebrew[lang="en"] {
+	color: #a3432f;
+	font-family: "Pass It On Serif", Georgia, serif;
+	font-size: 2rem;
+	font-style: italic;
+}
+html[data-theme="boombox"] .pass-it-on .pass-it-on-hebrew {
+	color: #e7c86c;
+}
+.pass-it-on .pass-it-on-subtitle {
+	max-width: 33ch;
+	margin: 1.25rem 0 0;
+	color: var(--pass-ink);
+	font-size: 1.05rem;
+	line-height: 1.55;
+}
+.pass-it-on .pass-it-on-cta {
+	min-height: 3.375rem;
+	align-items: center;
+	border: 0;
+	border-radius: 999px;
+	background: #2b241d;
+	box-shadow: 0 12px 26px rgb(43 36 29 / 24%);
+	color: #fff8e6;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 0.8rem;
+	letter-spacing: 0.08em;
+	padding-inline: 1.6rem;
+}
+.pass-it-on .pass-it-on-cta:hover {
+	background: #2b241d;
+	box-shadow: 0 16px 30px rgb(43 36 29 / 28%);
+}
+.pass-it-on .pass-it-on-hero-art {
+	width: min(100%, 600px);
+	padding: 3% 0 12%;
+}
+.pass-it-on .pass-it-on-cassette {
+	display: block;
+	width: 100%;
+	height: auto;
+	filter: drop-shadow(0 26px 22px rgb(64 49 35 / 27%));
+	transform: rotate(6deg);
+	transform-origin: 50% 55%;
+	transition: transform 450ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.pass-it-on .pass-it-on-hero-art:hover .pass-it-on-cassette {
+	transform: translateY(-8px) rotate(1deg) scale(1.01);
+}
+.pass-it-on .pass-it-on-j-card {
+	position: absolute;
+	z-index: 3;
+	inset-inline-start: 2%;
+	bottom: -0.25rem;
+	width: min(90%, 28rem);
+	margin: 0;
+	border: 0;
+	border-radius: 3px 14px 4px 12px;
+	background: rgb(255 250 234 / 96%);
+	box-shadow: 0 14px 26px -12px rgb(64 49 35 / 40%);
+	color: #2b241d;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 0.75rem;
+	font-weight: 700;
+	padding: 1rem 1.25rem;
+	transform: rotate(-4deg);
+}
+.pass-it-on .pass-it-on-j-card::before {
+	position: absolute;
+	top: -0.6rem;
+	inset-inline-end: 1.4rem;
+	width: 4rem;
+	height: 1.25rem;
+	background: rgb(182 83 62 / 58%);
+	content: "";
+	transform: rotate(4deg);
+}
+.pass-it-on .pass-it-on-j-card p {
+	margin: 0;
+}
+.pass-it-on .pass-it-on-j-card p + p {
+	margin-top: 0.3rem;
+	font-size: 0.7rem;
+}
+.pass-it-on .pass-it-on-hero-ribbon {
+	filter: drop-shadow(0 3px 1px rgb(78 59 32 / 16%));
+}
+.pass-it-on .pass-it-on-hero-ribbon path:first-child {
+	stroke: var(--pass-yellow);
+	stroke-linecap: round;
+	stroke-width: 14;
+}
+.pass-it-on .pass-it-on-hero-ribbon-stitch {
+	stroke: #8b6c48;
+	stroke-dasharray: 3 8;
+	stroke-linecap: round;
+	stroke-width: 1.5;
+}
+.pass-it-on[dir="rtl"] .pass-it-on-hero-ribbon {
+	transform: scaleX(-1);
+}
+.pass-it-on .pass-it-on-chronology {
+	max-width: 1240px;
+	margin-inline: auto;
+	padding-inline: clamp(1rem, 5vw, 3.5rem);
+}
+.pass-it-on .pass-it-on-chronology-header {
+	max-width: 760px;
+	margin-inline: auto;
+	padding-block: 3.75rem 2.25rem;
+	text-align: center;
+}
+.pass-it-on .pass-it-on-chronology-header h2 {
+	margin: 0.75rem 0 0;
+	color: var(--pass-ink);
+	font-family: "Pass It On Serif", Georgia, serif;
+	font-size: clamp(2.6rem, 5.4vw, 4.25rem);
+	font-style: italic;
+	font-weight: 400;
+	letter-spacing: -0.035em;
+	line-height: 0.98;
+}
+.pass-it-on[dir="rtl"] .pass-it-on-chronology-header h2 {
+	font-family: "Pass It On Hebrew", cursive;
+	font-style: normal;
+	letter-spacing: 0;
+}
+.pass-it-on .pass-it-on-method {
+	max-width: 54ch;
+	margin: 1rem auto 0;
+	color: var(--pass-muted);
+	font-size: 0.95rem;
+	line-height: 1.6;
+}
+.pass-it-on .pass-it-on-controls {
+	grid-template-columns: minmax(0, 1fr) auto;
+	gap: 1rem 1.5rem;
+	max-width: 64rem;
+	margin: 1.75rem auto 1rem;
+}
+.pass-it-on .pass-it-on-search-filter {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: end;
+	gap: 0.75rem;
+}
+.pass-it-on .pass-it-on-search-wrap {
+	flex: 1 1 17rem;
+	max-width: 25rem;
+}
+.pass-it-on .pass-it-on-control-label {
+	margin-bottom: 0.35rem;
+	color: var(--pass-muted);
+	font-size: 0.7rem;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+}
+.pass-it-on .pass-it-on-search-input {
+	min-height: 3.25rem;
+	border: 1.5px solid rgb(74 58 40 / 40%);
+	border-radius: 999px;
+	background: var(--pass-paper-hi);
+	color: var(--pass-ink);
+	padding-inline: 1.2rem;
+}
+.pass-it-on .pass-it-on-search-input::placeholder {
+	color: var(--pass-muted);
+}
+.pass-it-on .pass-it-on-search-input:focus-visible {
+	border-color: var(--pass-blue);
+	box-shadow: 0 0 0 3px color-mix(in srgb, var(--pass-blue) 25%, transparent);
+}
+.pass-it-on .pass-it-on-search-filter > div:last-child {
+	width: fit-content;
+	max-width: 100%;
+	margin: 0;
+}
+.pass-it-on .pass-it-on-search-filter button.control-bar {
+	min-height: 3rem;
+	border: 1px solid rgb(74 58 40 / 35%);
+	border-radius: 999px;
+	background: var(--pass-paper-hi);
+	box-shadow: none;
+	color: var(--pass-ink);
+	animation: none;
+}
+.pass-it-on .pass-it-on-search-filter .control-bar:not(button) {
+	border: 1px solid var(--pass-rule);
+	border-radius: 1.25rem;
+	background: var(--pass-paper-hi);
+	box-shadow: 0 10px 24px rgb(43 36 29 / 10%);
+	color: var(--pass-ink);
+}
+.pass-it-on .pass-it-on-search-filter .control-bar button:not([aria-expanded]) {
+	border-radius: 999px;
+	animation: none;
+	transform: none;
+}
+.pass-it-on .pass-it-on-view-control {
+	min-width: 15rem;
+}
+.pass-it-on .pass-it-on-view-control > div {
+	gap: 0.15rem;
+	border: 1px solid rgb(74 58 40 / 35%);
+	border-radius: 999px;
+	background: var(--pass-paper-hi);
+	padding: 0.2rem;
+}
+.pass-it-on .pass-it-on-view-control button {
+	min-height: 2.65rem;
+	border-radius: 999px;
+	color: var(--pass-ink);
+	font-family: "Courier New", Courier, monospace;
+	font-size: 0.75rem;
+}
+.pass-it-on .pass-it-on-view-control button + button {
+	border-inline-start: 0;
+}
+.pass-it-on .pass-it-on-view-control button[aria-pressed="true"] {
+	background: #2b241d;
+	color: #fff8e6;
+}
+html[data-theme="boombox"]
+	.pass-it-on
+	.pass-it-on
+	.pass-it-on-view-control
+	button[aria-pressed="true"] {
+	background: var(--pass-yellow);
+	color: #2b241d;
+}
+.pass-it-on .pass-it-on-search-note {
+	margin-top: 0;
+	color: var(--pass-muted);
+}
+.pass-it-on .pass-it-on-count {
+	margin-block: 0.75rem 0.25rem;
+	color: var(--pass-muted);
+	font-family: "Courier New", Courier, monospace;
+	font-size: 0.75rem;
+	font-weight: 400;
+}
+.pass-it-on .pass-it-on-no-match {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem 1rem;
+	margin: 1rem auto;
+	color: var(--pass-muted);
+	text-align: center;
+}
+.pass-it-on .pass-it-on-no-match p {
+	margin: 0;
+}
+.pass-it-on .pass-it-on-no-match button {
+	min-height: 2.75rem;
+	border: 0;
+	border-radius: 999px;
+	background: #2b241d;
+	color: #fff8e6;
+	font-size: 0.75rem;
+	font-weight: 700;
+	padding: 0.5rem 1rem;
+}
+html[data-theme="boombox"] .pass-it-on .pass-it-on-no-match button {
+	background: var(--pass-yellow);
+	color: #2b241d;
+}
+.pass-it-on .pass-it-on-year-rail {
+	top: 0;
+	grid-template-columns: auto minmax(0, 1fr);
+	border-color: var(--pass-rule);
+	background: color-mix(in srgb, var(--pass-paper) 94%, transparent);
+	box-shadow: 0 6px 18px rgb(43 36 29 / 8%);
+}
+.pass-it-on .pass-it-on-rail-arrow,
+.pass-it-on .pass-it-on-advance {
+	min-height: 2.75rem;
+	border: 1px solid rgb(74 58 40 / 35%);
+	border-radius: 999px;
+	background: var(--pass-paper-hi);
+	color: var(--pass-ink);
+}
+.pass-it-on .pass-it-on-advance {
+	padding-inline: 0.9rem;
+}
+.pass-it-on .pass-it-on-advance[aria-pressed="true"] {
+	background: var(--pass-yellow);
+	color: #2b241d;
+}
+.pass-it-on .pass-it-on-year-button {
+	width: 2.85rem;
+	min-width: 2.85rem;
+	height: 2.85rem;
+	min-height: 2.85rem;
+	flex-direction: column;
+	gap: 0.12rem;
+	border: 1px solid rgb(74 58 40 / 25%);
+	border-radius: 50%;
+	background: var(--pass-yellow);
+	color: #2b241d;
+	font-family: "Pass It On Serif", Georgia, serif;
+	font-size: 0.85rem;
+	font-weight: 400;
+	padding: 0.2rem;
+}
+.pass-it-on .pass-it-on-year-button[aria-pressed="true"] {
+	border-color: #564631;
+	background: #e9c74b;
+	box-shadow: 0 3px 0 rgb(87 63 36 / 20%);
+	color: #2b241d;
+}
+.pass-it-on .pass-it-on-year-markers i {
+	width: 0.3rem;
+	height: 0.3rem;
+}
+.pass-it-on .pass-it-on-years {
+	isolation: isolate;
+}
+.pass-it-on .pass-it-on-years::before,
+.pass-it-on .pass-it-on-years::after {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	content: "";
+	transform: translateX(-50%);
+}
+.pass-it-on .pass-it-on-years::before {
+	width: 40px;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='240' viewBox='0 0 40 240'%3E%3Cpath d='M21.5 0C33.5 60 9.5 180 21.5 240' fill='none' stroke='%234e3b20' stroke-opacity='.14' stroke-width='12'/%3E%3Cpath d='M20 0C32 60 8 180 20 240' fill='none' stroke='%23f5d873' stroke-width='11'/%3E%3Cpath d='M20 0C32 60 8 180 20 240' fill='none' stroke='%238b6c48' stroke-width='1.5' stroke-dasharray='3 8'/%3E%3C/svg%3E");
+	background-position: center top;
+	background-repeat: repeat-y;
+	background-size: 40px 240px;
+}
+.pass-it-on .pass-it-on-years::after {
+	display: none;
+}
+.pass-it-on .pass-it-on-year {
+	z-index: 1;
+	max-width: 1120px;
+	border: 0;
+	padding-block: clamp(3.5rem, 6vw, 5.25rem);
+	scroll-margin-top: calc(var(--pass-it-on-sticky-offset, 0px) + 4rem);
+}
+.pass-it-on .pass-it-on-year-spool {
+	min-height: 0;
+	justify-content: center;
+	gap: 0.9rem;
+	margin: 0 auto 2rem;
+	color: var(--pass-ink);
+	font-family: "Pass It On Serif", Georgia, serif;
+	font-size: clamp(4.25rem, 8vw, 6.25rem);
+	font-style: italic;
+	font-weight: 400;
+	line-height: 0.9;
+}
+.pass-it-on .pass-it-on-year-spool > span:first-child {
+	width: auto;
+	height: auto;
+	border: 0;
+	border-radius: 0;
+	background: transparent;
+	box-shadow: none;
+	color: var(--pass-ink);
+	font: inherit;
+	padding: 0;
+}
+.pass-it-on .pass-it-on-year-reel {
+	width: 2.65rem;
+	height: 2.65rem;
+	flex: 0 0 auto;
+	border: 2px solid #564631;
+	border-radius: 50%;
+	background: radial-gradient(
+		circle,
+		#5b4a32 0 5px,
+		#f6e9c3 5.5px 12px,
+		#645947 12.5px 15px,
+		var(--pass-yellow) 15.5px
+	);
+	box-shadow: 0 4px 0 rgb(87 63 36 / 20%);
+}
+.pass-it-on .pass-it-on-year.is-active .pass-it-on-year-reel {
+	background: radial-gradient(
+		circle,
+		#5b4a32 0 5px,
+		#f6e9c3 5.5px 12px,
+		#645947 12.5px 15px,
+		#e9c74b 15.5px
+	);
+	transform: rotate(90deg);
+}
+.pass-it-on .pass-it-on-year-track-count {
+	max-width: 15rem;
+	color: var(--pass-muted);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.72rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.4;
+}
+.pass-it-on .pass-it-on-year-columns {
+	grid-template-columns: minmax(0, 1fr) 6rem minmax(0, 1fr);
+	align-items: start;
+	gap: 0;
+}
+.pass-it-on .pass-it-on-year-columns-all .pass-it-on-music-lane {
+	grid-column: 1;
+}
+.pass-it-on .pass-it-on-year-columns-all .pass-it-on-history-lane {
+	grid-column: 3;
+}
+html[data-theme="boombox"] .pass-it-on .pass-it-on-song-disclosure {
+	background: transparent;
+}
+html[data-theme="boombox"] .pass-it-on .pass-it-on-event-disclosure {
+	background: var(--pass-note);
+}
+.pass-it-on .pass-it-on-ribbon-spine {
+	display: none;
+}
+.pass-it-on .pass-it-on-lane {
+	min-width: 0;
+	padding-inline: clamp(0.75rem, 2vw, 1.75rem);
+}
+.pass-it-on .pass-it-on-lane > h3 {
+	margin-bottom: 1.15rem;
+	color: var(--pass-muted);
+	font-family: "Courier New", Courier, monospace;
+	font-size: 0.72rem;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+}
+.pass-it-on .pass-it-on-lane-marker {
+	width: 0.55rem;
+	height: 0.55rem;
+}
+.pass-it-on .pass-it-on-song-list,
+.pass-it-on .pass-it-on-event-list {
+	gap: 1.2rem;
+}
+.pass-it-on .pass-it-on-song-disclosure {
+	--pass-leaning: var(--color-leaning-unknown);
+	border: 0;
+	border-inline-start: 0;
+	background: transparent;
+	box-shadow: none;
+	color: var(--pass-ink);
+}
+.pass-it-on .pass-it-on-song-leaning-left {
+	--pass-leaning: var(--color-leaning-left);
+}
+.pass-it-on .pass-it-on-song-leaning-right {
+	--pass-leaning: var(--color-leaning-right);
+}
+.pass-it-on .pass-it-on-song-leaning-center {
+	--pass-leaning: var(--color-leaning-center);
+}
+.pass-it-on .pass-it-on-song-summary {
+	min-height: 0;
+	flex-wrap: wrap;
+	gap: 0.35rem 0.75rem;
+	border: 0;
+	padding: 0.35rem 0;
+}
+.pass-it-on .pass-it-on-track-number {
+	margin-top: 0;
+	color: #a3432f;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 0.7rem;
+	font-weight: 700;
+}
+html[data-theme="boombox"] .pass-it-on .pass-it-on-track-number {
+	color: #e7c86c;
+}
+.pass-it-on .pass-it-on-song-summary-copy {
+	flex: 1 1 70%;
+	gap: 0.2rem;
+}
+.pass-it-on .pass-it-on-song-summary-copy strong {
+	color: var(--pass-ink);
+	font-family: "Pass It On Serif", Georgia, serif;
+	font-size: clamp(1.45rem, 2.2vw, 1.95rem);
+	font-style: italic;
+	font-weight: 400;
+	line-height: 1.08;
+}
+.pass-it-on[dir="rtl"] .pass-it-on-song-summary-copy strong {
+	font-family: "Pass It On Hebrew", cursive;
+	font-size: 1.65rem;
+	font-style: normal;
+}
+.pass-it-on .pass-it-on-song-summary-copy > span {
+	color: var(--pass-muted);
+	font-size: 0.85rem;
+}
+.pass-it-on .pass-it-on-song-date,
+.pass-it-on .pass-it-on-leaning {
+	color: var(--pass-muted);
+	font-family: "Courier New", Courier, monospace;
+	font-size: 0.68rem;
+}
+.pass-it-on .pass-it-on-leaning {
+	gap: 0.28rem;
+}
+.pass-it-on .pass-it-on-leaning-dot {
+	width: 0.5rem;
+	height: 0.5rem;
+	background: var(--pass-leaning);
+}
+.pass-it-on .pass-it-on-disclosure-mark {
+	color: var(--pass-muted);
+	font-size: 1rem;
+}
+.pass-it-on .pass-it-on-song-content {
+	border-top: 1px solid var(--pass-rule);
+	padding: 0.65rem 0;
+}
+.pass-it-on .pass-it-on-song-actions {
+	border: 0;
+	background: transparent;
+	box-shadow: none;
+	padding: 0;
+}
+.pass-it-on .pass-it-on-event-disclosure {
+	position: relative;
+	border: 0;
+	border-inline-start: 0;
+	border-radius: 3px 16px 5px 14px;
+	background: var(--pass-note);
+	box-shadow:
+		0 1px 0 rgb(35 89 106 / 22%),
+		0 16px 26px -16px rgb(35 60 70 / 50%);
+	color: var(--pass-ink);
+	transform: rotate(-0.7deg);
+	transition:
+		transform 300ms ease,
+		box-shadow 300ms ease;
+}
+.pass-it-on .pass-it-on-event-list > details:nth-child(even) {
+	transform: rotate(0.6deg);
+}
+.pass-it-on .pass-it-on-event-disclosure:hover {
+	box-shadow:
+		0 1px 0 rgb(35 89 106 / 22%),
+		0 22px 30px -16px rgb(35 60 70 / 50%);
+	transform: translateY(-3px) rotate(0deg);
+}
+.pass-it-on .pass-it-on-event-summary {
+	min-height: 0;
+	gap: 0.75rem;
+	padding: 1.5rem 1.35rem 1rem;
+}
+.pass-it-on .pass-it-on-event-tape {
+	top: -0.65rem;
+	left: auto;
+	inset-inline-start: 1.6rem;
+	width: 4.75rem;
+	height: 1.35rem;
+	background: var(--pass-note-tape);
+	box-shadow: 0 1px 2px rgb(0 0 0 / 8%);
+	transform: rotate(-3deg);
+}
+.pass-it-on .pass-it-on-event-heading strong {
+	color: var(--pass-ink);
+	font-family: "Pass It On Serif", Georgia, serif;
+	font-size: 1.35rem;
+	font-weight: 400;
+	line-height: 1.15;
+}
+.pass-it-on .pass-it-on-event-heading strong[lang="he"] {
+	font-family: "Pass It On Hebrew", cursive;
+	font-size: 1.5rem;
+}
+.pass-it-on .pass-it-on-event-dates,
+.pass-it-on .pass-it-on-filed-under {
+	color: var(--pass-blue);
+	font-family: "Courier New", Courier, monospace;
+	font-size: 0.7rem;
+}
+.pass-it-on .pass-it-on-event-content {
+	gap: 0.8rem;
+	border-top: 1px dashed rgb(35 89 106 / 30%);
+	padding: 0.9rem 1.35rem 1.15rem;
+}
+.pass-it-on .pass-it-on-event-content h4 {
+	color: var(--pass-blue);
+	font-family: "Courier New", Courier, monospace;
+	font-size: 0.72rem;
+}
+.pass-it-on .pass-it-on-event-content p:not(.pass-it-on-filed-under) {
+	color: var(--pass-ink);
+	font-size: 0.9rem;
+}
+.pass-it-on .pass-it-on-lane-empty,
+.pass-it-on .pass-it-on-empty {
+	border: 0;
+	background: transparent;
+	color: var(--pass-muted);
+	font-family: "Pass It On Serif", Georgia, serif;
+	font-size: 1.25rem;
+	font-style: italic;
+	font-weight: 400;
+	padding: 0.4rem 0;
+}
+.pass-it-on[dir="rtl"] .pass-it-on-lane-empty,
+.pass-it-on[dir="rtl"] .pass-it-on-empty {
+	font-family: "Pass It On Hebrew", cursive;
+	font-style: normal;
+}
+.pass-it-on .pass-it-on-empty {
+	max-width: 520px;
+	margin: 3rem auto 1.5rem;
+	text-align: center;
+}
+@media (max-width: 760px) {
+	.pass-it-on .pass-it-on-hero {
+		min-height: auto;
+	}
+
+	.pass-it-on .pass-it-on-hero-inner {
+		width: min(100% - 2rem, 40rem);
+		grid-template-columns: minmax(0, 1fr);
+		gap: 1rem;
+		padding-block: 2rem 6.5rem;
+	}
+
+	.pass-it-on .pass-it-on-title {
+		max-width: 10ch;
+		font-size: clamp(3.5rem, 15vw, 5rem);
+	}
+
+	.pass-it-on[dir="rtl"] h1.pass-it-on-title {
+		max-width: 12ch;
+		font-size: clamp(3.2rem, 13vw, 4.5rem);
+	}
+
+	.pass-it-on .pass-it-on-hero-art {
+		width: min(100%, 34rem);
+		margin-top: 0.5rem;
+	}
+
+	.pass-it-on .pass-it-on-ribbon-wide {
+		display: none;
+	}
+
+	.pass-it-on .pass-it-on-ribbon-narrow {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	.pass-it-on .pass-it-on-controls {
+		grid-template-columns: minmax(0, 1fr);
+		gap: 1rem;
+	}
+
+	.pass-it-on .pass-it-on-search-filter {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.pass-it-on .pass-it-on-search-wrap,
+	.pass-it-on .pass-it-on-search-filter > div:last-child {
+		width: 100%;
+		max-width: none;
+	}
+
+	.pass-it-on .pass-it-on-view-control {
+		width: fit-content;
+		min-width: 0;
+		max-width: 100%;
+	}
+
+	.pass-it-on .pass-it-on-year-rail {
+		grid-template-columns: minmax(0, 1fr);
+		gap: 0.3rem;
+		margin-inline: -1rem;
+		padding: 0.35rem 0.75rem;
+	}
+
+	.pass-it-on .pass-it-on-rail-years {
+		grid-row: 1;
+	}
+
+	.pass-it-on .pass-it-on-rail-controls {
+		grid-row: 2;
+		justify-content: space-between;
+	}
+
+	.pass-it-on .pass-it-on-advance {
+		flex: 1 1 auto;
+	}
+
+	.pass-it-on .pass-it-on-year {
+		padding-inline-start: 2.5rem;
+	}
+
+	.pass-it-on .pass-it-on-years::before,
+	.pass-it-on .pass-it-on-years::after {
+		left: auto;
+		inset-inline-start: -0.4rem;
+		transform: none;
+	}
+
+	.pass-it-on .pass-it-on-year-spool {
+		justify-content: flex-start;
+		margin-inline: 0;
+		font-size: clamp(3.75rem, 15vw, 5.25rem);
+	}
+
+	.pass-it-on .pass-it-on-year-columns {
+		grid-template-columns: minmax(0, 1fr);
+		gap: 1.5rem;
+	}
+
+	.pass-it-on .pass-it-on-year-columns-all {
+		grid-template-areas: "music" "history";
+		padding-inline-start: 0;
+	}
+
+	.pass-it-on .pass-it-on-year-columns-all .pass-it-on-music-lane {
+		grid-area: music;
+	}
+
+	.pass-it-on .pass-it-on-year-columns-all .pass-it-on-history-lane {
+		grid-area: history;
+	}
+
+	.pass-it-on .pass-it-on-year-columns-all .pass-it-on-ribbon-spine {
+		display: none;
+	}
+
+	.pass-it-on .pass-it-on-lane {
+		padding-inline: 0;
+	}
+
+	.pass-it-on .pass-it-on-song-summary {
+		gap: 0.35rem 0.5rem;
+	}
+}
+@media (max-width: 420px) {
+	.pass-it-on .pass-it-on-utility-row {
+		padding-inline: 0.65rem;
+	}
+
+	.pass-it-on .pass-it-on-utility-controls {
+		gap: 0.25rem;
+	}
+
+	.pass-it-on .pass-it-on-utility-row a {
+		font-size: 0.68rem;
+		padding-inline: 0.55rem;
+	}
+
+	.pass-it-on .pass-it-on-utility-theme {
+		gap: 0;
+	}
+
+	.pass-it-on .pass-it-on-theme-option {
+		font-size: 0.62rem;
+		padding-inline: 0.45rem;
+	}
+
+	.pass-it-on .pass-it-on-year-spool {
+		flex-wrap: wrap;
+		justify-content: flex-start;
+	}
+}
+@media (prefers-reduced-motion: reduce) {
+	.pass-it-on .pass-it-on-cta,
+	.pass-it-on .pass-it-on-cassette,
+	.pass-it-on .pass-it-on-event-disclosure,
+	.pass-it-on .pass-it-on-year-reel,
+	.pass-it-on .pass-it-on-disclosure-mark {
+		transition: none;
+	}
+	.pass-it-on .pass-it-on-cassette,
+	.pass-it-on .pass-it-on-event-disclosure,
+	.pass-it-on .pass-it-on-year-reel {
+		animation: none;
+	}
+	.pass-it-on .pass-it-on-year-rail,
+	.pass-it-on .pass-it-on-rail-years {
+		scroll-behavior: auto;
+		scroll-snap-type: none;
+	}
+	.pass-it-on .pass-it-on-hero-art:hover .pass-it-on-cassette {
+		transform: rotate(6deg);
+	}
+	.pass-it-on .pass-it-on-event-disclosure:hover {
+		transform: rotate(-0.7deg);
+	}
+}

@@ -13,8 +13,8 @@ type HelpModalProps = {
 export type HelpModalStats = {
 	songCount: number;
 	artistCount: number;
-	startYear: number;
-	endYear: number;
+	startYear: number | null;
+	endYear: number | null;
 };
 
 export function HelpModal({
@@ -27,6 +27,14 @@ export function HelpModal({
 	const titleId = useId();
 	const descriptionId = useId();
 	const isRtl = lang === "he";
+	const catalogDescription =
+		stats.songCount > 0 && stats.startYear !== null && stats.endYear !== null
+			? translations.description.catalog
+					.replace("{{songs}}", String(stats.songCount))
+					.replace("{{artists}}", String(stats.artistCount))
+					.replace("{{startYear}}", String(stats.startYear))
+					.replace("{{endYear}}", String(stats.endYear))
+			: translations.description.emptyCatalog;
 
 	useEffect(() => {
 		if (!isOpen) {
@@ -100,13 +108,7 @@ export function HelpModal({
 							className="space-y-4 text-sm leading-relaxed text-(--color-muted-foreground)"
 						>
 							<p>{translations.description.intro}</p>
-							<p>
-								{translations.description.catalog
-									.replace("{{songs}}", String(stats.songCount))
-									.replace("{{artists}}", String(stats.artistCount))
-									.replace("{{startYear}}", String(stats.startYear))
-									.replace("{{endYear}}", String(stats.endYear))}
-							</p>
+							<p>{catalogDescription}</p>
 							<ul
 								className={`${isRtl ? "list-disc pr-6" : "list-disc pl-6"} space-y-2`}
 							>
