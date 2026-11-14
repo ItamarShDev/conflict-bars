@@ -103,6 +103,29 @@ describe("Pass It On cassette artwork", () => {
 		},
 	);
 
+	it("anchors the Hebrew side label inside the red strip, clear of the title", () => {
+		const html = renderToStaticMarkup(
+			<PassItOnHero
+				lang="he"
+				stats={stats}
+				eventCount={4}
+				copy={translations.he.passItOn}
+			/>,
+		);
+		const labelTextIndex = html.indexOf(translations.he.passItOn.cassetteLabel);
+		const labelTagStart = html.lastIndexOf("<text", labelTextIndex);
+		const labelTagEnd = html.indexOf(">", labelTagStart);
+		const labelTag = html.slice(labelTagStart, labelTagEnd + 1);
+
+		expect(labelTextIndex).toBeGreaterThanOrEqual(0);
+		expect(labelTag).toContain('x="540"');
+		expect(labelTag).toContain('text-anchor="start"');
+		expect(labelTag).toContain('direction="rtl"');
+		expect(labelTag).toContain('letter-spacing="0"');
+		expect(labelTag).toContain('y="218"');
+		expect(html).toContain('<text x="330" y="207"');
+	});
+
 	it("uses a static first photo when reduced motion is preferred", () => {
 		const reducedMotionStyles = heroStyles.slice(
 			heroStyles.lastIndexOf("@media (prefers-reduced-motion: reduce)"),

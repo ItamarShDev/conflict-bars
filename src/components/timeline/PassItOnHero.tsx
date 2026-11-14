@@ -212,13 +212,13 @@ export function PassItOnHero({
 							מיקס של זמן
 						</text>
 						<text
-							x="524"
+							x={lang === "he" ? "540" : "524"}
 							y="218"
 							fill="#fff2d1"
-							textAnchor="end"
+							textAnchor={lang === "he" ? "start" : "end"}
 							fontFamily='"Courier New", Courier, monospace'
 							fontSize="8"
-							letterSpacing="1"
+							letterSpacing={lang === "he" ? "0" : "1"}
 							direction={lang === "he" ? "rtl" : "ltr"}
 							unicodeBidi="plaintext"
 						>
