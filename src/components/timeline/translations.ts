@@ -2,11 +2,77 @@ export const translations = {
 	en: {
 		title: "Conflict Bars",
 		themeToggle: {
-			label: "Visual theme",
+			label: "Dark mode",
 			classic: "Zine",
 			boombox: "Boombox",
 		},
-		subtitle: "Direction is the political leaning of the artist",
+		subtitle: "Israeli and Palestinian hip-hop alongside historical context",
+		passItOn: {
+			kicker: "PASS IT ON · A HIP-HOP ARCHIVE",
+			titleLead: "A mixtape of",
+			titleEmphasis: "complicated times.",
+			hebrewTagline: "להעביר הלאה",
+			cassetteAlt: "Illustrated cassette with a three-place photo montage",
+			cassetteDescription:
+				"The cassette window shows a photo montage of Tel Aviv, Haifa, and Ramon Crater, crossfading between places when motion is enabled. This archive does not play audio.",
+			cassetteCaption: "CONFLICT BARS · ARCHIVE · NO AUDIO",
+			pauseAnimation: "Pause animation",
+			resumeAnimation: "Resume animation",
+			motionStaticLabel: "Static",
+			motionDisabled: "Animation disabled by reduced-motion preference",
+			subtitle:
+				"Israeli and Palestinian hip-hop, filed alongside historical context from the same periods.",
+			cta: "Unspool the timeline",
+			catalogSummary: "{{songs}} tracks · {{artists}} artists · {{range}}",
+			eventSummary: "{{count}} historical notes in the archive",
+			noDateRange: "Dates not available",
+			chronologyKicker: "THE CHRONOLOGY",
+			chronologyTitle: "Every year on the tape.",
+			method:
+				"Historical notes are filed under the year they start, with their full date ranges. Sharing a year does not imply a connection to a track.",
+			searchNote:
+				"Search and the leaning/decade filters apply to songs; historical notes remain in view.",
+			viewLabel: "Show",
+			all: "All",
+			music: "Music",
+			history: "History",
+			status: "{{songs}} songs · {{events}} historical notes",
+			previousYear: "Earlier year",
+			nextYear: "Later year",
+			yearNavigation: "Jump to a year",
+			selectYear: "Select year",
+			autoAdvance: "Auto-advance years",
+			pauseAutoAdvance: "Pause year advance",
+			filedUnder: "Filed under {{year}} · start year",
+			noSongsInYear: "No songs are listed in the archive for this year.",
+			noHistoryInYear: "No historical notes start in this year in the archive.",
+			noSongsFound: "No songs match these search and filter settings.",
+			noSongMatch:
+				"No songs match these search and filter settings. Historical notes are not filtered.",
+			clearSongSearchAndFilters: "Clear song search and filters",
+			noHistoryAvailable: "No historical notes are available in this archive.",
+			emptyArchive:
+				"No songs or historical notes are available in this archive yet.",
+			trackOne: "track",
+			trackMany: "tracks",
+			historyOne: "historical note",
+			historyMany: "historical notes",
+			credits: "Image and type credits",
+			photoCredit:
+				"Street photograph: “Graffiti Eilat street Tel Aviv.jpg” by Nizzan Cohen, own work; cropped and color-treated for this page under CC BY 4.0.",
+			photoSourceLabel: "Photo source and license",
+			photoLicenseLabel: "CC BY 4.0 license",
+			haifaCredit:
+				"Haifa harbor panorama by Equalhuman, cropped from the CC0 1.0 public-domain image.",
+			haifaSourceLabel: "Haifa photograph source",
+			cc0LicenseLabel: "CC0 1.0 license",
+			ramonCredit:
+				"Ramon Crater panorama by Ebfe, released worldwide into the public domain by the author.",
+			ramonSourceLabel: "Ramon Crater source and release",
+			fontCredit:
+				"Gveret Levin and Instrument Serif are used under the SIL Open Font License 1.1.",
+			fontLicenseLabel: "Full font license texts",
+		},
 		search: {
 			label: "Search songs",
 			placeholder: "Search songs by name, artist, or lyrics",
@@ -72,15 +138,16 @@ export const translations = {
 			modalTitle: "How to travel through time",
 			description: {
 				intro:
-					"This site pairs key moments in Israeli hip-hop with the historical events that shaped them.",
+					"This site presents Israeli and Palestinian hip-hop alongside historical context from the same periods, without asserting a cause-and-effect connection.",
 				columns: {
-					left: "Pick a year to see the conflict that was happening then",
-					right: "The songs released in that same period appear beside it",
+					left: "Choose a year to see historical notes filed under their start year",
+					right: "Songs released in that year appear in a separate column",
 				},
 				borders:
 					"Card borders indicate political leaning — red for left, blue for right, yellow for center, gray for unknown.",
 				catalog:
 					"The timeline currently covers {{songs}} songs by {{artists}} artists, spanning {{startYear}}–{{endYear}}.",
+				emptyCatalog: "No cataloged songs are available yet.",
 				submissions:
 					"Want to contribute? Use the Submit a Song button to share missing tracks or context.",
 			},
@@ -133,11 +200,75 @@ export const translations = {
 	he: {
 		title: "חרוזים מסוכסכים",
 		themeToggle: {
-			label: "ערכת נושא",
+			label: "מצב כהה",
 			classic: "פאנזין",
 			boombox: "בומבוקס",
 		},
-		subtitle: "בכיוון הנטייה הפוליטית",
+		subtitle: "היפ־הופ ישראלי ופלסטיני לצד הקשר היסטורי",
+		passItOn: {
+			kicker: "להעביר הלאה · ארכיון היפ־הופ",
+			titleLead: "מיקסטייפ של",
+			titleEmphasis: "זמנים מורכבים.",
+			hebrewTagline: "להעביר הלאה",
+			cassetteAlt: "איור קלטת עם מונטאז׳ תמונות משלושה מקומות",
+			cassetteDescription:
+				"חלון הקלטת מציג מונטאז׳ תצלומים מתל אביב, חיפה ומכתש רמון, עם מעברים הדרגתיים בין המקומות כשהתנועה מופעלת. הארכיון אינו משמיע אודיו.",
+			cassetteCaption: "CONFLICT BARS · ארכיון · ללא שמע",
+			pauseAnimation: "השהיית האנימציה",
+			resumeAnimation: "חידוש האנימציה",
+			motionStaticLabel: "תצוגה קבועה",
+			motionDisabled: "האנימציה מושבתת בהתאם להעדפת צמצום תנועה",
+			subtitle: "היפ־הופ ישראלי ופלסטיני לצד הקשר היסטורי מאותה תקופה.",
+			cta: "לפתוח את ציר הזמן",
+			catalogSummary: "{{songs}} שירים · {{artists}} אמנים · {{range}}",
+			eventSummary: "{{count}} הערות היסטוריות בארכיון",
+			noDateRange: "אין תאריכים זמינים",
+			chronologyKicker: "ציר הזמן",
+			chronologyTitle: "כל שנה על הקלטת.",
+			method:
+				"הערות היסטוריות משויכות לשנת ההתחלה ומציגות את טווח התאריכים המלא. הופעה באותה שנה אינה טענה לקשר לשיר.",
+			searchNote:
+				"החיפוש ומסנני הנטייה והעשור חלים על שירים בלבד; הערות היסטוריות נשארות מוצגות.",
+			viewLabel: "הצגה",
+			all: "הכל",
+			music: "מוזיקה",
+			history: "היסטוריה",
+			status: "{{songs}} שירים · {{events}} הערות היסטוריות",
+			previousYear: "השנה הקודמת",
+			nextYear: "השנה הבאה",
+			yearNavigation: "מעבר לשנה",
+			selectYear: "בחירת שנה",
+			autoAdvance: "מעבר אוטומטי בין שנים",
+			pauseAutoAdvance: "השהיית מעבר השנים",
+			filedUnder: "משויך לשנת {{year}} · שנת התחלה",
+			noSongsInYear: "אין שירים הרשומים בארכיון לשנה זו.",
+			noHistoryInYear: "אין בארכיון הערות היסטוריות שמתחילות בשנה זו.",
+			noSongsFound: "לא נמצאו שירים התואמים לחיפוש ולמסננים האלה.",
+			noSongMatch:
+				"לא נמצאו שירים התואמים לחיפוש ולמסננים. הערות היסטוריות אינן מסוננות.",
+			clearSongSearchAndFilters: "ניקוי חיפוש השירים והמסננים",
+			noHistoryAvailable: "אין הערות היסטוריות בארכיון.",
+			emptyArchive: "אין עדיין שירים או הערות היסטוריות בארכיון.",
+			trackOne: "שיר",
+			trackMany: "שירים",
+			historyOne: "הערה היסטורית",
+			historyMany: "הערות היסטוריות",
+			credits: "קרדיט לתמונה ולגופנים",
+			photoCredit:
+				"תצלום רחוב: “Graffiti Eilat street Tel Aviv.jpg” מאת Nizzan Cohen, עבודה מקורית; נחתך ועבר טיפול צבע בעמוד זה ברישיון CC BY 4.0.",
+			photoSourceLabel: "מקור התמונה והרישיון",
+			photoLicenseLabel: "רישיון CC BY 4.0",
+			haifaCredit:
+				"תצלום פנורמי של נמל חיפה מאת Equalhuman, בחיתוך מתוך תמונה בנחלת הכלל ברישיון CC0 1.0.",
+			haifaSourceLabel: "מקור תצלום חיפה",
+			cc0LicenseLabel: "רישיון CC0 1.0",
+			ramonCredit:
+				"תצלום פנורמי של מכתש רמון מאת Ebfe, שוחרר לנחלת הכלל ברחבי העולם על ידי היוצר.",
+			ramonSourceLabel: "מקור ושחרור תצלום מכתש רמון",
+			fontCredit:
+				"הגופנים Gveret Levin ו־Instrument Serif משמשים ברישיון SIL Open Font License 1.1.",
+			fontLicenseLabel: "טקסט מלא של רישיונות הגופנים",
+		},
 		search: {
 			label: "חיפוש שירים",
 			placeholder: "חפשו שירים לפי שם, אמן או מילים",
@@ -202,15 +333,16 @@ export const translations = {
 			modalTitle: "איך לטייל בזמן",
 			description: {
 				intro:
-					"האתר מציג רגעים מרכזיים בהיפ-הופ הישראלי לצד האירועים ההיסטוריים שעיצבו אותם.",
+					"האתר מציג היפ־הופ ישראלי ופלסטיני לצד הקשר היסטורי מאותה תקופה, בלי לטעון לקשר של סיבה ותוצאה.",
 				columns: {
-					left: "בחרו שנה כדי לראות את הסכסוך שהתרחש בה",
-					right: "השירים שיצאו באותה תקופה מופיעים לידו",
+					left: "בחרו שנה כדי לראות הערות היסטוריות המשויכות לשנת ההתחלה",
+					right: "שירים שיצאו באותה שנה מופיעים בעמודה נפרדת",
 				},
 				borders:
 					"מסגרת הכרטיס מציינת נטייה פוליטית — אדום לשמאל, כחול לימין, צהוב למרכז, אפור ללא ידוע.",
 				catalog:
 					"ציר הזמן כולל כעת {{songs}} שירים של {{artists}} אמנים, ומשתרע על פני השנים {{startYear}}–{{endYear}}.",
+				emptyCatalog: "עדיין אין שירים בקטלוג.",
 				submissions:
 					"רוצים להוסיף? לחצו על כפתור הוסף שיר ושלחו שיר או מידע שחסר.",
 			},

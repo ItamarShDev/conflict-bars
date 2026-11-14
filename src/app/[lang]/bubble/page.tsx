@@ -62,7 +62,11 @@ export default async function BubblePage({
 	const stats = getCatalogStats(songs);
 
 	return (
-		<div className="relative min-h-screen">
+		<div
+			lang={lang}
+			dir={lang === "he" ? "rtl" : "ltr"}
+			className="relative min-h-screen pass-it-on pass-it-on-chart-page"
+		>
 			<TimelineHeader
 				title={t.bubble.title}
 				subtitle={t.bubble.subtitle}
@@ -70,12 +74,17 @@ export default async function BubblePage({
 				helpModal={t.helpModal}
 				stats={stats}
 				lang={lang}
-				railOffset={false}
+				compact
 				nav={{ href: `/${lang}`, label: t.nav.timeline }}
 			/>
 
-			<main className="min-h-screen pt-4 md:pt-6">
-				<div className="mx-4 md:mx-6">
+			<header className="pass-it-on-chart-intro">
+				<h1 className="pass-it-on-chart-title">{t.bubble.title}</h1>
+				<p className="pass-it-on-chart-subtitle">{t.bubble.subtitle}</p>
+			</header>
+
+			<main className="pass-it-on-chart-main">
+				<div className="pass-it-on-chart-content">
 					<BubbleChart
 						songs={songs}
 						lang={lang}

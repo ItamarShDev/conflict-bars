@@ -1,20 +1,30 @@
 "use client";
 
 import { usePreloadedQuery } from "convex/react";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { SubmitSongModal } from "@/components/SubmitSongModal";
 import { FilterPanel } from "@/components/timeline/FilterPanel";
-import type { HelpModalStats } from "@/components/timeline/HelpModal";
+import { PassItOnHero } from "@/components/timeline/PassItOnHero";
+import { PassItOnNoMatches } from "@/components/timeline/PassItOnNoMatches";
+import { PassItOnYearSection } from "@/components/timeline/PassItOnYearSection";
+import { PassItOnYearSpool } from "@/components/timeline/PassItOnYearSpool";
 import { TimelineHeader } from "@/components/timeline/TimelineHeader";
 import { translations } from "@/components/timeline/translations";
-import { YearRail } from "@/components/timeline/YearRail";
-import { YearSection } from "@/components/timeline/YearSection";
+import { convertConvexEventsToTimeline } from "@/utils/convex-helpers";
 import {
-	buildYearEventColors,
-	convertConvexEventsToTimeline,
-} from "@/utils/convex-helpers";
-import { getCatalogStats, getEntriesByYear } from "@/utils/timeline";
+	filterYearGroups,
+	getCatalogStats,
+	getEntriesByYear,
+	type TimelineView,
+} from "@/utils/timeline";
 import type { FileSongList, PreloadedEvents } from "../../../timeline/types";
+
+type ManualScrollLock = {
+	year: number;
+	quietTimer: number | null;
+	maxTimer: number | null;
+	onScroll: () => void;
+};
 
 export function Timeline({
 	lang,
@@ -31,13 +41,13 @@ export function Timeline({
 		() => convertConvexEventsToTimeline(convexEventsData),
 		[convexEventsData],
 	);
-	const yearEventColors = buildYearEventColors(events);
-
 	const [searchTerm, setSearchTerm] = useState("");
 	const [selectedLeanings, setSelectedLeanings] = useState<string[]>([]);
 	const [selectedDecades, setSelectedDecades] = useState<number[]>([]);
 	const [selectedYear, setSelectedYear] = useState<number | null>(null);
-	const [isPlaying, setIsPlaying] = useState(false);
+	const [isAutoAdvancing, setIsAutoAdvancing] = useState(false);
+	const [view, setView] = useState<TimelineView>("all");
+	const manualScrollLockRef = useRef<ManualScrollLock | null>(null);
 
 	const yearGroups = useMemo(
 		() =>
@@ -50,95 +60,150 @@ export function Timeline({
 			),
 		[songs, events, searchTerm, selectedLeanings, selectedDecades],
 	);
-	const catalogStats: HelpModalStats = useMemo(
-		() => getCatalogStats(songs),
-		[songs],
+	const visibleYearGroups = useMemo(
+		() => filterYearGroups(yearGroups, view),
+		[yearGroups, view],
 	);
-
-	const years = useMemo(() => yearGroups.map(([y]) => y), [yearGroups]);
-	const sectionRefs = useRef<Record<number, HTMLDivElement | null>>({});
+	const catalogStats = useMemo(() => getCatalogStats(songs), [songs]);
+	const years = useMemo(
+		() => visibleYearGroups.map(([year]) => year),
+		[visibleYearGroups],
+	);
+	const sectionRefs = useRef<Record<number, HTMLElement | null>>({});
+	const clearManualScrollLock = useCallback((expected?: ManualScrollLock) => {
+		const lock = manualScrollLockRef.current;
+		if (!lock || (expected && lock !== expected)) return;
+		if (lock.quietTimer !== null) window.clearTimeout(lock.quietTimer);
+		if (lock.maxTimer !== null) window.clearTimeout(lock.maxTimer);
+		window.removeEventListener("scroll", lock.onScroll);
+		manualScrollLockRef.current = null;
+	}, []);
+	const beginManualScrollLock = useCallback(
+		(year: number) => {
+			clearManualScrollLock();
+			const lock: ManualScrollLock = {
+				year,
+				quietTimer: null,
+				maxTimer: null,
+				onScroll: () => {},
+			};
+			const unlock = () => clearManualScrollLock(lock);
+			lock.onScroll = () => {
+				if (lock.quietTimer !== null) window.clearTimeout(lock.quietTimer);
+				lock.quietTimer = window.setTimeout(unlock, 180);
+			};
+			manualScrollLockRef.current = lock;
+			window.addEventListener("scroll", lock.onScroll, { passive: true });
+			lock.maxTimer = window.setTimeout(unlock, 5000);
+		},
+		[clearManualScrollLock],
+	);
+	const scrollToYear = useCallback((year: number) => {
+		const section = sectionRefs.current[year];
+		if (!section) return;
+		const railHeight =
+			document
+				.querySelector<HTMLElement>(".pass-it-on-year-rail")
+				?.getBoundingClientRect().height ?? 0;
+		const top =
+			window.scrollY + section.getBoundingClientRect().top - railHeight - 12;
+		const behavior = window.matchMedia("(prefers-reduced-motion: reduce)")
+			.matches
+			? "auto"
+			: "smooth";
+		window.scrollTo({ top, behavior });
+	}, []);
+	useEffect(() => () => clearManualScrollLock(), [clearManualScrollLock]);
 
 	useEffect(() => {
 		if (years.length === 0) {
+			if (manualScrollLockRef.current) {
+				clearManualScrollLock(manualScrollLockRef.current);
+			}
 			setSelectedYear(null);
 			return;
 		}
-		if (!selectedYear || !years.includes(selectedYear)) {
+		if (selectedYear === null || !years.includes(selectedYear)) {
+			if (
+				manualScrollLockRef.current &&
+				!years.includes(manualScrollLockRef.current.year)
+			) {
+				clearManualScrollLock(manualScrollLockRef.current);
+			}
 			setSelectedYear(years[0]);
 		}
-	}, [selectedYear, years]);
+	}, [clearManualScrollLock, selectedYear, years]);
 
 	useEffect(() => {
-		if (!isPlaying || !selectedYear) {
-			return;
-		}
+		if (!isAutoAdvancing || selectedYear === null || years.length < 2) return;
 		const interval = window.setInterval(() => {
 			const index = years.indexOf(selectedYear);
 			const next =
 				index >= 0 && index < years.length - 1 ? years[index + 1] : years[0];
 			setSelectedYear(next);
-			sectionRefs.current[next]?.scrollIntoView({
-				behavior: "smooth",
-				block: "start",
-			});
+			scrollToYear(next);
 		}, 4000);
 		return () => window.clearInterval(interval);
-	}, [isPlaying, selectedYear, years]);
+	}, [isAutoAdvancing, selectedYear, scrollToYear, years]);
+
+	useEffect(() => {
+		if (years.length < 2) setIsAutoAdvancing(false);
+	}, [years.length]);
 
 	const selectYear = (year: number) => {
-		setIsPlaying(false);
+		setIsAutoAdvancing(false);
+		beginManualScrollLock(year);
 		setSelectedYear(year);
-		sectionRefs.current[year]?.scrollIntoView({
-			behavior: "smooth",
-			block: "start",
-		});
+		scrollToYear(year);
+		sectionRefs.current[year]
+			?.querySelector<HTMLElement>(".pass-it-on-year-spool")
+			?.focus({ preventScroll: true });
 	};
 
 	const goPrevious = () => {
-		if (!selectedYear) return;
+		if (selectedYear === null) return;
 		const index = years.indexOf(selectedYear);
-		const prev = index > 0 ? years[index - 1] : years[years.length - 1];
-		selectYear(prev);
+		selectYear(index > 0 ? years[index - 1] : years[years.length - 1]);
 	};
 
 	const goNext = () => {
-		if (!selectedYear) return;
+		if (selectedYear === null) return;
 		const index = years.indexOf(selectedYear);
-		const next =
-			index >= 0 && index < years.length - 1 ? years[index + 1] : years[0];
-		selectYear(next);
+		selectYear(
+			index >= 0 && index < years.length - 1 ? years[index + 1] : years[0],
+		);
 	};
 
 	useEffect(() => {
-		if (yearGroups.length === 0) return;
+		if (visibleYearGroups.length === 0) return;
 		const observer = new IntersectionObserver(
 			(entries) => {
 				const visible = entries
 					.filter((entry) => entry.isIntersecting)
 					.sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-				if (visible) {
+				if (visible && manualScrollLockRef.current === null) {
 					const year = Number(visible.target.getAttribute("data-year"));
-					if (!Number.isNaN(year)) {
-						setSelectedYear(year);
-					}
+					if (!Number.isNaN(year)) setSelectedYear(year);
 				}
 			},
 			{
 				root: null,
-				rootMargin: "-40% 0px -40% 0px",
+				rootMargin: "-35% 0px -45% 0px",
 				threshold: 0,
 			},
 		);
 
-		for (const [year] of yearGroups) {
-			const el = sectionRefs.current[year];
-			if (el) observer.observe(el);
+		for (const [year] of visibleYearGroups) {
+			const section = sectionRefs.current[year];
+			if (section) observer.observe(section);
 		}
-
 		return () => observer.disconnect();
-	}, [yearGroups]);
+	}, [visibleYearGroups]);
 
-	const filteredSongCount = useMemo(
+	const hasActiveFilters =
+		selectedLeanings.length > 0 || selectedDecades.length > 0;
+	const hasSearchOrFilters = searchTerm.trim().length > 0 || hasActiveFilters;
+	const matchingSongCount = useMemo(
 		() =>
 			yearGroups.reduce(
 				(count, [, entries]) =>
@@ -147,97 +212,219 @@ export function Timeline({
 			),
 		[yearGroups],
 	);
-
-	const hasActiveFilters =
-		selectedLeanings.length > 0 || selectedDecades.length > 0;
-	const searchCountText =
-		searchTerm.trim().length > 0 || hasActiveFilters
-			? t.search.results.replace("{{count}}", String(filteredSongCount))
-			: null;
+	const visibleEventCount = useMemo(
+		() =>
+			visibleYearGroups.reduce(
+				(count, [, entries]) =>
+					count + entries.filter((entry) => entry.type === "conflict").length,
+				0,
+			),
+		[visibleYearGroups],
+	);
+	const hasNoSongMatches = hasSearchOrFilters && matchingSongCount === 0;
+	const statusText = t.passItOn.status
+		.replace("{{songs}}", String(matchingSongCount))
+		.replace("{{events}}", String(visibleEventCount));
 
 	return (
-		<div className="relative min-h-screen">
+		<div
+			className="relative min-h-screen pass-it-on"
+			lang={lang}
+			dir={lang === "he" ? "rtl" : "ltr"}
+		>
 			<TimelineHeader
+				id="pass-it-on-header"
 				title={t.title}
 				subtitle={t.subtitle}
 				themeToggle={t.themeToggle}
 				helpModal={t.helpModal}
 				stats={catalogStats}
 				lang={lang}
+				railOffset={false}
+				compact
 				nav={{ href: `/${lang}/bubble`, label: t.nav.bubble }}
 			/>
 
-			<YearRail
-				years={years}
-				selectedYear={selectedYear}
-				onSelect={selectYear}
-				isPlaying={isPlaying}
-				onTogglePlay={() => setIsPlaying((prev) => !prev)}
-				onPrevious={goPrevious}
-				onNext={goNext}
-				translations={t.timeTravel}
-			/>
+			<main>
+				<PassItOnHero
+					lang={lang}
+					stats={catalogStats}
+					eventCount={events.length}
+					copy={t.passItOn}
+				/>
 
-			<main className="min-h-screen ps-14 md:ps-20">
-				<div className="control-bar mx-4 mb-6 mt-4 border-0 border-b-4 border-(--color-accent) p-4 md:mx-6 md:mb-8 md:mt-6 md:p-6">
-					<div className={`${lang === "he" ? "text-right" : "text-left"}`}>
-						<label
-							htmlFor="timeline-search"
-							className="text-xs font-black uppercase tracking-widest text-(--color-control-muted)"
-						>
-							{t.search.label}
-						</label>
-						<input
-							id="timeline-search"
-							type="search"
-							value={searchTerm}
-							onChange={(event) => setSearchTerm(event.target.value)}
-							placeholder={t.search.placeholder}
-							dir={lang === "he" ? "rtl" : "ltr"}
-							className="mt-2 w-full border-2 border-(--color-control-border) bg-(--color-control-background) px-4 py-3 text-base text-(--color-control-foreground) outline-none transition placeholder:text-(--color-control-muted) focus:border-(--color-accent) focus:bg-(--color-control-background)"
-							aria-label={t.search.label}
-						/>
-						{searchCountText && (
-							<p className="mt-2 text-sm font-black text-(--color-accent)">
-								{searchCountText}
-							</p>
-						)}
+				<section
+					className="pass-it-on-chronology"
+					id="pass-it-on-chronology"
+					aria-labelledby="pass-it-on-chronology-title"
+				>
+					<header className="pass-it-on-chronology-header">
+						<p className="pass-it-on-kicker">{t.passItOn.chronologyKicker}</p>
+						<h2 id="pass-it-on-chronology-title">
+							{t.passItOn.chronologyTitle}
+						</h2>
+						<p className="pass-it-on-method">{t.passItOn.method}</p>
+					</header>
+
+					<div className="pass-it-on-controls">
+						<div className="pass-it-on-search-filter">
+							<div className="pass-it-on-search-wrap">
+								<label
+									htmlFor="timeline-search"
+									className="pass-it-on-control-label"
+								>
+									{t.search.label}
+								</label>
+								<input
+									id="timeline-search"
+									type="search"
+									value={searchTerm}
+									onChange={(event) => setSearchTerm(event.target.value)}
+									placeholder={t.search.placeholder}
+									dir={lang === "he" ? "rtl" : "ltr"}
+									className="pass-it-on-search-input"
+									aria-label={t.search.label}
+									aria-describedby="pass-it-on-search-note"
+								/>
+							</div>
+							<FilterPanel
+								lang={lang}
+								translations={t.filters}
+								selectedLeanings={selectedLeanings}
+								onLeaningsChange={setSelectedLeanings}
+								selectedDecades={selectedDecades}
+								onDecadesChange={setSelectedDecades}
+							/>
+						</div>
+						<fieldset className="pass-it-on-view-control">
+							<legend className="pass-it-on-control-label">
+								{t.passItOn.viewLabel}
+							</legend>
+							<div>
+								{(["all", "music", "history"] as const).map((option) => (
+									<button
+										key={option}
+										type="button"
+										aria-pressed={view === option}
+										onClick={() => setView(option)}
+									>
+										{t.passItOn[option]}
+									</button>
+								))}
+							</div>
+						</fieldset>
+						<p id="pass-it-on-search-note" className="pass-it-on-search-note">
+							{t.passItOn.searchNote}
+						</p>
 					</div>
 
-					<FilterPanel
-						lang={lang}
-						translations={t.filters}
-						selectedLeanings={selectedLeanings}
-						onLeaningsChange={setSelectedLeanings}
-						selectedDecades={selectedDecades}
-						onDecadesChange={setSelectedDecades}
+					<PassItOnYearSpool
+						years={years}
+						groups={visibleYearGroups}
+						selectedYear={selectedYear}
+						onSelect={selectYear}
+						isAutoAdvancing={isAutoAdvancing}
+						onToggleAutoAdvance={() =>
+							setIsAutoAdvancing((previous) => !previous)
+						}
+						onPrevious={goPrevious}
+						onNext={goNext}
+						copy={t.passItOn}
 					/>
-				</div>
 
-				<div className="pb-32 md:pb-24">
-					{yearGroups.map(([year, entries]) => (
-						<YearSection
-							key={year}
-							year={year}
-							yearColors={yearEventColors[year] ?? []}
-							entries={entries}
-							lang={lang}
-							highlightTerm={searchTerm}
-							translations={t}
-							ref={(el) => {
-								sectionRefs.current[year] = el;
-							}}
-							isActive={year === selectedYear}
-						/>
-					))}
-				</div>
-
-				{(searchTerm.trim() || hasActiveFilters) && filteredSongCount === 0 && (
-					<p className="py-12 text-center text-sm font-black uppercase tracking-widest text-(--color-year-foreground)">
-						{t.search.noResults}
+					<p className="pass-it-on-count" role="status" aria-live="polite">
+						{statusText}
 					</p>
-				)}
+					{hasNoSongMatches && (
+						<PassItOnNoMatches
+							message={t.passItOn.noSongMatch}
+							clearLabel={t.passItOn.clearSongSearchAndFilters}
+							onClear={() => {
+								setSearchTerm("");
+								setSelectedLeanings([]);
+								setSelectedDecades([]);
+							}}
+						/>
+					)}
+
+					<div className="pass-it-on-years">
+						{visibleYearGroups.map(([year, entries]) => (
+							<PassItOnYearSection
+								key={year}
+								year={year}
+								entries={entries}
+								lang={lang}
+								highlightTerm={searchTerm}
+								translations={t}
+								view={view}
+								sectionRef={(element) => {
+									sectionRefs.current[year] = element;
+								}}
+								isActive={year === selectedYear}
+							/>
+						))}
+					</div>
+
+					{visibleYearGroups.length === 0 &&
+						(!hasNoSongMatches || view === "history") && (
+							<p className="pass-it-on-empty" role="status">
+								{view === "history"
+									? t.passItOn.noHistoryAvailable
+									: view === "music" || hasSearchOrFilters
+										? t.passItOn.noSongsFound
+										: t.passItOn.emptyArchive}
+							</p>
+						)}
+				</section>
 			</main>
+
+			<footer className="pass-it-on-credits">
+				<details>
+					<summary>{t.passItOn.credits}</summary>
+					<div>
+						<p>{t.passItOn.photoCredit}</p>
+						<a
+							href="https://commons.wikimedia.org/wiki/File:Graffiti_Eilat_street_Tel_Aviv.jpg"
+							target="_blank"
+							rel="noreferrer"
+						>
+							{t.passItOn.photoSourceLabel}
+						</a>
+						<a
+							href="https://creativecommons.org/licenses/by/4.0/"
+							target="_blank"
+							rel="noreferrer"
+						>
+							{t.passItOn.photoLicenseLabel}
+						</a>
+						<p>{t.passItOn.haifaCredit}</p>
+						<a
+							href="https://commons.wikimedia.org/wiki/File:Haifa_landscape_panorama_harbour_city_public_domain_27.jpg"
+							target="_blank"
+							rel="noreferrer"
+						>
+							{t.passItOn.haifaSourceLabel}
+						</a>
+						<a
+							href="https://creativecommons.org/publicdomain/zero/1.0/"
+							target="_blank"
+							rel="noreferrer"
+						>
+							{t.passItOn.cc0LicenseLabel}
+						</a>
+						<p>{t.passItOn.ramonCredit}</p>
+						<a
+							href="https://commons.wikimedia.org/wiki/File:Ramon_Crater_WidePanorama.jpg"
+							target="_blank"
+							rel="noreferrer"
+						>
+							{t.passItOn.ramonSourceLabel}
+						</a>
+						<p>{t.passItOn.fontCredit}</p>
+						<a href="/pass-it-on/OFL.txt">{t.passItOn.fontLicenseLabel}</a>
+					</div>
+				</details>
+			</footer>
 
 			<SubmitSongModal
 				label={t.submitSongButton}

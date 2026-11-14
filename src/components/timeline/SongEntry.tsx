@@ -1,5 +1,6 @@
 import { useMutation } from "convex/react";
 import { type ReactNode, useState } from "react";
+import { createModalPortal } from "@/components/ModalPortal";
 import { SubmitSongForm } from "@/components/SubmitSongForm";
 import { FullLyricsDialog } from "@/components/timeline/FullLyricsDialog";
 import { translations } from "@/components/timeline/translations";
@@ -21,6 +22,7 @@ interface SongTimelineEntryProps {
 	showMarginTop?: boolean;
 	variant?: "full" | "compact";
 	highlightTerm?: string;
+	hideHeader?: boolean;
 }
 
 const LEANING_BORDER: Record<"left" | "right" | "center" | "unknown", string> =
@@ -39,6 +41,7 @@ export function SongEntry({
 	showMarginTop = true,
 	variant = "full",
 	highlightTerm,
+	hideHeader = false,
 }: SongTimelineEntryProps) {
 	const submitSong = useMutation(api.mutations.submitSongEditSuggestion);
 	const [isEditModalOpen, setIsEditModalOpen] = useState(false);
@@ -153,7 +156,7 @@ export function SongEntry({
 						/>
 					</svg>
 				</button>
-				{hasSongIdentity && (
+				{hasSongIdentity && !hideHeader && (
 					<div
 						className={`ps-12 sm:ps-0 ${
 							lang === "he"
@@ -267,57 +270,63 @@ export function SongEntry({
 				/>
 			)}
 
-			{hasSongIdentity && isEditModalOpen && (
-				<div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4">
-					<button
-						type="button"
-						onClick={() => setIsEditModalOpen(false)}
-						onKeyDown={(event) => {
-							if (event.key === "Enter" || event.key === " ") {
-								setIsEditModalOpen(false);
-							}
-						}}
-						className="absolute inset-0 cursor-default"
-						aria-label={t.submitSongForm.modalCloseAria}
-					/>
+			{hasSongIdentity &&
+				isEditModalOpen &&
+				createModalPortal(
 					<div
-						className="relative z-10 w-full max-w-2xl overflow-y-auto border-2 border-(--color-control-border) glass-card p-6 pb-8 max-h-[calc(100vh-1rem)]"
-						style={{
-							paddingBottom: "calc(env(safe-area-inset-bottom, 0px) + 2rem)",
-						}}
+						lang={lang}
+						dir={lang === "he" ? "rtl" : "ltr"}
+						className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4"
 					>
-						<div className="mb-4 flex items-center justify-between">
-							<h2 className="text-lg font-black">
-								{t.submitSongForm.editTitle}
-							</h2>
-							<button
-								type="button"
-								onClick={() => setIsEditModalOpen(false)}
-								className="p-2 text-(--color-muted-foreground) transition hover:bg-(--color-card-foreground)/10 hover:text-(--color-card-foreground) focus:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent)"
-								aria-label={t.submitSongForm.modalCloseAria}
-							>
-								&#x2715;
-							</button>
-						</div>
-						<SubmitSongForm
-							submitSong={submitSong}
-							lang={lang}
-							editSong={{
-								_id: songObj._id,
-								name: songObj.name,
-								artist: songObj.artist,
-								artist_details: songObj.artist_details,
-								published_date: songObj.published_date,
-								language: songObj.language,
-								lyric_sample: songObj.lyric_sample,
-								links: songObj.links,
+						<button
+							type="button"
+							onClick={() => setIsEditModalOpen(false)}
+							onKeyDown={(event) => {
+								if (event.key === "Enter" || event.key === " ") {
+									setIsEditModalOpen(false);
+								}
 							}}
-							translations={translations[lang].submitSongForm}
-							onSuccess={() => setIsEditModalOpen(false)}
+							className="absolute inset-0 cursor-default"
+							aria-label={t.submitSongForm.modalCloseAria}
 						/>
-					</div>
-				</div>
-			)}
+						<div
+							className="relative z-10 w-full max-w-2xl overflow-y-auto border-2 border-(--color-control-border) glass-card p-6 pb-8 max-h-[calc(100vh-1rem)]"
+							style={{
+								paddingBottom: "calc(env(safe-area-inset-bottom, 0px) + 2rem)",
+							}}
+						>
+							<div className="mb-4 flex items-center justify-between">
+								<h2 className="text-lg font-black">
+									{t.submitSongForm.editTitle}
+								</h2>
+								<button
+									type="button"
+									onClick={() => setIsEditModalOpen(false)}
+									className="p-2 text-(--color-muted-foreground) transition hover:bg-(--color-card-foreground)/10 hover:text-(--color-card-foreground) focus:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent)"
+									aria-label={t.submitSongForm.modalCloseAria}
+								>
+									&#x2715;
+								</button>
+							</div>
+							<SubmitSongForm
+								submitSong={submitSong}
+								lang={lang}
+								editSong={{
+									_id: songObj._id,
+									name: songObj.name,
+									artist: songObj.artist,
+									artist_details: songObj.artist_details,
+									published_date: songObj.published_date,
+									language: songObj.language,
+									lyric_sample: songObj.lyric_sample,
+									links: songObj.links,
+								}}
+								translations={translations[lang].submitSongForm}
+								onSuccess={() => setIsEditModalOpen(false)}
+							/>
+						</div>
+					</div>,
+				)}
 		</>
 	);
 }

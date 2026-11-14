@@ -28,12 +28,19 @@ function parseStartYear(timestamp: string): number {
 }
 
 export function getCatalogStats(songs: FileSongList) {
-	const years = songs.map((song) => Number(song.published_date.slice(0, 4)));
+	const years = songs
+		.map((song) => {
+			if (!/^\d{4}(?:-\d{2}(?:-\d{2})?)?$/.test(song.published_date)) {
+				return Number.NaN;
+			}
+			return new Date(song.published_date).getUTCFullYear();
+		})
+		.filter(Number.isFinite);
 	return {
 		songCount: songs.length,
 		artistCount: new Set(songs.map((song) => song.artist)).size,
-		startYear: Math.min(...years),
-		endYear: Math.max(...years),
+		startYear: years.length > 0 ? Math.min(...years) : null,
+		endYear: years.length > 0 ? Math.max(...years) : null,
 	};
 }
 
@@ -69,6 +76,20 @@ export type TimelineEntryItem =
 	  };
 
 export type YearGroup = [number, TimelineEntryItem[]];
+export type TimelineView = "all" | "music" | "history";
+
+export function filterYearGroups(
+	yearGroups: YearGroup[],
+	view: TimelineView,
+): YearGroup[] {
+	if (view === "all") return yearGroups;
+	const entryType = view === "music" ? "song" : "conflict";
+	return yearGroups.flatMap((group): YearGroup[] => {
+		const [year, entries] = group;
+		const visibleEntries = entries.filter((entry) => entry.type === entryType);
+		return visibleEntries.length > 0 ? [[year, visibleEntries]] : [];
+	});
+}
 
 export function getEntriesByYear(
 	timeline: FileSongList,
