@@ -40,6 +40,7 @@ const events: EventsTimeline[] = [
 		conflict: {
 			title: "Second historical note",
 			reason: "Another sourced reason.",
+			wikipedia_url: "https://example.com/historical-source",
 		},
 	},
 ];
@@ -84,11 +85,18 @@ describe("Pass It On year rendering", () => {
 			expect(html).toContain(
 				lang === "he" ? "הערה היסטורית ראשונה" : "First historical note",
 			);
-			expect(html).toContain("Second historical note");
+			expect(html).toContain(
+				lang === "he" ? "אירוע היסטורי" : "Second historical note",
+			);
 			expect(html).toContain("2008-05-06");
 			expect(html).toContain("2008-12-02");
 			expect(html).toContain("2008-07-04");
 			expect(html).toContain("2009-03-10");
+			if (lang === "he") {
+				expect(html).not.toContain("Second historical note");
+				expect(html).not.toContain("Another sourced reason.");
+				expect(html).toContain("https://example.com/historical-source");
+			}
 			expect(html.match(/class="pass-it-on-song-disclosure/g)).toHaveLength(2);
 			expect(html.match(/class="pass-it-on-event-disclosure/g)).toHaveLength(2);
 			expect(html).not.toContain("＋");
@@ -109,6 +117,42 @@ describe("Pass It On year rendering", () => {
 		expect(historyHtml).not.toContain("pass-it-on-music-lane");
 		expect(historyHtml).not.toContain(translations.en.passItOn.noSongsInYear);
 		expect(historyHtml).toContain('data-view="history"');
+	});
+
+	it("keeps the edit action above long Hebrew and Arabic RTL lyrics", () => {
+		const longRtlLyrics =
+			"מילים ארוכות בעברית לצד كلمات عربية طويلة لا تنتهي — ".repeat(18);
+		const rtlSong: FileSong = {
+			...songs[0],
+			language: "Hebrew/Arabic",
+			lyric_sample: { hebrew: longRtlLyrics },
+		};
+		const [year, entries] = getEntriesByYear([rtlSong], [])[0];
+		const html = renderToStaticMarkup(
+			<PassItOnYearSection
+				year={year}
+				entries={entries}
+				lang="he"
+				highlightTerm=""
+				translations={translations.he}
+				sectionRef={null}
+				isActive={false}
+				view="all"
+			/>,
+		);
+		const editLabel = translations.he.editSuggestion.buttonAria;
+		const editIndex = html.indexOf(`aria-label="${editLabel}"`);
+		const lyricsIndex = html.indexOf(longRtlLyrics);
+		const buttonStart = html.lastIndexOf("<button", editIndex);
+		const buttonEnd = html.indexOf(">", buttonStart);
+		const editButtonMarkup = html.slice(buttonStart, buttonEnd);
+
+		expect(editIndex).toBeGreaterThan(-1);
+		expect(editIndex).toBeLessThan(lyricsIndex);
+		expect(html.slice(0, editIndex)).toContain('<div class="flex"><button');
+		expect(editButtonMarkup).toContain("min-h-11 min-w-11");
+		expect(editButtonMarkup).toContain("focus-visible:ring-2");
+		expect(editButtonMarkup).not.toContain("absolute");
 	});
 
 	it("labels event-only years with both category counts", () => {

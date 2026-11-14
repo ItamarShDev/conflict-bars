@@ -1,8 +1,13 @@
 "use client";
 
+import type { ReactNode } from "react";
 import { useEffect, useRef } from "react";
 import type { translations } from "@/components/timeline/translations";
 import type { TimelineEntryItem } from "@/utils/timeline";
+import {
+	getMobileDockSpace,
+	MOBILE_DOCK_BREAKPOINT,
+} from "@/utils/timeline-scroll";
 
 type PassItOnCopy = (typeof translations)["en"]["passItOn"];
 
@@ -15,6 +20,7 @@ export function PassItOnYearSpool({
 	onToggleAutoAdvance,
 	onPrevious,
 	onNext,
+	submitAction,
 	copy,
 }: {
 	years: number[];
@@ -25,9 +31,43 @@ export function PassItOnYearSpool({
 	onToggleAutoAdvance: () => void;
 	onPrevious: () => void;
 	onNext: () => void;
+	submitAction?: ReactNode;
 	copy: PassItOnCopy;
 }) {
 	const yearsRef = useRef<HTMLUListElement>(null);
+	const railRef = useRef<HTMLElement>(null);
+
+	useEffect(() => {
+		const rail = railRef.current;
+		const root = rail?.closest<HTMLElement>(".pass-it-on");
+		if (!rail || !root) return;
+
+		const mobileViewport = window.matchMedia(
+			`(max-width: ${MOBILE_DOCK_BREAKPOINT}px)`,
+		);
+		const updateDockSpace = () => {
+			const space = getMobileDockSpace(
+				rail.getBoundingClientRect().height,
+				mobileViewport.matches,
+			);
+			root.style.setProperty("--pass-it-on-mobile-dock-space", `${space}px`);
+		};
+		const observer =
+			typeof ResizeObserver === "undefined"
+				? null
+				: new ResizeObserver(updateDockSpace);
+		observer?.observe(rail);
+		window.addEventListener("resize", updateDockSpace);
+		mobileViewport.addEventListener("change", updateDockSpace);
+		updateDockSpace();
+
+		return () => {
+			observer?.disconnect();
+			window.removeEventListener("resize", updateDockSpace);
+			mobileViewport.removeEventListener("change", updateDockSpace);
+			root.style.removeProperty("--pass-it-on-mobile-dock-space");
+		};
+	}, []);
 
 	useEffect(() => {
 		const rail = yearsRef.current;
@@ -59,7 +99,11 @@ export function PassItOnYearSpool({
 	};
 
 	return (
-		<nav className="pass-it-on-year-rail" aria-label={copy.yearNavigation}>
+		<nav
+			className="pass-it-on-year-rail"
+			aria-label={copy.yearNavigation}
+			ref={railRef}
+		>
 			<div className="pass-it-on-rail-controls">
 				<button
 					type="button"
@@ -93,35 +137,40 @@ export function PassItOnYearSpool({
 					<span aria-hidden="true">›</span>
 				</button>
 			</div>
-			<ul className="pass-it-on-rail-years" ref={yearsRef}>
-				{years.map((year) => {
-					const flags = entryFlags(year);
-					return (
-						<li key={year}>
-							<button
-								type="button"
-								className="pass-it-on-year-button"
-								data-year={year}
-								aria-label={`${copy.selectYear} ${year}`}
-								aria-pressed={year === selectedYear}
-								onClick={() => onSelect(year)}
-							>
-								<span>{year}</span>
-								<span className="pass-it-on-year-markers" aria-hidden="true">
-									<i
-										className="pass-it-on-marker-music"
-										data-active={flags.hasMusic}
-									/>
-									<i
-										className="pass-it-on-marker-history"
-										data-active={flags.hasHistory}
-									/>
-								</span>
-							</button>
-						</li>
-					);
-				})}
-			</ul>
+			<div className="pass-it-on-rail-year-row">
+				<ul className="pass-it-on-rail-years" ref={yearsRef}>
+					{years.map((year) => {
+						const flags = entryFlags(year);
+						return (
+							<li key={year}>
+								<button
+									type="button"
+									className="pass-it-on-year-button"
+									data-year={year}
+									aria-label={`${copy.selectYear} ${year}`}
+									aria-pressed={year === selectedYear}
+									onClick={() => onSelect(year)}
+								>
+									<span>{year}</span>
+									<span className="pass-it-on-year-markers" aria-hidden="true">
+										<i
+											className="pass-it-on-marker-music"
+											data-active={flags.hasMusic}
+										/>
+										<i
+											className="pass-it-on-marker-history"
+											data-active={flags.hasHistory}
+										/>
+									</span>
+								</button>
+							</li>
+						);
+					})}
+				</ul>
+				{submitAction && (
+					<div className="pass-it-on-rail-submit">{submitAction}</div>
+				)}
+			</div>
 		</nav>
 	);
 }

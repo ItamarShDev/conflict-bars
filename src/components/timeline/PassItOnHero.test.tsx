@@ -16,6 +16,53 @@ const heroStyles = readFileSync(
 );
 
 describe("Pass It On cassette artwork", () => {
+	it("winds connected magnetic tape around both reels and lower guides", () => {
+		const html = renderToStaticMarkup(
+			<PassItOnHero
+				lang="he"
+				stats={stats}
+				eventCount={4}
+				copy={translations.he.passItOn}
+			/>,
+		);
+
+		expect(html.match(/class="pass-it-on-cassette-tape-pack"/g)).toHaveLength(
+			2,
+		);
+		expect(html.match(/class="pass-it-on-cassette-reel"/g)).toHaveLength(2);
+		expect(html.match(/class="pass-it-on-cassette-guide"/g)).toHaveLength(2);
+		expect(html).toContain('class="pass-it-on-cassette-tape-path"');
+		expect(html).toContain('class="pass-it-on-cassette-tape-dash"');
+		const tapePath = html.match(
+			/class="pass-it-on-cassette-tape-path" d="([^"]+)"/,
+		)?.[1];
+		const dashedTapePath = html.match(
+			/class="pass-it-on-cassette-tape-dash" d="([^"]+)"/,
+		)?.[1];
+		expect(tapePath).toBeDefined();
+		expect(dashedTapePath).toBe(tapePath);
+		if (!tapePath) throw new Error("Expected a solid cassette tape path");
+		const values = tapePath.match(/-?\d+(?:\.\d+)?/g)?.map(Number) ?? [];
+		const points = Array.from({ length: values.length / 2 }, (_, index) => ({
+			x: values[index * 2],
+			y: values[index * 2 + 1],
+		}));
+		expect(points[0]).toEqual({ x: 182.5, y: 269 });
+		expect(points.at(-1)).toEqual({ x: 457.5, y: 269 });
+		expect(points.some((point) => point.x < 175 && point.y >= 302)).toBe(true);
+		expect(points.some((point) => point.x > 465 && point.y >= 302)).toBe(true);
+		const transportStart = points.findIndex(
+			(point) => point.x === 169 && point.y === 308.5,
+		);
+		expect(points[transportStart + 1]).toEqual({ x: 471, y: 308.5 });
+		expect(heroStyles).toMatch(
+			/@keyframes pass-it-on-reel-turn[\s\S]*?rotate\(-360deg\)/,
+		);
+		expect(html).not.toContain(
+			"M239 269 C278 238 354 238 401 269 C354 300 278 300 239 269Z",
+		);
+	});
+
 	it.each(["en", "he"] as const)(
 		"renders its local photo and caption in %s",
 		(lang) => {
@@ -50,6 +97,8 @@ describe("Pass It On cassette artwork", () => {
 			expect(html).toContain('direction="rtl"');
 			expect(html).toContain(translations[lang].passItOn.cassetteCaption);
 			expect(html).toContain(translations[lang].passItOn.cassetteDescription);
+			expect(html).toContain(translations[lang].passItOn.cassetteLabel);
+			if (lang === "he") expect(html).not.toContain("CONFLICT BARS / SIDE A");
 			expect(html).not.toContain("DESIGN STUDY");
 		},
 	);

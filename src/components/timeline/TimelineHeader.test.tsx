@@ -13,14 +13,13 @@ vi.mock("@/components/ThemeProvider", () => ({
 	useTheme: () => ({ theme: themeMock.value, setTheme: themeMock.setTheme }),
 }));
 vi.mock("./HelpModal", () => ({ HelpModal: () => null }));
-vi.mock("./LanguageSwitcher", () => ({ LanguageSwitcher: () => null }));
 
 const props = {
-	title: "Conflict Bars",
-	subtitle: "Hip-hop alongside historical context",
-	themeToggle: translations.en.themeToggle,
-	lang: "en" as const,
-	nav: { href: "/en/bubble", label: "Bubble view" },
+	title: "חרוזים מסוכסכים",
+	subtitle: "היפ־הופ לצד הקשר היסטורי",
+	themeToggle: translations.he.themeToggle,
+	lang: "he" as const,
+	nav: { href: "/he/bubble", label: "תרשים" },
 };
 const headerStyles = readFileSync(
 	new URL("../../app/globals.css", import.meta.url),
@@ -37,7 +36,7 @@ describe("TimelineHeader layouts", () => {
 		const html = renderToStaticMarkup(<TimelineHeader {...props} />);
 		expect(html).toContain("control-bar sticky");
 		expect(html).toContain("<h1");
-		expect(html).toContain("Conflict Bars");
+		expect(html).toContain("חרוזים מסוכסכים");
 	});
 
 	it("uses a compact non-sticky utility row when requested", () => {
@@ -51,7 +50,7 @@ describe("TimelineHeader layouts", () => {
 		themeMock.value = "classic";
 		const html = renderToStaticMarkup(<TimelineHeader {...props} compact />);
 		expect(html).toContain('role="switch" aria-checked="false"');
-		expect(html).toContain('aria-label="Dark mode"');
+		expect(html).toContain('aria-label="מצב כהה"');
 		expect(html).toContain('data-selected-theme="classic"');
 		expect(html).toContain("pass-it-on-theme-thumb-icon");
 		expect(html).toContain("pass-it-on-theme-track-icon");
@@ -72,19 +71,16 @@ describe("TimelineHeader layouts", () => {
 		expect(html).toContain('role="switch" aria-checked="true"');
 		expect(html).toContain('aria-label="מצב כהה"');
 		expect(html).toContain('data-selected-theme="boombox"');
+		expect(html).not.toContain("pass-it-on-language-switcher");
+		expect(html).not.toContain('href="/en');
 	});
 
 	it("aligns the compact header controls to one accessible outer height", () => {
 		const sharedControlRule = headerStyles.match(
-			/\.pass-it-on \.pass-it-on-utility-button,\s*\.pass-it-on \.pass-it-on-language-switcher,\s*\.pass-it-on \.pass-it-on-theme-switch,\s*\.pass-it-on \.pass-it-on-theme-track\s*\{([^}]+)\}/,
-		)?.[1];
-		const languageOptionRule = headerStyles.match(
-			/\.pass-it-on \.pass-it-on-language-option\s*\{([^}]+)\}/,
+			/\.pass-it-on \.pass-it-on-utility-button,\s*\.pass-it-on \.pass-it-on-theme-switch,\s*\.pass-it-on \.pass-it-on-theme-track\s*\{([^}]+)\}/,
 		)?.[1];
 
 		expect(sharedControlRule).toContain("height: 3rem;");
 		expect(sharedControlRule).toContain("min-height: 3rem;");
-		expect(languageOptionRule).toContain("width: 2.75rem;");
-		expect(languageOptionRule).toContain("height: 2.75rem;");
 	});
 });

@@ -91,6 +91,36 @@ export function SongEntry({
 	const artistClass = isCompact
 		? "text-[0.7rem] font-bold uppercase tracking-widest text-(--color-muted-foreground)"
 		: "text-sm font-bold uppercase tracking-wider text-(--color-muted-foreground)";
+	const editButtonClass = hideHeader
+		? "inline-flex min-h-11 min-w-11 items-center justify-center bg-(--color-accent) text-[#fffdf5] transition hover:bg-(--color-accent-hover) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent)"
+		: "absolute start-3 top-3 z-30 flex h-9 w-9 cursor-pointer items-center justify-center bg-(--color-accent) text-[#fffdf5] transition hover:bg-(--color-accent-hover) sm:start-2 sm:top-2 sm:h-8 sm:w-8 sm:-translate-x-1/2 sm:-translate-y-1/2 sm:opacity-0 sm:group-hover:opacity-100";
+	const editButton = (
+		<button
+			type="button"
+			onClick={(event) => {
+				event.stopPropagation();
+				setIsEditModalOpen(true);
+			}}
+			className={editButtonClass}
+			title={t.editSuggestion.buttonTitle}
+			aria-label={t.editSuggestion.buttonAria}
+		>
+			<svg
+				className="w-4 h-4"
+				fill="none"
+				stroke="currentColor"
+				viewBox="0 0 24 24"
+			>
+				<title>{t.editSuggestion.iconTitle}</title>
+				<path
+					strokeLinecap="round"
+					strokeLinejoin="round"
+					strokeWidth={2}
+					d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+				/>
+			</svg>
+		</button>
+	);
 
 	const lyricContent =
 		lang === "he"
@@ -131,31 +161,7 @@ export function SongEntry({
 	return (
 		<>
 			<div className={`${containerClasses} group`}>
-				<button
-					type="button"
-					onClick={(e) => {
-						e.stopPropagation();
-						setIsEditModalOpen(true);
-					}}
-					className="absolute start-3 top-3 z-30 flex h-9 w-9 cursor-pointer items-center justify-center bg-(--color-accent) text-[#fffdf5] transition hover:bg-(--color-accent-hover) sm:start-2 sm:top-2 sm:h-8 sm:w-8 sm:-translate-x-1/2 sm:-translate-y-1/2 sm:opacity-0 sm:group-hover:opacity-100"
-					title={t.editSuggestion.buttonTitle}
-					aria-label={t.editSuggestion.buttonAria}
-				>
-					<svg
-						className="w-4 h-4"
-						fill="none"
-						stroke="currentColor"
-						viewBox="0 0 24 24"
-					>
-						<title>{t.editSuggestion.iconTitle}</title>
-						<path
-							strokeLinecap="round"
-							strokeLinejoin="round"
-							strokeWidth={2}
-							d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
-						/>
-					</svg>
-				</button>
+				{hideHeader ? <div className="flex">{editButton}</div> : editButton}
 				{hasSongIdentity && !hideHeader && (
 					<div
 						className={`ps-12 sm:ps-0 ${

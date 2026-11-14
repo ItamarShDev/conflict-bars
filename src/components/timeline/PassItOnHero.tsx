@@ -112,11 +112,7 @@ export function PassItOnHero({
 						<span>{copy.titleLead}</span>
 						<span>{copy.titleEmphasis}</span>
 					</h1>
-					<p
-						className="pass-it-on-hebrew"
-						lang={lang === "en" ? "he" : "en"}
-						dir={lang === "en" ? "rtl" : "ltr"}
-					>
+					<p className="pass-it-on-hebrew" lang="he" dir="rtl">
 						{copy.hebrewTagline}
 					</p>
 					<p className="pass-it-on-subtitle">{copy.subtitle}</p>
@@ -223,16 +219,16 @@ export function PassItOnHero({
 							fontFamily='"Courier New", Courier, monospace'
 							fontSize="8"
 							letterSpacing="1"
-							direction="ltr"
-							unicodeBidi="isolate"
+							direction={lang === "he" ? "rtl" : "ltr"}
+							unicodeBidi="plaintext"
 						>
-							CONFLICT BARS / SIDE A
+							{copy.cassetteLabel}
 						</text>
 						<rect
 							x="110"
 							y="233"
 							width="420"
-							height="75"
+							height="82"
 							rx="20"
 							fill="#d9c796"
 							stroke="#8b7951"
@@ -241,6 +237,24 @@ export function PassItOnHero({
 						{[210, 430].map((x) => (
 							<g key={x}>
 								<circle cx={x} cy="269" r="31" fill="#645947" />
+								<g className="pass-it-on-cassette-tape-pack">
+									<circle
+										cx={x}
+										cy="269"
+										r="27.5"
+										fill="none"
+										stroke="#624d36"
+										strokeWidth="4"
+									/>
+									<circle
+										cx={x}
+										cy="269"
+										r="24.5"
+										fill="none"
+										stroke="#a58b64"
+										strokeWidth="1"
+									/>
+								</g>
 								<circle cx={x} cy="269" r="22" fill="#f6e9c3" />
 								<g className="pass-it-on-cassette-reel">
 									<path
@@ -252,16 +266,34 @@ export function PassItOnHero({
 								<circle cx={x} cy="269" r="9" fill="#5b4a32" />
 							</g>
 						))}
+						<rect
+							x="302"
+							y="296"
+							width="36"
+							height="8"
+							rx="2"
+							fill="#8d8066"
+							stroke="#5b4a32"
+							strokeWidth="1.5"
+						/>
+						{[169, 471].map((x) => (
+							<g className="pass-it-on-cassette-guide" key={x}>
+								<circle cx={x} cy="302" r="5" fill="#5b4a32" />
+								<circle cx={x} cy="302" r="2" fill="#f6e9c3" />
+							</g>
+						))}
 						<path
-							className="pass-it-on-cassette-tape-loop"
-							d="M239 269 C278 238 354 238 401 269 C354 300 278 300 239 269Z"
+							className="pass-it-on-cassette-tape-path"
+							d="M182.5 269 C182.5 283 161.6 303.8 164.4 306.6 C165.7 307.9 167 308.5 169 308.5 L471 308.5 C473 308.5 474.3 307.9 475.6 306.6 C477 305.3 457.5 285 457.5 269"
 							fill="none"
 							stroke="#624d36"
 							strokeWidth="3"
+							strokeLinecap="round"
+							strokeLinejoin="round"
 						/>
 						<path
 							className="pass-it-on-cassette-tape-dash"
-							d="M239 269 C278 238 354 238 401 269 C354 300 278 300 239 269Z"
+							d="M182.5 269 C182.5 283 161.6 303.8 164.4 306.6 C165.7 307.9 167 308.5 169 308.5 L471 308.5 C473 308.5 474.3 307.9 475.6 306.6 C477 305.3 457.5 285 457.5 269"
 							fill="none"
 							stroke="#c29c52"
 							strokeDasharray="2 10"

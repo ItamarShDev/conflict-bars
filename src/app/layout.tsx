@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Heebo } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
@@ -22,12 +22,27 @@ const heebo = Heebo({
 });
 
 export const metadata: Metadata = {
-	title: "Conflict Bars",
+	metadataBase: new URL("https://www.conflictbars.org"),
+	title: "חרוזים מסוכסכים",
 	description:
-		"An interactive timeline exploring Israeli hip-hop artists and key events across years and decades",
+		"ציר זמן אינטראקטיבי לחקר אמני היפ־הופ ישראליים ואירועים מרכזיים לאורך השנים",
 	icons: {
 		icon: "/favicon.svg",
 	},
+	openGraph: {
+		type: "website",
+		siteName: "חרוזים מסוכסכים",
+		title: "חרוזים מסוכסכים",
+		description:
+			"ציר זמן אינטראקטיבי לחקר אמני היפ־הופ ישראליים ואירועים מרכזיים לאורך השנים",
+		locale: "he_IL",
+	},
+};
+
+export const viewport: Viewport = {
+	width: "device-width",
+	initialScale: 1,
+	viewportFit: "cover",
 };
 
 export default function RootLayout({
@@ -36,10 +51,12 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en" className={heebo.variable} suppressHydrationWarning>
-			<head>
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
-			</head>
+		<html
+			lang="he"
+			dir="rtl"
+			className={heebo.variable}
+			suppressHydrationWarning
+		>
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased bg-(--color-background) text-(--color-foreground)`}
 			>

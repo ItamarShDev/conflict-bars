@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useTheme } from "@/components/ThemeProvider";
 import { HelpModal, type HelpModalStats } from "./HelpModal";
-import { LanguageSwitcher } from "./LanguageSwitcher";
 import type { translations } from "./translations";
 
 interface TimelineHeaderProps {
@@ -117,7 +116,6 @@ export function TimelineHeader({
 						}
 					/>
 				)}
-				<LanguageSwitcher lang={lang} />
 				<button
 					type="button"
 					role="switch"

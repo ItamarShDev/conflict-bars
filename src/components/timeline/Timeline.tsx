@@ -17,6 +17,10 @@ import {
 	getEntriesByYear,
 	type TimelineView,
 } from "@/utils/timeline";
+import {
+	getYearScrollTop,
+	MOBILE_DOCK_BREAKPOINT,
+} from "@/utils/timeline-scroll";
 import type { FileSongList, PreloadedEvents } from "../../../timeline/types";
 
 type ManualScrollLock = {
@@ -101,12 +105,19 @@ export function Timeline({
 	const scrollToYear = useCallback((year: number) => {
 		const section = sectionRefs.current[year];
 		if (!section) return;
+		const isMobileDock = window.matchMedia(
+			`(max-width: ${MOBILE_DOCK_BREAKPOINT}px)`,
+		).matches;
 		const railHeight =
 			document
 				.querySelector<HTMLElement>(".pass-it-on-year-rail")
 				?.getBoundingClientRect().height ?? 0;
-		const top =
-			window.scrollY + section.getBoundingClientRect().top - railHeight - 12;
+		const top = getYearScrollTop(
+			window.scrollY,
+			section.getBoundingClientRect().top,
+			railHeight,
+			!isMobileDock,
+		);
 		const behavior = window.matchMedia("(prefers-reduced-motion: reduce)")
 			.matches
 			? "auto"
@@ -329,6 +340,13 @@ export function Timeline({
 						}
 						onPrevious={goPrevious}
 						onNext={goNext}
+						submitAction={
+							<SubmitSongModal
+								label={t.submitSongButton}
+								translations={t.submitSongForm}
+								lang={lang}
+							/>
+						}
 						copy={t.passItOn}
 					/>
 
@@ -425,12 +443,6 @@ export function Timeline({
 					</div>
 				</details>
 			</footer>
-
-			<SubmitSongModal
-				label={t.submitSongButton}
-				translations={t.submitSongForm}
-				lang={lang}
-			/>
 		</div>
 	);
 }

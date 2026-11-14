@@ -578,6 +578,11 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-title span + span {
 	align-items: center;
 	gap: 0.45rem;
 }
+.pass-it-on .pass-it-on-rail-year-row {
+	display: flex;
+	min-width: 0;
+	align-items: center;
+}
 .pass-it-on .pass-it-on-rail-arrow {
 	font-weight: 800;
 }
@@ -603,6 +608,7 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-title span + span {
 }
 .pass-it-on .pass-it-on-rail-years {
 	display: flex;
+	flex: 1 1 auto;
 	min-width: 0;
 	align-items: center;
 	gap: 0.45rem;
@@ -923,6 +929,7 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-title span + span {
 }
 .pass-it-on {
 	--pass-it-on-sticky-offset: 0px;
+	--pass-it-on-mobile-dock-space: 0px;
 	--pass-sky: #bce5ef;
 	--pass-ink: #2b241d;
 	--pass-paper: #f8f2e4;
@@ -934,6 +941,7 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-title span + span {
 	--pass-note-tape: rgb(245 216 115 / 85%);
 	--pass-rule: rgb(74 58 40 / 20%);
 	background: var(--pass-paper);
+	padding-block-end: var(--pass-it-on-mobile-dock-space);
 	color: var(--pass-ink);
 	font-family: Arial, Helvetica, sans-serif;
 }
@@ -992,62 +1000,6 @@ html[data-theme="boombox"] .pass-it-on {
 	padding: 0;
 }
 
-.pass-it-on .pass-it-on-language-switcher {
-	display: inline-flex;
-	min-inline-size: 0;
-	align-items: center;
-	gap: 0.1rem;
-	margin: 0;
-	border: 1px solid var(--pass-rule);
-	border-radius: 999px;
-	background: var(--pass-paper-hi);
-	padding: 0 0.1rem;
-}
-
-.pass-it-on .pass-it-on-language-option {
-	display: grid;
-	width: 2.75rem;
-	height: 2.75rem;
-	flex: 0 0 auto;
-	place-items: center;
-	border-radius: 999px;
-	color: var(--pass-ink);
-	text-decoration: none;
-}
-
-.pass-it-on .pass-it-on-language-option svg {
-	display: block;
-	width: 1.5rem;
-	height: 1rem;
-	border-radius: 2px;
-	box-shadow: 0 0 0 1px var(--pass-rule);
-}
-
-.pass-it-on .pass-it-on-language-option.is-current {
-	background: var(--pass-yellow);
-	box-shadow: inset 0 0 0 1px var(--pass-rule);
-}
-
-.pass-it-on .pass-it-on-language-switcher a.pass-it-on-language-link {
-	min-width: 2.75rem;
-	min-height: 2.75rem;
-	border: 0;
-	border-radius: 999px;
-	background: transparent;
-	box-shadow: none;
-	padding: 0;
-	transform: none;
-	transition: background-color 160ms ease;
-}
-
-.pass-it-on .pass-it-on-language-switcher a.pass-it-on-language-link:hover {
-	background: rgb(245 216 115 / 55%);
-	color: var(--pass-ink);
-}
-
-.pass-it-on
-	.pass-it-on-language-switcher
-	a.pass-it-on-language-link:focus-visible,
 .pass-it-on .pass-it-on-theme-switch:focus-visible {
 	outline: 3px solid var(--pass-blue);
 	outline-offset: 3px;
@@ -1088,7 +1040,6 @@ html[data-theme="boombox"] .pass-it-on {
 }
 
 .pass-it-on .pass-it-on-utility-button,
-.pass-it-on .pass-it-on-language-switcher,
 .pass-it-on .pass-it-on-theme-switch,
 .pass-it-on .pass-it-on-theme-track {
 	box-sizing: border-box;
@@ -1510,7 +1461,7 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-hebrew {
 }
 @keyframes pass-it-on-reel-turn {
 	to {
-		transform: rotate(360deg);
+		transform: rotate(-360deg);
 	}
 }
 @keyframes pass-it-on-tape-drift {
@@ -2174,19 +2125,70 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-track-number {
 	}
 
 	.pass-it-on .pass-it-on-year-rail {
+		position: fixed;
+		inset-inline: 0;
+		inset-block: auto 0;
+		z-index: 40;
+		width: 100%;
 		grid-template-columns: minmax(0, 1fr);
 		gap: 0.3rem;
-		margin-inline: -1rem;
-		padding: 0.35rem 0.75rem;
+		margin-inline: 0;
+		border-color: var(--pass-rule);
+		background: var(--pass-paper);
+		box-shadow: 0 -6px 18px rgb(43 36 29 / 10%);
+		padding: 0.35rem 0.75rem calc(0.35rem + env(safe-area-inset-bottom, 0px));
+		padding-left: calc(0.75rem + env(safe-area-inset-left, 0px));
+		padding-right: calc(0.75rem + env(safe-area-inset-right, 0px));
+	}
+
+	.pass-it-on .pass-it-on-rail-year-row {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) minmax(44px, 7rem);
+		grid-row: 1;
+		gap: 0.5rem;
 	}
 
 	.pass-it-on .pass-it-on-rail-years {
+		width: 100%;
+		grid-column: 1;
 		grid-row: 1;
 	}
 
 	.pass-it-on .pass-it-on-rail-controls {
+		grid-column: 1 / -1;
 		grid-row: 2;
+		width: 100%;
 		justify-content: space-between;
+	}
+
+	.pass-it-on .pass-it-on-rail-arrow {
+		width: 2.75rem;
+		min-width: 2.75rem;
+	}
+
+	.pass-it-on .pass-it-on-rail-submit {
+		grid-column: 2;
+		grid-row: 1;
+		min-width: 0;
+	}
+
+	.pass-it-on .pass-it-on-dock-submit {
+		position: static;
+		inset: auto;
+		z-index: auto;
+		min-height: 2.75rem;
+		border-radius: 999px;
+		background: var(--pass-yellow);
+		box-shadow: none;
+		color: var(--pass-ink);
+		font-size: 0.75rem;
+		line-height: 1.1;
+		padding: 0.45rem 0.7rem;
+		max-width: 7rem;
+		text-align: center;
+		transform: none;
+		transition: none;
+		white-space: normal;
 	}
 
 	.pass-it-on .pass-it-on-advance {
@@ -2195,6 +2197,8 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-track-number {
 
 	.pass-it-on .pass-it-on-year {
 		padding-inline-start: 2.5rem;
+		scroll-margin-top: 12px;
+		scroll-margin-bottom: var(--pass-it-on-mobile-dock-space);
 	}
 
 	.pass-it-on .pass-it-on-years::before,
@@ -2300,7 +2304,6 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-track-number {
 	.pass-it-on .pass-it-on-year-reel {
 		transition: none;
 	}
-	.pass-it-on .pass-it-on-language-switcher a.pass-it-on-language-link,
 	.pass-it-on .pass-it-on-theme-thumb {
 		transition: none;
 	}

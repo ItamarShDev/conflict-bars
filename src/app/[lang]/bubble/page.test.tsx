@@ -1,6 +1,6 @@
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it, vi } from "vitest";
-import BubblePage from "./page";
+import BubblePage, { generateMetadata } from "./page";
 
 vi.mock("@/utils/file-songs", () => ({
 	loadFileSongs: () => [],
@@ -20,7 +20,7 @@ vi.mock("@/components/bubble/BubbleChart", () => ({
 	BubbleChart: () => <div data-chart-root="true" />,
 }));
 
-async function renderPage(lang: "en" | "he") {
+async function renderPage(lang: string) {
 	const page = await BubblePage({ params: Promise.resolve({ lang }) });
 	return renderToStaticMarkup(page);
 }
@@ -45,13 +45,30 @@ describe("BubblePage Pass It On wrapper", () => {
 		expect(html).not.toContain("pass-it-on-cassette");
 	});
 
-	it("sets English direction for the chart page", async () => {
-		const html = await renderPage("en");
-		expect(html).toContain(
-			'lang="en" dir="ltr" class="relative min-h-screen pass-it-on pass-it-on-chart-page"',
+	it("does not add a timeline dock or Submit action to the chart page", async () => {
+		const html = await renderPage("he");
+		expect(html).not.toContain("pass-it-on-year-rail");
+		expect(html).not.toContain("הוסף שיר");
+	});
+
+	it("rejects non-Hebrew chart routes", async () => {
+		await expect(renderPage("en")).rejects.toThrow();
+	});
+
+	it("sets the chart canonical and social metadata to /he/bubble", async () => {
+		const metadata = await generateMetadata({
+			params: Promise.resolve({ lang: "he" }),
+		});
+		expect(metadata.alternates?.canonical).toBe(
+			"https://www.conflictbars.org/he/bubble",
 		);
-		expect(html).toContain(
-			'class="pass-it-on-chart-title">Releases by political leaning</h1>',
+		expect(metadata.openGraph?.url).toBe(
+			"https://www.conflictbars.org/he/bubble",
 		);
+		expect(metadata.openGraph?.locale).toBe("he_IL");
+		expect(metadata.twitter?.title).toContain("שירים לפי נטייה פוליטית");
+		await expect(
+			generateMetadata({ params: Promise.resolve({ lang: "en" }) }),
+		).rejects.toThrow();
 	});
 });

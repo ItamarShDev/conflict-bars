@@ -6,7 +6,7 @@ import type { TimelineEntryItem, TimelineView } from "@/utils/timeline";
 type PageTranslations = (typeof translations)["en"];
 
 function localizedText(lang: "en" | "he", english?: string, hebrew?: string) {
-	return lang === "he" ? hebrew?.trim() || english?.trim() : english?.trim();
+	return lang === "he" ? hebrew?.trim() : english?.trim();
 }
 
 function EventDetails({
@@ -19,7 +19,9 @@ function EventDetails({
 	labels: PageTranslations;
 }) {
 	const { conflict, conflictEntry } = entry;
-	const title = localizedText(lang, conflict.title, conflict.title_he);
+	const title =
+		localizedText(lang, conflict.title, conflict.title_he) ||
+		labels.passItOn.eventTitleFallback;
 	const start = conflictEntry.startDate.toISOString().slice(0, 10);
 	const end = conflictEntry.endDate?.toISOString().slice(0, 10);
 	const filedUnder = labels.passItOn.filedUnder.replace(

@@ -1,5 +1,6 @@
 import { ImageResponse } from "next/og";
 import { translations } from "@/components/timeline/translations";
+import { requireHebrewLocale } from "@/utils/hebrew-locale";
 
 export const size = {
 	width: 1200,
@@ -16,11 +17,6 @@ function fixRTL(text: string) {
 		.reverse()
 		.join(" ");
 }
-
-const descriptionByLang: Record<string, string> = {
-	en: "Interactive timeline of Israeli hip-hop and the conflicts that shaped it",
-	he: "ציר זמן אינטראקטיבי של היפ-הופ ישראלי והסכסוכים שעיצבו אותו",
-};
 
 const baseUrl = "www.conflictbars.org";
 
@@ -54,12 +50,11 @@ export default async function Image({
 	params: Promise<{ lang: string }>;
 }) {
 	const { lang } = await params;
-	const isHebrew = lang !== "en";
-	const activeLang = isHebrew ? "he" : "en";
-	const translation = translations[activeLang];
-	const description = isHebrew
-		? fixRTL(descriptionByLang[activeLang])
-		: descriptionByLang[activeLang];
+	requireHebrewLocale(lang);
+	const translation = translations.he;
+	const description = fixRTL(
+		"ציר זמן אינטראקטיבי של היפ-הופ ישראלי והסכסוכים שעיצבו אותו",
+	);
 
 	const colors = {
 		background: "#1c1b18",
@@ -74,28 +69,26 @@ export default async function Image({
 
 	const cards = [
 		{
-			label: isHebrew ? "סכסוך" : "Conflict",
-			caption: isHebrew
-				? "אירוע מרכזי מחזית הסכסוך"
-				: "Headline event from the conflict",
+			label: "סכסוך",
+			caption: "אירוע מרכזי מחזית הסכסוך",
 			borderColor: colors.left,
 		},
 		{
-			label: isHebrew ? "שיר" : "Song",
-			caption: isHebrew ? "קול אמנים מהתקופה" : "Artists' voices from the era",
+			label: "שיר",
+			caption: "קול אמנים מהתקופה",
 			borderColor: colors.right,
 		},
 		{
-			label: isHebrew ? "הקשר" : "Context",
-			caption: isHebrew
-				? "סיכום ההשפעה והתגובה"
-				: "Impact and response summary",
+			label: "הקשר",
+			caption: "סיכום ההשפעה והתגובה",
 			borderColor: colors.context,
 		},
 	];
 
 	return new ImageResponse(
 		<div
+			lang="he"
+			dir="rtl"
 			style={{
 				display: "flex",
 				flexDirection: "column",
@@ -135,12 +128,10 @@ export default async function Image({
 							fontWeight: 800,
 						}}
 					>
-						{isHebrew
-							? fixRTL("סצנת היפ-הופ הישראלית")
-							: "Israeli Hip-Hop Scene"}
+						{fixRTL("סצנת היפ-הופ הישראלית")}
 					</div>
 					<div style={{ fontSize: 24, opacity: 0.7, fontWeight: 400 }}>
-						{isHebrew ? fixRTL(translation.title) : translation.title}
+						{fixRTL(translation.title)}
 					</div>
 				</div>
 
@@ -152,7 +143,7 @@ export default async function Image({
 						margin: 0,
 					}}
 				>
-					{isHebrew ? fixRTL(translation.title) : translation.title}
+					{fixRTL(translation.title)}
 				</h1>
 
 				<p
@@ -206,7 +197,7 @@ export default async function Image({
 							}}
 						/>
 						<div style={{ fontSize: 36, fontWeight: 800 }}>
-							{isHebrew ? fixRTL(card.label) : card.label}
+							{fixRTL(card.label)}
 						</div>
 						<div
 							style={{
@@ -216,7 +207,7 @@ export default async function Image({
 								lineHeight: 1.35,
 							}}
 						>
-							{isHebrew ? fixRTL(card.caption) : card.caption}
+							{fixRTL(card.caption)}
 						</div>
 					</div>
 				))}
@@ -233,14 +224,8 @@ export default async function Image({
 					opacity: 0.8,
 				}}
 			>
-				<span style={{ fontWeight: 700 }}>
-					{isHebrew ? `${baseUrl}/he` : `${baseUrl}/en`}
-				</span>
-				<span>
-					{isHebrew
-						? fixRTL("אמנות, פוליטיקה וקולות מרובים ברגע אחד")
-						: "Art, politics, and many voices in one moment"}
-				</span>
+				<span style={{ fontWeight: 700 }}>{`${baseUrl}/he`}</span>
+				<span>{fixRTL("אמנות, פוליטיקה וקולות מרובים ברגע אחד")}</span>
 			</footer>
 		</div>,
 		{

@@ -16,6 +16,7 @@ export const translations = {
 			cassetteDescription:
 				"The cassette window shows a photo montage of Tel Aviv, Haifa, and Ramon Crater, crossfading between places when motion is enabled. This archive does not play audio.",
 			cassetteCaption: "CONFLICT BARS · ARCHIVE · NO AUDIO",
+			cassetteLabel: "CONFLICT BARS / SIDE A",
 			pauseAnimation: "Pause animation",
 			resumeAnimation: "Resume animation",
 			motionStaticLabel: "Static",
@@ -44,6 +45,7 @@ export const translations = {
 			autoAdvance: "Auto-advance years",
 			pauseAutoAdvance: "Pause year advance",
 			filedUnder: "Filed under {{year}} · start year",
+			eventTitleFallback: "Historical event",
 			noSongsInYear: "No songs are listed in the archive for this year.",
 			noHistoryInYear: "No historical notes start in this year in the archive.",
 			noSongsFound: "No songs match these search and filter settings.",
@@ -213,7 +215,8 @@ export const translations = {
 			cassetteAlt: "איור קלטת עם מונטאז׳ תמונות משלושה מקומות",
 			cassetteDescription:
 				"חלון הקלטת מציג מונטאז׳ תצלומים מתל אביב, חיפה ומכתש רמון, עם מעברים הדרגתיים בין המקומות כשהתנועה מופעלת. הארכיון אינו משמיע אודיו.",
-			cassetteCaption: "CONFLICT BARS · ארכיון · ללא שמע",
+			cassetteCaption: "חרוזים מסוכסכים · ארכיון · ללא שמע",
+			cassetteLabel: "חרוזים מסוכסכים / צד א׳",
 			pauseAnimation: "השהיית האנימציה",
 			resumeAnimation: "חידוש האנימציה",
 			motionStaticLabel: "תצוגה קבועה",
@@ -241,6 +244,7 @@ export const translations = {
 			autoAdvance: "מעבר אוטומטי בין שנים",
 			pauseAutoAdvance: "השהיית מעבר השנים",
 			filedUnder: "משויך לשנת {{year}} · שנת התחלה",
+			eventTitleFallback: "אירוע היסטורי",
 			noSongsInYear: "אין שירים הרשומים בארכיון לשנה זו.",
 			noHistoryInYear: "אין בארכיון הערות היסטוריות שמתחילות בשנה זו.",
 			noSongsFound: "לא נמצאו שירים התואמים לחיפוש ולמסננים האלה.",
