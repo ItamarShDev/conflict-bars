@@ -36,6 +36,7 @@ describe("Pass It On cassette artwork", () => {
 			expect(html).toContain(
 				`<span>${translations[lang].passItOn.pauseAnimation}</span>`,
 			);
+			expect(html).not.toContain("aria-pressed=");
 			expect(translations[lang].passItOn.resumeAnimation).not.toBe("");
 			expect(translations[lang].passItOn.motionStaticLabel).not.toBe("");
 			expect(translations[lang].passItOn.motionDisabled).not.toBe("");
@@ -48,6 +49,7 @@ describe("Pass It On cassette artwork", () => {
 			);
 			expect(html).toContain('direction="rtl"');
 			expect(html).toContain(translations[lang].passItOn.cassetteCaption);
+			expect(html).toContain(translations[lang].passItOn.cassetteDescription);
 			expect(html).not.toContain("DESIGN STUDY");
 		},
 	);
@@ -92,5 +94,20 @@ describe("Pass It On cassette artwork", () => {
 		expect(haifaMotion).toMatch(/60%,\s*66\.6667%\s*\{\s*opacity: 1;/);
 		expect(haifaMotion).toMatch(/66\.6668%,\s*100%\s*\{\s*opacity: 0;/);
 		expect(heroStyles).toContain("animation-play-state: paused;");
+	});
+
+	it("stacks the narrow hero controls, cassette, and stats card without overlap", () => {
+		const narrowHeroStyles = heroStyles.slice(
+			heroStyles.indexOf("@media (max-width: 420px)"),
+			heroStyles.lastIndexOf("@media (prefers-reduced-motion: reduce)"),
+		);
+
+		expect(narrowHeroStyles).toContain("flex-direction: column;");
+		expect(narrowHeroStyles).toContain("align-self: center;");
+		expect(narrowHeroStyles).toContain("flex: 0 0 auto;");
+		expect(narrowHeroStyles).toContain(".pass-it-on .pass-it-on-j-card {");
+		expect(narrowHeroStyles).toContain("position: relative;");
+		expect(narrowHeroStyles).toContain("bottom: auto;");
+		expect(narrowHeroStyles).toContain("transform: none;");
 	});
 });

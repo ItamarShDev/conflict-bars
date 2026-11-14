@@ -14,7 +14,7 @@ export const translations = {
 			hebrewTagline: "להעביר הלאה",
 			cassetteAlt: "Illustrated cassette with a three-place photo montage",
 			cassetteDescription:
-				"The cassette window cycles through photographs of Tel Aviv, Haifa, and Ramon Crater. This archive does not play audio.",
+				"The cassette window shows a photo montage of Tel Aviv, Haifa, and Ramon Crater, crossfading between places when motion is enabled. This archive does not play audio.",
 			cassetteCaption: "CONFLICT BARS · ARCHIVE · NO AUDIO",
 			pauseAnimation: "Pause animation",
 			resumeAnimation: "Resume animation",
@@ -212,7 +212,7 @@ export const translations = {
 			hebrewTagline: "להעביר הלאה",
 			cassetteAlt: "איור קלטת עם מונטאז׳ תמונות משלושה מקומות",
 			cassetteDescription:
-				"חלון הקלטת מציג לסירוגין תצלומים מתל אביב, חיפה ומכתש רמון. הארכיון אינו משמיע אודיו.",
+				"חלון הקלטת מציג מונטאז׳ תצלומים מתל אביב, חיפה ומכתש רמון, עם מעברים הדרגתיים בין המקומות כשהתנועה מופעלת. הארכיון אינו משמיע אודיו.",
 			cassetteCaption: "CONFLICT BARS · ארכיון · ללא שמע",
 			pauseAnimation: "השהיית האנימציה",
 			resumeAnimation: "חידוש האנימציה",

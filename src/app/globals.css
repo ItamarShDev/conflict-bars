@@ -2232,9 +2232,38 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-track-number {
 	}
 }
 @media (max-width: 420px) {
+	.pass-it-on .pass-it-on-hero-inner {
+		padding-block-end: 4rem;
+	}
+
+	.pass-it-on .pass-it-on-hero-art {
+		align-items: stretch;
+		flex-direction: column;
+		gap: 0.75rem;
+		padding: 0;
+	}
+
 	.pass-it-on .pass-it-on-motion-control {
+		align-self: center;
 		font-size: clamp(0.62rem, 3.2vw, 0.72rem);
+		margin-block: 0.25rem;
 		padding-inline: 0.45rem;
+	}
+
+	.pass-it-on .pass-it-on-cassette {
+		flex: 0 0 auto;
+		max-width: 100%;
+	}
+
+	.pass-it-on .pass-it-on-j-card {
+		position: relative;
+		inset-inline-start: auto;
+		bottom: auto;
+		box-sizing: border-box;
+		width: 100%;
+		max-width: 28rem;
+		margin: 0;
+		transform: none;
 	}
 
 	.pass-it-on .pass-it-on-utility-row {

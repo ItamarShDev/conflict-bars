@@ -131,7 +131,6 @@ export function PassItOnHero({
 						className="pass-it-on-motion-control"
 						aria-label={motionButtonDescription}
 						title={motionButtonDescription}
-						aria-pressed={manuallyPaused || prefersReducedMotion}
 						disabled={prefersReducedMotion}
 						data-motion-state={
 							prefersReducedMotion
