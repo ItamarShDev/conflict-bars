@@ -2,7 +2,7 @@ export const translations = {
 	en: {
 		title: "Conflict Bars",
 		themeToggle: {
-			label: "Visual theme",
+			label: "Dark mode",
 			classic: "Zine",
 			boombox: "Boombox",
 		},
@@ -12,10 +12,14 @@ export const translations = {
 			titleLead: "A mixtape of",
 			titleEmphasis: "complicated times.",
 			hebrewTagline: "להעביר הלאה",
-			cassetteAlt: "Illustrated yellow cassette with a street photograph",
+			cassetteAlt: "Illustrated cassette with a three-place photo montage",
 			cassetteDescription:
-				"Illustrated cassette label with a street photograph; this archive does not play audio.",
+				"The cassette window cycles through photographs of Tel Aviv, Haifa, and Ramon Crater. This archive does not play audio.",
 			cassetteCaption: "CONFLICT BARS · ARCHIVE · NO AUDIO",
+			pauseAnimation: "Pause animation",
+			resumeAnimation: "Resume animation",
+			motionStaticLabel: "Static",
+			motionDisabled: "Animation disabled by reduced-motion preference",
 			subtitle:
 				"Israeli and Palestinian hip-hop, filed alongside historical context from the same periods.",
 			cta: "Unspool the timeline",
@@ -58,6 +62,13 @@ export const translations = {
 				"Street photograph: “Graffiti Eilat street Tel Aviv.jpg” by Nizzan Cohen, own work; cropped and color-treated for this page under CC BY 4.0.",
 			photoSourceLabel: "Photo source and license",
 			photoLicenseLabel: "CC BY 4.0 license",
+			haifaCredit:
+				"Haifa harbor panorama by Equalhuman, cropped from the CC0 1.0 public-domain image.",
+			haifaSourceLabel: "Haifa photograph source",
+			cc0LicenseLabel: "CC0 1.0 license",
+			ramonCredit:
+				"Ramon Crater panorama by Ebfe, released worldwide into the public domain by the author.",
+			ramonSourceLabel: "Ramon Crater source and release",
 			fontCredit:
 				"Gveret Levin and Instrument Serif are used under the SIL Open Font License 1.1.",
 			fontLicenseLabel: "Full font license texts",
@@ -189,7 +200,7 @@ export const translations = {
 	he: {
 		title: "חרוזים מסוכסכים",
 		themeToggle: {
-			label: "ערכת נושא",
+			label: "מצב כהה",
 			classic: "פאנזין",
 			boombox: "בומבוקס",
 		},
@@ -199,9 +210,14 @@ export const translations = {
 			titleLead: "מיקסטייפ של",
 			titleEmphasis: "זמנים מורכבים.",
 			hebrewTagline: "להעביר הלאה",
-			cassetteAlt: "איור קלטת צהובה עם תצלום רחוב",
-			cassetteDescription: "איור קלטת עם תצלום רחוב; הארכיון אינו משמיע אודיו.",
+			cassetteAlt: "איור קלטת עם מונטאז׳ תמונות משלושה מקומות",
+			cassetteDescription:
+				"חלון הקלטת מציג לסירוגין תצלומים מתל אביב, חיפה ומכתש רמון. הארכיון אינו משמיע אודיו.",
 			cassetteCaption: "CONFLICT BARS · ארכיון · ללא שמע",
+			pauseAnimation: "השהיית האנימציה",
+			resumeAnimation: "חידוש האנימציה",
+			motionStaticLabel: "תצוגה קבועה",
+			motionDisabled: "האנימציה מושבתת בהתאם להעדפת צמצום תנועה",
 			subtitle: "היפ־הופ ישראלי ופלסטיני לצד הקשר היסטורי מאותה תקופה.",
 			cta: "לפתוח את ציר הזמן",
 			catalogSummary: "{{songs}} שירים · {{artists}} אמנים · {{range}}",
@@ -242,6 +258,13 @@ export const translations = {
 				"תצלום רחוב: “Graffiti Eilat street Tel Aviv.jpg” מאת Nizzan Cohen, עבודה מקורית; נחתך ועבר טיפול צבע בעמוד זה ברישיון CC BY 4.0.",
 			photoSourceLabel: "מקור התמונה והרישיון",
 			photoLicenseLabel: "רישיון CC BY 4.0",
+			haifaCredit:
+				"תצלום פנורמי של נמל חיפה מאת Equalhuman, בחיתוך מתוך תמונה בנחלת הכלל ברישיון CC0 1.0.",
+			haifaSourceLabel: "מקור תצלום חיפה",
+			cc0LicenseLabel: "רישיון CC0 1.0",
+			ramonCredit:
+				"תצלום פנורמי של מכתש רמון מאת Ebfe, שוחרר לנחלת הכלל ברחבי העולם על ידי היוצר.",
+			ramonSourceLabel: "מקור ושחרור תצלום מכתש רמון",
 			fontCredit:
 				"הגופנים Gveret Levin ו־Instrument Serif משמשים ברישיון SIL Open Font License 1.1.",
 			fontLicenseLabel: "טקסט מלא של רישיונות הגופנים",

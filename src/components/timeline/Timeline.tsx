@@ -397,6 +397,29 @@ export function Timeline({
 						>
 							{t.passItOn.photoLicenseLabel}
 						</a>
+						<p>{t.passItOn.haifaCredit}</p>
+						<a
+							href="https://commons.wikimedia.org/wiki/File:Haifa_landscape_panorama_harbour_city_public_domain_27.jpg"
+							target="_blank"
+							rel="noreferrer"
+						>
+							{t.passItOn.haifaSourceLabel}
+						</a>
+						<a
+							href="https://creativecommons.org/publicdomain/zero/1.0/"
+							target="_blank"
+							rel="noreferrer"
+						>
+							{t.passItOn.cc0LicenseLabel}
+						</a>
+						<p>{t.passItOn.ramonCredit}</p>
+						<a
+							href="https://commons.wikimedia.org/wiki/File:Ramon_Crater_WidePanorama.jpg"
+							target="_blank"
+							rel="noreferrer"
+						>
+							{t.passItOn.ramonSourceLabel}
+						</a>
 						<p>{t.passItOn.fontCredit}</p>
 						<a href="/pass-it-on/OFL.txt">{t.passItOn.fontLicenseLabel}</a>
 					</div>

@@ -1,4 +1,4 @@
-import { useId } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import type { HelpModalStats } from "@/components/timeline/HelpModal";
 import type { translations } from "@/components/timeline/translations";
 
@@ -16,6 +16,11 @@ export function PassItOnHero({
 	copy: PassItOnCopy;
 }) {
 	const cassetteId = `pass-it-on-cassette-${useId().replace(/[^a-zA-Z0-9_-]/g, "")}`;
+	const heroRef = useRef<HTMLElement | null>(null);
+	const [manuallyPaused, setManuallyPaused] = useState(false);
+	const [isInViewport, setIsInViewport] = useState(true);
+	const [isDocumentVisible, setIsDocumentVisible] = useState(true);
+	const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 	const dateRange =
 		stats.startYear !== null && stats.endYear !== null
 			? `${stats.startYear}–${stats.endYear}`
@@ -28,9 +33,54 @@ export function PassItOnHero({
 		"{{count}}",
 		String(eventCount),
 	);
+	const motionPaused =
+		manuallyPaused ||
+		!isInViewport ||
+		!isDocumentVisible ||
+		prefersReducedMotion;
+	const motionButtonLabel = prefersReducedMotion
+		? copy.motionStaticLabel
+		: manuallyPaused
+			? copy.resumeAnimation
+			: copy.pauseAnimation;
+	const motionButtonDescription = prefersReducedMotion
+		? copy.motionDisabled
+		: motionButtonLabel;
+
+	useEffect(() => {
+		if (typeof window.matchMedia !== "function") return;
+		const media = window.matchMedia("(prefers-reduced-motion: reduce)");
+		const update = () => setPrefersReducedMotion(media.matches);
+		update();
+		media.addEventListener("change", update);
+		return () => media.removeEventListener("change", update);
+	}, []);
+
+	useEffect(() => {
+		const hero = heroRef.current;
+		if (!hero || typeof IntersectionObserver === "undefined") return;
+		const observer = new IntersectionObserver(
+			([entry]) => setIsInViewport(entry?.isIntersecting ?? false),
+			{ threshold: 0.05 },
+		);
+		observer.observe(hero);
+		return () => observer.disconnect();
+	}, []);
+
+	useEffect(() => {
+		const update = () => setIsDocumentVisible(!document.hidden);
+		update();
+		document.addEventListener("visibilitychange", update);
+		return () => document.removeEventListener("visibilitychange", update);
+	}, []);
 
 	return (
-		<section className="pass-it-on-hero" aria-labelledby="pass-it-on-title">
+		<section
+			ref={heroRef}
+			className="pass-it-on-hero"
+			aria-labelledby="pass-it-on-title"
+			data-motion-paused={motionPaused}
+		>
 			<svg
 				className="pass-it-on-hero-ribbon pass-it-on-ribbon-wide"
 				viewBox="0 0 1000 700"
@@ -76,6 +126,24 @@ export function PassItOnHero({
 					</a>
 				</div>
 				<div className="pass-it-on-hero-art">
+					<button
+						type="button"
+						className="pass-it-on-motion-control"
+						aria-label={motionButtonDescription}
+						title={motionButtonDescription}
+						aria-pressed={manuallyPaused || prefersReducedMotion}
+						disabled={prefersReducedMotion}
+						data-motion-state={
+							prefersReducedMotion
+								? "static"
+								: motionPaused
+									? "paused"
+									: "playing"
+						}
+						onClick={() => setManuallyPaused((paused) => !paused)}
+					>
+						<span>{motionButtonLabel}</span>
+					</button>
 					<svg
 						className="pass-it-on-cassette"
 						viewBox="0 0 640 405"
@@ -106,12 +174,33 @@ export function PassItOnHero({
 							strokeWidth="2"
 						/>
 						<image
+							className="pass-it-on-cassette-photo pass-it-on-cassette-photo-tel-aviv"
 							href="/pass-it-on/tel-aviv-graffiti.jpg"
 							x="86"
 							y="67"
 							width="468"
 							height="106"
-							preserveAspectRatio="xMidYMid slice"
+							preserveAspectRatio="none"
+							clipPath={`url(#${cassetteId}-window)`}
+						/>
+						<image
+							className="pass-it-on-cassette-photo pass-it-on-cassette-photo-haifa"
+							href="/pass-it-on/haifa-harbour.jpg"
+							x="86"
+							y="67"
+							width="468"
+							height="106"
+							preserveAspectRatio="none"
+							clipPath={`url(#${cassetteId}-window)`}
+						/>
+						<image
+							className="pass-it-on-cassette-photo pass-it-on-cassette-photo-ramon"
+							href="/pass-it-on/ramon-crater.jpg"
+							x="86"
+							y="67"
+							width="468"
+							height="106"
+							preserveAspectRatio="none"
 							clipPath={`url(#${cassetteId}-window)`}
 						/>
 						<path d="M86 186 L550 198 L546 222 L90 210Z" fill="#b6533e" />
@@ -154,19 +243,31 @@ export function PassItOnHero({
 							<g key={x}>
 								<circle cx={x} cy="269" r="31" fill="#645947" />
 								<circle cx={x} cy="269" r="22" fill="#f6e9c3" />
+								<g className="pass-it-on-cassette-reel">
+									<path
+										d={`M${x} 246v46m-23-23h46m-39-16 32 32m0-32-32 32`}
+										stroke="#806e49"
+										strokeWidth="2"
+									/>
+								</g>
 								<circle cx={x} cy="269" r="9" fill="#5b4a32" />
-								<path
-									d={`M${x} 246v46m-23-23h46m-39-16 32 32m0-32-32 32`}
-									stroke="#806e49"
-									strokeWidth="2"
-								/>
 							</g>
 						))}
 						<path
+							className="pass-it-on-cassette-tape-loop"
 							d="M239 269 C278 238 354 238 401 269 C354 300 278 300 239 269Z"
 							fill="none"
 							stroke="#624d36"
 							strokeWidth="3"
+						/>
+						<path
+							className="pass-it-on-cassette-tape-dash"
+							d="M239 269 C278 238 354 238 401 269 C354 300 278 300 239 269Z"
+							fill="none"
+							stroke="#c29c52"
+							strokeDasharray="2 10"
+							strokeWidth="1.5"
+							strokeOpacity="0.72"
 						/>
 						<text
 							x="320"
