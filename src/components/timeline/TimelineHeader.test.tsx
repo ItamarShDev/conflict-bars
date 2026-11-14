@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 import { renderToStaticMarkup } from "react-dom/server";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { TimelineHeader } from "./TimelineHeader";
@@ -21,6 +22,10 @@ const props = {
 	lang: "en" as const,
 	nav: { href: "/en/bubble", label: "Bubble view" },
 };
+const headerStyles = readFileSync(
+	new URL("../../app/globals.css", import.meta.url),
+	"utf8",
+);
 
 beforeEach(() => {
 	themeMock.value = "classic";
@@ -67,5 +72,19 @@ describe("TimelineHeader layouts", () => {
 		expect(html).toContain('role="switch" aria-checked="true"');
 		expect(html).toContain('aria-label="מצב כהה"');
 		expect(html).toContain('data-selected-theme="boombox"');
+	});
+
+	it("aligns the compact header controls to one accessible outer height", () => {
+		const sharedControlRule = headerStyles.match(
+			/\.pass-it-on \.pass-it-on-utility-button,\s*\.pass-it-on \.pass-it-on-language-switcher,\s*\.pass-it-on \.pass-it-on-theme-switch,\s*\.pass-it-on \.pass-it-on-theme-track\s*\{([^}]+)\}/,
+		)?.[1];
+		const languageOptionRule = headerStyles.match(
+			/\.pass-it-on \.pass-it-on-language-option\s*\{([^}]+)\}/,
+		)?.[1];
+
+		expect(sharedControlRule).toContain("height: 3rem;");
+		expect(sharedControlRule).toContain("min-height: 3rem;");
+		expect(languageOptionRule).toContain("width: 2.75rem;");
+		expect(languageOptionRule).toContain("height: 2.75rem;");
 	});
 });
