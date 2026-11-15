@@ -55,7 +55,7 @@ async function ensureArtist(
 
 	if (existing) {
 		if (forceUpdate) {
-			await runMaintenance("upsertArtist", {
+			await runMaintenance("maintainArtist", {
 				name,
 				name_he: nameHe,
 				name_en: nameEn,
@@ -67,7 +67,7 @@ async function ensureArtist(
 		return existing._id;
 	}
 
-	const newArtistId = await runMaintenance("upsertArtist", {
+	const newArtistId = await runMaintenance("maintainArtist", {
 		name,
 		name_he: nameHe,
 		name_en: nameEn,

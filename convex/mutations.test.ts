@@ -23,7 +23,7 @@ describe("mutation access boundary", () => {
 				.filter(([, fn]) => fn.visibility === "public")
 				.map(([name]) => name)
 				.sort(),
-		).toEqual(["ensureSubmissionArtist", "submitSongEditSuggestion"]);
+		).toEqual(["submitSongEditSuggestion", "upsertArtist"]);
 	});
 	it("never modifies an existing artist from a visitor request", async () => {
 		const first = vi
@@ -37,10 +37,37 @@ describe("mutation access boundary", () => {
 			},
 		};
 		expect(
-			await functions.ensureSubmissionArtist.handler(ctx, { name: "Original" }),
+			await functions.upsertArtist.handler(ctx, {
+				name: "Original",
+				affiliation: "overwrite attempt",
+				notes: "overwrite attempt",
+			}),
 		).toBe("artist1");
 		expect(ctx.db.patch).not.toHaveBeenCalled();
 		expect(ctx.db.insert).not.toHaveBeenCalled();
+	});
+	it("accepts legacy metadata without trusting it when creating an artist", async () => {
+		const insert = vi.fn().mockResolvedValue("artist2");
+		const ctx = {
+			db: {
+				query: () => ({ withIndex: () => ({ first: async () => null }) }),
+				insert,
+			},
+		};
+		await expect(
+			functions.upsertArtist.handler(ctx, {
+				name: " Artist ",
+				name_he: "legacy",
+				name_en: "legacy",
+				era: "legacy",
+				affiliation: "legacy",
+				notes: "legacy",
+			}),
+		).resolves.toBe("artist2");
+		expect(insert).toHaveBeenCalledWith("artists", {
+			name: "Artist",
+			normalized_name: "artist",
+		});
 	});
 	it.each([
 		{ start: "bad" },

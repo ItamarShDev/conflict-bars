@@ -95,7 +95,7 @@ async function findDuplicateByName(
 	return null;
 }
 
-export const upsertArtist = internalMutation({
+export const maintainArtist = internalMutation({
 	args: {
 		name: v.string(),
 		name_he: v.optional(v.string()),
@@ -431,8 +431,17 @@ export const submitSongEditSuggestion = mutation({
 });
 
 // Visitor submissions may create a missing artist, but never edit an existing one.
-export const ensureSubmissionArtist = mutation({
-	args: { name: v.string() },
+// Keep the legacy API name/argument shape for independently deployed clients.
+// Optional metadata is accepted for compatibility but never trusted from visitors.
+export const upsertArtist = mutation({
+	args: {
+		name: v.string(),
+		name_he: v.optional(v.string()),
+		name_en: v.optional(v.string()),
+		era: v.optional(v.string()),
+		affiliation: v.optional(v.string()),
+		notes: v.optional(v.string()),
+	},
 	handler: async (ctx, { name }) => {
 		const trimmed = name.trim();
 		if (!trimmed || trimmed.length > 200)

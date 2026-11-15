@@ -36,7 +36,7 @@ async function ensureArtist(
 	if (existing) {
 		return existing._id;
 	}
-	return runMaintenance("upsertArtist", {
+	return runMaintenance("maintainArtist", {
 		name,
 		era: data?.era,
 		affiliation: data?.affiliation,

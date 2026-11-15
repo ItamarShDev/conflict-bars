@@ -103,3 +103,14 @@ rejected by the helper; use the authenticated Convex CLI directly for those.
 Do not put a deploy key in NEXT_PUBLIC_* variables. No new credentials are needed
 by the public site. Public song suggestions remain unpublished; their artist
 helper can only create a missing artist, not overwrite an existing artist.
+
+### Compatible rollout
+
+The frontend retains the existing public `upsertArtist` name and argument shape.
+On the updated backend this endpoint only creates a missing artist (name only)
+or returns an existing ID; supplied metadata is ignored and existing records are
+never modified. Privileged artist upserts move to internal `maintainArtist`.
+This lets the frontend and backend deploy independently without a missing-function
+window. Deploy the backend before running the updated maintenance scripts.
+Merging/frontend deployment alone does not close the backend exposure; deploy
+Convex separately to activate the access restrictions.
