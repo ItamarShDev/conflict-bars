@@ -6,6 +6,7 @@ import { config } from "dotenv";
 import { api } from "../convex/_generated/api";
 import { artistPoliticalAffiliation } from "../timeline/artist-political-affiliation";
 import type { SongList } from "../timeline/types";
+import { runMaintenance } from "./lib/run-maintenance";
 
 // Load environment variables from .env.local
 config({
@@ -54,7 +55,7 @@ async function ensureArtist(
 
 	if (existing) {
 		if (forceUpdate) {
-			await client.mutation(api.mutations.upsertArtist, {
+			await runMaintenance("maintainArtist", {
 				name,
 				name_he: nameHe,
 				name_en: nameEn,
@@ -66,7 +67,7 @@ async function ensureArtist(
 		return existing._id;
 	}
 
-	const newArtistId = await client.mutation(api.mutations.upsertArtist, {
+	const newArtistId = await runMaintenance("maintainArtist", {
 		name,
 		name_he: nameHe,
 		name_en: nameEn,
@@ -78,7 +79,7 @@ async function ensureArtist(
 }
 
 async function assignSongArtist(songId: string, artistId: string) {
-	await client.mutation(api.mutations.assignArtistToSong, {
+	await runMaintenance("assignArtistToSong", {
 		songId: songId as never,
 		artistId: artistId as never,
 	});
@@ -118,7 +119,7 @@ async function upsertSongWithArtist(
 	if (existingSong) {
 		if (forceUpdate) {
 			// Update existing song with new data
-			await client.mutation(api.mutations.updateSong, {
+			await runMaintenance("updateSong", {
 				songId: existingSong._id as never,
 				updates: {
 					name: song.name,
@@ -134,7 +135,7 @@ async function upsertSongWithArtist(
 			// Just ensure artist assignment
 			await assignSongArtist(existingSong._id, artistId);
 			if (collaboratorIds.length > 0) {
-				await client.mutation(api.mutations.assignCollaboratorsToSong, {
+				await runMaintenance("assignCollaboratorsToSong", {
 					songId: existingSong._id as never,
 					collaboratorIds: collaboratorIds as never,
 				});
@@ -143,7 +144,7 @@ async function upsertSongWithArtist(
 		return existingSong._id;
 	}
 
-	return client.mutation(api.mutations.insertSong, {
+	return runMaintenance("insertSong", {
 		name: song.name,
 		artistId,
 		collaboratorIds:

@@ -1,8 +1,7 @@
 import { dirname, join } from "node:path";
-import { ConvexHttpClient } from "convex/browser";
 import { config } from "dotenv";
-import { api } from "../convex/_generated/api";
 import { israeliConflicts } from "../timeline/conflicts";
+import { runMaintenance } from "./lib/run-maintenance";
 
 // Load environment variables from .env.local
 config({
@@ -18,8 +17,6 @@ if (!CONVEX_URL) {
 	console.log("Please run 'npx convex dev' first to get your deployment URL");
 	process.exit(1);
 }
-
-const client = new ConvexHttpClient(CONVEX_URL);
 
 async function run() {
 	console.log("🎬 Migrating events from conflicts...\n");
@@ -38,7 +35,7 @@ async function run() {
 					continue;
 				}
 
-				await client.mutation(api.mutations.insertEvent, {
+				await runMaintenance("insertEvent", {
 					start: conflictEntry.time.start,
 					end: conflictEntry.time.end,
 					title: conflict.title,

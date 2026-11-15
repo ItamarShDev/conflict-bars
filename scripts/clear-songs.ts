@@ -1,7 +1,6 @@
 import { dirname, join } from "node:path";
-import { ConvexHttpClient } from "convex/browser";
 import { config } from "dotenv";
-import { api } from "../convex/_generated/api";
+import { runMaintenance } from "./lib/run-maintenance";
 
 // Load environment variables from .env.local
 config({
@@ -18,20 +17,18 @@ if (!CONVEX_URL) {
 	process.exit(1);
 }
 
-const client = new ConvexHttpClient(CONVEX_URL);
-
 async function clearAllTables() {
 	console.log("\n🗑️  Clearing all tables from Convex database...\n");
 
 	try {
 		// Clear songs first (has foreign keys to artists)
 		console.log("  Clearing songs...");
-		await client.mutation(api.mutations.clearAllSongs, {});
+		await runMaintenance("clearAllSongs", {});
 		console.log("  ✓ Cleared all songs");
 
 		// Clear artists last (no dependencies)
 		console.log("  Clearing artists...");
-		await client.mutation(api.mutations.clearAllArtists, {});
+		await runMaintenance("clearAllArtists", {});
 		console.log("  ✓ Cleared all artists");
 
 		console.log("\n✅ All tables cleared successfully\n");

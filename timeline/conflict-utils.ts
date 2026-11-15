@@ -38,40 +38,26 @@ export interface ConflictEntry {
 export function parseConflictsForTimeline(
 	conflicts: EventsTimeline[],
 ): ConflictEntry[] {
-	return conflicts.map((c, index) => {
+	return conflicts.flatMap((c, index) => {
 		const startDate = new Date(c.time.start);
 		const endDate = c.time.end ? new Date(c.time.end) : null;
+		// Ignore malformed legacy records rather than crash the whole archive.
+		if (
+			!Number.isFinite(startDate.getTime()) ||
+			(endDate && (!Number.isFinite(endDate.getTime()) || endDate < startDate))
+		)
+			return [];
 		const year = startDate.getFullYear();
 
 		if (!c.conflict) {
 			throw new Error(`Conflict ${index} is missing conflict data`);
 		}
 
-		return {
-			id: `conflict-${index}`,
-			startDate,
-			endDate,
-			title: c.conflict.title,
-			title_he: c.conflict.title_he,
-			reason: c.conflict.reason,
-			reason_he: c.conflict.reason_he,
-			description: c.conflict.description,
-			description_he: c.conflict.description_he,
-			effects: c.conflict.effects,
-			effects_he: c.conflict.effects_he,
-			wikipedia_url: c.conflict.wikipedia_url,
-			year,
-			timestamp: c.time.end
-				? `${startDate.toLocaleDateString()} - ${endDate?.toLocaleDateString()}`
-				: startDate.toLocaleDateString(),
-			song: {
-				name: "",
-				artist: "",
-				published_date: c.time.start,
-				language: "",
-			},
-			leaning: "center" as const,
-			conflict: {
+		return [
+			{
+				id: `conflict-${index}`,
+				startDate,
+				endDate,
 				title: c.conflict.title,
 				title_he: c.conflict.title_he,
 				reason: c.conflict.reason,
@@ -81,8 +67,30 @@ export function parseConflictsForTimeline(
 				effects: c.conflict.effects,
 				effects_he: c.conflict.effects_he,
 				wikipedia_url: c.conflict.wikipedia_url,
+				year,
+				timestamp: c.time.end
+					? `${startDate.toLocaleDateString()} - ${endDate?.toLocaleDateString()}`
+					: startDate.toLocaleDateString(),
+				song: {
+					name: "",
+					artist: "",
+					published_date: c.time.start,
+					language: "",
+				},
+				leaning: "center" as const,
+				conflict: {
+					title: c.conflict.title,
+					title_he: c.conflict.title_he,
+					reason: c.conflict.reason,
+					reason_he: c.conflict.reason_he,
+					description: c.conflict.description,
+					description_he: c.conflict.description_he,
+					effects: c.conflict.effects,
+					effects_he: c.conflict.effects_he,
+					wikipedia_url: c.conflict.wikipedia_url,
+				},
 			},
-		};
+		];
 	});
 }
 
