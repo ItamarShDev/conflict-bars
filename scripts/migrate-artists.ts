@@ -5,6 +5,7 @@ import { api } from "../convex/_generated/api";
 import type { Id } from "../convex/_generated/dataModel";
 import { artistPoliticalAffiliation } from "../timeline/artist-political-affiliation";
 import type { SongList } from "../timeline/types";
+import { runMaintenance } from "./lib/run-maintenance";
 
 const CONVEX_URL = process.env.NEXT_PUBLIC_CONVEX_URL;
 
@@ -35,7 +36,7 @@ async function ensureArtist(
 	if (existing) {
 		return existing._id;
 	}
-	return client.mutation(api.mutations.upsertArtist, {
+	return runMaintenance("upsertArtist", {
 		name,
 		era: data?.era,
 		affiliation: data?.affiliation,
@@ -44,7 +45,7 @@ async function ensureArtist(
 }
 
 async function assignSongArtist(songId: string, artistId: string) {
-	await client.mutation(api.mutations.assignArtistToSong, {
+	await runMaintenance("assignArtistToSong", {
 		songId: songId as Id<"songs">,
 		artistId: artistId as Id<"artists">,
 	});
@@ -67,7 +68,7 @@ async function upsertSongWithArtist(song: SongList[number]) {
 		return existingSong._id;
 	}
 
-	return client.mutation(api.mutations.insertSong, {
+	return runMaintenance("insertSong", {
 		name: song.name,
 		artistId,
 		published_date: song.published_date,

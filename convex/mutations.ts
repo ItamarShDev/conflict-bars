@@ -1,7 +1,7 @@
 import { v } from "convex/values";
 import type { Doc, Id } from "./_generated/dataModel";
 import type { MutationCtx } from "./_generated/server";
-import { mutation } from "./_generated/server";
+import { internalMutation, mutation } from "./_generated/server";
 
 function normalizeArtistName(name: string) {
 	return name.trim().toLowerCase();
@@ -95,7 +95,7 @@ async function findDuplicateByName(
 	return null;
 }
 
-export const upsertArtist = mutation({
+export const upsertArtist = internalMutation({
 	args: {
 		name: v.string(),
 		name_he: v.optional(v.string()),
@@ -136,7 +136,7 @@ export const upsertArtist = mutation({
 	},
 });
 
-export const deleteSong = mutation({
+export const deleteSong = internalMutation({
 	args: {
 		songId: v.id("songs"),
 	},
@@ -145,7 +145,7 @@ export const deleteSong = mutation({
 	},
 });
 
-export const assignArtistToSong = mutation({
+export const assignArtistToSong = internalMutation({
 	args: {
 		songId: v.id("songs"),
 		artistId: v.id("artists"),
@@ -157,7 +157,7 @@ export const assignArtistToSong = mutation({
 	},
 });
 
-export const assignCollaboratorsToSong = mutation({
+export const assignCollaboratorsToSong = internalMutation({
 	args: {
 		songId: v.id("songs"),
 		collaboratorIds: v.array(v.id("artists")),
@@ -169,7 +169,7 @@ export const assignCollaboratorsToSong = mutation({
 	},
 });
 
-export const insertSong = mutation({
+export const insertSong = internalMutation({
 	args: {
 		name: v.string(),
 		artistId: v.id("artists"),
@@ -222,7 +222,7 @@ export const insertSong = mutation({
 	},
 });
 
-export const updateSong = mutation({
+export const updateSong = internalMutation({
 	args: {
 		songId: v.id("songs"),
 		updates: v.object({
@@ -276,7 +276,7 @@ export const updateSong = mutation({
 	},
 });
 
-export const insertEvent = mutation({
+export const insertEvent = internalMutation({
 	args: {
 		start: v.string(),
 		end: v.optional(v.string()),
@@ -291,11 +291,19 @@ export const insertEvent = mutation({
 		wikipedia_url: v.optional(v.string()),
 	},
 	handler: async (ctx, args) => {
+		if (
+			!Number.isFinite(Date.parse(args.start)) ||
+			(args.end !== undefined &&
+				(!Number.isFinite(Date.parse(args.end)) ||
+					Date.parse(args.end) < Date.parse(args.start)))
+		) {
+			throw new Error("Invalid event date range");
+		}
 		return await ctx.db.insert("events", args);
 	},
 });
 
-export const clearAllSongs = mutation({
+export const clearAllSongs = internalMutation({
 	args: {},
 	handler: async (ctx) => {
 		const songs = await ctx.db.query("songs").collect();
@@ -305,7 +313,7 @@ export const clearAllSongs = mutation({
 	},
 });
 
-export const clearAllEvents = mutation({
+export const clearAllEvents = internalMutation({
 	args: {},
 	handler: async (ctx) => {
 		const events = await ctx.db.query("events").collect();
@@ -315,7 +323,7 @@ export const clearAllEvents = mutation({
 	},
 });
 
-export const clearAllUsers = mutation({
+export const clearAllUsers = internalMutation({
 	args: {},
 	handler: async (ctx) => {
 		const users = await ctx.db.query("users").collect();
@@ -325,7 +333,7 @@ export const clearAllUsers = mutation({
 	},
 });
 
-export const clearAllArtists = mutation({
+export const clearAllArtists = internalMutation({
 	args: {},
 	handler: async (ctx) => {
 		const artists = await ctx.db.query("artists").collect();
@@ -335,7 +343,7 @@ export const clearAllArtists = mutation({
 	},
 });
 
-export const publishAllSongs = mutation({
+export const publishAllSongs = internalMutation({
 	args: {},
 	handler: async (ctx) => {
 		const songs = await ctx.db.query("songs").collect();
@@ -419,5 +427,27 @@ export const submitSongEditSuggestion = mutation({
 				submitted_by: userId,
 			});
 		}
+	},
+});
+
+// Visitor submissions may create a missing artist, but never edit an existing one.
+export const ensureSubmissionArtist = mutation({
+	args: { name: v.string() },
+	handler: async (ctx, { name }) => {
+		const trimmed = name.trim();
+		if (!trimmed || trimmed.length > 200)
+			throw new Error("Invalid artist name");
+		const normalized = normalizeArtistName(trimmed);
+		const existing = await ctx.db
+			.query("artists")
+			.withIndex("by_normalized_name", (q) =>
+				q.eq("normalized_name", normalized),
+			)
+			.first();
+		if (existing) return existing._id;
+		return ctx.db.insert("artists", {
+			name: trimmed,
+			normalized_name: normalized,
+		});
 	},
 });

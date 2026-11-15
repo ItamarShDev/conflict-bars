@@ -141,7 +141,10 @@ export function SubmitSongForm({
 							normalized,
 						})
 					)?._id,
-				(args) => convex.mutation(api.mutations.upsertArtist, args),
+				(args) =>
+					convex.mutation(api.mutations.ensureSubmissionArtist, {
+						name: args.name,
+					}),
 			);
 			if (!artistId) {
 				setMissingFields(new Set(["artist"]));
