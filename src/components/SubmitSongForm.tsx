@@ -5,6 +5,10 @@ import { useEffect, useId, useMemo, useState } from "react";
 import { api } from "../../convex/_generated/api";
 import type { Id } from "../../convex/_generated/dataModel";
 import { sendThankYouMail } from "../actions/email";
+import {
+	canonicalSongLanguage,
+	displaySongLanguage,
+} from "../utils/song-language";
 import { resolveSubmissionArtist } from "../utils/submission-artist";
 import type { SubmitSongFormProps } from "./SubmitSongForm.types";
 
@@ -86,7 +90,7 @@ export function SubmitSongForm({
 		const artist = (formData.get("artist") as string)?.trim();
 		const publishedDate = (formData.get("publishedDate") as string)?.trim();
 		const languageRaw = (formData.get("language") as string) ?? "";
-		const language = languageRaw.trim();
+		const language = canonicalSongLanguage(languageRaw.trim(), lang);
 		const lyricHebrew = ((formData.get("lyricHebrew") as string) ?? "").trim();
 		const lyricEnglish = (
 			(formData.get("lyricEnglish") as string) ?? ""
@@ -282,7 +286,7 @@ export function SubmitSongForm({
 							name="language"
 							type="text"
 							required
-							defaultValue={editSong?.language || ""}
+							defaultValue={displaySongLanguage(editSong?.language || "", lang)}
 							list={languageListId}
 							className={`${inputBase} ${
 								missingFields.has("language")
@@ -392,7 +396,10 @@ export function SubmitSongForm({
 				</datalist>
 				<datalist id={languageListId}>
 					{languages.map((langOption) => (
-						<option key={langOption} value={langOption} />
+						<option
+							key={langOption}
+							value={displaySongLanguage(langOption, lang)}
+						/>
 					))}
 				</datalist>
 			</form>

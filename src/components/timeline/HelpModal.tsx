@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useId, useState } from "react";
+import { createModalPortal } from "@/components/ModalPortal";
 import type { HelpModalTranslations } from "@/components/timeline/translations";
 
 type HelpModalProps = {
@@ -13,8 +14,8 @@ type HelpModalProps = {
 export type HelpModalStats = {
 	songCount: number;
 	artistCount: number;
-	startYear: number;
-	endYear: number;
+	startYear: number | null;
+	endYear: number | null;
 };
 
 export function HelpModal({
@@ -27,6 +28,14 @@ export function HelpModal({
 	const titleId = useId();
 	const descriptionId = useId();
 	const isRtl = lang === "he";
+	const catalogDescription =
+		stats.songCount > 0 && stats.startYear !== null && stats.endYear !== null
+			? translations.description.catalog
+					.replace("{{songs}}", String(stats.songCount))
+					.replace("{{artists}}", String(stats.artistCount))
+					.replace("{{startYear}}", String(stats.startYear))
+					.replace("{{endYear}}", String(stats.endYear))
+			: translations.description.emptyCatalog;
 
 	useEffect(() => {
 		if (!isOpen) {
@@ -58,76 +67,75 @@ export function HelpModal({
 				<span aria-hidden="true">?</span>
 			</button>
 
-			{isOpen && (
-				<div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4">
-					<button
-						type="button"
-						onClick={() => setIsOpen(false)}
-						onKeyDown={(event) => {
-							if (event.key === "Enter" || event.key === " ") {
-								setIsOpen(false);
-							}
-						}}
-						className="absolute inset-0 cursor-default"
-						aria-label={translations.close}
-					/>
+			{isOpen &&
+				createModalPortal(
 					<div
-						role="dialog"
-						aria-modal="true"
-						aria-labelledby={titleId}
-						aria-describedby={descriptionId}
+						lang={lang}
 						dir={isRtl ? "rtl" : "ltr"}
-						className="glass-card relative z-10 max-h-[calc(100vh-2rem)] w-full max-w-xl overflow-y-auto border-2 border-(--color-control-border) p-5 sm:p-7 no-scrollbar tape"
+						className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4"
 					>
-						<div className="mb-4 flex items-center justify-between">
-							<h2
-								id={titleId}
-								className="font-display text-xl font-black text-(--color-card-foreground)"
-							>
-								{translations.modalTitle}
-							</h2>
-							<button
-								type="button"
-								onClick={() => setIsOpen(false)}
-								className="p-2 text-(--color-muted-foreground) transition hover:bg-(--color-card-foreground)/10 hover:text-(--color-card-foreground) focus:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent)"
-								aria-label={translations.close}
-							>
-								&#x2715;
-							</button>
-						</div>
+						<button
+							type="button"
+							onClick={() => setIsOpen(false)}
+							onKeyDown={(event) => {
+								if (event.key === "Enter" || event.key === " ") {
+									setIsOpen(false);
+								}
+							}}
+							className="absolute inset-0 cursor-default"
+							aria-label={translations.close}
+						/>
 						<div
-							id={descriptionId}
-							className="space-y-4 text-sm leading-relaxed text-(--color-muted-foreground)"
+							role="dialog"
+							aria-modal="true"
+							aria-labelledby={titleId}
+							aria-describedby={descriptionId}
+							dir={isRtl ? "rtl" : "ltr"}
+							className="glass-card relative z-10 max-h-[calc(100vh-2rem)] w-full max-w-xl overflow-y-auto border-2 border-(--color-control-border) p-5 sm:p-7 no-scrollbar tape"
 						>
-							<p>{translations.description.intro}</p>
-							<p>
-								{translations.description.catalog
-									.replace("{{songs}}", String(stats.songCount))
-									.replace("{{artists}}", String(stats.artistCount))
-									.replace("{{startYear}}", String(stats.startYear))
-									.replace("{{endYear}}", String(stats.endYear))}
-							</p>
-							<ul
-								className={`${isRtl ? "list-disc pr-6" : "list-disc pl-6"} space-y-2`}
+							<div className="mb-4 flex items-center justify-between">
+								<h2
+									id={titleId}
+									className="font-display text-xl font-black text-(--color-card-foreground)"
+								>
+									{translations.modalTitle}
+								</h2>
+								<button
+									type="button"
+									onClick={() => setIsOpen(false)}
+									className="p-2 text-(--color-muted-foreground) transition hover:bg-(--color-card-foreground)/10 hover:text-(--color-card-foreground) focus:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent)"
+									aria-label={translations.close}
+								>
+									&#x2715;
+								</button>
+							</div>
+							<div
+								id={descriptionId}
+								className="space-y-4 text-sm leading-relaxed text-(--color-muted-foreground)"
 							>
-								<li>{translations.description.columns.left}</li>
-								<li>{translations.description.columns.right}</li>
-								<li>{translations.description.borders}</li>
-							</ul>
-							<p>{translations.description.submissions}</p>
+								<p>{translations.description.intro}</p>
+								<p>{catalogDescription}</p>
+								<ul
+									className={`${isRtl ? "list-disc pr-6" : "list-disc pl-6"} space-y-2`}
+								>
+									<li>{translations.description.columns.left}</li>
+									<li>{translations.description.columns.right}</li>
+									<li>{translations.description.borders}</li>
+								</ul>
+								<p>{translations.description.submissions}</p>
+							</div>
+							<div className="mt-6 flex justify-end">
+								<button
+									type="button"
+									onClick={() => setIsOpen(false)}
+									className="bg-(--color-accent) px-5 py-2 text-sm font-black text-[#fffdf5] transition wobble-sm hover:bg-(--color-accent-hover) focus:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent)"
+								>
+									{translations.close}
+								</button>
+							</div>
 						</div>
-						<div className="mt-6 flex justify-end">
-							<button
-								type="button"
-								onClick={() => setIsOpen(false)}
-								className="bg-(--color-accent) px-5 py-2 text-sm font-black text-[#fffdf5] transition wobble-sm hover:bg-(--color-accent-hover) focus:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent)"
-							>
-								{translations.close}
-							</button>
-						</div>
-					</div>
-				</div>
-			)}
+					</div>,
+				)}
 		</>
 	);
 }

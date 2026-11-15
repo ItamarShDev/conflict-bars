@@ -1,21 +1,20 @@
 import type { Metadata } from "next";
 import { translations } from "@/components/timeline/translations";
+import { requireHebrewLocale } from "@/utils/hebrew-locale";
 
 export async function generateMetadata({
 	params,
 }: {
-	params: Promise<{ lang: "he" | "en" }>;
+	params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
 	const { lang } = await params;
-
-	const isHebrew = lang !== "en";
-	const siteTitle = translations[lang].title;
-	const description = isHebrew
-		? "ציר זמן אינטראקטיבי לחקר אמני היפ־הופ ישראליים ואירועים מרכזיים לאורך השנים"
-		: "An interactive timeline exploring Israeli hip-hop artists and key events across years and decades";
+	requireHebrewLocale(lang);
+	const siteTitle = translations.he.title;
+	const description =
+		"ציר זמן אינטראקטיבי לחקר אמני היפ־הופ ישראליים ואירועים מרכזיים לאורך השנים";
 
 	const base = "https://www.conflictbars.org";
-	const url = `${base}/${lang}`;
+	const url = `${base}/he`;
 
 	return {
 		metadataBase: new URL(base),
@@ -30,21 +29,14 @@ export async function generateMetadata({
 			title: siteTitle,
 			description,
 			url,
-			locale: isHebrew ? "he_IL" : "en_US",
-			alternateLocale: isHebrew ? ["en_US"] : ["he_IL"],
+			locale: "he_IL",
 		},
 		twitter: {
 			card: "summary_large_image",
 			title: siteTitle,
 			description,
 		},
-		alternates: {
-			canonical: url,
-			languages: {
-				he: `${base}/he`,
-				en: `${base}/en`,
-			},
-		},
+		alternates: { canonical: url },
 	};
 }
 
@@ -56,8 +48,9 @@ export default async function Layout({
 	params: Promise<{ lang: string }>;
 }) {
 	const { lang } = await params;
+	requireHebrewLocale(lang);
 	return (
-		<main lang={lang} dir={lang === "he" ? "rtl" : "ltr"}>
+		<main lang="he" dir="rtl">
 			{children}
 		</main>
 	);

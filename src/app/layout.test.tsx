@@ -1,0 +1,39 @@
+import type { ReactNode } from "react";
+import { renderToStaticMarkup } from "react-dom/server";
+import { describe, expect, it, vi } from "vitest";
+import RootLayout, { metadata, viewport } from "./layout";
+
+vi.mock("./globals.css", () => ({}));
+vi.mock("next/font/google", () => ({
+	Geist: () => ({ variable: "geist" }),
+	Geist_Mono: () => ({ variable: "geist-mono" }),
+	Heebo: () => ({ variable: "heebo" }),
+}));
+vi.mock("@vercel/analytics/next", () => ({ Analytics: () => null }));
+vi.mock("@/components/ConvexClientProvider", () => ({
+	ConvexClientProvider: ({ children }: { children: ReactNode }) => children,
+}));
+vi.mock("@/components/ThemeProvider", () => ({
+	default: ({ children }: { children: ReactNode }) => children,
+}));
+
+describe("Hebrew document metadata", () => {
+	it("sets the document language, direction, and root metadata to Hebrew", () => {
+		const html = renderToStaticMarkup(
+			<RootLayout>
+				<div>תוכן</div>
+			</RootLayout>,
+		);
+
+		expect(html).toContain('<html lang="he" dir="rtl"');
+		expect(metadata.title).toBe("חרוזים מסוכסכים");
+		expect(metadata.description).toContain("ציר זמן אינטראקטיבי");
+		expect(metadata.openGraph?.locale).toBe("he_IL");
+		expect(viewport).toMatchObject({
+			width: "device-width",
+			initialScale: 1,
+			viewportFit: "cover",
+		});
+		expect(html).not.toContain('name="viewport"');
+	});
+});

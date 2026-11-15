@@ -9,11 +9,11 @@ type Leaning = (typeof LEANINGS)[number];
 const DECADES = [1990, 2000, 2010, 2020] as const;
 type Decade = (typeof DECADES)[number];
 
-const DECADE_LABELS: Record<Decade, string> = {
-	1990: "90s",
-	2000: "2000s",
-	2010: "2010s",
-	2020: "2020s",
+const DECADE_LABELS: Record<Decade, Record<"en" | "he", string>> = {
+	1990: { en: "90s", he: "שנות ה־90" },
+	2000: { en: "2000s", he: "שנות ה־2000" },
+	2010: { en: "2010s", he: "שנות ה־2010" },
+	2020: { en: "2020s", he: "שנות ה־2020" },
 };
 
 const LEANING_STYLES: Record<Leaning, { active: string; inactive: string }> = {
@@ -43,6 +43,48 @@ const LEANING_STYLES: Record<Leaning, { active: string; inactive: string }> = {
 	},
 };
 
+type DecadeFilterButtonsProps = {
+	lang: "en" | "he";
+	selectedDecades: number[];
+	onDecadesChange: (decades: number[]) => void;
+};
+
+export function DecadeFilterButtons({
+	lang,
+	selectedDecades,
+	onDecadesChange,
+}: DecadeFilterButtonsProps) {
+	const toggleDecade = (decade: number) => {
+		if (selectedDecades.includes(decade)) {
+			onDecadesChange(selectedDecades.filter((d) => d !== decade));
+		} else {
+			onDecadesChange([...selectedDecades, decade]);
+		}
+	};
+
+	return (
+		<div className="flex flex-wrap gap-2">
+			{DECADES.map((decade) => {
+				const isActive = selectedDecades.includes(decade);
+				return (
+					<button
+						type="button"
+						key={decade}
+						onClick={() => toggleDecade(decade)}
+						className={`min-h-10 border-2 px-3 py-1.5 text-sm font-black transition wobble-sm ${
+							isActive
+								? "border-(--color-accent) bg-(--color-accent) text-[#fffdf5]"
+								: "border-(--color-control-border) text-(--color-control-muted) hover:border-(--color-accent) hover:text-(--color-accent)"
+						}`}
+					>
+						{DECADE_LABELS[decade][lang]}
+					</button>
+				);
+			})}
+		</div>
+	);
+}
+
 type FilterPanelProps = {
 	lang: "en" | "he";
 	translations: FiltersTranslations;
@@ -69,14 +111,6 @@ export function FilterPanel({
 			onLeaningsChange(selectedLeanings.filter((l) => l !== leaning));
 		} else {
 			onLeaningsChange([...selectedLeanings, leaning]);
-		}
-	};
-
-	const toggleDecade = (decade: number) => {
-		if (selectedDecades.includes(decade)) {
-			onDecadesChange(selectedDecades.filter((d) => d !== decade));
-		} else {
-			onDecadesChange([...selectedDecades, decade]);
 		}
 	};
 
@@ -177,25 +211,11 @@ export function FilterPanel({
 						<p className="mb-3 text-xs font-black uppercase tracking-widest text-(--color-control-muted)">
 							{t.decade.label}
 						</p>
-						<div className="flex flex-wrap gap-2">
-							{DECADES.map((decade) => {
-								const isActive = selectedDecades.includes(decade);
-								return (
-									<button
-										type="button"
-										key={decade}
-										onClick={() => toggleDecade(decade)}
-										className={`min-h-10 border-2 px-3 py-1.5 text-sm font-black transition wobble-sm ${
-											isActive
-												? "border-(--color-accent) bg-(--color-accent) text-[#fffdf5]"
-												: "border-(--color-control-border) text-(--color-control-muted) hover:border-(--color-accent) hover:text-(--color-accent)"
-										}`}
-									>
-										{DECADE_LABELS[decade]}
-									</button>
-								);
-							})}
-						</div>
+						<DecadeFilterButtons
+							lang={lang}
+							selectedDecades={selectedDecades}
+							onDecadesChange={onDecadesChange}
+						/>
 					</div>
 				</div>
 			)}

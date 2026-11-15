@@ -12,6 +12,16 @@ const nextConfig: NextConfig = {
 				destination: "/he",
 				permanent: false,
 			},
+			{
+				source: "/en",
+				destination: "/he",
+				permanent: true,
+			},
+			{
+				source: "/en/:path*",
+				destination: "/he/:path*",
+				permanent: true,
+			},
 		];
 	},
 };

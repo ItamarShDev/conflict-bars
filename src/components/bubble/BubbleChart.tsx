@@ -35,9 +35,9 @@ export function BubbleChart({ songs, lang, bands }: BubbleChartProps) {
 
 	if (!data) {
 		return (
-			<p className="py-12 text-center text-sm font-black uppercase tracking-widest text-(--color-year-foreground)">
-				{t.search.noResults}
-			</p>
+			<div className="pass-it-on-chart pass-it-on-chart-empty">
+				<p className="pass-it-on-chart-empty-message">{t.search.noResults}</p>
+			</div>
 		);
 	}
 
@@ -49,27 +49,28 @@ export function BubbleChart({ songs, lang, bands }: BubbleChartProps) {
 	};
 
 	return (
-		<div className="space-y-6">
-			<div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+		<div className="pass-it-on-chart">
+			<ul className="pass-it-on-chart-stats" aria-label={t.bubble.title}>
 				{LEANINGS.map((leaning) => (
-					<div
+					<li
 						key={leaning}
-						className="control-bar flex flex-col items-center rounded-lg border-2 border-(--color-control-border) bg-(--color-control-background) p-3"
+						className="pass-it-on-chart-stat"
+						data-leaning={leaning}
 					>
 						<span
-							className="font-display text-3xl font-black"
+							className="pass-it-on-chart-stat-count"
 							style={{ color: LEANING_COLORS[leaning] }}
 						>
 							{data.totals[leaning]}
 						</span>
-						<span className="text-xs font-black uppercase tracking-widest text-(--color-control-muted)">
+						<span className="pass-it-on-chart-stat-label">
 							{labels[leaning]}
 						</span>
-					</div>
+					</li>
 				))}
-			</div>
+			</ul>
 
-			<div className="control-bar rounded-lg border-2 border-(--color-control-border) bg-(--color-control-background) p-4">
+			<div className="pass-it-on-chart-plot">
 				<div dir="ltr">
 					{isMobile ? (
 						<DivergingRows {...chartProps} />
