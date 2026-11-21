@@ -49,4 +49,18 @@ export const hatikvah62020s = [
 			song_info: "https://www.kan.org.il/content/kan-news/culture/654093/",
 		},
 	},
+	{
+		name: "גיבורי על (Superheroes)",
+		artist: "Hatikva 6 (התקווה 6)",
+		language: "Hebrew",
+		published_date: "2024",
+		lyric_sample: {
+			hebrew: "נכון כולם נראים רגילים, אבל אנחנו עם של גיבורי על",
+			english_translation:
+				"Right — we all look ordinary, but we're a nation of superheroes — tribute to reservists written after October 7. (13tv/Maariv)",
+		},
+		links: {
+			song_info: "https://13tv.co.il/item/entertainment/music/us2jw-904752420/",
+		},
+	},
 ];

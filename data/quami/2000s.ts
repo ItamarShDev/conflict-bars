@@ -34,4 +34,47 @@ export const quami2000s = [
 			youtube: "https://www.youtube.com/watch?v=t0Qe6VWMMOQ",
 		},
 	},
+	{
+		name: "אבו מיקרופון (Abu Microphone)",
+		artist: "Quami (קוואמי)",
+		collaborators: ["Mahmud Jreri (DAM)", "Suhell Nafar (DAM)"],
+		language: "Hebrew",
+		published_date: "2005-02",
+		lyric_sample: {
+			hebrew: "מי זה אבו מיקרופון, מהמיקרופון שלו אך עד לאצבעות ידיו",
+			english_translation:
+				"Mostly skills/braggadocio — its significance is the early Jewish-Arab rap collab with DAM members on כולם יודעים את התשובות. (lyrks)",
+		},
+		links: {
+			lyrics: "https://lyrks.com/lyrics/quami/abu-microphone",
+			song_info: "https://stereo-ve-mono.com/13643",
+		},
+	},
+	{
+		name: "עשר! (Ten!)",
+		artist: "Quami (קוואמי)",
+		collaborators: ["Tamer Nafar (תאמר נפאר)"],
+		language: "Hebrew/Arabic",
+		published_date: "2005-02",
+		lyric_sample: {
+			english_translation:
+				"Coexistence collab on כולם יודעים את התשובות with DAM's Tamer Nafar.",
+		},
+		links: {
+			song_info: "https://stereo-ve-mono.com/13643",
+		},
+	},
+	{
+		name: "ימים שחורים (Black Days)",
+		artist: "Quami (קוואמי)",
+		language: "Hebrew",
+		published_date: "2005-02",
+		lyric_sample: {
+			english_translation:
+				"'Black days' — from כולם יודעים את התשובות (stereo-ve-mono tracklist).",
+		},
+		links: {
+			song_info: "https://stereo-ve-mono.com/13643",
+		},
+	},
 ];

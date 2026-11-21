@@ -90,4 +90,29 @@ export const tamernafar2020s = [
 			youtube: "https://www.youtube.com/watch?v=d1lxAWfthtE",
 		},
 	},
+	{
+		name: "In the name of the father, the Imam & John Lennon",
+		artist: "Tamer Nafar (תאמר נפאר)",
+		language: "Arabic/English",
+		published_date: "2026-01-20",
+		lyric_sample: {
+			english_translation:
+				"Title track of the Levantine Music LP — an identity triptych (father / Imam / Lennon).",
+		},
+		links: {
+			song_info:
+				"https://audiomack.com/tamer-nafar/album/in-the-name-of-the-father-the-imam-john-lennon-2482119",
+		},
+	},
+	{
+		name: "NANA",
+		artist: "Tamer Nafar (תאמר נפאר)",
+		collaborators: ["Amal Murkus", "Sammy Shilbaq"],
+		language: "Arabic",
+		published_date: "2026-01-20",
+		lyric_sample: {
+			english_translation:
+				"Album track featuring Amal Murkus; theme undocumented.",
+		},
+	},
 ];

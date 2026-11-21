@@ -122,4 +122,27 @@ export const hadagNahash2010s = [
 			lyrics: "https://hadagnahash.bandcamp.com/track/--27",
 		},
 	},
+	{
+		name: "קובלנה על מפלגות ישראל (Indictment Against the Parties of Israel)",
+		artist: "Hadag Nahash (הדג נחש)",
+		language: "Hebrew",
+		published_date: "2013-01-13",
+		lyric_sample: {
+			hebrew: "מפלגות ישראל עלו לי עד כאן / זונות שלטון מקבלות אתנן",
+			english_translation:
+				"The parties of Israel have risen up to here / whores of power take their fee — Meir Ariel's indictment, recorded pre-election. (ynet)",
+		},
+		links: {
+			song_info: "https://www.ynet.co.il/articles/0,7340,L-4331553,00.html",
+		},
+	},
+	{
+		name: "זמן להתעורר (Time to Wake Up)",
+		artist: "Hadag Nahash (הדג נחש)",
+		language: "Hebrew",
+		published_date: "2013-02-24",
+		lyric_sample: {
+			english_translation: "Title track of the post-election protest album.",
+		},
+	},
 ];

@@ -32,4 +32,54 @@ export const belly2020s = [
 				"https://variety.com/2024/music/news/palestinian-belly-96-miles-from-bethlehem-album-gaza-1236017859/",
 		},
 	},
+	{
+		name: "Jenin's Song",
+		artist: "Belly (Ahmad Balshe)",
+		language: "English",
+		published_date: "2024-05-30",
+		lyric_sample: {
+			english_translation:
+				"Rolling Stone: 'Jenin's Song' is dedicated to the refugee camp of the same name.",
+		},
+		links: {
+			song_info:
+				"https://www.rollingstone.com/music/music-news/belly-96-miles-from-bethlehem-honors-palestinian-roots-1235030257/",
+		},
+	},
+	{
+		name: "Baroudeh",
+		artist: "Belly (Ahmad Balshe)",
+		collaborators: ["Saint Levant (سانت ليفانت)"],
+		language: "English/Arabic",
+		published_date: "2024-05-30",
+		lyric_sample: {
+			english_translation:
+				"Diaspora/Arabic verses on the Palestine-ode LP released amid the Gaza war. (Rolling Stone)",
+		},
+	},
+	{
+		name: "Carry Me",
+		artist: "Belly (Ahmad Balshe)",
+		collaborators: ["Ibrahim Maalouf"],
+		language: "English",
+		published_date: "2024-05-30",
+		lyric_sample: {
+			english_translation:
+				"Track on 96 Miles From Bethlehem, the Palestine tribute LP.",
+		},
+	},
+	{
+		name: "Maktub (مكتوب / Written)",
+		artist: "Belly (Ahmad Balshe)",
+		collaborators: ["Elyanna", "MC Abdul"],
+		language: "Arabic/English",
+		published_date: "2024-05-30",
+		lyric_sample: {
+			english_translation:
+				"'Maktub' — 'written' / fate under bombardment — on Belly's Palestine ode LP; features MC Abdul.",
+		},
+		links: {
+			song_info: "https://en.wikipedia.org/wiki/96_Miles_from_Bethlehem",
+		},
+	},
 ];

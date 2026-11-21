@@ -81,4 +81,46 @@ export const dam2000s = [
 			song_info: "http://news.bbc.co.uk/2/hi/middle_east/6487833.stm",
 		},
 	},
+	{
+		name: "G'areeb Fi Bladi (غريب في بلادي / Stranger in My Own Country)",
+		artist: "DAM (دאם)",
+		language: "Arabic",
+		published_date: "2006-10-26",
+		lyric_sample: {
+			hebrew:
+				"حاكمنا حكم صهيوني ديموقراطي؟! ديموقراطي للنفس الصهيونية وصهيوني للنفس العربية",
+			english_translation:
+				"A democratic Zionist regime rules us — democratic to the Zionist soul, Zionist to the Arab soul. (arabicmusictranslation.com)",
+		},
+		links: {
+			song_info:
+				"http://www.arabicmusictranslation.com/2009/09/dam-stranger-in-my-country-ghareeb-fi.html",
+		},
+	},
+	{
+		name: "Ng'ayer Bukra (نغير بكره / Change Tomorrow)",
+		artist: "DAM (דאם)",
+		collaborators: ["The Lid Kids"],
+		language: "Arabic",
+		published_date: "2006-10-26",
+		lyric_sample: {
+			hebrew: "بدنا نتعلم، ونتقدم، نلاقي القدرة، نغير بكره",
+			english_translation:
+				"We want education, we want improvement, to have the ability to change tomorrow. Jreri's verse invokes the occupation and the word 'independence.' (elyrics.net)",
+		},
+		links: {
+			lyrics:
+				"https://www.elyrics.net/read/d/dam-lyrics/change-tomorrow-(feat.-the-lid-kids)-lyrics.html",
+		},
+	},
+	{
+		name: "Inkilab (انقلاب / Revolution, spelled backwards)",
+		artist: "DAM (דאם)",
+		language: "Arabic",
+		published_date: "2006-10-26",
+		lyric_sample: {
+			english_translation:
+				"The title is 'revolution' spelled backwards — verses on intifada-era life in Lod, from the debut album Dedication.",
+		},
+	},
 ];

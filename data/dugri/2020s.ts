@@ -29,4 +29,32 @@ export const dugri2020s = [
 				"https://forward.com/opinion/484353/rap-battle-palestinian-israeli-duo-friendship-peace-movement/",
 		},
 	},
+	{
+		name: "Munfas (מנפס)",
+		artist: "DUGRI (UR & SAZ)",
+		language: "Hebrew/Arabic",
+		published_date: "2021-11-16",
+		lyric_sample: {
+			english_translation:
+				"Second Arab-Jewish dialogue rap confronting mutual racism, released months after the May 2021 mixed-city riots. (Times of Israel)",
+		},
+		links: {
+			song_info:
+				"https://www.timesofisrael.com/podcast-this-arab-and-jew-talk-straight-in-raps-and-in-person/",
+		},
+	},
+	{
+		name: "I Am",
+		artist: "DUGRI (UR & SAZ)",
+		language: "English/Hebrew/Arabic",
+		published_date: "2022-03-22",
+		lyric_sample: {
+			english_translation:
+				"Coexistence anthem premiered in the duo's own Forward op-ed.",
+		},
+		links: {
+			song_info:
+				"https://forward.com/opinion/484353/rap-battle-palestinian-israeli-duo-friendship-peace-movement/",
+		},
+	},
 ];

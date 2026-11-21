@@ -69,4 +69,42 @@ export const subliminal2020s = [
 			lyrics: "https://www.nagnu.co.il/אומנים/סאבלימינל_והצל/אבינו",
 		},
 	},
+	{
+		name: "עוף החול (Of HaHol / Sand Bird)",
+		artist: "Subliminal & The Shadow",
+		collaborators: ["Itzik Shamli (איציק שמלי)", "Sivan"],
+		language: "Hebrew",
+		published_date: "2024-07",
+		lyric_sample: {
+			hebrew:
+				"כמו עוף החול מן העפר / נגד כל הסיכויים אני נשאר… העם מפוצל, האויב מאוחד",
+			english_translation:
+				"Like the sand bird from the dust / against all odds I remain… the nation is split, the enemy is united. Post-war resilience single. (karaoke.co.il)",
+		},
+		links: {
+			lyrics: "https://www.karaoke.co.il/iboxinfo.php?id=61791A",
+		},
+	},
+	{
+		name: "כולם יחד (All Together)",
+		artist: "Subliminal & The Shadow",
+		language: "Hebrew",
+		published_date: "2024-07-16",
+		lyric_sample: {
+			english_translation: "Wartime unity single released during the Gaza war.",
+		},
+	},
+	{
+		name: "דמוקרטיה (Democracy)",
+		artist: "Subliminal & The Shadow",
+		language: "Hebrew",
+		published_date: "2025-07-01",
+		lyric_sample: {
+			english_translation:
+				"Track on שומרי הסף (Guardians of the Threshold); lyrics unverified.",
+		},
+		links: {
+			song_info: "https://www.deezer.com/en/album/771500251",
+		},
+	},
 ];

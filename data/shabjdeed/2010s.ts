@@ -45,4 +45,18 @@ export const shabjdeed2010s = [
 			youtube: "https://www.youtube.com/watch?v=jEHtO_c_UdI",
 		},
 	},
+	{
+		name: "Wlad Quds (ولاد قدس / Sons of Jerusalem)",
+		artist: "Shabjdeed (شبجديد)",
+		collaborators: ["Al Nather (الناظر)"],
+		language: "Arabic",
+		published_date: "2019-08-18",
+		lyric_sample: {
+			english_translation:
+				"'Sons of Jerusalem' — from Sindibad el Ward; the album is analyzed as revolutionary Palestinian trap in academic literature (OpenEdition).",
+		},
+		links: {
+			song_info: "https://bltnm.bandcamp.com/album/sindibad-el-ward",
+		},
+	},
 ];

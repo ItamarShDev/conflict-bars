@@ -25,4 +25,31 @@ export const ramallahUnderground2000s = [
 			youtube: "https://www.youtube.com/watch?v=CC0ELkFMORM",
 		},
 	},
+	{
+		name: "Mamnou' al-Tajwul (ممنوع التجول / Curfew)",
+		artist: "Ramallah Underground (رام الله أندرجراوند)",
+		language: "Arabic",
+		published_date: "2002",
+		lyric_sample: {
+			english_translation:
+				"Written during the curfew of Israel's 2002 West Bank sweep — the collective's founding song. (ar.wikipedia)",
+		},
+		links: {
+			song_info:
+				"https://ar.wikipedia.org/wiki/%D9%85%D9%82%D8%A7%D8%B7%D8%B9%D8%A9_(%D9%81%D9%86%D8%A7%D9%86)",
+		},
+	},
+	{
+		name: "970",
+		artist: "Ramallah Underground (رام الله أندرجراوند)",
+		language: "Arabic",
+		published_date: "2006",
+		lyric_sample: {
+			english_translation:
+				"Palestine's dialing code as title; The Wire's pick from the Ramallah scene. Release year not firmly documented (mid-2000s circulation).",
+		},
+		links: {
+			song_info: "https://www.thewire.co.uk/audio/tracks/global-ear-ramallah",
+		},
+	},
 ];

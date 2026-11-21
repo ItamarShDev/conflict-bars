@@ -73,4 +73,49 @@ export const shabjdeed2020s = [
 			song_info: "https://bltnm.bandcamp.com/track/intidab",
 		},
 	},
+	{
+		name: "Amrikkka (أمريكا)",
+		artist: "Shabjdeed (شبجديد)",
+		collaborators: ["Al Nather (الناظر)"],
+		language: "Arabic",
+		published_date: "2020-12",
+		lyric_sample: {
+			hebrew: "عكم اعدام صدام حسين سحب اقسام… كس اخت ام الامريكان وحلفاء الشعب",
+			english_translation:
+				"Verses curse America over Saddam Hussein's execution and Arab leaders' complicity. (BLTNM Bandcamp lyric sheet)",
+		},
+		links: {
+			lyrics: "https://bltnm.bandcamp.com/track/amrikkka",
+		},
+	},
+	{
+		name: "Tawafan (طوفان / Flood)",
+		artist: "Shabjdeed (شبجديد)",
+		collaborators: ["Al Nather (الناظر)"],
+		language: "Arabic",
+		published_date: "2024-02-29",
+		lyric_sample: {
+			english_translation:
+				"'Flood' — released mid-war on SULTAN; reviews note the Abu Obeida 'masked man' reference in Shabjdeed's verses.",
+		},
+		links: {
+			song_info: "https://bltnm.bandcamp.com/track/tawafan",
+		},
+	},
+	{
+		name: "Tal Abib (تل أبيب / Tel Aviv)",
+		artist: "Shabjdeed (شبجديد)",
+		collaborators: ["Al Nather (الناظر)"],
+		language: "Arabic",
+		published_date: "2024-02-29",
+		lyric_sample: {
+			hebrew:
+				"هل نستوي؟ طبعًا لا. مع انه عدو لا يفقه شيء بل ينظر للمستقبل، يعتد، ينتظم، يتأقلم",
+			english_translation:
+				"Are we equal? Of course not. The enemy understands nothing but looks to the future — prepares, organizes, adapts. (ottoshahin.substack.com)",
+		},
+		links: {
+			song_info: "https://bltnm.bandcamp.com/track/tal-abib",
+		},
+	},
 ];

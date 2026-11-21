@@ -30,4 +30,17 @@ export const daboor2020s = [
 			lyrics: "https://kalimat.anghami.com/lyrics/110002472",
 		},
 	},
+	{
+		name: "Fi Ta5 (في طخ / In a Shot)",
+		artist: "Daboor (دابور)",
+		language: "Arabic",
+		published_date: "2023",
+		lyric_sample: {
+			english_translation:
+				"BLTNM single — gun/street imagery from the Ramallah crew.",
+		},
+		links: {
+			song_info: "https://bltnm.bandcamp.com",
+		},
+	},
 ];

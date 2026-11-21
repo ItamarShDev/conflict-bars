@@ -119,4 +119,24 @@ export const subliminal2000s = [
 			youtube: "https://www.youtube.com/watch?v=JIjnSTshpc0",
 		},
 	},
+	{
+		name: "ביתי היה זה (That Was My Home)",
+		artist: "Subliminal (סאבלימינל)",
+		language: "Hebrew",
+		published_date: "2005",
+		lyric_sample: {
+			english_translation: "Protest song against the 2005 Gaza disengagement.",
+		},
+	},
+	{
+		name: "תן כח (Ten Koah / Give Strength)",
+		artist: "Subliminal (סאבלימינל)",
+		collaborators: ["David D'Or"],
+		language: "Hebrew",
+		published_date: "2006",
+		lyric_sample: {
+			english_translation:
+				"Strength/unity anthem — from Just When You Thought It Was Over.",
+		},
+	},
 ];

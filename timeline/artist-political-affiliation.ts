@@ -504,4 +504,34 @@ export const artistPoliticalAffiliation: Record<
 		notes:
 			"Laith Al Husseini; Jerusalem-born, Ramallah-based rapper and physician known for ironic accounts of life under occupation.",
 	},
+	"Katibe 5 (كتيبة 5)": {
+		era: "2000s–present",
+		affiliation: "Palestinian left / Anti-occupation",
+		notes:
+			"Beirut-based rap group formed in Burj al-Barajneh refugee camp; documented as giving voice to refugee resistance.",
+	},
+	"Sabreena da Witch (سابرينا الساحرة)": {
+		era: "2000s–present",
+		affiliation: "Palestinian left / Anti-occupation",
+		notes:
+			"Female Palestinian rapper featured on the Slingshot Hip Hop soundtrack with DAM's Suhell Nafar.",
+	},
+	Lowkey: {
+		era: "2000s–present",
+		affiliation: "Pro-Palestinian activist",
+		notes:
+			"British-Iraqi rapper and activist; Long Live Palestine series features DAM members and Palestinian artists. UK diaspora — scene-adjacent.",
+	},
+	"47Soul (٤٧ سول)": {
+		era: "2010s–present",
+		affiliation: "Palestinian left / Diaspora",
+		notes:
+			"Jordan-based Palestinian shamstep collective; dabke-electro with refugee/diaspora themes. Scene-adjacent (not rap).",
+	},
+	"Nechi Nech (נצ'י נצ')": {
+		era: "2010s–present",
+		affiliation: "Left-leaning / Social critique",
+		notes:
+			"Israeli rapper; ברוכים הבאים לפתח תקוה (2015) includes protest tracks such as 'ממשלה זה פשע מאורגן'.",
+	},
 } as const;

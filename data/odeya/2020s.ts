@@ -18,4 +18,19 @@ export const odeya2020s = [
 			song_info: "https://he.wikipedia.org/wiki/חורף_23",
 		},
 	},
+	{
+		name: "חורף 23' (Winter of 23)",
+		artist: "Odeya (אודיה)",
+		collaborators: ["Izzy (איזי)"],
+		language: "Hebrew",
+		published_date: "2023-10",
+		lyric_sample: {
+			hebrew: "אנחנו הילדים של חורף 23, חמלה ששרפו לה את הבית",
+			english_translation:
+				"We are the children of winter '23 — Hamala whose house they burned — written about two weeks after Black Saturday for the murdered of the Gaza envelope; riff on the Yom-Kippur-war classic חורף 73. (13tv/Maariv)",
+		},
+		links: {
+			song_info: "https://www.maariv.co.il/culture/music/article-1139495",
+		},
+	},
 ];

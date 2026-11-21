@@ -41,4 +41,19 @@ export const tamerNafar2010s = [
 				"https://deadline.com/2016/04/junction-48-rapper-tamer-nafar-music-video-if-only-1201736017/",
 		},
 	},
+	{
+		name: "Ehreg, George (احرق، جورج / Burn It, George)",
+		artist: "Tamer Nafar (תאמר נפאר)",
+		collaborators: ["Saz", "Itamar Ziegler"],
+		language: "Arabic",
+		published_date: "2017",
+		lyric_sample: {
+			english_translation:
+				"Hear the sirens! Burn it, George! — protest anthem on the Junction 48 soundtrack. (Democracy Now transcript)",
+		},
+		links: {
+			song_info:
+				"https://www.democracynow.org/2017/3/10/palestinian_hip_hop_star_tamer_nafar",
+		},
+	},
 ];

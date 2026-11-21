@@ -99,4 +99,27 @@ export const mcAbdul2020s = [
 				"https://qa.grammy.com/videos/mc-abdul-through-my-eyes-performance",
 		},
 	},
+	{
+		name: "Can I Live",
+		artist: "MC Abdul",
+		language: "English",
+		published_date: "2024",
+		lyric_sample: {
+			english_translation:
+				"Can I live, can I live / I'm just a Gaza kid… my future so bright, they hating so what. (songlyrics.com)",
+		},
+		links: {
+			lyrics: "https://www.songlyrics.com/mc-abdul/can-i-live-lyrics/",
+		},
+	},
+	{
+		name: "I May Be Young",
+		artist: "MC Abdul",
+		language: "English",
+		published_date: "2024-09-27",
+		lyric_sample: {
+			english_translation:
+				"Childhood under war — from the album 96 Miles From Bethlehem.",
+		},
+	},
 ];

@@ -27,4 +27,30 @@ export const mcGaza2010s = [
 				"https://theworld.org/stories/2016/07/30/meet-gaza-rapper-trying-break-out-and-make-it-big",
 		},
 	},
+	{
+		name: "A Palestinian Message to Trump (رسالة فلسطينية إلى ترامب)",
+		artist: "MC Gaza (إم سي غزة)",
+		language: "Arabic",
+		published_date: "2017-12-16",
+		lyric_sample: {
+			english_translation:
+				"Direct response to the US Jerusalem recognition and embassy move, uploaded days after the announcement.",
+		},
+		links: {
+			youtube: "https://www.youtube.com/watch?v=CJEgfEqjP0E",
+		},
+	},
+	{
+		name: "Asfoorna Ahaq (عصفורنا أحق / Our Bird Is Righter)",
+		artist: "MC Gaza (إم سي غزة)",
+		language: "Arabic",
+		published_date: "2017-10-02",
+		lyric_sample: {
+			english_translation:
+				"The artist describes it as 'a song about the suffering of child prisoners in Israeli jails.'",
+		},
+		links: {
+			song_info: "https://soundcloud.com/mcgaza",
+		},
+	},
 ];

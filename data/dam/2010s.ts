@@ -96,4 +96,35 @@ export const dam2010s = [
 			youtube: "https://www.youtube.com/watch?v=hwz4GpJZ6tQ",
 		},
 	},
+	{
+		name: "If I Could Go Back in Time (لو أرجع)",
+		artist: "DAM (دאם)",
+		collaborators: ["Amal Murkus"],
+		language: "Arabic",
+		published_date: "2012-11-06",
+		lyric_sample: {
+			english_translation:
+				"Before she was murdered, she wasn't alive / We'll tell her story backwards from her murder to her birth — on honor killings and women's oppression. (arabology.org)",
+		},
+		links: {
+			song_info:
+				"https://www.arabology.org/2012/11/dam-releases-new-video-clip-about.html",
+		},
+	},
+	{
+		name: "Handcuff Them War Criminals (كلبش مجرمي الحرب)",
+		artist: "DAM (دאם)",
+		collaborators: ["Walaa Sbeit", "Wlad al-Hara"],
+		language: "Arabic/English",
+		published_date: "2012",
+		lyric_sample: {
+			hebrew: "كلبش كلبش كلبش مجرمي الحرب",
+			english_translation:
+				"Handcuff, handcuff, handcuff the war criminals — a verse dated May 31 2010 references the Mavi Marmara raid on the Gaza flotilla. (lyrics.lol)",
+		},
+		links: {
+			lyrics:
+				"https://lyrics.lol/artist/39067-DAM/lyrics/248755-Handcuff-them-war-Criminals-%D9%83%D9%84%D8%A8%D8%B4-%D9%85%D8%AC%D8%B1%D9%85%D9%8A-%D8%A7%D9%84%D8%AD%D8%B1%D8%A8",
+		},
+	},
 ];

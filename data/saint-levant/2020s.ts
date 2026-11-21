@@ -77,4 +77,14 @@ export const saintLevant2020s = [
 			song_info: "https://en.wikipedia.org/wiki/Saint_Levant_discography",
 		},
 	},
+	{
+		name: "EXILE (معاكي)",
+		artist: "Saint Levant (سانت ليفانت)",
+		language: "Arabic/English",
+		published_date: "2025",
+		lyric_sample: {
+			english_translation:
+				"Exile/displacement theme — scene-adjacent pop-leaning single.",
+		},
+	},
 ];
