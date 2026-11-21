@@ -2946,6 +2946,9 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-event-hiphop-tag {
 		transform: none;
 	}
 
+	.pass-it-on
+		.pass-it-on-song-disclosure[data-leaning]
+		.pass-it-on-leaning-edge,
 	.pass-it-on .pass-it-on-leaning-edge {
 		animation: none;
 	}
