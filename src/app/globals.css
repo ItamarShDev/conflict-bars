@@ -2060,6 +2060,541 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-track-number {
 	margin: 3rem auto 1.5rem;
 	text-align: center;
 }
+/* ==========================================================================
+   Iteration 3: Sticky Backdrop, Tactile 3D Top Cassette Scrubber,
+   Directional Animated-Gradient 3D Flip Song Cards & Hip-Hop Conflict Intros
+   ========================================================================== */
+
+@keyframes pass-it-on-edge-flow {
+	0% {
+		background-position: 0% 0%;
+	}
+	100% {
+		background-position: 0% 300%;
+	}
+}
+
+@keyframes pass-it-on-edge-flow-x {
+	0% {
+		background-position: 0% 50%;
+	}
+	100% {
+		background-position: 300% 50%;
+	}
+}
+
+.pass-it-on .pass-it-on-chronology {
+	position: relative;
+	isolation: isolate;
+	overflow-x: clip;
+}
+
+.pass-it-on
+	.pass-it-on-chronology
+	> :not(.pass-it-on-scrolly-backdrop):not(.pass-it-on-year-rail) {
+	position: relative;
+	z-index: 2;
+}
+
+.pass-it-on .pass-it-on-scrolly-backdrop {
+	position: sticky;
+	top: 0;
+	z-index: 0;
+	height: 100vh;
+	margin-bottom: -100vh;
+	pointer-events: none;
+	overflow: hidden;
+}
+
+.pass-it-on .pass-it-on-scrolly-backdrop-layer {
+	position: absolute;
+	inset: -8% 0;
+	opacity: 0;
+	transform: translate3d(0, var(--scrolly-parallax-y, 0px), 0) scale(1.06);
+	transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1);
+	will-change: opacity, transform;
+}
+
+.pass-it-on .pass-it-on-scrolly-backdrop-layer[data-active="true"] {
+	opacity: 1;
+}
+
+.pass-it-on .pass-it-on-scrolly-backdrop-photo {
+	position: absolute;
+	inset: 0;
+	background-position: center;
+	background-size: cover;
+	filter: saturate(0.42) contrast(1.06) brightness(0.92);
+	opacity: 0.22;
+}
+
+html[data-theme="boombox"] .pass-it-on .pass-it-on-scrolly-backdrop-photo {
+	filter: saturate(0.55) contrast(1.12) brightness(0.62);
+	opacity: 0.3;
+}
+
+.pass-it-on .pass-it-on-scrolly-backdrop-wash {
+	position: absolute;
+	inset: 0;
+}
+
+.pass-it-on .pass-it-on-scrolly-backdrop-wash-light {
+	background: radial-gradient(
+		ellipse 80% 55% at 50% 25%,
+		color-mix(in srgb, var(--pass-paper) 74%, transparent) 0%,
+		color-mix(in srgb, var(--pass-paper) 92%, transparent) 72%,
+		var(--pass-paper) 100%
+	);
+}
+
+.pass-it-on .pass-it-on-scrolly-backdrop-wash-dark {
+	opacity: 0;
+	background: radial-gradient(
+		ellipse 80% 55% at 50% 25%,
+		rgb(20 17 14 / 62%) 0%,
+		rgb(16 14 12 / 86%) 74%,
+		var(--pass-paper) 100%
+	);
+}
+
+html[data-theme="boombox"] .pass-it-on .pass-it-on-scrolly-backdrop-wash-light {
+	opacity: 0;
+}
+
+html[data-theme="boombox"] .pass-it-on .pass-it-on-scrolly-backdrop-wash-dark {
+	opacity: 1;
+}
+
+.pass-it-on .pass-it-on-scrolly-backdrop-grain {
+	position: absolute;
+	inset: 0;
+	opacity: 0.045;
+	background-image: radial-gradient(
+		rgb(43 36 29 / 80%) 0.6px,
+		transparent 0.6px
+	);
+	background-size: 4px 4px;
+}
+
+/* Tactile 3D Top Cassette Scrubber */
+.pass-it-on .pass-it-on-year-rail {
+	--tape-progress: 0%;
+	--spool-deg: 0deg;
+	z-index: 30;
+	border: 1px solid rgb(74 58 40 / 34%);
+	border-radius: 16px;
+	background: linear-gradient(
+		180deg,
+		color-mix(in srgb, var(--pass-paper-hi) 96%, #fff 4%) 0%,
+		color-mix(in srgb, var(--pass-paper) 94%, #d8c6a1 6%) 100%
+	);
+	box-shadow:
+		0 1px 0 rgb(255 255 255 / 65%) inset,
+		0 -2px 0 rgb(74 58 40 / 16%) inset,
+		0 14px 28px -12px rgb(43 36 29 / 28%),
+		0 4px 10px rgb(43 36 29 / 10%);
+	backdrop-filter: none;
+}
+
+html[data-theme="boombox"] .pass-it-on .pass-it-on-year-rail {
+	border-color: rgb(245 216 115 / 24%);
+	background: linear-gradient(
+		180deg,
+		rgb(34 29 24 / 95%) 0%,
+		rgb(20 17 14 / 96%) 100%
+	);
+	box-shadow:
+		0 1px 0 rgb(255 246 226 / 14%) inset,
+		0 -2px 0 rgb(0 0 0 / 55%) inset,
+		0 16px 32px rgb(0 0 0 / 55%);
+}
+
+.pass-it-on .pass-it-on-scrubber-reel {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 auto;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: radial-gradient(circle at 35% 30%, #4d4133, #1c1610);
+	box-shadow:
+		0 2px 5px rgb(0 0 0 / 32%),
+		0 1px 0 rgb(255 246 226 / 28%) inset;
+}
+
+.pass-it-on .pass-it-on-scrubber-reel svg {
+	display: block;
+}
+
+.pass-it-on .pass-it-on-scrubber-reel-pack {
+	fill: #241b14;
+	stroke: rgb(245 216 115 / 40%);
+	stroke-width: 1.25;
+}
+
+.pass-it-on .pass-it-on-scrubber-reel-rotor {
+	transform-origin: 20px 20px;
+	transform: rotate(var(--spool-deg, 0deg));
+	will-change: transform;
+}
+
+.pass-it-on .pass-it-on-scrubber-reel-hub {
+	fill: #f6ead0;
+	stroke: #5c4b36;
+	stroke-width: 1.2;
+}
+
+.pass-it-on .pass-it-on-scrubber-reel-teeth {
+	fill: #3d3123;
+}
+
+.pass-it-on .pass-it-on-scrubber-reel-core {
+	fill: #1b1510;
+}
+
+.pass-it-on .pass-it-on-scrubber-counter {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 3.1rem;
+	padding: 0.22rem 0.45rem;
+	border-radius: 6px;
+	border: 1px solid rgb(74 58 40 / 35%);
+	background: #1b1612;
+	box-shadow: 0 2px 6px rgb(0 0 0 / 40%) inset;
+	color: #f5d873;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 0.7rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+}
+
+.pass-it-on .pass-it-on-tape-window {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	min-width: 0;
+	flex: 1 1 auto;
+	padding: 0.28rem 0.45rem;
+	border-radius: 12px;
+	border: 1px solid rgb(74 58 40 / 28%);
+	background: linear-gradient(
+		180deg,
+		rgb(36 29 22 / 12%) 0%,
+		rgb(36 29 22 / 5%) 55%,
+		rgb(255 255 255 / 22%) 100%
+	);
+	box-shadow:
+		0 2px 8px rgb(43 36 29 / 14%) inset,
+		0 1px 0 rgb(255 255 255 / 55%);
+	overflow: hidden;
+}
+
+html[data-theme="boombox"] .pass-it-on .pass-it-on-tape-window {
+	border-color: rgb(255 246 226 / 16%);
+	background: linear-gradient(180deg, #100d0b 0%, #191410 100%);
+	box-shadow:
+		0 3px 10px rgb(0 0 0 / 68%) inset,
+		0 1px 0 rgb(255 246 226 / 10%);
+}
+
+.pass-it-on .pass-it-on-tape-progress {
+	position: absolute;
+	inset-block: 0;
+	left: 0;
+	width: var(--tape-progress, 0%);
+	pointer-events: none;
+	background: linear-gradient(
+		90deg,
+		rgb(225 46 85 / 24%),
+		rgb(245 180 56 / 28%),
+		rgb(37 137 235 / 24%)
+	);
+	border-right: 2px solid rgb(217 155 38 / 65%);
+	transition: width 80ms linear;
+}
+
+.pass-it-on .pass-it-on-tape-window .pass-it-on-rail-years {
+	position: relative;
+	z-index: 2;
+	flex: 1 1 auto;
+	min-width: 0;
+}
+
+.pass-it-on .pass-it-on-tape-window .pass-it-on-scrubber-reel-end {
+	position: relative;
+	z-index: 2;
+}
+
+/* Physical Political Spectrum Legend */
+.pass-it-on .pass-it-on-spectrum-axis {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.6rem;
+	max-width: 1120px;
+	margin: 1.15rem auto 0;
+	padding: 0.55rem 0.9rem;
+	border-radius: 12px;
+	border: 1px solid var(--pass-rule);
+	background: color-mix(in srgb, var(--pass-paper-hi) 86%, transparent);
+	box-shadow: 0 6px 18px -12px rgb(43 36 29 / 24%);
+	backdrop-filter: blur(6px);
+}
+
+.pass-it-on .pass-it-on-spectrum-pill {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35rem;
+	padding: 0.24rem 0.65rem;
+	border-radius: 999px;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 0.72rem;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	white-space: nowrap;
+}
+
+.pass-it-on .pass-it-on-spectrum-left {
+	color: #b4233c;
+	background: rgb(225 46 85 / 12%);
+	border: 1px solid rgb(225 46 85 / 32%);
+}
+
+.pass-it-on .pass-it-on-spectrum-center {
+	color: #8a5a12;
+	background: rgb(230 163 45 / 14%);
+	border: 1px solid rgb(230 163 45 / 36%);
+}
+
+.pass-it-on .pass-it-on-spectrum-right {
+	color: #1659b5;
+	background: rgb(37 137 235 / 12%);
+	border: 1px solid rgb(37 137 235 / 32%);
+}
+
+html[data-theme="boombox"] .pass-it-on .pass-it-on-spectrum-left {
+	color: #ff7b93;
+	background: rgb(255 46 85 / 16%);
+}
+
+html[data-theme="boombox"] .pass-it-on .pass-it-on-spectrum-center {
+	color: #f6cd6d;
+	background: rgb(245 180 56 / 16%);
+}
+
+html[data-theme="boombox"] .pass-it-on .pass-it-on-spectrum-right {
+	color: #79b8ff;
+	background: rgb(56 189 248 / 16%);
+}
+
+/* Iteration 3 Physical Axis + Directional Animated-Gradient 3D Flip Song Cards */
+.pass-it-on .pass-it-on-song-list[data-physical-axis="true"] {
+	direction: ltr;
+	display: flex;
+	flex-direction: column;
+	gap: 1.15rem;
+	perspective: 1100px;
+}
+
+.pass-it-on .pass-it-on-song-disclosure {
+	position: relative;
+	width: 90%;
+	overflow: hidden;
+	border: 1px solid color-mix(in srgb, var(--pass-rule) 82%, transparent);
+	border-radius: 12px;
+	background: color-mix(in srgb, var(--pass-paper-hi) 92%, transparent);
+	box-shadow:
+		0 1px 0 rgb(255 255 255 / 65%) inset,
+		0 12px 24px -14px rgb(43 36 29 / 34%),
+		0 3px 8px -2px rgb(43 36 29 / 14%);
+	padding: 0.35rem 0.95rem 0.45rem;
+	transform-style: preserve-3d;
+	transition:
+		transform 720ms cubic-bezier(0.16, 1, 0.3, 1),
+		opacity 520ms ease,
+		box-shadow 260ms ease;
+}
+
+html[data-theme="boombox"] .pass-it-on .pass-it-on-song-disclosure {
+	background: linear-gradient(
+		180deg,
+		rgb(36 30 25 / 92%) 0%,
+		rgb(25 21 17 / 94%) 100%
+	);
+	border-color: rgb(255 246 226 / 14%);
+	box-shadow:
+		0 1px 0 rgb(255 246 226 / 12%) inset,
+		0 14px 28px -12px rgb(0 0 0 / 68%);
+}
+
+.pass-it-on .pass-it-on-song-disclosure:hover {
+	box-shadow:
+		0 1px 0 rgb(255 255 255 / 72%) inset,
+		0 18px 32px -14px rgb(43 36 29 / 42%),
+		0 6px 14px -4px rgb(43 36 29 / 18%);
+}
+
+.pass-it-on .pass-it-on-song-disclosure[data-leaning="left"] {
+	align-self: flex-start;
+	padding-left: 1.25rem;
+}
+
+.pass-it-on .pass-it-on-song-disclosure[data-leaning="right"] {
+	align-self: flex-end;
+	padding-right: 1.25rem;
+}
+
+.pass-it-on .pass-it-on-song-disclosure[data-leaning="center"],
+.pass-it-on .pass-it-on-song-disclosure[data-leaning="unknown"] {
+	align-self: center;
+	width: 94%;
+}
+
+.pass-it-on .pass-it-on-song-disclosure .pass-it-on-song-summary {
+	position: static;
+}
+
+.pass-it-on .pass-it-on-leaning-edge {
+	position: absolute;
+	pointer-events: none;
+	z-index: 2;
+}
+
+.pass-it-on
+	.pass-it-on-song-disclosure[data-leaning="left"]
+	.pass-it-on-leaning-edge {
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 7px;
+	background: linear-gradient(180deg, #ff2e55, #ff9e44, #ec4899, #ff2e55);
+	background-size: 100% 300%;
+	animation: pass-it-on-edge-flow 4.5s linear infinite;
+	box-shadow: 2px 0 12px rgb(255 46 85 / 32%);
+}
+
+.pass-it-on
+	.pass-it-on-song-disclosure[data-leaning="right"]
+	.pass-it-on-leaning-edge {
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 7px;
+	background: linear-gradient(180deg, #38bdf8, #2563eb, #06b6d4, #38bdf8);
+	background-size: 100% 300%;
+	animation: pass-it-on-edge-flow 4.5s linear infinite;
+	box-shadow: -2px 0 12px rgb(37 99 235 / 32%);
+}
+
+.pass-it-on
+	.pass-it-on-song-disclosure[data-leaning="center"]
+	.pass-it-on-leaning-edge {
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 5px;
+	background: linear-gradient(90deg, #f59e0b, #eab308, #84cc16, #f59e0b);
+	background-size: 300% 100%;
+	animation: pass-it-on-edge-flow-x 5.5s linear infinite;
+}
+
+.pass-it-on
+	.pass-it-on-song-disclosure[data-leaning="unknown"]
+	.pass-it-on-leaning-edge {
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 3px;
+	background: color-mix(in srgb, var(--color-leaning-unknown) 55%, transparent);
+}
+
+/* 3D Flip-In Scroll Reveal (progressive: only hides when JS IntersectionObserver arms it) */
+.pass-it-on
+	.pass-it-on-years[data-reveal-ready="true"]
+	.pass-it-on-song-disclosure:not([data-in-view="true"]) {
+	opacity: 0;
+}
+
+.pass-it-on
+	.pass-it-on-years[data-reveal-ready="true"]
+	.pass-it-on-song-disclosure[data-leaning="left"]:not([data-in-view="true"]) {
+	transform: translate3d(-52px, 24px, -80px) rotateY(24deg);
+}
+
+.pass-it-on
+	.pass-it-on-years[data-reveal-ready="true"]
+	.pass-it-on-song-disclosure[data-leaning="right"]:not([data-in-view="true"]) {
+	transform: translate3d(52px, 24px, -80px) rotateY(-24deg);
+}
+
+.pass-it-on
+	.pass-it-on-years[data-reveal-ready="true"]
+	.pass-it-on-song-disclosure[data-leaning="center"]:not([data-in-view="true"]),
+.pass-it-on
+	.pass-it-on-years[data-reveal-ready="true"]
+	.pass-it-on-song-disclosure[data-leaning="unknown"]:not(
+		[data-in-view="true"]
+	) {
+	transform: translate3d(0, 36px, -60px) rotateX(18deg) scale(0.94);
+}
+
+.pass-it-on
+	.pass-it-on-years[data-reveal-ready="true"]
+	.pass-it-on-event-disclosure:not([data-in-view="true"]) {
+	opacity: 0;
+	transform: translate3d(0, 34px, -50px) rotateX(12deg) rotate(-0.7deg)
+		scale(0.96);
+}
+
+.pass-it-on
+	.pass-it-on-years[data-reveal-ready="true"]
+	.pass-it-on-song-disclosure[data-in-view="true"] {
+	opacity: 1;
+	transform: translate3d(0, 0, 0) rotateY(0deg) rotateX(0deg) scale(1);
+}
+
+.pass-it-on
+	.pass-it-on-years[data-reveal-ready="true"]
+	.pass-it-on-event-disclosure[data-in-view="true"] {
+	opacity: 1;
+}
+
+/* Conflict Short Intro to Hip-Hop Effect inside <summary> */
+.pass-it-on .pass-it-on-event-hiphop-intro {
+	display: block;
+	margin-top: 0.45rem;
+	padding-top: 0.45rem;
+	border-top: 1px dashed rgb(35 89 106 / 26%);
+	color: color-mix(in srgb, var(--pass-ink) 86%, transparent);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.84rem;
+	font-weight: 400;
+	line-height: 1.45;
+}
+
+.pass-it-on .pass-it-on-event-hiphop-tag {
+	display: inline-block;
+	margin-inline-end: 0.4rem;
+	padding: 0.1rem 0.42rem;
+	border-radius: 999px;
+	background: rgb(35 89 106 / 14%);
+	color: var(--pass-blue);
+	font-family: "Courier New", Courier, monospace;
+	font-size: 0.64rem;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	vertical-align: 0.05em;
+}
+
+html[data-theme="boombox"] .pass-it-on .pass-it-on-event-hiphop-tag {
+	background: rgb(245 216 115 / 16%);
+	color: #f5d873;
+}
+
 @media (max-width: 760px) {
 	.pass-it-on .pass-it-on-hero {
 		min-height: auto;
@@ -2243,6 +2778,73 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-track-number {
 	.pass-it-on .pass-it-on-song-summary {
 		gap: 0.35rem 0.5rem;
 	}
+
+	.pass-it-on .pass-it-on-tape-window {
+		grid-column: 1;
+		grid-row: 1;
+		width: 100%;
+		min-width: 0;
+		padding: 0.2rem 0.35rem;
+	}
+
+	.pass-it-on .pass-it-on-year-rail {
+		border-radius: 16px 16px 0 0;
+	}
+
+	.pass-it-on .pass-it-on-scrubber-reel {
+		width: 24px;
+		height: 24px;
+	}
+
+	.pass-it-on .pass-it-on-scrubber-reel svg {
+		width: 22px;
+		height: 22px;
+	}
+
+	.pass-it-on .pass-it-on-tape-window .pass-it-on-scrubber-reel-end,
+	.pass-it-on .pass-it-on-scrubber-counter {
+		display: none;
+	}
+
+	.pass-it-on .pass-it-on-spectrum-axis {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		margin-inline: 0.5rem;
+		padding: 0.35rem 0.4rem;
+		gap: 0.25rem;
+	}
+
+	.pass-it-on .pass-it-on-spectrum-pill {
+		justify-content: center;
+		text-align: center;
+		font-size: 0.62rem;
+		padding: 0.22rem 0.3rem;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.pass-it-on .pass-it-on-song-disclosure {
+		width: 92%;
+		padding: 0.3rem 0.75rem 0.4rem;
+	}
+
+	.pass-it-on .pass-it-on-song-disclosure[data-leaning="left"] {
+		padding-left: 1.05rem;
+	}
+
+	.pass-it-on .pass-it-on-song-disclosure[data-leaning="right"] {
+		padding-right: 1.05rem;
+	}
+
+	.pass-it-on .pass-it-on-song-disclosure[data-leaning="center"],
+	.pass-it-on .pass-it-on-song-disclosure[data-leaning="unknown"] {
+		width: 96%;
+	}
+
+	.pass-it-on .pass-it-on-event-hiphop-intro {
+		font-size: 0.8rem;
+	}
 }
 @media (max-width: 420px) {
 	.pass-it-on .pass-it-on-hero-inner {
@@ -2328,5 +2930,36 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-track-number {
 	}
 	.pass-it-on .pass-it-on-event-disclosure:hover {
 		transform: rotate(-0.7deg);
+	}
+
+	.pass-it-on .pass-it-on-scrolly-backdrop-layer,
+	.pass-it-on .pass-it-on-song-disclosure,
+	.pass-it-on .pass-it-on-tape-progress {
+		transition: none;
+	}
+
+	.pass-it-on .pass-it-on-scrolly-backdrop-layer {
+		transform: none;
+	}
+
+	.pass-it-on .pass-it-on-scrubber-reel-rotor {
+		transform: none;
+	}
+
+	.pass-it-on
+		.pass-it-on-song-disclosure[data-leaning]
+		.pass-it-on-leaning-edge,
+	.pass-it-on .pass-it-on-leaning-edge {
+		animation: none;
+	}
+
+	.pass-it-on
+		.pass-it-on-years[data-reveal-ready="true"]
+		.pass-it-on-song-disclosure:not([data-in-view="true"]),
+	.pass-it-on
+		.pass-it-on-years[data-reveal-ready="true"]
+		.pass-it-on-event-disclosure:not([data-in-view="true"]) {
+		opacity: 1;
+		transform: none;
 	}
 }

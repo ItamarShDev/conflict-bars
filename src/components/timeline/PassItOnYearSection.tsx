@@ -1,6 +1,7 @@
 import type { Ref } from "react";
 import { SongEntry } from "@/components/timeline/SongEntry";
 import type { translations } from "@/components/timeline/translations";
+import { getConflictHipHopIntro } from "@/utils/conflict-hiphop-intros";
 import type { TimelineEntryItem, TimelineView } from "@/utils/timeline";
 
 type PageTranslations = (typeof translations)["en"];
@@ -28,6 +29,7 @@ function EventDetails({
 		"{{year}}",
 		String(entry.year),
 	);
+	const hipHopIntro = getConflictHipHopIntro(conflict, entry.year, lang);
 
 	return (
 		<details className="pass-it-on-event-disclosure">
@@ -50,6 +52,18 @@ function EventDetails({
 							</>
 						)}
 					</span>
+					{hipHopIntro && (
+						<span
+							className="pass-it-on-event-hiphop-intro"
+							lang={lang}
+							dir={lang === "he" ? "rtl" : "ltr"}
+						>
+							<span className="pass-it-on-event-hiphop-tag">
+								{labels.passItOn.hipHopEffectLabel}
+							</span>
+							{hipHopIntro}
+						</span>
+					)}
 				</span>
 				<span className="pass-it-on-disclosure-mark" aria-hidden="true" />
 			</summary>
@@ -159,13 +173,19 @@ export function PassItOnYearSection({
 							{labels.passItOn.music}
 						</h3>
 						{songs.length > 0 ? (
-							<div className="pass-it-on-song-list">
+							<div className="pass-it-on-song-list" data-physical-axis="true">
 								{songs.map((entry, index) => (
 									<details
 										className={`pass-it-on-song-disclosure pass-it-on-song-leaning-${entry.leaning}`}
+										data-leaning={entry.leaning}
+										dir={lang === "he" ? "rtl" : "ltr"}
 										key={`${entry.song.artist}-${entry.song.name}-${entry.song.published_date}`}
 									>
 										<summary className="pass-it-on-song-summary">
+											<span
+												className="pass-it-on-leaning-edge"
+												aria-hidden="true"
+											/>
 											<span
 												className="pass-it-on-track-number"
 												aria-hidden="true"
