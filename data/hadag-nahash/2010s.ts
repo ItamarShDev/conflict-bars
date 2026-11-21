@@ -4,11 +4,9 @@ export const hadagNahash2010s = [
 		artist: "Hadag Nahash (הדג נחש)",
 		language: "English",
 		published_date: "2010-02",
-		lyric_sample: {
-			hebrew:
-				"רקע: כתבת הבכורה בוואלה מ-2010 מתארת את השיר כעוסק בעוינות נרכשת בין ישראלים לפלסטינים.",
-			english_translation:
-				"Context: Walla's 2010 premiere describes the song as addressing learned hostility between Israelis and Palestinians.",
+		context: {
+			he: "כתבת הבכורה בוואלה מ-2010 מתארת את השיר כעוסק בעוינות נרכשת בין ישראלים לפלסטינים.",
+			en: "Walla's 2010 premiere describes the song as addressing learned hostility between Israelis and Palestinians.",
 		},
 		links: {
 			song_info: "https://e.walla.co.il/item/1643615",
@@ -70,6 +68,8 @@ export const hadagNahash2010s = [
 		lyric_sample: {
 			hebrew:
 				"ירושלים של זהב של אמת וכזב / גם של ערק ג'ראס דבש דם וחלב / ירושלים של נחושת של קודש ובושת / ירושלים של אור אור גנוז אורגינלי",
+			english_translation:
+				"Jerusalem of gold, of truth and lies / also of arak, hash, honey, blood and milk / Jerusalem of copper, of holiness and shame / Jerusalem of light, hidden original light",
 		},
 		links: {
 			lyrics:
@@ -141,8 +141,9 @@ export const hadagNahash2010s = [
 		artist: "Hadag Nahash (הדג נחש)",
 		language: "Hebrew",
 		published_date: "2013-02-24",
-		lyric_sample: {
-			english_translation: "Title track of the post-election protest album.",
+		context: {
+			he: "שיר הנושא של אלבום המחאה שיצא לאחר הבחירות.",
+			en: "Title track of the post-election protest album.",
 		},
 	},
 ];

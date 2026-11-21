@@ -4,11 +4,9 @@ export const shabjdeed2020s = [
 		artist: "Shabjdeed (شبجديد)",
 		language: "Arabic",
 		published_date: "2025-04-12",
-		lyric_sample: {
-			hebrew:
-				"רקע: SceneNoise מפרש את השיר כעוסק גם בבגידה אישית וגם בבגידה בפלסטין.",
-			english_translation:
-				"Context: SceneNoise reads the song as addressing both personal betrayal and the betrayal of Palestine.",
+		context: {
+			he: "SceneNoise מפרש את השיר כעוסק גם בבגידה אישית וגם בבגידה בפלסטין.",
+			en: "SceneNoise reads the song as addressing both personal betrayal and the betrayal of Palestine.",
 		},
 		links: {
 			lyrics: "https://bltnm.bandcamp.com/track/sa7bi",
@@ -23,7 +21,8 @@ export const shabjdeed2020s = [
 		language: "Arabic",
 		published_date: "2026-05-05",
 		lyric_sample: {
-			hebrew: "بعد الحرب نعود نحن",
+			arabic: "بعد الحرب نعود نحن",
+			hebrew: "אחרי המלחמה אנחנו חוזרים.",
 			english_translation: "After the war, we return.",
 		},
 		links: {
@@ -49,7 +48,8 @@ export const shabjdeed2020s = [
 		language: "Arabic",
 		published_date: "2021-02-26",
 		lyric_sample: {
-			hebrew: "في حرب فالبلد جنود و عساكر و طخطخة",
+			arabic: "في حرب فالبلد جنود و عساكر و طخطخة",
+			hebrew: "יש מלחמה במדינה — חיילים, כוחות ויריות.",
 			english_translation:
 				"There's a war in the country — soldiers, troops and gunfire.",
 		},
@@ -64,9 +64,9 @@ export const shabjdeed2020s = [
 		collaborators: ["Al Nather (النثر)"],
 		language: "Arabic",
 		published_date: "2024-10-07",
-		lyric_sample: {
-			english_translation:
-				"Single released on 7 October 2024, one year into the Gaza war; the title invokes the British Mandate as a frame for the present. Scene Noise's release write-up describes it as 'steeped in the harrowing reality of the Palestinian struggle' and as contrasting watching the situation from afar with living it daily. No lyric transcription was found on a verifiable source.",
+		context: {
+			he: "סינגל שיצא ב-7 באוקטובר 2024, שנה לפרוץ המלחמה בעזה; השם מתייחס למנדט הבריטי כמסגרת להווה. SceneNoise תיאר אותו כטעון במציאות המאבק הפלסטיני וכמעמיד בניגוד צפייה מרחוק מול חיים יומיומיים בתוך המציאות הזו.",
+			en: "Single released on 7 October 2024, one year into the Gaza war; the title invokes the British Mandate as a frame for the present. Scene Noise's release write-up describes it as 'steeped in the harrowing reality of the Palestinian struggle' and as contrasting watching the situation from afar with living it daily.",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=IrMY_Xy82fg",
@@ -80,9 +80,11 @@ export const shabjdeed2020s = [
 		language: "Arabic",
 		published_date: "2020-12",
 		lyric_sample: {
-			hebrew: "عكم اعدام صدام حسين سحب اقسام… كس اخت ام الامريكان وحلفاء الشعب",
+			arabic: "عكم اعدام صدام حسين سحب اقسام… كس اخت ام الامريكان وحلفاء الشعب",
+			hebrew:
+				"בתים שמקללים את ארצות הברית סביב הוצאתו להורג של סדאם חוסיין ואת שיתוף הפעולה של מנהיגים ערבים.",
 			english_translation:
-				"Verses curse America over Saddam Hussein's execution and Arab leaders' complicity. (BLTNM Bandcamp lyric sheet)",
+				"Verses curse America over Saddam Hussein's execution and Arab leaders' complicity.",
 		},
 		links: {
 			lyrics: "https://bltnm.bandcamp.com/track/amrikkka",
@@ -94,9 +96,9 @@ export const shabjdeed2020s = [
 		collaborators: ["Al Nather (الناظر)"],
 		language: "Arabic",
 		published_date: "2024-02-29",
-		lyric_sample: {
-			english_translation:
-				"'Flood' — released mid-war on SULTAN; reviews note the Abu Obeida 'masked man' reference in Shabjdeed's verses.",
+		context: {
+			he: "'מבול' — יצא במהלך המלחמה באלבום SULTAN; ביקורות מציינות התייחסות לדובר חמאס אבו עוביידה ('האיש רעול הפנים') בבתים של שבג'דיד.",
+			en: "'Flood' — released mid-war on SULTAN; reviews note the Abu Obeida 'masked man' reference in Shabjdeed's verses.",
 		},
 		links: {
 			song_info: "https://bltnm.bandcamp.com/track/tawafan",
@@ -109,10 +111,12 @@ export const shabjdeed2020s = [
 		language: "Arabic",
 		published_date: "2024-02-29",
 		lyric_sample: {
-			hebrew:
+			arabic:
 				"هل نستوي؟ طبعًا لا. مع انه عدو لا يفقه شيء بل ينظر للمستقبل، يعتد، ينتظم، يتأقلم",
+			hebrew:
+				"האם אנחנו שווים? כמובן שלא. אף שזה אויב שלא מבין דבר, הוא מביט לעתיד — נערך, מתארגן, מסתגל.",
 			english_translation:
-				"Are we equal? Of course not. The enemy understands nothing but looks to the future — prepares, organizes, adapts. (ottoshahin.substack.com)",
+				"Are we equal? Of course not. The enemy understands nothing but looks to the future — prepares, organizes, adapts.",
 		},
 		links: {
 			song_info: "https://bltnm.bandcamp.com/track/tal-abib",

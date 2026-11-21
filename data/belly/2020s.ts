@@ -6,6 +6,7 @@ export const belly2020s = [
 		// Album release date, not the later lyric-video upload.
 		published_date: "2024-05-30",
 		lyric_sample: {
+			hebrew: "שקיות כחולות בוהקות לארונות המתים",
 			english_translation: "bright blue bags for the coffins",
 		},
 		links: {
@@ -21,6 +22,8 @@ export const belly2020s = [
 		language: "English",
 		published_date: "2024-05-30",
 		lyric_sample: {
+			hebrew:
+				"רחפנים, מסוקים, הורגים את הרופאים שלנו / הפכו את בית החולים להוספיס / בזמן שצפיתם בזה.",
 			english_translation:
 				"Drones, helicopters, killing our doctors / Turned the hospital to a hospice / While you watched it.",
 		},
@@ -37,9 +40,9 @@ export const belly2020s = [
 		artist: "Belly (Ahmad Balshe)",
 		language: "English",
 		published_date: "2024-05-30",
-		lyric_sample: {
-			english_translation:
-				"Rolling Stone: 'Jenin's Song' is dedicated to the refugee camp of the same name.",
+		context: {
+			he: "לפי Rolling Stone, השיר 'Jenin's Song' מוקדש למחנה הפליטים ג'נין.",
+			en: "Rolling Stone: 'Jenin's Song' is dedicated to the refugee camp of the same name.",
 		},
 		links: {
 			song_info:
@@ -52,9 +55,9 @@ export const belly2020s = [
 		collaborators: ["Saint Levant (سانت ليفانت)"],
 		language: "English/Arabic",
 		published_date: "2024-05-30",
-		lyric_sample: {
-			english_translation:
-				"Diaspora/Arabic verses on the Palestine-ode LP released amid the Gaza war. (Rolling Stone)",
+		context: {
+			he: "בתים בערבית ומהתפוצה מתוך אלבום המחווה לפלסטין שיצא במהלך המלחמה בעזה (Rolling Stone).",
+			en: "Diaspora/Arabic verses on the Palestine-ode LP released amid the Gaza war. (Rolling Stone)",
 		},
 	},
 	{
@@ -63,9 +66,9 @@ export const belly2020s = [
 		collaborators: ["Ibrahim Maalouf"],
 		language: "English",
 		published_date: "2024-05-30",
-		lyric_sample: {
-			english_translation:
-				"Track on 96 Miles From Bethlehem, the Palestine tribute LP.",
+		context: {
+			he: "רצועה מתוך 96 Miles From Bethlehem, אלבום המחווה לפלסטין.",
+			en: "Track on 96 Miles From Bethlehem, the Palestine tribute LP.",
 		},
 	},
 	{
@@ -74,9 +77,9 @@ export const belly2020s = [
 		collaborators: ["Elyanna", "MC Abdul"],
 		language: "Arabic/English",
 		published_date: "2024-05-30",
-		lyric_sample: {
-			english_translation:
-				"'Maktub' — 'written' / fate under bombardment — on Belly's Palestine ode LP; features MC Abdul.",
+		context: {
+			he: "'מכתוב' — גורל תחת הפגזות — מתוך אלבום המחווה לפלסטין של בלי, בהשתתפות MC Abdul.",
+			en: "'Maktub' — 'written' / fate under bombardment — on Belly's Palestine ode LP; features MC Abdul.",
 		},
 		links: {
 			song_info: "https://en.wikipedia.org/wiki/96_Miles_from_Bethlehem",

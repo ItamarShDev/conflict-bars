@@ -16,7 +16,8 @@ export const boikutt2010s = [
 		language: "Arabic",
 		published_date: "2010-03-17",
 		lyric_sample: {
-			hebrew: "إنتهاك احتلال بس مش على الكلّ",
+			arabic: "إنتهاك احتلال بس مش على الكلّ",
+			hebrew: "הפרה, כיבוש — אבל לא על כולם.",
 			english_translation: "Violation, occupation — but not for everyone.",
 		},
 		links: {

@@ -4,9 +4,9 @@ export const saz2010s = [
 		artist: "Saz",
 		language: "Hebrew/Arabic/English",
 		published_date: "2019",
-		lyric_sample: {
-			english_translation:
-				"Collaborative song created at an Arab/Jewish artists' retreat; the participants describe it as a wake-up call against the artificial separation of Arabs and Jews and a statement for a shared society.",
+		context: {
+			he: "שיר שיתוף פעולה שנוצר במפגש אמנים יהודים וערבים; המשתתפים מתארים אותו כקריאת השכמה נגד ההפרדה המלאכותית בין ערבים ליהודים וכאמירה למען חברה משותפת.",
+			en: "Collaborative song created at an Arab/Jewish artists' retreat; the participants describe it as a wake-up call against the artificial separation of Arabs and Jews and a statement for a shared society.",
 		},
 		links: {
 			song_info:

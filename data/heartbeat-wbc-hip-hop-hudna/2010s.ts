@@ -18,6 +18,7 @@ export const heartbeatWbcHipHopHudna2010s = [
 		language: "Hebrew/Arabic/English/German",
 		published_date: "2010",
 		lyric_sample: {
+			hebrew: "בום, בום, בום! אנחנו לא רוצים עוד מזה!",
 			english_translation: "Boom, Boom, Boom! We don't want no more of this!",
 		},
 		links: {

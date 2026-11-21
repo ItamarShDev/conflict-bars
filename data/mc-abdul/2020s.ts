@@ -6,6 +6,7 @@ export const mcAbdul2020s = [
 		// One-minute social-video release responding to the August 2022 fighting.
 		published_date: "2022-08-08",
 		lyric_sample: {
+			hebrew: "חי את חיי תחת מצור",
 			english_translation: "Living my life under siege",
 		},
 		links: {
@@ -20,6 +21,7 @@ export const mcAbdul2020s = [
 		// Audio single date; the official video followed on June 10.
 		published_date: "2026-06-05",
 		lyric_sample: {
+			hebrew: "מחבואים ממטוס ה-F16",
 			english_translation: "Hide and seek from the F16",
 		},
 		links: {
@@ -33,6 +35,8 @@ export const mcAbdul2020s = [
 		language: "Arabic/English",
 		published_date: "2021",
 		lyric_sample: {
+			hebrew:
+				"אני רוצה חופש לאוכלוסייה / שני מיליון אסירים חיים במקום הזה / צועק אל החומה אבל שום דבר לא משתנה / אלה החיים תחת כיבוש.",
 			english_translation:
 				"I want freedom for the population / Two million prisoners living in this location / Shouting at the wall but nothing is ever-changing / That's life under an occupation.",
 		},
@@ -46,9 +50,9 @@ export const mcAbdul2020s = [
 		artist: "MC Abdul",
 		language: "English/Arabic",
 		published_date: "2023-09-15",
-		lyric_sample: {
-			english_translation:
-				"Released weeks before October 7 by the Gaza-born rapper; frames the pen and the microphone as his response to life under blockade.",
+		context: {
+			he: "יצא שבועות ספורים לפני 7 באוקטובר מאת הראפר יליד עזה; מציג את העט והמיקרופון כתגובה שלו לחיים תחת מצור.",
+			en: "Released weeks before October 7 by the Gaza-born rapper; frames the pen and the microphone as his response to life under blockade.",
 		},
 		links: {
 			lyrics: "https://www.youtube.com/watch?v=UnwLtBRLOUg",
@@ -76,6 +80,8 @@ export const mcAbdul2020s = [
 		language: "English",
 		published_date: "2024-11-01",
 		lyric_sample: {
+			hebrew:
+				"אני רוצה להתקשר לאמא שלי; מקווה שהיא הטעינה את הטלפון. מקווה שאחי לא לבד.",
 			english_translation:
 				"I want to call my mother; I hope she charged her phone. I hope my brother is not alone.",
 		},
@@ -89,9 +95,9 @@ export const mcAbdul2020s = [
 		artist: "MC Abdul",
 		language: "English",
 		published_date: "2025-04-11",
-		lyric_sample: {
-			english_translation:
-				"An officially released MC Abdul track documented by the Grammy Recording Academy and dated April 11, 2025 by Soundcharts.",
+		context: {
+			he: "שיר רשמי של MC Abdul שתועד על ידי האקדמיה להקלטות (Grammy) ותוארך ל-11 באפריל 2025 ב-Soundcharts.",
+			en: "An officially released MC Abdul track documented by the Grammy Recording Academy and dated April 11, 2025 by Soundcharts.",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=ycQmyX1-7WE",
@@ -105,8 +111,10 @@ export const mcAbdul2020s = [
 		language: "English",
 		published_date: "2024",
 		lyric_sample: {
+			hebrew:
+				"האם אני יכול לחיות, האם אני יכול לחיות / אני רק ילד מעזה… העתיד שלי כל כך בהיר, שונאים אותי — אז מה.",
 			english_translation:
-				"Can I live, can I live / I'm just a Gaza kid… my future so bright, they hating so what. (songlyrics.com)",
+				"Can I live, can I live / I'm just a Gaza kid… my future so bright, they hating so what.",
 		},
 		links: {
 			lyrics: "https://www.songlyrics.com/mc-abdul/can-i-live-lyrics/",
@@ -117,9 +125,9 @@ export const mcAbdul2020s = [
 		artist: "MC Abdul",
 		language: "English",
 		published_date: "2024-09-27",
-		lyric_sample: {
-			english_translation:
-				"Childhood under war — from the album 96 Miles From Bethlehem.",
+		context: {
+			he: "ילדות תחת מלחמה — מתוך האלבום 96 Miles From Bethlehem.",
+			en: "Childhood under war — from the album 96 Miles From Bethlehem.",
 		},
 	},
 ];

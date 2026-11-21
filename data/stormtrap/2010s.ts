@@ -14,7 +14,8 @@ export const stormtrap2010s = [
 		language: "Arabic",
 		published_date: "2012-03-24",
 		lyric_sample: {
-			hebrew: "ممكن نحمي حالنا من الجيش من السلطة",
+			arabic: "ممكن نحمي حالنا من الجيش من السلطة",
+			hebrew: "אולי נוכל להגן על עצמנו מהצבא ומהרשות [הפלסטינית].",
 			english_translation:
 				"We could protect ourselves from the army and from the [Palestinian] Authority.",
 		},

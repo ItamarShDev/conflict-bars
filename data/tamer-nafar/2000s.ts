@@ -5,9 +5,9 @@ export const tamerNafar2000s = [
 		collaborators: ["TN Team", "Cholo (צ'ולו)"],
 		language: "Hebrew",
 		published_date: "2001",
-		lyric_sample: {
-			english_translation:
-				"Track 11 of the Mad Man label compilation 'Mikrofon LaMaximum 2', released during the Second Intifada; one of the earliest Hebrew-language recordings by Tamer Nafar's TN Team, before DAM.",
+		context: {
+			he: "רצועה 11 באוסף 'מיקרופון למקסימום 2' של לייבל Mad Man, שיצא במהלך האינתיפאדה השנייה; אחת ההקלטות המוקדמות ביותר בעברית של TN Team של תאמר נפאר, לפני DAM.",
+			en: "Track 11 of the Mad Man label compilation 'Mikrofon LaMaximum 2', released during the Second Intifada; one of the earliest Hebrew-language recordings by Tamer Nafar's TN Team, before DAM.",
 		},
 		links: {
 			lyrics:

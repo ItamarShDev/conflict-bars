@@ -4,9 +4,9 @@ export const mwr2000s = [
 		artist: "MWR",
 		language: "Arabic",
 		published_date: "2001",
-		lyric_sample: {
-			english_translation:
-				"An MWR track described in academic and scene sources as addressing Palestinian identity, racism, and Israeli occupation.",
+		context: {
+			he: "שיר של MWR המתואר במקורות אקדמיים ובסיקור הסצנה כעוסק בזהות פלסטינית, גזענות והכיבוש הישראלי.",
+			en: "An MWR track described in academic and scene sources as addressing Palestinian identity, racism, and Israeli occupation.",
 		},
 		links: {
 			song_info:

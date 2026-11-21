@@ -14,8 +14,10 @@ export const ramallahUnderground2000s = [
 		language: "Arabic",
 		published_date: "2007",
 		lyric_sample: {
-			hebrew:
+			arabic:
 				"بدهم يجوعوا الأهالي لأنو الناس لما يجوعو ما بوعودو يفكروا بالمقاومة",
+			hebrew:
+				"הם רוצים להרעיב את התושבים, כי כשאנשים רעבים הם כבר לא חושבים על התנגדות.",
 			english_translation:
 				"They want to starve the population because when the people are hungry, they no longer think of resisting.",
 		},
@@ -30,9 +32,9 @@ export const ramallahUnderground2000s = [
 		artist: "Ramallah Underground (رام الله أندرجراوند)",
 		language: "Arabic",
 		published_date: "2002",
-		lyric_sample: {
-			english_translation:
-				"Written during the curfew of Israel's 2002 West Bank sweep — the collective's founding song. (ar.wikipedia)",
+		context: {
+			he: "נכתב במהלך העוצר של מבצע 'חומת מגן' ב-2002 בגדה המערבית — השיר המייסד של הקולקטיב (ויקיפדיה הערבית).",
+			en: "Written during the curfew of Israel's 2002 West Bank sweep — the collective's founding song. (ar.wikipedia)",
 		},
 		links: {
 			song_info:
@@ -44,9 +46,9 @@ export const ramallahUnderground2000s = [
 		artist: "Ramallah Underground (رام الله أندرجراوند)",
 		language: "Arabic",
 		published_date: "2006",
-		lyric_sample: {
-			english_translation:
-				"Palestine's dialing code as title; The Wire's pick from the Ramallah scene. Release year not firmly documented (mid-2000s circulation).",
+		context: {
+			he: "קידומת הטלפון של פלסטין כשם השיר; בחירת המגזין The Wire מסצנת רמאללה (הופץ באמצע שנות ה-2000).",
+			en: "Palestine's dialing code as title; The Wire's pick from the Ramallah scene. Release year not firmly documented (mid-2000s circulation).",
 		},
 		links: {
 			song_info: "https://www.thewire.co.uk/audio/tracks/global-ear-ramallah",

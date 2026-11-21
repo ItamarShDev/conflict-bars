@@ -35,9 +35,9 @@ export const jimboJ2020s = [
 		artist: "Jimbo J (ג'ימבו ג')",
 		language: "Hebrew",
 		published_date: "2025-03-17",
-		lyric_sample: {
-			english_translation:
-				"The first text Habaron wrote after 7 October 2023, per the Hebrew Wikipedia article on the album 'הכל טוב'; he was evacuated with his family from Kibbutz Or HaNer for eight months. The article calls it an 'anthem of reproach' and notes it mentions Guy Illouz, the band's stage technician who was abducted and killed.",
+		context: {
+			he: "הטקסט הראשון שכתב עומר הברון לאחר 7 באוקטובר 2023, לפי הערך בוויקיפדיה העברית על האלבום 'הכל טוב'; הוא ומשפחתו פונו מקיבוץ אור הנר לשמונה חודשים. השיר מתואר כ'המנון תוכחה' ומזכיר את גיא אילוז, טכנאי הבמה של הלהקה שנחטף ונרצח.",
+			en: "The first text Habaron wrote after 7 October 2023, per the Hebrew Wikipedia article on the album 'הכל טוב'; he was evacuated with his family from Kibbutz Or HaNer for eight months. The article calls it an 'anthem of reproach' and notes it mentions Guy Illouz, the band's stage technician who was abducted and killed.",
 		},
 		links: {
 			lyrics:
@@ -66,9 +66,9 @@ export const jimboJ2020s = [
 		artist: "Jimbo J (ג'ימבו ג')",
 		language: "Hebrew",
 		published_date: "2026-01-13",
-		lyric_sample: {
-			english_translation:
-				"Opening track of 'הכל טוב', a concept album written under the direct influence of 7 October and the ensuing war; per Hebrew Wikipedia it describes the social and physical changes in the western Negev after the war broke out, including 'grief tourism' and explaining the events to foreign delegations.",
+		context: {
+			he: "שיר הפתיחה של 'הכל טוב', אלבום קונספט שנכתב בהשפעת 7 באוקטובר והמלחמה; לפי ויקיפדיה העברית הוא מתאר את השינויים החברתיים והפיזיים בנגב המערבי לאחר פרוץ המלחמה, כולל 'תיירות אבל' והסברת האירועים למשלחות זרות.",
+			en: "Opening track of 'הכל טוב', a concept album written under the direct influence of 7 October and the ensuing war; per Hebrew Wikipedia it describes the social and physical changes in the western Negev after the war broke out, including 'grief tourism' and explaining the events to foreign delegations.",
 		},
 		links: {
 			lyrics: "https://www.youtube.com/watch?v=S9YnK5eVhJw",
@@ -81,9 +81,9 @@ export const jimboJ2020s = [
 		artist: "Jimbo J (ג'ימבו ג')",
 		language: "Hebrew",
 		published_date: "2026-01-13",
-		lyric_sample: {
-			english_translation:
-				"Per Hebrew Wikipedia, the song is about the abrupt switch between civilian life and reserve duty: gear sent to the front, conditions in Khan Yunis, and victory slogans set against ongoing pain.",
+		context: {
+			he: "לפי ויקיפדיה העברית, השיר עוסק במעבר החד בין חיי האזרחות לשירות המילואים: ציוד שנשלח לחזית, התנאים בחאן יונס וסיסמאות ניצחון אל מול כאב מתמשך.",
+			en: "Per Hebrew Wikipedia, the song is about the abrupt switch between civilian life and reserve duty: gear sent to the front, conditions in Khan Yunis, and victory slogans set against ongoing pain.",
 		},
 		links: {
 			lyrics: "https://www.youtube.com/watch?v=cmOrFYeIeyg",
@@ -96,9 +96,9 @@ export const jimboJ2020s = [
 		artist: "Jimbo J (ג'ימבו ג')",
 		language: "Hebrew",
 		published_date: "2026-01-13",
-		lyric_sample: {
-			english_translation:
-				"Per Hebrew Wikipedia, the track documents the family's evacuation on the morning of 7 October — the hurried packing, leaving under fire, and the eight months displaced from Kibbutz Or HaNer.",
+		context: {
+			he: "לפי ויקיפדיה העברית, השיר מתעד את פינוי המשפחה בבוקר 7 באוקטובר — האריזה החפוזה, היציאה תחת אש ושמונה חודשי העקירה מקיבוץ אור הנר.",
+			en: "Per Hebrew Wikipedia, the track documents the family's evacuation on the morning of 7 October — the hurried packing, leaving under fire, and the eight months displaced from Kibbutz Or HaNer.",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=8lQqb8Tyc2s",
@@ -110,9 +110,9 @@ export const jimboJ2020s = [
 		artist: "Jimbo J (ג'ימבו ג')",
 		language: "Hebrew",
 		published_date: "2026-01-13",
-		lyric_sample: {
-			english_translation:
-				"Closing track of 'הכל טוב', built as a dialogue between a father in the western Negev and his young daughter, who asks about the war, the soldiers and the gun, per Hebrew Wikipedia.",
+		context: {
+			he: "שיר הסיום של 'הכל טוב', הבנוי כדיאלוג בין אב בנגב המערבי לבתו הצעירה השואלת על המלחמה, החיילים והנשק, לפי ויקיפדיה העברית.",
+			en: "Closing track of 'הכל טוב', built as a dialogue between a father in the western Negev and his young daughter, who asks about the war, the soldiers and the gun, per Hebrew Wikipedia.",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=bAfCINbYPjk",
@@ -125,9 +125,9 @@ export const jimboJ2020s = [
 		collaborators: ["Spa band (להקת ספא)"],
 		language: "Hebrew",
 		published_date: "2023-12-14",
-		lyric_sample: {
-			english_translation:
-				"Track 7 on the rap/hip-hop album 'אה וואו', dedicated to the memory of Guy Iluz, the sound technician who worked with Jimbo J and the Spa band and was abducted to Gaza and murdered in captivity. The song describes daily life in the Gaza-border region during the war.",
+		context: {
+			he: "רצועה 7 באלבום 'אה וואו', המוקדשת לזכרו של גיא אילוז, איש הסאונד שעבד עם ג'ימבו ג' ולהקת ספא ונחטף לעזה ונרצח בשבי. השיר מתאר את חיי היומיום בעוטף עזה בזמן המלחמה.",
+			en: "Track 7 on the rap/hip-hop album 'אה וואו', dedicated to the memory of Guy Iluz, the sound technician who worked with Jimbo J and the Spa band and was abducted to Gaza and murdered in captivity. The song describes daily life in the Gaza-border region during the war.",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=2tjMLHtBklY",

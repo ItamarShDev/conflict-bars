@@ -4,9 +4,9 @@ export const hatikvah62020s = [
 		artist: "Hatikva 6 (התקווה 6)",
 		language: "Hebrew",
 		published_date: "2021-04",
-		lyric_sample: {
-			english_translation:
-				"Tribute to IDF combat soldiers; the video was filmed with cadets of the Bahad 1 officers' school.",
+		context: {
+			he: 'מחווה ללוחמי צה"ל; הקליפ צולם עם צוערי בית הספר לקצינים בה"ד 1.',
+			en: "Tribute to IDF combat soldiers; the video was filmed with cadets of the Bahad 1 officers' school.",
 		},
 		links: {
 			lyrics: "https://genius.com/Hatikva-6-6-himnon-halochem-lyrics",

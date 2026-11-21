@@ -5,9 +5,9 @@ export const sagol592000s = [
 		collaborators: ["Tamer Nafar (תאמר נפאר)", "Shanan Street (שאנן סטריט)"],
 		language: "Hebrew/Arabic",
 		published_date: "2001",
-		lyric_sample: {
-			english_translation:
-				"Described as the first Jewish-Arab hip hop collaboration; released during the Second Intifada, it called on the leaders of both nations to resume peace talks.",
+		context: {
+			he: "מתואר כשיתוף הפעולה הראשון בהיפ-הופ בין יהודים לערבים; יצא במהלך האינתיפאדה השנייה וקרא למנהיגי שני העמים לחדש את שיחות השלום.",
+			en: "Described as the first Jewish-Arab hip hop collaboration; released during the Second Intifada, it called on the leaders of both nations to resume peace talks.",
 		},
 		links: {
 			lyrics: "https://genius.com/Sagol-59-59-summit-meeting-lyrics",
@@ -21,9 +21,9 @@ export const sagol592000s = [
 		collaborators: ["A7 / Rebel Sun"],
 		language: "Hebrew",
 		published_date: "2003-09-01",
-		lyric_sample: {
-			english_translation:
-				"Closing track of the album 'Shnei HaTzdadim shel Sagol 59'; written in memory of Sagol's DJ Ben Blutstein, who was killed in the July 2002 bombing of the Hebrew University cafeteria on Mount Scopus.",
+		context: {
+			he: "שיר הסיום של האלבום 'שני הצדדים של סגול 59'; נכתב לזכרו של הדי-ג'יי של סגול, בן בלוטשטיין, שנרצח בפיגוע בקפיטריה באוניברסיטה העברית בהר הצופים ביולי 2002.",
+			en: "Closing track of the album 'Shnei HaTzdadim shel Sagol 59'; written in memory of Sagol's DJ Ben Blutstein, who was killed in the July 2002 bombing of the Hebrew University cafeteria on Mount Scopus.",
 		},
 		links: {
 			lyrics: "https://genius.com/Sagol-59-59-big-ben-lyrics",

@@ -4,9 +4,9 @@ export const gazaYouthBreaksOut2010s = [
 		artist: "Gaza Youth Breaks Out (GYBO) rap team",
 		language: "Arabic",
 		published_date: "2011-07-13",
-		lyric_sample: {
-			english_translation:
-				"A Gaza Youth Breaks Out rap-team video honouring the flotilla movement, published during the group's 2011 campaign.",
+		context: {
+			he: "קליפ של צוות הראפ של Gaza Youth Breaks Out לכבוד תנועת המשטים, שפורסם במסגרת הקמפיין של הקבוצה ב-2011.",
+			en: "A Gaza Youth Breaks Out rap-team video honouring the flotilla movement, published during the group's 2011 campaign.",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=tCcIwOlmcSo",

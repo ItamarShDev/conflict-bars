@@ -24,7 +24,14 @@ export default defineSchema({
 		lyric_sample: v.optional(
 			v.object({
 				hebrew: v.optional(v.string()),
+				arabic: v.optional(v.string()),
 				english_translation: v.optional(v.string()),
+			}),
+		),
+		context: v.optional(
+			v.object({
+				he: v.optional(v.string()),
+				en: v.optional(v.string()),
 			}),
 		),
 		links: v.optional(
@@ -72,7 +79,14 @@ export default defineSchema({
 		lyric_sample: v.optional(
 			v.object({
 				hebrew: v.optional(v.string()),
+				arabic: v.optional(v.string()),
 				english_translation: v.optional(v.string()),
+			}),
+		),
+		context: v.optional(
+			v.object({
+				he: v.optional(v.string()),
+				en: v.optional(v.string()),
 			}),
 		),
 		links: v.optional(

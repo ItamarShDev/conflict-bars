@@ -5,6 +5,7 @@ export const tamernafar2020s = [
 		language: "English",
 		published_date: "2022-02-24",
 		lyric_sample: {
+			hebrew: "כולם מדממים",
 			english_translation: "Everyone is bleeding",
 		},
 		links: {
@@ -46,9 +47,9 @@ export const tamernafar2020s = [
 		artist: "Tamer Nafar (תאמר נפאר)",
 		language: "Arabic",
 		published_date: "2022-07-06",
-		lyric_sample: {
-			english_translation:
-				"Identity record about Lod/Lydda, the mixed city at the centre of the May 2021 riots. The artist's own English translation, published in the official video description, includes 'the son of Lyd hasn't assimilated', 'I welcome you to the deportation' and 'I build a name without permits' — a reference to unpermitted building and home demolitions in the city. No Arabic transcription was found, so no quotation is given.",
+		context: {
+			he: "שיר זהות על לוד, העיר המעורבת שעמדה במוקד אירועי מאי 2021. בתרגום האנגלי הרשמי שפרסם האמן בתיאור הקליפ מופיעות שורות על אי-היטמעות, גירוש ובנייה ללא היתר והריסות בתים בעיר.",
+			en: "Identity record about Lod/Lydda, the mixed city at the centre of the May 2021 riots. The artist's own English translation, published in the official video description, includes 'the son of Lyd hasn't assimilated', 'I welcome you to the deportation' and 'I build a name without permits' — a reference to unpermitted building and home demolitions in the city.",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=Jo4y0PJC2II",
@@ -60,9 +61,9 @@ export const tamernafar2020s = [
 		collaborators: ["Djamil"],
 		language: "Arabic/English",
 		published_date: "2024-05-20",
-		lyric_sample: {
-			english_translation:
-				"Nafar told NPR this was the first song he released after the war that began in October 2023: 'It took me a while until I released my first song… So the song is called \"Whatever\".' The official lyric text sets taxes funding the bombing of Gaza against the collapse of the two-state framework.",
+		context: {
+			he: "נפאר סיפר ל-NPR שזהו השיר הראשון שהוציא לאחר פרוץ המלחמה באוקטובר 2023; מילות השיר מעמידות מסים המממנים את הפצצת עזה אל מול קריסת פתרון שתי המדינות.",
+			en: "Nafar told NPR this was the first song he released after the war that began in October 2023: 'It took me a while until I released my first song… So the song is called \"Whatever\".' The official lyric text sets taxes funding the bombing of Gaza against the collapse of the two-state framework.",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=gHmxzA-10RQ",
@@ -82,7 +83,8 @@ export const tamernafar2020s = [
 		language: "Arabic",
 		published_date: "2024-10-23",
 		lyric_sample: {
-			hebrew: "أحكي للعالم أحكي له / عن بيتٍ كَسروا قِنديلَه",
+			arabic: "أحكي للعالم أحكي له / عن بيتٍ كَسروا قِنديلَه",
+			hebrew: "ספר לעולם, ספר לו / על בית ששברו את עששיתו.",
 			english_translation:
 				"Tell the world, tell it / of a house whose lantern they broke.",
 		},
@@ -95,9 +97,9 @@ export const tamernafar2020s = [
 		artist: "Tamer Nafar (תאמר נפאר)",
 		language: "Arabic/English",
 		published_date: "2026-01-20",
-		lyric_sample: {
-			english_translation:
-				"Title track of the Levantine Music LP — an identity triptych (father / Imam / Lennon).",
+		context: {
+			he: "שיר הנושא של האלבום Levantine Music — טריפטיך זהות (האב / האימאם / ג'ון לנון).",
+			en: "Title track of the Levantine Music LP — an identity triptych (father / Imam / Lennon).",
 		},
 		links: {
 			song_info:
@@ -110,9 +112,9 @@ export const tamernafar2020s = [
 		collaborators: ["Amal Murkus", "Sammy Shilbaq"],
 		language: "Arabic",
 		published_date: "2026-01-20",
-		lyric_sample: {
-			english_translation:
-				"Album track featuring Amal Murkus; theme undocumented.",
+		context: {
+			he: "רצועת אלבום בהשתתפות אמל מורקוס.",
+			en: "Album track featuring Amal Murkus.",
 		},
 	},
 ];

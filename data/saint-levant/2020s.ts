@@ -7,8 +7,8 @@ export const saintLevant2020s = [
 		// Original single date; later appearances do not constitute a new song.
 		published_date: "2024-11-25",
 		lyric_sample: {
-			english_translation:
-				"Published English translation: I belong to an unbreakable people",
+			hebrew: "אני שייך לעם בלתי שביר",
+			english_translation: "I belong to an unbreakable people",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=NdONzDuKzq0",
@@ -23,9 +23,9 @@ export const saintLevant2020s = [
 		language: "Arabic/English/French",
 		published_date: "2024-02-23",
 		collaborators: ["MC Abdul"],
-		lyric_sample: {
-			english_translation:
-				"Dedicated to Al Deira, the family-owned hotel in Gaza where the rapper grew up, destroyed in an Israeli bombing in January 2024.",
+		context: {
+			he: "מוקדש למלון 'אל-דירה', המלון המשפחתי בעזה שבו גדל הראפר ואשר נהרס בהפצצה ישראלית בינואר 2024.",
+			en: "Dedicated to Al Deira, the family-owned hotel in Gaza where the rapper grew up, destroyed in an Israeli bombing in January 2024.",
 		},
 		links: {
 			lyrics: "https://genius.com/Saint-levant-and-mc-abdul-deira-lyrics",
@@ -39,9 +39,9 @@ export const saintLevant2020s = [
 		language: "Arabic/English",
 		published_date: "2024-06-07",
 		collaborators: ["Sol Band"],
-		lyric_sample: {
-			english_translation:
-				"Recorded with the Gazan group Sol Band; incorporates the Palestinian anthem 'Mawtini' and takes its title from a Mahmoud Darwish poem.",
+		context: {
+			he: "הוקלט עם ההרכב העזתי Sol Band; משלב את ההמנון הפלסטיני 'מוטני' ושואב את שמו משירו של מחמוד דרוויש.",
+			en: "Recorded with the Gazan group Sol Band; incorporates the Palestinian anthem 'Mawtini' and takes its title from a Mahmoud Darwish poem.",
 		},
 		links: {
 			lyrics: "https://deira.saintlevant.com/on-this-land/",
@@ -69,6 +69,7 @@ export const saintLevant2020s = [
 		language: "English/Arabic/French",
 		published_date: "2020-11-27",
 		lyric_sample: {
+			hebrew: "כאפייה לכסות את הפנים שלנו / מעזה ועד יפו הם איתי.",
 			english_translation:
 				"Kuffiyeh to cover our faces / From Gaza to yaffa they with me.",
 		},
@@ -82,9 +83,9 @@ export const saintLevant2020s = [
 		artist: "Saint Levant (سانت ليفانت)",
 		language: "Arabic/English",
 		published_date: "2025",
-		lyric_sample: {
-			english_translation:
-				"Exile/displacement theme — scene-adjacent pop-leaning single.",
+		context: {
+			he: "עוסק בגלות ובעקירה — סינגל פופי הקשור לסצנה.",
+			en: "Exile/displacement theme — scene-adjacent pop-leaning single.",
 		},
 	},
 ];

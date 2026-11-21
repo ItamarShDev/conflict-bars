@@ -5,9 +5,9 @@ export const kla62000s = [
 		collaborators: ["Hila Harari (הילה הררי)", "Meni Begger (מני בגר)"],
 		language: "Hebrew",
 		published_date: "2004",
-		lyric_sample: {
-			english_translation:
-				"Rap remake of Meni Begger's 1981 song, released ahead of the Gaza disengagement plan; it became identified with the protest against the evacuation of Gush Katif.",
+		context: {
+			he: "גרסת ראפ מחודשת לשיר של מני בגר מ-1981, שיצאה לקראת תוכנית ההתנתקות והזוהתה עם המחאה נגד פינוי גוש קטיף.",
+			en: "Rap remake of Meni Begger's 1981 song, released ahead of the Gaza disengagement plan; it became identified with the protest against the evacuation of Gush Katif.",
 		},
 		links: {
 			lyrics:
@@ -27,9 +27,9 @@ export const kla62000s = [
 		],
 		language: "Hebrew",
 		published_date: "2004",
-		lyric_sample: {
-			english_translation:
-				"Patriotic posse cut from the Tact Family compilation 'Allstars' (2004), recorded during the Second Intifada.",
+		context: {
+			he: "רצועה פטריוטית מרובת משתתפים מאלבום האוסף 'אולסטארז' של משפחת תאקט (2004), שהוקלטה בתקופת האינתיפאדה השנייה.",
+			en: "Patriotic posse cut from the Tact Family compilation 'Allstars' (2004), recorded during the Second Intifada.",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=Dq3otxDyF8A",

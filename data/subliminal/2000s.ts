@@ -124,8 +124,9 @@ export const subliminal2000s = [
 		artist: "Subliminal (סאבלימינל)",
 		language: "Hebrew",
 		published_date: "2005",
-		lyric_sample: {
-			english_translation: "Protest song against the 2005 Gaza disengagement.",
+		context: {
+			he: "שיר מחאה נגד תוכנית ההתנתקות מעזה ב-2005.",
+			en: "Protest song against the 2005 Gaza disengagement.",
 		},
 	},
 	{
@@ -134,9 +135,9 @@ export const subliminal2000s = [
 		collaborators: ["David D'Or"],
 		language: "Hebrew",
 		published_date: "2006",
-		lyric_sample: {
-			english_translation:
-				"Strength/unity anthem — from Just When You Thought It Was Over.",
+		context: {
+			he: "המנון עוצמה ואחדות — מתוך האלבום Just When You Thought It Was Over.",
+			en: "Strength/unity anthem — from Just When You Thought It Was Over.",
 		},
 	},
 ];

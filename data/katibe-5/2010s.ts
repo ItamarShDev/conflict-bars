@@ -4,9 +4,9 @@ export const katibe52010s = [
 		artist: "Katibe 5 (كتيبة 5)",
 		language: "Arabic",
 		published_date: "2010",
-		lyric_sample: {
-			english_translation:
-				"Title track of the group's second album — refugee-camp rap described by Daily News Egypt as giving 'voice to refugee resistance.' Exact release year unverified.",
+		context: {
+			he: "שיר הנושא של האלבום השני — ראפ ממחנות הפליטים שתואר ב-Daily News Egypt כנותן 'קול להתנגדות הפליטים'. שנת היציאה המדויקת לא אומתה.",
+			en: "Title track of the group's second album — refugee-camp rap described by Daily News Egypt as giving 'voice to refugee resistance.' Exact release year unverified.",
 		},
 		links: {
 			song_info:

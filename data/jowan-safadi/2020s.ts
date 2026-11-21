@@ -6,7 +6,8 @@ export const jowanSafadi2020s = [
 		language: "Arabic/English",
 		published_date: "2023-05-01",
 		lyric_sample: {
-			hebrew: "هذا الوحش لا يهمّنا صفعنا وجهه بالتراب",
+			arabic: "هذا الوحش لا يهمّنا صفعنا وجهه بالتراب",
+			hebrew: "המפלצת הזאת לא מעניינת אותנו; סטרנו על פניה בעפר.",
 			english_translation:
 				"This monster does not matter to us; we slapped its face with dirt.",
 		},

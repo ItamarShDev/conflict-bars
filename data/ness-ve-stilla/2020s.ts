@@ -4,9 +4,9 @@ export const nessVeStilla2020s = [
 		artist: "Ness Ve Stilla (נס וסטילה)",
 		language: "Hebrew/Arabic",
 		published_date: "2023-11-14",
-		lyric_sample: {
-			english_translation:
-				"A drill track written under the impact of the Iron Swords war and dedicated to the IDF; the chorus lists the army units fighting in it, and the closing verse names Hamas and Hezbollah figures alongside the refrain “every dog has its day”.",
+		context: {
+			he: "שיר דריל שנכתב בהשפעת מלחמת 'חרבות ברזל' והוקדש לחיילי צה\"ל; הפזמון מונה את יחידות הצבא הלוחמות, והבית האחרון מציין בכירים בחמאס ובחיזבאללה לצד הפזמון 'כל כלב ביג'י יומו'.",
+			en: "A drill track written under the impact of the Iron Swords war and dedicated to the IDF; the chorus lists the army units fighting in it, and the closing verse names Hamas and Hezbollah figures alongside the refrain 'every dog has its day'.",
 		},
 		links: {
 			lyrics:

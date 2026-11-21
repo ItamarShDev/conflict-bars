@@ -6,7 +6,8 @@ export const jowanSafadi2010s = [
 		language: "Arabic",
 		published_date: "2015-11-05",
 		lyric_sample: {
-			hebrew: "طفل سوري على شط تركي ما فرقتش عن 4 أطفال على شواطئ غزة",
+			arabic: "طفل سوري على شط تركي ما فرقتش عن 4 أطفال على شواطئ غزة",
+			hebrew: "ילד סורי על חוף טורקי לא שונה מ-4 ילדים על חופי עזה.",
 			english_translation:
 				"A Syrian child on a Turkish shore is no different from four children on the beaches of Gaza.",
 		},

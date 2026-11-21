@@ -35,12 +35,35 @@ function mergeSongData(base: Doc<"songs">, incoming: Partial<Doc<"songs">>) {
 			merged.lyric_sample.hebrew = incoming.lyric_sample.hebrew;
 		}
 		if (
+			incoming.lyric_sample.arabic &&
+			fieldLength(incoming.lyric_sample.arabic) >
+				fieldLength(merged.lyric_sample.arabic)
+		) {
+			merged.lyric_sample.arabic = incoming.lyric_sample.arabic;
+		}
+		if (
 			incoming.lyric_sample.english_translation &&
 			fieldLength(incoming.lyric_sample.english_translation) >
 				fieldLength(merged.lyric_sample.english_translation)
 		) {
 			merged.lyric_sample.english_translation =
 				incoming.lyric_sample.english_translation;
+		}
+	}
+
+	if (incoming.context) {
+		merged.context = merged.context ?? {};
+		if (
+			incoming.context.he &&
+			fieldLength(incoming.context.he) > fieldLength(merged.context.he)
+		) {
+			merged.context.he = incoming.context.he;
+		}
+		if (
+			incoming.context.en &&
+			fieldLength(incoming.context.en) > fieldLength(merged.context.en)
+		) {
+			merged.context.en = incoming.context.en;
 		}
 	}
 
@@ -68,6 +91,8 @@ function buildPatch(from: Doc<"songs">, to: Doc<"songs">) {
 		patch.collaborator_ids = to.collaborator_ids;
 	if (JSON.stringify(from.lyric_sample) !== JSON.stringify(to.lyric_sample))
 		patch.lyric_sample = to.lyric_sample;
+	if (JSON.stringify(from.context) !== JSON.stringify(to.context))
+		patch.context = to.context;
 	if (JSON.stringify(from.links) !== JSON.stringify(to.links))
 		patch.links = to.links;
 	if (from.published_date !== to.published_date)
@@ -180,7 +205,14 @@ export const insertSong = internalMutation({
 		lyric_sample: v.optional(
 			v.object({
 				hebrew: v.optional(v.string()),
+				arabic: v.optional(v.string()),
 				english_translation: v.optional(v.string()),
+			}),
+		),
+		context: v.optional(
+			v.object({
+				he: v.optional(v.string()),
+				en: v.optional(v.string()),
 			}),
 		),
 		links: v.optional(
@@ -234,7 +266,14 @@ export const updateSong = internalMutation({
 			lyric_sample: v.optional(
 				v.object({
 					hebrew: v.optional(v.string()),
+					arabic: v.optional(v.string()),
 					english_translation: v.optional(v.string()),
+				}),
+			),
+			context: v.optional(
+				v.object({
+					he: v.optional(v.string()),
+					en: v.optional(v.string()),
 				}),
 			),
 			links: v.optional(
@@ -369,7 +408,14 @@ export const submitSongEditSuggestion = mutation({
 			lyric_sample: v.optional(
 				v.object({
 					hebrew: v.optional(v.string()),
+					arabic: v.optional(v.string()),
 					english_translation: v.optional(v.string()),
+				}),
+			),
+			context: v.optional(
+				v.object({
+					he: v.optional(v.string()),
+					en: v.optional(v.string()),
 				}),
 			),
 			links: v.optional(

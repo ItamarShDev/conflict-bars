@@ -5,11 +5,9 @@ export const shadiamansour2010s = [
 		collaborators: ["Omar Offendum (Omar Chakaki)"],
 		// The collaborator confirms April, not the exact first-release day.
 		published_date: "2013-04",
-		lyric_sample: {
-			hebrew:
-				"הקשר (לא ציטוט מהשיר): הקליפ מוקדש לג'וליאנו מר חמיס, ממייסדי תיאטרון החופש בג'נין.",
-			english_translation:
-				"Context (not lyrics): The collaboration's video is dedicated to Juliano Mer Khamis, associated with the Freedom Theatre in Jenin.",
+		context: {
+			he: "הקליפ מוקדש לג'וליאנו מר חמיס, ממייסדי תיאטרון החופש בג'נין.",
+			en: "The collaboration's video is dedicated to Juliano Mer Khamis, associated with the Freedom Theatre in Jenin.",
 		},
 		links: {
 			lyrics: "https://www.letras.mus.br/shadia-mansour/lezim-netghayar/",
