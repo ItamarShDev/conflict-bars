@@ -1859,7 +1859,7 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-no-match button {
 	grid-column: 3;
 }
 html[data-theme="boombox"] .pass-it-on .pass-it-on-song-disclosure {
-	background: transparent;
+	background: linear-gradient(180deg, #fffdf8 0%, #f6eddd 100%);
 }
 html[data-theme="boombox"] .pass-it-on .pass-it-on-event-disclosure {
 	background: var(--pass-note);
