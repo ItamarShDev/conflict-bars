@@ -19,8 +19,8 @@ const CONFLICT_HIPHOP_INTRO_RULES: ConflictIntroRule[] = [
 			/first intifada/i.test(conflict.title ?? "") ||
 			/האינתיפאדה הראשונה/.test(conflict.title_he ?? ""),
 		intro: {
-			en: "Hip-hop was just taking root locally as early Israeli acts like Shabak Samech adapted American rap cadence to Hebrew street life and political tension.",
-			he: "ההיפ־הופ רק החל להכות שורש מקומי, כשלהקות חלוצות כמו שבק ס׳ התאימו את מקצבי הראפ האמריקאי לחיי היומיום ולמתח הפוליטי בעברית.",
+			en: "Early Hebrew-language acts such as Shabak Samech recorded rap songs during the First Intifada.",
+			he: "להקות מוקדמות בעברית כמו שבק ס׳ הקליטו שירי ראפ במהלך האינתיפאדה הראשונה.",
 		},
 	},
 	{
@@ -29,8 +29,8 @@ const CONFLICT_HIPHOP_INTRO_RULES: ConflictIntroRule[] = [
 			/oslo/i.test(conflict.title ?? "") ||
 			/אוסלו/.test(conflict.title_he ?? ""),
 		intro: {
-			en: "The Oslo years saw Israeli hip-hop enter the mainstream and the first Palestinian rap crews form in Lod, blending cautious optimism with sharp social critique.",
-			he: "שנות אוסלו הביאו את ההיפ־הופ הישראלי למיינסטרים ואת לידת ההרכבים הפלסטיניים הראשונים בלוד, בין תקווה זהירה לביקורת חברתית חדה.",
+			en: "Songs released around the Oslo period include early Hebrew rap singles alongside emerging Palestinian rap from Lod.",
+			he: "שירים מתקופת אוסלו כוללים סינגלים מוקדמים בעברית לצד ראפ פלסטיני מוקדם מלוד.",
 		},
 	},
 	{
@@ -39,8 +39,8 @@ const CONFLICT_HIPHOP_INTRO_RULES: ConflictIntroRule[] = [
 			/second intifada|al-aqsa/i.test(conflict.title ?? "") ||
 			/האינתיפאדה השנייה/.test(conflict.title_he ?? ""),
 		intro: {
-			en: "The Second Intifada split the local scene wide open — from Subliminal's nationalist Hebrew anthems to DAM's Arabic protest rap and Hadag Nahash's satirical critique.",
-			he: "האינתיפאדה השנייה פיצלה את הסצנה המקומית — מהמנוני הימין של סאבלימינל, דרך ראפ המחאה בערבית של דאם ועד הסאטירה של הדג נחש.",
+			en: "Tracks released during the Second Intifada range from Subliminal's nationalist Hebrew singles to DAM's Arabic protest rap and Hadag Nahash's satire.",
+			he: "שירים מתקופת האינתיפאדה השנייה משתרעים בין סינגלים לאומניים של סאבלימינל, ראפ מחאה בערבית של דאם וסאטירה של הדג נחש.",
 		},
 	},
 	{
@@ -49,8 +49,8 @@ const CONFLICT_HIPHOP_INTRO_RULES: ConflictIntroRule[] = [
 			/disengagement/i.test(conflict.title ?? "") ||
 			/ההתנתקות/.test(conflict.title_he ?? ""),
 		intro: {
-			en: "The Gaza disengagement deepened internal Israeli polarization, echoed in hip-hop tracks torn between fatigue, ideological division, and questioning of political leadership.",
-			he: "ההתנתקות מעזה העמיקה את הקיטוב הפנימי בישראל, והדהדה בשירי היפ־הופ שביטאו שחיקה, מחלוקת אידיאולוגית וביקורת על ההנהגה.",
+			en: "Songs released around the Gaza disengagement describe fatigue, ideological division, and questioning of leadership.",
+			he: "שירים מתקופת ההתנתקות מתארים שחיקה, פלגנות אידיאולוגית וביקורת על ההנהגה.",
 		},
 	},
 	{
@@ -59,8 +59,8 @@ const CONFLICT_HIPHOP_INTRO_RULES: ConflictIntroRule[] = [
 			/lebanon/i.test(conflict.title ?? "") ||
 			/לבנון/.test(conflict.title_he ?? ""),
 		intro: {
-			en: "Siren routines and northern shelters shifted Hebrew rap from broad ideological slogans toward home-front anxiety, military reserve duty, and disillusionment.",
-			he: "שגרת האזעקות והמקלטים בצפון העבירה את הראפ העברי מסיסמאות גדולות לחרדת העורף, שירות המילואים ותחושת האכזבה.",
+			en: "Tracks recorded around the Second Lebanon War describe sirens, shelters, reserve duty, and home-front anxiety.",
+			he: "שירים שנקלטו סביב מלחמת לבנון השנייה מתארים אזעקות, מקלטים, מילואים וחרדת עורף.",
 		},
 	},
 	{
@@ -69,8 +69,8 @@ const CONFLICT_HIPHOP_INTRO_RULES: ConflictIntroRule[] = [
 			/cast lead/i.test(conflict.title ?? "") ||
 			/עופרת יצוקה/.test(conflict.title_he ?? ""),
 		intro: {
-			en: "Widespread rocket fire and the Gaza ground operation sharpened the divide between militant solidarity tracks and anti-war dissident verses on both sides.",
-			he: "ירי הרקטות והמבצע הקרקעי בעזה חידדו את הפער בין שירי הזדהות לוחמניים לבין בתי מחאה אנטי־מלחמתיים משני הצדדים.",
+			en: "Songs from the Cast Lead period include solidarity tracks on the Israeli side and anti-war verses on the other.",
+			he: "שירים מתקופת עופרת יצוקה כוללים שירי הזדהות בצד הישראלי ובתי מחאה אנטי־מלחמתיים בצד השני.",
 		},
 	},
 	{
@@ -79,8 +79,8 @@ const CONFLICT_HIPHOP_INTRO_RULES: ConflictIntroRule[] = [
 			/pillar of defense/i.test(conflict.title ?? "") ||
 			/עמוד ענן/.test(conflict.title_he ?? ""),
 		intro: {
-			en: "As Iron Dome interceptions entered daily life, a new generation of indie rappers began documenting the surreal routine of sirens and social media feeds.",
-			he: "כשיירוטי כיפת ברזל הפכו לחלק מהיומיום, דור חדש של ראפרים עצמאיים תיעד את השגרה הסוריאליסטית של אזעקות ורשתות חברתיות.",
+			en: "Tracks from the Pillar of Defense period document the routine of sirens, Iron Dome interceptions, and social media feeds.",
+			he: "שירים מתקופת עמוד ענן מתעדים שגרת אזעקות, יירוטי כיפת ברזל ורשתות חברתיות.",
 		},
 	},
 	{
@@ -89,8 +89,8 @@ const CONFLICT_HIPHOP_INTRO_RULES: ConflictIntroRule[] = [
 			/protective edge/i.test(conflict.title ?? "") ||
 			/צוק איתן/.test(conflict.title_he ?? ""),
 		intro: {
-			en: "Fifty days of war pushed both mainstream Israeli hip-hop and underground Palestinian rap to confront grief, trauma, and the human cost of recurring cycles of violence.",
-			he: "חמישים ימי לחימה דחפו את ההיפ־הופ הישראלי והראפ הפלסטיני המחתרתי לעסוק בשכול, בטראומה ובמחיר האנושי של סבבי האלימות.",
+			en: "Songs released around Operation Protective Edge express grief, trauma, and the human cost of the extended fighting.",
+			he: "שירים מתקופת צוק איתן מבטאים שכול, טראומה ומחיר אנושי של הלחימה הממושכת.",
 		},
 	},
 	{
@@ -99,8 +99,8 @@ const CONFLICT_HIPHOP_INTRO_RULES: ConflictIntroRule[] = [
 			/march of return/i.test(conflict.title ?? "") ||
 			/צעדת השיבה/.test(conflict.title_he ?? ""),
 		intro: {
-			en: "Border protests and southern kite fires inspired raw, documentary-style storytelling from Gazan youth MCs and Israeli periphery artists alike.",
-			he: "המחאות על הגבול והמציאות בעוטף הולידו סיפור ישיר ותיעודי מצד אמנים צעירים בעזה לצד ראפרים מהפריפריה הישראלית.",
+			en: "Tracks recorded around the March of Return protests include documentary-style storytelling by young Gazan MCs and Israeli periphery artists.",
+			he: "שירים מתקופת צעדת השיבה כוללים סיפורים תיעודיים של אמנים צעירים מעזה ומהפריפריה הישראלית.",
 		},
 	},
 	{
@@ -109,8 +109,8 @@ const CONFLICT_HIPHOP_INTRO_RULES: ConflictIntroRule[] = [
 			/guardian of the walls/i.test(conflict.title ?? "") ||
 			/שומר החומות/.test(conflict.title_he ?? ""),
 		intro: {
-			en: "Viral short-form video carried young Gazan voices like MC Abdul worldwide while mixed-city unrest prompted stark reflections inside Israeli hip-hop.",
-			he: "סרטונים ויראליים נשאו קולות צעירים מעזה כמו MC Abdul לעולם, בעוד המהומות בערים המעורבות עוררו תגובות חדות בהיפ־הופ הישראלי.",
+			en: "Songs from the Guardian of the Walls period include viral videos by young Gazan MCs such as MC Abdul and Israeli tracks responding to unrest in mixed cities.",
+			he: "שירים מתקופת שומר החומות כוללים סרטונים ויראליים של אמנים צעירים מעזה כמו MC Abdul ותגובות של היפ־הופ ישראלי למהומות בערים המעורבות.",
 		},
 	},
 	{
@@ -119,8 +119,8 @@ const CONFLICT_HIPHOP_INTRO_RULES: ConflictIntroRule[] = [
 			/swords of iron|israel-hamas/i.test(conflict.title ?? "") ||
 			/חרבות ברזל/.test(conflict.title_he ?? ""),
 		intro: {
-			en: "After October 7, rap became an immediate outlet for shock, rage, and grief — from viral wartime anthems to deeply personal diaries of displacement and loss.",
-			he: "לאחר ה־7 באוקטובר הפך הראפ לערוץ מיידי של הלם, זעם ואבל — מהמנוני מלחמה ויראליים ועד יומנים אישיים של עקירה ואובדן.",
+			en: "Songs released after October 7 include wartime tracks and personal accounts of displacement, shock, and loss.",
+			he: "שירים שיצאו לאחר ה־7 באוקטובר כוללים שירי מלחמה ותיעודים אישיים של עקירה, הלם ואובדן.",
 		},
 	},
 ];
