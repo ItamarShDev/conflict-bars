@@ -618,7 +618,10 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-title span + span {
 	scrollbar-width: thin;
 	scroll-snap-type: x proximity;
 }
-[dir="rtl"] .pass-it-on .pass-it-on-rail-controls .pass-it-on-rail-arrow span {
+[dir="rtl"] .pass-it-on .pass-it-on-rail-controls .pass-it-on-rail-arrow span,
+[dir="rtl"] .pass-it-on .pass-it-on-rail-controls .pass-it-on-advance span,
+.pass-it-on[dir="rtl"] .pass-it-on-rail-controls .pass-it-on-rail-arrow span,
+.pass-it-on[dir="rtl"] .pass-it-on-rail-controls .pass-it-on-advance span {
 	display: inline-block;
 	transform: scaleX(-1);
 }
@@ -2472,7 +2475,7 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-scrolly-backdrop-wash-dark {
 .pass-it-on .pass-it-on-tape-progress {
 	position: absolute;
 	inset-block: 0;
-	left: 0;
+	inset-inline-start: 0;
 	width: var(--tape-progress, 0%);
 	pointer-events: none;
 	background: linear-gradient(
@@ -2481,8 +2484,18 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-scrolly-backdrop-wash-dark {
 		rgb(245 158 11 / 46%),
 		rgb(14 165 233 / 44%)
 	);
-	border-right: 2px solid #fde68a;
+	border-inline-end: 2px solid #fde68a;
 	transition: width 80ms linear;
+}
+
+[dir="rtl"] .pass-it-on .pass-it-on-tape-progress,
+.pass-it-on[dir="rtl"] .pass-it-on-tape-progress {
+	background: linear-gradient(
+		270deg,
+		rgb(255 46 85 / 44%),
+		rgb(245 158 11 / 46%),
+		rgb(14 165 233 / 44%)
+	);
 }
 
 .pass-it-on .pass-it-on-tape-window .pass-it-on-rail-years {
