@@ -70,6 +70,7 @@ export function DecadeFilterButtons({
 					<button
 						type="button"
 						key={decade}
+						aria-pressed={isActive}
 						onClick={() => toggleDecade(decade)}
 						className={`min-h-10 border-2 px-3 py-1.5 text-sm font-black transition wobble-sm ${
 							isActive
@@ -195,6 +196,8 @@ export function FilterPanel({
 									<button
 										type="button"
 										key={leaning}
+										aria-pressed={isActive}
+										data-filter-leaning={leaning}
 										onClick={() => toggleLeaning(leaning)}
 										className={`min-h-10 border-2 px-3 py-1.5 text-sm font-black transition wobble-sm ${
 											isActive ? styles.active : styles.inactive

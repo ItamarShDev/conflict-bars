@@ -13,23 +13,23 @@ const BACKDROP_LAYERS: EraLayer[] = [
 	{
 		id: "tel-aviv",
 		src: "/pass-it-on/tel-aviv-graffiti.jpg",
-		tint: "linear-gradient(180deg, rgba(247, 241, 229, 0.84) 0%, rgba(235, 222, 199, 0.78) 55%, rgba(244, 236, 221, 0.90) 100%)",
+		tint: "linear-gradient(180deg, rgba(20, 15, 12, 0.56) 0%, rgba(44, 18, 16, 0.48) 52%, rgba(16, 13, 11, 0.84) 100%)",
 		darkTint:
-			"linear-gradient(180deg, rgba(24, 18, 15, 0.74) 0%, rgba(36, 20, 18, 0.68) 55%, rgba(16, 13, 11, 0.88) 100%)",
+			"linear-gradient(180deg, rgba(20, 15, 12, 0.62) 0%, rgba(40, 16, 15, 0.54) 52%, rgba(14, 11, 9, 0.88) 100%)",
 	},
 	{
 		id: "haifa",
 		src: "/pass-it-on/haifa-harbour.jpg",
-		tint: "linear-gradient(180deg, rgba(242, 240, 232, 0.84) 0%, rgba(219, 227, 232, 0.78) 55%, rgba(244, 238, 226, 0.90) 100%)",
+		tint: "linear-gradient(180deg, rgba(14, 21, 28, 0.58) 0%, rgba(18, 34, 46, 0.48) 52%, rgba(14, 16, 20, 0.84) 100%)",
 		darkTint:
-			"linear-gradient(180deg, rgba(16, 23, 30, 0.76) 0%, rgba(20, 32, 42, 0.68) 55%, rgba(14, 16, 20, 0.88) 100%)",
+			"linear-gradient(180deg, rgba(12, 18, 25, 0.64) 0%, rgba(16, 30, 42, 0.54) 52%, rgba(12, 14, 18, 0.88) 100%)",
 	},
 	{
 		id: "ramon",
 		src: "/pass-it-on/ramon-crater.jpg",
-		tint: "linear-gradient(180deg, rgba(247, 239, 226, 0.84) 0%, rgba(235, 217, 194, 0.78) 55%, rgba(244, 236, 221, 0.90) 100%)",
+		tint: "linear-gradient(180deg, rgba(26, 18, 12, 0.58) 0%, rgba(48, 28, 16, 0.48) 52%, rgba(16, 13, 11, 0.84) 100%)",
 		darkTint:
-			"linear-gradient(180deg, rgba(30, 20, 14, 0.76) 0%, rgba(44, 26, 18, 0.68) 55%, rgba(16, 13, 11, 0.88) 100%)",
+			"linear-gradient(180deg, rgba(24, 16, 11, 0.64) 0%, rgba(44, 24, 14, 0.54) 52%, rgba(14, 11, 9, 0.88) 100%)",
 	},
 ];
 
@@ -113,6 +113,7 @@ export function ScrollyBackdrop({
 					/>
 				</div>
 			))}
+			<div className="pass-it-on-scrolly-backdrop-ambient" />
 			<div className="pass-it-on-scrolly-backdrop-grain" />
 		</div>
 	);

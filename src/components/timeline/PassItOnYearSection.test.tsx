@@ -72,8 +72,8 @@ describe("Pass It On year rendering", () => {
 			expect(html).toContain(`dir="${lang === "he" ? "rtl" : "ltr"}"`);
 			expect(html).toContain("pass-it-on-year-reel");
 			expect(html).toContain('tabindex="-1"');
-			expect(html.indexOf("pass-it-on-music-lane")).toBeLessThan(
-				html.indexOf("pass-it-on-history-lane"),
+			expect(html.indexOf("pass-it-on-history-lane")).toBeLessThan(
+				html.indexOf("pass-it-on-music-lane"),
 			);
 			expect(html).toContain(
 				lang === "he"

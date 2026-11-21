@@ -166,6 +166,30 @@ export function PassItOnYearSection({
 			<div
 				className={`pass-it-on-year-columns pass-it-on-year-columns-${view}`}
 			>
+				{view !== "music" && (
+					<div className="pass-it-on-lane pass-it-on-history-lane">
+						<h3>
+							<span className="pass-it-on-lane-marker" aria-hidden="true" />
+							{labels.passItOn.history}
+						</h3>
+						{events.length > 0 ? (
+							<div className="pass-it-on-event-list">
+								{events.map((entry) => (
+									<EventDetails
+										key={entry.conflictEntry.id}
+										entry={entry}
+										lang={lang}
+										labels={labels}
+									/>
+								))}
+							</div>
+						) : (
+							<p className="pass-it-on-lane-empty">
+								{labels.passItOn.noHistoryInYear}
+							</p>
+						)}
+					</div>
+				)}
 				{view !== "history" && (
 					<div className="pass-it-on-lane pass-it-on-music-lane">
 						<h3>
@@ -237,35 +261,6 @@ export function PassItOnYearSection({
 						) : (
 							<p className="pass-it-on-lane-empty">
 								{labels.passItOn.noSongsInYear}
-							</p>
-						)}
-					</div>
-				)}
-				{view === "all" && (
-					<div className="pass-it-on-ribbon-spine" aria-hidden="true">
-						<span />
-					</div>
-				)}
-				{view !== "music" && (
-					<div className="pass-it-on-lane pass-it-on-history-lane">
-						<h3>
-							<span className="pass-it-on-lane-marker" aria-hidden="true" />
-							{labels.passItOn.history}
-						</h3>
-						{events.length > 0 ? (
-							<div className="pass-it-on-event-list">
-								{events.map((entry) => (
-									<EventDetails
-										key={entry.conflictEntry.id}
-										entry={entry}
-										lang={lang}
-										labels={labels}
-									/>
-								))}
-							</div>
-						) : (
-							<p className="pass-it-on-lane-empty">
-								{labels.passItOn.noHistoryInYear}
 							</p>
 						)}
 					</div>
