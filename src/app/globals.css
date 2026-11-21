@@ -2115,7 +2115,7 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-track-number {
 	will-change: opacity, transform;
 }
 
-.pass-it-on .pass-it-on-scrolly-backdrop-layer.is-active {
+.pass-it-on .pass-it-on-scrolly-backdrop-layer[data-active="true"] {
 	opacity: 1;
 }
 

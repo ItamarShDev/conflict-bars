@@ -52,14 +52,16 @@ export function ScrollyBackdrop({
 	useEffect(() => {
 		const el = rootRef.current;
 		if (!el) return;
-		if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-			el.style.setProperty("--scrolly-parallax-y", "0px");
-			return;
-		}
 
+		const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 		let rafId = 0;
+
 		const updateParallax = () => {
 			rafId = 0;
+			if (reducedMotion.matches) {
+				el.style.setProperty("--scrolly-parallax-y", "0px");
+				return;
+			}
 			const maxScroll = Math.max(
 				1,
 				document.documentElement.scrollHeight - window.innerHeight,
@@ -77,8 +79,10 @@ export function ScrollyBackdrop({
 
 		updateParallax();
 		window.addEventListener("scroll", onScroll, { passive: true });
+		reducedMotion.addEventListener("change", updateParallax);
 		return () => {
 			window.removeEventListener("scroll", onScroll);
+			reducedMotion.removeEventListener("change", updateParallax);
 			if (rafId) window.cancelAnimationFrame(rafId);
 		};
 	}, []);
