@@ -84,4 +84,19 @@ describe("Pass It On year rail direction", () => {
 			"scroll-margin-bottom: var(--pass-it-on-mobile-dock-space);",
 		);
 	});
+
+	it("flips both rail arrows and the auto-advance arrow in RTL and fills tape from inline start", () => {
+		expect(globalStyles).toContain(
+			'[dir="rtl"] .pass-it-on .pass-it-on-rail-controls .pass-it-on-advance span',
+		);
+		expect(globalStyles).toContain(
+			'.pass-it-on[dir="rtl"] .pass-it-on-rail-controls .pass-it-on-advance span',
+		);
+		expect(globalStyles).toMatch(
+			/\.pass-it-on \.pass-it-on-tape-progress \{[^}]*inset-inline-start: 0;[^}]*border-inline-end: 2px solid #fde68a;/,
+		);
+		expect(globalStyles).toContain(
+			'[dir="rtl"] .pass-it-on .pass-it-on-tape-progress',
+		);
+	});
 });

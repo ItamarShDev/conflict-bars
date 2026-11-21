@@ -19,6 +19,41 @@ function fixRTL(text: string) {
 }
 
 const baseUrl = "www.conflictbars.org";
+const cassetteYears = ["2025", "2023", "2014", "2006", "2000", "1987"];
+
+function CassetteReel() {
+	return (
+		<svg
+			width="34"
+			height="34"
+			viewBox="0 0 40 40"
+			aria-hidden="true"
+			style={{ flexShrink: 0 }}
+		>
+			<circle
+				cx="20"
+				cy="20"
+				r="17.5"
+				fill="#120f0d"
+				stroke="#5c5146"
+				strokeWidth="1.5"
+			/>
+			<circle
+				cx="20"
+				cy="20"
+				r="10.5"
+				fill="#2a241f"
+				stroke="#d4b56a"
+				strokeWidth="1.4"
+			/>
+			<path
+				d="M18.4 10.5 L21.6 10.5 L21 15 L19 15 Z M27.8 23.6 L26.2 26.4 L22.5 23.6 L23.5 21.8 Z M12.2 23.6 L13.8 26.4 L17.5 23.6 L16.5 21.8 Z"
+				fill="#f5d873"
+			/>
+			<circle cx="20" cy="20" r="4.2" fill="#0d0b0a" />
+		</svg>
+	);
+}
 
 async function loadHeebo() {
 	const weights = [400, 700, 900] as const;
@@ -53,35 +88,33 @@ export default async function Image({
 	requireHebrewLocale(lang);
 	const translation = translations.he;
 	const description = fixRTL(
-		"ציר זמן אינטראקטיבי של היפ-הופ ישראלי והסכסוכים שעיצבו אותו",
+		"ציר זמן אינטראקטיבי של היפ-הופ ישראלי ופלסטיני והסכסוכים שעיצבו אותו",
 	);
-
-	const colors = {
-		background: "#1c1b18",
-		foreground: "#f4f1ea",
-		accent: "#ff2d55",
-		cardBg: "#fffdf5",
-		border: "#1c1b18",
-		left: "#ff2d55",
-		right: "#00aaff",
-		context: "#9e9a93",
-	};
 
 	const cards = [
 		{
-			label: "סכסוך",
-			caption: "אירוע מרכזי מחזית הסכסוך",
-			borderColor: colors.left,
+			label: "שמאל / מחאה",
+			caption: "קולות ביקורתיים ושלום",
+			edgeSide: "left" as const,
+			edgeGradient: "linear-gradient(180deg, #ff2e55 0%, #fb7185 100%)",
+			badgeColor: "#be123c",
+			badgeBg: "rgba(255, 46, 85, 0.14)",
 		},
 		{
-			label: "שיר",
-			caption: "קול אמנים מהתקופה",
-			borderColor: colors.right,
+			label: "מרכז / סאטירה",
+			caption: "תיעוד חברתי ומבט אישי",
+			edgeSide: "top" as const,
+			edgeGradient: "linear-gradient(90deg, #f59e0b 0%, #fde68a 100%)",
+			badgeColor: "#b45309",
+			badgeBg: "rgba(245, 158, 11, 0.16)",
 		},
 		{
-			label: "הקשר",
-			caption: "סיכום ההשפעה והתגובה",
-			borderColor: colors.context,
+			label: "ימין / לאומי",
+			caption: "שירי חוסן, שייכות ולאומיות",
+			edgeSide: "right" as const,
+			edgeGradient: "linear-gradient(180deg, #0ea5e9 0%, #38bdf8 100%)",
+			badgeColor: "#0369a1",
+			badgeBg: "rgba(14, 165, 233, 0.15)",
 		},
 	];
 
@@ -97,50 +130,133 @@ export default async function Image({
 				height: "100%",
 				direction: "ltr",
 				fontFamily: '"Heebo", "Noto Sans Hebrew", sans-serif',
-				color: colors.foreground,
-				padding: 64,
-				backgroundColor: colors.background,
+				color: "#f7f1e3",
+				padding: "40px 56px 36px",
+				backgroundColor: "#0e0c0a",
 				backgroundImage: [
-					"radial-gradient(circle at 50% 0%, rgba(255,45,85,0.08) 0%, transparent 55%)",
-					"repeating-linear-gradient(90deg, rgba(244,241,234,0.04) 0, transparent 1px, transparent 80px)",
-					"repeating-linear-gradient(0deg, rgba(244,241,234,0.04) 0, transparent 1px, transparent 80px)",
+					"radial-gradient(circle at 14% 72%, rgba(255,46,85,0.22) 0%, transparent 45%)",
+					"radial-gradient(circle at 86% 72%, rgba(14,165,233,0.22) 0%, transparent 45%)",
+					"radial-gradient(circle at 50% 0%, rgba(245,216,115,0.14) 0%, transparent 50%)",
 				].join(", "),
-				backgroundSize: "100% 100%, 80px 80px, 80px 80px",
 			}}
 		>
-			<header style={{ display: "flex", flexDirection: "column", gap: 32 }}>
+			{/* Top 3D Cassette Scrubber Bar */}
+			<div
+				style={{
+					display: "flex",
+					alignItems: "center",
+					justifyContent: "space-between",
+					gap: 18,
+					padding: "12px 18px",
+					borderRadius: 16,
+					background: "linear-gradient(180deg, #241f1b 0%, #161210 100%)",
+					border: "1px solid rgba(255, 246, 226, 0.16)",
+					boxShadow: "0 12px 28px rgba(0, 0, 0, 0.5)",
+				}}
+			>
+				<CassetteReel />
 				<div
 					style={{
+						position: "relative",
 						display: "flex",
+						flex: 1,
 						alignItems: "center",
-						gap: 16,
+						justifyContent: "space-between",
+						padding: "8px 18px",
+						borderRadius: 10,
+						background: "#0d0a09",
+						border: "1px solid rgba(255, 246, 226, 0.12)",
+						overflow: "hidden",
 					}}
 				>
 					<div
 						style={{
-							background: colors.accent,
-							color: colors.cardBg,
-							padding: "10px 22px",
-							border: `2px solid ${colors.border}`,
-							borderRadius: "255px 15px 225px 15px / 15px 225px 15px 255px",
-							boxShadow: "5px 5px 0 rgba(0,0,0,0.18)",
-							fontSize: 26,
-							fontWeight: 800,
+							position: "absolute",
+							top: 0,
+							right: 0,
+							bottom: 0,
+							width: "58%",
+							background:
+								"linear-gradient(270deg, rgba(255,46,85,0.34) 0%, rgba(245,158,11,0.26) 55%, rgba(14,165,233,0.3) 100%)",
+						}}
+					/>
+					{cassetteYears.map((year) => {
+						const isActive = year === "2000";
+						return (
+							<div
+								key={year}
+								style={{
+									position: "relative",
+									display: "flex",
+									alignItems: "center",
+									justifyContent: "center",
+									padding: "4px 14px",
+									borderRadius: 999,
+									fontSize: 18,
+									fontWeight: isActive ? 900 : 700,
+									color: isActive ? "#1b1612" : "rgba(247, 241, 227, 0.8)",
+									background: isActive
+										? "#f5d873"
+										: "rgba(255, 255, 255, 0.06)",
+								}}
+							>
+								{year}
+							</div>
+						);
+					})}
+				</div>
+				<CassetteReel />
+			</div>
+
+			{/* Hero Title + Conflict Anchor */}
+			<header
+				style={{
+					display: "flex",
+					flexDirection: "column",
+					alignItems: "flex-end",
+					gap: 10,
+				}}
+			>
+				<div
+					style={{
+						display: "flex",
+						alignItems: "center",
+						gap: 12,
+					}}
+				>
+					<span
+						style={{
+							fontSize: 19,
+							fontWeight: 700,
+							color: "#fde68a",
+							letterSpacing: "0.04em",
 						}}
 					>
-						{fixRTL("סצנת היפ-הופ הישראלית")}
-					</div>
-					<div style={{ fontSize: 24, opacity: 0.7, fontWeight: 400 }}>
-						{fixRTL(translation.title)}
+						1987–2025
+					</span>
+					<div
+						style={{
+							display: "flex",
+							background: "rgba(245, 216, 115, 0.16)",
+							color: "#f5d873",
+							padding: "5px 16px",
+							border: "1px solid rgba(245, 216, 115, 0.45)",
+							borderRadius: 999,
+							fontSize: 20,
+							fontWeight: 700,
+						}}
+					>
+						{fixRTL("ארכיון קלטת אינטראקטיבי")}
 					</div>
 				</div>
 
 				<h1
 					style={{
-						fontSize: 86,
+						fontSize: 72,
 						fontWeight: 900,
 						lineHeight: 1.05,
 						margin: 0,
+						color: "#fffaf0",
 					}}
 				>
 					{fixRTL(translation.title)}
@@ -148,20 +264,21 @@ export default async function Image({
 
 				<p
 					style={{
-						fontSize: 26,
-						lineHeight: 1.4,
-						opacity: 0.85,
-						maxWidth: "95%",
+						fontSize: 24,
+						lineHeight: 1.35,
+						margin: 0,
+						color: "rgba(247, 241, 227, 0.82)",
 					}}
 				>
 					{description}
 				</p>
 			</header>
 
+			{/* Physical Political Spectrum Cards */}
 			<div
 				style={{
 					display: "flex",
-					gap: 24,
+					gap: 20,
 					alignItems: "stretch",
 				}}
 			>
@@ -173,38 +290,47 @@ export default async function Image({
 							display: "flex",
 							flexDirection: "column",
 							justifyContent: "space-between",
+							alignItems: "flex-end",
 							flex: 1,
-							minHeight: 0,
-							background: colors.cardBg,
-							color: colors.border,
-							border: `3px solid ${card.borderColor}`,
-							borderRadius: "16px 255px 16px 225px / 255px 16px 225px 16px",
-							boxShadow: "6px 6px 0 rgba(0,0,0,0.18)",
-							padding: 32,
+							background: "linear-gradient(180deg, #fffdf8 0%, #f6eddd 100%)",
+							color: "#1b1612",
+							borderRadius: 16,
+							boxShadow: "0 14px 30px rgba(0, 0, 0, 0.45)",
+							padding: "22px 26px",
 							overflow: "hidden",
 						}}
 					>
 						<div
 							style={{
 								position: "absolute",
-								top: -14,
-								left: 24,
-								width: 80,
-								height: 24,
-								background: "rgba(255,255,255,0.35)",
-								border: "1px solid rgba(0,0,0,0.08)",
-								transform: "rotate(-35deg)",
+								...(card.edgeSide === "left"
+									? { top: 0, bottom: 0, left: 0, width: 10 }
+									: card.edgeSide === "right"
+										? { top: 0, bottom: 0, right: 0, width: 10 }
+										: { top: 0, left: 0, right: 0, height: 8 }),
+								background: card.edgeGradient,
 							}}
 						/>
-						<div style={{ fontSize: 36, fontWeight: 800 }}>
+						<div
+							style={{
+								display: "flex",
+								padding: "4px 12px",
+								borderRadius: 999,
+								background: card.badgeBg,
+								color: card.badgeColor,
+								fontSize: 22,
+								fontWeight: 900,
+							}}
+						>
 							{fixRTL(card.label)}
 						</div>
 						<div
 							style={{
-								fontSize: 24,
+								fontSize: 21,
 								fontWeight: 400,
-								opacity: 0.85,
+								color: "#4d4238",
 								lineHeight: 1.35,
+								marginTop: 10,
 							}}
 						>
 							{fixRTL(card.caption)}
@@ -213,19 +339,24 @@ export default async function Image({
 				))}
 			</div>
 
+			{/* Footer */}
 			<footer
 				style={{
 					display: "flex",
 					justifyContent: "space-between",
 					alignItems: "center",
-					borderTop: "2px solid rgba(244,241,234,0.3)",
-					paddingTop: 24,
-					fontSize: 24,
-					opacity: 0.8,
+					borderTop: "1px solid rgba(247, 241, 227, 0.18)",
+					paddingTop: 16,
+					fontSize: 21,
+					color: "rgba(247, 241, 227, 0.78)",
 				}}
 			>
-				<span style={{ fontWeight: 700 }}>{`${baseUrl}/he`}</span>
-				<span>{fixRTL("אמנות, פוליטיקה וקולות מרובים ברגע אחד")}</span>
+				<span style={{ fontWeight: 700, color: "#f5d873" }}>
+					{`${baseUrl}/he`}
+				</span>
+				<span>
+					{fixRTL("אירועים היסטוריים, שירים והקשר פוליטי בציר זמן אחד")}
+				</span>
 			</footer>
 		</div>,
 		{
