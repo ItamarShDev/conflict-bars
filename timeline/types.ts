@@ -36,7 +36,12 @@ export type FileSong = {
 	collaborators?: string[];
 	published_date: string;
 	language?: string;
-	lyric_sample?: { hebrew?: string; english_translation?: string };
+	lyric_sample?: {
+		hebrew?: string;
+		arabic?: string;
+		english_translation?: string;
+	};
+	context?: { he?: string; en?: string };
 	full_lyrics?: { hebrew?: string; english_translation?: string };
 	links?: { lyrics?: string; song_info?: string; youtube?: string };
 };

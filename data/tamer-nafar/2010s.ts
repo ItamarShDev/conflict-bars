@@ -14,9 +14,9 @@ export const tamerNafar2010s = [
 		collaborators: ["Itamar Ziegler", "Samar Qupty"],
 		language: "Arabic",
 		published_date: "2017-03-03",
-		lyric_sample: {
-			english_translation:
-				"Track from the Junction 48 soundtrack, a film set in the mixed Jewish-Arab city of Lyd/Lod and its Palestinian community.",
+		context: {
+			he: "רצועה מפסקול הסרט 'ג'נקשן 48', המתרחש בעיר המעורבת לוד ובקרב קהילתה הפלסטינית.",
+			en: "Track from the Junction 48 soundtrack, a film set in the mixed Jewish-Arab city of Lyd/Lod and its Palestinian community.",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=jTNxgJBwaU8",
@@ -30,9 +30,9 @@ export const tamerNafar2010s = [
 		collaborators: ["Itamar Ziegler", "Samar Qupty"],
 		language: "Arabic",
 		published_date: "2017-03-03",
-		lyric_sample: {
-			english_translation:
-				"Closing track and theme song of the Junction 48 soundtrack, a film about a Palestinian rapper in the mixed Jewish-Arab city of Lyd/Lod.",
+		context: {
+			he: "שיר הסיום ושיר הנושא של פסקול הסרט 'ג'נקשן 48', על ראפר פלסטיני בעיר המעורבת לוד.",
+			en: "Closing track and theme song of the Junction 48 soundtrack, a film about a Palestinian rapper in the mixed Jewish-Arab city of Lyd/Lod.",
 		},
 		links: {
 			lyrics: "https://www.youtube.com/watch?v=8-4R4QhXJX0",
@@ -48,8 +48,12 @@ export const tamerNafar2010s = [
 		language: "Arabic",
 		published_date: "2017",
 		lyric_sample: {
-			english_translation:
-				"Hear the sirens! Burn it, George! — protest anthem on the Junction 48 soundtrack. (Democracy Now transcript)",
+			hebrew: "שומעים את הסירנות! שרוף את זה, ג'ורג'!",
+			english_translation: "Hear the sirens! Burn it, George!",
+		},
+		context: {
+			he: "המנון מחאה מפסקול הסרט 'ג'נקשן 48' (תמליל Democracy Now).",
+			en: "Protest anthem on the Junction 48 soundtrack. (Democracy Now transcript)",
 		},
 		links: {
 			song_info:

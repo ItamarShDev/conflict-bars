@@ -6,8 +6,8 @@ export const shabjdeed2010s = [
 		language: "Arabic",
 		published_date: "2019-12-31",
 		lyric_sample: {
-			english_translation:
-				"Published translation (SceneNoise): Missiles from Gaza are reaching Antarctica",
+			hebrew: "טילים מעזה מגיעים עד אנטארקטיקה",
+			english_translation: "Missiles from Gaza are reaching Antarctica",
 		},
 		links: {
 			song_info: "https://bltnm.bandcamp.com/track/fi-harb",
@@ -20,7 +20,8 @@ export const shabjdeed2010s = [
 		language: "Arabic",
 		published_date: "2017",
 		lyric_sample: {
-			hebrew: "بين ابن القدس و ابن الرام / في جدار",
+			arabic: "بين ابن القدس و ابن الرام / في جدار",
+			hebrew: "בין בן ירושלים לבן א-ראם / יש חומה.",
 			english_translation:
 				"Between the son of Jerusalem and the son of Ram / there is a wall.",
 		},
@@ -36,7 +37,9 @@ export const shabjdeed2010s = [
 		language: "Arabic",
 		published_date: "2019",
 		lyric_sample: {
-			hebrew: "بدك جيش عشان تفوت على مخيم / منحكيش اسماء اذا حدا طلب",
+			arabic: "بدك جيش عشان تفوت على مخيم / منحكيش اسماء اذا حدا طلب",
+			hebrew:
+				"צריך צבא רק כדי להיכנס למחנה פליטים / לא מוסרים שמות אם מישהו שואל.",
 			english_translation:
 				"You need an army just to enter a refugee camp / we name no names if anyone asks.",
 		},
@@ -51,9 +54,9 @@ export const shabjdeed2010s = [
 		collaborators: ["Al Nather (الناظر)"],
 		language: "Arabic",
 		published_date: "2019-08-18",
-		lyric_sample: {
-			english_translation:
-				"'Sons of Jerusalem' — from Sindibad el Ward; the album is analyzed as revolutionary Palestinian trap in academic literature (OpenEdition).",
+		context: {
+			he: "'בני ירושלים' — מתוך האלבום Sindibad el Ward, המנותח בספרות אקדמית כטראפ פלסטיני מהפכני (OpenEdition).",
+			en: "'Sons of Jerusalem' — from Sindibad el Ward; the album is analyzed as revolutionary Palestinian trap in academic literature (OpenEdition).",
 		},
 		links: {
 			song_info: "https://bltnm.bandcamp.com/album/sindibad-el-ward",

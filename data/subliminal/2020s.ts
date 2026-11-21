@@ -6,11 +6,9 @@ export const subliminal2020s = [
 		language: "Hebrew",
 		// Released before October 7; not a response to the ensuing war.
 		published_date: "2023-03-30",
-		lyric_sample: {
-			hebrew:
-				"הקשר (לא ציטוט מהשיר): קריאה לאחדות בישראל בזמן פילוג פנימי, עם התייחסויות לביטחון ולהישרדות לאומית.",
-			english_translation:
-				"Context (not lyrics): A call for Israeli unity during domestic political division, with references to security and national survival.",
+		context: {
+			he: "קריאה לאחדות בישראל בזמן פילוג פנימי, עם התייחסויות לביטחון ולהישרדות לאומית.",
+			en: "A call for Israeli unity during domestic political division, with references to security and national survival.",
 		},
 		links: {
 			lyrics: "https://e.walla.co.il/item/3569322",
@@ -42,8 +40,11 @@ export const subliminal2020s = [
 		published_date: "2025-03-04",
 		lyric_sample: {
 			hebrew: "והעיקר לא לפחד כלל",
-			english_translation:
-				"The Rabbi Nachman line “and the main thing is not to be afraid at all” recurs as the single’s refrain; the track pairs biblical imagery with the current fighting and closes on “the victory generation, 2025”.",
+			english_translation: "And the main thing is not to be afraid at all",
+		},
+		context: {
+			he: "המשפט של רבי נחמן חוזר כפזמון הסינגל; השיר משלב דימויים מקראיים עם הלחימה ומסתיים ב'דור הניצחון, 2025'.",
+			en: "The Rabbi Nachman line recurs as the single's refrain; the track pairs biblical imagery with the current fighting and closes on 'the victory generation, 2025'.",
 		},
 		links: {
 			lyrics:
@@ -90,8 +91,9 @@ export const subliminal2020s = [
 		artist: "Subliminal & The Shadow",
 		language: "Hebrew",
 		published_date: "2024-07-16",
-		lyric_sample: {
-			english_translation: "Wartime unity single released during the Gaza war.",
+		context: {
+			he: "סינגל אחדות שיצא במהלך המלחמה בעזה.",
+			en: "Wartime unity single released during the Gaza war.",
 		},
 	},
 	{
@@ -99,9 +101,9 @@ export const subliminal2020s = [
 		artist: "Subliminal & The Shadow",
 		language: "Hebrew",
 		published_date: "2025-07-01",
-		lyric_sample: {
-			english_translation:
-				"Track on שומרי הסף (Guardians of the Threshold); lyrics unverified.",
+		context: {
+			he: "רצועה מתוך האלבום 'שומרי הסף'.",
+			en: "Track on שומרי הסף (Guardians of the Threshold).",
 		},
 		links: {
 			song_info: "https://www.deezer.com/en/album/771500251",

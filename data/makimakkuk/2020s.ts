@@ -5,7 +5,8 @@ export const makimakkuk2020s = [
 		language: "Arabic",
 		published_date: "2024-09-11",
 		lyric_sample: {
-			hebrew: "نطلع من هالحتة بشروشنا بنعمّر دار",
+			arabic: "نطلع من هالحتة بشروشنا بنعمّر دار",
+			hebrew: "אנחנו צומחים מפיסת האדמה הזאת; עם השורשים שלנו אנחנו בונים בית.",
 			english_translation:
 				"We come up out of this patch of ground; with our roots we build a home.",
 		},

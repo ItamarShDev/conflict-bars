@@ -6,6 +6,8 @@ export const shai3602010s = [
 		language: "English",
 		published_date: "2010-06-14",
 		lyric_sample: {
+			hebrew:
+				"אני בצד הלא נכון של המפה, פעילים עם סכינים לכדו אותי / הצביעות הבינלאומית הזו לא תביא אותנו רחוק",
 			english_translation:
 				"I'm on the wrong side of the map, activists with knives got me trapped / This international hypocrisy won't get us far",
 		},
@@ -22,9 +24,9 @@ export const shai3602010s = [
 		artist: "Shai 360 (שי 360)",
 		language: "English",
 		published_date: "2011-11-29",
-		lyric_sample: {
-			english_translation:
-				"From the album 'Shalom Haters'; laments the human suffering of both sides of the Israeli-Palestinian conflict and calls on listeners not to be afraid to think for themselves.",
+		context: {
+			he: "מתוך האלבום 'Shalom Haters'; מקונן על הסבל האנושי משני צדי הסכסוך הישראלי-פלסטיני וקורא למאזינים לא לפחד לחשוב בעצמם.",
+			en: "From the album 'Shalom Haters'; laments the human suffering of both sides of the Israeli-Palestinian conflict and calls on listeners not to be afraid to think for themselves.",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=IO5LojKJbAo",

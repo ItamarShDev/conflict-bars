@@ -6,8 +6,10 @@ export const dam2000s = [
 		language: "Arabic",
 		published_date: "2006-11",
 		lyric_sample: {
-			hebrew:
+			arabic:
 				"مهدي لشعبي لأرضي لوطني / للدم الفلسطيني العربي / مرفوع الهامة يمشي / هادا البيت البيت البيت",
+			hebrew:
+				"מוקדש לעמי, לאדמתי, למולדתי / לדם הפלסטיני הערבי / הולך בראש מורם / זה הבית, הבית, הבית.",
 			english_translation:
 				"Dedicated to my people, my land, my homeland / to Palestinian Arab blood / walking with its head held high / this house, this house, this house.",
 		},
@@ -23,8 +25,10 @@ export const dam2000s = [
 		language: "Arabic",
 		published_date: "2001",
 		lyric_sample: {
-			hebrew:
+			arabic:
 				"مين أرهابي؟ أنا أرهابي؟ / كيف أرهابي وانا عايش ببلادي! / مين أرهابي؟ أنت أرهابي / ماكلني وانا عايش ببلادي!",
+			hebrew:
+				"מי טרוריסט? אני טרוריסט? / איך אני טרוריסט כשאני חי בארצי! / מי טרוריסט? אתה טרוריסט / לקחת לי הכול כשאני חי בארצי!",
 			english_translation:
 				"Who is a terrorist? I am a terrorist? / How can I be a terrorist if I live in my homeland? / Who is a terrorist? You are a terrorist / You have taken everything I own in my land.",
 		},
@@ -55,8 +59,10 @@ export const dam2000s = [
 		language: "Arabic",
 		published_date: "2006",
 		lyric_sample: {
-			hebrew:
+			arabic:
 				"وين ما اروح باشوف حدود ساجنه الأنسانيه / ليه أطفال العالم حره وأنا ما الي حريه؟",
+			hebrew:
+				"לאן שלא אלך אני רואה גבולות שכולאים את האנושיות / למה ילדי העולם חופשיים ולי אין חירות?",
 			english_translation:
 				"Wherever I go I see borders imprisoning humanity / why are the world's children free and I have no freedom?",
 		},
@@ -72,7 +78,9 @@ export const dam2000s = [
 		language: "Arabic",
 		published_date: "2006",
 		lyric_sample: {
-			hebrew: "عنا الهدم بيوت زي الهمس تكون / كلما نضل بسكوت بدان الشعب بتفوت",
+			arabic: "عنا الهدم بيوت زي الهمس تكون / كلما نضل بسكوت بدان الشعب بتفوت",
+			hebrew:
+				"אצלנו הריסת בתים היא כמו לחישה / כל עוד נשתוק, היא תמשיך לעבור באוזני העם.",
 			english_translation:
 				"Here, demolishing houses is like a whisper / as long as we stay silent it keeps passing through our people's ears.",
 		},
@@ -87,10 +95,12 @@ export const dam2000s = [
 		language: "Arabic",
 		published_date: "2006-10-26",
 		lyric_sample: {
-			hebrew:
+			arabic:
 				"حاكمنا حكم صهيوني ديموقراطي؟! ديموقراطي للنفس الصهيونية وصهيوني للنفس العربية",
+			hebrew:
+				"שולט בנו משטר ציוני דמוקרטי?! דמוקרטי לנפש הציונית וציוני לנפש הערבית.",
 			english_translation:
-				"A democratic Zionist regime rules us — democratic to the Zionist soul, Zionist to the Arab soul. (arabicmusictranslation.com)",
+				"A democratic Zionist regime rules us — democratic to the Zionist soul, Zionist to the Arab soul.",
 		},
 		links: {
 			song_info:
@@ -104,9 +114,14 @@ export const dam2000s = [
 		language: "Arabic",
 		published_date: "2006-10-26",
 		lyric_sample: {
-			hebrew: "بدنا نتعلم، ونتقدم، نلاقي القدرة، نغير بكره",
+			arabic: "بدنا نتعلم، ونتقدم، نلاقي القدرة، نغير بكره",
+			hebrew: "אנחנו רוצים ללמוד, להתקדם, למצוא את הכוח לשנות את המחר.",
 			english_translation:
-				"We want education, we want improvement, to have the ability to change tomorrow. Jreri's verse invokes the occupation and the word 'independence.' (elyrics.net)",
+				"We want education, we want improvement, to have the ability to change tomorrow.",
+		},
+		context: {
+			he: "הבית של ג'רירי מתייחס לכיבוש ולמילה 'עצמאות'.",
+			en: "Jreri's verse invokes the occupation and the word 'independence'.",
 		},
 		links: {
 			lyrics:
@@ -118,9 +133,9 @@ export const dam2000s = [
 		artist: "DAM (דאם)",
 		language: "Arabic",
 		published_date: "2006-10-26",
-		lyric_sample: {
-			english_translation:
-				"The title is 'revolution' spelled backwards — verses on intifada-era life in Lod, from the debut album Dedication.",
+		context: {
+			he: "שם השיר הוא המילה 'מהפכה' בהיפוך אותיות — בתים על החיים בלוד בתקופת האינתיפאדה, מתוך אלבום הבכורה Dedication.",
+			en: "The title is 'revolution' spelled backwards — verses on intifada-era life in Lod, from the debut album Dedication.",
 		},
 	},
 ];

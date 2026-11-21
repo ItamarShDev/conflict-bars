@@ -12,7 +12,7 @@ This doc orients AI/automation agents to work safely and effectively on Conflict
 - Must reference or clearly relate to the conflicts (timing, lyrics, context, or public reception). Purely apolitical tracks without conflict relevance belong out of scope.
 - Must be verifiable: the release exists, the artist and title are correct, and the date is real.
 - Include links and dates to support conflict relevance.
-- Never invent a record, a lyric, or a URL. A fabricated YouTube/Genius ID is worse than no link — verify a URL resolves before adding it, and omit `links` entirely when nothing can be confirmed. When only prose context exists, put a neutral sourced summary in `lyric_sample.english_translation` rather than inventing lyrics.
+- Never invent a record, a lyric, or a URL. A fabricated YouTube/Genius ID is worse than no link — verify a URL resolves before adding it, and omit `links` entirely when nothing can be confirmed. When only prose context exists, put neutral bilingual sourced summaries in `context: { he, en }` rather than putting prose into `lyric_sample` or inventing lyrics.
 
 ## Audience & Goals
 - Audience: AI/automation agents and contributors acting on scripted tasks (content, code, data).
@@ -49,7 +49,8 @@ This doc orients AI/automation agents to work safely and effectively on Conflict
   collaborators?: string[],
   language?: "Hebrew" | "Arabic" | "English" | "Hebrew/Arabic",
   published_date: "YYYY" | "YYYY-MM" | "YYYY-MM-DD",
-  lyric_sample?: { hebrew?: string; english_translation?: string },
+  lyric_sample?: { hebrew?: string; arabic?: string; english_translation?: string },
+  context?: { he?: string; en?: string },
   links?: { lyrics?: string; song_info?: string; youtube?: string },
 }
 ```

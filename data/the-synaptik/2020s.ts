@@ -5,9 +5,9 @@ export const theSynaptik2020s = [
 		collaborators: ["Dodongull"],
 		language: "Arabic",
 		published_date: "2026-07-21",
-		lyric_sample: {
-			english_translation:
-				"A deadpan, satirical account of daily life under occupation in the West Bank — checkpoints, interrogations and errands derailed by closures; the video shows the artist held at gunpoint while driving home. No verified lyric transcription was found, so no quotation is given.",
+		context: {
+			he: "תיאור סאטירי מאופק של חיי היומיום תחת כיבוש בגדה המערבית — מחסומים, חקירות וסידורים שמשתבשים בגלל סגרים; בקליפ מוצג האמן כשהוא מוחזק באיומי נשק בדרכו הביתה.",
+			en: "A deadpan, satirical account of daily life under occupation in the West Bank — checkpoints, interrogations and errands derailed by closures; the video shows the artist held at gunpoint while driving home.",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=-86QfXSlls0",

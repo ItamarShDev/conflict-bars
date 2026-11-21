@@ -6,7 +6,8 @@ export const fawziDaboor2020s = [
 		language: "Arabic",
 		published_date: "2024-12-31",
 		lyric_sample: {
-			hebrew: "بطلنا نأمن كيف بدنا نأمن كمشة جواسيس مستعربين",
+			arabic: "بطلنا نأمن كيف بدنا نأمن كمشة جواسيس مستعربين",
+			hebrew: "הפסקנו להאמין — איך אפשר לסמוך על קומץ מרגלים מסתערבים.",
 			english_translation:
 				"We've stopped trusting — how are we supposed to trust? A handful of spies, mista'arvin (Israeli undercover agents).",
 		},

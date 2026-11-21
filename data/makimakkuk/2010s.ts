@@ -5,9 +5,9 @@ export const makimakkuk2010s = [
 		collaborators: ["Haykal (هيكل)", "Julmud", "Bu Kolthoum"],
 		language: "Arabic",
 		published_date: "2019-01",
-		lyric_sample: {
-			english_translation:
-				"Ramallah-scene posse cut on BLTNM — conflict link is contextual rather than lyrical. (Mada Masr) ",
+		context: {
+			he: "רצועת שיתוף פעולה מסצנת רמאללה בלייבל BLTNM — הזיקה לסכסוך היא הקשרית ולא מילולית (Mada Masr).",
+			en: "Ramallah-scene posse cut on BLTNM — conflict link is contextual rather than lyrical. (Mada Masr)",
 		},
 		links: {
 			song_info:

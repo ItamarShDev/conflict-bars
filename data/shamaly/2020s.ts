@@ -4,9 +4,9 @@ export const shamaly2020s = [
 		artist: "Shamaly (شمالي)",
 		language: "Arabic",
 		published_date: "2024-10-15",
-		lyric_sample: {
-			english_translation:
-				"Opening track of the debut EP 'Bdl Faqed', half of which was recorded in the Jabalia refugee camp during the war. The National reports the song grew out of the question Shamaly and his friends asked each other during the bombardment — whether a sound was a gunshot or a distant airstrike. Only an English rendering of the lyrics was published, so no Arabic quotation is given.",
+		context: {
+			he: "רצועת הפתיחה של מיני-אלבום הבכורה 'Bdl Faqed', שמחציתו הוקלטה במחנה הפליטים ג'באליה בזמן המלחמה. לפי The National, השיר צמח מהשאלה ששאלו שמאלי וחבריו זה את זה במהלך ההפגזות — אם קול מסוים הוא ירייה או תקיפה אווירית רחוקה.",
+			en: "Opening track of the debut EP 'Bdl Faqed', half of which was recorded in the Jabalia refugee camp during the war. The National reports the song grew out of the question Shamaly and his friends asked each other during the bombardment — whether a sound was a gunshot or a distant airstrike.",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=Vl-HCDfaefM",
@@ -19,9 +19,9 @@ export const shamaly2020s = [
 		artist: "Shamaly (شمالي)",
 		language: "Arabic",
 		published_date: "2024-10-15",
-		lyric_sample: {
-			english_translation:
-				"The most explicitly political track on the EP 'Bdl Faqed'; The National describes it as a song in which Shamaly 'pours his heart out regarding the plight of Gaza', written, in his words, 'during what we were going through every day'. Only an English rendering of the lyrics was published, so no Arabic quotation is given.",
+		context: {
+			he: "הרצועה הפוליטית ביותר במיני-אלבום 'Bdl Faqed'; העיתון The National תיאר אותו כשיר שבו שמאלי שופך את לבו על מצוקת עזה, שנכתב לדבריו תוך כדי מה שעברו מדי יום.",
+			en: "The most explicitly political track on the EP 'Bdl Faqed'; The National describes it as a song in which Shamaly 'pours his heart out regarding the plight of Gaza', written, in his words, 'during what we were going through every day'.",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=I5zjPU_QJdI",
@@ -34,9 +34,9 @@ export const shamaly2020s = [
 		artist: "Shamaly (شمالي)",
 		language: "Arabic",
 		published_date: "2024-10-15",
-		lyric_sample: {
-			english_translation:
-				"Track on the Bdl Faqed EP, released by Gaza label Manjam during the Gaza-war period; the EP documents five months of the conflict.",
+		context: {
+			he: "רצועה מתוך המיני-אלבום Bdl Faqed, שיצא בלייבל העזתי Manjam בתקופת המלחמה בעזה ומתעד חמישה חודשים מהסכסוך.",
+			en: "Track on the Bdl Faqed EP, released by Gaza label Manjam during the Gaza-war period; the EP documents five months of the conflict.",
 		},
 		links: {
 			song_info:
@@ -48,9 +48,9 @@ export const shamaly2020s = [
 		artist: "Shamaly (شمالي)",
 		language: "Arabic",
 		published_date: "2024-10-15",
-		lyric_sample: {
-			english_translation:
-				"Shamaly wrote this track during the war while sheltering in Rafah; reporting describes its connection and uncertainty amid the crisis.",
+		context: {
+			he: "שמאלי כתב את השיר במהלך המלחמה בעת ששהה במקלט ברפיח; סיקורים מתארים את תחושות הקשר וחוסר הוודאות בעיצומו של המשבר.",
+			en: "Shamaly wrote this track during the war while sheltering in Rafah; reporting describes its connection and uncertainty amid the crisis.",
 		},
 		links: {
 			song_info:

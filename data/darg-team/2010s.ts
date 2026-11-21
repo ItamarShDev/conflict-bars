@@ -5,9 +5,9 @@ export const dargTeam2010s = [
 		collaborators: ["MC-Lowkey"],
 		language: "Arabic/English",
 		published_date: "2010",
-		lyric_sample: {
-			english_translation:
-				"Gaza crew's take on Lowkey's anthem — the 'Free free Palestine' refrain tradition.",
+		context: {
+			he: "גרסת ההרכב מעזה להמנון של Lowkey, במסורת פזמון ה-'Free free Palestine'.",
+			en: "Gaza crew's take on Lowkey's anthem — the 'Free free Palestine' refrain tradition.",
 		},
 	},
 	{
@@ -16,9 +16,9 @@ export const dargTeam2010s = [
 		collaborators: ["Boikutt (producer)"],
 		language: "Arabic",
 		published_date: "2013",
-		lyric_sample: {
-			english_translation:
-				"Post-2012 Gaza war rap produced by Ramallah's Boikutt. (Year listed as 2010s-era upload.)",
+		context: {
+			he: "שיר ראפ לאחר סבב הלחימה בעזה ב-2012, בהפקת Boikutt מרמאללה.",
+			en: "Post-2012 Gaza war rap produced by Ramallah's Boikutt. (Year listed as 2010s-era upload.)",
 		},
 	},
 ];

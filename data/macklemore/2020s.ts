@@ -7,6 +7,7 @@ export const macklemore2020s = [
 		published_date: "2024-09-20",
 		// MC Abdul's verse in the official upload's lyric sheet.
 		lyric_sample: {
+			hebrew: "בתי הספר שלנו הופכים למקלטים",
 			english_translation: "Our schools turn to shelters",
 		},
 		links: {
@@ -23,8 +24,14 @@ export const macklemore2020s = [
 		language: "English",
 		published_date: "2024-05-06",
 		lyric_sample: {
+			hebrew:
+				"האנשים לא יעזבו / מה מאיים במשיכת השקעות וברצון לשלום? / הבעיה היא לא ההפגנות, אלא על מה הם מפגינים.",
 			english_translation:
-				"The people, they won't leave / What is threatening about divesting and wanting peace? / The problem isn't the protests, it's what they're protesting — tribute to Hind Rajab. (Rolling Stone)",
+				"The people, they won't leave / What is threatening about divesting and wanting peace? / The problem isn't the protests, it's what they're protesting.",
+		},
+		context: {
+			he: "מחווה להנד רג'ב ולמחאות הסטודנטים בקמפוסים (Rolling Stone).",
+			en: "Tribute to Hind Rajab and campus protests. (Rolling Stone)",
 		},
 		links: {
 			song_info:

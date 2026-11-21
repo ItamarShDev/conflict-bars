@@ -4,9 +4,9 @@ export const katibe52000s = [
 		artist: "Katibe 5 (كتيبة 5)",
 		language: "Arabic",
 		published_date: "2008",
-		lyric_sample: {
-			english_translation:
-				"Title track of the debut album — life in Beirut's Burj al-Barajneh Palestinian refugee camp; the group describes the record as 'talking about the condition of the Palestinian refugees.' (Christian Science Monitor)",
+		context: {
+			he: "שיר הנושא של אלבום הבכורה — על החיים במחנה הפליטים הפלסטיני בורג' אל-בראג'נה בביירות; ההרכב תיאר את האלבום ככזה ש'מדבר על מצב הפליטים הפלסטינים' (Christian Science Monitor).",
+			en: "Title track of the debut album — life in Beirut's Burj al-Barajneh Palestinian refugee camp; the group describes the record as 'talking about the condition of the Palestinian refugees.' (Christian Science Monitor)",
 		},
 		links: {
 			song_info:
@@ -18,9 +18,9 @@ export const katibe52000s = [
 		artist: "Katibe 5 (كتيبة 5)",
 		language: "Arabic",
 		published_date: "2008",
-		lyric_sample: {
-			english_translation:
-				"The track 'disses the NGOs' working in the camps — 'they are all thieves,' says member OS Loop. (Christian Science Monitor)",
+		context: {
+			he: "שיר המותח ביקורת חריפה על הארגונים הלא-ממשלתיים הפועלים במחנות הפליטים (Christian Science Monitor).",
+			en: "The track 'disses the NGOs' working in the camps — 'they are all thieves,' says member OS Loop. (Christian Science Monitor)",
 		},
 		links: {
 			song_info:

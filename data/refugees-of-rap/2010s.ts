@@ -5,7 +5,8 @@ export const refugeesOfRap2010s = [
 		language: "Arabic",
 		published_date: "2014-05-05",
 		lyric_sample: {
-			hebrew: "بتمنى كون ببلادي ارجع لفلسطين",
+			arabic: "بتمنى كون ببلادي ارجع لفلسطين",
+			hebrew: "הלוואי שהייתי בארצי, שאחזור לפלסטין.",
 			english_translation: "I wish I could return to Palestine, to my country.",
 		},
 		links: {
@@ -20,9 +21,9 @@ export const refugeesOfRap2010s = [
 		collaborators: ["Mostfa Omar"],
 		language: "Arabic",
 		published_date: "2014-05-05",
-		lyric_sample: {
-			english_translation:
-				"Chorus built on Tawfiq Ziad's poetry; separation-wall theme — from The Age of Silence.",
+		context: {
+			he: "פזמון המבוסס על שירתו של תאופיק זיאד; עוסק בגדר ההפרדה — מתוך האלבום The Age of Silence.",
+			en: "Chorus built on Tawfiq Ziad's poetry; separation-wall theme — from The Age of Silence.",
 		},
 		links: {
 			song_info:
@@ -34,9 +35,9 @@ export const refugeesOfRap2010s = [
 		artist: "Refugees of Rap",
 		language: "Arabic",
 		published_date: "2014-05-05",
-		lyric_sample: {
-			english_translation:
-				"Defiance anthem written amid the Yarmouk siege era — from The Age of Silence.",
+		context: {
+			he: "המנון עמידה איתנה שנכתב בתקופת המצור על מחנה ירמוך — מתוך האלבום The Age of Silence.",
+			en: "Defiance anthem written amid the Yarmouk siege era — from The Age of Silence.",
 		},
 		links: {
 			song_info:
@@ -49,9 +50,9 @@ export const refugeesOfRap2010s = [
 		collaborators: ["Tamer Nafar (תאמר נפאר)"],
 		language: "Arabic",
 		published_date: "2014",
-		lyric_sample: {
-			english_translation:
-				"Cross-border Palestinian rap collab between the Syrian-Palestinian duo and DAM's Tamer Nafar.",
+		context: {
+			he: "שיתוף פעולה חוצה-גבולות בין הצמד הסורי-פלסטיני לבין תאמר נפאר מ-DAM.",
+			en: "Cross-border Palestinian rap collab between the Syrian-Palestinian duo and DAM's Tamer Nafar.",
 		},
 	},
 ];

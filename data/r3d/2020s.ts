@@ -5,11 +5,9 @@ export const r3d2020s = [
 		collaborators: ["Shabjdeed (شبجديد)", "Al Nather (النثر)"],
 		language: "Arabic",
 		published_date: "2024-08-31",
-		lyric_sample: {
-			hebrew:
-				"רקע: SceneNoise מתאר מילים המתמקדות בפלסטין וקליפ מאוחר יותר המציג תקיפות בעזה, מאסר ועקירה.",
-			english_translation:
-				"Context: SceneNoise describes Palestine-focused verses and a later video depicting Gaza airstrikes, imprisonment and displacement.",
+		context: {
+			he: "SceneNoise מתאר מילים המתמקדות בפלסטין וקליפ מאוחר יותר המציג תקיפות בעזה, מאסר ועקירה.",
+			en: "SceneNoise describes Palestine-focused verses and a later video depicting Gaza airstrikes, imprisonment and displacement.",
 		},
 		links: {
 			song_info:

@@ -18,7 +18,12 @@ export type SubmitSongFormProps = {
 		language?: string;
 		lyric_sample?: {
 			hebrew?: string;
+			arabic?: string;
 			english_translation?: string;
+		};
+		context?: {
+			he?: string;
+			en?: string;
 		};
 		links?: {
 			lyrics?: string;

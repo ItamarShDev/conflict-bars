@@ -4,9 +4,9 @@ export const checkpoint3032010s = [
 		artist: "Checkpoint 303 (تفتيش 303)",
 		language: "Arabic",
 		published_date: "2011",
-		lyric_sample: {
-			english_translation:
-				"Track on Checkpoint Tunes — activist project blending Palestinian field recordings with electronic beats; instrumental with archival audio, no sung lyrics. (Bandcamp)",
+		context: {
+			he: "רצועה מתוך Checkpoint Tunes — פרויקט אקטיביסטי המשלב הקלטות שטח מפלסטין עם ביטים אלקטרוניים; קטע אינסטרומנטלי עם אודיו ארכיוני, ללא שירה (Bandcamp).",
+			en: "Track on Checkpoint Tunes — activist project blending Palestinian field recordings with electronic beats; instrumental with archival audio, no sung lyrics. (Bandcamp)",
 		},
 		links: {
 			song_info: "https://checkpoint303.bandcamp.com/album/checkpoint-tunes",

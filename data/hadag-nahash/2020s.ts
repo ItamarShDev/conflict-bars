@@ -4,11 +4,9 @@ export const hadagNahash2020s = [
 		artist: "Hadag Nahash (הדג נחש)",
 		language: "Hebrew",
 		published_date: "2023-09-19",
-		lyric_sample: {
-			hebrew:
-				"הקשר (לא ציטוט מהשיר): זיכרונות משירות צבאי בעזה ומרגע של תקווה משותפת בזמן ועידת מדריד ב-1991.",
-			english_translation:
-				"Context (not lyrics): Memories of military service in Gaza and a moment of shared hope during the 1991 Madrid peace conference.",
+		context: {
+			he: "זיכרונות משירות צבאי בעזה ומרגע של תקווה משותפת בזמן ועידת מדריד ב-1991.",
+			en: "Memories of military service in Gaza and a moment of shared hope during the 1991 Madrid peace conference.",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=bBd2oJF5yAc",

@@ -5,8 +5,10 @@ export const dam2010s = [
 		language: "Arabic",
 		published_date: "2013",
 		lyric_sample: {
-			hebrew:
+			arabic:
 				"جهز الصحن الفضائي / كاسيت علادلعونه / الكل يوقف بسطر / ويدبك على القمر",
+			hebrew:
+				"תכין את החללית / וקלטת של 'עלא דלעונה' / כולם לעמוד בשורה אחת / ונרקוד דבקה על הירח.",
 			english_translation:
 				"Prepare the spaceship / and the Ala Dal'ona song / everyone stand in one line / and let's dance dabke on the moon.",
 		},
@@ -21,8 +23,10 @@ export const dam2010s = [
 		language: "Arabic",
 		published_date: "2010",
 		lyric_sample: {
-			hebrew:
+			arabic:
 				"انا من النقب انا من يافا / من عين حوض انا من عكا / من الجواريش انا من الناصره / انا من الرمله",
+			hebrew:
+				"אני מהנגב, אני מיפו / מעין חוד, אני מעכו / מג'ואריש, אני מנצרת / אני מרמלה.",
 			english_translation:
 				"I'm from the Negev, I'm from Jaffa / from Ein Hod, I'm from Acre / from Jawarish, I'm from Nazareth / I'm from Ramla.",
 		},
@@ -38,8 +42,10 @@ export const dam2010s = [
 		language: "Arabic",
 		published_date: "2011",
 		lyric_sample: {
-			hebrew:
+			arabic:
 				"لا تبكي يما خسارة على دموعك لا تبكي يما / مطر دموعك بيطفي النار الي فيا",
+			hebrew:
+				"אל תבכי אמא, חבל על הדמעות שלך, אל תבכי אמא / גשם הדמעות שלך מכבה את האש שבתוכי.",
 			english_translation:
 				"Don't cry, mother, your tears are too precious, don't cry / the rain of your tears puts out the fire inside me.",
 		},
@@ -54,8 +60,10 @@ export const dam2010s = [
 		language: "Arabic",
 		published_date: "2010",
 		lyric_sample: {
-			hebrew:
+			arabic:
 				"رحت عالمقابلة، قالولي: أسمك؟ قلت: محمود / قالولي: غيّرو لأشي مقبول، قلتلهم: مرفوض / قالولي: وأنت كمان مرفوض",
+			hebrew:
+				"הלכתי לריאיון, שאלו אותי: מה שמך? אמרתי: מחמוד / אמרו לי: תשנה אותו למשהו מקובל, אמרתי: נדחה / אמרו לי: אז גם אתה נדחה.",
 			english_translation:
 				"I went to the interview, they asked my name, I said Mahmoud / they said change it to something acceptable, I said refused / they said then you are refused too.",
 		},
@@ -86,7 +94,9 @@ export const dam2010s = [
 		language: "Arabic/English",
 		published_date: "2012-04-04",
 		lyric_sample: {
-			hebrew: "الفن ثورة, احنا من اليوم وطالع مش مقاومين بس, أحنا فنانين",
+			arabic: "الفن ثورة, احنا من اليوم وطالع مش مقاومين بس, أحنا فنانين",
+			hebrew:
+				"האמנות היא מהפכה; מהיום והלאה אנחנו לא רק לוחמי התנגדות, אנחנו אמנים.",
 			english_translation:
 				"Art is revolution; from today onward we are not only resistance fighters, we are artists.",
 		},
@@ -103,8 +113,14 @@ export const dam2010s = [
 		language: "Arabic",
 		published_date: "2012-11-06",
 		lyric_sample: {
+			hebrew:
+				"לפני שהיא נרצחה, היא לא הייתה בחיים / נספר את סיפורה אחורה, מהרצח שלה ועד לידתה.",
 			english_translation:
-				"Before she was murdered, she wasn't alive / We'll tell her story backwards from her murder to her birth — on honor killings and women's oppression. (arabology.org)",
+				"Before she was murdered, she wasn't alive / We'll tell her story backwards from her murder to her birth.",
+		},
+		context: {
+			he: "שיר העוסק ברצח על רקע 'כבוד המשפחה' ובדיכוי נשים.",
+			en: "On honor killings and women's oppression.",
 		},
 		links: {
 			song_info:
@@ -118,9 +134,13 @@ export const dam2010s = [
 		language: "Arabic/English",
 		published_date: "2012",
 		lyric_sample: {
-			hebrew: "كلبش كلبش كلبش مجرمي الحرب",
-			english_translation:
-				"Handcuff, handcuff, handcuff the war criminals — a verse dated May 31 2010 references the Mavi Marmara raid on the Gaza flotilla. (lyrics.lol)",
+			arabic: "كلبش كلبش كلبش مجرمي الحرب",
+			hebrew: "אזקו, אזקו, אזקו את פושעי המלחמה.",
+			english_translation: "Handcuff, handcuff, handcuff the war criminals.",
+		},
+		context: {
+			he: "בית שמתוארך ל-31 במאי 2010 מתייחס לפשיטה על המשט לעזה (המאווי מרמרה).",
+			en: "A verse dated May 31, 2010 references the Mavi Marmara raid on the Gaza flotilla.",
 		},
 		links: {
 			lyrics:

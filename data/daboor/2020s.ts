@@ -6,7 +6,8 @@ export const daboor2020s = [
 		language: "Arabic",
 		published_date: "2021",
 		lyric_sample: {
-			hebrew: "بدك جبال وعادي بنهدلك / مرحب فيك في أولاد القدس",
+			arabic: "بدك جبال وعادي بنهدلك / مرحب فيك في أولاد القدس",
+			hebrew: "אתה רוצה הרים? בסדר, נפיל אותם בשבילך / ברוך הבא לבני ירושלים.",
 			english_translation:
 				"You want mountains? Fine, we'll bring them down for you / welcome among the sons of Jerusalem.",
 		},
@@ -21,7 +22,8 @@ export const daboor2020s = [
 		language: "Arabic",
 		published_date: "2021-05-11",
 		lyric_sample: {
-			hebrew: "في صوت رصاص زغرد في الشيخ جراح",
+			arabic: "في صوت رصاص زغرد في الشيخ جراح",
+			hebrew: "יש קול יריות שמהדהד בצהלולים בשייח' ג'ראח.",
 			english_translation:
 				"There's a sound of gunfire ululating in Sheikh Jarrah.",
 		},
@@ -35,9 +37,9 @@ export const daboor2020s = [
 		artist: "Daboor (دابور)",
 		language: "Arabic",
 		published_date: "2023",
-		lyric_sample: {
-			english_translation:
-				"BLTNM single — gun/street imagery from the Ramallah crew.",
+		context: {
+			he: "סינגל בלייבל BLTNM — דימויי רחוב ונשק מהקולקטיב של רמאללה.",
+			en: "BLTNM single — gun/street imagery from the Ramallah crew.",
 		},
 		links: {
 			song_info: "https://bltnm.bandcamp.com",

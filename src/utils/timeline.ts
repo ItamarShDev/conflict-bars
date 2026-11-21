@@ -106,7 +106,10 @@ export function getEntriesByYear(
 			song.artist,
 			...(song.collaborators ?? []),
 			song.lyric_sample?.hebrew,
+			song.lyric_sample?.arabic,
 			song.lyric_sample?.english_translation,
+			song.context?.he,
+			song.context?.en,
 			song.full_lyrics?.hebrew,
 			song.full_lyrics?.english_translation,
 		];

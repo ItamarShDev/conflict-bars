@@ -70,6 +70,10 @@ export function SongEntry({
 		isSongObject && !isCompact && "lyric_sample" in songObj
 			? songObj.lyric_sample
 			: undefined;
+	const songContext =
+		isSongObject && !isCompact && "context" in songObj
+			? songObj.context
+			: undefined;
 	const links =
 		isSongObject && !isCompact && "links" in songObj
 			? songObj.links
@@ -122,10 +126,44 @@ export function SongEntry({
 		</button>
 	);
 
+	const lyricHebrew = lyricSample?.hebrew?.trim()
+		? lyricSample.hebrew
+		: undefined;
+	const lyricEnglish = lyricSample?.english_translation?.trim()
+		? lyricSample.english_translation
+		: undefined;
+	const lyricArabic = lyricSample?.arabic?.trim()
+		? lyricSample.arabic
+		: undefined;
 	const lyricContent =
 		lang === "he"
-			? (lyricSample?.hebrew ?? lyricSample?.english_translation)
-			: (lyricSample?.english_translation ?? lyricSample?.hebrew);
+			? (lyricHebrew ?? lyricEnglish ?? lyricArabic)
+			: (lyricEnglish ?? lyricHebrew ?? lyricArabic);
+	const lyricDir =
+		lang === "he"
+			? lyricHebrew || !lyricEnglish
+				? "rtl"
+				: "ltr"
+			: lyricEnglish
+				? "ltr"
+				: "rtl";
+	const originalArabicLyric =
+		lyricArabic && lyricArabic !== lyricContent ? lyricArabic : undefined;
+
+	const contextHebrew = songContext?.he?.trim() ? songContext.he : undefined;
+	const contextEnglish = songContext?.en?.trim() ? songContext.en : undefined;
+	const contextContent =
+		lang === "he"
+			? (contextHebrew ?? contextEnglish)
+			: (contextEnglish ?? contextHebrew);
+	const contextDir =
+		lang === "he"
+			? contextHebrew
+				? "rtl"
+				: "ltr"
+			: contextEnglish
+				? "ltr"
+				: "rtl";
 
 	const normalizedHighlight = highlightTerm?.trim();
 	const escapeRegex = (value: string) =>
@@ -192,14 +230,33 @@ export function SongEntry({
 					</div>
 				)}
 
-				{!isCompact && lyricSample && lyricContent && (
-					<div className="pt-3 border-t border-(--color-border)">
-						<p
-							className={`text-sm leading-relaxed italic text-(--color-muted-foreground) text-start`}
-							dir={lang === "he" && lyricSample?.hebrew ? "rtl" : "ltr"}
-						>
-							"{highlightText(lyricContent)}"
-						</p>
+				{!isCompact && (lyricContent || contextContent) && (
+					<div className="pt-3 border-t border-(--color-border) space-y-2">
+						{originalArabicLyric && (
+							<p
+								className="text-sm leading-relaxed italic text-(--color-muted-foreground) text-start"
+								dir="rtl"
+								lang="ar"
+							>
+								"{highlightText(originalArabicLyric)}"
+							</p>
+						)}
+						{lyricContent && (
+							<p
+								className="text-sm leading-relaxed italic text-(--color-muted-foreground) text-start"
+								dir={lyricDir}
+							>
+								"{highlightText(lyricContent)}"
+							</p>
+						)}
+						{contextContent && (
+							<p
+								className="text-sm leading-relaxed text-(--color-muted-foreground) text-start"
+								dir={contextDir}
+							>
+								{highlightText(contextContent)}
+							</p>
+						)}
 					</div>
 				)}
 

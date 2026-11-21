@@ -56,9 +56,9 @@ export const quami2000s = [
 		collaborators: ["Tamer Nafar (תאמר נפאר)"],
 		language: "Hebrew/Arabic",
 		published_date: "2005-02",
-		lyric_sample: {
-			english_translation:
-				"Coexistence collab on כולם יודעים את התשובות with DAM's Tamer Nafar.",
+		context: {
+			he: "שיתוף פעולה לדו-קיום מתוך האלבום 'כולם יודעים את התשובות' עם תאמר נפאר מ-DAM.",
+			en: "Coexistence collab on כולם יודעים את התשובות with DAM's Tamer Nafar.",
 		},
 		links: {
 			song_info: "https://stereo-ve-mono.com/13643",
@@ -69,9 +69,9 @@ export const quami2000s = [
 		artist: "Quami (קוואמי)",
 		language: "Hebrew",
 		published_date: "2005-02",
-		lyric_sample: {
-			english_translation:
-				"'Black days' — from כולם יודעים את התשובות (stereo-ve-mono tracklist).",
+		context: {
+			he: "מתוך האלבום 'כולם יודעים את התשובות'.",
+			en: "'Black days' — from כולם יודעים את התשובות (stereo-ve-mono tracklist).",
 		},
 		links: {
 			song_info: "https://stereo-ve-mono.com/13643",

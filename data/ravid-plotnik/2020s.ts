@@ -4,11 +4,9 @@ export const ravidPlotnik2020s = [
 		artist: "Ravid Plotnik (רביד פלוטניק)",
 		language: "Hebrew",
 		published_date: "2025-01-10",
-		lyric_sample: {
-			hebrew:
-				"רקע: ביקורת כלכליסט קושרת את השיר לאזכרות, לפצועים ולהלוויות בימים שלאחר 7 באוקטובר.",
-			english_translation:
-				"Context: Calcalist's review connects this track to memorials, wounded people and funerals in the days following October 7.",
+		context: {
+			he: "ביקורת כלכליסט קושרת את השיר לאזכרות, לפצועים ולהלוויות בימים שלאחר 7 באוקטובר.",
+			en: "Calcalist's review connects this track to memorials, wounded people and funerals in the days following October 7.",
 		},
 		links: {
 			lyrics: "https://ravidplotnik.bandcamp.com/track/--87",
@@ -21,9 +19,9 @@ export const ravidPlotnik2020s = [
 		collaborators: ["Taboo Plus"],
 		language: "Hebrew",
 		published_date: "2025-01-10",
-		lyric_sample: {
-			english_translation:
-				"Track 11 on the album 'HaDerech LiShvil HaZahav'; on keeping a daily routine while the war goes on.",
+		context: {
+			he: "רצועה 11 באלבום 'הדרך לשביל הזהב'; עוסק בשמירה על שגרת יומיום בזמן שהמלחמה נמשכת.",
+			en: "Track 11 on the album 'HaDerech LiShvil HaZahav'; on keeping a daily routine while the war goes on.",
 		},
 		links: {
 			lyrics:
