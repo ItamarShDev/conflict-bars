@@ -418,10 +418,19 @@ html[data-theme="boombox"] h3 {
 }
 @font-face {
 	font-family: "Pass It On Hebrew";
-	src: url("/pass-it-on/gveret-levin.woff2") format("woff2");
+	src: url("/pass-it-on/frank-ruhl-libre-latin.woff2") format("woff2");
 	font-style: normal;
-	font-weight: 400;
+	font-weight: 300 900;
 	font-display: swap;
+}
+@font-face {
+	font-family: "Pass It On Hebrew";
+	src: url("/pass-it-on/frank-ruhl-libre.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 300 900;
+	font-display: swap;
+	unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC,
+		U+FB1D-FB4F;
 }
 .pass-it-on .pass-it-on-hero-inner {
 	position: relative;
@@ -618,7 +627,8 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-title span + span {
 	scrollbar-width: thin;
 	scroll-snap-type: x proximity;
 }
-[dir="rtl"] .pass-it-on .pass-it-on-rail-controls .pass-it-on-rail-arrow span {
+/* ‹ and › are bidi-mirrored in RTL already; → is not, so it needs the flip */
+[dir="rtl"] .pass-it-on .pass-it-on-rail-controls .pass-it-on-advance > span {
 	display: inline-block;
 	transform: scaleX(-1);
 }
@@ -1108,6 +1118,7 @@ html[data-theme="boombox"] .pass-it-on {
 .pass-it-on.pass-it-on-chart-page[dir="rtl"] .pass-it-on-chart-title {
 	font-family: "Pass It On Hebrew", cursive;
 	font-size: clamp(2.5rem, 5vw, 4.25rem);
+	font-weight: 700;
 	letter-spacing: 0;
 	line-height: 1.15;
 }
@@ -1336,6 +1347,7 @@ html[data-theme="boombox"] .pass-it-on h1.pass-it-on-title span + span {
 	font-family: "Pass It On Hebrew", cursive;
 	font-size: clamp(3.25rem, 7vw, 5.625rem);
 	font-style: normal;
+	font-weight: 700;
 	letter-spacing: 0;
 	line-height: 1.08;
 }
@@ -1345,6 +1357,7 @@ html[data-theme="boombox"] .pass-it-on h1.pass-it-on-title span + span {
 	color: #a3432f;
 	font-family: "Pass It On Hebrew", cursive;
 	font-size: clamp(1.9rem, 3vw, 2.25rem);
+	font-weight: 500;
 	line-height: 1;
 	transform: rotate(-4deg);
 }
@@ -1569,6 +1582,7 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-hebrew {
 .pass-it-on[dir="rtl"] .pass-it-on-chronology-header h2 {
 	font-family: "Pass It On Hebrew", cursive;
 	font-style: normal;
+	font-weight: 700;
 	letter-spacing: 0;
 }
 .pass-it-on .pass-it-on-method {
@@ -1791,9 +1805,12 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-no-match button {
 	scroll-margin-top: calc(var(--pass-it-on-sticky-offset, 0px) + 4rem);
 }
 .pass-it-on .pass-it-on-year-spool {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
 	min-height: 0;
-	justify-content: center;
+	align-items: center;
 	gap: 0.9rem;
+	width: 100%;
 	margin: 0 auto 2rem;
 	color: var(--pass-ink);
 	font-family: "Pass It On Serif", Georgia, serif;
@@ -1803,6 +1820,7 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-no-match button {
 	line-height: 0.9;
 }
 .pass-it-on .pass-it-on-year-spool > span:first-child {
+	justify-self: end;
 	width: auto;
 	height: auto;
 	border: 0;
@@ -1839,6 +1857,7 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-no-match button {
 	transform: rotate(90deg);
 }
 .pass-it-on .pass-it-on-year-track-count {
+	justify-self: start;
 	max-width: 15rem;
 	color: var(--pass-muted);
 	font-family: Arial, Helvetica, sans-serif;
@@ -1937,6 +1956,7 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-track-number {
 	font-family: "Pass It On Hebrew", cursive;
 	font-size: 1.65rem;
 	font-style: normal;
+	font-weight: 600;
 }
 .pass-it-on .pass-it-on-song-summary-copy > span {
 	color: var(--pass-muted);
@@ -2018,6 +2038,7 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-track-number {
 .pass-it-on .pass-it-on-event-heading strong[lang="he"] {
 	font-family: "Pass It On Hebrew", cursive;
 	font-size: 1.5rem;
+	font-weight: 600;
 }
 .pass-it-on .pass-it-on-event-dates,
 .pass-it-on .pass-it-on-filed-under {
@@ -2054,6 +2075,7 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-track-number {
 .pass-it-on[dir="rtl"] .pass-it-on-empty {
 	font-family: "Pass It On Hebrew", cursive;
 	font-style: normal;
+	font-weight: 500;
 }
 .pass-it-on .pass-it-on-empty {
 	max-width: 520px;
@@ -2209,9 +2231,22 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-track-number {
 	}
 
 	.pass-it-on .pass-it-on-year-spool {
+		display: flex;
+		position: relative;
 		justify-content: flex-start;
 		margin-inline: 0;
 		font-size: clamp(3.75rem, 15vw, 5.25rem);
+	}
+
+	.pass-it-on .pass-it-on-year-spool > span:first-child {
+		justify-self: auto;
+	}
+
+	.pass-it-on .pass-it-on-year-reel {
+		position: absolute;
+		inset-inline-start: -3rem;
+		inset-block-start: 50%;
+		translate: 0 -50%;
 	}
 
 	.pass-it-on .pass-it-on-year-columns {

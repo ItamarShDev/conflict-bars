@@ -14,7 +14,7 @@
 
 ## Typeface files
 
-- Gveret Levin, Hebrew handwriting. Copyright 2024 The Gveret Levin Project Authors. [Project](https://github.com/AlefAlefAlef/gveret-levin); [font specimen](https://fonts.google.com/specimen/Gveret+Levin).
+- Frank Ruhl Libre, Hebrew display serif. Copyright 2015 The Frank Ruhl Libre Project Authors. [Project](https://github.com/fontef/frankruhllibre); [font specimen](https://fonts.google.com/specimen/Frank+Ruhl+Libre).
 - Instrument Serif, display. Copyright 2022 The Instrument Serif Project Authors. [Project](https://github.com/Instrument/instrument-serif); [font specimen](https://fonts.google.com/specimen/Instrument+Serif).
 
 Both typefaces are licensed under the SIL Open Font License, Version 1.1. The complete license texts are in `OFL.txt`.
