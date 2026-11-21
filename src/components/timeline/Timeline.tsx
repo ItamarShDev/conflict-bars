@@ -216,7 +216,6 @@ export function Timeline({
 	useEffect(() => {
 		const container = yearsContainerRef.current;
 		if (!container || visibleYearGroups.length === 0) return;
-		void view;
 		if (
 			typeof IntersectionObserver === "undefined" ||
 			window.matchMedia("(prefers-reduced-motion: reduce)").matches
@@ -264,7 +263,7 @@ export function Timeline({
 		}
 
 		return () => cardObserver.disconnect();
-	}, [visibleYearGroups.length, view]);
+	}, [visibleYearGroups]);
 
 	const hasActiveFilters =
 		selectedLeanings.length > 0 || selectedDecades.length > 0;
