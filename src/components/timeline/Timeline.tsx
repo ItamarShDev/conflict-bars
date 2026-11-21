@@ -8,6 +8,7 @@ import { PassItOnHero } from "@/components/timeline/PassItOnHero";
 import { PassItOnNoMatches } from "@/components/timeline/PassItOnNoMatches";
 import { PassItOnYearSection } from "@/components/timeline/PassItOnYearSection";
 import { PassItOnYearSpool } from "@/components/timeline/PassItOnYearSpool";
+import { ScrollyBackdrop } from "@/components/timeline/ScrollyBackdrop";
 import { TimelineHeader } from "@/components/timeline/TimelineHeader";
 import { translations } from "@/components/timeline/translations";
 import { convertConvexEventsToTimeline } from "@/utils/convex-helpers";
@@ -74,6 +75,7 @@ export function Timeline({
 		[visibleYearGroups],
 	);
 	const sectionRefs = useRef<Record<number, HTMLElement | null>>({});
+	const yearsContainerRef = useRef<HTMLDivElement | null>(null);
 	const clearManualScrollLock = useCallback((expected?: ManualScrollLock) => {
 		const lock = manualScrollLockRef.current;
 		if (!lock || (expected && lock !== expected)) return;
@@ -211,6 +213,58 @@ export function Timeline({
 		return () => observer.disconnect();
 	}, [visibleYearGroups]);
 
+	useEffect(() => {
+		const container = yearsContainerRef.current;
+		if (!container || visibleYearGroups.length === 0) return;
+		if (
+			typeof IntersectionObserver === "undefined" ||
+			window.matchMedia("(prefers-reduced-motion: reduce)").matches
+		) {
+			container.removeAttribute("data-reveal-ready");
+			return;
+		}
+
+		const cards = Array.from(
+			container.querySelectorAll<HTMLElement>(
+				".pass-it-on-song-disclosure, .pass-it-on-event-disclosure",
+			),
+		);
+		if (cards.length === 0) return;
+
+		container.setAttribute("data-reveal-ready", "true");
+		const viewportHeight = window.innerHeight || 900;
+		for (const card of cards) {
+			const rect = card.getBoundingClientRect();
+			if (rect.top < viewportHeight * 0.96) {
+				card.setAttribute("data-in-view", "true");
+			}
+		}
+
+		const cardObserver = new IntersectionObserver(
+			(observed) => {
+				for (const item of observed) {
+					if (item.isIntersecting) {
+						item.target.setAttribute("data-in-view", "true");
+						cardObserver.unobserve(item.target);
+					}
+				}
+			},
+			{
+				root: null,
+				rootMargin: "0px 0px -6% 0px",
+				threshold: 0.08,
+			},
+		);
+
+		for (const card of cards) {
+			if (card.getAttribute("data-in-view") !== "true") {
+				cardObserver.observe(card);
+			}
+		}
+
+		return () => cardObserver.disconnect();
+	}, [visibleYearGroups]);
+
 	const hasActiveFilters =
 		selectedLeanings.length > 0 || selectedDecades.length > 0;
 	const hasSearchOrFilters = searchTerm.trim().length > 0 || hasActiveFilters;
@@ -269,6 +323,7 @@ export function Timeline({
 					id="pass-it-on-chronology"
 					aria-labelledby="pass-it-on-chronology-title"
 				>
+					<ScrollyBackdrop selectedYear={selectedYear} />
 					<header className="pass-it-on-chronology-header">
 						<p className="pass-it-on-kicker">{t.passItOn.chronologyKicker}</p>
 						<h2 id="pass-it-on-chronology-title">
@@ -365,7 +420,21 @@ export function Timeline({
 						/>
 					)}
 
-					<div className="pass-it-on-years">
+					{view !== "history" && (
+						<div className="pass-it-on-spectrum-axis" dir="ltr">
+							<span className="pass-it-on-spectrum-pill pass-it-on-spectrum-left">
+								{t.passItOn.spectrumLeft}
+							</span>
+							<span className="pass-it-on-spectrum-pill pass-it-on-spectrum-center">
+								{t.passItOn.spectrumCenter}
+							</span>
+							<span className="pass-it-on-spectrum-pill pass-it-on-spectrum-right">
+								{t.passItOn.spectrumRight}
+							</span>
+						</div>
+					)}
+
+					<div className="pass-it-on-years" ref={yearsContainerRef}>
 						{visibleYearGroups.map(([year, entries]) => (
 							<PassItOnYearSection
 								key={year}

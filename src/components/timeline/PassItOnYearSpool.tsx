@@ -11,6 +11,43 @@ import {
 
 type PassItOnCopy = (typeof translations)["en"]["passItOn"];
 
+function MiniCassetteReel({ side }: { side: "start" | "end" }) {
+	return (
+		<span
+			className={`pass-it-on-scrubber-reel pass-it-on-scrubber-reel-${side}`}
+			aria-hidden="true"
+		>
+			<svg viewBox="0 0 40 40" width="28" height="28">
+				<title>Cassette reel</title>
+				<circle
+					cx="20"
+					cy="20"
+					r="17.5"
+					className="pass-it-on-scrubber-reel-pack"
+				/>
+				<g className="pass-it-on-scrubber-reel-rotor">
+					<circle
+						cx="20"
+						cy="20"
+						r="10.5"
+						className="pass-it-on-scrubber-reel-hub"
+					/>
+					<path
+						d="M18.4 10.5 L21.6 10.5 L21 15 L19 15 Z M27.8 23.6 L26.2 26.4 L22.5 23.6 L23.5 21.8 Z M12.2 23.6 L13.8 26.4 L17.5 23.6 L16.5 21.8 Z"
+						className="pass-it-on-scrubber-reel-teeth"
+					/>
+					<circle
+						cx="20"
+						cy="20"
+						r="4.2"
+						className="pass-it-on-scrubber-reel-core"
+					/>
+				</g>
+			</svg>
+		</span>
+	);
+}
+
 export function PassItOnYearSpool({
 	years,
 	groups,
@@ -36,6 +73,52 @@ export function PassItOnYearSpool({
 }) {
 	const yearsRef = useRef<HTMLUListElement>(null);
 	const railRef = useRef<HTMLElement>(null);
+	const counterRef = useRef<HTMLSpanElement>(null);
+
+	useEffect(() => {
+		const rail = railRef.current;
+		if (!rail) return;
+
+		const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+		let rafId = 0;
+
+		const updateScrub = () => {
+			rafId = 0;
+			const maxScroll = Math.max(
+				1,
+				document.documentElement.scrollHeight - window.innerHeight,
+			);
+			const pct = Math.min(1, Math.max(0, window.scrollY / maxScroll));
+			const pctText = `${String(Math.round(pct * 100)).padStart(3, "0")}%`;
+			rail.style.setProperty("--tape-progress", `${(pct * 100).toFixed(1)}%`);
+			if (reducedMotion.matches) {
+				rail.style.setProperty("--spool-deg", "0deg");
+			} else {
+				rail.style.setProperty(
+					"--spool-deg",
+					`${(window.scrollY * 0.55).toFixed(1)}deg`,
+				);
+			}
+			if (counterRef.current && counterRef.current.textContent !== pctText) {
+				counterRef.current.textContent = pctText;
+			}
+		};
+
+		const onScroll = () => {
+			if (!rafId) {
+				rafId = window.requestAnimationFrame(updateScrub);
+			}
+		};
+
+		updateScrub();
+		window.addEventListener("scroll", onScroll, { passive: true });
+		reducedMotion.addEventListener("change", updateScrub);
+		return () => {
+			window.removeEventListener("scroll", onScroll);
+			reducedMotion.removeEventListener("change", updateScrub);
+			if (rafId) window.cancelAnimationFrame(rafId);
+		};
+	}, []);
 
 	useEffect(() => {
 		const rail = railRef.current;
@@ -105,6 +188,14 @@ export function PassItOnYearSpool({
 			ref={railRef}
 		>
 			<div className="pass-it-on-rail-controls">
+				<MiniCassetteReel side="start" />
+				<span
+					ref={counterRef}
+					className="pass-it-on-scrubber-counter"
+					aria-hidden="true"
+				>
+					000%
+				</span>
 				<button
 					type="button"
 					className="pass-it-on-rail-arrow"
@@ -138,35 +229,42 @@ export function PassItOnYearSpool({
 				</button>
 			</div>
 			<div className="pass-it-on-rail-year-row">
-				<ul className="pass-it-on-rail-years" ref={yearsRef}>
-					{years.map((year) => {
-						const flags = entryFlags(year);
-						return (
-							<li key={year}>
-								<button
-									type="button"
-									className="pass-it-on-year-button"
-									data-year={year}
-									aria-label={`${copy.selectYear} ${year}`}
-									aria-pressed={year === selectedYear}
-									onClick={() => onSelect(year)}
-								>
-									<span>{year}</span>
-									<span className="pass-it-on-year-markers" aria-hidden="true">
-										<i
-											className="pass-it-on-marker-music"
-											data-active={flags.hasMusic}
-										/>
-										<i
-											className="pass-it-on-marker-history"
-											data-active={flags.hasHistory}
-										/>
-									</span>
-								</button>
-							</li>
-						);
-					})}
-				</ul>
+				<div className="pass-it-on-tape-window">
+					<span className="pass-it-on-tape-progress" aria-hidden="true" />
+					<ul className="pass-it-on-rail-years" ref={yearsRef}>
+						{years.map((year) => {
+							const flags = entryFlags(year);
+							return (
+								<li key={year}>
+									<button
+										type="button"
+										className="pass-it-on-year-button"
+										data-year={year}
+										aria-label={`${copy.selectYear} ${year}`}
+										aria-pressed={year === selectedYear}
+										onClick={() => onSelect(year)}
+									>
+										<span>{year}</span>
+										<span
+											className="pass-it-on-year-markers"
+											aria-hidden="true"
+										>
+											<i
+												className="pass-it-on-marker-music"
+												data-active={flags.hasMusic}
+											/>
+											<i
+												className="pass-it-on-marker-history"
+												data-active={flags.hasHistory}
+											/>
+										</span>
+									</button>
+								</li>
+							);
+						})}
+					</ul>
+					<MiniCassetteReel side="end" />
+				</div>
 				{submitAction && (
 					<div className="pass-it-on-rail-submit">{submitAction}</div>
 				)}

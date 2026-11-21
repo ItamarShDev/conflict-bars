@@ -72,8 +72,8 @@ describe("Pass It On year rendering", () => {
 			expect(html).toContain(`dir="${lang === "he" ? "rtl" : "ltr"}"`);
 			expect(html).toContain("pass-it-on-year-reel");
 			expect(html).toContain('tabindex="-1"');
-			expect(html.indexOf("pass-it-on-music-lane")).toBeLessThan(
-				html.indexOf("pass-it-on-history-lane"),
+			expect(html.indexOf("pass-it-on-history-lane")).toBeLessThan(
+				html.indexOf("pass-it-on-music-lane"),
 			);
 			expect(html).toContain(
 				lang === "he"
@@ -181,5 +181,31 @@ describe("Pass It On year rendering", () => {
 		expect(translations.he.passItOn.noHistoryInYear).toContain(
 			"מתחילות בשנה זו",
 		);
+	});
+
+	it("renders conflict hip-hop intros inside expandable summaries and physical-axis leaning edges on song cards", () => {
+		const group = getEntriesByYear(songs, events).find(
+			([year]) => year === 2008,
+		);
+		if (!group) throw new Error("Expected year 2008 group");
+		const html = renderToStaticMarkup(
+			<PassItOnYearSection
+				year={group[0]}
+				entries={group[1]}
+				lang="en"
+				highlightTerm=""
+				translations={translations.en}
+				sectionRef={null}
+				isActive={false}
+				view="all"
+			/>,
+		);
+
+		expect(html).toContain('data-physical-axis="true"');
+		expect(html).toContain('data-leaning="left"');
+		expect(html).toContain('data-leaning="right"');
+		expect(html).toContain('class="pass-it-on-leaning-edge"');
+		expect(html).toContain('class="pass-it-on-event-hiphop-intro"');
+		expect(html).toContain(translations.en.passItOn.hipHopEffectLabel);
 	});
 });
