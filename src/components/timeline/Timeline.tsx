@@ -3,21 +3,14 @@
 import { usePreloadedQuery } from "convex/react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { SubmitSongModal } from "@/components/SubmitSongModal";
-import { FilterPanel } from "@/components/timeline/FilterPanel";
 import { PassItOnHero } from "@/components/timeline/PassItOnHero";
-import { PassItOnNoMatches } from "@/components/timeline/PassItOnNoMatches";
 import { PassItOnYearSection } from "@/components/timeline/PassItOnYearSection";
 import { PassItOnYearSpool } from "@/components/timeline/PassItOnYearSpool";
 import { ScrollyBackdrop } from "@/components/timeline/ScrollyBackdrop";
 import { TimelineHeader } from "@/components/timeline/TimelineHeader";
 import { translations } from "@/components/timeline/translations";
 import { convertConvexEventsToTimeline } from "@/utils/convex-helpers";
-import {
-	filterYearGroups,
-	getCatalogStats,
-	getEntriesByYear,
-	type TimelineView,
-} from "@/utils/timeline";
+import { getCatalogStats, getEntriesByYear } from "@/utils/timeline";
 import {
 	getYearScrollTop,
 	MOBILE_DOCK_BREAKPOINT,
@@ -46,33 +39,15 @@ export function Timeline({
 		() => convertConvexEventsToTimeline(convexEventsData),
 		[convexEventsData],
 	);
-	const [searchTerm, setSearchTerm] = useState("");
-	const [selectedLeanings, setSelectedLeanings] = useState<string[]>([]);
-	const [selectedDecades, setSelectedDecades] = useState<number[]>([]);
 	const [selectedYear, setSelectedYear] = useState<number | null>(null);
-	const [view, setView] = useState<TimelineView>("all");
 	const manualScrollLockRef = useRef<ManualScrollLock | null>(null);
 
 	const yearGroups = useMemo(
-		() =>
-			getEntriesByYear(
-				songs,
-				events,
-				searchTerm,
-				selectedLeanings,
-				selectedDecades,
-			),
-		[songs, events, searchTerm, selectedLeanings, selectedDecades],
-	);
-	const visibleYearGroups = useMemo(
-		() => filterYearGroups(yearGroups, view),
-		[yearGroups, view],
+		() => getEntriesByYear(songs, events),
+		[songs, events],
 	);
 	const catalogStats = useMemo(() => getCatalogStats(songs), [songs]);
-	const years = useMemo(
-		() => visibleYearGroups.map(([year]) => year),
-		[visibleYearGroups],
-	);
+	const years = useMemo(() => yearGroups.map(([year]) => year), [yearGroups]);
 	const sectionRefs = useRef<Record<number, HTMLElement | null>>({});
 	const yearsContainerRef = useRef<HTMLDivElement | null>(null);
 	const clearManualScrollLock = useCallback((expected?: ManualScrollLock) => {
@@ -156,7 +131,7 @@ export function Timeline({
 	};
 
 	useEffect(() => {
-		if (visibleYearGroups.length === 0) return;
+		if (yearGroups.length === 0) return;
 		const observer = new IntersectionObserver(
 			(entries) => {
 				const visible = entries
@@ -174,16 +149,16 @@ export function Timeline({
 			},
 		);
 
-		for (const [year] of visibleYearGroups) {
+		for (const [year] of yearGroups) {
 			const section = sectionRefs.current[year];
 			if (section) observer.observe(section);
 		}
 		return () => observer.disconnect();
-	}, [visibleYearGroups]);
+	}, [yearGroups]);
 
 	useEffect(() => {
 		const container = yearsContainerRef.current;
-		if (!container || visibleYearGroups.length === 0) return;
+		if (!container || yearGroups.length === 0) return;
 		if (
 			typeof IntersectionObserver === "undefined" ||
 			window.matchMedia("(prefers-reduced-motion: reduce)").matches
@@ -231,11 +206,8 @@ export function Timeline({
 		}
 
 		return () => cardObserver.disconnect();
-	}, [visibleYearGroups]);
+	}, [yearGroups]);
 
-	const hasActiveFilters =
-		selectedLeanings.length > 0 || selectedDecades.length > 0;
-	const hasSearchOrFilters = searchTerm.trim().length > 0 || hasActiveFilters;
 	const matchingSongCount = useMemo(
 		() =>
 			yearGroups.reduce(
@@ -247,14 +219,13 @@ export function Timeline({
 	);
 	const visibleEventCount = useMemo(
 		() =>
-			visibleYearGroups.reduce(
+			yearGroups.reduce(
 				(count, [, entries]) =>
 					count + entries.filter((entry) => entry.type === "conflict").length,
 				0,
 			),
-		[visibleYearGroups],
+		[yearGroups],
 	);
-	const hasNoSongMatches = hasSearchOrFilters && matchingSongCount === 0;
 	const statusText = t.passItOn.status
 		.replace("{{songs}}", String(matchingSongCount))
 		.replace("{{events}}", String(visibleEventCount));
@@ -298,69 +269,10 @@ export function Timeline({
 					aria-labelledby="pass-it-on-chronology-title"
 				>
 					<ScrollyBackdrop selectedYear={selectedYear} />
-					<header className="pass-it-on-chronology-header">
-						<p className="pass-it-on-kicker">{t.passItOn.chronologyKicker}</p>
-						<h2 id="pass-it-on-chronology-title">
-							{t.passItOn.chronologyTitle}
-						</h2>
-						<p className="pass-it-on-method">{t.passItOn.method}</p>
-					</header>
-
-					<div className="pass-it-on-controls">
-						<div className="pass-it-on-search-filter">
-							<div className="pass-it-on-search-wrap">
-								<label
-									htmlFor="timeline-search"
-									className="pass-it-on-control-label"
-								>
-									{t.search.label}
-								</label>
-								<input
-									id="timeline-search"
-									type="search"
-									value={searchTerm}
-									onChange={(event) => setSearchTerm(event.target.value)}
-									placeholder={t.search.placeholder}
-									dir={lang === "he" ? "rtl" : "ltr"}
-									className="pass-it-on-search-input"
-									aria-label={t.search.label}
-									aria-describedby="pass-it-on-search-note"
-								/>
-							</div>
-							<FilterPanel
-								lang={lang}
-								translations={t.filters}
-								selectedLeanings={selectedLeanings}
-								onLeaningsChange={setSelectedLeanings}
-								selectedDecades={selectedDecades}
-								onDecadesChange={setSelectedDecades}
-							/>
-						</div>
-						<fieldset className="pass-it-on-view-control">
-							<legend className="pass-it-on-control-label">
-								{t.passItOn.viewLabel}
-							</legend>
-							<div>
-								{(["all", "music", "history"] as const).map((option) => (
-									<button
-										key={option}
-										type="button"
-										aria-pressed={view === option}
-										onClick={() => setView(option)}
-									>
-										{t.passItOn[option]}
-									</button>
-								))}
-							</div>
-						</fieldset>
-						<p id="pass-it-on-search-note" className="pass-it-on-search-note">
-							{t.passItOn.searchNote}
-						</p>
-					</div>
 
 					<PassItOnYearSpool
 						years={years}
-						groups={visibleYearGroups}
+						groups={yearGroups}
 						selectedYear={selectedYear}
 						onSelect={selectYear}
 						copy={t.passItOn}
@@ -375,42 +287,28 @@ export function Timeline({
 					<p className="pass-it-on-count" role="status" aria-live="polite">
 						{statusText}
 					</p>
-					{hasNoSongMatches && (
-						<PassItOnNoMatches
-							message={t.passItOn.noSongMatch}
-							clearLabel={t.passItOn.clearSongSearchAndFilters}
-							onClear={() => {
-								setSearchTerm("");
-								setSelectedLeanings([]);
-								setSelectedDecades([]);
-							}}
-						/>
-					)}
-
-					{view !== "history" && (
-						<div className="pass-it-on-spectrum-axis" dir="ltr">
-							<span className="pass-it-on-spectrum-pill pass-it-on-spectrum-left">
-								{t.passItOn.spectrumLeft}
-							</span>
-							<span className="pass-it-on-spectrum-pill pass-it-on-spectrum-center">
-								{t.passItOn.spectrumCenter}
-							</span>
-							<span className="pass-it-on-spectrum-pill pass-it-on-spectrum-right">
-								{t.passItOn.spectrumRight}
-							</span>
-						</div>
-					)}
+					<div className="pass-it-on-spectrum-axis" dir="ltr">
+						<span className="pass-it-on-spectrum-pill pass-it-on-spectrum-left">
+							{t.passItOn.spectrumLeft}
+						</span>
+						<span className="pass-it-on-spectrum-pill pass-it-on-spectrum-center">
+							{t.passItOn.spectrumCenter}
+						</span>
+						<span className="pass-it-on-spectrum-pill pass-it-on-spectrum-right">
+							{t.passItOn.spectrumRight}
+						</span>
+					</div>
 
 					<div className="pass-it-on-years" ref={yearsContainerRef}>
-						{visibleYearGroups.map(([year, entries]) => (
+						{yearGroups.map(([year, entries]) => (
 							<PassItOnYearSection
 								key={year}
 								year={year}
 								entries={entries}
 								lang={lang}
-								highlightTerm={searchTerm}
+								highlightTerm=""
 								translations={t}
-								view={view}
+								view="all"
 								sectionRef={(element) => {
 									sectionRefs.current[year] = element;
 								}}
@@ -419,16 +317,11 @@ export function Timeline({
 						))}
 					</div>
 
-					{visibleYearGroups.length === 0 &&
-						(!hasNoSongMatches || view === "history") && (
-							<p className="pass-it-on-empty" role="status">
-								{view === "history"
-									? t.passItOn.noHistoryAvailable
-									: view === "music" || hasSearchOrFilters
-										? t.passItOn.noSongsFound
-										: t.passItOn.emptyArchive}
-							</p>
-						)}
+					{yearGroups.length === 0 && (
+						<p className="pass-it-on-empty" role="status">
+							{t.passItOn.emptyArchive}
+						</p>
+					)}
 				</section>
 			</main>
 

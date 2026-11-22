@@ -124,6 +124,33 @@ html[data-theme="boombox"] body {
 	background-repeat: repeat, no-repeat;
 }
 
+/* Dialogs match the cinematic rail: clean dark panel, no zine wobble/tape. */
+html[data-theme="boombox"] .pass-it-on-dialog {
+	border-radius: 14px;
+	border: 1px solid rgb(255 246 226 / 16%);
+	background: rgb(19 16 13 / 98%);
+	box-shadow:
+		0 1px 0 rgb(255 246 226 / 8%) inset,
+		0 28px 70px rgb(0 0 0 / 65%);
+}
+html[data-theme="boombox"] .pass-it-on-dialog::before,
+html[data-theme="boombox"] .pass-it-on-dialog::after {
+	display: none;
+}
+html[data-theme="boombox"] .pass-it-on-dialog input,
+html[data-theme="boombox"] .pass-it-on-dialog textarea,
+html[data-theme="boombox"] .pass-it-on-dialog select {
+	border-radius: 8px;
+	border-width: 1px;
+	border-color: rgb(255 246 226 / 18%);
+}
+html[data-theme="boombox"] .pass-it-on-dialog .glass-card {
+	border-radius: 8px;
+	border-width: 1px;
+	border-color: rgb(255 246 226 / 14%);
+	box-shadow: none;
+}
+
 html[data-theme="boombox"] h1,
 html[data-theme="boombox"] h2,
 html[data-theme="boombox"] h3 {
