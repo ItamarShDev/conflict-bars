@@ -8,7 +8,10 @@ function toFractionalYear(iso: string): number {
 	return date.getFullYear() + date.getMonth() / 12;
 }
 
-export function getConflictBands(conflicts = israeliConflicts): ConflictBand[] {
+export function getConflictBands(
+	conflicts = israeliConflicts,
+	lang: "en" | "he" = "he",
+): ConflictBand[] {
 	const currentYear = new Date().getFullYear() + 1;
 	return conflicts
 		.map((entry) => {
@@ -17,8 +20,10 @@ export function getConflictBands(conflicts = israeliConflicts): ConflictBand[] {
 				? toFractionalYear(entry.time.end)
 				: currentYear;
 			const title =
-				entry.conflict?.title_he?.trim() ||
-				translations.he.passItOn.eventTitleFallback;
+				(lang === "he"
+					? entry.conflict?.title_he || entry.conflict?.title
+					: entry.conflict?.title || entry.conflict?.title_he
+				)?.trim() || translations[lang].passItOn.eventTitleFallback;
 			if (Number.isNaN(start) || Number.isNaN(end)) return null;
 			const label = title.split(" (")[0];
 			return { start, end, label, title };

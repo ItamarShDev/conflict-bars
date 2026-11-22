@@ -8,6 +8,10 @@ export const teapacks90s = [
 			hebrew: "את הבטחת שלום ואהבה ללא שנאה",
 			english_translation: "You promised peace and love without hatred.",
 		},
+		context: {
+			he: "מ-1995, בשנות אוסלו — הבטחת 'שלום ואהבה ללא שנאה'.",
+			en: "From 1995, in the Oslo years — 'you promised peace and love without hatred'.",
+		},
 		links: {
 			lyrics: "https://shirrim.com/song-lyrics/מה-עשית/",
 			song_info: "https://www.ynet.co.il/entertainment/article/bkfrjgiqy",

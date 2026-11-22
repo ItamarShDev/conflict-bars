@@ -10,6 +10,10 @@ export const macklemore2020s = [
 			hebrew: "בתי הספר שלנו הופכים למקלטים",
 			english_translation: "Our schools turn to shelters",
 		},
+		context: {
+			he: "המשך ל'Hind's Hall' עם MC Abdul, אניס ועאמר זוהר; שוב על שם הינד רג'אב והמחאות באוניברסיטת קולומביה.",
+			en: "A follow-up to 'Hind's Hall' featuring MC Abdul, Anees and Amer Zahr; again named for Hind Rajab and the Columbia campus protests.",
+		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=bjtDsd0g468",
 			lyrics:

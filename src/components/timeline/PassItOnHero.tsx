@@ -1,4 +1,5 @@
-import { useEffect, useId, useRef, useState } from "react";
+import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 import type { HelpModalStats } from "@/components/timeline/HelpModal";
 import type { translations } from "@/components/timeline/translations";
 
@@ -15,9 +16,7 @@ export function PassItOnHero({
 	eventCount: number;
 	copy: PassItOnCopy;
 }) {
-	const cassetteId = `pass-it-on-cassette-${useId().replace(/[^a-zA-Z0-9_-]/g, "")}`;
 	const heroRef = useRef<HTMLElement | null>(null);
-	const [manuallyPaused, setManuallyPaused] = useState(false);
 	const [isInViewport, setIsInViewport] = useState(true);
 	const [isDocumentVisible, setIsDocumentVisible] = useState(true);
 	const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
@@ -34,18 +33,7 @@ export function PassItOnHero({
 		String(eventCount),
 	);
 	const motionPaused =
-		manuallyPaused ||
-		!isInViewport ||
-		!isDocumentVisible ||
-		prefersReducedMotion;
-	const motionButtonLabel = prefersReducedMotion
-		? copy.motionStaticLabel
-		: manuallyPaused
-			? copy.resumeAnimation
-			: copy.pauseAnimation;
-	const motionButtonDescription = prefersReducedMotion
-		? copy.motionDisabled
-		: motionButtonLabel;
+		!isInViewport || !isDocumentVisible || prefersReducedMotion;
 
 	useEffect(() => {
 		if (typeof window.matchMedia !== "function") return;
@@ -107,7 +95,6 @@ export function PassItOnHero({
 			</svg>
 			<div className="pass-it-on-hero-inner">
 				<div className="pass-it-on-hero-copy">
-					<p className="pass-it-on-kicker">{copy.kicker}</p>
 					<h1 id="pass-it-on-title" className="pass-it-on-title">
 						<span>{copy.titleLead}</span>
 						<span>{copy.titleEmphasis}</span>
@@ -116,208 +103,16 @@ export function PassItOnHero({
 						{copy.hebrewTagline}
 					</p>
 					<p className="pass-it-on-subtitle">{copy.subtitle}</p>
-					<a className="pass-it-on-cta" href="#pass-it-on-chronology">
-						<span>{copy.cta}</span>
-						<span aria-hidden="true">↓</span>
-					</a>
 				</div>
 				<div className="pass-it-on-hero-art">
-					<button
-						type="button"
-						className="pass-it-on-motion-control"
-						aria-label={motionButtonDescription}
-						title={motionButtonDescription}
-						disabled={prefersReducedMotion}
-						data-motion-state={
-							prefersReducedMotion
-								? "static"
-								: motionPaused
-									? "paused"
-									: "playing"
-						}
-						onClick={() => setManuallyPaused((paused) => !paused)}
-					>
-						<span>{motionButtonLabel}</span>
-					</button>
-					<svg
-						className="pass-it-on-cassette"
-						viewBox="0 0 640 405"
-						role="img"
-						aria-labelledby={`${cassetteId}-title ${cassetteId}-description`}
-						lang={lang}
-						style={{ direction: "ltr" }}
-					>
-						<title id={`${cassetteId}-title`}>{copy.cassetteAlt}</title>
-						<desc id={`${cassetteId}-description`}>
-							{copy.cassetteDescription}
-						</desc>
-						<defs>
-							<clipPath id={`${cassetteId}-window`}>
-								<rect x="86" y="67" width="468" height="106" rx="11" />
-							</clipPath>
-						</defs>
-						<path
-							d="M55 34 Q79 12 112 18 L553 34 Q588 36 591 71 L575 345 Q573 375 541 380 L76 366 Q45 364 45 332 L40 74 Q39 45 55 34Z"
-							fill="#f5d873"
-							stroke="#564631"
-							strokeWidth="7"
-						/>
-						<path
-							d="M70 50 Q85 39 103 43 L544 58 Q562 59 562 77 L551 328 Q550 344 533 346 L88 333 Q69 332 69 315Z"
-							fill="#f7e9b7"
-							stroke="#897550"
-							strokeWidth="2"
-						/>
-						<image
-							className="pass-it-on-cassette-photo pass-it-on-cassette-photo-tel-aviv"
-							href="/pass-it-on/tel-aviv-graffiti.jpg"
-							x="86"
-							y="67"
-							width="468"
-							height="106"
-							preserveAspectRatio="none"
-							clipPath={`url(#${cassetteId}-window)`}
-						/>
-						<image
-							className="pass-it-on-cassette-photo pass-it-on-cassette-photo-haifa"
-							href="/pass-it-on/haifa-harbour.jpg"
-							x="86"
-							y="67"
-							width="468"
-							height="106"
-							preserveAspectRatio="none"
-							clipPath={`url(#${cassetteId}-window)`}
-						/>
-						<image
-							className="pass-it-on-cassette-photo pass-it-on-cassette-photo-ramon"
-							href="/pass-it-on/ramon-crater.jpg"
-							x="86"
-							y="67"
-							width="468"
-							height="106"
-							preserveAspectRatio="none"
-							clipPath={`url(#${cassetteId}-window)`}
-						/>
-						<path d="M86 186 L550 198 L546 222 L90 210Z" fill="#b6533e" />
-						<text
-							x="330"
-							y="207"
-							fill="#fff2d1"
-							textAnchor="end"
-							fontFamily='"Pass It On Hebrew", cursive'
-							fontSize="20"
-							direction="rtl"
-							unicodeBidi="plaintext"
-						>
-							מיקס של זמן
-						</text>
-						<text
-							x={lang === "he" ? "540" : "524"}
-							y="218"
-							fill="#fff2d1"
-							textAnchor={lang === "he" ? "start" : "end"}
-							fontFamily='"Courier New", Courier, monospace'
-							fontSize="8"
-							letterSpacing={lang === "he" ? "0" : "1"}
-							direction={lang === "he" ? "rtl" : "ltr"}
-							unicodeBidi="plaintext"
-						>
-							{copy.cassetteLabel}
-						</text>
-						<rect
-							x="110"
-							y="233"
-							width="420"
-							height="82"
-							rx="20"
-							fill="#d9c796"
-							stroke="#8b7951"
-							strokeWidth="2"
-						/>
-						{[210, 430].map((x) => (
-							<g key={x}>
-								<circle cx={x} cy="269" r="31" fill="#645947" />
-								<g className="pass-it-on-cassette-tape-pack">
-									<circle
-										cx={x}
-										cy="269"
-										r="27.5"
-										fill="none"
-										stroke="#624d36"
-										strokeWidth="4"
-									/>
-									<circle
-										cx={x}
-										cy="269"
-										r="24.5"
-										fill="none"
-										stroke="#a58b64"
-										strokeWidth="1"
-									/>
-								</g>
-								<circle cx={x} cy="269" r="22" fill="#f6e9c3" />
-								<g className="pass-it-on-cassette-reel">
-									<path
-										d={`M${x} 246v46m-23-23h46m-39-16 32 32m0-32-32 32`}
-										stroke="#806e49"
-										strokeWidth="2"
-									/>
-								</g>
-								<circle cx={x} cy="269" r="9" fill="#5b4a32" />
-							</g>
-						))}
-						<rect
-							x="302"
-							y="296"
-							width="36"
-							height="8"
-							rx="2"
-							fill="#8d8066"
-							stroke="#5b4a32"
-							strokeWidth="1.5"
-						/>
-						{[169, 471].map((x) => (
-							<g className="pass-it-on-cassette-guide" key={x}>
-								<circle cx={x} cy="302" r="5" fill="#5b4a32" />
-								<circle cx={x} cy="302" r="2" fill="#f6e9c3" />
-							</g>
-						))}
-						<path
-							className="pass-it-on-cassette-tape-path"
-							d="M182.5 269 C182.5 283 161.6 303.8 164.4 306.6 C165.7 307.9 167 308.5 169 308.5 L471 308.5 C473 308.5 474.3 307.9 475.6 306.6 C477 305.3 457.5 285 457.5 269"
-							fill="none"
-							stroke="#624d36"
-							strokeWidth="3"
-							strokeLinecap="round"
-							strokeLinejoin="round"
-						/>
-						<path
-							className="pass-it-on-cassette-tape-dash"
-							d="M182.5 269 C182.5 283 161.6 303.8 164.4 306.6 C165.7 307.9 167 308.5 169 308.5 L471 308.5 C473 308.5 474.3 307.9 475.6 306.6 C477 305.3 457.5 285 457.5 269"
-							fill="none"
-							stroke="#c29c52"
-							strokeDasharray="2 10"
-							strokeWidth="1.5"
-							strokeOpacity="0.72"
-						/>
-						<text
-							x="320"
-							y="333"
-							fill="#5e4c37"
-							textAnchor="middle"
-							fontFamily='"Courier New", Courier, monospace'
-							fontSize="8"
-							letterSpacing="1"
-							direction={lang === "he" ? "rtl" : "ltr"}
-							unicodeBidi="isolate"
-						>
-							{copy.cassetteCaption}
-						</text>
-						<circle cx="82" cy="71" r="5" fill="#58452f" />
-						<circle cx="550" cy="78" r="5" fill="#58452f" />
-						<circle cx="84" cy="317" r="5" fill="#58452f" />
-						<circle cx="540" cy="324" r="5" fill="#58452f" />
-					</svg>
+					<Image
+						className="pass-it-on-cassette pass-it-on-cassette-real"
+						src="/pass-it-on/cassette-hero.png"
+						alt={copy.cassetteAlt}
+						width={640}
+						height={427}
+						priority
+					/>
 					<div
 						className="pass-it-on-j-card"
 						dir={lang === "he" ? "rtl" : "ltr"}

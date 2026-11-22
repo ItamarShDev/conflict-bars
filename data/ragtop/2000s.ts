@@ -10,6 +10,10 @@ export const ragtop2000s = [
 				"I place my palms to the east where my people seek peace, and freedom from police control, checkpoints and patrols",
 			english_translation: "(English original)",
 		},
+		context: {
+			he: "מתוך אוסף 'Free the P' (2006), פרויקט היפ-הופ פלסטיני-אמריקאי; בית על חופש ממחסומים וסיירות.",
+			en: "From the 'Free the P' compilation (2006), a Palestinian-American hip-hop project; a verse on freedom from checkpoints and patrols.",
+		},
 		links: {
 			song_info:
 				"https://www.popmatters.com/various-artists-free-the-p-2495692251.html",

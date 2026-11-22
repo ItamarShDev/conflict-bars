@@ -55,7 +55,7 @@ export function FullLyricsDialog({
 					event.currentTarget.close();
 				}
 			}}
-			className="glass-card fixed inset-0 m-auto max-h-[90dvh] w-[calc(100%_-_2rem)] max-w-4xl overflow-y-auto border-2 border-(--color-control-border) p-4 text-(--color-card-foreground) shadow-2xl backdrop:bg-black/70 sm:p-6"
+			className="glass-card pass-it-on-dialog fixed inset-0 m-auto max-h-[90dvh] w-[calc(100%_-_2rem)] max-w-4xl overflow-y-auto border-2 border-(--color-control-border) p-4 text-(--color-card-foreground) shadow-2xl backdrop:bg-black/70 sm:p-6"
 		>
 			<header className="mb-6 flex items-start justify-between gap-4 border-b border-(--color-border) pb-4">
 				<div className="min-w-0">

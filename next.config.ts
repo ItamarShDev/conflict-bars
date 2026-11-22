@@ -8,19 +8,21 @@ const nextConfig: NextConfig = {
 	async redirects() {
 		return [
 			{
+				source: "/he",
+				destination: "/",
+				permanent: true,
+			},
+		];
+	},
+	async rewrites() {
+		return [
+			{
 				source: "/",
 				destination: "/he",
-				permanent: false,
 			},
 			{
-				source: "/en",
-				destination: "/he",
-				permanent: true,
-			},
-			{
-				source: "/en/:path*",
-				destination: "/he/:path*",
-				permanent: true,
+				source: "/bubble",
+				destination: "/he/bubble",
 			},
 		];
 	},

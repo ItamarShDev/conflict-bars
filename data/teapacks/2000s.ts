@@ -9,6 +9,10 @@ export const teapacks2000s = [
 			english_translation:
 				"The world is full of terror / If someone makes an error / He's gonna blow us up to biddy biddy kingdom come — Israel's Eurovision 2007 entry, read as a response to Ahmadinejad's nuclear push. (eurovisionworld)",
 		},
+		context: {
+			he: "נציג ישראל לאירוויזיון 2007; מסר על טרור ועל מנהיג המאיים 'לפוצץ אותנו', שנקרא כתגובה לדחיפה הגרעינית של אחמדינג'אד.",
+			en: "Israel's Eurovision 2007 entry; verses on terror and a leader who'd 'blow us up', read as a response to Ahmadinejad's nuclear push.",
+		},
 		links: {
 			lyrics: "https://eurovisionworld.com/eurovision/2007/israel",
 		},

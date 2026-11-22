@@ -9,6 +9,10 @@ export const joPassive2020s = [
 			english_translation:
 				"And all you wanted was simply to celebrate / but on the way you were caught up in a war of Gog and Magog.",
 		},
+		context: {
+			he: "שיר זיכרון מדצמבר 2023 לנועם רביע ז''ל — 'כל מה שרצית זה פשוט לחגוג'.",
+			en: "A December 2023 memorial track for Noam Rabia — 'all you wanted was simply to celebrate'.",
+		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=JwHkaObhDQw",
 			song_info:
@@ -25,6 +29,10 @@ export const joPassive2020s = [
 				"והימים עוברים ואנחנו רואים רק זוועות / אבל האומנות שלך תישאר איתנו לדורות",
 			english_translation:
 				"And the days pass and all we see are atrocities / but your art will stay with us for generations.",
+		},
+		context: {
+			he: "מחווה מינואר 2025 לענבר הימן ('פינק'), אומנית הגרפיטי שנרצחה בפסטיבל נובה וגופתה נחטפה לעזה.",
+			en: "A January 2025 tribute to Inbar Hyman ('Pink'), the graffiti artist murdered at the Nova festival whose body was taken to Gaza.",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=Xe-NbpbNJms",

@@ -42,6 +42,10 @@ export const ravidPlotnik2020s = [
 			english_translation:
 				"In the mornings I am preoccupied, clenched and negative / at night I am afraid for my family.",
 		},
+		context: {
+			he: "מתוך האלבום 'הדרך לשביל הזהב' (ינואר 2025) עם מיכל לוטן; בית על פחד למשפחה בלילות.",
+			en: "From the album 'הדרך לשביל הזהב' (January 2025) featuring Michal Lotan; a verse on nighttime fear for one's family.",
+		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=C9eH_-NsOFw",
 			lyrics: "https://ravidplotnik.bandcamp.com/track/--79",

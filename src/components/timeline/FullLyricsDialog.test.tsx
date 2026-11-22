@@ -104,22 +104,28 @@ describe("song card lyrics button", () => {
 			const actions = html.match(
 				/<(?:button|a)\b[^>]*class="inline-flex[^"]*"[^>]*>/g,
 			);
-			expect(actions).toHaveLength(4);
+			expect(actions).toHaveLength(5);
 			for (const action of actions ?? []) {
-				expect(action).toContain("min-h-11 items-center justify-center");
+				expect(action).toContain("min-h-11");
+			}
+			for (const action of (actions ?? []).slice(0, 4)) {
 				expect(action).toContain("text-center");
 			}
+			expect(actions?.[4]).toContain(
+				translations[lang].editSuggestion.buttonAria,
+			);
 		},
 	);
 
 	it.each(["full", "compact"] as const)(
-		"shows an unavailable state on a %s card with no links or full text",
+		"shows no lyrics action on a %s card with no links or full text",
 		(variant) => {
 			const html = renderToStaticMarkup(
 				<SongEntry song={song} lang="en" leaning="unknown" variant={variant} />,
 			);
 			expect(html).not.toContain('aria-haspopup="dialog"');
-			expect(html).toContain(translations.en.lyricsUnavailable);
+			expect(html).not.toContain(">מילים<");
+			expect(html).not.toContain(">Lyrics<");
 		},
 	);
 
@@ -140,7 +146,6 @@ describe("song card lyrics button", () => {
 			expect(html.match(/href="https:\/\/example.com\/source"/g)).toHaveLength(
 				1,
 			);
-			expect(html).not.toContain(translations[lang].lyricsUnavailable);
 		},
 	);
 
@@ -177,7 +182,6 @@ describe("song card lyrics button", () => {
 			);
 			expect(html).toContain('aria-haspopup="dialog"');
 			expect(html).toContain(translations[lang].fullLyrics.button);
-			expect(html).not.toContain(translations[lang].lyricsUnavailable);
 		},
 	);
 

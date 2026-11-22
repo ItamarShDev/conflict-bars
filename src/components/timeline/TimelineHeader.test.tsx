@@ -1,35 +1,20 @@
 import { readFileSync } from "node:fs";
 import { renderToStaticMarkup } from "react-dom/server";
-import { beforeEach, describe, expect, it, vi } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { TimelineHeader } from "./TimelineHeader";
-import { translations } from "./translations";
 
-const themeMock = vi.hoisted(() => ({
-	value: "classic" as "classic" | "boombox",
-	setTheme: vi.fn(),
-}));
-
-vi.mock("@/components/ThemeProvider", () => ({
-	useTheme: () => ({ theme: themeMock.value, setTheme: themeMock.setTheme }),
-}));
 vi.mock("./HelpModal", () => ({ HelpModal: () => null }));
 
 const props = {
 	title: "חרוזים מסוכסכים",
 	subtitle: "היפ־הופ לצד הקשר היסטורי",
-	themeToggle: translations.he.themeToggle,
 	lang: "he" as const,
-	nav: { href: "/he/bubble", label: "תרשים" },
+	nav: { href: "/bubble", label: "תרשים" },
 };
 const headerStyles = readFileSync(
 	new URL("../../app/globals.css", import.meta.url),
 	"utf8",
 );
-
-beforeEach(() => {
-	themeMock.value = "classic";
-	themeMock.setTheme.mockClear();
-});
 
 describe("TimelineHeader layouts", () => {
 	it("preserves the sticky title header by default", () => {
@@ -46,33 +31,22 @@ describe("TimelineHeader layouts", () => {
 		expect(html).not.toContain("<h1");
 	});
 
-	it("exposes the current light theme as a labeled switch", () => {
-		themeMock.value = "classic";
+	it("exposes no theme switch", () => {
 		const html = renderToStaticMarkup(<TimelineHeader {...props} compact />);
-		expect(html).toContain('role="switch" aria-checked="false"');
-		expect(html).toContain('aria-label="מצב כהה"');
-		expect(html).toContain('data-selected-theme="classic"');
-		expect(html).toContain("pass-it-on-theme-thumb-icon");
-		expect(html).toContain("pass-it-on-theme-track-icon");
-		expect(html).not.toContain("Zine");
-		expect(html).not.toContain("Boombox");
+		expect(html).not.toContain("pass-it-on-theme-switch");
+		expect(html).not.toContain('role="switch"');
 	});
 
-	it("reflects the persisted dark theme in Hebrew", () => {
-		themeMock.value = "boombox";
+	it("renders the language toggle link when provided", () => {
 		const html = renderToStaticMarkup(
 			<TimelineHeader
 				{...props}
-				lang="he"
-				themeToggle={translations.he.themeToggle}
 				compact
+				languageToggle={{ href: "/en", label: "English" }}
 			/>,
 		);
-		expect(html).toContain('role="switch" aria-checked="true"');
-		expect(html).toContain('aria-label="מצב כהה"');
-		expect(html).toContain('data-selected-theme="boombox"');
-		expect(html).not.toContain("pass-it-on-language-switcher");
-		expect(html).not.toContain('href="/en');
+		expect(html).toContain('href="/en"');
+		expect(html).toContain(">English</a>");
 	});
 
 	it("aligns the compact header controls to one accessible outer height", () => {

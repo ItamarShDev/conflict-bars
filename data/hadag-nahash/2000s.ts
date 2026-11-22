@@ -10,6 +10,10 @@ export const hadagNahash2000s = [
 			english_translation:
 				"We'll rout the enemies, melt the hatred, defeat the dread, spread love / Nobody wants to die, but if we must / isn't it better in Levi's than in uniform.",
 		},
+		context: {
+			he: "המנון שלום תלת-לשוני מ-2000 — 'אף אחד לא רוצה למות, אז לא עדיף בליוייס במקום במדים'.",
+			en: "A trilingual peace anthem from 2000 — 'nobody wants to die, so isn't it better in Levi's than in uniform'.",
+		},
 		links: {
 			lyrics: "https://genius.com/Hadag-nahash-shalom-salaam-peace-lyrics",
 			youtube: "https://www.youtube.com/watch?v=O4EaIYnsk4k",
@@ -24,6 +28,10 @@ export const hadagNahash2000s = [
 				"ניסיתי להדגיש שאין שלום אין בטחון / ונמאס לחיות בחרדה / הרצל שם לי קרטון על הלשון ואמר: / אם תיקחו אין זו אגדה",
 			english_translation:
 				"I tried to stress that there's no peace, no security / and that living in dread is unbearable / Herzl put a tab of acid on my tongue and said: / If you take it, it is no dream.",
+		},
+		context: {
+			he: "מ-2003; בית על 'אין שלום אין בטחון' וחלום התקווה של הרצל.",
+			en: "A 2003 track; a verse on 'no peace, no security' and Herzl's dream of hope.",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=70i9PvrsvJ0",
@@ -40,6 +48,10 @@ export const hadagNahash2000s = [
 				"ונעשה מילואים, נשלם המיסים / ונעמוד בפקקים, אותנו לא דופקים / אנחנו בטח, בטח, בטח לא / אנחנו בטח לא פראיירים",
 			english_translation:
 				"And we'll do reserve duty, we'll pay the taxes / and we'll sit in traffic, nobody's screwing us / We're definitely, definitely not / we're definitely not suckers.",
+		},
+		context: {
+			he: "סאטירה ישראלית מ-2003 — 'נעשה מילואים, נשלם מיסים ונעמוד בפקקים... לא פראיירים'.",
+			en: "A 2003 Israeli satire — 'we'll do reserve duty, pay taxes, sit in traffic... not suckers'.",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=qHM3uTxvPRg",
@@ -59,6 +71,10 @@ export const hadagNahash2000s = [
 			english_translation:
 				"Because she immediately lies down on the attacker and shields with her body / a terrorist, but also a person who without her body would be a corpse.",
 		},
+		context: {
+			he: "מ-2003 עם ברי סחרוף; בית המערב אמפאתיה — 'טרוריסט אבל גם אדם'.",
+			en: "A 2003 track with Berry Sakharof; a verse mixing empathy — 'a terrorist, but also a person'.",
+		},
 		links: {
 			lyrics: "https://genius.com/Hadag-nahash-bella-belisima-lyrics",
 			youtube: "https://www.youtube.com/watch?v=0S9hDbW-CJE",
@@ -73,6 +89,10 @@ export const hadagNahash2000s = [
 				'דור שלם דורש שלום / תנו לצה"ל לנצח / עם חזק עושה שלום / תנו לצה"ל לכסח / אין שלום עם ערבים / אל תתנו להם רובים',
 			english_translation:
 				"A whole generation demands peace / Let the IDF win / A strong nation makes peace / Let the IDF crush them / There's no peace with Arabs / Don't give them rifles.",
+		},
+		context: {
+			he: "קולאז' מ-2004 של סיסמאות סטיקרים ישראליות — 'דור שלם דורש שלום' מול 'תנו לצה''ל לכסח'.",
+			en: "A 2004 collage of Israeli bumper-sticker slogans — 'a whole generation demands peace' against 'let the IDF crush them'.",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=QflL6R2-k-8",
@@ -91,6 +111,10 @@ export const hadagNahash2000s = [
 			english_translation:
 				"Inside every house every shelter is open / and all the people watch the same channels / broadcasting at the same hours / all the suits in sizes far too big for them.",
 		},
+		context: {
+			he: "מ-2004 עם ליאורה יצחק; בית על מקלטים פתוחים ומנהיגים ב'חליפות גדולות מדי'.",
+			en: "A 2004 track with Liora Yitzhak; a verse on open shelters and leaders in 'suits far too big for them'.",
+		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=-H8RVojLECM",
 			lyrics: "https://genius.com/Hadag-nahash-halifot-lyrics",
@@ -105,6 +129,10 @@ export const hadagNahash2000s = [
 			hebrew: 'ואם אתה בחו"ל נמצא ועל פיצוץ שומע? / אז רק לפה פתאום אני מתגעגע',
 			english_translation:
 				"And if you are abroad and hear about a bombing? / then suddenly it's only here that I long for.",
+		},
+		context: {
+			he: "דצמבר 2004; על געגוע מורכב לארץ תחת פיצוצים — 'רק פה'.",
+			en: "December 2004; on ambivalent longing for the country amid bombings — 'only here'.",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=hsCjy0PiHqM",
@@ -122,6 +150,10 @@ export const hadagNahash2000s = [
 				"אחד הוא מספר המדינות מהירדן לים / שתיים - מספר המדינות שיום אחד יהיו כאן",
 			english_translation:
 				"One is the number of states from the Jordan to the sea / Two — the number of states that one day will be here.",
+		},
+		context: {
+			he: "ינואר 2003; מספרים מדינות — 'אחת מהירדן לים, שתיים שיום אחד יהיו כאן'.",
+			en: "January 2003; counting states — 'one from the Jordan to the sea, two that one day will be here'.",
 		},
 		links: {
 			lyrics: "https://genius.com/Hadag-nahash-misparim-lyrics",

@@ -9,6 +9,10 @@ export const sos2020s = [
 			hebrew: "זה בסדר לבקש עזרה",
 			english_translation: "It's okay to ask for help.",
 		},
+		context: {
+			he: "שיתוף פעולה עם עמותת ער''ן על ההשפעה הנפשית של המלחמה — 'זה בסדר לבקש עזרה'.",
+			en: "A collaboration with the ERAN emotional-support organization on the war's mental-health effects — 'it's okay to ask for help'.",
+		},
 		links: {
 			lyrics: "https://yosmusic.com/דרסו-כהן-שרק-נונו-שוחט-sos/",
 			song_info:

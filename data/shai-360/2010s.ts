@@ -11,6 +11,10 @@ export const shai3602010s = [
 			english_translation:
 				"I'm on the wrong side of the map, activists with knives got me trapped / This international hypocrisy won't get us far",
 		},
+		context: {
+			he: "יוני 2010 — תגובה פרו-ישראלית לפשיטה על המשט לעזה; 'הצביעות הבינלאומית הזו לא תביא אותנו רחוק'.",
+			en: "June 2010 — a pro-Israel response to the Gaza flotilla raid; 'this international hypocrisy won't get us far'.",
+		},
 		links: {
 			lyrics:
 				"https://www.mako.co.il/music-news/singles/Article-96cdf1934a33921006.htm",

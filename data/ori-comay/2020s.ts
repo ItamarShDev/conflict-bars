@@ -10,6 +10,10 @@ export const oriComay2020s = [
 			english_translation:
 				"She thought it's post-traumatic, I told her babe I'm in Golani.",
 		},
+		context: {
+			he: "נובמבר 2023 עם דודו פארוק; שיר מלחמה על חייל בגולני והבת זוג המחכה.",
+			en: "A November 2023 wartime track with Dudu Faruk, about a Golani soldier and his waiting partner.",
+		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=etqIeSxYb1M",
 			song_info:

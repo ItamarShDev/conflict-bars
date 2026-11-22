@@ -47,6 +47,10 @@ export const kla62000s = [
 			english_translation:
 				"I would rather there be peace and goodness instead of terror / so I don't sit at home wondering what to write about, and with fewer attacks.",
 		},
+		context: {
+			he: "מ-2004, בתקופת האינתיפאדה השנייה — בית המעדיף שלום על טרור ופיגועים.",
+			en: "A 2004 track from the Second Intifada era — a verse preferring peace over terror and attacks.",
+		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=D69xYwzUQME",
 			lyrics:

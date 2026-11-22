@@ -1,33 +1,28 @@
 import { describe, expect, it } from "vitest";
-import { requireHebrewLocale } from "@/utils/hebrew-locale";
+import { requireLocale } from "@/utils/locale";
 import nextConfig from "../../next.config";
 
-describe("Hebrew-only locale routing", () => {
-	it("declares permanent Hebrew redirects for legacy English routes", async () => {
+describe("locale routing", () => {
+	it("serves Hebrew at the root and redirects /he to it", async () => {
 		const redirects = (await nextConfig.redirects?.()) ?? [];
+		const rewrites = (await nextConfig.rewrites?.()) ?? [];
 		expect(redirects).toContainEqual({
+			source: "/he",
+			destination: "/",
+			permanent: true,
+		});
+		expect(rewrites).toContainEqual({
 			source: "/",
 			destination: "/he",
-			permanent: false,
 		});
-		expect(redirects).toContainEqual({
-			source: "/en",
-			destination: "/he",
-			permanent: true,
-		});
-
-		const nestedRedirect = redirects.find(
-			(redirect) => redirect.source === "/en/:path*",
-		);
-		expect(nestedRedirect).toMatchObject({
-			destination: "/he/:path*",
-			permanent: true,
-		});
+		expect(
+			redirects.find((redirect) => redirect.source.startsWith("/en")),
+		).toBeUndefined();
 	});
 
-	it("accepts Hebrew and rejects unsupported locale segments", () => {
-		expect(() => requireHebrewLocale("he")).not.toThrow();
-		expect(() => requireHebrewLocale("en")).toThrow();
-		expect(() => requireHebrewLocale("fr")).toThrow();
+	it("accepts Hebrew and English and rejects unsupported locale segments", () => {
+		expect(() => requireLocale("he")).not.toThrow();
+		expect(() => requireLocale("en")).not.toThrow();
+		expect(() => requireLocale("fr")).toThrow();
 	});
 });

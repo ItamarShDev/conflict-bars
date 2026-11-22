@@ -11,6 +11,10 @@ export const jowanSafadi2020s = [
 			english_translation:
 				"This monster does not matter to us; we slapped its face with dirt.",
 		},
+		context: {
+			he: "מאי 2023 עם הנין OD — על התנגדות ל'מפלצת'.",
+			en: "A May 2023 track with Haneen OD — on defying 'this monster'.",
+		},
 		links: {
 			lyrics: "https://jowansafadi1.bandcamp.com/track/this-monster",
 		},

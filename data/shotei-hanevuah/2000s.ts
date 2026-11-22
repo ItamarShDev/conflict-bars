@@ -10,6 +10,10 @@ export const shoteiHanevuah2000s = [
 			english_translation:
 				"In the land of milk and honey / tell me who comes in turn, who comes to battle / and the song that never ends / sing a song for peace because it is not too late / everything will be okay, everything will be fine.",
 		},
+		context: {
+			he: "מתוך אלבום הבכורה 'שוטי הנבואה' (2000); קריאה לשיר שלום — 'עוד לא מאוחר'.",
+			en: "From the self-titled debut album 'Shotei HaNevuah' (2000); a call to 'sing a song for peace because it is not too late'.",
+		},
 		links: {
 			lyrics:
 				"https://shironet.mako.co.il/artist?lang=1&prfid=1255&type=lyrics&wrkid=3993",
@@ -27,6 +31,10 @@ export const shoteiHanevuah2000s = [
 				"חיים המשתף פעולה שכח מזמן כבר שקראו לו אחמד / כשהוא עזר לתפוס מבוקשים / והיום הוא חי ביפו בלי שפם אבל עם פחד / שיפגעו בו אנשים קשים / פה ביפו כולם מכובדים / פה ביפו אפילו הילדים שבינינו אחים ואחיות",
 			english_translation:
 				"Haim the collaborator long forgot they called him Ahmad / when he helped catch wanted men / and today he lives in Jaffa without a mustache but with fear / that tough people will harm him / Here in Jaffa everyone is respected / here in Jaffa even the children among us are brothers and sisters.",
+		},
+		context: {
+			he: "מתוך אלבום הבכורה (2000); דיוקן של חיים משותפים ביפו — 'כולם מכובדים'.",
+			en: "From the 2000 debut album; a portrait of coexistence in Jaffa — 'everyone is respected'.",
 		},
 		links: {
 			lyrics:
@@ -46,6 +54,10 @@ export const shoteiHanevuah2000s = [
 			english_translation:
 				"The Land of Israel is in a frenzy today / 'The enemy will attack tomorrow,' it said in the newspaper / Palestinian Arab, Argentinian Jew / it doesn't matter, we are all human beings / everyone is here, nobody is leaving / so start loving.",
 		},
+		context: {
+			he: "מתוך אלבום הבכורה (2000); בית על שוויון בין ערבי פלסטיני ליהודי ארגנטינאי.",
+			en: "From the 2000 debut; a verse on equality — 'Palestinian Arab, Argentinian Jew — we are all human beings'.",
+		},
 		links: {
 			lyrics:
 				"https://www.nagnu.co.il/%D7%90%D7%95%D7%9E%D7%A0%D7%99%D7%9D/%D7%A9%D7%95%D7%98%D7%99_%D7%94%D7%A0%D7%91%D7%95%D7%90%D7%94/%D7%A4%D7%A8%D7%99%D7%9C%D7%99",
@@ -63,6 +75,10 @@ export const shoteiHanevuah2000s = [
 				"חולון, חברון, ראש העין, צפת וקלקיליה / תנו לשלום להגיע / חולון, חברון, תל אביב, מטולה ובני ברק / אתם אנשים / הם אנשים, הם אנשים בכל מקום / כולם חיים את החיים מיום ליום",
 			english_translation:
 				"Holon, Hebron, Rosh HaAyin, Safed and Qalqilya / let peace arrive / Holon, Hebron, Tel Aviv, Metula and Bnei Brak / you are people / they are people, they are people everywhere / everyone lives life day by day.",
+		},
+		context: {
+			he: "מתוך אלבום הבכורה (2000); מונה ערים ישראליות ופלסטיניות וקורא 'תנו לשלום להגיע'.",
+			en: "From the 2000 debut; listing Israeli and Palestinian towns — 'let peace arrive'.",
 		},
 		links: {
 			lyrics:

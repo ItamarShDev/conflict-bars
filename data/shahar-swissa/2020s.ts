@@ -8,6 +8,10 @@ export const shaharSwissa2020s = [
 			hebrew: "ארץ אהובה / אני חולם כל יום את החלום",
 			english_translation: "Beloved land / every day I dream the dream.",
 		},
+		context: {
+			he: "שיר זיכרון מדצמבר 2024 המונה שמות — 'האחים והאחיות שלנו'.",
+			en: "A December 2024 memorial song listing names — 'our brothers and sisters'.",
+		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=xFXCJrb9cLM",
 			song_info:

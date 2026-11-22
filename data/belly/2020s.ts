@@ -9,6 +9,10 @@ export const belly2020s = [
 			hebrew: "שקיות כחולות בוהקות לארונות המתים",
 			english_translation: "bright blue bags for the coffins",
 		},
+		context: {
+			he: "מתוך '96 Miles From Bethlehem' (2024), אלבום המחווה לפלסטין — 'שקיות כחולות בוהקות לארונות המתים'.",
+			en: "From '96 Miles From Bethlehem' (2024), the Palestine tribute LP — 'bright blue bags for the coffins'.",
+		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=U6CJ5uzsBPo",
 			lyrics: "https://www.youtube.com/watch?v=U6CJ5uzsBPo",
@@ -26,6 +30,10 @@ export const belly2020s = [
 				"רחפנים, מסוקים, הורגים את הרופאים שלנו / הפכו את בית החולים להוספיס / בזמן שצפיתם בזה.",
 			english_translation:
 				"Drones, helicopters, killing our doctors / Turned the hospital to a hospice / While you watched it.",
+		},
+		context: {
+			he: "מתוך '96 Miles From Bethlehem' (2024); משחק מילים על סבלנות/חולים — 'הורגים את הרופאים שלנו'.",
+			en: "From '96 Miles From Bethlehem' (2024); a patience/patients wordplay — 'killing our doctors, turned the hospital to a hospice'.",
 		},
 		links: {
 			lyrics:

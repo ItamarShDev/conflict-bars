@@ -18,3 +18,12 @@
 - Instrument Serif, display. Copyright 2022 The Instrument Serif Project Authors. [Project](https://github.com/Instrument/instrument-serif); [font specimen](https://fonts.google.com/specimen/Instrument+Serif).
 
 Both typefaces are licensed under the SIL Open Font License, Version 1.1. The complete license texts are in `OFL.txt`.
+
+## cassette-hero.png
+Sony C60D ("Duad", Japanese-market Ferri Chrome) compact cassette photograph, transparent cutout, 1605×1070.
+Source: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sony_Duad_(Japanese_market_Ferri_Chrome)_cassette_(transparent).png). License: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) (public domain dedication). No attribution required.
+
+## cassette-reel.png
+Compact cassette reel/spool photograph (cropped), original 1280×960.
+Source: [Wikimedia Commons — "Compact cassette - reel.png" by Brtkr](https://commons.wikimedia.org/wiki/File:Compact_cassette_-_reel.png).
+License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) — attribution: "Brtkr / Wikimedia Commons"; share-alike on derivatives.
