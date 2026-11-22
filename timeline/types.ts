@@ -40,7 +40,7 @@ export type FileSong = {
 	published_date: string;
 	language?: string;
 	lyric_sample?: {
-		original_language?: "ar" | "ar-Latn" | "en" | "he";
+		original_language?: "ar" | "en" | "he";
 		hebrew?: string;
 		arabic?: string;
 		english_translation?: string;

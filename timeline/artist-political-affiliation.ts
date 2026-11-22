@@ -11,10 +11,27 @@ export const artistPoliticalAffiliation: Record<
 		affiliation: "Unknown",
 		notes: "Israeli rapper Michael Cohen. No artist-wide affiliation assigned.",
 	},
-	"Neta Weiner (נטע וינר)": {
-		era: "2010s–present",
+	"Neta Weiner & Samira Saraya (נטע וינר וסמירה סרייה)": {
+		era: "2020s",
 		affiliation: "Unknown",
-		notes: "Co-founder of the Jaffa hip-hop collective System Ali.",
+		notes: "Hebrew-Arabic collaboration by artists from the System Ali scene.",
+	},
+	"Maor Ashkenazi & Noam Cohen (מאור אשכנזי ונעם כהן)": {
+		era: "2020s",
+		affiliation: "Unknown",
+		notes:
+			"Collaborators on a recording about Cohen’s experience of the Nova festival attack.",
+	},
+	"Palestinian Rapperz (P.R.)": {
+		era: "2000s–2010s",
+		affiliation: "Unknown",
+		notes: "Gaza-based rap group documented in the IREMAM archive.",
+	},
+	"Revolution Makers (صناع الثورة)": {
+		era: "2010s",
+		affiliation: "Unknown",
+		notes:
+			"Gaza-based rap act credited alongside Ayman Mghames on Eish El Nizam.",
 	},
 	"The Herd": {
 		era: "2020s",

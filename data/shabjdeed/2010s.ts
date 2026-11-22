@@ -1,3 +1,5 @@
+import type { FileSongList } from "../../timeline/types";
+
 export const shabjdeed2010s = [
 	{
 		name: "Fi Harb (في حرب / There's a War)",
@@ -62,4 +64,29 @@ export const shabjdeed2010s = [
 			song_info: "https://bltnm.bandcamp.com/album/sindibad-el-ward",
 		},
 	},
-];
+	{
+		name: "Ko7ol w 3atme (كحل و عتمة)",
+		artist: "Shabjdeed (شبجديد)",
+		language: "Arabic",
+		published_date: "2018-05-12",
+		political_leaning: "left",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "وأنا نازل ع قلنديا ودعتني",
+			hebrew: "כשירדתי לכיוון קלנדיה, היא נפרדה ממני לשלום",
+			english_translation:
+				"As I headed down to Qalandiya, she said goodbye to me",
+		},
+		context: {
+			he: "הפרידה בדרך לקלנדיה פותחת תיאור של חשד וחיפוש גופני. קלנדיה היא נקודת מעבר בין הגדה המערבית למזרח ירושלים; השם מחבר רגע אישי לחוויית התנועה דרך מחסום.",
+			en: "A goodbye on the way to Qalandiya leads into a description of suspicion and a bodily search. Naming this crossing between the West Bank and East Jerusalem ties a personal moment to movement through a checkpoint.",
+		},
+		links: {
+			lyrics:
+				"https://lyrics.lol/artist/1302560-Shabjdeed-%D8%B4%D8%A8-%D8%AC%D8%AF%D9%8A%D8%AF/lyrics/3713480-Ko7ol-w-3atme-%D9%83%D8%AD%D9%84-%D9%88-%D8%B9%D8%AA%D9%85%D8%A9",
+			song_info:
+				"https://koramusic.app/release/shabjdeed/shabjdeed-ko7ol-w-3atme-%D8%B4%D8%A8-%D8%AC%D8%AF%D9%8A%D8%AF-%D9%83%D8%AD%D9%84-%D9%88-%D8%B9%D8%AA%D9%85%D8%A9",
+			youtube: "https://www.youtube.com/watch?v=FN15PcYv8Ho",
+		},
+	},
+] satisfies FileSongList;
