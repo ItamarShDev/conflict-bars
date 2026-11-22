@@ -5,9 +5,10 @@ import RootLayout, { metadata, viewport } from "./layout";
 
 vi.mock("./globals.css", () => ({}));
 vi.mock("next/font/google", () => ({
+	Frank_Ruhl_Libre: () => ({ variable: "frank-ruhl" }),
 	Geist: () => ({ variable: "geist" }),
 	Geist_Mono: () => ({ variable: "geist-mono" }),
-	Heebo: () => ({ variable: "heebo" }),
+	Libre_Franklin: () => ({ variable: "libre-franklin" }),
 }));
 vi.mock("@vercel/analytics/next", () => ({ Analytics: () => null }));
 vi.mock("@/components/ConvexClientProvider", () => ({

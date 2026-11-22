@@ -32,7 +32,7 @@ body {
 	--color-leaning-center: #ffd500;
 	--color-leaning-unknown: #9e9a93;
 	--font-display:
-		var(--font-heebo), system-ui, -apple-system, "Segoe UI", Roboto,
+		var(--font-libre-franklin), system-ui, -apple-system, "Segoe UI", Roboto,
 		"Helvetica Neue", Arial, "Noto Sans", sans-serif;
 }
 
@@ -394,12 +394,13 @@ html[data-theme="boombox"] h3 {
 	text-align: left;
 }
 
-/* Ensure proper RTL font rendering for Hebrew */
+/* Hebrew pages use the Frank Ruhl Libre archival serif throughout */
 [dir="rtl"] {
+	--font-display:
+		var(--font-frank-ruhl), "David Libre", Georgia, "Times New Roman", serif;
 	font-family:
-		var(--font-heebo), system-ui, -apple-system, "Segoe UI", Roboto,
-		"Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+		var(--font-frank-ruhl), "David Libre", Georgia, "Times New Roman", serif,
+		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 /*  Pass It On archive styles  */
 @font-face {

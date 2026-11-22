@@ -1,5 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono, Heebo } from "next/font/google";
+import {
+	Frank_Ruhl_Libre,
+	Geist,
+	Geist_Mono,
+	Libre_Franklin,
+} from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import { ConvexClientProvider } from "@/components/ConvexClientProvider";
@@ -15,10 +20,14 @@ const geistMono = Geist_Mono({
 	subsets: ["latin"],
 });
 
-const heebo = Heebo({
-	variable: "--font-heebo",
-	subsets: ["latin", "hebrew"],
-	weight: ["800", "900"],
+const frankRuhl = Frank_Ruhl_Libre({
+	variable: "--font-frank-ruhl",
+	subsets: ["hebrew", "latin"],
+});
+
+const libreFranklin = Libre_Franklin({
+	variable: "--font-libre-franklin",
+	subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -54,11 +63,11 @@ export default function RootLayout({
 		<html
 			lang="he"
 			dir="rtl"
-			className={heebo.variable}
+			className={frankRuhl.variable}
 			suppressHydrationWarning
 		>
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased bg-(--color-background) text-(--color-foreground)`}
+				className={`${geistSans.variable} ${geistMono.variable} ${libreFranklin.variable} antialiased bg-(--color-background) text-(--color-foreground)`}
 			>
 				<ConvexClientProvider>
 					<ThemeProvider>{children}</ThemeProvider>

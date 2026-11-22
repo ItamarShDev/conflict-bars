@@ -55,22 +55,22 @@ function CassetteReel() {
 	);
 }
 
-async function loadHeebo() {
+async function loadFrankRuhl() {
 	const weights = [400, 700, 900] as const;
 	return Promise.all(
 		weights.map(async (weight) => {
 			const css = await fetch(
-				`https://fonts.googleapis.com/css2?family=Heebo:wght@${weight}`,
+				`https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@${weight}`,
 			).then((res) => res.text());
 			const match = css.match(
 				/src: url\(([^)]+)\) format\('(?:truetype|opentype)'\)/,
 			);
 			if (!match) {
-				throw new Error(`Could not load Heebo ${weight}`);
+				throw new Error(`Could not load Frank Ruhl Libre ${weight}`);
 			}
 			const data = await fetch(match[1]).then((res) => res.arrayBuffer());
 			return {
-				name: "Heebo",
+				name: "Frank Ruhl Libre",
 				data,
 				weight,
 				style: "normal" as const,
@@ -129,7 +129,7 @@ export default async function Image({
 				width: "100%",
 				height: "100%",
 				direction: "ltr",
-				fontFamily: '"Heebo", "Noto Sans Hebrew", sans-serif',
+				fontFamily: '"Frank Ruhl Libre", "David Libre", Georgia, serif',
 				color: "#f7f1e3",
 				padding: "40px 56px 36px",
 				backgroundColor: "#0e0c0a",
@@ -361,7 +361,7 @@ export default async function Image({
 		</div>,
 		{
 			...size,
-			fonts: await loadHeebo(),
+			fonts: await loadFrankRuhl(),
 		},
 	);
 }
