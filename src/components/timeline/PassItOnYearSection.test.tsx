@@ -148,8 +148,7 @@ describe("Pass It On year rendering", () => {
 		const editButtonMarkup = html.slice(buttonStart, buttonEnd);
 
 		expect(editIndex).toBeGreaterThan(-1);
-		expect(editIndex).toBeLessThan(lyricsIndex);
-		expect(html.slice(0, editIndex)).toContain('<div class="flex"><button');
+		expect(editIndex).toBeGreaterThan(lyricsIndex);
 		expect(editButtonMarkup).toContain("min-h-11 min-w-11");
 		expect(editButtonMarkup).toContain("focus-visible:ring-2");
 		expect(editButtonMarkup).not.toContain("absolute");

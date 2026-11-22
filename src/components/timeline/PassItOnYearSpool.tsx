@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef } from "react";
 import type { translations } from "@/components/timeline/translations";
 import type { TimelineEntryItem } from "@/utils/timeline";
@@ -16,33 +17,13 @@ function MiniCassetteReel({ side }: { side: "start" | "end" }) {
 			className={`pass-it-on-scrubber-reel pass-it-on-scrubber-reel-${side}`}
 			aria-hidden="true"
 		>
-			<svg viewBox="0 0 40 40" width="28" height="28">
-				<title>Cassette reel</title>
-				<circle
-					cx="20"
-					cy="20"
-					r="17.5"
-					className="pass-it-on-scrubber-reel-pack"
-				/>
-				<g className="pass-it-on-scrubber-reel-rotor">
-					<circle
-						cx="20"
-						cy="20"
-						r="10.5"
-						className="pass-it-on-scrubber-reel-hub"
-					/>
-					<path
-						d="M18.4 10.5 L21.6 10.5 L21 15 L19 15 Z M27.8 23.6 L26.2 26.4 L22.5 23.6 L23.5 21.8 Z M12.2 23.6 L13.8 26.4 L17.5 23.6 L16.5 21.8 Z"
-						className="pass-it-on-scrubber-reel-teeth"
-					/>
-					<circle
-						cx="20"
-						cy="20"
-						r="4.2"
-						className="pass-it-on-scrubber-reel-core"
-					/>
-				</g>
-			</svg>
+			<Image
+				src="/pass-it-on/cassette-reel.png"
+				alt=""
+				width={28}
+				height={28}
+				className="pass-it-on-scrubber-reel-rotor"
+			/>
 		</span>
 	);
 }

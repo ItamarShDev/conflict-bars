@@ -95,9 +95,8 @@ export function SongEntry({
 	const artistClass = isCompact
 		? "text-[0.7rem] font-bold uppercase tracking-widest text-(--color-muted-foreground)"
 		: "text-sm font-bold uppercase tracking-wider text-(--color-muted-foreground)";
-	const editButtonClass = hideHeader
-		? "inline-flex min-h-11 min-w-11 items-center justify-center bg-(--color-accent) text-[#fffdf5] transition hover:bg-(--color-accent-hover) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent)"
-		: "absolute start-3 bottom-3 z-30 flex h-9 w-9 cursor-pointer items-center justify-center bg-(--color-accent) text-[#fffdf5] transition hover:bg-(--color-accent-hover) sm:start-2 sm:bottom-2 sm:h-8 sm:w-8 sm:-translate-x-1/2 sm:translate-y-1/2 sm:opacity-0 sm:group-hover:opacity-100";
+	const editButtonClass =
+		"inline-flex min-h-11 min-w-11 items-center justify-center bg-(--color-accent) text-[#fffdf5] transition hover:bg-(--color-accent-hover) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent)";
 	const editButton = (
 		<button
 			type="button"
@@ -199,7 +198,6 @@ export function SongEntry({
 	return (
 		<>
 			<div className={`${containerClasses} group`}>
-				{hideHeader ? <div className="flex">{editButton}</div> : editButton}
 				{hasSongIdentity && !hideHeader && (
 					<div
 						className={`ps-12 sm:ps-0 ${
@@ -232,9 +230,17 @@ export function SongEntry({
 
 				{!isCompact && (lyricContent || contextContent) && (
 					<div className="pt-3 border-t border-(--color-border) space-y-2">
+						{contextContent && (
+							<p
+								className="pass-it-on-song-context text-[0.78rem] leading-relaxed text-(--color-muted-foreground) text-start"
+								dir={contextDir}
+							>
+								{highlightText(contextContent)}
+							</p>
+						)}
 						{originalArabicLyric && (
 							<p
-								className="text-sm leading-relaxed italic text-(--color-muted-foreground) text-start"
+								className="pass-it-on-song-quote text-sm leading-relaxed italic text-(--color-muted-foreground) text-start"
 								dir="rtl"
 								lang="ar"
 							>
@@ -243,7 +249,7 @@ export function SongEntry({
 						)}
 						{lyricContent && (
 							<p
-								className="text-sm leading-relaxed italic text-(--color-muted-foreground) text-start"
+								className="pass-it-on-song-quote text-sm leading-relaxed italic text-(--color-muted-foreground) text-start"
 								dir={lyricDir}
 							>
 								"{highlightText(lyricContent)}"
@@ -278,11 +284,7 @@ export function SongEntry({
 							>
 								{t.lyrics}
 							</a>
-						) : (
-							<span className="inline-flex min-h-11 items-center text-xs text-(--color-muted-foreground)">
-								{t.lyricsUnavailable}
-							</span>
-						)}
+						) : null}
 						{hasFullLyrics && lyricsLink && (
 							<a
 								href={lyricsLink}
@@ -313,17 +315,7 @@ export function SongEntry({
 								{t.youtube}
 							</a>
 						)}
-					</div>
-				)}
-
-				{!isCompact && contextContent && (
-					<div className="pt-3 space-y-2">
-						<p
-							className="text-sm leading-relaxed text-(--color-muted-foreground) text-start"
-							dir={contextDir}
-						>
-							{highlightText(contextContent)}
-						</p>
+						{editButton}
 					</div>
 				)}
 			</div>

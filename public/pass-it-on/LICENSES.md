@@ -18,3 +18,12 @@
 - Instrument Serif, display. Copyright 2022 The Instrument Serif Project Authors. [Project](https://github.com/Instrument/instrument-serif); [font specimen](https://fonts.google.com/specimen/Instrument+Serif).
 
 Both typefaces are licensed under the SIL Open Font License, Version 1.1. The complete license texts are in `OFL.txt`.
+
+## cassette-hero.png
+Sony C60D compact cassette photograph, transparent cutout, 1605×1070.
+Source: Wikimedia Commons. License: CC0 1.0 (public domain dedication). No attribution required.
+
+## cassette-reel.png
+Compact cassette reel/spool photograph (cropped), original 1280×960.
+Source: Wikimedia Commons — "Compact cassette - reel.png" by Brtkr.
+License: CC BY-SA 4.0 — attribution: "Brtkr / Wikimedia Commons"; share-alike on derivatives.

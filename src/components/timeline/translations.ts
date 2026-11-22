@@ -6,11 +6,7 @@ export const translations = {
 			titleLead: "A mixtape of",
 			titleEmphasis: "complicated times.",
 			hebrewTagline: "להעביר הלאה",
-			cassetteAlt: "Illustrated cassette with a three-place photo montage",
-			cassetteDescription:
-				"The cassette window shows a photo montage of Tel Aviv, Haifa, and Ramon Crater, crossfading between places when motion is enabled. This archive does not play audio.",
-			cassetteCaption: "CONFLICT BARS · ARCHIVE · NO AUDIO",
-			cassetteLabel: "CONFLICT BARS / SIDE A",
+			cassetteAlt: "A real compact cassette tape",
 			subtitle:
 				"Israeli and Palestinian hip-hop, filed alongside historical context from the same periods.",
 			catalogSummary: "{{songs}} tracks · {{artists}} artists · {{range}}",
@@ -71,7 +67,6 @@ export const translations = {
 			results: "Found {{count}} song(s)",
 		},
 		lyrics: "Lyrics",
-		lyricsUnavailable: "Lyrics link unavailable",
 		fullLyrics: {
 			button: "Full lyrics",
 			title: "Full lyrics",
@@ -196,11 +191,7 @@ export const translations = {
 			titleLead: "מיקסטייפ של",
 			titleEmphasis: "זמנים מורכבים.",
 			hebrewTagline: "להעביר הלאה",
-			cassetteAlt: "איור קלטת עם מונטאז׳ תמונות משלושה מקומות",
-			cassetteDescription:
-				"חלון הקלטת מציג מונטאז׳ תצלומים מתל אביב, חיפה ומכתש רמון, עם מעברים הדרגתיים בין המקומות כשהתנועה מופעלת. הארכיון אינו משמיע אודיו.",
-			cassetteCaption: "חרוזים מסוכסכים · ארכיון · ללא שמע",
-			cassetteLabel: "חרוזים מסוכסכים / צד א׳",
+			cassetteAlt: "קלטת שמע אמיתית",
 			subtitle: "היפ־הופ ישראלי ופלסטיני לצד הקשר היסטורי מאותה תקופה.",
 			catalogSummary: "{{songs}} שירים · {{artists}} אמנים · {{range}}",
 			eventSummary: "{{count}} הערות היסטוריות בארכיון",
@@ -259,7 +250,6 @@ export const translations = {
 			results: "נמצאו {{count}} שירים",
 		},
 		lyrics: "מילים",
-		lyricsUnavailable: "קישור למילים לא זמין",
 		fullLyrics: {
 			button: "מילים מלאות",
 			title: "מילים מלאות",
