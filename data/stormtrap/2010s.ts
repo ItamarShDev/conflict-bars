@@ -4,6 +4,10 @@ export const stormtrap2010s = [
 		artist: "Stormtrap / Asifeh (عاصفة)",
 		language: "Arabic",
 		published_date: "2010",
+		context: {
+			he: "רצועה מ-2010 של אסיפה' (סטורמטראפ), ממייסדי קולקטיב רמאללה אנדרגראונד.",
+			en: "A 2010 track by Asifeh (Stormtrap), co-founder of the Ramallah Underground collective.",
+		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=ZAXczID4q4s",
 		},
@@ -18,6 +22,10 @@ export const stormtrap2010s = [
 			hebrew: "אולי נוכל להגן על עצמנו מהצבא ומהרשות [הפלסטינית].",
 			english_translation:
 				"We could protect ourselves from the army and from the [Palestinian] Authority.",
+		},
+		context: {
+			he: "מרץ 2012; בית על הגנה עצמית הן מצה''ל והן מהרשות הפלסטינית.",
+			en: "A March 2012 track; a verse on protecting oneself from both the army and the Palestinian Authority.",
 		},
 		links: {
 			lyrics:

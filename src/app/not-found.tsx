@@ -21,7 +21,7 @@ export default function NotFound() {
 					הכתובת שחיפשת אינה זמינה באתר.
 				</p>
 				<Link
-					href="/he"
+					href="/"
 					className="control-bar inline-flex min-h-11 items-center justify-center px-5 py-2 font-black transition hover:border-(--color-accent) hover:text-(--color-accent) focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-(--color-accent)"
 				>
 					חזרה לציר הזמן

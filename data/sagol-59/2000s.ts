@@ -42,6 +42,10 @@ export const sagol592000s = [
 			english_translation:
 				"Soldiers on the seam line, tense/pressed like buttons on a remote control.",
 		},
+		context: {
+			he: "שיר על ירושלים מ-2008 עם רבל סאן ושאנן סטריט; 'חיילים על קו התפר'.",
+			en: "A 2008 track about Jerusalem with Rebel Sun and Sha'anan Street — 'soldiers on the seam line'.",
+		},
 		links: {
 			lyrics:
 				"https://azlyrics.biz/other/%d7%a1%d7%92%d7%95%d7%9c-59-lyrics/%d7%a1%d7%92%d7%95%d7%9c-59-yerushalayim-%d7%99%d7%a8%d7%95%d7%a9%d7%9c%d7%99%d7%9d-sagol-59-lyrics/",

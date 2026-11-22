@@ -20,10 +20,6 @@ describe("Pass It On year rail direction", () => {
 				groups={[]}
 				selectedYear={2008}
 				onSelect={() => {}}
-				isAutoAdvancing={false}
-				onToggleAutoAdvance={() => {}}
-				onPrevious={() => {}}
-				onNext={() => {}}
 				copy={translations.he.passItOn}
 			/>,
 		);
@@ -32,33 +28,22 @@ describe("Pass It On year rail direction", () => {
 		expect(html).not.toContain('dir="ltr"');
 	});
 
-	it("renders the optional submit action beside the scrollable years", () => {
+	it("renders only the scrollable years without rail controls", () => {
 		const html = renderToStaticMarkup(
 			<PassItOnYearSpool
 				years={[2008, 2010]}
 				groups={[]}
 				selectedYear={2008}
 				onSelect={() => {}}
-				isAutoAdvancing={false}
-				onToggleAutoAdvance={() => {}}
-				onPrevious={() => {}}
-				onNext={() => {}}
-				submitAction={<button type="button">הוספת שיר</button>}
 				copy={translations.he.passItOn}
 			/>,
 		);
-		const yearsIndex = html.indexOf('class="pass-it-on-rail-years"');
-		const submitIndex = html.indexOf('class="pass-it-on-rail-submit"');
-
-		expect(yearsIndex).toBeGreaterThan(-1);
-		expect(submitIndex).toBeGreaterThan(yearsIndex);
-		expect(html.slice(submitIndex)).toContain("הוספת שיר");
-		expect(html).toContain('class="pass-it-on-rail-controls"');
-		expect(html).toContain('aria-label="השנה הקודמת"');
-		expect(html).toContain('aria-label="השנה הבאה"');
-		expect(html).toContain(
-			`aria-label="${translations.he.passItOn.autoAdvance}"`,
-		);
+		expect(html).toContain('class="pass-it-on-rail-years"');
+		expect(html).not.toContain("pass-it-on-rail-submit");
+		expect(html).not.toContain("pass-it-on-advance");
+		expect(html).not.toContain('class="pass-it-on-rail-controls"');
+		expect(html).not.toContain("pass-it-on-rail-arrow");
+		expect(html).not.toContain("pass-it-on-scrubber-counter");
 	});
 
 	it("docks the rail with safe-area padding and measured scroll space", () => {
@@ -75,7 +60,7 @@ describe("Pass It On year rail direction", () => {
 		expect(mobileRailStyles).toContain("env(safe-area-inset-left, 0px)");
 		expect(mobileRailStyles).toContain("env(safe-area-inset-right, 0px)");
 		expect(mobileRailStyles).toContain(
-			"grid-template-columns: minmax(0, 1fr) minmax(44px, 7rem);",
+			"grid-template-columns: minmax(0, 1fr);",
 		);
 		expect(mobileRailStyles).toContain("grid-column: 1 / -1;");
 		expect(mobileRailStyles).toContain("min-width: 2.75rem;");
@@ -85,13 +70,7 @@ describe("Pass It On year rail direction", () => {
 		);
 	});
 
-	it("flips both rail arrows and the auto-advance arrow in RTL and fills tape from inline start", () => {
-		expect(globalStyles).toContain(
-			'[dir="rtl"] .pass-it-on .pass-it-on-rail-controls .pass-it-on-advance span',
-		);
-		expect(globalStyles).toContain(
-			'.pass-it-on[dir="rtl"] .pass-it-on-rail-controls .pass-it-on-advance span',
-		);
+	it("fills the tape from inline start in RTL", () => {
 		expect(globalStyles).toMatch(
 			/\.pass-it-on \.pass-it-on-tape-progress \{[^}]*inset-inline-start: 0;[^}]*border-inline-end: 2px solid #fde68a;/,
 		);

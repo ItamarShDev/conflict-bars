@@ -18,6 +18,10 @@ export const systemAli2010s = [
 		artist: "System Ali (סיסטם עלי)",
 		language: "Hebrew/Arabic/Russian/Yiddish/Amharic/English",
 		published_date: "2019",
+		context: {
+			he: "שיר הנושא של אלבום 'מהרג'אן' (2019) של סיסטם עלי — רב-לשוני בשש שפות.",
+			en: "Title track of System Ali's album 'Maharajan' (2019) — multilingual across six languages.",
+		},
 		links: {
 			lyrics: "https://genius.com/System-ali-maharjan-lyrics",
 			youtube: "https://www.youtube.com/watch?v=xCiw3EJyOxY",

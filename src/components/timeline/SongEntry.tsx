@@ -95,9 +95,8 @@ export function SongEntry({
 	const artistClass = isCompact
 		? "text-[0.7rem] font-bold uppercase tracking-widest text-(--color-muted-foreground)"
 		: "text-sm font-bold uppercase tracking-wider text-(--color-muted-foreground)";
-	const editButtonClass = hideHeader
-		? "inline-flex min-h-11 min-w-11 items-center justify-center bg-(--color-accent) text-[#fffdf5] transition hover:bg-(--color-accent-hover) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent)"
-		: "absolute start-3 top-3 z-30 flex h-9 w-9 cursor-pointer items-center justify-center bg-(--color-accent) text-[#fffdf5] transition hover:bg-(--color-accent-hover) sm:start-2 sm:top-2 sm:h-8 sm:w-8 sm:-translate-x-1/2 sm:-translate-y-1/2 sm:opacity-0 sm:group-hover:opacity-100";
+	const editButtonClass =
+		"inline-flex min-h-11 min-w-11 items-center justify-center bg-(--color-accent) text-[#fffdf5] transition hover:bg-(--color-accent-hover) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent)";
 	const editButton = (
 		<button
 			type="button"
@@ -220,7 +219,6 @@ export function SongEntry({
 	return (
 		<>
 			<div className={`${containerClasses} group`}>
-				{hideHeader ? <div className="flex">{editButton}</div> : editButton}
 				{hasSongIdentity && !hideHeader && (
 					<div
 						className={`ps-12 sm:ps-0 ${
@@ -253,6 +251,14 @@ export function SongEntry({
 
 				{!isCompact && (lyricContent || contextContent) && (
 					<div className="pt-3 border-t border-(--color-border) space-y-2">
+						{contextContent && (
+							<p
+								className="pass-it-on-song-context text-[0.78rem] leading-relaxed text-(--color-muted-foreground) text-start"
+								dir={contextDir}
+							>
+								{highlightText(contextContent)}
+							</p>
+						)}
 						{labeledLyrics?.map(
 							(excerpt) =>
 								excerpt.text && (
@@ -261,7 +267,7 @@ export function SongEntry({
 											{excerpt.label}
 										</p>
 										<p
-											className="text-sm leading-relaxed italic text-(--color-muted-foreground) text-start"
+											className="pass-it-on-song-quote text-sm leading-relaxed italic text-(--color-muted-foreground) text-start"
 											dir={
 												excerpt.lang === "he" || excerpt.lang === "ar"
 													? "rtl"
@@ -276,7 +282,7 @@ export function SongEntry({
 						)}
 						{!labeledLyrics && originalArabicLyric && (
 							<p
-								className="text-sm leading-relaxed italic text-(--color-muted-foreground) text-start"
+								className="pass-it-on-song-quote text-sm leading-relaxed italic text-(--color-muted-foreground) text-start"
 								dir="rtl"
 								lang="ar"
 							>
@@ -285,18 +291,10 @@ export function SongEntry({
 						)}
 						{!labeledLyrics && lyricContent && (
 							<p
-								className="text-sm leading-relaxed italic text-(--color-muted-foreground) text-start"
+								className="pass-it-on-song-quote text-sm leading-relaxed italic text-(--color-muted-foreground) text-start"
 								dir={lyricDir}
 							>
 								"{highlightText(lyricContent)}"
-							</p>
-						)}
-						{contextContent && (
-							<p
-								className="text-sm leading-relaxed text-(--color-muted-foreground) text-start"
-								dir={contextDir}
-							>
-								{highlightText(contextContent)}
 							</p>
 						)}
 					</div>
@@ -328,11 +326,7 @@ export function SongEntry({
 							>
 								{t.lyrics}
 							</a>
-						) : (
-							<span className="inline-flex min-h-11 items-center text-xs text-(--color-muted-foreground)">
-								{t.lyricsUnavailable}
-							</span>
-						)}
+						) : null}
 						{hasFullLyrics && lyricsLink && (
 							<a
 								href={lyricsLink}
@@ -363,6 +357,7 @@ export function SongEntry({
 								{t.youtube}
 							</a>
 						)}
+						{editButton}
 					</div>
 				)}
 			</div>
@@ -395,7 +390,7 @@ export function SongEntry({
 							aria-label={t.submitSongForm.modalCloseAria}
 						/>
 						<div
-							className="relative z-10 w-full max-w-2xl overflow-y-auto border-2 border-(--color-control-border) glass-card p-6 pb-8 max-h-[calc(100vh-1rem)]"
+							className="relative z-10 w-full max-w-2xl overflow-y-auto border-2 border-(--color-control-border) glass-card pass-it-on-dialog tape p-6 pb-8 max-h-[calc(100vh-1rem)]"
 							style={{
 								paddingBottom: "calc(env(safe-area-inset-bottom, 0px) + 2rem)",
 							}}

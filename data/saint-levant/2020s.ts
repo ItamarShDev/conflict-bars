@@ -10,6 +10,10 @@ export const saintLevant2020s = [
 			hebrew: "אני שייך לעם בלתי שביר",
 			english_translation: "I belong to an unbreakable people",
 		},
+		context: {
+			he: "סינגל מנובמבר 2024 עם 47SOUL ואחרים — 'אני שייך לעם בלתי שביר'.",
+			en: "A November 2024 single featuring 47SOUL and others — 'I belong to an unbreakable people'.",
+		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=NdONzDuKzq0",
 			lyrics: "https://www.lyricsbull.com/daloona-lyrics-saint-levant/",
@@ -58,6 +62,10 @@ export const saintLevant2020s = [
 			hebrew: "I came from Gaza with love",
 			english_translation: "(English original)",
 		},
+		context: {
+			he: "סינגל ממרץ 2023 — מכתב אהבה 'מעזה, באהבה', לפני פרוץ המלחמה.",
+			en: "A March 2023 single — 'from Gaza, with love', predating the war.",
+		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=ih0_hqUWOTc",
 			lyrics: "https://genius.com/Saint-levant-from-gaza-with-love-lyrics",
@@ -72,6 +80,10 @@ export const saintLevant2020s = [
 			hebrew: "כאפייה לכסות את הפנים שלנו / מעזה ועד יפו הם איתי.",
 			english_translation:
 				"Kuffiyeh to cover our faces / From Gaza to yaffa they with me.",
+		},
+		context: {
+			he: "סינגל מוקדם מנובמבר 2020 — 'מעזה ועד יפו'.",
+			en: "An early single from November 2020 — 'from Gaza to Yaffa'.",
 		},
 		links: {
 			lyrics: "https://www.letras.mus.br/saint-levant/nirvana-in-gaza/",

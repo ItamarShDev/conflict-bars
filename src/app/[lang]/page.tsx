@@ -1,7 +1,7 @@
 import { preloadQuery } from "convex/nextjs";
 import { Timeline } from "@/components/timeline/Timeline";
 import { loadFileSongs } from "@/utils/file-songs";
-import { requireHebrewLocale } from "@/utils/hebrew-locale";
+import { requireLocale } from "@/utils/locale";
 import { api } from "../../../convex/_generated/api";
 
 export default async function TimelinePage({
@@ -10,7 +10,7 @@ export default async function TimelinePage({
 	params: Promise<{ lang: string }>;
 }) {
 	const { lang } = await params;
-	requireHebrewLocale(lang);
+	requireLocale(lang);
 	const songs = loadFileSongs();
 
 	const convexEvents = await preloadQuery(api.events.getAllEvents);

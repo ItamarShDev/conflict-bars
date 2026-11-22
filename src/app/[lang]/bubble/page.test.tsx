@@ -33,7 +33,7 @@ describe("BubblePage Pass It On wrapper", () => {
 			'lang="he" dir="rtl" class="relative min-h-screen pass-it-on pass-it-on-chart-page"',
 		);
 		expect(html).toContain('data-compact="true"');
-		expect(html).toContain('data-nav="/he"');
+		expect(html).toContain('data-nav="/"');
 		expect(html).toContain('class="pass-it-on-chart-intro"');
 		expect(html).toContain(
 			'class="pass-it-on-chart-title">שירים לפי נטייה פוליטית</h1>',
@@ -51,24 +51,30 @@ describe("BubblePage Pass It On wrapper", () => {
 		expect(html).not.toContain("הוסף שיר");
 	});
 
-	it("rejects non-Hebrew chart routes", async () => {
-		await expect(renderPage("en")).rejects.toThrow();
+	it("accepts the English chart route", async () => {
+		const html = await renderPage("en");
+		expect(html).toContain('lang="en" dir="ltr"');
+		expect(html).toContain('data-nav="/en"');
 	});
 
-	it("sets the chart canonical and social metadata to /he/bubble", async () => {
+	it("sets the chart canonical and social metadata to /bubble", async () => {
 		const metadata = await generateMetadata({
 			params: Promise.resolve({ lang: "he" }),
 		});
 		expect(metadata.alternates?.canonical).toBe(
-			"https://www.conflictbars.org/he/bubble",
+			"https://www.conflictbars.org/bubble",
 		);
-		expect(metadata.openGraph?.url).toBe(
-			"https://www.conflictbars.org/he/bubble",
-		);
+		expect(metadata.openGraph?.url).toBe("https://www.conflictbars.org/bubble");
 		expect(metadata.openGraph?.locale).toBe("he_IL");
 		expect(metadata.twitter?.title).toContain("שירים לפי נטייה פוליטית");
+		const enMetadata = await generateMetadata({
+			params: Promise.resolve({ lang: "en" }),
+		});
+		expect(enMetadata.alternates?.canonical).toBe(
+			"https://www.conflictbars.org/en/bubble",
+		);
 		await expect(
-			generateMetadata({ params: Promise.resolve({ lang: "en" }) }),
+			generateMetadata({ params: Promise.resolve({ lang: "fr" }) }),
 		).rejects.toThrow();
 	});
 });

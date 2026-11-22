@@ -10,6 +10,10 @@ export const static2020s = [
 			english_translation:
 				"It is clear to me why I am here; for everything they did, everyone they took, I am here just for them.",
 		},
+		context: {
+			he: "שיר מלחמה מדצמבר 2023 של סטטיק, על הלם קרב — 'ברור לי למה אני פה'.",
+			en: "A December 2023 war song by Static, on combat shock — 'it is clear to me why I am here'.",
+		},
 		links: {
 			lyrics: "https://www.ynet.co.il/entertainment/article/b1x3dh4ut",
 			song_info: "https://www.israelhayom.co.il/culture/music/article/14933918",

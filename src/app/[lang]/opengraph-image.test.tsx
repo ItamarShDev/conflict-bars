@@ -54,7 +54,7 @@ describe("Hebrew social image route", () => {
 
 		expect(alt).toContain("ציר זמן אינטראקטיבי");
 		expect(text).toMatch(/[\u0590-\u05ff]/);
-		expect(text).toContain("www.conflictbars.org/he");
+		expect(text).toContain("www.conflictbars.org");
 		expect(text).toContain("1987");
 		expect(text).toContain("2025");
 		expect(text).not.toMatch(/\b(?:Conflict|Israeli|Scene|Song|Context)\b/);
@@ -64,9 +64,27 @@ describe("Hebrew social image route", () => {
 		expect(TwitterImage).toBe(Image);
 	});
 
-	it("rejects the legacy English social-image route at runtime", async () => {
+	it("serves the English social-image route with the same artwork", async () => {
+		vi.stubGlobal(
+			"fetch",
+			vi.fn(async (input: RequestInfo | URL) => {
+				if (String(input).includes("fonts.googleapis.com")) {
+					return new Response(
+						"src: url(https://fonts.test/heebo.ttf) format('truetype')",
+					);
+				}
+				return new Response(new Uint8Array([0, 1, 2]));
+			}),
+		);
+		const response = await Image({ params: Promise.resolve({ lang: "en" }) });
+		expect(
+			(response as unknown as { element: ReactElement }).element,
+		).toBeTruthy();
+	});
+
+	it("rejects unsupported locales at runtime", async () => {
 		await expect(
-			Image({ params: Promise.resolve({ lang: "en" }) }),
+			Image({ params: Promise.resolve({ lang: "fr" }) }),
 		).rejects.toThrow();
 	});
 });

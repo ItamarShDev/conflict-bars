@@ -13,6 +13,10 @@ export const dam2000s = [
 			english_translation:
 				"Dedicated to my people, my land, my homeland / to Palestinian Arab blood / walking with its head held high / this house, this house, this house.",
 		},
+		context: {
+			he: "רצועת הנושא של אלבום הבכורה 'Dedication' (2006) — 'מוקדש לעמי, לאדמתי, למולדתי'.",
+			en: "Title track of the debut album 'Dedication' (2006) — 'dedicated to my people, my land, my homeland'.",
+		},
 		links: {
 			lyrics: "https://genius.com/Dam-dedication-lyrics",
 			youtube: "https://www.youtube.com/watch?v=PQrQMOZI9uI",
@@ -32,6 +36,10 @@ export const dam2000s = [
 			english_translation:
 				"Who is a terrorist? I am a terrorist? / How can I be a terrorist if I live in my homeland? / Who is a terrorist? You are a terrorist / You have taken everything I own in my land.",
 		},
+		context: {
+			he: "סינגל הבכורה של DAM מ-2001, בתקופת האינתיפאדה השנייה — 'מי טרוריסט? אני טרוריסט?'.",
+			en: "DAM's 2001 debut single, from the Second Intifada era — 'who is a terrorist? I am a terrorist?'",
+		},
 		links: {
 			lyrics: "https://genius.com/Dam-whos-the-terrorist-lyrics",
 			youtube: "https://www.youtube.com/watch?v=OgSVXjNLFgo",
@@ -47,6 +55,10 @@ export const dam2000s = [
 				"האחרים מפגינים השוטרים לוקחים ביד אלות / הערבים מפגינים השוטרים לוקחים ת'נפשות",
 			english_translation:
 				"When others protest the police pick up batons / when Arabs protest the police take their souls.",
+		},
+		context: {
+			he: "מ-2000; מתייחס לאירועי אוקטובר 2000 — 'כשערבים מפגינים השוטרים לוקחים ת'נפשות'.",
+			en: "A 2000 track referencing the October 2000 events — 'when Arabs protest, the police take their souls'.",
 		},
 		links: {
 			lyrics: "https://genius.com/Dam-poshim-hapim-mipesha-lyrics",
@@ -66,6 +78,10 @@ export const dam2000s = [
 			english_translation:
 				"Wherever I go I see borders imprisoning humanity / why are the world's children free and I have no freedom?",
 		},
+		context: {
+			he: "מ-2006; על גבולות הכולאים את האנושות — 'למה ילדי העולם חופשיים ולי אין חירות'.",
+			en: "A 2006 track on borders imprisoning humanity — 'why are the world's children free and I have no freedom?'",
+		},
 		links: {
 			lyrics: "https://genius.com/Dam-i-dont-have-freedom-lyrics",
 			youtube: "https://www.youtube.com/watch?v=GhmpxCWVMBM",
@@ -84,6 +100,10 @@ export const dam2000s = [
 			english_translation:
 				"Here, demolishing houses is like a whisper / as long as we stay silent it keeps passing through our people's ears.",
 		},
+		context: {
+			he: "מ-2006 עם אביר אל-זינאתי; על הריסת בתים — 'כמו לחישה'.",
+			en: "A 2006 track with Abeer al-Zinati (Sabreena da Witch); on home demolitions being 'like a whisper'.",
+		},
 		links: {
 			lyrics: "https://genius.com/Dam-born-here-lyrics",
 			song_info: "http://news.bbc.co.uk/2/hi/middle_east/6487833.stm",
@@ -101,6 +121,10 @@ export const dam2000s = [
 				"שולט בנו משטר ציוני דמוקרטי?! דמוקרטי לנפש הציונית וציוני לנפש הערבית.",
 			english_translation:
 				"A democratic Zionist regime rules us — democratic to the Zionist soul, Zionist to the Arab soul.",
+		},
+		context: {
+			he: "מתוך אלבום הבכורה 'Dedication' (2006) — 'זר במדינתי'.",
+			en: "From the debut album 'Dedication' (2006) — 'stranger in my own country'.",
 		},
 		links: {
 			song_info:

@@ -10,6 +10,10 @@ export const izzy2020s = [
 			english_translation:
 				"My whole head is spinning, my country is under attack\nAnd a father who suddenly sees his daughter being kidnapped",
 		},
+		context: {
+			he: "סינגל שיצא ארבעה ימים לאחר הטבח ב-7 באוקטובר — 'מדינה שלי מותקפת'.",
+			en: "A single released four days after the October 7 massacre — 'my country is under attack'.",
+		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=GAdS-TWD53Y",
 		},

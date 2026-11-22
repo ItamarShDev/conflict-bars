@@ -25,6 +25,10 @@ export const shabjdeed2020s = [
 			hebrew: "אחרי המלחמה אנחנו חוזרים.",
 			english_translation: "After the war, we return.",
 		},
+		context: {
+			he: "סינגל מ-BLTNM, מאי 2026 — 'אחרי המלחמה אנחנו חוזרים'.",
+			en: "A BLTNM single from May 2026 — 'after the war, we return'.",
+		},
 		links: {
 			song_info: "https://bltnm.bandcamp.com/track/kattal",
 			lyrics:
@@ -37,6 +41,10 @@ export const shabjdeed2020s = [
 		collaborators: ["Al Nather (النثر)"],
 		language: "Arabic",
 		published_date: "2023-12-04",
+		context: {
+			he: "'המנון' — סינגל מדצמבר 2023, חודשיים לתוך המלחמה בעזה.",
+			en: "'Anthem' — a December 2023 single released two months into the Gaza war.",
+		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=_U6SB1dVF1s",
 			lyrics: "https://bltnm.bandcamp.com/track/nasheed",
@@ -52,6 +60,10 @@ export const shabjdeed2020s = [
 			hebrew: "יש מלחמה במדינה — חיילים, כוחות ויריות.",
 			english_translation:
 				"There's a war in the country — soldiers, troops and gunfire.",
+		},
+		context: {
+			he: "פברואר 2021; בית המתאר 'מלחמה במדינה — חיילים, כוחות ויריות'.",
+			en: "A February 2021 single; a verse describing 'a war in the country — soldiers, troops and gunfire'.",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=ktnZQhKmDxk",
@@ -86,6 +98,10 @@ export const shabjdeed2020s = [
 			english_translation:
 				"Verses curse America over Saddam Hussein's execution and Arab leaders' complicity.",
 		},
+		context: {
+			he: "דצמבר 2020; בתים המקללים את ארה''ב סביב הוצאתו להורג של סדאם חוסיין ושיתוף הפעולה של מנהיגים ערבים.",
+			en: "A December 2020 track; verses curse America over Saddam Hussein's execution and Arab leaders' complicity.",
+		},
 		links: {
 			lyrics: "https://bltnm.bandcamp.com/track/amrikkka",
 		},
@@ -117,6 +133,10 @@ export const shabjdeed2020s = [
 				"האם אנחנו שווים? כמובן שלא. אף שזה אויב שלא מבין דבר, הוא מביט לעתיד — נערך, מתארגן, מסתגל.",
 			english_translation:
 				"Are we equal? Of course not. The enemy understands nothing but looks to the future — prepares, organizes, adapts.",
+		},
+		context: {
+			he: "מתוך האלבום SULTAN (פברואר 2024); בית על 'האויב' המסתגל ומתארגן.",
+			en: "From the album SULTAN (February 2024); a verse on 'the enemy' adapting and organizing.",
 		},
 		links: {
 			song_info: "https://bltnm.bandcamp.com/track/tal-abib",

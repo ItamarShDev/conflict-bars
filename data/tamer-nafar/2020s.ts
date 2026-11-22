@@ -8,6 +8,10 @@ export const tamernafar2020s = [
 			hebrew: "כולם מדממים",
 			english_translation: "Everyone is bleeding",
 		},
+		context: {
+			he: "סינגל באנגלית מ-2022; פזמון על דימום הדדי — 'כולם מדממים'.",
+			en: "An English-language 2022 single; a refrain on mutual bleeding — 'everyone is bleeding'.",
+		},
 		links: {
 			lyrics:
 				"https://lyrics.jspinyin.net/lyrics-tamer-nafar-%D7%AA%D7%90%D7%9E%D7%A8-%D7%A0%D7%A4%D7%90%D7%A8/",
@@ -23,6 +27,10 @@ export const tamernafar2020s = [
 			english_translation:
 				"Fight the occupation coming straight from the curfew",
 		},
+		context: {
+			he: "סינגל מ-2020 על מאבק נגד הכיבוש 'היישר מהעוצר'.",
+			en: "A 2020 single about fighting the occupation 'coming straight from the curfew'.",
+		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=X8NqDqcXFD4",
 		},
@@ -36,6 +44,10 @@ export const tamernafar2020s = [
 				"That was a tank attack, that was a gas attack. Never a heart attack because the beat never goes off",
 			english_translation:
 				"That was a tank attack, that was a gas attack. Never a heart attack because the beat never goes off",
+		},
+		context: {
+			he: "סינגל מ-2021; הבית מציב 'מתקפת טנקים, מתקפת גז' מול 'הביט לא נכבה'.",
+			en: "A 2021 single pitting 'a tank attack, a gas attack' against 'the beat never goes off'.",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=6kJl_pEhvxM",
@@ -87,6 +99,10 @@ export const tamernafar2020s = [
 			hebrew: "ספר לעולם, ספר לו / על בית ששברו את עששיתו.",
 			english_translation:
 				"Tell the world, tell it / of a house whose lantern they broke.",
+		},
+		context: {
+			he: "יצא באוקטובר 2024, במהלך המלחמה בעזה; משלב קולות של דמויות תרבות פלסטיניות כרים בנה, סמיח אל-קאסם ומוחמד בכרי.",
+			en: "Released October 2024 amid the Gaza war, incorporating voices of Palestinian cultural figures Rim Banna, Samih al-Qasim and Mohammad Bakri.",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=d1lxAWfthtE",

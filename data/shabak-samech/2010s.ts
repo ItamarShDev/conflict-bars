@@ -10,6 +10,10 @@ export const shabakSamech2010s = [
 			english_translation:
 				"They beat you in the street, in labor, in safeguard - no milk, no honey, here everyone eats straw, this is no place for a messiah, this is an experiment that failed",
 		},
+		context: {
+			he: "ביקורת חברתית מ-2012 — 'זה לא מקום למשיח, זה ניסוי שלא הצליח'.",
+			en: "A 2012 social critique — 'this is no place for a messiah, this is an experiment that failed'.",
+		},
 		links: {
 			lyrics: "https://genius.com/Shabak-samech-mashiach-lyrics",
 			youtube: "https://www.youtube.com/watch?v=UyOuQnxiu5o",

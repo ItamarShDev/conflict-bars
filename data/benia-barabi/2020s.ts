@@ -10,6 +10,10 @@ export const beniaBarabi2020s = [
 			english_translation:
 				"The prophets envisioned something different for you, someone fell asleep on watch, where is the dream, there is no truth and no peace, there is no justice either, only a crack",
 		},
+		context: {
+			he: "פברואר 2024; שימוש במטען 'מן הנהר אל הים' מנקודת מבט ישראלית — 'אין אמת ואין שלום'.",
+			en: "A February 2024 track using the contested 'from the river to the sea' phrase from an Israeli viewpoint — 'no truth and no peace'.",
+		},
 		links: {
 			lyrics:
 				"https://www.tab4u.com/tabs/songs/72929_%D7%91%D7%A0%D7%99%D7%94_%D7%91%D7%A8%D7%91%D7%99_-_%D7%91%D7%99%D7%9F_%D7%94%D7%A0%D7%94%D7%A8_%D7%9C%D7%99%D7%9D.html",
@@ -26,6 +30,10 @@ export const beniaBarabi2020s = [
 			hebrew: "זה בסדר לא להיות בסדר, זה בסדר לשיר כשכואב",
 			english_translation:
 				"It's okay not to be okay, it's okay to sing when it hurts.",
+		},
+		context: {
+			he: "דצמבר 2023 עם 'החברים מהנובה'; שיר נחמה לאחר הטבח — 'זה בסדר לא להיות בסדר'.",
+			en: "A December 2023 track with 'the friends from Nova'; a comfort song after the massacre — 'it's okay not to be okay'.",
 		},
 		links: {
 			lyrics:

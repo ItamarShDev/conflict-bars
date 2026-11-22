@@ -9,6 +9,10 @@ export const quami2000s = [
 			english_translation:
 				"That leaders on every side profit when they say that war is for the good of the nation.",
 		},
+		context: {
+			he: "מתוך 'כולם יודעים את התשובות' (2005); בית על מנהיגים מכל צד המרוויחים ממלחמה.",
+			en: "From 'כולם יודעים את התשובות' (2005); a verse on leaders of every side profiting from war.",
+		},
 		links: {
 			lyrics:
 				"https://downloadmp3flac.com/songs/kshe-elohim-amar-bekef-kshlvhym-mr-bkyp-by-quami-qvvmy",
@@ -27,6 +31,10 @@ export const quami2000s = [
 			english_translation:
 				"And if I die for a cause that isn't mine / that's not exactly what will keep me sane.",
 		},
+		context: {
+			he: "נובמבר 2007 עם מיקי שביב — 'אם אמות למטרה שלא שלי, זה לא ישאיר אותי שפוי'.",
+			en: "A November 2007 single with Miki Shaviv — 'if I die for a cause that isn't mine, that's not what will keep me sane'.",
+		},
 		links: {
 			lyrics: "https://genius.com/Quami-shafui-milchama-lyrics",
 			song_info:
@@ -44,6 +52,10 @@ export const quami2000s = [
 			hebrew: "מי זה אבו מיקרופון, מהמיקרופון שלו אך עד לאצבעות ידיו",
 			english_translation:
 				"Mostly skills/braggadocio — its significance is the early Jewish-Arab rap collab with DAM members on כולם יודעים את התשובות. (lyrks)",
+		},
+		context: {
+			he: "מתוך 'כולם יודעים את התשובות' (2005); שיתוף פעולה מוקדם יהודי-ערבי עם חברי DAM.",
+			en: "From 'כולם יודעים את התשובות' (2005); an early Jewish-Arab rap collaboration with DAM members.",
 		},
 		links: {
 			lyrics: "https://lyrks.com/lyrics/quami/abu-microphone",
