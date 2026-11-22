@@ -64,9 +64,27 @@ describe("Hebrew social image route", () => {
 		expect(TwitterImage).toBe(Image);
 	});
 
-	it("rejects the legacy English social-image route at runtime", async () => {
+	it("serves the English social-image route with the same artwork", async () => {
+		vi.stubGlobal(
+			"fetch",
+			vi.fn(async (input: RequestInfo | URL) => {
+				if (String(input).includes("fonts.googleapis.com")) {
+					return new Response(
+						"src: url(https://fonts.test/heebo.ttf) format('truetype')",
+					);
+				}
+				return new Response(new Uint8Array([0, 1, 2]));
+			}),
+		);
+		const response = await Image({ params: Promise.resolve({ lang: "en" }) });
+		expect(
+			(response as unknown as { element: ReactElement }).element,
+		).toBeTruthy();
+	});
+
+	it("rejects unsupported locales at runtime", async () => {
 		await expect(
-			Image({ params: Promise.resolve({ lang: "en" }) }),
+			Image({ params: Promise.resolve({ lang: "fr" }) }),
 		).rejects.toThrow();
 	});
 });

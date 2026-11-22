@@ -71,8 +71,18 @@ describe("TimelineHeader layouts", () => {
 		expect(html).toContain('role="switch" aria-checked="true"');
 		expect(html).toContain('aria-label="מצב כהה"');
 		expect(html).toContain('data-selected-theme="boombox"');
-		expect(html).not.toContain("pass-it-on-language-switcher");
-		expect(html).not.toContain('href="/en');
+	});
+
+	it("renders the language toggle link when provided", () => {
+		const html = renderToStaticMarkup(
+			<TimelineHeader
+				{...props}
+				compact
+				languageToggle={{ href: "/en", label: "English" }}
+			/>,
+		);
+		expect(html).toContain('href="/en"');
+		expect(html).toContain(">English</a>");
 	});
 
 	it("aligns the compact header controls to one accessible outer height", () => {

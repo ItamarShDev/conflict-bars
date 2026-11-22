@@ -308,6 +308,10 @@ export function Timeline({
 				railOffset={false}
 				compact
 				nav={{ href: `/${lang}/bubble`, label: t.nav.bubble }}
+				languageToggle={{
+					href: `/${lang === "he" ? "en" : "he"}`,
+					label: t.languageToggle,
+				}}
 			/>
 
 			<main>

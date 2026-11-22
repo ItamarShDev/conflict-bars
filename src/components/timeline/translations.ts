@@ -196,6 +196,7 @@ export const translations = {
 			bubble: "Chart",
 			timeline: "Timeline",
 		},
+		languageToggle: "עברית",
 		bubble: {
 			title: "Releases by political leaning",
 			subtitle: "Songs per year — left vs right",
@@ -397,6 +398,7 @@ export const translations = {
 			bubble: "תרשים",
 			timeline: "ציר זמן",
 		},
+		languageToggle: "English",
 		bubble: {
 			title: "שירים לפי נטייה פוליטית",
 			subtitle: "שירים לפי שנה — שמאל מול ימין",

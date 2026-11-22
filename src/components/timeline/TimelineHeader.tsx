@@ -12,6 +12,7 @@ interface TimelineHeaderProps {
 	helpModal?: (typeof translations)["en"]["helpModal"];
 	stats?: HelpModalStats;
 	nav?: { href: string; label: string };
+	languageToggle?: { href: string; label: string };
 	lang: "en" | "he";
 	railOffset?: boolean;
 	id?: string;
@@ -56,6 +57,7 @@ export function TimelineHeader({
 	helpModal,
 	stats,
 	nav,
+	languageToggle,
 	lang,
 	railOffset = true,
 	id,
@@ -102,6 +104,18 @@ export function TimelineHeader({
 						}
 					>
 						{nav.label}
+					</Link>
+				)}
+				{languageToggle && (
+					<Link
+						href={languageToggle.href}
+						className={
+							compact
+								? "pass-it-on-utility-button"
+								: "z-30 flex h-9 shrink-0 items-center justify-center rounded-full border-2 border-(--color-control-border) bg-(--color-control-background) px-3 text-sm font-black text-(--color-control-foreground) hover:bg-(--color-control-foreground)/10 hover:text-(--color-accent) md:h-10"
+						}
+					>
+						{languageToggle.label}
 					</Link>
 				)}
 				{helpModal && stats && (

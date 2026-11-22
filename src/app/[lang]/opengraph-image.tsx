@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 import { translations } from "@/components/timeline/translations";
-import { requireHebrewLocale } from "@/utils/hebrew-locale";
+import { requireLocale } from "@/utils/locale";
 
 export const size = {
 	width: 1200,
@@ -85,7 +85,7 @@ export default async function Image({
 	params: Promise<{ lang: string }>;
 }) {
 	const { lang } = await params;
-	requireHebrewLocale(lang);
+	requireLocale(lang);
 	const translation = translations.he;
 	const description = fixRTL(
 		"ציר זמן אינטראקטיבי של היפ-הופ ישראלי ופלסטיני והסכסוכים שעיצבו אותו",

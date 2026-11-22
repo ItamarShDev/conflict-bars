@@ -618,13 +618,12 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-title span + span {
 	scrollbar-width: thin;
 	scroll-snap-type: x proximity;
 }
-[dir="rtl"] .pass-it-on .pass-it-on-rail-controls .pass-it-on-rail-arrow span,
 [dir="rtl"] .pass-it-on .pass-it-on-rail-controls .pass-it-on-advance span,
-.pass-it-on[dir="rtl"] .pass-it-on-rail-controls .pass-it-on-rail-arrow span,
 .pass-it-on[dir="rtl"] .pass-it-on-rail-controls .pass-it-on-advance span {
 	display: inline-block;
 	transform: scaleX(-1);
 }
+
 .pass-it-on .pass-it-on-rail-years li {
 	flex: 0 0 auto;
 	list-style: none;
