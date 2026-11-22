@@ -348,7 +348,7 @@ export function SongEntry({
 							aria-label={t.submitSongForm.modalCloseAria}
 						/>
 						<div
-							className="relative z-10 w-full max-w-2xl overflow-y-auto border-2 border-(--color-control-border) glass-card p-6 pb-8 max-h-[calc(100vh-1rem)]"
+							className="relative z-10 w-full max-w-2xl overflow-y-auto border-2 border-(--color-control-border) glass-card pass-it-on-dialog tape p-6 pb-8 max-h-[calc(100vh-1rem)]"
 							style={{
 								paddingBottom: "calc(env(safe-area-inset-bottom, 0px) + 2rem)",
 							}}

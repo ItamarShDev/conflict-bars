@@ -266,7 +266,7 @@ export function Timeline({
 				<section
 					className="pass-it-on-chronology"
 					id="pass-it-on-chronology"
-					aria-labelledby="pass-it-on-chronology-title"
+					aria-label={t.passItOn.chronologyTitle}
 				>
 					<ScrollyBackdrop selectedYear={selectedYear} />
 
