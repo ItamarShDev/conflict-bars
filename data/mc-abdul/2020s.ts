@@ -9,6 +9,10 @@ export const mcAbdul2020s = [
 			hebrew: "חי את חיי תחת מצור",
 			english_translation: "Living my life under siege",
 		},
+		context: {
+			he: "קליפ קצר שיצא באוגוסט 2022 כתגובה לסבב הלחימה באותו חודש — 'חי את חיי תחת מצור'.",
+			en: "A one-minute video release responding to the August 2022 Gaza fighting — 'living my life under siege'.",
+		},
 		links: {
 			song_info:
 				"https://me.mashable.com/culture/18667/13-year-old-rapper-release-new-single-what-is-it-worth-amid-attacks-on-gaza",
@@ -23,6 +27,10 @@ export const mcAbdul2020s = [
 		lyric_sample: {
 			hebrew: "מחבואים ממטוס ה-F16",
 			english_translation: "Hide and seek from the F16",
+		},
+		context: {
+			he: "סינגל מיוני 2026 עם נאי ברגותי — 'מחבואים ממטוס ה-F16'.",
+			en: "A June 2026 single featuring Nai Barghouti — 'hide and seek from the F16'.",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=ZHD0QPEkCpw",
@@ -39,6 +47,10 @@ export const mcAbdul2020s = [
 				"אני רוצה חופש לאוכלוסייה / שני מיליון אסירים חיים במקום הזה / צועק אל החומה אבל שום דבר לא משתנה / אלה החיים תחת כיבוש.",
 			english_translation:
 				"I want freedom for the population / Two million prisoners living in this location / Shouting at the wall but nothing is ever-changing / That's life under an occupation.",
+		},
+		context: {
+			he: "סינגל מוקדם מ-2021 של הראפר העזתי הצעיר — 'צועק אל החומה אבל שום דבר לא משתנה'.",
+			en: "An early 2021 single by the young Gaza rapper — 'shouting at the wall but nothing is ever-changing'.",
 		},
 		links: {
 			lyrics: "https://www.antiwarsongs.org/canzone.php?id=67301&lang=it",
@@ -69,6 +81,10 @@ export const mcAbdul2020s = [
 				"Palestine's been occupied for decades / Been our home for centuries",
 			english_translation: "(English original)",
 		},
+		context: {
+			he: "פריוורס שהציץ במאי 2021, בימי מבצע 'שומר החומות' — 'פלסטין היא הבית שלנו במשך מאות שנים'.",
+			en: "A freestyle that surfaced in May 2021, during the 'Guardian of the Walls' escalation — 'Palestine's been our home for centuries'.",
+		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=GVAl_BWa2kU",
 			lyrics: "https://www.antiwarsongs.org/canzone.php?id=67637&lang=en",
@@ -84,6 +100,10 @@ export const mcAbdul2020s = [
 				"אני רוצה להתקשר לאמא שלי; מקווה שהיא הטעינה את הטלפון. מקווה שאחי לא לבד.",
 			english_translation:
 				"I want to call my mother; I hope she charged her phone. I hope my brother is not alone.",
+		},
+		context: {
+			he: "סינגל מנובמבר 2024, מתוך המלחמה — 'אני רוצה להתקשר לאמא שלי'.",
+			en: "A November 2024 wartime single — 'I want to call my mother; I hope she charged her phone'.",
 		},
 		links: {
 			lyrics: "https://www.antiwarsongs.org/canzone.php?id=67695&lang=en",
@@ -115,6 +135,10 @@ export const mcAbdul2020s = [
 				"האם אני יכול לחיות, האם אני יכול לחיות / אני רק ילד מעזה… העתיד שלי כל כך בהיר, שונאים אותי — אז מה.",
 			english_translation:
 				"Can I live, can I live / I'm just a Gaza kid… my future so bright, they hating so what.",
+		},
+		context: {
+			he: "סינגל מ-2024 — 'האם אני יכול לחיות? אני רק ילד מעזה'.",
+			en: "A 2024 single — 'can I live, can I live? I'm just a Gaza kid'.",
 		},
 		links: {
 			lyrics: "https://www.songlyrics.com/mc-abdul/can-i-live-lyrics/",

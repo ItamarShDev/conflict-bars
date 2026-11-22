@@ -4,6 +4,10 @@ export const ramallahUnderground2000s = [
 		artist: "Ramallah Underground (رام الله أندرجراوند)",
 		language: "Arabic",
 		published_date: "2007",
+		context: {
+			he: "מ-2007 של קולקטיב רמאללה אנדרגראונד — 'כלא בכלא'.",
+			en: "A 2007 track by the Ramallah Underground collective — 'wall by wall / prison by prison'.",
+		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=jlRVdbMZSJk",
 		},
@@ -20,6 +24,10 @@ export const ramallahUnderground2000s = [
 				"הם רוצים להרעיב את התושבים, כי כשאנשים רעבים הם כבר לא חושבים על התנגדות.",
 			english_translation:
 				"They want to starve the population because when the people are hungry, they no longer think of resisting.",
+		},
+		context: {
+			he: "מ-2007; בית על הרעבת האוכלוסייה כדי שהיא לא תחשוב על התנגדות.",
+			en: "A 2007 track; a verse on starving the population so they no longer think of resisting.",
 		},
 		links: {
 			lyrics:

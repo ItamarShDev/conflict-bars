@@ -11,6 +11,10 @@ export const sagol592020s = [
 			english_translation:
 				"Our fathers taught us, thousands of years ago, that when God created man, he created him as everybody's neighbor. Neighbor is not a geographic term. It is a moral concept.",
 		},
+		context: {
+			he: "דואט עברית-ערבית מינואר 2022 עם חסן M.C.; 'שכן הוא מושג מוסרי'.",
+			en: "A Hebrew-Arabic duet from January 2022 with Hasan M.C.; 'neighbor is a moral concept'.",
+		},
 		links: {
 			lyrics: "https://genius.com/Sagol-59-59-judoka-lyrics",
 			youtube: "https://www.youtube.com/watch?v=L2nTbpb2EK4",

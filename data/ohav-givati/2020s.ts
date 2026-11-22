@@ -10,6 +10,10 @@ export const ohavGivati2020s = [
 			english_translation:
 				"I burned boards / I made bonfires that went up in the air.",
 		},
+		context: {
+			he: "שיר הנושא של פרויקט 'שקוף' לליווי לוחמים בשיקום נפשי; גבעתי, מפקד לוחם ששירת שמונה שנים ולחם בעזה במילואים במלחמה, כתב אותו על חרדה ומועקה.",
+			en: "Title track of the 'שקוף' project supporting combat veterans' mental-health rehabilitation; Givati, a combat officer who served eight years and fought in Gaza as a reservist, wrote it about anxiety and suffocation.",
+		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=5Zq5IR3SSzA",
 			song_info:

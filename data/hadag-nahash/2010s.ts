@@ -23,6 +23,10 @@ export const hadagNahash2010s = [
 			english_translation:
 				"I believe that as of today our share in the failure to achieve peace / is no less significant or large than that of all the neighboring countries / and I also believe we are going in circles / that there is no chance another war will help.",
 		},
+		context: {
+			he: "מרץ 2010 — 'אני מאמין'; הכרה בחלקה של ישראל בכישלון השלום.",
+			en: "March 2010 — 'I Believe'; owning Israel's share in the failure to achieve peace.",
+		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=HTkmOPkuIpo",
 			lyrics:
@@ -40,6 +44,10 @@ export const hadagNahash2010s = [
 			english_translation:
 				"My country is a live-fire zone / this is not a metaphor and not a theory / it excels at arming itself / and is afraid to make history.",
 		},
+		context: {
+			he: "מ-2014 — 'המדינה שלי היא שטח אש... מפחדת לעשות היסטוריה'.",
+			en: "A 2014 track — 'my country is a live-fire zone... afraid to make history'.",
+		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=Up1HpdHpFyk",
 			lyrics: "https://hadagnahash.bandcamp.com/track/--31",
@@ -54,6 +62,10 @@ export const hadagNahash2010s = [
 				"כל צד טוען שרק אצלו האמת / ובכל יום שעובר עוד חף מפשע מת / הורג אנשים לא אכפת לך כלל / לירות בבני אדם איך אתה מסוגל",
 			english_translation:
 				"Each side claims the truth is only on its side / and every passing day another innocent dies / you kill people and you don't care at all / how can you shoot human beings?",
+		},
+		context: {
+			he: "מ-2010; על שני הצדדים הטוענים לאמת בזמן שעוד חף מפשע מת.",
+			en: "A 2010 track; on both sides claiming truth while another innocent dies each day.",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=Rz-xsKZYnPw",
@@ -70,6 +82,10 @@ export const hadagNahash2010s = [
 				"ירושלים של זהב של אמת וכזב / גם של ערק ג'ראס דבש דם וחלב / ירושלים של נחושת של קודש ובושת / ירושלים של אור אור גנוז אורגינלי",
 			english_translation:
 				"Jerusalem of gold, of truth and lies / also of arak, hash, honey, blood and milk / Jerusalem of copper, of holiness and shame / Jerusalem of light, hidden original light",
+		},
+		context: {
+			he: "פורטרט ירושלמי מ-2015 — 'ירושלים של זהב של אמת וכזב'.",
+			en: "A 2015 Jerusalem portrait — 'Jerusalem of gold, of truth and lies'.",
 		},
 		links: {
 			lyrics:
@@ -88,6 +104,10 @@ export const hadagNahash2010s = [
 			english_translation:
 				"Since then we've grown checkpoints like gangsters / built houses in settlements and discriminated minorities.",
 		},
+		context: {
+			he: "מ-2017; מסר תקווה המודה גם ב'מחסומים כמו גנגסטרים' ובהפליית מיעוטים.",
+			en: "A 2017 track; a hopeful message that also admits 'checkpoints like gangsters' and discrimination against minorities.",
+		},
 		links: {
 			lyrics: "https://hadagnahash.bandcamp.com/track/--30",
 			youtube: "https://www.youtube.com/watch?v=7H8sdmR2GMw",
@@ -102,6 +122,10 @@ export const hadagNahash2010s = [
 			hebrew: "אחרי הפצצה השלישית אותו בוקר ידעתי שדי",
 			english_translation:
 				"After the third bomb that same morning I knew that was enough.",
+		},
+		context: {
+			he: "מרץ 2018; שיר יציאה — 'אחרי הפצצה השלישית אותו בוקר ידעתי שדי'.",
+			en: "A March 2018 departure song — 'after the third bomb that same morning I knew that was enough'.",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=IXVZUFaixFw",
@@ -118,6 +142,10 @@ export const hadagNahash2010s = [
 			english_translation:
 				"I will not sing you a song about wars / because I am sick of battles.",
 		},
+		context: {
+			he: "מרץ 2018 — 'לא אשיר לכם שיר על מלחמות כי קצתי בקרבות'.",
+			en: "March 2018 — 'I will not sing you a song about wars because I am sick of battles'.",
+		},
 		links: {
 			lyrics: "https://hadagnahash.bandcamp.com/track/--27",
 		},
@@ -131,6 +159,10 @@ export const hadagNahash2010s = [
 			hebrew: "מפלגות ישראל עלו לי עד כאן / זונות שלטון מקבלות אתנן",
 			english_translation:
 				"The parties of Israel have risen up to here / whores of power take their fee — Meir Ariel's indictment, recorded pre-election. (ynet)",
+		},
+		context: {
+			he: "גרסת ראפ ל'קובלנה' של מאיר אריאל, שהוקלטה לקראת הבחירות בינואר 2013.",
+			en: "A rap rendition of Meir Ariel's 'Indictment', recorded ahead of the January 2013 election.",
 		},
 		links: {
 			song_info: "https://www.ynet.co.il/articles/0,7340,L-4331553,00.html",

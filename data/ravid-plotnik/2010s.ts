@@ -9,6 +9,10 @@ export const ravidPlotnik2010s = [
 			english_translation:
 				"Always at war, always at war / and most of the time we don't even know what for.",
 		},
+		context: {
+			he: "מ-2011 — 'תמיד במלחמה ורוב הזמן אפילו לא יודעים על מה'.",
+			en: "A 2011 track — 'always at war, and most of the time we don't even know what for'.",
+		},
 		links: {
 			lyrics:
 				"https://lyrics.az/nechi-nech-ntsy-nts/tsadik-echad-bisdom-tsdyq-khd-bsdvm/in-the-heart-of-war-blb-hmlkhmh.html",

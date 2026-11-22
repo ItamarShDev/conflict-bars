@@ -4,6 +4,10 @@ export const tamerNafar2010s = [
 		artist: "Tamer Nafar (תאמר נפאר)",
 		language: "Arabic/Hebrew",
 		published_date: "2013",
+		context: {
+			he: "שיר דו-לשוני (ערבית-עברית) מ-2013 ששמו — 'אני לא פוליטי' — הוא הצהרה אירונית של זהות.",
+			en: "A bilingual Arabic-Hebrew 2013 track whose title — 'I'm Not Political' — works as an ironic identity statement.",
+		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=WjVoyfCkzvA",
 		},

@@ -10,6 +10,10 @@ export const tuna2020s = [
 			english_translation:
 				"They told me how they sang “Cowboy” there throughout the captivity\nLife hasn’t returned to living yet, it’s still hard to swallow\nOn that day evil also visited us",
 		},
+		context: {
+			he: "סינגל ממאי 2025; הבית מתייחס לשביים ששרו את שירו 'קאובוי' במהלך השבי בעזה.",
+			en: "A May 2025 single; the verse references hostages who sang his song 'Cowboy' during captivity in Gaza.",
+		},
 		links: {
 			song_info: "https://e.walla.co.il/item/3755808",
 			lyrics: "https://genius.com/Tuna-rosh-lemala-lyrics",
@@ -27,6 +31,10 @@ export const tuna2020s = [
 			english_translation:
 				"The IDF went into Gaza, I drove over to my dad's / Sirens in the background, MDA, ZAKA / So there is no single place right now, no safe place.",
 		},
+		context: {
+			he: "שיר מלחמה מ-2024, מתאר חיים בישראל תחת איום טילים — צפתים, מד''א וזק''א ברקע.",
+			en: "A 2024 wartime track depicting life in Israel under rocket threat — sirens, MDA and ZAKA in the background.",
+		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=R9cVn4bMjIk",
 			lyrics: "https://vaadhavibe.bandcamp.com/track/--76",
@@ -41,6 +49,10 @@ export const tuna2020s = [
 			hebrew: "בין כל הבלאגן, האש והטילים / גיטרה וקלידים כולנו חיילים",
 			english_translation:
 				"Amid all the mess, the fire and the missiles / guitar and keys, we are all soldiers.",
+		},
+		context: {
+			he: "סינגל אחדות ממאי 2025 — 'גיטרה וקלידים כולנו חיילים' — מתוך אלבום 'רובים ותלתלים'.",
+			en: "A May 2025 unity single — 'guitar and keys, we are all soldiers' — from the album 'Rovim VeTaltalim'.",
 		},
 		links: {
 			song_info:

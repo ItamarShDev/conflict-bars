@@ -11,6 +11,10 @@ export const daboor2020s = [
 			english_translation:
 				"You want mountains? Fine, we'll bring them down for you / welcome among the sons of Jerusalem.",
 		},
+		context: {
+			he: "מ-2021 עם שבג'דיד ואל-נתר מ-BLTNM — 'ברוך הבא לבני ירושלים'.",
+			en: "A 2021 track with Shabjdeed and Al Nather of BLTNM — 'welcome among the sons of Jerusalem'.",
+		},
 		links: {
 			lyrics: "https://genius.com/Daboor-inn-ann-lyrics",
 			youtube: "https://www.youtube.com/watch?v=FKvKnuvXUSU",
@@ -26,6 +30,10 @@ export const daboor2020s = [
 			hebrew: "יש קול יריות שמהדהד בצהלולים בשייח' ג'ראח.",
 			english_translation:
 				"There's a sound of gunfire ululating in Sheikh Jarrah.",
+		},
+		context: {
+			he: "מאי 2021, בשיא משבר הפינוי בשייח' ג'ראח — 'קול יריות שמהדהד' בשכונה.",
+			en: "May 2021, at the height of the Sheikh Jarrah eviction crisis — 'a sound of gunfire ululating in Sheikh Jarrah'.",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=74H-dZP-4TY",

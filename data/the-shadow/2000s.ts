@@ -10,6 +10,10 @@ export const theShadow2000s = [
 			english_translation:
 				"My mother earth / nothing that was mine is mine / even my country, my danger / has become a punching bag for international attacks.",
 		},
+		context: {
+			he: "שיר לאומי מ-2002, בתקופת האינתיפאדה השנייה; מתאר את המדינה כמותקפת בינלאומית.",
+			en: "A 2002 patriotic track from the Second Intifada era, depicting the country as a target of international attacks.",
+		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=26CeXRrfNdU",
 			lyrics:
@@ -27,6 +31,10 @@ export const theShadow2000s = [
 				"כיבוי אורות הצל נכנס מילים צלילים צרות / צרות צרורות האל קרס טילים נופלים גבולות / פצצות האש תימרון עשן פגיעת פגז ישוב מופגז",
 			english_translation:
 				"Lights out, the Shadow comes in — words, sounds, troubles / bundles of troubles, God collapsed, missiles falling, borders / bombs, fire, manoeuvre, smoke, a shell hit, a shelled town.",
+		},
+		context: {
+			he: "המנון ציוני מ-2008 של הצל עם סאבלימינל; בית על טילים, גבולות ופגזים.",
+			en: "A 2008 Zionist anthem by The Shadow featuring Subliminal; a verse on missiles, borders and shells.",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=tjaKaMFw63Y",

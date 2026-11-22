@@ -10,6 +10,10 @@ export const mooki2000s = [
 			english_translation:
 				"Everyone talks about peace, nobody talks about justice / for one it's heaven, for the other hell / how many fingers on the trigger?",
 		},
+		context: {
+			he: "מ-2001 — 'כולם מדברים על שלום, אף אחד לא מדבר על צדק'.",
+			en: "A 2001 track — 'everyone talks about peace, nobody talks about justice'.",
+		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=BCNctor2Dek",
 			lyrics: "https://genius.com/Mooki-medabrim-al-shalom-lyrics",
@@ -26,6 +30,10 @@ export const mooki2000s = [
 				"אין שלווה אין שלום אין היגיון / טיפשי מצידי לחשוב שיכול להיות אחרת",
 			english_translation:
 				"There is no calm, no peace, no logic / it is foolish of me to think it could be otherwise.",
+		},
+		context: {
+			he: "פברואר 2005; מסר ניאוה על היעדר שקט, שלום והיגיון.",
+			en: "A February 2005 track; a bleak verse on the absence of calm, peace and logic.",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=61v303zDtYU",
@@ -44,6 +52,10 @@ export const mooki2000s = [
 				"אדם הוא רק אדם ומה בין דם לדם? / הם מחלקים את העולם לבעדנו ונגדם -",
 			english_translation:
 				"A man is only a man, and what is between blood and blood? / They divide the world into for-us and against-them —",
+		},
+		context: {
+			he: "מ-2001 עם יובל בנאי; בית על חלוקת העולם ל'בעדנו ונגדם'.",
+			en: "A 2001 track with Yuval Banay; a verse on dividing the world into 'for-us and against-them'.",
 		},
 		links: {
 			lyrics:

@@ -9,6 +9,10 @@ export const refugeesOfRap2010s = [
 			hebrew: "הלוואי שהייתי בארצי, שאחזור לפלסטין.",
 			english_translation: "I wish I could return to Palestine, to my country.",
 		},
+		context: {
+			he: "מתוך האלבום The Age of Silence (2014) של הצמד הסורי-פלסטיני ממחנה ירמוך — 'מקלט לראפ'.",
+			en: "From the album The Age of Silence (2014) by the Syrian-Palestinian duo from Yarmouk camp — 'refuge to rap'.",
+		},
 		links: {
 			lyrics:
 				"https://www.elyrics.net/read/r/refugees-of-rap-lyrics/refuge-to-rap-lyrics.html",

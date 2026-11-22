@@ -9,6 +9,10 @@ export const jimboJ2020s = [
 			hebrew: "בומים בייבי בואי ניסע מכאן",
 			english_translation: "Booms, baby, let's leave here.",
 		},
+		context: {
+			he: "סינגל שיצא באוגוסט 2023, לפני 7 באוקטובר — 'בומים בייבי בואי ניסע מכאן'.",
+			en: "A single released August 2023, before October 7 — 'booms, baby, let's leave here'.",
+		},
 		links: {
 			lyrics: "https://patiphon.co.il/music/egf8683DGY",
 			song_info: "https://ototoy.jp/_/default/p/1771451",
@@ -24,6 +28,10 @@ export const jimboJ2020s = [
 				"עזבנו את תל אביב עברנו לעוטף / החקלאים צמאים לגשם, אבל מטפטפות רקטות",
 			english_translation:
 				"We left Tel Aviv, moved to the Otef (envelope) / The farmers thirst for rain, but rockets drip instead.",
+		},
+		context: {
+			he: "מ-2024; על מעבר לעוטף עזה — 'החקלאים צמאים לגשם, אבל מטפטפות רקטות'.",
+			en: "A 2024 track about moving to the Gaza envelope — 'the farmers thirst for rain, but rockets drip instead'.",
 		},
 		links: {
 			lyrics: "https://genius.com/Jimbo-j-azavnu-et-tel-aviv-lyrics",
@@ -55,6 +63,10 @@ export const jimboJ2020s = [
 			hebrew: "חייגנו מאה מאה פעמים מאה מאה לא עונים",
 			english_translation:
 				"We dialled 100, a hundred times, 100 — nobody answers.",
+		},
+		context: {
+			he: "מתוך 'הכל טוב' — 'חייגנו מאה מאה פעמים, לא עונים'; מצביע על קריסת התגובה ב-7 באוקטובר.",
+			en: "From 'הכל טוב' — 'we dialled 100 a hundred times, nobody answers'; pointing to the collapse of response on October 7.",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=X95_XRbRgM0",

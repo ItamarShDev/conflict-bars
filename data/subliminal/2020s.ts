@@ -27,6 +27,10 @@ export const subliminal2020s = [
 			english_translation:
 				"Even when the heart breaks / know that tomorrow will always come / and hope will grow out of the dust / it will come — it's on us.",
 		},
+		context: {
+			he: "המנון תקווה שיצא בינואר 2024, במהלך המלחמה בעזה, עם הצל ורביב כנר.",
+			en: "A hope anthem released January 2024 amid the Gaza war, with The Shadow and Raviv Kaner.",
+		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=gpoX7w2RayQ",
 			lyrics: "https://yosmusic.com/סאבלימינל-והצל-רביב-כנר-זה-עלינו/",
@@ -65,6 +69,10 @@ export const subliminal2020s = [
 			english_translation:
 				"Watch over our soldiers there in enemy territory / watch over our land, our Torah, watch over the heart / keep us safe here between the river and the sea.",
 		},
+		context: {
+			he: "תפילה לשמירה על חיילים ועל הארץ 'בין הנהר לבין הים' — סינגל מיוני 2025.",
+			en: "A prayer for protection over soldiers and the land 'between the river and the sea' — a June 2025 single.",
+		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=efHekdRUOJs",
 			lyrics: "https://www.nagnu.co.il/אומנים/סאבלימינל_והצל/אבינו",
@@ -81,6 +89,10 @@ export const subliminal2020s = [
 				"כמו עוף החול מן העפר / נגד כל הסיכויים אני נשאר… העם מפוצל, האויב מאוחד",
 			english_translation:
 				"Like the sand bird from the dust / against all odds I remain… the nation is split, the enemy is united. Post-war resilience single. (karaoke.co.il)",
+		},
+		context: {
+			he: "סינגל עמידה מיולי 2024 עם איציק שמלי וסיון — 'העם מפוצל, האויב מאוחד'.",
+			en: "A resilience single from July 2024 with Itzik Shamli and Sivan — 'the nation is split, the enemy is united'.",
 		},
 		links: {
 			lyrics: "https://www.karaoke.co.il/iboxinfo.php?id=61791A",

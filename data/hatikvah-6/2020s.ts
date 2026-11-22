@@ -25,6 +25,10 @@ export const hatikvah62020s = [
 			english_translation:
 				"The neighbour upstairs is a contractor but he's been on reserve duty for a month / Her brother, a senior tech worker, is now a sniper on rooftops in Gaza",
 		},
+		context: {
+			he: "מחווה למילואימניקים ולעם ישראל שנכתבה לאחר 7 באוקטובר — 'עם של גיבורי על'.",
+			en: "A tribute to reservists and Israelis written after October 7 — 'a nation of superheroes'.",
+		},
 		links: {
 			lyrics:
 				"https://www.hebreuavecdan.com/atelier/hatikva-shesh-super-heros/",
@@ -42,6 +46,10 @@ export const hatikvah62020s = [
 			english_translation:
 				"We'll wait for the sun to return and give us back the light.",
 		},
+		context: {
+			he: "שיר נחמה שיצא בדצמבר 2023, בתקופת המלחמה — 'נחכה שהשמש תחזור'.",
+			en: "A comfort song released December 2023 amid the war — 'we'll wait for the sun to return'.",
+		},
 		links: {
 			lyrics:
 				"https://shironet.mako.co.il/artist?lang=1&prfid=5629&type=lyrics&wrkid=59481",
@@ -58,6 +66,10 @@ export const hatikvah62020s = [
 			hebrew: "נכון כולם נראים רגילים, אבל אנחנו עם של גיבורי על",
 			english_translation:
 				"Right — we all look ordinary, but we're a nation of superheroes — tribute to reservists written after October 7. (13tv/Maariv)",
+		},
+		context: {
+			he: "מחווה למילואימניקים שנכתבה לאחר 7 באוקטובר.",
+			en: "A tribute to reservists written after October 7.",
 		},
 		links: {
 			song_info: "https://13tv.co.il/item/entertainment/music/us2jw-904752420/",

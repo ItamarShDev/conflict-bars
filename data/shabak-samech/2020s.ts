@@ -8,6 +8,10 @@ export const shabakSamech2020s = [
 			hebrew: "אמן אני אומר אמן על כל מה שיש",
 			english_translation: "Amen, I say amen for all that is.",
 		},
+		context: {
+			he: "סינגל מנובמבר 2024, בתקופת המלחמה — 'אני אומר אמן על כל מה שיש'.",
+			en: "A November 2024 single released during the war — 'I say amen for all that is'.",
+		},
 		links: {
 			song_info: "https://e.walla.co.il/item/3705039",
 			lyrics:

@@ -11,6 +11,10 @@ export const jowanSafadi2010s = [
 			english_translation:
 				"A Syrian child on a Turkish shore is no different from four children on the beaches of Gaza.",
 		},
+		context: {
+			he: "נובמבר 2015 עם תאמר נפאר; בית השווה ילד סורי על חוף טורקי לילדים על חופי עזה.",
+			en: "A November 2015 track with Tamer Nafar; a verse equating a Syrian child on a Turkish shore with children on Gaza's beaches.",
+		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=fkKcvVFHQ84",
 			song_info:

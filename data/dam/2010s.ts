@@ -12,6 +12,10 @@ export const dam2010s = [
 			english_translation:
 				"Prepare the spaceship / and the Ala Dal'ona song / everyone stand in one line / and let's dance dabke on the moon.",
 		},
+		context: {
+			he: "רצועת הנושא של אלבום 'Dabke on the Moon' (2013) — 'נרקוד דבקה על הירח'.",
+			en: "Title track of the album 'Dabke on the Moon' (2013) — 'let's dance dabke on the moon'.",
+		},
 		links: {
 			lyrics: "https://genius.com/Dam-debka-on-the-moon-lyrics",
 			youtube: "https://www.youtube.com/watch?v=iskU73JvmZ0",
@@ -29,6 +33,10 @@ export const dam2010s = [
 				"אני מהנגב, אני מיפו / מעין חוד, אני מעכו / מג'ואריש, אני מנצרת / אני מרמלה.",
 			english_translation:
 				"I'm from the Negev, I'm from Jaffa / from Ein Hod, I'm from Acre / from Jawarish, I'm from Nazareth / I'm from Ramla.",
+		},
+		context: {
+			he: "מ-2010; הצהרת זהות פלסטינית-ישראלית דרך ערים מעורבות — 'אני לא בוגד'.",
+			en: "A 2010 track; a Palestinian-Israeli identity declaration through mixed cities — 'I'm not a traitor'.",
 		},
 		links: {
 			lyrics:
@@ -49,6 +57,10 @@ export const dam2010s = [
 			english_translation:
 				"Don't cry, mother, your tears are too precious, don't cry / the rain of your tears puts out the fire inside me.",
 		},
+		context: {
+			he: "מ-2011; מכתב אסיר לאמו — 'אל תבכי אמא'.",
+			en: "A 2011 track; a prisoner's letter to his mother — 'don't cry, mother'.",
+		},
 		links: {
 			lyrics: "https://genius.com/Dam-a-letter-from-prison-lyrics",
 			youtube: "https://www.youtube.com/watch?v=R6Kq-NeHqlE",
@@ -67,6 +79,10 @@ export const dam2010s = [
 			english_translation:
 				"I went to the interview, they asked my name, I said Mahmoud / they said change it to something acceptable, I said refused / they said then you are refused too.",
 		},
+		context: {
+			he: "מ-2010; על אפליה — 'שנה את שמך למשהו מקובל' בריאיון עבודה.",
+			en: "A 2010 track on discrimination — 'change your name to something acceptable' at a job interview.",
+		},
 		links: {
 			lyrics: "https://genius.com/Dam-muwaten-mustahdaf-lyrics",
 			youtube: "https://www.youtube.com/watch?v=j8AsLBHwNsE",
@@ -81,6 +97,10 @@ export const dam2010s = [
 			hebrew:
 				"Her skin is white, my skin is brown / She was going up, I was going down",
 			english_translation: "(English original)",
+		},
+		context: {
+			he: "דצמבר 2012 באנגלית; על אהבה אסורה ליהודייה.",
+			en: "A December 2012 English-language track on forbidden love with a Jewish woman.",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=7zxX_yWM2us",
@@ -99,6 +119,10 @@ export const dam2010s = [
 				"האמנות היא מהפכה; מהיום והלאה אנחנו לא רק לוחמי התנגדות, אנחנו אמנים.",
 			english_translation:
 				"Art is revolution; from today onward we are not only resistance fighters, we are artists.",
+		},
+		context: {
+			he: "אפריל 2012; מחווה לג'וליאנו מר חמיס, מייסד תיאטרון החופש בג'נין שנרצח שנה קודם, עם תלמידיו.",
+			en: "An April 2012 tribute to Juliano Mer Khamis — the Freedom Theatre co-founder murdered a year earlier — performed with his students.",
 		},
 		links: {
 			lyrics:
