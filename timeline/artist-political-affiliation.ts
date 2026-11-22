@@ -578,10 +578,10 @@ export const artistPoliticalAffiliation: Record<
 		affiliation: "Israeli hip-hop / Coexistence",
 		notes: "Shaanan Streett, solo rapper and vocalist of Hadag Nahash.",
 	},
-	"Palestinian Unit": {
+	Excentrik: {
 		era: "2010s",
-		affiliation: "Palestinian hip-hop / Gaza",
-		notes: "Gaza collective of Watar Band, Ayman Mghames, and Khaled Harara.",
+		affiliation: "Palestinian diaspora hip-hop",
+		notes: "Palestinian-American producer and MC from San Francisco.",
 	},
 	"Gaza Boys (أبناء غزة)": {
 		era: "2010s",
