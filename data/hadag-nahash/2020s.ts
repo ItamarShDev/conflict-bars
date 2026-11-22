@@ -26,8 +26,8 @@ export const hadagNahash2020s = [
 				"Maybe you will finally say what about Avera? / Maybe you will finally bring him back?",
 		},
 		context: {
-			he: "מ-2020; הבית קורא להחזיר את אברה מנגיסטו, האזרח הישראלי המוחזק בעזה מאז 2014.",
-			en: "A 2020 track; the verse calls to bring back Avera Mengistu, the Israeli civilian held in Gaza since 2014.",
+			he: "מ-2020; הבית קורא להחזיר את אברה מנגיסטו, האזרח הישראלי שהוחזק בעזה מאז 2014 (שוחרר בפברואר 2025).",
+			en: "A 2020 track; the verse calls to bring back Avera Mengistu, the Israeli civilian held in Gaza from 2014 until his release in February 2025.",
 		},
 		links: {
 			lyrics: "https://genius.com/Hadag-nahash-bomba-lyrics",
