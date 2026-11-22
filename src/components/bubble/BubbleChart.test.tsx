@@ -1,5 +1,6 @@
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
+import { getEntriesByYear } from "@/utils/timeline";
 import type { FileSongList } from "../../../timeline/types";
 import { BubbleChart } from "./BubbleChart";
 
@@ -30,6 +31,27 @@ const songs: FileSongList = [
 ];
 
 describe("BubbleChart Pass It On presentation", () => {
+	it("uses the song's stated leaning for both chart totals and timeline filters", () => {
+		const track: FileSongList[number] = {
+			...songs[0],
+			political_leaning: "unknown",
+		};
+		const html = renderToStaticMarkup(
+			<BubbleChart songs={[track]} lang="en" bands={[]} />,
+		);
+
+		expect(html).toMatch(
+			/data-leaning="unknown"><span class="pass-it-on-chart-stat-count"[^>]*>1<\/span>/,
+		);
+		expect(getEntriesByYear([track], [], "", ["left"])).toEqual([]);
+		expect(
+			getEntriesByYear([track], [], "", ["unknown"])[0]?.[1][0],
+		).toMatchObject({
+			leaning: "unknown",
+			song: track,
+		});
+	});
+
 	it("renders four leaning totals and a left-to-right chart plot", () => {
 		const html = renderToStaticMarkup(
 			<BubbleChart songs={songs} lang="en" bands={[]} />,

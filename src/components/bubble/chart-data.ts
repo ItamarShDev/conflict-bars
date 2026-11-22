@@ -1,7 +1,11 @@
-import { getArtistLeaning } from "@/utils/timeline";
-import type { FileSong, FileSongList } from "../../../timeline/types";
+import { getSongLeaning } from "@/utils/timeline";
+import type {
+	FileSong,
+	FileSongList,
+	SongLeaning,
+} from "../../../timeline/types";
 
-export type Leaning = "left" | "right" | "center" | "unknown";
+export type Leaning = SongLeaning;
 
 export const LEANINGS: Leaning[] = ["left", "center", "right", "unknown"];
 
@@ -56,7 +60,7 @@ export function buildChartData(songs: FileSongList): ChartData | null {
 		.map((song) => {
 			const year = Number(song.published_date.slice(0, 4));
 			if (!Number.isFinite(year)) return null;
-			return { song, year, leaning: getArtistLeaning(song.artist_details) };
+			return { song, year, leaning: getSongLeaning(song) };
 		})
 		.filter((item): item is NonNullable<typeof item> => item !== null);
 

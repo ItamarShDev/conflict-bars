@@ -86,6 +86,11 @@ export const translations = {
 			results: "Found {{count}} song(s)",
 		},
 		lyrics: "Lyrics",
+		lyricExcerpt: {
+			original: "Original lyric",
+			hebrew: "Hebrew translation",
+			english: "English translation",
+		},
 		lyricsUnavailable: "Lyrics link unavailable",
 		fullLyrics: {
 			button: "Full lyrics",
@@ -288,6 +293,11 @@ export const translations = {
 			results: "נמצאו {{count}} שירים",
 		},
 		lyrics: "מילים",
+		lyricExcerpt: {
+			original: "המילים במקור",
+			hebrew: "תרגום לעברית",
+			english: "תרגום לאנגלית",
+		},
 		lyricsUnavailable: "קישור למילים לא זמין",
 		fullLyrics: {
 			button: "מילים מלאות",

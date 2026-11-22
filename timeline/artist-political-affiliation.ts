@@ -6,6 +6,28 @@ export const artistPoliticalAffiliation: Record<
 		notes: string;
 	}
 > = {
+	"Cohen (כהן)": {
+		era: "2020s",
+		affiliation: "Unknown",
+		notes: "Israeli rapper Michael Cohen. No artist-wide affiliation assigned.",
+	},
+	"Neta Weiner (נטע וינר)": {
+		era: "2010s–present",
+		affiliation: "Unknown",
+		notes: "Co-founder of the Jaffa hip-hop collective System Ali.",
+	},
+	"The Herd": {
+		era: "2020s",
+		affiliation: "Unknown",
+		notes:
+			"Australian hip-hop collective. The cataloged track features Palestinian artists.",
+	},
+	"Torby & Leen": {
+		era: "2020s",
+		affiliation: "Unknown",
+		notes:
+			"Collaboration between Belfast rapper Torby and Palestinian singer Leen Maarouf.",
+	},
 	R3D: {
 		era: "2020s",
 		affiliation: "Unknown",
