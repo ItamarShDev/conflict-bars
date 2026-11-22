@@ -10,8 +10,8 @@ export const anerShaananStreet2020s = [
 				"Today I am fighting against brotherly hatred and sisterly hatred.",
 		},
 		context: {
-			he: "מרץ 2024; שיר של ענר שפירא ז''ל, שנפל במיגונית בפסטיבל נובה, שהושלם לאחר מותו כששאנן סטריט כתב והקליט בית חדש.",
-			en: "March 2024 — a track by Aner Shapira, killed defending a roadside shelter during the Nova festival attack, completed posthumously with a new verse by Shaanan Street.",
+			he: "מרץ 2024; שיר של ענר שפירא ז''ל, שנפל במיגונית ליד רעים ב-7 באוקטובר, שהושלם לאחר מותו כששאנן סטריט כתב והקליט בית חדש.",
+			en: "March 2024 — a track by Aner Shapira, killed defending a roadside shelter near Re'im on October 7, completed posthumously with a new verse by Shaanan Street.",
 		},
 		links: {
 			youtube: "https://www.youtube.com/watch?v=RgNrjQeJyvU",
