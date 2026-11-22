@@ -4,7 +4,7 @@ export const excentrik2010s = [
 	{
 		name: "A Piece... (Peace Dies)",
 		artist: "Excentrik",
-		collaborators: ["The Narcicyst (Narcy)"],
+		collaborators: ["The Narcicyst"],
 		language: "English",
 		published_date: "2011-10-04",
 		political_leaning: "unknown",
