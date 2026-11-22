@@ -233,8 +233,7 @@ export const jimboJ2020s = [
 			en: "The refrain pairs a promise of peace with a warning that people could throw it away. Against the sirens and shelter life depicted in the song, peace is framed as something people can choose to protect, not just something to wait for.",
 		},
 		links: {
-			lyrics:
-				"https://matchlyric.com/kobi-oz-%D7%A7%D7%95%D7%91%D7%99-%D7%90%D7%95%D7%96-jimbo-j-%D7%92%D7%99%D7%9E%D7%91%D7%95-%D7%92%D7%99%D7%99-ototo-%D7%90%D7%95%D7%98%D7%95%D7%98%D7%95",
+			lyrics: "https://www.youtube.com/watch?v=0cVVBzlCf-k",
 			song_info:
 				"https://music.apple.com/il/song/%D7%90%D7%95%D7%98%D7%95%D7%98%D7%95/1862546285?l=he",
 		},
