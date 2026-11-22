@@ -573,11 +573,6 @@ export const artistPoliticalAffiliation: Record<
 		notes:
 			"Israeli rapper; ברוכים הבאים לפתח תקוה (2015) includes protest tracks such as 'ממשלה זה פשע מאורגן'.",
 	},
-	"Shaanan Street (שאנן סטריט)": {
-		era: "2000s–present",
-		affiliation: "Israeli hip-hop / Coexistence",
-		notes: "Shaanan Streett, solo rapper and vocalist of Hadag Nahash.",
-	},
 	Excentrik: {
 		era: "2010s",
 		affiliation: "Palestinian diaspora hip-hop",

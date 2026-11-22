@@ -3,7 +3,7 @@ import type { FileSongList } from "../../timeline/types";
 export const shaananStreet2020s = [
 	{
 		name: "ערביאתי אלמכסורה (عَرَبياتِي المَكسورَة / My Broken Arabic)",
-		artist: "Shaanan Street (שאנן סטריט)",
+		artist: "Shanan Street (שאנן סטריט)",
 		language: "Arabic",
 		published_date: "2021-01-14",
 		political_leaning: "center",
