@@ -160,4 +160,26 @@ export const hadagNahash2000s = [
 			youtube: "https://www.youtube.com/watch?v=YDI9GHauE34",
 		},
 	},
+	{
+		name: "בראשית (Bereshit / Genesis)",
+		artist: "Hadag Nahash (הדג נחש)",
+		language: "Hebrew",
+		published_date: "2004-03-06",
+		political_leaning: "unknown",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "בפלסטינה ארץ ישראל ראשית המאה / חיו כמה שבטים על אותה האדמה",
+			english_translation:
+				"In Palestine, the Land of Israel, at the start of the century / several tribes lived on the same land",
+		},
+		context: {
+			he: "הפתיחה מציבה שני שמות לאותו מקום ומתארת קבוצות החולקות את אותה קרקע. השיר, שיצא בתקופת האינתיפאדה השנייה, מתאר מעגל של חשד, סכסוכי גבול וקורבנות בלי להציע הסדר מדיני.",
+			en: "The opening uses two names for the same place and depicts groups sharing the land. Released during the Second Intifada, the song describes a cycle of suspicion, border disputes and casualties without proposing a political settlement.",
+		},
+		links: {
+			lyrics:
+				"https://shironet.mako.co.il/artist?lang=1&prfid=333&type=lyrics&wrkid=12382",
+			song_info: "https://hadagnachash.bandcamp.com/track/bereshit-genesis",
+		},
+	},
 ];

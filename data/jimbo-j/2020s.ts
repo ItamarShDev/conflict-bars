@@ -147,4 +147,96 @@ export const jimboJ2020s = [
 				"https://he.wikipedia.org/wiki/%D7%90%D7%94_%D7%95%D7%90%D7%95_(%D7%90%D7%9C%D7%91%D7%95%D7%95%D7%9D)",
 		},
 	},
+	{
+		name: "מטורף (Metoraf / Crazy)",
+		artist: "Jimbo J (ג'ימבו ג')",
+		language: "Hebrew",
+		published_date: "2026-01-13",
+		political_leaning: "unknown",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "ובלילה מחבק אותך / ורעש שם מעבר לגדר",
+			english_translation:
+				"At night I hold you close / and there’s noise beyond the fence",
+		},
+		context: {
+			he: "החיבוק בלילה והרעש מעבר לגדר מתרחשים באותו רגע. באלבום שנכתב על החיים בעוטף עזה אחרי 7 באוקטובר, הצירוף הזה ממחיש איך גם רגע ביתי אינו מנותק מן הלחימה שמעבר לגדר.",
+			en: "The embrace and the noise beyond the fence happen at the same moment. On an album written about life near the Gaza border after October 7, that juxtaposition shows how the fighting intrudes on even a quiet moment at home.",
+		},
+		links: {
+			lyrics:
+				"https://www.tab4u.com/lyrics/songs/77517_%D7%92%26%2339%3B%D7%99%D7%9E%D7%91%D7%95_%D7%92%26%2339%3B%D7%99%D7%99_-_%D7%9E%D7%98%D7%95%D7%A8%D7%A3.html",
+			song_info:
+				"https://music.apple.com/il/album/%D7%94%D7%9B%D7%9C-%D7%98%D7%95%D7%91/1862546047?l=he",
+		},
+	},
+	{
+		name: "יותר מידי (Yoter Midai / Too Much)",
+		artist: "Jimbo J (ג'ימבו ג')",
+		language: "Hebrew",
+		published_date: "2026-01-13",
+		political_leaning: "unknown",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "אבא מי האנשים במדבקות",
+			english_translation: "Dad, who are the people on the stickers?",
+		},
+		context: {
+			he: "השאלה באה אחרי תיאור המדבקות שמכסות את הקירות בבית הקפה בצומת בית קמה. באלבום על החיים אחרי 7 באוקטובר, מדבקות ההנצחה הופכות את אובדן המלחמה לשאלה שילדה שואלת את אביה.",
+			en: "The question follows a description of stickers covering the walls of a café at Beit Kama Junction. On an album about life after October 7, the memorial stickers turn wartime loss into a question a child asks her father.",
+		},
+		links: {
+			lyrics:
+				"https://www.tab4u.com/lyrics/songs/77269_%D7%92%26%2339%3B%D7%99%D7%9E%D7%91%D7%95_%D7%92%26%2339%3B%D7%99%D7%99_-_%D7%99%D7%95%D7%AA%D7%A8_%D7%9E%D7%99%D7%93%D7%99.html",
+			song_info:
+				"https://music.apple.com/il/album/%D7%94%D7%9B%D7%9C-%D7%98%D7%95%D7%91/1862546047?l=he",
+		},
+	},
+	{
+		name: "בואו תראו (Bo'u Tir'u / Come and See)",
+		artist: "Jimbo J (ג'ימבו ג')",
+		collaborators: ["Haim Ulliel (חיים אוליאל)"],
+		language: "Hebrew",
+		published_date: "2026-01-13",
+		political_leaning: "unknown",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "המדריך מקריא מור״ק",
+			english_translation: "The guide reads aloud a battle account",
+		},
+		context: {
+			he: "השורה מציבה מדריך וקבוצת מבקרים בנוף שהפך לאתר זיכרון. באלבום על עוטף עזה אחרי 7 באוקטובר, המעבר משגרת הטיול לסיפור הקרב מעלה שאלה על האופן שבו מספרים למבקרים מה קרה במקום.",
+			en: "The line places a guide and a group of visitors in a landscape that has become a site of remembrance. On an album about the Gaza border region after October 7, the shift from an ordinary tour to a battle account asks how visitors are told what happened there.",
+		},
+		links: {
+			lyrics:
+				"https://www.lirikcinta.com/j/jimbo-j-%d7%92%d7%99%d7%9e%d7%91%d7%95-%d7%92%d7%99%d7%99/bou-tiruh-%d7%91%d7%95%d7%90%d7%95-%d7%aa%d7%a8%d7%90%d7%95-jimbo-j-%d7%92%d7%99%d7%9e%d7%91%d7%95-%d7%92%d7%99%d7%99/",
+			song_info:
+				"https://music.apple.com/us/song/%D7%91%D7%95%D7%90%D7%95-%D7%AA%D7%A8%D7%90%D7%95-feat-%D7%97%D7%99%D7%99%D7%9D-%D7%90%D7%95%D7%9C%D7%99%D7%90%D7%9C/1862546053",
+		},
+	},
+	{
+		name: "אוטוטו (Ototo / Any Moment Now)",
+		artist: "Jimbo J (ג'ימבו ג')",
+		collaborators: ["Kobi Oz (קובי אוז)"],
+		language: "Hebrew",
+		published_date: "2026-01-13",
+		political_leaning: "center",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "אוטוטו יבוא שלום עלינו / רק שלא נזרוק אותו לים",
+			english_translation:
+				"Peace will come to us any moment now / as long as we don’t throw it into the sea",
+		},
+		context: {
+			he: "הפזמון מצמיד להבטחת השלום אזהרה שאפשר גם להשליך אותו. על רקע האזעקות והחיים במקלטים המתוארים בשיר, השלום מוצג כאפשרות שתלויה במעשים ולא רק בהמתנה לסוף הלחימה.",
+			en: "The refrain pairs a promise of peace with a warning that people could throw it away. Against the sirens and shelter life depicted in the song, peace is framed as something people can choose to protect, not just something to wait for.",
+		},
+		links: {
+			lyrics:
+				"https://matchlyric.com/kobi-oz-%D7%A7%D7%95%D7%91%D7%99-%D7%90%D7%95%D7%96-jimbo-j-%D7%92%D7%99%D7%9E%D7%91%D7%95-%D7%92%D7%99%D7%99-ototo-%D7%90%D7%95%D7%98%D7%95%D7%98%D7%95",
+			song_info:
+				"https://music.apple.com/il/song/%D7%90%D7%95%D7%98%D7%95%D7%98%D7%95/1862546285?l=he",
+		},
+	},
 ];

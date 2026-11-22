@@ -573,4 +573,30 @@ export const artistPoliticalAffiliation: Record<
 		notes:
 			"Israeli rapper; ברוכים הבאים לפתח תקוה (2015) includes protest tracks such as 'ממשלה זה פשע מאורגן'.",
 	},
+	"Shaanan Street (שאנן סטריט)": {
+		era: "2000s–present",
+		affiliation: "Israeli hip-hop / Coexistence",
+		notes: "Shaanan Streett, solo rapper and vocalist of Hadag Nahash.",
+	},
+	"Palestinian Unit": {
+		era: "2010s",
+		affiliation: "Palestinian hip-hop / Gaza",
+		notes: "Gaza collective of Watar Band, Ayman Mghames, and Khaled Harara.",
+	},
+	Invincible: {
+		era: "2000s–present",
+		affiliation: "Hip-hop / Social justice",
+		notes:
+			"Detroit rapper raised in Israel as a child; released a song responding to the 2008–09 Gaza war.",
+	},
+	"Gaza Boys (أبناء غزة)": {
+		era: "2010s",
+		affiliation: "Palestinian hip-hop / Gaza",
+		notes: "Gaza rap group whose recordings are archived by IREMAM.",
+	},
+	"Antara (عنترة)": {
+		era: "2010s",
+		affiliation: "Palestinian hip-hop / Gaza",
+		notes: "Gaza rap group documented in IREMAM’s Gaza rap archive.",
+	},
 } as const;
