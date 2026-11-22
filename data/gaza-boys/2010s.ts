@@ -66,7 +66,8 @@ export const gazaBoys2010s = [
 		links: {
 			lyrics:
 				"https://iremam-base.cnrs.fr/gaza_rap/gazaboys.htm#:~:text=Video%20Aqsana",
-			song_info: "https://iremam-base.cnrs.fr/gaza_rap/gazaboys.htm",
+			song_info:
+				"https://www.ochaopt.org/sites/default/files/ocha_opt_Jerusalem_FactSheet_December_2012_english.pdf",
 		},
 	},
 ] satisfies FileSongList;
