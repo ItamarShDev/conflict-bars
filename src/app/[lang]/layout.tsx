@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { translations } from "@/components/timeline/translations";
 import { requireLocale } from "@/utils/locale";
+import { HtmlLocaleSync } from "./HtmlLocaleSync";
 
 export async function generateMetadata({
 	params,
@@ -60,6 +61,7 @@ export default async function Layout({
 	requireLocale(lang);
 	return (
 		<main lang={lang} dir={lang === "he" ? "rtl" : "ltr"}>
+			<HtmlLocaleSync lang={lang} />
 			{children}
 		</main>
 	);

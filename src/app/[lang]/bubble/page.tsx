@@ -77,7 +77,11 @@ export default async function BubblePage({
 
 			<main className="pass-it-on-chart-main">
 				<div className="pass-it-on-chart-content">
-					<BubbleChart songs={songs} lang={lang} bands={getConflictBands()} />
+					<BubbleChart
+						songs={songs}
+						lang={lang}
+						bands={getConflictBands(undefined, lang)}
+					/>
 				</div>
 			</main>
 		</div>
