@@ -29,14 +29,18 @@ export type FileSongArtistDetails = {
 	notes?: string;
 };
 
+export type SongLeaning = "left" | "right" | "center" | "unknown";
+
 export type FileSong = {
 	name: string;
 	artist: string;
 	artist_details?: FileSongArtistDetails;
+	political_leaning?: SongLeaning;
 	collaborators?: string[];
 	published_date: string;
 	language?: string;
 	lyric_sample?: {
+		original_language?: "ar" | "en" | "he";
 		hebrew?: string;
 		arabic?: string;
 		english_translation?: string;

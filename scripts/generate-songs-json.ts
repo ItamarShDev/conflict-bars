@@ -12,6 +12,7 @@ type RawSong = {
 	artist?: unknown;
 	collaborators?: unknown;
 	published_date?: unknown;
+	political_leaning?: unknown;
 	language?: unknown;
 	lyric_sample?: unknown;
 	context?: unknown;

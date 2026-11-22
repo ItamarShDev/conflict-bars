@@ -148,6 +148,27 @@ export function SongEntry({
 				: "rtl";
 	const originalArabicLyric =
 		lyricArabic && lyricArabic !== lyricContent ? lyricArabic : undefined;
+	const originalLanguage = lyricSample?.original_language;
+	const labeledLyrics = originalLanguage
+		? [
+				{
+					lang: originalLanguage,
+					text:
+						originalLanguage === "he"
+							? lyricHebrew
+							: originalLanguage === "en"
+								? lyricEnglish
+								: lyricArabic,
+					label: t.lyricExcerpt.original,
+				},
+				...(originalLanguage !== "he"
+					? [{ lang: "he", text: lyricHebrew, label: t.lyricExcerpt.hebrew }]
+					: []),
+				...(originalLanguage !== "en"
+					? [{ lang: "en", text: lyricEnglish, label: t.lyricExcerpt.english }]
+					: []),
+			]
+		: undefined;
 
 	const contextHebrew = songContext?.he?.trim() ? songContext.he : undefined;
 	const contextEnglish = songContext?.en?.trim() ? songContext.en : undefined;
@@ -238,7 +259,28 @@ export function SongEntry({
 								{highlightText(contextContent)}
 							</p>
 						)}
-						{originalArabicLyric && (
+						{labeledLyrics?.map(
+							(excerpt) =>
+								excerpt.text && (
+									<div key={excerpt.lang}>
+										<p className="text-xs font-medium text-(--color-muted-foreground)">
+											{excerpt.label}
+										</p>
+										<p
+											className="pass-it-on-song-quote text-sm leading-relaxed italic text-(--color-muted-foreground) text-start"
+											dir={
+												excerpt.lang === "he" || excerpt.lang === "ar"
+													? "rtl"
+													: "ltr"
+											}
+											lang={excerpt.lang}
+										>
+											"{highlightText(excerpt.text)}"
+										</p>
+									</div>
+								),
+						)}
+						{!labeledLyrics && originalArabicLyric && (
 							<p
 								className="pass-it-on-song-quote text-sm leading-relaxed italic text-(--color-muted-foreground) text-start"
 								dir="rtl"
@@ -247,7 +289,7 @@ export function SongEntry({
 								"{highlightText(originalArabicLyric)}"
 							</p>
 						)}
-						{lyricContent && (
+						{!labeledLyrics && lyricContent && (
 							<p
 								className="pass-it-on-song-quote text-sm leading-relaxed italic text-(--color-muted-foreground) text-start"
 								dir={lyricDir}

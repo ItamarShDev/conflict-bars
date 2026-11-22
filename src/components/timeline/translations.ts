@@ -67,6 +67,11 @@ export const translations = {
 			results: "Found {{count}} song(s)",
 		},
 		lyrics: "Lyrics",
+		lyricExcerpt: {
+			original: "Original lyric",
+			hebrew: "Hebrew translation",
+			english: "English translation",
+		},
 		fullLyrics: {
 			button: "Full lyrics",
 			title: "Full lyrics",
@@ -250,6 +255,11 @@ export const translations = {
 			results: "נמצאו {{count}} שירים",
 		},
 		lyrics: "מילים",
+		lyricExcerpt: {
+			original: "המילים במקור",
+			hebrew: "תרגום לעברית",
+			english: "תרגום לאנגלית",
+		},
 		fullLyrics: {
 			button: "מילים מלאות",
 			title: "מילים מלאות",

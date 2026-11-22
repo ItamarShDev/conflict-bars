@@ -1,3 +1,5 @@
+import type { FileSongList } from "../../timeline/types";
+
 export const systemAli2010s = [
 	{
 		name: "אידיאלאם إيديالم (Idialam)",
@@ -54,4 +56,47 @@ export const systemAli2010s = [
 				"https://shironet.mako.co.il/artist?lang=1&prfid=10680&type=lyrics&wrkid=49526",
 		},
 	},
-];
+	{
+		name: "אפרייזינג (Uprising)",
+		artist: "System Ali (סיסטם עלי)",
+		language: "Hebrew/Arabic/English",
+		published_date: "2019-09-01",
+		political_leaning: "left",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "اكتوبر الالفين",
+			hebrew: "אוקטובר 2000",
+			english_translation: "October 2000",
+		},
+		context: {
+			he: "הבית של סמירה סרייה מזכיר את אוקטובר 2000 בתוך ביקורת על חוקים ועל פערי כוח. באותו חודש נהרגו מפגינים פלסטינים מירי המשטרה במהלך המחאה בישראל; השיר קושר את המחאה שלו לזיכרון האירועים בלי לתאר תקרית אחת.",
+			en: "Samira Saraya invokes October 2000 amid criticism of laws and unequal power. Israeli police killed Palestinian protesters during that month’s demonstrations in Israel; the lyric connects the song’s protest to those events without naming a particular incident.",
+		},
+		links: {
+			lyrics:
+				"https://shironet.mako.co.il/artist?lang=1&prfid=10680&type=lyrics&wrkid=49524",
+			song_info: "https://levgroupmedia.bandcamp.com/album/-",
+		},
+	},
+	{
+		name: "שלח נא (Shlach Na / Let My People Go)",
+		artist: "System Ali (סיסטם עלי)",
+		language: "Hebrew/Arabic/English/Russian",
+		published_date: "2019-09-01",
+		political_leaning: "left",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "לא בשמי תלחמו עוד מלחמת נקם",
+			english_translation: "Do not fight another war of revenge in my name",
+		},
+		context: {
+			he: "הדוברת מסרבת שמלחמת נקם נוספת תילחם בשמה, והפזמון קורא לשחרור בעברית ובערבית. השיר יצא בתקופה של עימותים חוזרים סביב עזה; הוא מתנגד למלחמת נקם בלי לציין מבצע מסוים.",
+			en: "The speaker refuses to have another retaliatory war fought in her name, and the refrain calls for freedom in Hebrew and Arabic. Released during recurring hostilities around Gaza, the track rejects retaliatory warfare without naming a specific operation.",
+		},
+		links: {
+			lyrics:
+				"https://shironet.mako.co.il/artist?lang=1&prfid=10680&type=lyrics&wrkid=49527",
+			song_info: "https://levgroupmedia.bandcamp.com/album/-",
+		},
+	},
+] satisfies FileSongList;

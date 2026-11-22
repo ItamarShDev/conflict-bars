@@ -7,12 +7,13 @@ import type {
 	EventsTimeline,
 	FileSong,
 	FileSongList,
+	SongLeaning,
 } from "../../timeline/types";
 
 // Helper to determine political leaning
 export function getArtistLeaning(
 	artist: FileSong["artist_details"],
-): "left" | "right" | "center" | "unknown" {
+): SongLeaning {
 	const affiliation = artist?.affiliation?.toLowerCase();
 	if (!affiliation) {
 		return "unknown";
@@ -21,6 +22,10 @@ export function getArtistLeaning(
 	if (affiliation.includes("right")) return "right";
 	if (affiliation.includes("center")) return "center";
 	return "unknown";
+}
+
+export function getSongLeaning(song: FileSong): SongLeaning {
+	return song.political_leaning ?? getArtistLeaning(song.artist_details);
 }
 
 function parseStartYear(timestamp: string): number {
@@ -50,7 +55,7 @@ export type TimelineEntryItem =
 			year: number;
 			timestamp: string;
 			song: FileSong;
-			leaning: "left" | "right" | "center" | "unknown";
+			leaning: SongLeaning;
 			position: number;
 	  }
 	| {
@@ -125,7 +130,7 @@ export function getEntriesByYear(
 			if (!decades.includes(decade)) return false;
 		}
 		if (leanings && leanings.length > 0) {
-			const leaning = getArtistLeaning(song.artist_details);
+			const leaning = getSongLeaning(song);
 			if (!leanings.includes(leaning)) return false;
 		}
 		return true;
@@ -140,7 +145,7 @@ export function getEntriesByYear(
 				year,
 				timestamp: new Date(t.published_date).toLocaleDateString(),
 				song: t,
-				leaning: getArtistLeaning(t.artist_details),
+				leaning: getSongLeaning(t),
 			};
 		})
 		.filter((entry) => Number.isFinite(entry.year))

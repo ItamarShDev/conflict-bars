@@ -6,6 +6,45 @@ export const artistPoliticalAffiliation: Record<
 		notes: string;
 	}
 > = {
+	"Cohen (כהן)": {
+		era: "2020s",
+		affiliation: "Unknown",
+		notes: "Israeli rapper Michael Cohen. No artist-wide affiliation assigned.",
+	},
+	"Neta Weiner & Samira Saraya (נטע וינר וסמירה סרייה)": {
+		era: "2020s",
+		affiliation: "Unknown",
+		notes: "Hebrew-Arabic collaboration by artists from the System Ali scene.",
+	},
+	"Maor Ashkenazi & Noam Cohen (מאור אשכנזי ונעם כהן)": {
+		era: "2020s",
+		affiliation: "Unknown",
+		notes:
+			"Collaborators on a recording about Cohen’s experience of the Nova festival attack.",
+	},
+	"Palestinian Rapperz (P.R.)": {
+		era: "2000s–2010s",
+		affiliation: "Unknown",
+		notes: "Gaza-based rap group documented in the IREMAM archive.",
+	},
+	"Revolution Makers (صناع الثورة)": {
+		era: "2010s",
+		affiliation: "Unknown",
+		notes:
+			"Gaza-based rap act credited alongside Ayman Mghames on Eish El Nizam.",
+	},
+	"The Herd": {
+		era: "2020s",
+		affiliation: "Unknown",
+		notes:
+			"Australian hip-hop collective. The cataloged track features Palestinian artists.",
+	},
+	"Torby & Leen": {
+		era: "2020s",
+		affiliation: "Unknown",
+		notes:
+			"Collaboration between Belfast rapper Torby and Palestinian singer Leen Maarouf.",
+	},
 	R3D: {
 		era: "2020s",
 		affiliation: "Unknown",

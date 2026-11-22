@@ -16,6 +16,26 @@ const baseSong: FileSong = {
 };
 
 describe("SongEntry lyrics vs context rendering", () => {
+	it("labels the original and both translations for a sourced Arabic excerpt", () => {
+		const song: FileSong = {
+			...baseSong,
+			lyric_sample: {
+				original_language: "ar",
+				arabic: "بعد الحرب",
+				hebrew: "אחרי המלחמה",
+				english_translation: "After the war",
+			},
+		};
+		const html = renderToStaticMarkup(
+			<SongEntry song={song} lang="he" leaning="unknown" />,
+		);
+		expect(html).toContain("המילים במקור");
+		expect(html).toContain('dir="rtl" lang="ar"');
+		expect(html).toContain("תרגום לעברית");
+		expect(html).toContain("תרגום לאנגלית");
+		expect(html).toContain("&quot;After the war&quot;");
+	});
+
 	it("renders bilingual context prose without quotation marks in the active site language", () => {
 		const song: FileSong = {
 			...baseSong,

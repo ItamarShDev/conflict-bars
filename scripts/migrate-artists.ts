@@ -4,8 +4,8 @@ import { ConvexHttpClient } from "convex/browser";
 import { api } from "../convex/_generated/api";
 import type { Id } from "../convex/_generated/dataModel";
 import { artistPoliticalAffiliation } from "../timeline/artist-political-affiliation";
-import type { SongList } from "../timeline/types";
-import { runMaintenance } from "./lib/run-maintenance";
+import type { FileSongList } from "../timeline/types";
+import { runMaintenance, toConvexLyricSample } from "./lib/run-maintenance";
 
 const CONVEX_URL = process.env.NEXT_PUBLIC_CONVEX_URL;
 
@@ -51,7 +51,7 @@ async function assignSongArtist(songId: string, artistId: string) {
 	});
 }
 
-async function upsertSongWithArtist(song: SongList[number]) {
+async function upsertSongWithArtist(song: FileSongList[number]) {
 	const artistInfo = artistPoliticalAffiliation[song.artist] ?? undefined;
 	const artistId = await ensureArtist(song.artist, artistInfo);
 
@@ -73,15 +73,15 @@ async function upsertSongWithArtist(song: SongList[number]) {
 		artistId,
 		published_date: song.published_date,
 		language: song.language,
-		lyric_sample: song.lyric_sample,
+		lyric_sample: toConvexLyricSample(song.lyric_sample),
 		links: song.links,
 		published: true,
 	});
 }
 
-function loadDataSongs(): SongList {
+function loadDataSongs(): FileSongList {
 	const dataDir = join(dirname(new URL(import.meta.url).pathname), "../data");
-	const songFiles: SongList = [];
+	const songFiles: FileSongList = [];
 
 	function walk(directory: string) {
 		for (const entry of readdirSync(directory)) {
@@ -96,7 +96,7 @@ function loadDataSongs(): SongList {
 			const mod = require(fullPath);
 			for (const value of Object.values(mod)) {
 				if (Array.isArray(value)) {
-					songFiles.push(...(value as SongList));
+					songFiles.push(...(value as FileSongList));
 				}
 			}
 		}
