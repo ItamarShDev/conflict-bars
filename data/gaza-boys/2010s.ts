@@ -46,4 +46,27 @@ export const gazaBoys2010s = [
 			song_info: "https://iremam-base.cnrs.fr/gaza_rap/gazaboys.htm",
 		},
 	},
+	{
+		name: "أقصانا (Aqsana)",
+		artist: "Gaza Boys (أبناء غزة)",
+		language: "Arabic",
+		published_date: "2012-04-19",
+		political_leaning: "unknown",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "انتشرت شوارع المدينة بالحواجز وتفتيش",
+			hebrew: "המחסומים והבדיקות התפשטו ברחובות העיר",
+			english_translation:
+				"Checkpoints and searches spread through the city’s streets",
+		},
+		context: {
+			he: "השיר מציב מחסומים ובדיקות ברחובות ירושלים לצד תחושה של ניתוק מאל־אקצא. דו״ח האו״ם מאותה שנה תיעד הגבלות תנועה וגישה למזרח ירושלים; השורה אינה מזהה מחסום או תקרית מסוימים.",
+			en: "The song describes checkpoints and searches in Jerusalem alongside a sense of being cut off from Al-Aqsa. A UN report from the same year documents movement and access restrictions affecting East Jerusalem; the lyric does not identify a particular checkpoint or incident.",
+		},
+		links: {
+			lyrics:
+				"https://iremam-base.cnrs.fr/gaza_rap/gazaboys.htm#:~:text=Video%20Aqsana",
+			song_info: "https://iremam-base.cnrs.fr/gaza_rap/gazaboys.htm",
+		},
+	},
 ] satisfies FileSongList;

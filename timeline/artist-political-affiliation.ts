@@ -583,20 +583,14 @@ export const artistPoliticalAffiliation: Record<
 		affiliation: "Palestinian hip-hop / Gaza",
 		notes: "Gaza collective of Watar Band, Ayman Mghames, and Khaled Harara.",
 	},
-	Invincible: {
-		era: "2000s–present",
-		affiliation: "Hip-hop / Social justice",
-		notes:
-			"Detroit rapper raised in Israel as a child; released a song responding to the 2008–09 Gaza war.",
-	},
 	"Gaza Boys (أبناء غزة)": {
 		era: "2010s",
 		affiliation: "Palestinian hip-hop / Gaza",
 		notes: "Gaza rap group whose recordings are archived by IREMAM.",
 	},
-	"Antara (عنترة)": {
-		era: "2010s",
-		affiliation: "Palestinian hip-hop / Gaza",
-		notes: "Gaza rap group documented in IREMAM’s Gaza rap archive.",
+	Lounar: {
+		era: "2020s",
+		affiliation: "Palestinian diaspora hip-hop",
+		notes: "London-based Palestinian hip-hop and punk artist.",
 	},
 } as const;
