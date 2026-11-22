@@ -5,6 +5,15 @@ import {
 	getFunctionName,
 } from "convex/server";
 import { internal } from "../../convex/_generated/api";
+import type { FileSong } from "../../timeline/types";
+
+export function toConvexLyricSample(
+	sample: FileSong["lyric_sample"],
+): FunctionArgs<typeof internal.mutations.insertSong>["lyric_sample"] {
+	if (!sample) return undefined;
+	const { hebrew, arabic, english_translation } = sample;
+	return { hebrew, arabic, english_translation };
+}
 
 // The Convex CLI authenticates with the operator's deployment credentials.
 // Never expose a deploy key in browser code or accept one from a visitor.

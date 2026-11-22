@@ -5,8 +5,8 @@ import { ConvexHttpClient } from "convex/browser";
 import { config } from "dotenv";
 import { api } from "../convex/_generated/api";
 import { artistPoliticalAffiliation } from "../timeline/artist-political-affiliation";
-import type { SongList } from "../timeline/types";
-import { runMaintenance } from "./lib/run-maintenance";
+import type { FileSongList } from "../timeline/types";
+import { runMaintenance, toConvexLyricSample } from "./lib/run-maintenance";
 
 // Load environment variables from .env.local
 config({
@@ -86,7 +86,7 @@ async function assignSongArtist(songId: string, artistId: string) {
 }
 
 async function upsertSongWithArtist(
-	song: SongList[number],
+	song: FileSongList[number],
 	forceUpdate: boolean = false,
 ) {
 	const artistInfo = artistPoliticalAffiliation[song.artist] ?? undefined;
@@ -127,7 +127,7 @@ async function upsertSongWithArtist(
 					collaborator_ids:
 						collaboratorIds.length > 0 ? (collaboratorIds as never) : undefined,
 					language: song.language,
-					lyric_sample: song.lyric_sample,
+					lyric_sample: toConvexLyricSample(song.lyric_sample),
 					links: song.links,
 				},
 			});
@@ -151,15 +151,15 @@ async function upsertSongWithArtist(
 			collaboratorIds.length > 0 ? (collaboratorIds as never) : undefined,
 		published_date: song.published_date,
 		language: song.language,
-		lyric_sample: song.lyric_sample,
+		lyric_sample: toConvexLyricSample(song.lyric_sample),
 		links: song.links,
 		published: true,
 	});
 }
 
-function loadAllSongs(): SongList {
+function loadAllSongs(): FileSongList {
 	const dataDir = join(dirname(new URL(import.meta.url).pathname), "../data");
-	const songFiles: SongList = [];
+	const songFiles: FileSongList = [];
 
 	function walk(directory: string) {
 		for (const entry of readdirSync(directory)) {
@@ -178,7 +178,7 @@ function loadAllSongs(): SongList {
 				const mod = require(fullPath);
 				for (const value of Object.values(mod)) {
 					if (Array.isArray(value)) {
-						songFiles.push(...(value as SongList));
+						songFiles.push(...(value as FileSongList));
 					}
 				}
 			} catch (error) {

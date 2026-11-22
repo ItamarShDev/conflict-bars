@@ -1,6 +1,6 @@
 import { execFileSync } from "node:child_process";
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { runMaintenance } from "./run-maintenance";
+import { runMaintenance, toConvexLyricSample } from "./run-maintenance";
 
 vi.mock("node:child_process", () => ({ execFileSync: vi.fn() }));
 afterEach(() => {
@@ -8,6 +8,17 @@ afterEach(() => {
 	vi.clearAllMocks();
 });
 describe("authenticated maintenance runner", () => {
+	it("keeps lyric text but excludes file-only language metadata from Convex arguments", () => {
+		const lyricText = {
+			arabic: "أصل",
+			hebrew: "מקור",
+			english_translation: "Original",
+		};
+		expect(
+			toConvexLyricSample({ ...lyricText, original_language: "ar" }),
+		).toStrictEqual(lyricText);
+		expect(toConvexLyricSample(undefined)).toBeUndefined();
+	});
 	it("pins writes to the read deployment without passing credentials as arguments", async () => {
 		vi.stubEnv(
 			"NEXT_PUBLIC_CONVEX_URL",
