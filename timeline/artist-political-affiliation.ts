@@ -573,4 +573,19 @@ export const artistPoliticalAffiliation: Record<
 		notes:
 			"Israeli rapper; ברוכים הבאים לפתח תקוה (2015) includes protest tracks such as 'ממשלה זה פשע מאורגן'.",
 	},
+	Excentrik: {
+		era: "2010s",
+		affiliation: "Palestinian diaspora hip-hop",
+		notes: "Palestinian-American producer and MC from San Francisco.",
+	},
+	"Gaza Boys (أبناء غزة)": {
+		era: "2010s",
+		affiliation: "Palestinian hip-hop / Gaza",
+		notes: "Gaza rap group whose recordings are archived by IREMAM.",
+	},
+	Lounar: {
+		era: "2020s",
+		affiliation: "Palestinian diaspora hip-hop",
+		notes: "London-based Palestinian hip-hop and punk artist.",
+	},
 } as const;

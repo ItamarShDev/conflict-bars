@@ -51,4 +51,26 @@ export const ravidPlotnik2020s = [
 			lyrics: "https://ravidplotnik.bandcamp.com/track/--79",
 		},
 	},
+	{
+		name: "בוקר טוב חיים שלי (Boker Tov Haim Sheli / Good Morning, My Love)",
+		artist: "Ravid Plotnik (רביד פלוטניק)",
+		language: "Hebrew",
+		published_date: "2025-01-10",
+		political_leaning: "unknown",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "כשאני כותב על אחדות זה נשמע לכם פרסומת?",
+			english_translation:
+				"When I write about unity, does it sound like an ad to you?",
+		},
+		context: {
+			he: "השאלה מטילה ספק ביכולת של קריאה לאחדות לשכנע. ביקורת ynet ממקמת את שיר הפתיחה באלבום שעוסק בחיים מאז פרוץ המלחמה; כאן הפילוג מופיע גם בוויכוח משפחתי מול חדשות מאיימות.",
+			en: "The question doubts whether a call for unity can persuade anyone. Ynet situates this opener on an album about life since the war began; here, division also plays out in a family argument against a backdrop of alarming news.",
+		},
+		links: {
+			lyrics:
+				"https://www.nagnu.co.il/%D7%90%D7%95%D7%9E%D7%A0%D7%99%D7%9D/%D7%A8%D7%91%D7%99%D7%93_%D7%A4%D7%9C%D7%95%D7%98%D7%A0%D7%99%D7%A7/%D7%91%D7%95%D7%A7%D7%A8_%D7%98%D7%95%D7%91_%D7%97%D7%99%D7%99%D7%9D_%D7%A9%D7%9C%D7%99",
+			song_info: "https://ravidplotnik.bandcamp.com/album/--7",
+		},
+	},
 ];
