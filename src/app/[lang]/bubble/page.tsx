@@ -16,7 +16,7 @@ export async function generateMetadata({
 	requireLocale(lang);
 	const t = translations[lang];
 	const title = `${t.bubble.title} - ${t.title}`;
-	const canonical = `https://www.conflictbars.org/${lang}/bubble`;
+	const canonical = `https://www.conflictbars.org${lang === "he" ? "" : `/${lang}`}/bubble`;
 
 	return {
 		title,
@@ -49,7 +49,6 @@ export default async function BubblePage({
 	const songs = loadFileSongs();
 	const t = translations[lang];
 	const stats = getCatalogStats(songs);
-	const otherLang = lang === "he" ? "en" : "he";
 
 	return (
 		<div
@@ -60,14 +59,13 @@ export default async function BubblePage({
 			<TimelineHeader
 				title={t.bubble.title}
 				subtitle={t.bubble.subtitle}
-				themeToggle={t.themeToggle}
 				helpModal={t.helpModal}
 				stats={stats}
 				lang={lang}
 				compact
-				nav={{ href: `/${lang}`, label: t.nav.timeline }}
+				nav={{ href: lang === "he" ? "/" : `/${lang}`, label: t.nav.timeline }}
 				languageToggle={{
-					href: `/${otherLang}/bubble`,
+					href: lang === "he" ? "/en/bubble" : "/bubble",
 					label: t.languageToggle,
 				}}
 			/>

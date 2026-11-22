@@ -3,12 +3,17 @@ import { requireLocale } from "@/utils/locale";
 import nextConfig from "../../next.config";
 
 describe("locale routing", () => {
-	it("redirects the root to Hebrew without blocking English routes", async () => {
+	it("serves Hebrew at the root and redirects /he to it", async () => {
 		const redirects = (await nextConfig.redirects?.()) ?? [];
+		const rewrites = (await nextConfig.rewrites?.()) ?? [];
 		expect(redirects).toContainEqual({
+			source: "/he",
+			destination: "/",
+			permanent: true,
+		});
+		expect(rewrites).toContainEqual({
 			source: "/",
 			destination: "/he",
-			permanent: false,
 		});
 		expect(
 			redirects.find((redirect) => redirect.source.startsWith("/en")),

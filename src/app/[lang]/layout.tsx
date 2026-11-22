@@ -16,7 +16,7 @@ export async function generateMetadata({
 		: "An interactive timeline exploring Israeli hip-hop artists and key events across years and decades";
 
 	const base = "https://www.conflictbars.org";
-	const url = `${base}/${lang}`;
+	const url = isHebrew ? base : `${base}/${lang}`;
 
 	return {
 		metadataBase: new URL(base),
@@ -42,7 +42,7 @@ export async function generateMetadata({
 		alternates: {
 			canonical: url,
 			languages: {
-				he: `${base}/he`,
+				he: base,
 				en: `${base}/en`,
 			},
 		},

@@ -54,7 +54,7 @@ describe("Hebrew social image route", () => {
 
 		expect(alt).toContain("ציר זמן אינטראקטיבי");
 		expect(text).toMatch(/[\u0590-\u05ff]/);
-		expect(text).toContain("www.conflictbars.org/he");
+		expect(text).toContain("www.conflictbars.org");
 		expect(text).toContain("1987");
 		expect(text).toContain("2025");
 		expect(text).not.toMatch(/\b(?:Conflict|Israeli|Scene|Song|Context)\b/);

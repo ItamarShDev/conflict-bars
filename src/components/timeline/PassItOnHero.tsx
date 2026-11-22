@@ -17,7 +17,6 @@ export function PassItOnHero({
 }) {
 	const cassetteId = `pass-it-on-cassette-${useId().replace(/[^a-zA-Z0-9_-]/g, "")}`;
 	const heroRef = useRef<HTMLElement | null>(null);
-	const [manuallyPaused, setManuallyPaused] = useState(false);
 	const [isInViewport, setIsInViewport] = useState(true);
 	const [isDocumentVisible, setIsDocumentVisible] = useState(true);
 	const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
@@ -34,18 +33,7 @@ export function PassItOnHero({
 		String(eventCount),
 	);
 	const motionPaused =
-		manuallyPaused ||
-		!isInViewport ||
-		!isDocumentVisible ||
-		prefersReducedMotion;
-	const motionButtonLabel = prefersReducedMotion
-		? copy.motionStaticLabel
-		: manuallyPaused
-			? copy.resumeAnimation
-			: copy.pauseAnimation;
-	const motionButtonDescription = prefersReducedMotion
-		? copy.motionDisabled
-		: motionButtonLabel;
+		!isInViewport || !isDocumentVisible || prefersReducedMotion;
 
 	useEffect(() => {
 		if (typeof window.matchMedia !== "function") return;
@@ -107,7 +95,6 @@ export function PassItOnHero({
 			</svg>
 			<div className="pass-it-on-hero-inner">
 				<div className="pass-it-on-hero-copy">
-					<p className="pass-it-on-kicker">{copy.kicker}</p>
 					<h1 id="pass-it-on-title" className="pass-it-on-title">
 						<span>{copy.titleLead}</span>
 						<span>{copy.titleEmphasis}</span>
@@ -116,29 +103,8 @@ export function PassItOnHero({
 						{copy.hebrewTagline}
 					</p>
 					<p className="pass-it-on-subtitle">{copy.subtitle}</p>
-					<a className="pass-it-on-cta" href="#pass-it-on-chronology">
-						<span>{copy.cta}</span>
-						<span aria-hidden="true">↓</span>
-					</a>
 				</div>
 				<div className="pass-it-on-hero-art">
-					<button
-						type="button"
-						className="pass-it-on-motion-control"
-						aria-label={motionButtonDescription}
-						title={motionButtonDescription}
-						disabled={prefersReducedMotion}
-						data-motion-state={
-							prefersReducedMotion
-								? "static"
-								: motionPaused
-									? "paused"
-									: "playing"
-						}
-						onClick={() => setManuallyPaused((paused) => !paused)}
-					>
-						<span>{motionButtonLabel}</span>
-					</button>
 					<svg
 						className="pass-it-on-cassette"
 						viewBox="0 0 640 405"

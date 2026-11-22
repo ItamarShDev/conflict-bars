@@ -1,6 +1,5 @@
 "use client";
 
-import type { ReactNode } from "react";
 import { useEffect, useRef } from "react";
 import type { translations } from "@/components/timeline/translations";
 import type { TimelineEntryItem } from "@/utils/timeline";
@@ -53,27 +52,16 @@ export function PassItOnYearSpool({
 	groups,
 	selectedYear,
 	onSelect,
-	isAutoAdvancing,
-	onToggleAutoAdvance,
-	onPrevious,
-	onNext,
-	submitAction,
 	copy,
 }: {
 	years: number[];
 	groups: [number, TimelineEntryItem[]][];
 	selectedYear: number | null;
 	onSelect: (year: number) => void;
-	isAutoAdvancing: boolean;
-	onToggleAutoAdvance: () => void;
-	onPrevious: () => void;
-	onNext: () => void;
-	submitAction?: ReactNode;
 	copy: PassItOnCopy;
 }) {
 	const yearsRef = useRef<HTMLUListElement>(null);
 	const railRef = useRef<HTMLElement>(null);
-	const counterRef = useRef<HTMLSpanElement>(null);
 
 	useEffect(() => {
 		const rail = railRef.current;
@@ -89,7 +77,6 @@ export function PassItOnYearSpool({
 				document.documentElement.scrollHeight - window.innerHeight,
 			);
 			const pct = Math.min(1, Math.max(0, window.scrollY / maxScroll));
-			const pctText = `${String(Math.round(pct * 100)).padStart(3, "0")}%`;
 			rail.style.setProperty("--tape-progress", `${(pct * 100).toFixed(1)}%`);
 			if (reducedMotion.matches) {
 				rail.style.setProperty("--spool-deg", "0deg");
@@ -98,9 +85,6 @@ export function PassItOnYearSpool({
 					"--spool-deg",
 					`${(window.scrollY * 0.55).toFixed(1)}deg`,
 				);
-			}
-			if (counterRef.current && counterRef.current.textContent !== pctText) {
-				counterRef.current.textContent = pctText;
 			}
 		};
 
@@ -153,6 +137,28 @@ export function PassItOnYearSpool({
 	}, []);
 
 	useEffect(() => {
+		const rail = railRef.current;
+		const yearsSection = rail
+			?.closest(".pass-it-on-chronology")
+			?.querySelector<HTMLElement>(".pass-it-on-years");
+		if (!rail || !yearsSection) return;
+
+		const setVisibility = (visible: boolean) => {
+			rail.dataset.timelineVisible = visible ? "true" : "false";
+		};
+		if (typeof IntersectionObserver === "undefined") {
+			setVisibility(true);
+			return;
+		}
+		const observer = new IntersectionObserver(
+			(entries) => setVisibility(entries[0]?.isIntersecting ?? false),
+			{ rootMargin: "0px 0px -15% 0px" },
+		);
+		observer.observe(yearsSection);
+		return () => observer.disconnect();
+	}, []);
+
+	useEffect(() => {
 		const rail = yearsRef.current;
 		const active = rail?.querySelector<HTMLButtonElement>(
 			`[data-year="${selectedYear}"]`,
@@ -187,47 +193,6 @@ export function PassItOnYearSpool({
 			aria-label={copy.yearNavigation}
 			ref={railRef}
 		>
-			<div className="pass-it-on-rail-controls">
-				<MiniCassetteReel side="start" />
-				<span
-					ref={counterRef}
-					className="pass-it-on-scrubber-counter"
-					aria-hidden="true"
-				>
-					000%
-				</span>
-				<button
-					type="button"
-					className="pass-it-on-rail-arrow"
-					aria-label={copy.previousYear}
-					disabled={years.length < 2}
-					onClick={onPrevious}
-				>
-					<span aria-hidden="true">‹</span>
-				</button>
-				<button
-					type="button"
-					className="pass-it-on-advance"
-					aria-label={
-						isAutoAdvancing ? copy.pauseAutoAdvance : copy.autoAdvance
-					}
-					aria-pressed={isAutoAdvancing}
-					disabled={years.length < 2}
-					onClick={onToggleAutoAdvance}
-				>
-					<span aria-hidden="true">{isAutoAdvancing ? "Ⅱ" : "→"}</span>
-					{isAutoAdvancing ? copy.pauseAutoAdvance : copy.autoAdvance}
-				</button>
-				<button
-					type="button"
-					className="pass-it-on-rail-arrow"
-					aria-label={copy.nextYear}
-					disabled={years.length < 2}
-					onClick={onNext}
-				>
-					<span aria-hidden="true">›</span>
-				</button>
-			</div>
 			<div className="pass-it-on-rail-year-row">
 				<div className="pass-it-on-tape-window">
 					<span className="pass-it-on-tape-progress" aria-hidden="true" />
@@ -265,9 +230,6 @@ export function PassItOnYearSpool({
 					</ul>
 					<MiniCassetteReel side="end" />
 				</div>
-				{submitAction && (
-					<div className="pass-it-on-rail-submit">{submitAction}</div>
-				)}
 			</div>
 		</nav>
 	);

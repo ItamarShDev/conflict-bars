@@ -352,7 +352,7 @@ export default async function Image({
 				}}
 			>
 				<span style={{ fontWeight: 700, color: "#f5d873" }}>
-					{`${baseUrl}/he`}
+					{`${baseUrl}`}
 				</span>
 				<span>
 					{fixRTL("אירועים היסטוריים, שירים והקשר פוליטי בציר זמן אחד")}

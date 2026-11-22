@@ -8,7 +8,6 @@ import {
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import { ConvexClientProvider } from "@/components/ConvexClientProvider";
-import ThemeProvider from "@/components/ThemeProvider";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -63,15 +62,14 @@ export default function RootLayout({
 		<html
 			lang="he"
 			dir="rtl"
+			data-theme="boombox"
 			className={frankRuhl.variable}
 			suppressHydrationWarning
 		>
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} ${libreFranklin.variable} antialiased bg-(--color-background) text-(--color-foreground)`}
 			>
-				<ConvexClientProvider>
-					<ThemeProvider>{children}</ThemeProvider>
-				</ConvexClientProvider>
+				<ConvexClientProvider>{children}</ConvexClientProvider>
 				<Analytics />
 			</body>
 		</html>

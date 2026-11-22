@@ -50,7 +50,6 @@ export function Timeline({
 	const [selectedLeanings, setSelectedLeanings] = useState<string[]>([]);
 	const [selectedDecades, setSelectedDecades] = useState<number[]>([]);
 	const [selectedYear, setSelectedYear] = useState<number | null>(null);
-	const [isAutoAdvancing, setIsAutoAdvancing] = useState(false);
 	const [view, setView] = useState<TimelineView>("all");
 	const manualScrollLockRef = useRef<ManualScrollLock | null>(null);
 
@@ -147,44 +146,13 @@ export function Timeline({
 		}
 	}, [clearManualScrollLock, selectedYear, years]);
 
-	useEffect(() => {
-		if (!isAutoAdvancing || selectedYear === null || years.length < 2) return;
-		const interval = window.setInterval(() => {
-			const index = years.indexOf(selectedYear);
-			const next =
-				index >= 0 && index < years.length - 1 ? years[index + 1] : years[0];
-			setSelectedYear(next);
-			scrollToYear(next);
-		}, 4000);
-		return () => window.clearInterval(interval);
-	}, [isAutoAdvancing, selectedYear, scrollToYear, years]);
-
-	useEffect(() => {
-		if (years.length < 2) setIsAutoAdvancing(false);
-	}, [years.length]);
-
 	const selectYear = (year: number) => {
-		setIsAutoAdvancing(false);
 		beginManualScrollLock(year);
 		setSelectedYear(year);
 		scrollToYear(year);
 		sectionRefs.current[year]
 			?.querySelector<HTMLElement>(".pass-it-on-year-spool")
 			?.focus({ preventScroll: true });
-	};
-
-	const goPrevious = () => {
-		if (selectedYear === null) return;
-		const index = years.indexOf(selectedYear);
-		selectYear(index > 0 ? years[index - 1] : years[years.length - 1]);
-	};
-
-	const goNext = () => {
-		if (selectedYear === null) return;
-		const index = years.indexOf(selectedYear);
-		selectYear(
-			index >= 0 && index < years.length - 1 ? years[index + 1] : years[0],
-		);
 	};
 
 	useEffect(() => {
@@ -301,15 +269,17 @@ export function Timeline({
 				id="pass-it-on-header"
 				title={t.title}
 				subtitle={t.subtitle}
-				themeToggle={t.themeToggle}
 				helpModal={t.helpModal}
 				stats={catalogStats}
 				lang={lang}
 				railOffset={false}
 				compact
-				nav={{ href: `/${lang}/bubble`, label: t.nav.bubble }}
+				nav={{
+					href: lang === "he" ? "/bubble" : "/en/bubble",
+					label: t.nav.bubble,
+				}}
 				languageToggle={{
-					href: `/${lang === "he" ? "en" : "he"}`,
+					href: lang === "he" ? "/en" : "/",
 					label: t.languageToggle,
 				}}
 			/>
@@ -393,20 +363,13 @@ export function Timeline({
 						groups={visibleYearGroups}
 						selectedYear={selectedYear}
 						onSelect={selectYear}
-						isAutoAdvancing={isAutoAdvancing}
-						onToggleAutoAdvance={() =>
-							setIsAutoAdvancing((previous) => !previous)
-						}
-						onPrevious={goPrevious}
-						onNext={goNext}
-						submitAction={
-							<SubmitSongModal
-								label={t.submitSongButton}
-								translations={t.submitSongForm}
-								lang={lang}
-							/>
-						}
 						copy={t.passItOn}
+					/>
+
+					<SubmitSongModal
+						label={t.submitSongButton}
+						translations={t.submitSongForm}
+						lang={lang}
 					/>
 
 					<p className="pass-it-on-count" role="status" aria-live="polite">

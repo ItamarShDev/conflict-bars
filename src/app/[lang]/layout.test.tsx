@@ -16,11 +16,9 @@ describe("route metadata and document wrapper", () => {
 
 		expect(metadata.title).toBe("חרוזים מסוכסכים");
 		expect(metadata.description).toContain("ציר זמן אינטראקטיבי");
-		expect(metadata.alternates?.canonical).toBe(
-			"https://www.conflictbars.org/he",
-		);
+		expect(metadata.alternates?.canonical).toBe("https://www.conflictbars.org");
 		expect(metadata.alternates?.languages).toEqual({
-			he: "https://www.conflictbars.org/he",
+			he: "https://www.conflictbars.org",
 			en: "https://www.conflictbars.org/en",
 		});
 		expect(metadata.openGraph?.locale).toBe("he_IL");

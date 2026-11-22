@@ -97,7 +97,7 @@ export function SongEntry({
 		: "text-sm font-bold uppercase tracking-wider text-(--color-muted-foreground)";
 	const editButtonClass = hideHeader
 		? "inline-flex min-h-11 min-w-11 items-center justify-center bg-(--color-accent) text-[#fffdf5] transition hover:bg-(--color-accent-hover) focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-accent)"
-		: "absolute start-3 top-3 z-30 flex h-9 w-9 cursor-pointer items-center justify-center bg-(--color-accent) text-[#fffdf5] transition hover:bg-(--color-accent-hover) sm:start-2 sm:top-2 sm:h-8 sm:w-8 sm:-translate-x-1/2 sm:-translate-y-1/2 sm:opacity-0 sm:group-hover:opacity-100";
+		: "absolute start-3 bottom-3 z-30 flex h-9 w-9 cursor-pointer items-center justify-center bg-(--color-accent) text-[#fffdf5] transition hover:bg-(--color-accent-hover) sm:start-2 sm:bottom-2 sm:h-8 sm:w-8 sm:-translate-x-1/2 sm:translate-y-1/2 sm:opacity-0 sm:group-hover:opacity-100";
 	const editButton = (
 		<button
 			type="button"
@@ -249,14 +249,6 @@ export function SongEntry({
 								"{highlightText(lyricContent)}"
 							</p>
 						)}
-						{contextContent && (
-							<p
-								className="text-sm leading-relaxed text-(--color-muted-foreground) text-start"
-								dir={contextDir}
-							>
-								{highlightText(contextContent)}
-							</p>
-						)}
 					</div>
 				)}
 
@@ -321,6 +313,17 @@ export function SongEntry({
 								{t.youtube}
 							</a>
 						)}
+					</div>
+				)}
+
+				{!isCompact && contextContent && (
+					<div className="pt-3 space-y-2">
+						<p
+							className="text-sm leading-relaxed text-(--color-muted-foreground) text-start"
+							dir={contextDir}
+						>
+							{highlightText(contextContent)}
+						</p>
 					</div>
 				)}
 			</div>

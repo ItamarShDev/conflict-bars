@@ -14,9 +14,6 @@ vi.mock("@vercel/analytics/next", () => ({ Analytics: () => null }));
 vi.mock("@/components/ConvexClientProvider", () => ({
 	ConvexClientProvider: ({ children }: { children: ReactNode }) => children,
 }));
-vi.mock("@/components/ThemeProvider", () => ({
-	default: ({ children }: { children: ReactNode }) => children,
-}));
 
 describe("Hebrew document metadata", () => {
 	it("sets the document language, direction, and root metadata to Hebrew", () => {
