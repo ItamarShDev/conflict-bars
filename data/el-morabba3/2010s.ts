@@ -21,6 +21,13 @@ export const elMorabba32010s = [
 		context: {
 			en: "El Far3i names Fallujah and Gaza in the same breath in a verse about control and uranium. The track appeared as the UN marked five years of the Gaza blockade. The lyric draws a parallel between places; it is not evidence that a particular weapon was used in Gaza.",
 			he: "אל־פרעי מזכיר את פלוג׳ה ואת עזה באותה נשימה בבית שעוסק בשליטה ובאורניום. השיר יצא בתקופה שבה האו״ם ציין חמש שנים לסגר על עזה. השורה מקבילה בין המקומות; היא אינה ראיה לשימוש בנשק מסוים בעזה.",
+			sources: [
+				{
+					url: "https://www.unocha.org/publications/map/occupied-palestinian-territory/five-years-blockade-humanitarian-situation-gaza-strip-june-2012",
+					en: "UN report on five years of Gaza blockade",
+					he: "דוח האו״ם על חמש שנים לסגר על עזה",
+				},
+			],
 		},
 	},
 	{

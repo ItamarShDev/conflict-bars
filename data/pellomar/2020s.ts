@@ -16,6 +16,13 @@ export const pellomar2020s = [
 		context: {
 			he: "הפזמון מציב תמונת ניצחון ליד תור לפסיכולוג ומערער על הרושם שהחזרה מהלחימה מוחקת את החוויה. חביב, שמקליט בשם פלומר, סיפר בהסכת ״לגדול מהכל״ על שירות המילואים שלו בעזה אחרי מתקפת 7 באוקטובר ועל ההשראה לשיר.",
 			en: "The chorus sets a victory photo alongside a line for the psychologist, questioning the idea that returning from combat erases the experience. Omer Haviv, who records as PelloMar, spoke on the podcast Ligdol Mehakol about serving in Gaza after October 7 and what inspired the song.",
+			sources: [
+				{
+					url: "https://podcasts.apple.com/us/podcast/id1719426934?i=1000681261968",
+					en: "PelloMar interview on Ligdol Mehakol",
+					he: "ראיון עם פלומר בהסכת ״לגדול מהכל״",
+				},
+			],
 		},
 		links: {
 			lyrics:

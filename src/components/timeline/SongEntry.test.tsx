@@ -100,6 +100,42 @@ describe("SongEntry lyrics vs context rendering", () => {
 		expect(enHtml).not.toContain("אחרי המלחמה אנחנו חוזרים.");
 	});
 
+	it.each([
+		["he", "דוח על בתי החולים", "Hospital report"],
+		["en", "Hospital report", "דוח על בתי החולים"],
+	] as const)(
+		"renders a separate localized context link in %s",
+		(lang, label, otherLabel) => {
+			const song: FileSong = {
+				...baseSong,
+				context: {
+					he: "בתי חולים נפגעו במלחמה.",
+					en: "Hospitals were damaged during the war.",
+					sources: [
+						{
+							url: "https://example.com/report",
+							he: "דוח על בתי החולים",
+							en: "Hospital report",
+						},
+					],
+				},
+				links: {
+					lyrics: "https://example.com/lyrics",
+					song_info: "https://example.com/track",
+				},
+			};
+			const html = renderToStaticMarkup(
+				<SongEntry song={song} lang={lang} leaning="unknown" />,
+			);
+			expect(html).toMatch(
+				new RegExp(`href="https://example\\.com/report"[^>]*>${label}</a>`),
+			);
+			expect(html).not.toContain(otherLabel);
+			expect(html).toContain('href="https://example.com/lyrics"');
+			expect(html).toContain('href="https://example.com/track"');
+		},
+	);
+
 	it("renders both quoted lyrics and unquoted context when both exist", () => {
 		const song: FileSong = {
 			...baseSong,

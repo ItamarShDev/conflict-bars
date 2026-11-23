@@ -259,6 +259,25 @@ export function SongEntry({
 								{highlightText(contextContent)}
 							</p>
 						)}
+						{contextContent && songContext?.sources?.length ? (
+							<ul
+								className="flex flex-wrap gap-x-3 gap-y-1 text-xs"
+								dir={lang === "he" ? "rtl" : "ltr"}
+							>
+								{songContext.sources.map((source) => (
+									<li key={source.url}>
+										<a
+											href={source.url}
+											target="_blank"
+											rel="noreferrer"
+											className="inline-block py-1 text-(--color-accent) underline focus-visible:outline-2 focus-visible:outline-(--color-accent)"
+										>
+											{source[lang]}
+										</a>
+									</li>
+								))}
+							</ul>
+						) : null}
 						{labeledLyrics?.map(
 							(excerpt) =>
 								excerpt.text && (
