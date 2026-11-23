@@ -6,6 +6,21 @@ export const artistPoliticalAffiliation: Record<
 		notes: string;
 	}
 > = {
+	"Liam Hachmon (ליעם חכמון)": {
+		era: "2020s",
+		affiliation: "Unknown",
+		notes: "Israeli rapper and singer from Zikhron Ya’akov.",
+	},
+	"Regev Baruch (רגב ברוך)": {
+		era: "2020s",
+		affiliation: "Unknown",
+		notes: "Israeli musician whose Super Sparta album includes satirical rap.",
+	},
+	"Shahar Halel (שחר הלל)": {
+		era: "2020s",
+		affiliation: "Unknown",
+		notes: "Israeli rapper from Ma’alot; released Hilkhot Milhama in 2025.",
+	},
 	"Cohen (כהן)": {
 		era: "2020s",
 		affiliation: "Unknown",
