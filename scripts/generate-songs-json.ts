@@ -68,9 +68,6 @@ const enriched = rawSongs.map((song) => {
 	};
 });
 
-writeFileSync(outputPath, JSON.stringify(enriched, null, 2));
-console.log(`Generated ${enriched.length} songs → ${outputPath}`);
-
 const LYRIC_KEYS = ["hebrew", "arabic", "english_translation"] as const;
 
 function lyricExcerpt(song: RawSong) {
@@ -82,23 +79,37 @@ function lyricsLink(song: RawSong) {
 	return typeof links?.lyrics === "string" ? links.lyrics.trim() : "";
 }
 
-const missingExcerpt = enriched.filter(
-	(song) =>
-		!LYRIC_KEYS.some((key) => {
+function hasSourcedLyricExcerpt(song: RawSong) {
+	return (
+		LYRIC_KEYS.some((key) => {
 			const value = lyricExcerpt(song)?.[key];
 			return typeof value === "string" && value.trim().length > 0;
-		}),
-);
-const missingSource = enriched.filter((song) => !lyricsLink(song));
-
-if (missingExcerpt.length > 0 || missingSource.length > 0) {
-	console.warn(
-		`⚠ ${missingExcerpt.length} songs have no lyric excerpt; ${missingSource.length} have no lyrics source link.`,
+		}) && lyricsLink(song).length > 0
 	);
-	for (const song of missingExcerpt) {
-		console.warn(`  no excerpt: ${song.artist} | ${song.name}`);
-	}
-	for (const song of missingSource) {
-		console.warn(`  no lyrics source: ${song.artist} | ${song.name}`);
+}
+
+// Songs without a sourced lyric excerpt stay in data/ but are held out of
+// the generated catalog, which feeds both public surfaces (timeline, bubble).
+const publishable = enriched.filter(hasSourcedLyricExcerpt);
+const heldOut = enriched.filter((song) => !hasSourcedLyricExcerpt(song));
+
+writeFileSync(outputPath, JSON.stringify(publishable, null, 2));
+console.log(`Generated ${publishable.length} songs → ${outputPath}`);
+
+if (heldOut.length > 0) {
+	console.warn(
+		`⚠ ${heldOut.length} songs held out of the catalog (missing sourced lyric excerpt):`,
+	);
+	for (const song of heldOut) {
+		const missing = [
+			!LYRIC_KEYS.some((key) => {
+				const value = lyricExcerpt(song)?.[key];
+				return typeof value === "string" && value.trim().length > 0;
+			}) && "excerpt",
+			!lyricsLink(song) && "lyrics source",
+		]
+			.filter(Boolean)
+			.join(" + ");
+		console.warn(`  held out: ${song.artist} | ${song.name} (${missing})`);
 	}
 }

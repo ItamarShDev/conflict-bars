@@ -105,7 +105,7 @@ export function SubmitSongForm({
 		if (!publishedDate) missing.add("publishedDate");
 		if (!language) missing.add("language");
 		if (!lyricHebrew) missing.add("lyricHebrew");
-		if (!linkLyrics) missing.add("linkLyrics");
+		if (!isEditMode && !linkLyrics) missing.add("linkLyrics");
 
 		if (missing.size > 0) {
 			setMissingFields(missing);
@@ -338,7 +338,7 @@ export function SubmitSongForm({
 						<input
 							name="linkLyrics"
 							type="url"
-							required
+							required={!isEditMode}
 							defaultValue={editSong?.links?.lyrics || ""}
 							dir={lang === "he" ? "rtl" : "ltr"}
 							className={`${inputBase} ${

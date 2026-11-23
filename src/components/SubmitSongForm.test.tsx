@@ -78,4 +78,17 @@ describe("SubmitSongForm Hebrew language field", () => {
 		expect(linkLyricsInput).toContain('type="url"');
 		expect(html).toContain("קישור למקור המילים *");
 	});
+
+	it("does not require a lyrics source link on edit suggestions", () => {
+		const html = renderForm({
+			name: "Original title",
+			artist: "Original artist",
+			published_date: "2001",
+		});
+		const linkLyricsInput = html.match(
+			/<input[^>]*name="linkLyrics"[^>]*>/,
+		)?.[0];
+
+		expect(linkLyricsInput).not.toContain("required");
+	});
 });
