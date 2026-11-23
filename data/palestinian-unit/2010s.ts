@@ -44,31 +44,4 @@ export const palestinianUnit2010s = [
 			song_info: "https://iremam-base.cnrs.fr/gaza_rap/palestinianunit.htm",
 		},
 	},
-	{
-		name: "We Teach Life Sir",
-		artist: "Palestinian Unit",
-		collaborators: [
-			"Alaa Shoublaq (علاء شبلاق)",
-			"Shady Abu Shahla (شادي أبو شهلا)",
-			"Ayman Mghames (أيمن مغامس)",
-			"Khaled Harara (خالد حرارة)",
-		],
-		language: "English/Arabic",
-		published_date: "2014-08-24",
-		political_leaning: "left",
-		lyric_sample: {
-			original_language: "en",
-			hebrew: "אנחנו מלמדים חיים, אדוני.",
-			english_translation: "We teach life, sir",
-		},
-		context: {
-			he: "הפזמון ״אנחנו מלמדים חיים״ בא מתוך שיר מחאה של רפיף זיאדה על האופן שבו התקשורת מציגה את הפלסטינים. הרכב הראפ מעזה שילב אותו בהקלטה ובקליפ שנוצרו בזמן הלחימה ב־2014 כדי להראות כיצד תושבים המשיכו בחייהם גם כשהופגזו ונעקרו מבתיהם.",
-			en: "The refrain comes from Rafeef Ziadah's protest poem about how Palestinians are portrayed in the media. The Gaza rap collective set it to music and filmed during the 2014 war, showing how people carried on amid bombardment and displacement.",
-		},
-		links: {
-			lyrics: "https://www.youtube.com/watch?v=axF0m5iSbIo",
-			song_info:
-				"https://iremam-base.cnrs.fr/gaza_rap/palestinianunit.htm#:~:text=We%20Teach%20Life%20Sir",
-		},
-	},
 ] satisfies FileSongList;
