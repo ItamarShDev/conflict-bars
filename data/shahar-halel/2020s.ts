@@ -87,4 +87,112 @@ export const shaharHalel2020s = [
 			song_info: "https://open.spotify.com/album/3MvaSYKsz16GVL2gaBswoR",
 		},
 	},
+	{
+		name: "מאבק (Ma’avak / Struggle)",
+		artist: "Shahar Halel (שחר הלל)",
+		language: "Hebrew",
+		published_date: "2025-09-28",
+		political_leaning: "unknown",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "ארץ ישראל זו לא ביתר",
+			english_translation: "The Land of Israel isn’t Beitar",
+		},
+		context: {
+			he: "הלל משתמש בדימוי של קבוצת הכדורגל בית״ר כדי לדחות את הרעיון שחייבים לבחור קבוצה. השיר פותח אלבום שעליו סיפר הלל בראיון ל־Jigga Juice כי הוא מחבר את חייו למלחמה שאחרי 7 באוקטובר.",
+			en: "Halel invokes the Beitar football club to question the pressure to pick a team. The track opens an album that, as Halel told Jigga Juice, connects his own life to the war after October 7.",
+		},
+		links: {
+			lyrics:
+				"https://letras.top/s/shahar-halel-%d7%a9%d7%97%d7%a8-%d7%94%d7%9c%d7%9c/letra-de-maavak-%d7%9e%d7%90%d7%91%d7%a7-shahar-halel-%d7%a9%d7%97%d7%a8-%d7%94%d7%9c%d7%9c/",
+			song_info: "https://open.spotify.com/track/25uDceUtVjo8gfTxEXMqVu",
+		},
+	},
+	{
+		name: "על מה אתה נלחם (Al Ma Ata Nilcham / What Are You Fighting For?)",
+		artist: "Shahar Halel (שחר הלל)",
+		language: "Hebrew",
+		published_date: "2025-09-28",
+		political_leaning: "unknown",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "על מה אתה נלחם כשאתה יוצא לקרב?",
+			english_translation: "What are you fighting for when you go into battle?",
+		},
+		context: {
+			he: "באלבום העוסק בחיים אחרי 7 באוקטובר, הלל שואל על מה יוצאים לקרב ועל מי דואגים. הוא מספר שאמו אמרה לו שעד שיגדל כבר לא יהיה צורך בצבא, וכעת אומרת זאת שוב לאחיינו.",
+			en: "On an album about life after October 7, Halel asks what people go into battle for and whom they look after. He recalls his mother telling him there would be no army by the time he grew up, and saying the same thing years later to his nephew.",
+		},
+		links: {
+			lyrics:
+				"https://letras.top/s/shahar-halel-%d7%a9%d7%97%d7%a8-%d7%94%d7%9c%d7%9c/letra-de-al-ma-ata-nilcham-%d7%a2%d7%9c-%d7%9e%d7%94-%d7%90%d7%aa%d7%94-%d7%a0%d7%9c%d7%97%d7%9d-shahar-halel-%d7%a9%d7%97%d7%a8-%d7%94%d7%9c%d7%9c/",
+			song_info: "https://open.spotify.com/track/5GE5ofXkmv4ye2NDiOgQLO",
+		},
+	},
+	{
+		name: "למען מה (Lema’an Ma / For What?)",
+		artist: "Shahar Halel (שחר הלל)",
+		language: "Hebrew",
+		published_date: "2025-09-28",
+		political_leaning: "unknown",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "מה נשאר עוד להקריב בשביל שנוכל לחיות בשקט על האדמה הזאת",
+			english_translation:
+				"What is left to sacrifice so we can live in peace on this land?",
+		},
+		context: {
+			he: "הלל מציב שאלה על מחיר החיים במלחמה לצד הצהרת נאמנות למולדת. באלבום שנכתב בצל המלחמה אחרי 7 באוקטובר, הוא מתאר את המלחמה כשבר דורי, בלי להציע עמדה מדינית מסוימת.",
+			en: "Halel asks what wartime life still demands of people while declaring loyalty to his homeland. On an album made in the shadow of the war after October 7, he treats the war as a generational rupture without spelling out a policy position.",
+		},
+		links: {
+			lyrics:
+				"https://letras.top/s/shahar-halel-%d7%a9%d7%97%d7%a8-%d7%94%d7%9c%d7%9c/letra-de-lemaan-ma-%d7%9c%d7%9e%d7%a2%d7%9f-%d7%9e%d7%94-shahar-halel-%d7%a9%d7%97%d7%a8-%d7%94%d7%9c%d7%9c/",
+			song_info: "https://open.spotify.com/track/1gpDmJW2KRwMVRCy2EDxDb",
+		},
+	},
+	{
+		name: "ניסים (Nisim / Miracles)",
+		artist: "Shahar Halel (שחר הלל)",
+		language: "Hebrew",
+		published_date: "2025-09-28",
+		political_leaning: "unknown",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "אמא שלי אומרת שהבן שלה ניצל אני אומר שאח שלי נפצע",
+			english_translation:
+				"My mother says her son survived; I say my brother was wounded.",
+		},
+		context: {
+			he: "הלל מעמיד את אמונת אמו בנס מול הפציעה של אחיו. ביקורת האלבום ב״הארץ״ מאשרת שאחד מאחיו נפצע בעזה, והשיר מציב את הפציעה לצד זיכרון מהלוויות במבצע צוק איתן ב־2014.",
+			en: "Halel sets his mother’s belief in a miracle against his brother’s injury. Haaretz’s album review notes that his brother was wounded in Gaza; the song sets that injury alongside a childhood memory of funerals during the 2014 Gaza war.",
+		},
+		links: {
+			lyrics:
+				"https://letras.top/s/shahar-halel-%d7%a9%d7%97%d7%a8-%d7%94%d7%9c%d7%9c/letra-de-nisim-%d7%a0%d7%99%d7%a1%d7%99%d7%9d-shahar-halel-%d7%a9%d7%97%d7%a8-%d7%94%d7%9c%d7%9c/",
+			song_info: "https://open.spotify.com/track/7BCcBdGk2hYs0Dvc7mtYye",
+		},
+	},
+	{
+		name: "לבד במדבר (Levad BaMidbar / Alone in the Desert)",
+		artist: "Shahar Halel (שחר הלל)",
+		collaborators: ["Shiru (שירו)"],
+		language: "Hebrew",
+		published_date: "2025-09-28",
+		political_leaning: "left",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "בבית של השכן שלי חסר ממ”ד",
+			english_translation: "My neighbour’s home has no safe room.",
+		},
+		context: {
+			he: "הלל מתאר שכן שאין בביתו מרחב מוגן, ואילו שירו מערער על ההאדרה של מוות למען המולדת. באלבום העוסק בחיים אחרי 7 באוקטובר, השיר קושר בין תחושת חוסר ביטחון בבית לבין ספקות לגבי השפה שבה מדברים על המלחמה.",
+			en: "Halel describes a neighbour without a safe room, while Shiru questions the glorification of dying for one’s country. On an album about life after October 7, the track connects insecurity at home with doubts about the language people use to talk about war.",
+		},
+		links: {
+			lyrics:
+				"https://letras.top/s/shahar-halel-%d7%a9%d7%97%d7%a8-%d7%94%d7%9c%d7%9c/letra-de-levad-bamidbar-%d7%9c%d7%91%d7%93-%d7%91%d7%9e%d7%93%d7%91%d7%a8-shahar-halel-%d7%a9%d7%97%d7%a8-%d7%94%d7%9c%d7%9c/",
+			song_info: "https://open.spotify.com/track/0UTi7cJ85dK7y4XZr9weO5",
+		},
+	},
 ] satisfies FileSongList;
