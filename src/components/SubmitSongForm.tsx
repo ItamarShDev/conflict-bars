@@ -152,6 +152,7 @@ export function SubmitSongForm({
 			}
 			await submitSong({
 				songId: editSong?._id,
+				isEdit: isEditMode,
 				userDisplayName: displayName,
 				userEmail: email,
 				suggestion: {

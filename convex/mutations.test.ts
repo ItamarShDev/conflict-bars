@@ -148,4 +148,29 @@ describe("mutation access boundary", () => {
 			).rejects.toThrow("sourced lyric excerpt");
 		},
 	);
+	it("keeps file-song edit suggestions on the unpublished path", async () => {
+		const insert = vi
+			.fn()
+			.mockResolvedValueOnce("user1")
+			.mockResolvedValueOnce("song1");
+		const ctx = {
+			db: {
+				query: () => ({ withIndex: () => ({ first: async () => null }) }),
+				insert,
+			},
+		};
+		await functions.submitSongEditSuggestion.handler(ctx, {
+			userEmail: "test@example.com",
+			isEdit: true,
+			suggestion: {
+				name: "Song",
+				published_date: "2000",
+				artistId: "artist1",
+			},
+		});
+		expect(insert).toHaveBeenLastCalledWith(
+			"songs",
+			expect.objectContaining({ published: false }),
+		);
+	});
 });
