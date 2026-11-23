@@ -42,6 +42,11 @@ export const artistPoliticalAffiliation: Record<
 		affiliation: "Unknown",
 		notes: "Gaza-based rap group documented in the IREMAM archive.",
 	},
+	"Palestinian Unit": {
+		era: "2010s",
+		affiliation: "Unknown",
+		notes: "Gaza hip-hop collective documented in the IREMAM archive.",
+	},
 	"Revolution Makers (صناع الثورة)": {
 		era: "2010s",
 		affiliation: "Unknown",
