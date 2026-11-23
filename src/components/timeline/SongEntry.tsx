@@ -270,7 +270,7 @@ export function SongEntry({
 											href={source.url}
 											target="_blank"
 											rel="noreferrer"
-											className="inline-block py-1 text-(--color-accent) underline focus-visible:outline-2 focus-visible:outline-(--color-accent)"
+											className="pass-it-on-song-citation inline-block py-1 text-(--color-song-foreground) underline focus-visible:outline-2 focus-visible:outline-current"
 										>
 											{source[lang]}
 										</a>
