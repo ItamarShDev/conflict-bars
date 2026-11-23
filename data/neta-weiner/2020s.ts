@@ -22,4 +22,26 @@ export const netaWeiner2020s = [
 			song_info: "https://netaweiner.bandcamp.com/track/--19",
 		},
 	},
+	{
+		name: "ISMA",
+		artist: "Neta Weiner & Samira Saraya (נטע וינר וסמירה סרייה)",
+		collaborators: ["Hoyah"],
+		language: "Arabic/Hebrew/Yiddish/English",
+		published_date: "2025-05-08",
+		political_leaning: "unknown",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "Isma, Israil",
+			hebrew: "הקשב, ישראל",
+			english_translation: "Listen, Israel",
+		},
+		context: {
+			he: "שורת הפתיחה פונה לישראל, ומיד אחריה פנייה מקבילה לישמעאל. בהמשך היצירה דוחה דה־הומניזציה גם כשהיא מופנית כלפי הזולת. האמנים מספרים שכתבו את השיר במהלך סיבוב הופעות שהחל באוקטובר 2023 בתגובה לאלימות בישראל ובפלסטין.",
+			en: "The opening call to Israel is followed by a parallel address to Ishmael. Later verses reject dehumanization directed at or committed by the listener. The artists say they wrote the track on a tour that began in October 2023 in response to violence in Israel and Palestine.",
+		},
+		links: {
+			lyrics: "https://netaweiner.bandcamp.com/track/isma",
+			song_info: "https://open.spotify.com/album/0xA7UMLvdyGxTGgGmH6TTJ",
+		},
+	},
 ] satisfies FileSongList;
