@@ -6,6 +6,26 @@ export const artistPoliticalAffiliation: Record<
 		notes: string;
 	}
 > = {
+	"el morabba3 (المربّع)": {
+		era: "2010s",
+		affiliation: "Unknown",
+		notes: "Amman-based band with Palestinian rap collaborations.",
+	},
+	"Bn Khalti": {
+		era: "2020s",
+		affiliation: "Unknown",
+		notes: "Producer and collaborator on Innahu.",
+	},
+	"PelloMar (פלומר)": {
+		era: "2020s",
+		affiliation: "Unknown",
+		notes: "Israeli rapper Omer Haviv.",
+	},
+	"Shiru (שירו)": {
+		era: "2020s",
+		affiliation: "Unknown",
+		notes: "Featured rapper on Levad BaMidbar.",
+	},
 	"Liam Hachmon (ליעם חכמון)": {
 		era: "2020s",
 		affiliation: "Unknown",
