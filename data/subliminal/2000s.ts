@@ -167,5 +167,9 @@ export const subliminal2000s = [
 			he: "המנון עוצמה ואחדות — מתוך האלבום Just When You Thought It Was Over.",
 			en: "Strength/unity anthem — from Just When You Thought It Was Over.",
 		},
+		links: {
+			lyrics:
+				"https://shironet.mako.co.il/artist?lang=1&prfid=1118&type=lyrics&wrkid=18869",
+		},
 	},
 ];

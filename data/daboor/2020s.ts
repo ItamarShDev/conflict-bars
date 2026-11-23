@@ -50,6 +50,7 @@ export const daboor2020s = [
 			en: "BLTNM single — gun/street imagery from the Ramallah crew.",
 		},
 		links: {
+			lyrics: "https://www.lyricsbox.com/daboor-fi-ta5-lyrics-gm6ld7m.html",
 			song_info: "https://bltnm.bandcamp.com",
 		},
 	},

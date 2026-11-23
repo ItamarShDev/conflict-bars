@@ -13,7 +13,6 @@ export const teapacks90s = [
 			en: "From 1995, in the Oslo years — 'you promised peace and love without hatred'.",
 		},
 		links: {
-			lyrics: "https://shirrim.com/song-lyrics/מה-עשית/",
 			song_info: "https://www.ynet.co.il/entertainment/article/bkfrjgiqy",
 			youtube: "https://www.youtube.com/watch?v=yyXlVX96uT4",
 		},

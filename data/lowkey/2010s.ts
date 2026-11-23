@@ -16,6 +16,8 @@ export const lowkey2010s = [
 			en: "Filmed at a Palestine protest; the video opens with Frankie Boyle reading Mahmoud Darwish's poem 'Think of Others.' From Soundtrack to the Struggle 2. (GRM Daily / Hotpress)",
 		},
 		links: {
+			lyrics:
+				"https://lyrics.lol/artist/472-Lowkey/lyrics/4441029-Long-Live-Palestine-Part-3",
 			song_info:
 				"https://grmdaily.com/lowkey-long-live-palestine-soundtrack-to-the-struggle-2/",
 			youtube: "https://www.youtube.com/watch?v=NvX7oGhuepI",

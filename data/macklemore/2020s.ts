@@ -38,6 +38,7 @@ export const macklemore2020s = [
 			en: "Tribute to Hind Rajab and campus protests. (Rolling Stone)",
 		},
 		links: {
+			lyrics: "https://www.songlyrics.com/macklemore/hind-s-hall-lyrics/",
 			song_info:
 				"https://www.rollingstone.com/music/music-news/macklemore-pro-palestine-protest-song-hinds-hall-1235016487/",
 		},

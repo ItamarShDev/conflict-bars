@@ -8,6 +8,7 @@ export const saz2020s = [
 			en: "The debut single by the duo Dugri (Sameh 'Saz' Zakout and Oriya Rozenman), released around the May 2021 ceasefire; it drew millions of views online.",
 		},
 		links: {
+			lyrics: "https://tioh.org/letstalkstraightlyrics/",
 			youtube: "https://www.youtube.com/watch?v=vuUxnfL9I_Y",
 		},
 	},

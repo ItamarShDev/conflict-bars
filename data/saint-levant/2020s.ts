@@ -99,5 +99,8 @@ export const saintLevant2020s = [
 			he: "עוסק בגלות ובעקירה — סינגל פופי הקשור לסצנה.",
 			en: "Exile/displacement theme — scene-adjacent pop-leaning single.",
 		},
+		links: {
+			lyrics: "https://kalimat.anghami.com/lyrics/1192148160",
+		},
 	},
 ];

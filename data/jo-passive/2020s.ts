@@ -35,6 +35,8 @@ export const joPassive2020s = [
 			en: "A January 2025 tribute to Inbar Hyman ('Pink'), the graffiti artist murdered at the Nova festival whose body was taken to Gaza.",
 		},
 		links: {
+			lyrics:
+				"https://www.lirikcinta.com/j/joe-passive-%d7%92%d7%95-%d7%a4%d7%90%d7%a1%d7%99%d7%91/mehakim-lach-pink-%d7%9e%d7%97%d7%9b%d7%99%d7%9d-%d7%9c%d7%9a-%d7%a4%d7%99%d7%a0%d7%a7-joe-passive-%d7%92%d7%95-%d7%a4%d7%90%d7%a1%d7%99%d7%91/",
 			youtube: "https://www.youtube.com/watch?v=Xe-NbpbNJms",
 			song_info:
 				"https://he.wikipedia.org/wiki/%D7%A2%D7%A0%D7%91%D7%A8_%D7%94%D7%99%D7%9E%D7%9F",

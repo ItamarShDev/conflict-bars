@@ -10,7 +10,6 @@ export const sagol592010s = [
 			en: "Released on the anniversary of the First Lebanon War; a renewed version of a protest song from the mid-1980s stage show 'Kmo BeToch Kufsa'.",
 		},
 		links: {
-			lyrics: "https://www.youtube.com/watch?v=BAHWzxI05iE",
 			youtube: "https://www.youtube.com/watch?v=BAHWzxI05iE",
 			song_info: "https://he.wikipedia.org/wiki/סגול_59",
 		},

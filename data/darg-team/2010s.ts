@@ -9,6 +9,9 @@ export const dargTeam2010s = [
 			he: "גרסת ההרכב מעזה להמנון של Lowkey, במסורת פזמון ה-'Free free Palestine'.",
 			en: "Gaza crew's take on Lowkey's anthem — the 'Free free Palestine' refrain tradition.",
 		},
+		links: {
+			lyrics: "https://iremam-base.cnrs.fr/gaza_rap/darg.htm",
+		},
 	},
 	{
 		name: "Haqqan (حقاً / Truly)",
@@ -19,6 +22,9 @@ export const dargTeam2010s = [
 		context: {
 			he: "שיר ראפ לאחר סבב הלחימה בעזה ב-2012, בהפקת Boikutt מרמאללה.",
 			en: "Post-2012 Gaza war rap produced by Ramallah's Boikutt. (Year listed as 2010s-era upload.)",
+		},
+		links: {
+			lyrics: "https://iremam-base.cnrs.fr/gaza_rap/darg.htm",
 		},
 	},
 	{
@@ -38,7 +44,6 @@ export const dargTeam2010s = [
 			en: "DARG Team built the refrain around a line by Tawfiq Zayyad that the group says Vittorio Arrigoni often sang. The verses address the Italian activist, who took part in efforts to break Israel's blockade and was abducted and killed in Gaza in April 2011. The call to clasp hands becomes an expression of solidarity and grief.",
 		},
 		links: {
-			lyrics: "https://www.youtube.com/watch?v=Ba_2Juk_yFI",
 			song_info: "https://iremam-base.cnrs.fr/gaza_rap/darg.htm",
 			youtube: "https://www.youtube.com/watch?v=gaGdGwD2Yzk",
 		},

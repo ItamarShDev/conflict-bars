@@ -73,6 +73,7 @@ export const shabjdeed2010s = [
 			en: "'Sons of Jerusalem' — from Sindibad el Ward; the album is analyzed as revolutionary Palestinian trap in academic literature (OpenEdition).",
 		},
 		links: {
+			lyrics: "https://www.songlyrics.com/shabjdeed/wlad-quds-lyrics/",
 			song_info: "https://bltnm.bandcamp.com/album/sindibad-el-ward",
 		},
 	},

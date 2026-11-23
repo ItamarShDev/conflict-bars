@@ -9,6 +9,8 @@ export const stormtrap2010s = [
 			en: "A 2010 track by Asifeh (Stormtrap), co-founder of the Ramallah Underground collective.",
 		},
 		links: {
+			lyrics:
+				"http://revolutionaryarabraptheindex.blogspot.com/2014/05/stormtrap-asifeh-what-happened-yesterday.html",
 			youtube: "https://www.youtube.com/watch?v=ZAXczID4q4s",
 		},
 	},

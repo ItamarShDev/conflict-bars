@@ -9,6 +9,8 @@ export const shaananStreetRoiDoron2020s = [
 			en: "A 2024 co-billed release by Shaanan Street and Roi Doron, documented as a social song in the context of the war.",
 		},
 		links: {
+			lyrics:
+				"https://shironet.mako.co.il/artist?lang=1&prfid=933&type=lyrics&wrkid=60878",
 			song_info: "https://www.israelhayom.co.il/culture/music/article/16038695",
 		},
 	},

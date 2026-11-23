@@ -11,7 +11,8 @@ export const subliminal2020s = [
 			en: "A call for Israeli unity during domestic political division, with references to security and national survival.",
 		},
 		links: {
-			lyrics: "https://e.walla.co.il/item/3569322",
+			lyrics:
+				"https://www.jyrics.com/lyrics/am-hanetzach-%D7%A2%D7%9D-%D7%94%D7%A0%D7%A6%D7%97/",
 			song_info: "https://www.top-charts.com/s/m-hntskh-subliminal-the-shadow",
 		},
 	},
@@ -107,6 +108,10 @@ export const subliminal2020s = [
 			he: "סינגל אחדות שיצא במהלך המלחמה בעזה.",
 			en: "Wartime unity single released during the Gaza war.",
 		},
+		links: {
+			lyrics:
+				"https://shironet.mako.co.il/artist?lang=1&prfid=24558&type=lyrics&wrkid=61079",
+		},
 	},
 	{
 		name: "דמוקרטיה (Democracy)",
@@ -118,6 +123,8 @@ export const subliminal2020s = [
 			en: "Track on שומרי הסף (Guardians of the Threshold).",
 		},
 		links: {
+			lyrics:
+				"https://www.nagnu.co.il/%D7%90%D7%95%D7%9E%D7%A0%D7%99%D7%9D/%D7%A1%D7%90%D7%91%D7%9C%D7%99%D7%9E%D7%99%D7%A0%D7%9C_%D7%95%D7%94%D7%A6%D7%9C/%D7%93%D7%9E%D7%95%D7%A7%D7%A8%D7%98%D7%99%D7%94",
 			song_info: "https://www.deezer.com/en/album/771500251",
 		},
 	},

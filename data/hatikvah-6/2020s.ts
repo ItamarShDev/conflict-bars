@@ -72,6 +72,8 @@ export const hatikvah62020s = [
 			en: "A tribute to reservists written after October 7.",
 		},
 		links: {
+			lyrics:
+				"https://united-jed.org/wp-content/uploads/%D7%92%D7%99%D7%91%D7%95%D7%A8%D7%99-%D7%A2%D7%9C-EN.pdf",
 			song_info: "https://13tv.co.il/item/entertainment/music/us2jw-904752420/",
 		},
 	},

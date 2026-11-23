@@ -73,6 +73,7 @@ export const quami2000s = [
 			en: "Coexistence collab on כולם יודעים את התשובות with DAM's Tamer Nafar.",
 		},
 		links: {
+			lyrics: "https://lyrks.com/lyrics/quami/eser",
 			song_info: "https://stereo-ve-mono.com/13643",
 		},
 	},
@@ -86,6 +87,8 @@ export const quami2000s = [
 			en: "'Black days' — from כולם יודעים את התשובות (stereo-ve-mono tracklist).",
 		},
 		links: {
+			lyrics:
+				"https://shironet.mako.co.il/artist?lang=1&prfid=4136&type=lyrics&wrkid=13036",
 			song_info: "https://stereo-ve-mono.com/13643",
 		},
 	},

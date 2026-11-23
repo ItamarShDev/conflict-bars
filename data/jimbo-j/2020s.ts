@@ -43,13 +43,14 @@ export const jimboJ2020s = [
 		artist: "Jimbo J (ג'ימבו ג')",
 		language: "Hebrew",
 		published_date: "2025-03-17",
+		// Source for the Guy Illouz detail: https://www.timesofisrael.com/guy-illouz-26-soundman-for-hayehudim-with-a-huge-heart/
 		context: {
-			he: "הטקסט הראשון שכתב עומר הברון לאחר 7 באוקטובר 2023, לפי הערך בוויקיפדיה העברית על האלבום 'הכל טוב'; הוא ומשפחתו פונו מקיבוץ אור הנר לשמונה חודשים. השיר מתואר כ'המנון תוכחה' ומזכיר את גיא אילוז, טכנאי הבמה של הלהקה שנחטף ונרצח.",
-			en: "The first text Habaron wrote after 7 October 2023, per the Hebrew Wikipedia article on the album 'הכל טוב'; he was evacuated with his family from Kibbutz Or HaNer for eight months. The article calls it an 'anthem of reproach' and notes it mentions Guy Illouz, the band's stage technician who was abducted and killed.",
+			he: "הטקסט הראשון שכתב עומר הברון לאחר 7 באוקטובר 2023, לפי הערך בוויקיפדיה העברית על האלבום 'הכל טוב'; הוא ומשפחתו פונו מקיבוץ אור הנר לשמונה חודשים. השיר מתואר כ'המנון תוכחה' ומזכיר את גיא אילוז, טכנאי הבמה של הלהקה שנחטף לעזה ומת בשבי לאחר שפציעותיו לא טופלו, לפי דיווח ה־Times of Israel.",
+			en: "The first text Habaron wrote after 7 October 2023, per the Hebrew Wikipedia article on the album 'הכל טוב'; he was evacuated with his family from Kibbutz Or HaNer for eight months. The article calls it an 'anthem of reproach' and notes it mentions Guy Illouz, the band's stage technician, who was abducted to Gaza and died in captivity after his wounds went untreated, as reported by The Times of Israel.",
 		},
 		links: {
 			lyrics:
-				"https://www.nagnu.co.il/%D7%90%D7%95%D7%9E%D7%A0%D7%99%D7%9D/%D7%92'%D7%99%D7%9E%D7%91%D7%95_%D7%92'%D7%99%D7%99/%D7%9E%D7%A4%D7%A8%D7%A9_%D7%9C%D7%91%D7%9F/%D7%90%D7%A7%D7%95%D7%A8%D7%93%D7%99%D7%9D",
+				"https://www.tab4u.com/lyrics/songs/75589_%D7%92%26%2339%3B%D7%99%D7%9E%D7%91%D7%95_%D7%92%26%2339%3B%D7%99%D7%99_-_%D7%9E%D7%A4%D7%A8%D7%A9_%D7%9C%D7%91%D7%9F.html",
 			youtube: "https://www.youtube.com/watch?v=g1N0aQNIPMk",
 			song_info: "https://he.wikipedia.org/wiki/הכל_טוב_(אלבום_של_ג'ימבו_ג'יי)",
 		},
@@ -69,6 +70,8 @@ export const jimboJ2020s = [
 			en: "From 'הכל טוב' — 'we dialled 100 a hundred times, nobody answers'; pointing to the collapse of response on October 7.",
 		},
 		links: {
+			lyrics:
+				"https://www.lirikcinta.com/j/jimbo-j-%d7%92%d7%99%d7%9e%d7%91%d7%95-%d7%92%d7%99%d7%99/100-jimbo-j-%d7%92%d7%99%d7%9e%d7%91%d7%95-%d7%92%d7%99%d7%99/",
 			youtube: "https://www.youtube.com/watch?v=X95_XRbRgM0",
 			song_info: "https://he.wikipedia.org/wiki/הכל_טוב_(אלבום_של_ג'ימבו_ג'יי)",
 		},
@@ -83,7 +86,8 @@ export const jimboJ2020s = [
 			en: "Opening track of 'הכל טוב', a concept album written under the direct influence of 7 October and the ensuing war; per Hebrew Wikipedia it describes the social and physical changes in the western Negev after the war broke out, including 'grief tourism' and explaining the events to foreign delegations.",
 		},
 		links: {
-			lyrics: "https://www.youtube.com/watch?v=S9YnK5eVhJw",
+			lyrics:
+				"https://hebrewerry.com/en/songs/9120-jimbo-j-%D7%92%D7%99%D7%9E%D7%91%D7%95-%D7%92%D7%99%D7%99-meaz-sheze-kara-%D7%9E%D7%90%D7%96-%D7%A9%D7%96%D7%94-%D7%A7%D7%A8%D7%94",
 			youtube: "https://www.youtube.com/watch?v=S9YnK5eVhJw",
 			song_info: "https://he.wikipedia.org/wiki/הכל_טוב_(אלבום_של_ג'ימבו_ג'יי)",
 		},
@@ -98,7 +102,8 @@ export const jimboJ2020s = [
 			en: "Per Hebrew Wikipedia, the song is about the abrupt switch between civilian life and reserve duty: gear sent to the front, conditions in Khan Yunis, and victory slogans set against ongoing pain.",
 		},
 		links: {
-			lyrics: "https://www.youtube.com/watch?v=cmOrFYeIeyg",
+			lyrics:
+				"https://matchlyric.com/jimbo-j-%D7%92%D7%99%D7%9E%D7%91%D7%95-%D7%92%D7%99%D7%99-todaat-sherut-%D7%AA%D7%95%D7%93%D7%A2%D7%AA-%D7%A9%D7%99%D7%A8%D7%95%D7%AA",
 			youtube: "https://www.youtube.com/watch?v=cmOrFYeIeyg",
 			song_info: "https://he.wikipedia.org/wiki/הכל_טוב_(אלבום_של_ג'ימבו_ג'יי)",
 		},
@@ -113,6 +118,8 @@ export const jimboJ2020s = [
 			en: "Per Hebrew Wikipedia, the track documents the family's evacuation on the morning of 7 October — the hurried packing, leaving under fire, and the eight months displaced from Kibbutz Or HaNer.",
 		},
 		links: {
+			lyrics:
+				"https://hebrewerry.com/en/songs/9126-jimbo-j-%D7%92%D7%99%D7%9E%D7%91%D7%95-%D7%92%D7%99%D7%99-shuv-na-habaita-%D7%A9%D7%95%D7%91-%D7%A0%D7%90-%D7%94%D7%91%D7%99%D7%AA%D7%94",
 			youtube: "https://www.youtube.com/watch?v=8lQqb8Tyc2s",
 			song_info: "https://he.wikipedia.org/wiki/הכל_טוב_(אלבום_של_ג'ימבו_ג'יי)",
 		},
@@ -127,6 +134,8 @@ export const jimboJ2020s = [
 			en: "Closing track of 'הכל טוב', built as a dialogue between a father in the western Negev and his young daughter, who asks about the war, the soldiers and the gun, per Hebrew Wikipedia.",
 		},
 		links: {
+			lyrics:
+				"https://www.lirikcinta.com/j/jimbo-j-%d7%92%d7%99%d7%9e%d7%91%d7%95-%d7%92%d7%99%d7%99/aba-lama-%d7%90%d7%91%d7%90-%d7%9c%d7%9e%d7%94-jimbo-j-%d7%92%d7%99%d7%9e%d7%91%d7%95-%d7%92%d7%99%d7%99/",
 			youtube: "https://www.youtube.com/watch?v=bAfCINbYPjk",
 			song_info: "https://he.wikipedia.org/wiki/הכל_טוב_(אלבום_של_ג'ימבו_ג'יי)",
 		},
@@ -137,11 +146,14 @@ export const jimboJ2020s = [
 		collaborators: ["Spa band (להקת ספא)"],
 		language: "Hebrew",
 		published_date: "2023-12-14",
+		// Source for the Guy Illouz detail: https://www.timesofisrael.com/guy-illouz-26-soundman-for-hayehudim-with-a-huge-heart/
 		context: {
-			he: "רצועה 7 באלבום 'אה וואו', המוקדשת לזכרו של גיא אילוז, איש הסאונד שעבד עם ג'ימבו ג' ולהקת ספא ונחטף לעזה ונרצח בשבי. השיר מתאר את חיי היומיום בעוטף עזה בזמן המלחמה.",
-			en: "Track 7 on the rap/hip-hop album 'אה וואו', dedicated to the memory of Guy Iluz, the sound technician who worked with Jimbo J and the Spa band and was abducted to Gaza and murdered in captivity. The song describes daily life in the Gaza-border region during the war.",
+			he: "רצועה 7 באלבום 'אה וואו', המוקדשת לזכרו של גיא אילוז, איש הסאונד שעבד עם ג'ימבו ג' ולהקת ספא, נחטף לעזה ומת בשבי לאחר שפציעותיו לא טופלו, לפי דיווח ה־Times of Israel. השיר מתאר את חיי היומיום בעוטף עזה בזמן המלחמה.",
+			en: "Track 7 on the rap/hip-hop album 'אה וואו', dedicated to the memory of Guy Iluz, the sound technician who worked with Jimbo J and the Spa band. He was abducted to Gaza and died in captivity after his wounds went untreated, as reported by The Times of Israel. The song describes daily life in the Gaza-border region during the war.",
 		},
 		links: {
+			lyrics:
+				"https://www.tab4u.com/lyrics/songs/73126_%D7%92%26%2339%3B%D7%99%D7%9E%D7%91%D7%95_%D7%92%26%2339%3B%D7%99%D7%99%2C_%D7%90%D7%95%D7%A8%D7%99%D7%AA_%D7%98%D7%A9%D7%95%D7%9E%D7%94_%D7%95%D7%90%D7%91%D7%A8%D7%94%D7%9D_%D7%9C%D7%92%D7%A1%D7%94_-_%D7%91%D7%9E%D7%A7%D7%95%D7%9D_%D7%91%D7%95_%D7%90%D7%A0%D7%99_%D7%92%D7%A8.html",
 			youtube: "https://www.youtube.com/watch?v=2tjMLHtBklY",
 			song_info:
 				"https://he.wikipedia.org/wiki/%D7%90%D7%94_%D7%95%D7%90%D7%95_(%D7%90%D7%9C%D7%91%D7%95%D7%95%D7%9D)",

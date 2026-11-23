@@ -13,6 +13,8 @@ export const shaharSwissa2020s = [
 			en: "A December 2024 memorial song listing names — 'our brothers and sisters'.",
 		},
 		links: {
+			lyrics:
+				"https://shironet.mako.co.il/artist?lang=1&prfid=18023&type=lyrics&wrkid=62426",
 			youtube: "https://www.youtube.com/watch?v=xFXCJrb9cLM",
 			song_info:
 				"https://he.wikipedia.org/wiki/%D7%A9%D7%97%D7%A8_%D7%A1%D7%95%D7%95%D7%99%D7%A1%D7%94",

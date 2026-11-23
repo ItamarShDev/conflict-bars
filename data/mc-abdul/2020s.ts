@@ -184,6 +184,8 @@ export const mcAbdul2020s = [
 			en: "A June 2026 single featuring Nai Barghouti — 'hide and seek from the F16'.",
 		},
 		links: {
+			lyrics:
+				"https://www.lyrics.my/artists/mc-abdul/lyrics/wait-for-me-feat-nai-barghouti",
 			youtube: "https://www.youtube.com/watch?v=ZHD0QPEkCpw",
 			song_info: "https://open.spotify.com/album/4duiGyBEuWMrNuN1IfH4u8",
 		},
@@ -218,7 +220,8 @@ export const mcAbdul2020s = [
 			en: "Released weeks before October 7 by the Gaza-born rapper; frames the pen and the microphone as his response to life under blockade.",
 		},
 		links: {
-			lyrics: "https://www.youtube.com/watch?v=UnwLtBRLOUg",
+			lyrics:
+				"https://www.lyrics.my/artists/mc-abdul/lyrics/the-pen-and-the-sword",
 			youtube: "https://www.youtube.com/watch?v=UnwLtBRLOUg",
 		},
 	},
@@ -303,6 +306,9 @@ export const mcAbdul2020s = [
 		context: {
 			he: "ילדות תחת מלחמה — מתוך האלבום 96 Miles From Bethlehem.",
 			en: "Childhood under war — from the album 96 Miles From Bethlehem.",
+		},
+		links: {
+			lyrics: "https://www.songlyrics.com/mc-abdul/i-may-be-young-lyrics/",
 		},
 	},
 ] satisfies FileSongList;

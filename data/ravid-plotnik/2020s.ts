@@ -5,12 +5,13 @@ export const ravidPlotnik2020s = [
 		language: "Hebrew",
 		published_date: "2025-01-10",
 		context: {
-			he: "ביקורת כלכליסט קושרת את השיר לאזכרות, לפצועים ולהלוויות בימים שלאחר 7 באוקטובר.",
-			en: "Calcalist's review connects this track to memorials, wounded people and funerals in the days following October 7.",
+			he: "סקירת מקור ראשון מתארת את פלוטניק כמי שנותן מילים לחוויות מאז 7 באוקטובר, ומציינת את ״בחשכה (הכל זה גם וגם)״ כציר המרכזי של האלבום.",
+			en: "Makor Rishon's album review describes Plotnik as putting post–October 7 experiences into words and identifies “BeChashecha (HaKol Ze Gam VeGam)” as central to the album.",
 		},
 		links: {
-			lyrics: "https://ravidplotnik.bandcamp.com/track/--87",
-			song_info: "https://www.calcalist.co.il/style/article/hywpybuwyl",
+			lyrics:
+				"https://hebrewerry.com/en/songs/2376-ravid-plotnik-%D7%A8%D7%91%D7%99%D7%93-%D7%A4%D7%9C%D7%95%D7%98%D7%A0%D7%99%D7%A7-bachashecha-%D7%91%D7%97%D7%A9%D7%9B%D7%94",
+			song_info: "https://www.makorrishon.co.il/culture/article/254336",
 		},
 	},
 	{

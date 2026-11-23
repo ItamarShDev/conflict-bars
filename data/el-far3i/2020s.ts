@@ -9,6 +9,8 @@ export const elFar3i2020s = [
 			en: "Wartime single about Gaza; coverage describes lyrics reflecting the realities of life there — displacement, loss and the endurance of the community.",
 		},
 		links: {
+			lyrics:
+				"https://www.lyricsbox.com/el-far3i-feat.-wardenclyph-izza-lyrics-2ck5zcm.html",
 			youtube: "https://www.youtube.com/watch?v=5TlwdRMBeVU",
 			song_info: "https://rhythmpassport.com/daily-discovery-el-far3i-izza/",
 		},

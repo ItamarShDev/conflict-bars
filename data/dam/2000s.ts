@@ -127,6 +127,8 @@ export const dam2000s = [
 			en: "From the debut album 'Dedication' (2006) — 'stranger in my own country'.",
 		},
 		links: {
+			lyrics:
+				"https://www.lyricdown.com/lyrics/dam-gareeb-fi-bladi-stranger-in-my-own-country-6941994",
 			song_info:
 				"http://www.arabicmusictranslation.com/2009/09/dam-stranger-in-my-country-ghareeb-fi.html",
 		},

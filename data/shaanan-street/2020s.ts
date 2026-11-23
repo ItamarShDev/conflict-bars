@@ -19,8 +19,6 @@ export const shaananStreet2020s = [
 			en: "Street imagines a place where borders and soldiers do not separate people. In the version released on Ide’alim, he addresses listeners from Nazareth to Rawabi in Arabic and presents language as a way to speak across that divide.",
 		},
 		links: {
-			lyrics:
-				"https://videosinarabic.com/aiovg_videos/%d7%a9%d7%90%d7%a0%d7%9f-%d7%a1%d7%98%d7%a8%d7%99%d7%98-%d7%94%d7%a2%d7%92%d7%9c%d7%95%d7%aa-%d7%94%d7%a9%d7%91%d7%95%d7%a8%d7%95%d7%aa-%d7%a9%d7%9c%d7%99-%d7%a9%d7%99%d7%a8/",
 			song_info: "https://music.amazon.es/tracks/B08TVFZ2PH",
 		},
 	},

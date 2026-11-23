@@ -9,6 +9,7 @@ export const fortySevenSoul2010s = [
 			en: "The shamstep manifesto — dabke-electro declaration; refugee/diaspora themes. Scene-adjacent (dabke-electro rather than rap).",
 		},
 		links: {
+			lyrics: "https://www.songlyrics.com/47soul/intro-to-shamstep-lyrics/",
 			song_info: "https://47soul.bandcamp.com",
 		},
 	},

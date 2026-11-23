@@ -64,6 +64,7 @@ export const tamernafar2020s = [
 			en: "Identity record about Lod/Lydda, the mixed city at the centre of the May 2021 riots. The artist's own English translation, published in the official video description, includes 'the son of Lyd hasn't assimilated', 'I welcome you to the deportation' and 'I build a name without permits' — a reference to unpermitted building and home demolitions in the city.",
 		},
 		links: {
+			lyrics: "https://lyrks.com/lyrics/tamer-nafar/ebn-al-lyd-ibn-alld",
 			youtube: "https://www.youtube.com/watch?v=Jo4y0PJC2II",
 		},
 	},
@@ -78,6 +79,7 @@ export const tamernafar2020s = [
 			en: "Nafar told NPR this was the first song he released after the war that began in October 2023: 'It took me a while until I released my first song… So the song is called \"Whatever\".' The official lyric text sets taxes funding the bombing of Gaza against the collapse of the two-state framework.",
 		},
 		links: {
+			lyrics: "https://kalimat.anghami.com/lyrics/1159701489",
 			youtube: "https://www.youtube.com/watch?v=gHmxzA-10RQ",
 			song_info:
 				"https://www.npr.org/2024/12/29/nx-s1-5238320/the-songs-israelis-and-palestinians-are-listening-to-amid-war",
@@ -118,6 +120,8 @@ export const tamernafar2020s = [
 			en: "Title track of the Levantine Music LP — an identity triptych (father / Imam / Lennon).",
 		},
 		links: {
+			lyrics:
+				"https://testicanzoni.rockol.it/testi/in-the-name-of-the-father-the-imam-john-lennon-tamer-nafar-ctid-236482719",
 			song_info:
 				"https://audiomack.com/tamer-nafar/album/in-the-name-of-the-father-the-imam-john-lennon-2482119",
 		},

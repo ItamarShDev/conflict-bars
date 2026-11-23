@@ -53,6 +53,7 @@ export const belly2020s = [
 			en: "Rolling Stone: 'Jenin's Song' is dedicated to the refugee camp of the same name.",
 		},
 		links: {
+			lyrics: "https://www.letrasboom.com/letra/jenin-s-song-belly",
 			song_info:
 				"https://www.rollingstone.com/music/music-news/belly-96-miles-from-bethlehem-honors-palestinian-roots-1235030257/",
 		},
@@ -67,6 +68,9 @@ export const belly2020s = [
 			he: "בתים בערבית ומהתפוצה מתוך אלבום המחווה לפלסטין שיצא במהלך המלחמה בעזה (Rolling Stone).",
 			en: "Diaspora/Arabic verses on the Palestine-ode LP released amid the Gaza war. (Rolling Stone)",
 		},
+		links: {
+			lyrics: "https://www.lyricshub.org/lyrics/belly/baroudeh-11452358/",
+		},
 	},
 	{
 		name: "Carry Me",
@@ -77,6 +81,9 @@ export const belly2020s = [
 		context: {
 			he: "רצועה מתוך 96 Miles From Bethlehem, אלבום המחווה לפלסטין.",
 			en: "Track on 96 Miles From Bethlehem, the Palestine tribute LP.",
+		},
+		links: {
+			lyrics: "https://www.lyricshub.org/lyrics/belly/carry-me-10430900/",
 		},
 	},
 	{
@@ -90,6 +97,7 @@ export const belly2020s = [
 			en: "'Maktub' — 'written' / fate under bombardment — on Belly's Palestine ode LP; features MC Abdul.",
 		},
 		links: {
+			lyrics: "https://www.lyricdown.com/lyrics/belly-maktub-12482236",
 			song_info: "https://en.wikipedia.org/wiki/96_Miles_from_Bethlehem",
 		},
 	},

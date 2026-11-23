@@ -32,6 +32,7 @@ export const kla62000s = [
 			en: "Patriotic posse cut from the Tact Family compilation 'Allstars' (2004), recorded during the Second Intifada.",
 		},
 		links: {
+			lyrics: "https://www.nomorelyrics.net/il/kla_6/ywral-lyrics.html",
 			youtube: "https://www.youtube.com/watch?v=Dq3otxDyF8A",
 			song_info: "https://he.wikipedia.org/wiki/אולסטארז",
 		},

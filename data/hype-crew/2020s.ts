@@ -9,7 +9,6 @@ export const hypeCrew2020s = [
 			en: "A hope anthem released November 2023 amid the war by the southern-Israel group Hype Crew — a morale call.",
 		},
 		links: {
-			lyrics: "https://www.youtube.com/watch?v=U70w7SR8ITQ",
 			youtube: "https://www.youtube.com/watch?v=U70w7SR8ITQ",
 		},
 	},

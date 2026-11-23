@@ -15,6 +15,8 @@ export const ohavGivati2020s = [
 			en: "Title track of the 'שקוף' project supporting combat veterans' mental-health rehabilitation; Givati, a combat officer who served eight years and fought in Gaza as a reservist, wrote it about anxiety and suffocation.",
 		},
 		links: {
+			lyrics:
+				"https://shironet.mako.co.il/artist?lang=1&prfid=15552&type=lyrics&wrkid=59856",
 			youtube: "https://www.youtube.com/watch?v=5Zq5IR3SSzA",
 			song_info:
 				"https://www.kan.org.il/content/dig/digital/p-11412/s7/735759/",
