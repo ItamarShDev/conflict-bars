@@ -74,7 +74,7 @@ export const revolutionMakers2010s = [
 		artist: "Revolution Makers (صناع الثورة)",
 		collaborators: ["Barry Lam"],
 		language: "Arabic/English/Chinese",
-		published_date: "2015-03",
+		published_date: "2015-03-10",
 		political_leaning: "unknown",
 		lyric_sample: {
 			original_language: "en",
@@ -90,7 +90,7 @@ export const revolutionMakers2010s = [
 				"https://www.stopwar.org.uk/article/revolution-makers-ft-barry-lam-gaza-open-your-heart/",
 			song_info:
 				"https://www.alwatanvoice.com/arabic/news/2015/03/15/679300.html",
-			youtube: "https://www.youtube.com/watch?v=y8BDdNmEcKE",
+			youtube: "https://www.youtube.com/watch?v=KjlTMXxC-E4",
 		},
 	},
 ] satisfies FileSongList;
