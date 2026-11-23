@@ -461,8 +461,21 @@ export const submitSongEditSuggestion = mutation({
 			});
 		}
 
-		// For new song submissions, insert into songs table
+		// For new song submissions, insert into songs table.
+		// A sourced lyric excerpt is required: song cards always show lyrics,
+		// so a submission without lyric_sample + links.lyrics is rejected.
 		if (suggestionData.name && suggestionData.published_date && artistId) {
+			const hasLyricExcerpt = [
+				suggestionData.lyric_sample?.hebrew,
+				suggestionData.lyric_sample?.arabic,
+				suggestionData.lyric_sample?.english_translation,
+			].some((text) => fieldLength(text) > 0);
+			const hasLyricsSource = fieldLength(suggestionData.links?.lyrics) > 0;
+			if (!hasLyricExcerpt || !hasLyricsSource) {
+				throw new Error(
+					"New song submissions require a sourced lyric excerpt (lyric_sample and links.lyrics).",
+				);
+			}
 			return await ctx.db.insert("songs", {
 				...suggestionData,
 				name: suggestionData.name,

@@ -25,7 +25,7 @@ Purpose: fast orientation for adding songs in `data/`.
 1) Find/create artist dir (`data/<artist-kebab>/`).
 2) Open/create era file for song year; append entry inside exported array.
 3) Ensure `index.ts` re-exports era array (add if missing).
-4) Prefer richer data (lyrics, translation, links) per AGENTS guide.
+4) Every song needs a sourced lyric excerpt: `lyric_sample` plus `links.lyrics`; `npm run generate-songs` warns about any song missing either.
 
 ## Full lyrics
 - Put supplied or licensed complete texts in `full_lyrics`, not `lyric_sample`.

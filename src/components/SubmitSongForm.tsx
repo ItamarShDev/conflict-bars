@@ -105,6 +105,7 @@ export function SubmitSongForm({
 		if (!publishedDate) missing.add("publishedDate");
 		if (!language) missing.add("language");
 		if (!lyricHebrew) missing.add("lyricHebrew");
+		if (!linkLyrics) missing.add("linkLyrics");
 
 		if (missing.size > 0) {
 			setMissingFields(missing);
@@ -337,9 +338,14 @@ export function SubmitSongForm({
 						<input
 							name="linkLyrics"
 							type="url"
+							required
 							defaultValue={editSong?.links?.lyrics || ""}
 							dir={lang === "he" ? "rtl" : "ltr"}
-							className={inputBase}
+							className={`${inputBase} ${
+								missingFields.has("linkLyrics")
+									? "border-red-500"
+									: "border-(--color-control-border)"
+							}`}
 						/>
 					</label>
 					<label className="flex min-w-0 flex-col gap-2">

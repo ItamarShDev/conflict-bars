@@ -122,4 +122,30 @@ describe("SongEntry lyrics vs context rendering", () => {
 			"&quot;המשפט של רבי נחמן חוזר כפזמון הסינגל.&quot;",
 		);
 	});
+
+	it("shows a visible missing-lyrics note when a song has no lyric excerpt", () => {
+		const heHtml = renderToStaticMarkup(
+			<SongEntry song={baseSong} lang="he" leaning="unknown" />,
+		);
+		expect(heHtml).toContain("עדיין לא נוסף קטע מילים ממקור.");
+
+		const enHtml = renderToStaticMarkup(
+			<SongEntry song={baseSong} lang="en" leaning="unknown" />,
+		);
+		expect(enHtml).toContain("No sourced lyric excerpt has been added yet.");
+	});
+
+	it("does not show the missing-lyrics note when an excerpt exists", () => {
+		const song: FileSong = {
+			...baseSong,
+			lyric_sample: {
+				hebrew: "והעיקר לא לפחד כלל",
+				english_translation: "And the main thing is not to be afraid at all",
+			},
+		};
+		const html = renderToStaticMarkup(
+			<SongEntry song={song} lang="he" leaning="unknown" />,
+		);
+		expect(html).not.toContain("עדיין לא נוסף קטע מילים ממקור.");
+	});
 });

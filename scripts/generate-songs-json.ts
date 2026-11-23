@@ -70,3 +70,35 @@ const enriched = rawSongs.map((song) => {
 
 writeFileSync(outputPath, JSON.stringify(enriched, null, 2));
 console.log(`Generated ${enriched.length} songs → ${outputPath}`);
+
+const LYRIC_KEYS = ["hebrew", "arabic", "english_translation"] as const;
+
+function lyricExcerpt(song: RawSong) {
+	return song.lyric_sample as Record<string, unknown> | undefined;
+}
+
+function lyricsLink(song: RawSong) {
+	const links = song.links as Record<string, unknown> | undefined;
+	return typeof links?.lyrics === "string" ? links.lyrics.trim() : "";
+}
+
+const missingExcerpt = enriched.filter(
+	(song) =>
+		!LYRIC_KEYS.some((key) => {
+			const value = lyricExcerpt(song)?.[key];
+			return typeof value === "string" && value.trim().length > 0;
+		}),
+);
+const missingSource = enriched.filter((song) => !lyricsLink(song));
+
+if (missingExcerpt.length > 0 || missingSource.length > 0) {
+	console.warn(
+		`⚠ ${missingExcerpt.length} songs have no lyric excerpt; ${missingSource.length} have no lyrics source link.`,
+	);
+	for (const song of missingExcerpt) {
+		console.warn(`  no excerpt: ${song.artist} | ${song.name}`);
+	}
+	for (const song of missingSource) {
+		console.warn(`  no lyrics source: ${song.artist} | ${song.name}`);
+	}
+}

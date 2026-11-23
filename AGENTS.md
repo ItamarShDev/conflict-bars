@@ -11,6 +11,7 @@ This doc orients AI/automation agents to work safely and effectively on Conflict
 - Must be Israeli/Palestinian hip-hop (artists from or rooted in the scene). Scene-adjacent acts that rap (e.g. Hatikva 6) count.
 - Must reference or clearly relate to the conflicts (timing, lyrics, context, or public reception). Purely apolitical tracks without conflict relevance belong out of scope.
 - Must be verifiable: the release exists, the artist and title are correct, and the date is real.
+- Must carry a sourced lyric excerpt: `lyric_sample` plus `links.lyrics`. Song cards always display lyrics, and new submissions without both are rejected.
 - Include links and dates to support conflict relevance.
 - Never invent a record, a lyric, or a URL. A fabricated YouTube/Genius ID is worse than no link — verify a URL resolves before adding it, and omit `links` entirely when nothing can be confirmed. When only prose context exists, put neutral bilingual sourced summaries in `context: { he, en }` rather than putting prose into `lyric_sample` or inventing lyrics.
 
