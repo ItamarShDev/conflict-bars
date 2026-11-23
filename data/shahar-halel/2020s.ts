@@ -105,7 +105,7 @@ export const shaharHalel2020s = [
 		links: {
 			lyrics:
 				"https://letras.top/s/shahar-halel-%d7%a9%d7%97%d7%a8-%d7%94%d7%9c%d7%9c/letra-de-maavak-%d7%9e%d7%90%d7%91%d7%a7-shahar-halel-%d7%a9%d7%97%d7%a8-%d7%94%d7%9c%d7%9c/",
-			song_info: "https://open.spotify.com/album/3MvaSYKsz16GVL2gaBswoR",
+			song_info: "https://open.spotify.com/track/25uDceUtVjo8gfTxEXMqVu",
 		},
 	},
 	{
@@ -126,7 +126,7 @@ export const shaharHalel2020s = [
 		links: {
 			lyrics:
 				"https://letras.top/s/shahar-halel-%d7%a9%d7%97%d7%a8-%d7%94%d7%9c%d7%9c/letra-de-al-ma-ata-nilcham-%d7%a2%d7%9c-%d7%9e%d7%94-%d7%90%d7%aa%d7%94-%d7%a0%d7%9c%d7%97%d7%9d-shahar-halel-%d7%a9%d7%97%d7%a8-%d7%94%d7%9c%d7%9c/",
-			song_info: "https://open.spotify.com/album/3MvaSYKsz16GVL2gaBswoR",
+			song_info: "https://open.spotify.com/track/5GE5ofXkmv4ye2NDiOgQLO",
 		},
 	},
 	{
@@ -148,7 +148,7 @@ export const shaharHalel2020s = [
 		links: {
 			lyrics:
 				"https://letras.top/s/shahar-halel-%d7%a9%d7%97%d7%a8-%d7%94%d7%9c%d7%9c/letra-de-lemaan-ma-%d7%9c%d7%9e%d7%a2%d7%9f-%d7%9e%d7%94-shahar-halel-%d7%a9%d7%97%d7%a8-%d7%94%d7%9c%d7%9c/",
-			song_info: "https://open.spotify.com/album/3MvaSYKsz16GVL2gaBswoR",
+			song_info: "https://open.spotify.com/track/1gpDmJW2KRwMVRCy2EDxDb",
 		},
 	},
 	{
@@ -170,7 +170,7 @@ export const shaharHalel2020s = [
 		links: {
 			lyrics:
 				"https://letras.top/s/shahar-halel-%d7%a9%d7%97%d7%a8-%d7%94%d7%9c%d7%9c/letra-de-nisim-%d7%a0%d7%99%d7%a1%d7%99%d7%9d-shahar-halel-%d7%a9%d7%97%d7%a8-%d7%94%d7%9c%d7%9c/",
-			song_info: "https://open.spotify.com/album/3MvaSYKsz16GVL2gaBswoR",
+			song_info: "https://open.spotify.com/track/7BCcBdGk2hYs0Dvc7mtYye",
 		},
 	},
 	{
@@ -192,7 +192,7 @@ export const shaharHalel2020s = [
 		links: {
 			lyrics:
 				"https://letras.top/s/shahar-halel-%d7%a9%d7%97%d7%a8-%d7%94%d7%9c%d7%9c/letra-de-levad-bamidbar-%d7%9c%d7%91%d7%93-%d7%91%d7%9e%d7%93%d7%91%d7%a8-shahar-halel-%d7%a9%d7%97%d7%a8-%d7%94%d7%9c%d7%9c/",
-			song_info: "https://open.spotify.com/album/3MvaSYKsz16GVL2gaBswoR",
+			song_info: "https://open.spotify.com/track/0UTi7cJ85dK7y4XZr9weO5",
 		},
 	},
 ] satisfies FileSongList;

@@ -21,7 +21,7 @@ export const pellomar2020s = [
 			lyrics:
 				"https://shironet.mako.co.il/artist?lang=1&prfid=22569&type=lyrics&wrkid=59684",
 			song_info:
-				"https://music.apple.com/us/album/%D7%AA%D7%9E%D7%95%D7%A0%D7%AA-%D7%A0%D7%99%D7%A6%D7%97%D7%95%D7%9F-single/1726872095",
+				"https://music.apple.com/us/song/%D7%AA%D7%9E%D7%95%D7%A0%D7%AA-%D7%A0%D7%99%D7%A6%D7%97%D7%95%D7%9F/1726872096",
 		},
 	},
 ] satisfies FileSongList;
