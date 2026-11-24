@@ -41,7 +41,8 @@ export const shabjdeed2010s = [
 			en: "The rapper names two events his generation did not witness: the 1948 Palestinian displacement and the 1976 massacre at Beirut's Tel al-Zaatar refugee camp. The line marks a distance between inherited national memory and his generation's experience.",
 		},
 		links: {
-			lyrics: "https://kalimat.anghami.com/lyrics/54314275",
+			lyrics:
+				"https://lyricsweb.com/song/shabjdeed/shabjdeed-and-al-nather-ya-balad",
 			song_info: "https://researchonline.lse.ac.uk/id/eprint/128406/",
 			youtube: "https://www.youtube.com/watch?v=WRUZzA0MwhQ",
 		},

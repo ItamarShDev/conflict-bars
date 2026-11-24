@@ -8,7 +8,7 @@ export const shabjdeed2020s = [
 		political_leaning: "unknown",
 		lyric_sample: {
 			original_language: "ar",
-			arabic: "شافتني جندية / شب جديد غنيلنا أغنية",
+			arabic: "شافتني جندية / شب جديد غني لنا أغنية",
 			hebrew: "חיילת ראתה אותי / שב ג׳דיד, שיר לנו שיר",
 			english_translation: "A soldier saw me / Shabjdeed, sing us a song",
 		},
@@ -17,7 +17,8 @@ export const shabjdeed2020s = [
 			en: "In a surreal verse featuring shelling and Handala, the Palestinian refugee cartoon character, the narrator returns to Jerusalem and pretends not to hear a soldier who asks him to sing. The encounter is presented as a scene, not a documented incident.",
 		},
 		links: {
-			lyrics: "https://kalimat.anghami.com/lyrics/1148049048",
+			lyrics:
+				"https://lyricsweb.com/song/shabjdeed/shabjdeed-and-al-nather-rad-saree3",
 			song_info: "https://bltnm.bandcamp.com/track/rad-saree3",
 		},
 	},
