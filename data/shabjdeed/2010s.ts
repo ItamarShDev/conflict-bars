@@ -10,10 +10,9 @@ export const shabjdeed2010s = [
 		political_leaning: "unknown",
 		lyric_sample: {
 			original_language: "ar",
-			arabic: "بلبس بس نايك مش كوفية و كل الرفاق بِشكوا فيِّ",
-			hebrew: "אני לובש רק נייקי, לא כאפייה, וכל החברים מפקפקים בי",
-			english_translation:
-				"I wear only Nike, not a keffiyeh, and all the comrades doubt me",
+			arabic: "بلبس بس نايك مش كوفية",
+			hebrew: "אני לובש רק נייקי, לא כאפייה",
+			english_translation: "I wear only Nike, not a keffiyeh",
 		},
 		context: {
 			he: "ההנגדה בין נייקי לכאפייה, סמל לאומי פלסטיני, לועגת לציפייה להפגין שייכות דרך הלבוש. מחקר בכתב העת ללימודי פלסטין קורא בה ביקורת על מוסכמות של זהות לאומית.",
@@ -21,7 +20,7 @@ export const shabjdeed2010s = [
 		},
 		links: {
 			lyrics: "https://genius.com/Shabjdeed-da7yeh-lyrics",
-			song_info: "https://soundcloud.com/bltnm/di7yeh",
+			song_info: "https://researchonline.lse.ac.uk/id/eprint/128406/",
 		},
 	},
 	{
@@ -43,7 +42,7 @@ export const shabjdeed2010s = [
 		},
 		links: {
 			lyrics: "https://kalimat.anghami.com/lyrics/54314275",
-			song_info: "https://doi.org/10.1080/0377919X.2025.2520187",
+			song_info: "https://researchonline.lse.ac.uk/id/eprint/128406/",
 			youtube: "https://www.youtube.com/watch?v=WRUZzA0MwhQ",
 		},
 	},
