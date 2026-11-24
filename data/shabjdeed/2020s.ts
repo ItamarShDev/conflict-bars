@@ -1,5 +1,27 @@
 export const shabjdeed2020s = [
 	{
+		name: "Rad Saree3 (رد سريع / Quick Reply)",
+		artist: "Shabjdeed (شبجديد)",
+		collaborators: ["Al Nather (النثر)", "Riyadiyat"],
+		language: "Arabic",
+		published_date: "2024-02-29",
+		political_leaning: "unknown",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "رجعت عالقدس شافتني جندية",
+			hebrew: "חזרתי לירושלים, חיילת ראתה אותי",
+			english_translation: "I returned to Jerusalem; a soldier saw me",
+		},
+		context: {
+			he: "בבית סוריאליסטי שמשלב הפגזות והופעה של חנדלה, דמות פליט פלסטינית, המספר חוזר לירושלים ומעמיד פנים שאינו שומע חיילת שמבקשת שישיר. זו סצנה בשיר, לא עדות לתקרית מסוימת.",
+			en: "In a surreal verse featuring shelling and Handala, the Palestinian refugee cartoon character, the narrator returns to Jerusalem and pretends not to hear a soldier who asks him to sing. The encounter is presented as a scene, not a documented incident.",
+		},
+		links: {
+			lyrics: "https://kalimat.anghami.com/lyrics/1148049048",
+			song_info: "https://bltnm.bandcamp.com/track/rad-saree3",
+		},
+	},
+	{
 		name: "SA7BI (صاحبي / My Friend)",
 		artist: "Shabjdeed (شبجديد)",
 		language: "Arabic",

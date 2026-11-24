@@ -2,6 +2,52 @@ import type { FileSongList } from "../../timeline/types";
 
 export const shabjdeed2010s = [
 	{
+		name: "Di7yeh (دحية)",
+		artist: "Shabjdeed (شبجديد)",
+		collaborators: ["Al Nather (النثر)"],
+		language: "Arabic",
+		published_date: "2018-01-26",
+		political_leaning: "unknown",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "بلبس بس نايك مش كوفية و كل الرفاق بِشكوا فيِّ",
+			hebrew: "אני לובש רק נייקי, לא כאפייה, וכל החברים מפקפקים בי",
+			english_translation:
+				"I wear only Nike, not a keffiyeh, and all the comrades doubt me",
+		},
+		context: {
+			he: "ההנגדה בין נייקי לכאפייה, סמל לאומי פלסטיני, לועגת לציפייה להפגין שייכות דרך הלבוש. מחקר בכתב העת ללימודי פלסטין קורא בה ביקורת על מוסכמות של זהות לאומית.",
+			en: "Contrasting Nike with the keffiyeh, a Palestinian national symbol, mocks the expectation of showing allegiance through dress. A Journal of Palestine Studies article reads the line as a critique of conventional nationalist identity.",
+		},
+		links: {
+			lyrics: "https://genius.com/Shabjdeed-da7yeh-lyrics",
+			song_info: "https://soundcloud.com/bltnm/di7yeh",
+		},
+	},
+	{
+		name: "Ya Balad (يا بلد / Oh Country)",
+		artist: "Shabjdeed (شبجديد)",
+		collaborators: ["Al Nather (النثر)"],
+		language: "Arabic",
+		published_date: "2019-01-15",
+		political_leaning: "unknown",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "لاشفنا نكبة ولا تل الزعتر",
+			hebrew: "לא ראינו את הנכבה ולא את תל א־זעתר",
+			english_translation: "We saw neither the Nakba nor Tel al-Zaatar",
+		},
+		context: {
+			he: "הראפר מציין שני אירועים שדורו לא חווה: העקירה הפלסטינית ב־1948 והטבח במחנה הפליטים תל א־זעתר בביירות ב־1976. כך השיר מציב מרחק בין זיכרון לאומי שעבר בירושה לחוויית הדור שלו.",
+			en: "The rapper names two events his generation did not witness: the 1948 Palestinian displacement and the 1976 massacre at Beirut's Tel al-Zaatar refugee camp. The line marks a distance between inherited national memory and his generation's experience.",
+		},
+		links: {
+			lyrics: "https://kalimat.anghami.com/lyrics/54314275",
+			song_info: "https://doi.org/10.1080/0377919X.2025.2520187",
+			youtube: "https://www.youtube.com/watch?v=WRUZzA0MwhQ",
+		},
+	},
+	{
 		name: "Fi Harb (في حرب / There's a War)",
 		artist: "Shabjdeed (شبجديد)",
 		collaborators: ["Riyadiyat", "Al Nather (النثر)"],

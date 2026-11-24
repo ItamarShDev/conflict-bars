@@ -6,6 +6,21 @@ export const artistPoliticalAffiliation: Record<
 		notes: string;
 	}
 > = {
+	"ABUL3EES (أبو العيس)": {
+		era: "2010s–present",
+		affiliation: "Unknown",
+		notes: "Palestinian rapper from Sheikh Jarrah in East Jerusalem.",
+	},
+	"Mhammed Lafi (محمد لافي)": {
+		era: "2010s",
+		affiliation: "Unknown",
+		notes: "Palestinian rapper from Jabalia and member of Riots.",
+	},
+	"Riots (شغب)": {
+		era: "2010s",
+		affiliation: "Unknown",
+		notes: "Gaza rap group featuring Mhammed Lafi and Iyad Zorob.",
+	},
 	"el morabba3 (المربّع)": {
 		era: "2010s",
 		affiliation: "Unknown",
