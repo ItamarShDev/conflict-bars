@@ -103,7 +103,7 @@ export const systemAli2010s = [
 		name: "ערימת ילדים (Aremat Yeladim / Pile of Kids)",
 		artist: "System Ali (סיסטם עלי)",
 		collaborators: [
-			"Shaanan Street (שאנן סטריט)",
+			"Shanan Street (שאנן סטריט)",
 			"LaLa",
 			"Benjamin Dinko (בנימין דינקו)",
 		],
