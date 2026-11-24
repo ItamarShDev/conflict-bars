@@ -8,9 +8,9 @@ export const shabjdeed2020s = [
 		political_leaning: "unknown",
 		lyric_sample: {
 			original_language: "ar",
-			arabic: "رجعت عالقدس شافتني جندية",
-			hebrew: "חזרתי לירושלים, חיילת ראתה אותי",
-			english_translation: "I returned to Jerusalem; a soldier saw me",
+			arabic: "شافتني جندية / شب جديد غنيلنا أغنية",
+			hebrew: "חיילת ראתה אותי / שב ג׳דיד, שיר לנו שיר",
+			english_translation: "A soldier saw me / Shabjdeed, sing us a song",
 		},
 		context: {
 			he: "בבית סוריאליסטי שמשלב הפגזות והופעה של חנדלה, דמות פליט פלסטינית, המספר חוזר לירושלים ומעמיד פנים שאינו שומע חיילת שמבקשת שישיר. זו סצנה בשיר, לא עדות לתקרית מסוימת.",
