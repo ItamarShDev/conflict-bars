@@ -99,4 +99,73 @@ export const systemAli2010s = [
 			song_info: "https://levgroupmedia.bandcamp.com/album/-",
 		},
 	},
+	{
+		name: "ערימת ילדים (Aremat Yeladim / Pile of Kids)",
+		artist: "System Ali (סיסטם עלי)",
+		collaborators: [
+			"Shaanan Street (שאנן סטריט)",
+			"LaLa",
+			"Benjamin Dinko (בנימין דינקו)",
+		],
+		language: "English/Amharic/Arabic/Russian/Hebrew",
+		published_date: "2019-08-13",
+		political_leaning: "unknown",
+		lyric_sample: {
+			original_language: "en",
+			hebrew: "אוהדי אולטרס מימין, פלסטיני משמאל",
+			english_translation: "ultras on right Palestinian on left",
+		},
+		context: {
+			he: "שאנן סטריט מתאר רחוב מילדותו דרך הצבה של אוהדי אולטרס מול שכנים פלסטינים, ובהמשך הפזמון מדמה את הדוברים לפליטים. השיר מחבר את זיכרונות הילדות למתח בין הקהילות שהלהקה תיארה סביב האלבום, בלי להציע עמדה מדינית.",
+			en: "Shaanan Street frames a childhood street through the juxtaposition of football ultras and Palestinians; the refrain later compares the speakers to refugees. The song brings childhood memories into the intercommunal tensions the band discussed around the album, without offering a policy position.",
+		},
+		links: {
+			lyrics:
+				"https://shironet.mako.co.il/artist?lang=1&prfid=10680&type=lyrics&wrkid=49529",
+			song_info:
+				"https://lyricsweb.com/song/system-ali/system-ali-aremat-yeladim-pile-of-kids",
+		},
+	},
+	{
+		name: "אויפן וועג (Oifen Veig / On the Road)",
+		artist: "System Ali (סיסטם עלי)",
+		language: "Hebrew/Arabic/Yiddish",
+		published_date: "2019-09-01",
+		political_leaning: "left",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "רואה הצגה בעברית על הנכבה של הסבתא",
+			english_translation:
+				"Watching a play in Hebrew about my grandmother’s Nakba",
+		},
+		context: {
+			he: "הדובר מתאר צפייה בהצגה בעברית על הנכבה של סבתו ומעמיד את הסצנה מול דימוי של צמיגים בוערים בעזה. הדימוי מזכיר את המחאות ליד גדר עזה, שעליהן דיווח האו״ם בשנה שבה יצא האלבום.",
+			en: "The narrator watches a Hebrew-language play about his grandmother’s Nakba and sets the scene against an image of burning tires in Gaza. The image recalls protests near the Gaza fence that the UN documented in the album’s release year.",
+		},
+		links: {
+			lyrics: "https://lyricsweb.com/song/system-ali/system-ali-oifen-veig",
+			song_info: "https://levgroupmedia.bandcamp.com/track/--17",
+		},
+	},
+	{
+		name: "מגדל בבל (Migdal Bavel / Tower of Babel)",
+		artist: "System Ali (סיסטם עלי)",
+		language: "Arabic/Hebrew/English/Russian",
+		published_date: "2019-09-01",
+		political_leaning: "left",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "יש סדקים בחומות שבניתם בינינו",
+			english_translation: "There are cracks in the walls you built between us",
+		},
+		context: {
+			he: "השיר משתמש בחומות כדימוי להפרדה ומונה מקומות מיפו עד ג׳נין. ההגבלות ומכשולי התנועה שמיפה האו״ם באזור ג׳נין נותנים לדימוי הקשר, בלי לזהות את החומה שבשיר עם מתקן אחד.",
+			en: "The song uses walls to evoke separation and names places from Jaffa to Jenin. UN mapping of movement barriers and restrictions around Jenin gives that image context without identifying the lyric’s walls with any one structure.",
+		},
+		links: {
+			lyrics:
+				"https://shironet.mako.co.il/artist?lang=1&prfid=10680&type=lyrics&wrkid=49528",
+			song_info: "https://levgroupmedia.bandcamp.com/track/--19",
+		},
+	},
 ] satisfies FileSongList;
