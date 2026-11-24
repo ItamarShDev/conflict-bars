@@ -2,29 +2,6 @@ import type { FileSongList } from "../../timeline/types";
 
 export const shabjdeed2010s = [
 	{
-		name: "Di7yeh (دحية)",
-		artist: "Shabjdeed (شبجديد)",
-		collaborators: ["Al Nather (النثر)"],
-		language: "Arabic",
-		published_date: "2018-01-26",
-		political_leaning: "unknown",
-		lyric_sample: {
-			original_language: "ar",
-			arabic: "بلبس بس نايك مش كوفية",
-			hebrew: "אני לובש רק נייקי, לא כאפייה",
-			english_translation: "I wear only Nike, not a keffiyeh",
-		},
-		context: {
-			he: "ההנגדה בין נייקי לכאפייה, סמל לאומי פלסטיני, לועגת לציפייה להפגין שייכות דרך הלבוש. מחקר בכתב העת ללימודי פלסטין קורא בה ביקורת על מוסכמות של זהות לאומית.",
-			en: "Contrasting Nike with the keffiyeh, a Palestinian national symbol, mocks the expectation of showing allegiance through dress. A Journal of Palestine Studies article reads the line as a critique of conventional nationalist identity.",
-		},
-		links: {
-			lyrics:
-				"https://lyrics.lol/artist/3693247-Shabjdeed-Al-Nather-%D8%B4%D8%A8-%D8%AC%D8%AF%D9%8A%D8%AF-%D9%88%D8%A7%D9%84%D9%86%D8%A7%D8%B8%D8%B1/lyrics/3483999-Di7yeh-%D8%AF%D8%AD%D9%8A%D8%A9",
-			song_info: "https://researchonline.lse.ac.uk/id/eprint/128406/",
-		},
-	},
-	{
 		name: "Ya Balad (يا بلد / Oh Country)",
 		artist: "Shabjdeed (شبجديد)",
 		collaborators: ["Al Nather (النثر)"],
