@@ -48,7 +48,7 @@ export const mhammedLafi2010s = [
 		name: "Haqqak (حقك / Your Right)",
 		artist: "Mhammed Lafi (محمد لافي)",
 		language: "Arabic",
-		published_date: "2017",
+		published_date: "2017-01-11",
 		political_leaning: "unknown",
 		lyric_sample: {
 			original_language: "ar",
@@ -58,13 +58,13 @@ export const mhammedLafi2010s = [
 				"The revolution is in the camp; it's coming from the camp",
 		},
 		context: {
-			he: "לאפי מציב את מחנה הפליטים כמוקד המחאה. אל־ערבי אל־ג׳דיד קישר את הפזמון למחאת החשמל בג׳באליה ב־2017, על רקע המצור והפילוג הפלסטיני.",
-			en: "Lafi makes the refugee camp the center of protest. Al-Araby Al-Jadeed linked the refrain to Jabalia's 2017 electricity protests amid the blockade and Palestinian political division.",
+			he: "לאפי מציב את מחנה הפליטים כמוקד המחאה. לפי Human Rights Watch, הקליפ פורסם ערב מחאות החשמל בעזה בינואר 2017, שבהן השתתף גם לאפי.",
+			en: "Lafi makes the refugee camp the center of protest. Human Rights Watch reports that the video appeared on the eve of Gaza's January 2017 electricity protests, in which Lafi participated.",
 		},
 		links: {
 			lyrics: "https://www.youtube.com/watch?v=qeGo7GVfhPE",
 			song_info:
-				"https://www.alaraby.co.uk/%D9%85%D8%AD%D9%85%D8%AF-%D9%84%D8%A7%D9%81%D9%8A-%D9%8A%D9%86%D8%A8%D8%B6-%D9%83%D9%80-%22%D8%A3%D8%BA%D9%86%D9%8A%D8%A9-%D8%B1%D8%A7%D8%A8%22",
+				"https://www.hrw.org/report/2018/10/23/two-authorities-one-way-zero-dissent/arbitrary-arrest-and-torture-under",
 		},
 	},
 ] satisfies FileSongList;
