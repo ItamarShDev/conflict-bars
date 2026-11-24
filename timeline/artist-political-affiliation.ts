@@ -658,9 +658,4 @@ export const artistPoliticalAffiliation: Record<
 		affiliation: "Palestinian hip-hop / Gaza",
 		notes: "Mahmoud al-Mughrabi; Gaza rapper documented by IREMAM.",
 	},
-	"Street Band Rappers (S.B.R.)": {
-		era: "2000s",
-		affiliation: "Palestinian hip-hop / Gaza",
-		notes: "Early Gaza rap group documented by IREMAM.",
-	},
 } as const;
