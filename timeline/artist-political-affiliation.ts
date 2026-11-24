@@ -643,4 +643,19 @@ export const artistPoliticalAffiliation: Record<
 		affiliation: "Palestinian diaspora hip-hop",
 		notes: "London-based Palestinian hip-hop and punk artist.",
 	},
+	"Antara (عنترة)": {
+		era: "2010s",
+		affiliation: "Palestinian hip-hop / Gaza",
+		notes: "Gaza rap crew documented by IREMAM.",
+	},
+	"Tofan Gaza (MC Adam / طوفان غزة)": {
+		era: "2010s",
+		affiliation: "Palestinian hip-hop / Gaza",
+		notes: "Gaza rapper whose tracks are archived under MC Adam.",
+	},
+	"IL Mughrabi (محمود المغربي)": {
+		era: "2010s",
+		affiliation: "Palestinian hip-hop / Gaza",
+		notes: "Mahmoud al-Mughrabi; Gaza rapper documented by IREMAM.",
+	},
 } as const;
