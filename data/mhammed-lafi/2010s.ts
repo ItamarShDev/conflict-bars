@@ -6,7 +6,7 @@ export const mhammedLafi2010s = [
 		artist: "Mhammed Lafi (محمد لافي)",
 		language: "Arabic",
 		published_date: "2017-06-24",
-		political_leaning: "left",
+		political_leaning: "unknown",
 		lyric_sample: {
 			original_language: "ar",
 			arabic: "غزة بتنكسي بالدم والهم مرة من المحتل ومرة من اولاد العم",

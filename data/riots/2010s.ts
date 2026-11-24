@@ -6,7 +6,7 @@ export const riots2010s = [
 		artist: "Riots (شغب)",
 		language: "Arabic",
 		published_date: "2014-09-20",
-		political_leaning: "left",
+		political_leaning: "unknown",
 		lyric_sample: {
 			original_language: "ar",
 			arabic: "غزة تقاوم والعالم دوره يتفرج",
