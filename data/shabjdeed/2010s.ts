@@ -19,7 +19,8 @@ export const shabjdeed2010s = [
 			en: "Contrasting Nike with the keffiyeh, a Palestinian national symbol, mocks the expectation of showing allegiance through dress. A Journal of Palestine Studies article reads the line as a critique of conventional nationalist identity.",
 		},
 		links: {
-			lyrics: "https://genius.com/Shabjdeed-da7yeh-lyrics",
+			lyrics:
+				"https://lyrics.lol/artist/3693247-Shabjdeed-Al-Nather-%D8%B4%D8%A8-%D8%AC%D8%AF%D9%8A%D8%AF-%D9%88%D8%A7%D9%84%D9%86%D8%A7%D8%B8%D8%B1/lyrics/3483999-Di7yeh-%D8%AF%D8%AD%D9%8A%D8%A9",
 			song_info: "https://researchonline.lse.ac.uk/id/eprint/128406/",
 		},
 	},
