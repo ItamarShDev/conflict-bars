@@ -1,5 +1,28 @@
 export const shabjdeed2020s = [
 	{
+		name: "Rad Saree3 (رد سريع / Quick Reply)",
+		artist: "Shabjdeed (شبجديد)",
+		collaborators: ["Al Nather (النثر)", "Riyadiyat"],
+		language: "Arabic",
+		published_date: "2024-02-29",
+		political_leaning: "unknown",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "شافتني جندية / شب جديد غني لنا أغنية",
+			hebrew: "חיילת ראתה אותי / שב ג׳דיד, שיר לנו שיר",
+			english_translation: "A soldier saw me / Shabjdeed, sing us a song",
+		},
+		context: {
+			he: "בבית סוריאליסטי שמשלב הפגזות והופעה של חנדלה, דמות פליט פלסטינית, המספר חוזר לירושלים ומעמיד פנים שאינו שומע חיילת שמבקשת שישיר. זו סצנה בשיר, לא עדות לתקרית מסוימת.",
+			en: "In a surreal verse featuring shelling and Handala, the Palestinian refugee cartoon character, the narrator returns to Jerusalem and pretends not to hear a soldier who asks him to sing. The encounter is presented as a scene, not a documented incident.",
+		},
+		links: {
+			lyrics:
+				"https://lyricsweb.com/song/shabjdeed/shabjdeed-and-al-nather-rad-saree3",
+			song_info: "https://bltnm.bandcamp.com/track/rad-saree3",
+		},
+	},
+	{
 		name: "SA7BI (صاحبي / My Friend)",
 		artist: "Shabjdeed (شبجديد)",
 		language: "Arabic",

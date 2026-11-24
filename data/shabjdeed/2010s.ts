@@ -2,6 +2,30 @@ import type { FileSongList } from "../../timeline/types";
 
 export const shabjdeed2010s = [
 	{
+		name: "Ya Balad (يا بلد / Oh Country)",
+		artist: "Shabjdeed (شبجديد)",
+		collaborators: ["Al Nather (النثر)"],
+		language: "Arabic",
+		published_date: "2019-01-15",
+		political_leaning: "unknown",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "لاشفنا نكبة ولا تل الزعتر",
+			hebrew: "לא ראינו את הנכבה ולא את תל א־זעתר",
+			english_translation: "We saw neither the Nakba nor Tel al-Zaatar",
+		},
+		context: {
+			he: "הראפר מציין שני אירועים שדורו לא חווה: העקירה הפלסטינית ב־1948 והטבח במחנה הפליטים תל א־זעתר בביירות ב־1976. כך השיר מציב מרחק בין זיכרון לאומי שעבר בירושה לחוויית הדור שלו.",
+			en: "The rapper names two events his generation did not witness: the 1948 Palestinian displacement and the 1976 massacre at Beirut's Tel al-Zaatar refugee camp. The line marks a distance between inherited national memory and his generation's experience.",
+		},
+		links: {
+			lyrics:
+				"https://lyricsweb.com/song/shabjdeed/shabjdeed-and-al-nather-ya-balad",
+			song_info: "https://researchonline.lse.ac.uk/id/eprint/128406/",
+			youtube: "https://www.youtube.com/watch?v=WRUZzA0MwhQ",
+		},
+	},
+	{
 		name: "Fi Harb (في حرب / There's a War)",
 		artist: "Shabjdeed (شبجديد)",
 		collaborators: ["Riyadiyat", "Al Nather (النثر)"],
