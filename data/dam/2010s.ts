@@ -147,6 +147,8 @@ export const dam2010s = [
 			en: "On honor killings and women's oppression.",
 		},
 		links: {
+			lyrics:
+				"https://talesofacitybythesea.com/2012/11/07/dam-featuring-amal-murkus-if-i-could-go-back-in-time-%d9%84%d9%88-%d8%a3%d8%b1%d8%ac%d8%b9-%d8%a8%d8%a7%d9%84%d8%b2%d9%85%d9%86/",
 			song_info:
 				"https://www.arabology.org/2012/11/dam-releases-new-video-clip-about.html",
 		},

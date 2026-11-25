@@ -148,24 +148,23 @@ export const subliminal2000s = [
 		},
 	},
 	{
-		name: "ביתי היה זה (That Was My Home)",
-		artist: "Subliminal (סאבלימינל)",
-		language: "Hebrew",
-		published_date: "2005",
-		context: {
-			he: "שיר מחאה נגד תוכנית ההתנתקות מעזה ב-2005.",
-			en: "Protest song against the 2005 Gaza disengagement.",
-		},
-	},
-	{
 		name: "תן כח (Ten Koah / Give Strength)",
 		artist: "Subliminal (סאבלימינל)",
 		collaborators: ["David D'Or"],
 		language: "Hebrew",
 		published_date: "2006",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "תן כוח לבחור לא לברוח",
+			english_translation: "Give strength to choose, not to run away.",
+		},
 		context: {
 			he: "המנון עוצמה ואחדות — מתוך האלבום Just When You Thought It Was Over.",
 			en: "Strength/unity anthem — from Just When You Thought It Was Over.",
+		},
+		links: {
+			lyrics:
+				"https://shironet.mako.co.il/artist?lang=1&prfid=1118&type=lyrics&wrkid=18869",
 		},
 	},
 ];

@@ -135,6 +135,8 @@ export const hadagNahash2000s = [
 			en: "December 2004; on ambivalent longing for the country amid bombings — 'only here'.",
 		},
 		links: {
+			lyrics:
+				"https://lyrics.lol/artist/221057-Hadag-Nahash-%D7%94%D7%93%D7%92-%D7%A0%D7%97%D7%A9/lyrics/2871996-Rak-Po-%D7%A8%D7%A7-%D7%A4%D7%94",
 			youtube: "https://www.youtube.com/watch?v=hsCjy0PiHqM",
 			song_info:
 				"https://www.haaretz.co.il/gallery/2004-06-03/ty-article/0000017f-db8a-db22-a17f-ffbb17350000",

@@ -2,22 +2,16 @@ import type { FileSongList } from "../../timeline/types";
 
 export const systemAli2010s = [
 	{
-		name: "אידיאלאם إيديالم (Idialam)",
-		artist: "System Ali (סיסטם עלי)",
-		published_date: "2013-07-31",
-		context: {
-			he: "בריאיון ל-+972 קושרת הלהקה את השיר למשפחת פליטים של אחד מחבריה, שהתגוררה ביפו בבית של משפחה ערבית שנעקרה ב-1948.",
-			en: "In a +972 interview, the band connects the song to a member's refugee family living in a Jaffa house formerly belonging to an Arab family displaced in 1948.",
-		},
-		links: {
-			song_info: "https://www.972mag.com/every-song-is-a-fight-for-existence/",
-		},
-	},
-	{
 		name: "Maharajan (מהרג'אן / مهرجان)",
 		artist: "System Ali (סיסטם עלי)",
 		language: "Hebrew/Arabic/Russian/Yiddish/Amharic/English",
 		published_date: "2019",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "يا ميت مرحبابك",
+			hebrew: "מאה פעמים ברוך הבא",
+			english_translation: "A hundred welcomes to you.",
+		},
 		context: {
 			he: "שיר הנושא של אלבום 'מהרג'אן' (2019) של סיסטם עלי — רב-לשוני בשש שפות.",
 			en: "Title track of System Ali's album 'Maharajan' (2019) — multilingual across six languages.",
@@ -32,6 +26,11 @@ export const systemAli2010s = [
 		artist: "System Ali (סיסטם עלי)",
 		language: "Hebrew/Arabic",
 		published_date: "2019-05-17",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "אין כמו יפו בעולם",
+			english_translation: "There's nowhere like Jaffa in the world.",
+		},
 		context: {
 			he: "זווית רב-לשונית על מרקם חיים וזהות ביפו, עם קו מחאה אזרחי על ג'נטריפיקציה וזכויות דיור.",
 			en: "Multilingual perspective on life and identity in Jaffa, with civic protest against gentrification and housing rights.",
@@ -46,6 +45,11 @@ export const systemAli2010s = [
 		artist: "System Ali (סיסטם עלי)",
 		language: "Hebrew/Arabic",
 		published_date: "2019-09-01",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "יש סיכוי אחד למיליון",
+			english_translation: "There's a one-in-a-million chance.",
+		},
 		context: {
 			he: "שיר הסיום של האלבום 'מהרג'אן'. נפתח כגרסת כיסוי ל'חלון לים התיכון' של יהודה פוליקר ויעקב גלעד ועוצר במילה 'נטוש', ומשם הופך לראפ בעברית ובערבית העוסק הן בנכבה והן בעלייה היהודית ליפו, לפי ויקיפדיה העברית.",
 			en: "Closing track of the album 'מהרג'אן'. It opens as a cover of Yehuda Poliker and Yaakov Gilad's 'חלון לים התיכון' and stops on the word 'abandoned', turning into rap in Hebrew and Arabic that deals with both the Nakba and Jewish immigration to Jaffa, per the Hebrew Wikipedia article on the band.",

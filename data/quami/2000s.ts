@@ -68,11 +68,17 @@ export const quami2000s = [
 		collaborators: ["Tamer Nafar (תאמר נפאר)"],
 		language: "Hebrew/Arabic",
 		published_date: "2005-02",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "נטלי עשתה גוונים",
+			english_translation: "Natalie got highlights.",
+		},
 		context: {
 			he: "שיתוף פעולה לדו-קיום מתוך האלבום 'כולם יודעים את התשובות' עם תאמר נפאר מ-DAM.",
 			en: "Coexistence collab on כולם יודעים את התשובות with DAM's Tamer Nafar.",
 		},
 		links: {
+			lyrics: "https://lyrks.com/lyrics/quami/eser",
 			song_info: "https://stereo-ve-mono.com/13643",
 		},
 	},
@@ -81,11 +87,18 @@ export const quami2000s = [
 		artist: "Quami (קוואמי)",
 		language: "Hebrew",
 		published_date: "2005-02",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "אני חוזה מהפך",
+			english_translation: "I foresee an upheaval.",
+		},
 		context: {
 			he: "מתוך האלבום 'כולם יודעים את התשובות'.",
 			en: "'Black days' — from כולם יודעים את התשובות (stereo-ve-mono tracklist).",
 		},
 		links: {
+			lyrics:
+				"https://shironet.mako.co.il/artist?lang=1&prfid=4136&type=lyrics&wrkid=13036",
 			song_info: "https://stereo-ve-mono.com/13643",
 		},
 	},

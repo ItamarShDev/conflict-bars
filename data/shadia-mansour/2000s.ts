@@ -5,6 +5,12 @@ export const shadiaMansour2000s = [
 		collaborators: ["Mahmoud Jrere (DAM)"],
 		language: "Arabic",
 		published_date: "2007",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "وين رايح",
+			hebrew: "לאן אתה הולך?",
+			english_translation: "Where are you going?",
+		},
 		context: {
 			he: "שיר שלום בערבית מ-2007 עם מחמוד ג'רירי מ-DAM — 'אני רוצה שלום'.",
 			en: "A 2007 Arabic peace song featuring DAM's Mahmoud Jrere — 'I want peace'.",

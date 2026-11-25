@@ -4,11 +4,18 @@ export const hadagNahash2010s = [
 		artist: "Hadag Nahash (הדג נחש)",
 		language: "English",
 		published_date: "2010-02",
+		lyric_sample: {
+			original_language: "en",
+			hebrew: "אני לא רוצה עוד מלחמה",
+			english_translation: "I don't want no more war",
+		},
 		context: {
 			he: "כתבת הבכורה בוואלה מ-2010 מתארת את השיר כעוסק בעוינות נרכשת בין ישראלים לפלסטינים.",
 			en: "Walla's 2010 premiere describes the song as addressing learned hostility between Israelis and Palestinians.",
 		},
 		links: {
+			lyrics:
+				"https://lyrics.lol/artist/221057-Hadag-Nahash-%D7%94%D7%93%D7%92-%D7%A0%D7%97%D7%A9/lyrics/3208392-War",
 			song_info: "https://e.walla.co.il/item/1643615",
 		},
 	},
@@ -165,6 +172,8 @@ export const hadagNahash2010s = [
 			en: "A rap rendition of Meir Ariel's 'Indictment', recorded ahead of the January 2013 election.",
 		},
 		links: {
+			lyrics:
+				"https://lyrics.az/hadag-nahash-hdg-nkhsh/zman-lehitorer-zmn-lht-vrr/kovlana-al-miflagot-israel-qvblnh-l-mplgvt-yshrl.html",
 			song_info: "https://www.ynet.co.il/articles/0,7340,L-4331553,00.html",
 		},
 	},
@@ -173,9 +182,18 @@ export const hadagNahash2010s = [
 		artist: "Hadag Nahash (הדג נחש)",
 		language: "Hebrew",
 		published_date: "2013-02-24",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "אין סיכוי שהם יחזיקו עוד הרבה",
+			english_translation: "There's no chance they'll last much longer.",
+		},
 		context: {
 			he: "שיר הנושא של אלבום המחאה שיצא לאחר הבחירות.",
 			en: "Title track of the post-election protest album.",
+		},
+		links: {
+			lyrics:
+				"https://lyrics.lol/artist/221057-Hadag-Nahash-%D7%94%D7%93%D7%92-%D7%A0%D7%97%D7%A9/lyrics/503655-Zman-Lehitorer-%D7%96%D7%9E%D7%9F-%D7%9C%D7%94%D7%AA%D7%A2%D7%95%D7%A8%D7%A8",
 		},
 	},
 ];

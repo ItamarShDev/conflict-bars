@@ -4,11 +4,19 @@ export const stormtrap2010s = [
 		artist: "Stormtrap / Asifeh (عاصفة)",
 		language: "Arabic",
 		published_date: "2010",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "اطف التلفزيون امسك مايكروفون",
+			hebrew: "כבה טלוויזיה, קח מיקרופון.",
+			english_translation: "Turn off the TV; grab a mic.",
+		},
 		context: {
 			he: "רצועה מ-2010 של אסיפה' (סטורמטראפ), ממייסדי קולקטיב רמאללה אנדרגראונד.",
 			en: "A 2010 track by Asifeh (Stormtrap), co-founder of the Ramallah Underground collective.",
 		},
 		links: {
+			lyrics:
+				"http://revolutionaryarabraptheindex.blogspot.com/2014/05/stormtrap-asifeh-what-happened-yesterday.html",
 			youtube: "https://www.youtube.com/watch?v=ZAXczID4q4s",
 		},
 	},

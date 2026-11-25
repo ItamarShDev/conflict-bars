@@ -45,11 +45,18 @@ export const daboor2020s = [
 		artist: "Daboor (دابور)",
 		language: "Arabic",
 		published_date: "2023",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "هو هاد فخ",
+			hebrew: "זו מלכודת.",
+			english_translation: "This is a trap.",
+		},
 		context: {
 			he: "סינגל בלייבל BLTNM — דימויי רחוב ונשק מהקולקטיב של רמאללה.",
 			en: "BLTNM single — gun/street imagery from the Ramallah crew.",
 		},
 		links: {
+			lyrics: "https://www.lyricsbox.com/daboor-fi-ta5-lyrics-gm6ld7m.html",
 			song_info: "https://bltnm.bandcamp.com",
 		},
 	},

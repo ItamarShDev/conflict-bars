@@ -38,6 +38,7 @@ export const odeya2020s = [
 			en: "Written about two weeks after the October 7 'Black Saturday' for the murdered of the Gaza envelope; a riff on the Yom Kippur War classic 'חורף 73'.",
 		},
 		links: {
+			lyrics: "https://daletra.com/23253/lyrics/khurf-23.html",
 			song_info: "https://www.maariv.co.il/culture/music/article-1139495",
 		},
 	},

@@ -1,27 +1,5 @@
 export const dargTeam2010s = [
 	{
-		name: "Long Live Palestine",
-		artist: "DARG Team (درج تيم)",
-		collaborators: ["MC-Lowkey"],
-		language: "Arabic/English",
-		published_date: "2010",
-		context: {
-			he: "גרסת ההרכב מעזה להמנון של Lowkey, במסורת פזמון ה-'Free free Palestine'.",
-			en: "Gaza crew's take on Lowkey's anthem — the 'Free free Palestine' refrain tradition.",
-		},
-	},
-	{
-		name: "Haqqan (حقاً / Truly)",
-		artist: "DARG Team (درج تيم)",
-		collaborators: ["Boikutt (producer)"],
-		language: "Arabic",
-		published_date: "2013",
-		context: {
-			he: "שיר ראפ לאחר סבב הלחימה בעזה ב-2012, בהפקת Boikutt מרמאללה.",
-			en: "Post-2012 Gaza war rap produced by Ramallah's Boikutt. (Year listed as 2010s-era upload.)",
-		},
-	},
-	{
 		name: "Vittorio Arrigoni, Onadekom (Calling You)",
 		artist: "DARG Team (درج تيم)",
 		language: "Arabic",
@@ -38,7 +16,6 @@ export const dargTeam2010s = [
 			en: "DARG Team built the refrain around a line by Tawfiq Zayyad that the group says Vittorio Arrigoni often sang. The verses address the Italian activist, who took part in efforts to break Israel's blockade and was abducted and killed in Gaza in April 2011. The call to clasp hands becomes an expression of solidarity and grief.",
 		},
 		links: {
-			lyrics: "https://www.youtube.com/watch?v=Ba_2Juk_yFI",
 			song_info: "https://iremam-base.cnrs.fr/gaza_rap/darg.htm",
 			youtube: "https://www.youtube.com/watch?v=gaGdGwD2Yzk",
 		},

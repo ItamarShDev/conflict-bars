@@ -184,6 +184,8 @@ export const mcAbdul2020s = [
 			en: "A June 2026 single featuring Nai Barghouti — 'hide and seek from the F16'.",
 		},
 		links: {
+			lyrics:
+				"https://www.lyrics.my/artists/mc-abdul/lyrics/wait-for-me-feat-nai-barghouti",
 			youtube: "https://www.youtube.com/watch?v=ZHD0QPEkCpw",
 			song_info: "https://open.spotify.com/album/4duiGyBEuWMrNuN1IfH4u8",
 		},
@@ -213,12 +215,18 @@ export const mcAbdul2020s = [
 		artist: "MC Abdul",
 		language: "English/Arabic",
 		published_date: "2023-09-15",
+		lyric_sample: {
+			original_language: "en",
+			hebrew: "צריך למגר את המערכת הזו",
+			english_translation: "This system needs to be eradicated",
+		},
 		context: {
 			he: "יצא שבועות ספורים לפני 7 באוקטובר מאת הראפר יליד עזה; מציג את העט והמיקרופון כתגובה שלו לחיים תחת מצור.",
 			en: "Released weeks before October 7 by the Gaza-born rapper; frames the pen and the microphone as his response to life under blockade.",
 		},
 		links: {
-			lyrics: "https://www.youtube.com/watch?v=UnwLtBRLOUg",
+			lyrics:
+				"https://www.lyrics.my/artists/mc-abdul/lyrics/the-pen-and-the-sword",
 			youtube: "https://www.youtube.com/watch?v=UnwLtBRLOUg",
 		},
 	},
@@ -262,21 +270,6 @@ export const mcAbdul2020s = [
 		},
 	},
 	{
-		name: "Through My Eyes",
-		artist: "MC Abdul",
-		language: "English",
-		published_date: "2025-04-11",
-		context: {
-			he: "שיר רשמי של MC Abdul שתועד על ידי האקדמיה להקלטות (Grammy) ותוארך ל-11 באפריל 2025 ב-Soundcharts.",
-			en: "An officially released MC Abdul track documented by the Grammy Recording Academy and dated April 11, 2025 by Soundcharts.",
-		},
-		links: {
-			youtube: "https://www.youtube.com/watch?v=ycQmyX1-7WE",
-			song_info:
-				"https://qa.grammy.com/videos/mc-abdul-through-my-eyes-performance",
-		},
-	},
-	{
 		name: "Can I Live",
 		artist: "MC Abdul",
 		language: "English",
@@ -300,9 +293,17 @@ export const mcAbdul2020s = [
 		artist: "MC Abdul",
 		language: "English",
 		published_date: "2024-09-27",
+		lyric_sample: {
+			original_language: "en",
+			hebrew: "אני אולי צעיר, אבל הנטל על כתפיי.",
+			english_translation: "I may be young but I got weight on my shoulders.",
+		},
 		context: {
 			he: "ילדות תחת מלחמה — מתוך האלבום 96 Miles From Bethlehem.",
 			en: "Childhood under war — from the album 96 Miles From Bethlehem.",
+		},
+		links: {
+			lyrics: "https://www.songlyrics.com/mc-abdul/i-may-be-young-lyrics/",
 		},
 	},
 ] satisfies FileSongList;

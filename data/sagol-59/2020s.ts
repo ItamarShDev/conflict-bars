@@ -20,15 +20,4 @@ export const sagol592020s = [
 			youtube: "https://www.youtube.com/watch?v=L2nTbpb2EK4",
 		},
 	},
-	{
-		name: "עאלק דמוקרטיה (To Hell With Democracy)",
-		artist: "Sagol 59 (סגול 59)",
-		collaborators: ["ענבר חצרוני (Inbar Hatzroni)"],
-		language: "Hebrew",
-		published_date: "2023-03",
-		context: {
-			he: "שיר מחאה נגד הרפורמה המשפטית; סגול 59 מתארח בבית בשירה של ענבר חצרוני (ויקיפדיה העברית).",
-			en: "Judicial-reform protest anthem; Sagol 59 raps a verse on Inbar Hatzroni's track. (he.wikipedia)",
-		},
-	},
 ];

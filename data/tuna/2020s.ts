@@ -55,6 +55,8 @@ export const tuna2020s = [
 			en: "A May 2025 unity single — 'guitar and keys, we are all soldiers' — from the album 'Rovim VeTaltalim'.",
 		},
 		links: {
+			lyrics:
+				"https://hebrewerry.com/en/songs/6148-tuna-%D7%98%D7%95%D7%A0%D7%94-rovim-vetaltalim-%D7%A8%D7%95%D7%91%D7%99%D7%9D-%D7%95%D7%AA%D7%9C%D7%AA%D7%9C%D7%99%D7%9D",
 			song_info:
 				"https://he.wikipedia.org/wiki/%D7%A8%D7%95%D7%91%D7%99%D7%9D_%D7%95%D7%AA%D7%9C%D7%AA%D7%9C%D7%99%D7%9D",
 		},

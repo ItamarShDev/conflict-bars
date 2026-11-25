@@ -4,6 +4,11 @@ export const hatikvah62020s = [
 		artist: "Hatikva 6 (התקווה 6)",
 		language: "Hebrew",
 		published_date: "2021-04",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "מי משוגע? אני משוגע",
+			english_translation: "Who's crazy? I'm crazy.",
+		},
 		context: {
 			he: 'מחווה ללוחמי צה"ל; הקליפ צולם עם צוערי בית הספר לקצינים בה"ד 1.',
 			en: "Tribute to IDF combat soldiers; the video was filmed with cadets of the Bahad 1 officers' school.",
@@ -72,6 +77,8 @@ export const hatikvah62020s = [
 			en: "A tribute to reservists written after October 7.",
 		},
 		links: {
+			lyrics:
+				"https://united-jed.org/wp-content/uploads/%D7%92%D7%99%D7%91%D7%95%D7%A8%D7%99-%D7%A2%D7%9C-EN.pdf",
 			song_info: "https://13tv.co.il/item/entertainment/music/us2jw-904752420/",
 		},
 	},

@@ -15,6 +15,8 @@ export const oriComay2020s = [
 			en: "A November 2023 wartime track with Dudu Faruk, about a Golani soldier and his waiting partner.",
 		},
 		links: {
+			lyrics:
+				"https://shironet.mako.co.il/artist?lang=1&prfid=21349&type=lyrics&wrkid=59270",
 			youtube: "https://www.youtube.com/watch?v=etqIeSxYb1M",
 			song_info:
 				"https://music.apple.com/us/album/%D7%92%D7%95%D7%9C%D7%A0%D7%99-%D7%A9%D7%9C%D7%94-%D7%9E%D7%90%D7%A8%D7%97-%D7%90%D7%AA-%D7%93%D7%95%D7%93%D7%95-%D7%A4%D7%90%D7%A8%D7%95%D7%A7-single/1716247401",

@@ -4,13 +4,19 @@ export const ravidPlotnik2020s = [
 		artist: "Ravid Plotnik (רביד פלוטניק)",
 		language: "Hebrew",
 		published_date: "2025-01-10",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "הכל זה גם וגם",
+			english_translation: "It's all both/and.",
+		},
 		context: {
-			he: "ביקורת כלכליסט קושרת את השיר לאזכרות, לפצועים ולהלוויות בימים שלאחר 7 באוקטובר.",
-			en: "Calcalist's review connects this track to memorials, wounded people and funerals in the days following October 7.",
+			he: "סקירת מקור ראשון מתארת את פלוטניק כמי שנותן מילים לחוויות מאז 7 באוקטובר, ומציינת את ״בחשכה (הכל זה גם וגם)״ כציר המרכזי של האלבום.",
+			en: "Makor Rishon's album review describes Plotnik as putting post–October 7 experiences into words and identifies “BeChashecha (HaKol Ze Gam VeGam)” as central to the album.",
 		},
 		links: {
-			lyrics: "https://ravidplotnik.bandcamp.com/track/--87",
-			song_info: "https://www.calcalist.co.il/style/article/hywpybuwyl",
+			lyrics:
+				"https://hebrewerry.com/en/songs/2376-ravid-plotnik-%D7%A8%D7%91%D7%99%D7%93-%D7%A4%D7%9C%D7%95%D7%98%D7%A0%D7%99%D7%A7-bachashecha-%D7%91%D7%97%D7%A9%D7%9B%D7%94",
+			song_info: "https://www.makorrishon.co.il/culture/article/254336",
 		},
 	},
 	{
@@ -19,6 +25,11 @@ export const ravidPlotnik2020s = [
 		collaborators: ["Taboo Plus"],
 		language: "Hebrew",
 		published_date: "2025-01-10",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "שגרה בזמן מלחמה היא מלחמה בפני עצמה",
+			english_translation: "Routine during wartime is a war in itself.",
+		},
 		context: {
 			he: "רצועה 11 באלבום 'הדרך לשביל הזהב'; עוסק בשמירה על שגרת יומיום בזמן שהמלחמה נמשכת.",
 			en: "Track 11 on the album 'HaDerech LiShvil HaZahav'; on keeping a daily routine while the war goes on.",

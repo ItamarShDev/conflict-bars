@@ -1,28 +1,22 @@
 export const tamerNafar2010s = [
 	{
-		name: "Ana Mish Politi (I'm Not Political / אנא מש פוליטי)",
-		artist: "Tamer Nafar (תאמר נפאר)",
-		language: "Arabic/Hebrew",
-		published_date: "2013",
-		context: {
-			he: "שיר דו-לשוני (ערבית-עברית) מ-2013 ששמו — 'אני לא פוליטי' — הוא הצהרה אירונית של זהות.",
-			en: "A bilingual Arabic-Hebrew 2013 track whose title — 'I'm Not Political' — works as an ironic identity statement.",
-		},
-		links: {
-			youtube: "https://www.youtube.com/watch?v=WjVoyfCkzvA",
-		},
-	},
-	{
 		name: "ارض اجدادي (Ard Ajdadi / My Ancestors' Land)",
 		artist: "Tamer Nafar (תאמר נפאר)",
 		collaborators: ["Itamar Ziegler", "Samar Qupty"],
 		language: "Arabic",
 		published_date: "2017-03-03",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "بدك تعيش في هادي البلد",
+			hebrew: "אתה רוצה לחיות בארץ הזאת",
+			english_translation: "You want to live in this country.",
+		},
 		context: {
 			he: "רצועה מפסקול הסרט 'ג'נקשן 48', המתרחש בעיר המעורבת לוד ובקרב קהילתה הפלסטינית.",
 			en: "Track from the Junction 48 soundtrack, a film set in the mixed Jewish-Arab city of Lyd/Lod and its Palestinian community.",
 		},
 		links: {
+			lyrics: "https://www.songlyrics.com/tamer-nafar/ard-ajdadi-lyrics/",
 			youtube: "https://www.youtube.com/watch?v=jTNxgJBwaU8",
 			song_info:
 				"https://filmmusicreporter.com/2017/03/03/junction-48-soundtrack-released/",
@@ -34,12 +28,18 @@ export const tamerNafar2010s = [
 		collaborators: ["Itamar Ziegler", "Samar Qupty"],
 		language: "Arabic",
 		published_date: "2017-03-03",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "اكتبلك أغنية حب",
+			hebrew: "אני אכתוב לך שיר אהבה",
+			english_translation: "I'll write you a love song.",
+		},
 		context: {
 			he: "שיר הסיום ושיר הנושא של פסקול הסרט 'ג'נקשן 48', על ראפר פלסטיני בעיר המעורבת לוד.",
 			en: "Closing track and theme song of the Junction 48 soundtrack, a film about a Palestinian rapper in the mixed Jewish-Arab city of Lyd/Lod.",
 		},
 		links: {
-			lyrics: "https://www.youtube.com/watch?v=8-4R4QhXJX0",
+			lyrics: "https://lyrks.com/lyrics/tamer-nafar/ya-rit-ya-ryt",
 			youtube: "https://www.youtube.com/watch?v=8-4R4QhXJX0",
 			song_info:
 				"https://deadline.com/2016/04/junction-48-rapper-tamer-nafar-music-video-if-only-1201736017/",

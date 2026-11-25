@@ -27,12 +27,19 @@ export const shabjdeed2020s = [
 		artist: "Shabjdeed (شبجديد)",
 		language: "Arabic",
 		published_date: "2025-04-12",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "صاحبي ليش تسوي هيك؟",
+			hebrew: "חבר שלי, למה אתה עושה ככה?",
+			english_translation: "My friend, why are you doing that?",
+		},
 		context: {
 			he: "SceneNoise מפרש את השיר כעוסק גם בבגידה אישית וגם בבגידה בפלסטין.",
 			en: "SceneNoise reads the song as addressing both personal betrayal and the betrayal of Palestine.",
 		},
 		links: {
-			lyrics: "https://bltnm.bandcamp.com/track/sa7bi",
+			lyrics:
+				"https://matchlyric.com/shabjdeed-%D8%B4%D8%A8-%D8%AC%D8%AF%D9%8A%D8%AF-sa7bi",
 			song_info:
 				"https://scenenoise.com/New-Music/SA7BI-Shabjdeed-s-Line-in-the-Sand",
 		},
@@ -64,13 +71,21 @@ export const shabjdeed2020s = [
 		collaborators: ["Al Nather (النثر)"],
 		language: "Arabic",
 		published_date: "2023-12-04",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "الحرب فن يوم نتفق",
+			hebrew: "המלחמה היא אמנות כשאנחנו מסכימים.",
+			english_translation: "War is an art when we agree.",
+		},
 		context: {
 			he: "'המנון' — סינגל מדצמבר 2023, חודשיים לתוך המלחמה בעזה.",
 			en: "'Anthem' — a December 2023 single released two months into the Gaza war.",
 		},
 		links: {
+			song_info: "https://bltnm.bandcamp.com/track/nasheed",
 			youtube: "https://www.youtube.com/watch?v=_U6SB1dVF1s",
-			lyrics: "https://bltnm.bandcamp.com/track/nasheed",
+			lyrics:
+				"https://www.lyricsbox.com/shabjdeed-feat.-al-nather-nasheed-lyrics-rh7rf1d.html",
 		},
 	},
 	{
@@ -99,11 +114,19 @@ export const shabjdeed2020s = [
 		collaborators: ["Al Nather (النثر)"],
 		language: "Arabic",
 		published_date: "2024-10-07",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "فيها اكتئاب",
+			hebrew: "יש בה דיכאון",
+			english_translation: "There is depression in it.",
+		},
 		context: {
 			he: "סינגל שיצא ב-7 באוקטובר 2024, שנה לפרוץ המלחמה בעזה; השם מתייחס למנדט הבריטי כמסגרת להווה. SceneNoise תיאר אותו כטעון במציאות המאבק הפלסטיני וכמעמיד בניגוד צפייה מרחוק מול חיים יומיומיים בתוך המציאות הזו.",
 			en: "Single released on 7 October 2024, one year into the Gaza war; the title invokes the British Mandate as a frame for the present. Scene Noise's release write-up describes it as 'steeped in the harrowing reality of the Palestinian struggle' and as contrasting watching the situation from afar with living it daily.",
 		},
 		links: {
+			lyrics:
+				"https://lyrics.lol/artist/3693246-Shabjdeed-%D8%B4%D8%A8-%D8%AC%D8%AF%D9%8A%D8%AF/lyrics/10962894-INTIDAB-%D8%A7%D9%90%D9%86%D8%AA%D8%AF%D8%A7%D8%A8",
 			youtube: "https://www.youtube.com/watch?v=IrMY_Xy82fg",
 			song_info: "https://bltnm.bandcamp.com/track/intidab",
 		},
@@ -135,11 +158,19 @@ export const shabjdeed2020s = [
 		collaborators: ["Al Nather (الناظر)"],
 		language: "Arabic",
 		published_date: "2024-02-29",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "طوفان بس بالعقل",
+			hebrew: "מבול, אבל בשכל",
+			english_translation: "A flood, but with reason.",
+		},
 		context: {
 			he: "'מבול' — יצא במהלך המלחמה באלבום SULTAN; ביקורות מציינות התייחסות לדובר חמאס אבו עוביידה ('האיש רעול הפנים') בבתים של שבג'דיד.",
 			en: "'Flood' — released mid-war on SULTAN; reviews note the Abu Obeida 'masked man' reference in Shabjdeed's verses.",
 		},
 		links: {
+			lyrics:
+				"https://lyrics.lol/artist/3693247-Shabjdeed-Al-Nather-%D8%B4%D8%A8-%D8%AC%D8%AF%D9%8A%D8%AF-%D9%88%D8%A7%D9%84%D9%86%D8%A7%D8%B8%D8%B1/lyrics/10115079-Tawafan-%D8%B7%D9%88%D9%8E%D9%81%D8%A7%D9%86",
 			song_info: "https://bltnm.bandcamp.com/track/tawafan",
 		},
 	},
@@ -162,6 +193,7 @@ export const shabjdeed2020s = [
 			en: "From the album SULTAN (February 2024); a verse on 'the enemy' adapting and organizing.",
 		},
 		links: {
+			lyrics: "https://kalimat.anghami.com/lyrics/1148049056",
 			song_info: "https://bltnm.bandcamp.com/track/tal-abib",
 		},
 	},
