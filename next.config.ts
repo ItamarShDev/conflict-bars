@@ -17,18 +17,6 @@ const nextConfig: NextConfig = {
 				destination: "/stats/leaning",
 				permanent: true,
 			},
-			{
-				source: "/stats",
-				has: [{ type: "query", key: "tab", value: "leaning" }],
-				destination: "/stats/leaning",
-				permanent: true,
-			},
-			{
-				source: "/en/stats",
-				has: [{ type: "query", key: "tab", value: "leaning" }],
-				destination: "/en/stats/leaning",
-				permanent: true,
-			},
 		];
 	},
 	async rewrites() {
