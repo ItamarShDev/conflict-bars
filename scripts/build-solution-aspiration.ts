@@ -27,8 +27,18 @@ const MANUAL_REVIEW_OVERRIDES: Record<
 		confidence: Confidence;
 		rationaleEn: string;
 		rationaleHe: string;
+		evidence?: string;
 	}
 > = {
+	"haykal (هيكل)::innahu": {
+		category: "exclusive_or_opposed",
+		confidence: "high",
+		rationaleEn:
+			"The lyrics frame the West, not Israel alone, as the 'greatest enemy' that must fall and use jihad/victory-or-martyrdom language; they do not discuss two states.",
+		rationaleHe:
+			"המילים מציגות את המערב, ולא את ישראל לבדה, כ'אויב הגדול' שצריך ליפול ומשתמשות בשפת ג'יהאד/ניצחון או שאהידות; אין בהן עמדה על שתי מדינות.",
+		evidence: "الغرب العدو الاكبر. لليش عينيكم عالمقاومة؟",
+	},
 	"antara (عنترة)::هنا هناك (hona honak / here and there)": {
 		category: "no_clear_resolution",
 		confidence: "high",

@@ -201,7 +201,7 @@ export const translations = {
 			legendExplicit: "explicit two-state",
 			legendOpposed: "exclusive/opposed present",
 			methodNote:
-				"Method: lyrics-linked automated classification with manual review of positive and opposed results; evidence came from {{full}} full lyric texts, {{partial}} partial texts, and {{excerpt}} catalog excerpts. Interpretive classifications are conservative and linked to sources.",
+				"Method: lyrics-linked automated classification with manual review of positive and opposed results; evidence came from {{full}} full lyric texts, {{partial}} partial texts, and {{excerpt}} catalog excerpts. Interpretive classifications are conservative and linked to sources. Because matches are sparse and lyric coverage is uneven, treat the chart as documented examples over time rather than a representative trend measurement.",
 		},
 		bubble: {
 			title: "Releases by political leaning",
@@ -409,7 +409,7 @@ export const translations = {
 			legendExplicit: "שתי מדינות במפורש",
 			legendOpposed: "קיים שיר בלעדי/מתנגד",
 			methodNote:
-				"שיטה: סיווג אוטומטי של מילים המקושרות לשירים, עם בדיקה ידנית של תוצאות חיוביות ומתנגדות; המקורות כללו {{full}} מילים מלאות, {{partial}} מילים חלקיות ו־{{excerpt}} קטעים מהקטלוג. הסיווגים הפרשניים שמרניים ומקושרים למקורות.",
+				"שיטה: סיווג אוטומטי של מילים המקושרות לשירים, עם בדיקה ידנית של תוצאות חיוביות ומתנגדות; המקורות כללו {{full}} מילים מלאות, {{partial}} מילים חלקיות ו־{{excerpt}} קטעים מהקטלוג. הסיווגים הפרשניים שמרניים ומקושרים למקורות. מכיוון שההתאמות מעטות וכיסוי המילים אינו אחיד, יש לראות בתרשים דוגמאות מתועדות לאורך זמן ולא מדד מייצג למגמה.",
 		},
 		bubble: {
 			title: "שירים לפי נטייה פוליטית",

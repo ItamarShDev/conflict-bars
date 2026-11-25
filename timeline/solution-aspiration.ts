@@ -922,11 +922,11 @@ export const solutionAspirationAnnotations: Record<
 		category: "exclusive_or_opposed",
 		confidence: "high",
 		evidenceBasis: "full_lyrics",
-		evidence: "الهدف مش جميلة تحرير فلسطين بل محي العدو الاكبر يا احباب",
+		evidence: "الغرب العدو الاكبر. لليش عينيكم عالمقاومة؟",
 		sourceUrl: "https://haykal.bandcamp.com/track/innahu",
 		rationale: {
-			en: "The song calls for the destruction of the 'greatest enemy' (Israel) and rejects the two-state framework in favor of total victory.",
-			he: "השיר קורא להשמדת 'האויב הגדול' (ישראל) ודוחה את מתווה שתי המדינות לטובת ניצחון מוחלט.",
+			en: "The lyrics frame the West, not Israel alone, as the 'greatest enemy' that must fall and use jihad/victory-or-martyrdom language; they do not discuss two states.",
+			he: "המילים מציגות את המערב, ולא את ישראל לבדה, כ'אויב הגדול' שצריך ליפול ומשתמשות בשפת ג'יהאד/ניצחון או שאהידות; אין בהן עמדה על שתי מדינות.",
 		},
 	},
 	"heartbeat + wbc: hip hop hudna::boom boom boom": {
