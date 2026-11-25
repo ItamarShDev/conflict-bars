@@ -6,6 +6,11 @@ export const subliminal2020s = [
 		language: "Hebrew",
 		// Released before October 7; not a response to the ensuing war.
 		published_date: "2023-03-30",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "עם הנצח לא מפחד",
+			english_translation: "The eternal people are not afraid.",
+		},
 		context: {
 			he: "קריאה לאחדות בישראל בזמן פילוג פנימי, עם התייחסויות לביטחון ולהישרדות לאומית.",
 			en: "A call for Israeli unity during domestic political division, with references to security and national survival.",
@@ -104,6 +109,11 @@ export const subliminal2020s = [
 		artist: "Subliminal & The Shadow",
 		language: "Hebrew",
 		published_date: "2024-07-16",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "ביחד נניף את הדגל",
+			english_translation: "Together, we'll raise the flag.",
+		},
 		context: {
 			he: "סינגל אחדות שיצא במהלך המלחמה בעזה.",
 			en: "Wartime unity single released during the Gaza war.",
@@ -118,6 +128,11 @@ export const subliminal2020s = [
 		artist: "Subliminal & The Shadow",
 		language: "Hebrew",
 		published_date: "2025-07-01",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "מי צודק ומי כאן חרטא",
+			english_translation: "Who's right, and who's full of it?",
+		},
 		context: {
 			he: "רצועה מתוך האלבום 'שומרי הסף'.",
 			en: "Track on שומרי הסף (Guardians of the Threshold).",

@@ -4,6 +4,12 @@ export const fortySevenSoul2010s = [
 		artist: "47Soul (٤٧ سول)",
 		language: "Arabic/English",
 		published_date: "2015",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "ابن النبع و ابن البحر",
+			hebrew: "בן המעיין ובן הים",
+			english_translation: "Son of the spring and the sea.",
+		},
 		context: {
 			he: "מניפסט ה'שאמסטפ' — הצהרת דבקה-אלקטרו העוסקת בפליטות ובתפוצה. קשור לסצנה (דבקה-אלקטרו ולא ראפ).",
 			en: "The shamstep manifesto — dabke-electro declaration; refugee/diaspora themes. Scene-adjacent (dabke-electro rather than rap).",

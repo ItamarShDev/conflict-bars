@@ -23,7 +23,6 @@ export const mcGaza2010s = [
 			en: "An official 2015 music video pairs MC Gaza's song with Gaza city scenes and parkour over rubble from the bombardment after Operation Protective Edge.",
 		},
 		links: {
-			lyrics: "https://iremam-base.cnrs.fr/gaza_rap/mcgaza.htm",
 			song_info:
 				"https://theworld.org/stories/2016/07/30/meet-gaza-rapper-trying-break-out-and-make-it-big",
 		},
@@ -38,7 +37,7 @@ export const mcGaza2010s = [
 			en: "Direct response to the US Jerusalem recognition and embassy move, uploaded days after the announcement.",
 		},
 		links: {
-			lyrics: "https://iremam-base.cnrs.fr/gaza_rap/mcgaza.htm",
+			song_info: "https://iremam-base.cnrs.fr/gaza_rap/mcgaza.htm",
 			youtube: "https://www.youtube.com/watch?v=CJEgfEqjP0E",
 		},
 	},
@@ -52,7 +51,6 @@ export const mcGaza2010s = [
 			en: "The artist describes it as 'a song about the suffering of child prisoners in Israeli jails.'",
 		},
 		links: {
-			lyrics: "https://iremam-base.cnrs.fr/gaza_rap/mcgaza.htm",
 			song_info: "https://soundcloud.com/mcgaza",
 		},
 	},

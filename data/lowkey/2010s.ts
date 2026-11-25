@@ -11,6 +11,11 @@ export const lowkey2010s = [
 		],
 		language: "English",
 		published_date: "2019-04-05",
+		lyric_sample: {
+			original_language: "en",
+			hebrew: "זה למען פלסטין",
+			english_translation: "This is for Palestine",
+		},
 		context: {
 			he: "צולם בהפגנה למען פלסטין; הקליפ נפתח בקריאת שירו של מחמוד דרוויש 'חשוב על זולתך' מפי פרנקי בויל. מתוך Soundtrack to the Struggle 2 (GRM Daily / Hotpress).",
 			en: "Filmed at a Palestine protest; the video opens with Frankie Boyle reading Mahmoud Darwish's poem 'Think of Others.' From Soundtrack to the Struggle 2. (GRM Daily / Hotpress)",

@@ -4,6 +4,11 @@ export const nechiNech2010s = [
 		artist: "Nechi Nech (נצ'י נצ')",
 		language: "Hebrew",
 		published_date: "2015-07-14",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "אין לי וילה",
+			english_translation: "I don't have a villa.",
+		},
 		context: {
 			he: "שם השיר עצמו הוא הצהרת המחאה; רצועה מתוך האלבום 'ברוכים הבאים לפתח תקוה'.",
 			en: "The title itself is the protest statement; track on ברוכים הבאים לפתח תקוה (Welcome to Petah Tikva).",

@@ -5,6 +5,11 @@ export const kla62000s = [
 		collaborators: ["Hila Harari (הילה הררי)", "Meni Begger (מני בגר)"],
 		language: "Hebrew",
 		published_date: "2004",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "זה היה ביתי עם גינה ולול",
+			english_translation: "This was my home with a garden and a chicken coop.",
+		},
 		context: {
 			he: "גרסת ראפ מחודשת לשיר של מני בגר מ-1981, שיצאה לקראת תוכנית ההתנתקות והזוהתה עם המחאה נגד פינוי גוש קטיף.",
 			en: "Rap remake of Meni Begger's 1981 song, released ahead of the Gaza disengagement plan; it became identified with the protest against the evacuation of Gush Katif.",
@@ -32,7 +37,6 @@ export const kla62000s = [
 			en: "Patriotic posse cut from the Tact Family compilation 'Allstars' (2004), recorded during the Second Intifada.",
 		},
 		links: {
-			lyrics: "https://www.nomorelyrics.net/il/kla_6/ywral-lyrics.html",
 			youtube: "https://www.youtube.com/watch?v=Dq3otxDyF8A",
 			song_info: "https://he.wikipedia.org/wiki/אולסטארז",
 		},

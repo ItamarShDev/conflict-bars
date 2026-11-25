@@ -4,6 +4,11 @@ export const ravidPlotnik2020s = [
 		artist: "Ravid Plotnik (רביד פלוטניק)",
 		language: "Hebrew",
 		published_date: "2025-01-10",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "הכל זה גם וגם",
+			english_translation: "It's all both/and.",
+		},
 		context: {
 			he: "סקירת מקור ראשון מתארת את פלוטניק כמי שנותן מילים לחוויות מאז 7 באוקטובר, ומציינת את ״בחשכה (הכל זה גם וגם)״ כציר המרכזי של האלבום.",
 			en: "Makor Rishon's album review describes Plotnik as putting post–October 7 experiences into words and identifies “BeChashecha (HaKol Ze Gam VeGam)” as central to the album.",
@@ -20,6 +25,11 @@ export const ravidPlotnik2020s = [
 		collaborators: ["Taboo Plus"],
 		language: "Hebrew",
 		published_date: "2025-01-10",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "שגרה בזמן מלחמה היא מלחמה בפני עצמה",
+			english_translation: "Routine during wartime is a war in itself.",
+		},
 		context: {
 			he: "רצועה 11 באלבום 'הדרך לשביל הזהב'; עוסק בשמירה על שגרת יומיום בזמן שהמלחמה נמשכת.",
 			en: "Track 11 on the album 'HaDerech LiShvil HaZahav'; on keeping a daily routine while the war goes on.",

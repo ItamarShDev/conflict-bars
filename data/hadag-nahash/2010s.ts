@@ -4,6 +4,11 @@ export const hadagNahash2010s = [
 		artist: "Hadag Nahash (הדג נחש)",
 		language: "English",
 		published_date: "2010-02",
+		lyric_sample: {
+			original_language: "en",
+			hebrew: "אני לא רוצה עוד מלחמה",
+			english_translation: "I don't want no more war",
+		},
 		context: {
 			he: "כתבת הבכורה בוואלה מ-2010 מתארת את השיר כעוסק בעוינות נרכשת בין ישראלים לפלסטינים.",
 			en: "Walla's 2010 premiere describes the song as addressing learned hostility between Israelis and Palestinians.",
@@ -177,6 +182,11 @@ export const hadagNahash2010s = [
 		artist: "Hadag Nahash (הדג נחש)",
 		language: "Hebrew",
 		published_date: "2013-02-24",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "אין סיכוי שהם יחזיקו עוד הרבה",
+			english_translation: "There's no chance they'll last much longer.",
+		},
 		context: {
 			he: "שיר הנושא של אלבום המחאה שיצא לאחר הבחירות.",
 			en: "Title track of the post-election protest album.",

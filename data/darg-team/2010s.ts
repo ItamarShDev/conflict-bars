@@ -10,7 +10,7 @@ export const dargTeam2010s = [
 			en: "Gaza crew's take on Lowkey's anthem — the 'Free free Palestine' refrain tradition.",
 		},
 		links: {
-			lyrics: "https://iremam-base.cnrs.fr/gaza_rap/darg.htm",
+			song_info: "https://iremam-base.cnrs.fr/gaza_rap/darg.htm",
 		},
 	},
 	{
@@ -24,7 +24,7 @@ export const dargTeam2010s = [
 			en: "Post-2012 Gaza war rap produced by Ramallah's Boikutt. (Year listed as 2010s-era upload.)",
 		},
 		links: {
-			lyrics: "https://iremam-base.cnrs.fr/gaza_rap/darg.htm",
+			song_info: "https://iremam-base.cnrs.fr/gaza_rap/darg.htm",
 		},
 	},
 	{

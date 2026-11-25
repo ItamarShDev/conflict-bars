@@ -27,6 +27,12 @@ export const saintLevant2020s = [
 		language: "Arabic/English/French",
 		published_date: "2024-02-23",
 		collaborators: ["MC Abdul"],
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "تركنا المدينة",
+			hebrew: "עזבנו את העיר",
+			english_translation: "We left the city.",
+		},
 		context: {
 			he: "מוקדש למלון 'אל-דירה', המלון המשפחתי בעזה שבו גדל הראפר ואשר נהרס בהפצצה ישראלית בינואר 2024.",
 			en: "Dedicated to Al Deira, the family-owned hotel in Gaza where the rapper grew up, destroyed in an Israeli bombing in January 2024.",
@@ -43,6 +49,12 @@ export const saintLevant2020s = [
 		language: "Arabic/English",
 		published_date: "2024-06-07",
 		collaborators: ["Sol Band"],
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "سوف نحيا هنا",
+			hebrew: "נחיה כאן.",
+			english_translation: "We will live here.",
+		},
 		context: {
 			he: "הוקלט עם ההרכב העזתי Sol Band; משלב את ההמנון הפלסטיני 'מוטני' ושואב את שמו משירו של מחמוד דרוויש.",
 			en: "Recorded with the Gazan group Sol Band; incorporates the Palestinian anthem 'Mawtini' and takes its title from a Mahmoud Darwish poem.",
@@ -95,6 +107,11 @@ export const saintLevant2020s = [
 		artist: "Saint Levant (سانت ليفانت)",
 		language: "Arabic/English",
 		published_date: "2025",
+		lyric_sample: {
+			original_language: "en",
+			hebrew: "ביליתי יותר מדי לילות בגלות",
+			english_translation: "I spent too many nights in exile",
+		},
 		context: {
 			he: "עוסק בגלות ובעקירה — סינגל פופי הקשור לסצנה.",
 			en: "Exile/displacement theme — scene-adjacent pop-leaning single.",

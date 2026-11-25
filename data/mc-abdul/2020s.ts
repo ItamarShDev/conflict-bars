@@ -215,6 +215,11 @@ export const mcAbdul2020s = [
 		artist: "MC Abdul",
 		language: "English/Arabic",
 		published_date: "2023-09-15",
+		lyric_sample: {
+			original_language: "en",
+			hebrew: "צריך למגר את המערכת הזו",
+			english_translation: "This system needs to be eradicated",
+		},
 		context: {
 			he: "יצא שבועות ספורים לפני 7 באוקטובר מאת הראפר יליד עזה; מציג את העט והמיקרופון כתגובה שלו לחיים תחת מצור.",
 			en: "Released weeks before October 7 by the Gaza-born rapper; frames the pen and the microphone as his response to life under blockade.",
@@ -303,6 +308,11 @@ export const mcAbdul2020s = [
 		artist: "MC Abdul",
 		language: "English",
 		published_date: "2024-09-27",
+		lyric_sample: {
+			original_language: "en",
+			hebrew: "אני אולי צעיר, אבל הנטל על כתפיי.",
+			english_translation: "I may be young but I got weight on my shoulders.",
+		},
 		context: {
 			he: "ילדות תחת מלחמה — מתוך האלבום 96 Miles From Bethlehem.",
 			en: "Childhood under war — from the album 96 Miles From Bethlehem.",

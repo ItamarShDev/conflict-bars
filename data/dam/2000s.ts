@@ -159,6 +159,11 @@ export const dam2000s = [
 		artist: "DAM (דאם)",
 		language: "Arabic",
 		published_date: "2006-10-26",
+		lyric_sample: {
+			original_language: "en",
+			hebrew: "צריך מהפכה כדי למצוא לי פתרון.",
+			english_translation: "It takes a revolution to find me a solution.",
+		},
 		context: {
 			he: "שם השיר הוא המילה 'מהפכה' בהיפוך אותיות — בתים על החיים בלוד בתקופת האינתיפאדה, מתוך אלבום הבכורה Dedication.",
 			en: "The title is 'revolution' spelled backwards — verses on intifada-era life in Lod, from the debut album Dedication.",

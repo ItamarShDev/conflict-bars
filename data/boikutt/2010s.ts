@@ -4,6 +4,12 @@ export const boikutt2010s = [
 		artist: "Boikutt / Muqata'a (مقاطعة)",
 		language: "Arabic",
 		published_date: "2011",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "الوضع الراهن منعنا",
+			hebrew: "המצב הקיים עצר אותנו.",
+			english_translation: "The status quo held us back.",
+		},
 		context: {
 			he: "מ-2011 של בויקט מקולקטיב רמאללה אנדרגראונד.",
 			en: "A 2011 track by Boikutt of the Ramallah Underground collective.",

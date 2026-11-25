@@ -4,6 +4,11 @@ export const hadagNahash2020s = [
 		artist: "Hadag Nahash (הדג נחש)",
 		language: "Hebrew",
 		published_date: "2023-09-19",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "הבטחתי לכם סיפור שאתם לא מכירים",
+			english_translation: "I promised you a story you don't know.",
+		},
 		context: {
 			he: "זיכרונות משירות צבאי בעזה ומרגע של תקווה משותפת בזמן ועידת מדריד ב-1991.",
 			en: "Memories of military service in Gaza and a moment of shared hope during the 1991 Madrid peace conference.",

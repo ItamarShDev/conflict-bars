@@ -5,6 +5,12 @@ export const shadiamansour2010s = [
 		collaborators: ["Omar Offendum (Omar Chakaki)"],
 		// The collaborator confirms April, not the exact first-release day.
 		published_date: "2013-04",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "ما عاد في خيار",
+			hebrew: "לא נותרה ברירה",
+			english_translation: "There is no choice left.",
+		},
 		context: {
 			he: "הקליפ מוקדש לג'וליאנו מר חמיס, ממייסדי תיאטרון החופש בג'נין.",
 			en: "The collaboration's video is dedicated to Juliano Mer Khamis, associated with the Freedom Theatre in Jenin.",
@@ -18,6 +24,12 @@ export const shadiamansour2010s = [
 		name: "Al Kufiyyeh 3arabeyyeh (The Kufiya is Arab)",
 		artist: "Shadia Mansour (شادية منصور)",
 		published_date: "2010-03-18",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "صباح الخير يا أولاد عمومنا",
+			hebrew: "בוקר טוב, בני דודים",
+			english_translation: "Good morning, cousins.",
+		},
 		context: {
 			he: "מרץ 2010 עם M1 מ-Dead Prez; הצהרה זהות — 'הכופיה ערבית'.",
 			en: "A March 2010 track with M1 of Dead Prez; an identity declaration — 'the kufiya is Arab'.",
@@ -32,6 +44,12 @@ export const shadiamansour2010s = [
 		name: "Kulun 'Andun Dababat (They All Have Tanks)",
 		artist: "Shadia Mansour (شادية منصور)",
 		published_date: "2011",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "كلن عندهم دبابات",
+			hebrew: "לכולם יש טנקים",
+			english_translation: "They all have tanks.",
+		},
 		context: {
 			he: "שיר מחאה מ-2011 — 'לכולם יש טנקים' מול העם.",
 			en: "A 2011 protest song — 'they all have tanks' set against the people.",
@@ -45,6 +63,12 @@ export const shadiamansour2010s = [
 		name: "Somos Sur",
 		artist: "Shadia Mansour (شادية منصور)",
 		published_date: "2014",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "الموسيقى هي اللغة الأم",
+			hebrew: "המוזיקה היא שפת האם",
+			english_translation: "Music is the mother tongue.",
+		},
 		context: {
 			he: "שיתוף פעולה מ-2014 עם אנה טיז'ו הצ'יליאנית — סולידריות בין דרום אמריקה לפלסטין.",
 			en: "A 2014 collaboration with Chilean MC Ana Tijoux — Global South solidarity between Latin America and Palestine.",

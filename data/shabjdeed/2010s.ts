@@ -68,6 +68,12 @@ export const shabjdeed2010s = [
 		collaborators: ["Al Nather (الناظر)"],
 		language: "Arabic",
 		published_date: "2019-08-18",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "كل فعل له ردة فعل",
+			hebrew: "לכל מעשה יש תגובת נגד.",
+			english_translation: "Every action has a reaction.",
+		},
 		context: {
 			he: "'בני ירושלים' — מתוך האלבום Sindibad el Ward, המנותח בספרות אקדמית כטראפ פלסטיני מהפכני (OpenEdition).",
 			en: "'Sons of Jerusalem' — from Sindibad el Ward; the album is analyzed as revolutionary Palestinian trap in academic literature (OpenEdition).",

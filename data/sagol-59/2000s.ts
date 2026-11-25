@@ -5,6 +5,11 @@ export const sagol592000s = [
 		collaborators: ["Tamer Nafar (תאמר נפאר)", "Shanan Street (שאנן סטריט)"],
 		language: "Hebrew/Arabic",
 		published_date: "2001",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "הנשיא של הראפ מכריז גיוס כללי",
+			english_translation: "The rap president declares a general mobilization.",
+		},
 		context: {
 			he: "מתואר כשיתוף הפעולה הראשון בהיפ-הופ בין יהודים לערבים; יצא במהלך האינתיפאדה השנייה וקרא למנהיגי שני העמים לחדש את שיחות השלום.",
 			en: "Described as the first Jewish-Arab hip hop collaboration; released during the Second Intifada, it called on the leaders of both nations to resume peace talks.",

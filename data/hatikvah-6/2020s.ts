@@ -4,6 +4,11 @@ export const hatikvah62020s = [
 		artist: "Hatikva 6 (התקווה 6)",
 		language: "Hebrew",
 		published_date: "2021-04",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "מי משוגע? אני משוגע",
+			english_translation: "Who's crazy? I'm crazy.",
+		},
 		context: {
 			he: 'מחווה ללוחמי צה"ל; הקליפ צולם עם צוערי בית הספר לקצינים בה"ד 1.',
 			en: "Tribute to IDF combat soldiers; the video was filmed with cadets of the Bahad 1 officers' school.",

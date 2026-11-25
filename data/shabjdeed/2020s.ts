@@ -4,6 +4,12 @@ export const shabjdeed2020s = [
 		artist: "Shabjdeed (شبجديد)",
 		language: "Arabic",
 		published_date: "2025-04-12",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "صاحبي ليش تسوي هيك؟",
+			hebrew: "חבר שלי, למה אתה עושה ככה?",
+			english_translation: "My friend, why are you doing that?",
+		},
 		context: {
 			he: "SceneNoise מפרש את השיר כעוסק גם בבגידה אישית וגם בבגידה בפלסטין.",
 			en: "SceneNoise reads the song as addressing both personal betrayal and the betrayal of Palestine.",
@@ -42,6 +48,12 @@ export const shabjdeed2020s = [
 		collaborators: ["Al Nather (النثر)"],
 		language: "Arabic",
 		published_date: "2023-12-04",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "الحرب فن يوم نتفق",
+			hebrew: "המלחמה היא אמנות כשאנחנו מסכימים.",
+			english_translation: "War is an art when we agree.",
+		},
 		context: {
 			he: "'המנון' — סינגל מדצמבר 2023, חודשיים לתוך המלחמה בעזה.",
 			en: "'Anthem' — a December 2023 single released two months into the Gaza war.",
@@ -79,6 +91,12 @@ export const shabjdeed2020s = [
 		collaborators: ["Al Nather (النثر)"],
 		language: "Arabic",
 		published_date: "2024-10-07",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "فيها اكتئاب",
+			hebrew: "יש בה דיכאון",
+			english_translation: "There is depression in it.",
+		},
 		context: {
 			he: "סינגל שיצא ב-7 באוקטובר 2024, שנה לפרוץ המלחמה בעזה; השם מתייחס למנדט הבריטי כמסגרת להווה. SceneNoise תיאר אותו כטעון במציאות המאבק הפלסטיני וכמעמיד בניגוד צפייה מרחוק מול חיים יומיומיים בתוך המציאות הזו.",
 			en: "Single released on 7 October 2024, one year into the Gaza war; the title invokes the British Mandate as a frame for the present. Scene Noise's release write-up describes it as 'steeped in the harrowing reality of the Palestinian struggle' and as contrasting watching the situation from afar with living it daily.",
@@ -117,6 +135,12 @@ export const shabjdeed2020s = [
 		collaborators: ["Al Nather (الناظر)"],
 		language: "Arabic",
 		published_date: "2024-02-29",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "طوفان بس بالعقل",
+			hebrew: "מבול, אבל בשכל",
+			english_translation: "A flood, but with reason.",
+		},
 		context: {
 			he: "'מבול' — יצא במהלך המלחמה באלבום SULTAN; ביקורות מציינות התייחסות לדובר חמאס אבו עוביידה ('האיש רעול הפנים') בבתים של שבג'דיד.",
 			en: "'Flood' — released mid-war on SULTAN; reviews note the Abu Obeida 'masked man' reference in Shabjdeed's verses.",

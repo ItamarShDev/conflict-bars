@@ -18,6 +18,12 @@ export const tamerNafar2010s = [
 		collaborators: ["Itamar Ziegler", "Samar Qupty"],
 		language: "Arabic",
 		published_date: "2017-03-03",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "بدك تعيش في هادي البلد",
+			hebrew: "אתה רוצה לחיות בארץ הזאת",
+			english_translation: "You want to live in this country.",
+		},
 		context: {
 			he: "רצועה מפסקול הסרט 'ג'נקשן 48', המתרחש בעיר המעורבת לוד ובקרב קהילתה הפלסטינית.",
 			en: "Track from the Junction 48 soundtrack, a film set in the mixed Jewish-Arab city of Lyd/Lod and its Palestinian community.",
@@ -35,6 +41,12 @@ export const tamerNafar2010s = [
 		collaborators: ["Itamar Ziegler", "Samar Qupty"],
 		language: "Arabic",
 		published_date: "2017-03-03",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "اكتبلك أغنية حب",
+			hebrew: "אני אכתוב לך שיר אהבה",
+			english_translation: "I'll write you a love song.",
+		},
 		context: {
 			he: "שיר הסיום ושיר הנושא של פסקול הסרט 'ג'נקשן 48', על ראפר פלסטיני בעיר המעורבת לוד.",
 			en: "Closing track and theme song of the Junction 48 soundtrack, a film about a Palestinian rapper in the mixed Jewish-Arab city of Lyd/Lod.",

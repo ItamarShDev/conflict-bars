@@ -5,6 +5,11 @@ export const subliminal2010s = [
 		collaborators: ["Arik Lavie (אריק לביא)", "Sivan Bahnam (סיוון)"],
 		language: "Hebrew",
 		published_date: "2010",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "זה קורה שהדרך מתמשכת",
+			english_translation: "It happens that the road goes on.",
+		},
 		context: {
 			he: "גרסת כיסוי משנת 2010 שזיקתה לסכסוך נובעת ממסגורו של סאבלימינל את השיר ביחס להתנתקות מעזה, כפי שדווח בוואלה.",
 			en: "A cover released in 2010 whose conflict relevance comes from Subliminal's framing of the song in relation to the 2003 Gaza disengagement, as reported by Walla.",

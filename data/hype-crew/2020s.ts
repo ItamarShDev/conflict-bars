@@ -4,6 +4,11 @@ export const hypeCrew2020s = [
 		artist: "Hype Crew (היפ קרו)",
 		language: "Hebrew",
 		published_date: "2023",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "באנו את החושך לגרש מכאן",
+			english_translation: "We came to banish the darkness from here.",
+		},
 		context: {
 			he: "שיר תקווה שיצא בנובמבר 2023 בצל המלחמה, על ידי הייפ קרו מדרום הארץ — קריאה לחיזוק המורל.",
 			en: "A hope anthem released November 2023 amid the war by the southern-Israel group Hype Crew — a morale call.",

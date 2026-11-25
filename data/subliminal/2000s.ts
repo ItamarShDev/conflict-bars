@@ -163,6 +163,11 @@ export const subliminal2000s = [
 		collaborators: ["David D'Or"],
 		language: "Hebrew",
 		published_date: "2006",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "תן כוח לבחור לא לברוח",
+			english_translation: "Give strength to choose, not to run away.",
+		},
 		context: {
 			he: "המנון עוצמה ואחדות — מתוך האלבום Just When You Thought It Was Over.",
 			en: "Strength/unity anthem — from Just When You Thought It Was Over.",
