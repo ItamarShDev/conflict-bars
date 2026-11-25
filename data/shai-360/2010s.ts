@@ -23,19 +23,4 @@ export const shai3602010s = [
 				"https://www.mako.co.il/music-news/singles/Article-96cdf1934a33921006.htm",
 		},
 	},
-	{
-		name: "Forgive And Forget",
-		artist: "Shai 360 (שי 360)",
-		language: "English",
-		published_date: "2011-11-29",
-		context: {
-			he: "מתוך האלבום 'Shalom Haters'; מקונן על הסבל האנושי משני צדי הסכסוך הישראלי-פלסטיני וקורא למאזינים לא לפחד לחשוב בעצמם.",
-			en: "From the album 'Shalom Haters'; laments the human suffering of both sides of the Israeli-Palestinian conflict and calls on listeners not to be afraid to think for themselves.",
-		},
-		links: {
-			youtube: "https://www.youtube.com/watch?v=IO5LojKJbAo",
-			song_info:
-				"https://www.mako.co.il/music-news/singles/Article-a874a49a5cae331006.htm",
-		},
-	},
 ];

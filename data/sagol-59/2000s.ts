@@ -21,22 +21,6 @@ export const sagol592000s = [
 		},
 	},
 	{
-		name: "ביג בן (Big Ben)",
-		artist: "Sagol 59 (סגול 59)",
-		collaborators: ["A7 / Rebel Sun"],
-		language: "Hebrew",
-		published_date: "2003-09-01",
-		context: {
-			he: "שיר הסיום של האלבום 'שני הצדדים של סגול 59'; נכתב לזכרו של הדי-ג'יי של סגול, בן בלוטשטיין, שנרצח בפיגוע בקפיטריה באוניברסיטה העברית בהר הצופים ביולי 2002.",
-			en: "Closing track of the album 'Shnei HaTzdadim shel Sagol 59'; written in memory of Sagol's DJ Ben Blutstein, who was killed in the July 2002 bombing of the Hebrew University cafeteria on Mount Scopus.",
-		},
-		links: {
-			lyrics: "https://genius.com/Sagol-59-59-big-ben-lyrics",
-			youtube: "https://www.youtube.com/watch?v=u9EB9qWDYZc",
-			song_info: "https://mima.co.il/fact_page.php?song_id=423",
-		},
-	},
-	{
 		name: "ירושלים (Yerushalayim / Jerusalem)",
 		artist: "Sagol 59 (סגול 59)",
 		collaborators: ["Rebel Sun (רבל סאן)", "Sha'anan Streett (שאנן סטריט)"],

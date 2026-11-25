@@ -270,21 +270,6 @@ export const mcAbdul2020s = [
 		},
 	},
 	{
-		name: "Through My Eyes",
-		artist: "MC Abdul",
-		language: "English",
-		published_date: "2025-04-11",
-		context: {
-			he: "שיר רשמי של MC Abdul שתועד על ידי האקדמיה להקלטות (Grammy) ותוארך ל-11 באפריל 2025 ב-Soundcharts.",
-			en: "An officially released MC Abdul track documented by the Grammy Recording Academy and dated April 11, 2025 by Soundcharts.",
-		},
-		links: {
-			youtube: "https://www.youtube.com/watch?v=ycQmyX1-7WE",
-			song_info:
-				"https://qa.grammy.com/videos/mc-abdul-through-my-eyes-performance",
-		},
-	},
-	{
 		name: "Can I Live",
 		artist: "MC Abdul",
 		language: "English",

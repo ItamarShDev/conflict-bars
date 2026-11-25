@@ -148,16 +148,6 @@ export const subliminal2000s = [
 		},
 	},
 	{
-		name: "ביתי היה זה (That Was My Home)",
-		artist: "Subliminal (סאבלימינל)",
-		language: "Hebrew",
-		published_date: "2005",
-		context: {
-			he: "שיר מחאה נגד תוכנית ההתנתקות מעזה ב-2005.",
-			en: "Protest song against the 2005 Gaza disengagement.",
-		},
-	},
-	{
 		name: "תן כח (Ten Koah / Give Strength)",
 		artist: "Subliminal (סאבלימינל)",
 		collaborators: ["David D'Or"],

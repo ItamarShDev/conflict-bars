@@ -2,18 +2,6 @@ import type { FileSongList } from "../../timeline/types";
 
 export const systemAli2010s = [
 	{
-		name: "אידיאלאם إيديالم (Idialam)",
-		artist: "System Ali (סיסטם עלי)",
-		published_date: "2013-07-31",
-		context: {
-			he: "בריאיון ל-+972 קושרת הלהקה את השיר למשפחת פליטים של אחד מחבריה, שהתגוררה ביפו בבית של משפחה ערבית שנעקרה ב-1948.",
-			en: "In a +972 interview, the band connects the song to a member's refugee family living in a Jaffa house formerly belonging to an Arab family displaced in 1948.",
-		},
-		links: {
-			song_info: "https://www.972mag.com/every-song-is-a-fight-for-existence/",
-		},
-	},
-	{
 		name: "Maharajan (מהרג'אן / مهرجان)",
 		artist: "System Ali (סיסטם עלי)",
 		language: "Hebrew/Arabic/Russian/Yiddish/Amharic/English",

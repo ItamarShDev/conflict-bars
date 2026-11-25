@@ -144,15 +144,4 @@ export const tamernafar2020s = [
 				"https://audiomack.com/tamer-nafar/album/in-the-name-of-the-father-the-imam-john-lennon-2482119",
 		},
 	},
-	{
-		name: "NANA",
-		artist: "Tamer Nafar (תאמר נפאר)",
-		collaborators: ["Amal Murkus", "Sammy Shilbaq"],
-		language: "Arabic",
-		published_date: "2026-01-20",
-		context: {
-			he: "רצועת אלבום בהשתתפות אמל מורקוס.",
-			en: "Album track featuring Amal Murkus.",
-		},
-	},
 ];

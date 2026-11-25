@@ -22,26 +22,6 @@ export const kla62000s = [
 		},
 	},
 	{
-		name: "ישראל (Yisrael / Israel)",
-		artist: "Kla 6 (כלא 6)",
-		collaborators: [
-			"Subliminal (סאבלימינל)",
-			"The Shadow (הצל)",
-			"Shai 360 (שי 360)",
-			"Cholo (צ'ולו)",
-		],
-		language: "Hebrew",
-		published_date: "2004",
-		context: {
-			he: "רצועה פטריוטית מרובת משתתפים מאלבום האוסף 'אולסטארז' של משפחת תאקט (2004), שהוקלטה בתקופת האינתיפאדה השנייה.",
-			en: "Patriotic posse cut from the Tact Family compilation 'Allstars' (2004), recorded during the Second Intifada.",
-		},
-		links: {
-			youtube: "https://www.youtube.com/watch?v=Dq3otxDyF8A",
-			song_info: "https://he.wikipedia.org/wiki/אולסטארז",
-		},
-	},
-	{
 		name: "פצצת זמן (Ptzatzat Zman / Time Bomb)",
 		artist: "Kla 6 (כלא 6)",
 		language: "Hebrew",
