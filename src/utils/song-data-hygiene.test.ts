@@ -54,6 +54,19 @@ describe("song dataset bilingual lyrics and context hygiene", () => {
 		expect(issues).toEqual([]);
 	});
 
+	it("preserves Ma Btiji's bilingual WHO citation in the generated catalog", () => {
+		const song = songs.find(
+			({ name, artist }) =>
+				name === "Ma Btiji (ما بتيجي)" && artist === "Haykal (هيكل)",
+		);
+
+		expect(song?.context?.sources).toContainEqual({
+			url: "https://reliefweb.int/report/occupied-palestinian-territory/public-health-situation-analysis-phsa-hostilities-occupied-palestinian-territory-opt-11-may-2026",
+			he: "ניתוח ארגון הבריאות העולמי על הפגיעה בבתי החולים בעזה",
+			en: "WHO analysis of Gaza hospital damage",
+		});
+	});
+
 	it("searches across context.he, context.en, and lyric_sample.arabic", () => {
 		const sampleSongs: FileSong[] = [
 			{

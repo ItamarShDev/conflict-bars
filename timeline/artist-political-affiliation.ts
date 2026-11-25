@@ -6,6 +6,41 @@ export const artistPoliticalAffiliation: Record<
 		notes: string;
 	}
 > = {
+	"ABUL3EES (أبو العيس)": {
+		era: "2010s–present",
+		affiliation: "Unknown",
+		notes: "Palestinian rapper from Sheikh Jarrah in East Jerusalem.",
+	},
+	"Mhammed Lafi (محمد لافي)": {
+		era: "2010s",
+		affiliation: "Unknown",
+		notes: "Palestinian rapper from Jabalia and member of Riots.",
+	},
+	"Riots (شغب)": {
+		era: "2010s",
+		affiliation: "Unknown",
+		notes: "Gaza rap group featuring Mhammed Lafi and Iyad Zorob.",
+	},
+	"el morabba3 (المربّع)": {
+		era: "2010s",
+		affiliation: "Unknown",
+		notes: "Amman-based band with Palestinian rap collaborations.",
+	},
+	"Bn Khalti": {
+		era: "2020s",
+		affiliation: "Unknown",
+		notes: "Producer and collaborator on Innahu.",
+	},
+	"PelloMar (פלומר)": {
+		era: "2020s",
+		affiliation: "Unknown",
+		notes: "Israeli rapper Omer Haviv.",
+	},
+	"Shiru (שירו)": {
+		era: "2020s",
+		affiliation: "Unknown",
+		notes: "Featured rapper on Levad BaMidbar.",
+	},
 	"Liam Hachmon (ליעם חכמון)": {
 		era: "2020s",
 		affiliation: "Unknown",
@@ -607,5 +642,41 @@ export const artistPoliticalAffiliation: Record<
 		era: "2020s",
 		affiliation: "Palestinian diaspora hip-hop",
 		notes: "London-based Palestinian hip-hop and punk artist.",
+	},
+	"Antara (عنترة)": {
+		era: "2010s",
+		affiliation: "Palestinian hip-hop / Gaza",
+		notes: "Gaza rap crew documented by IREMAM.",
+	},
+	"Tofan Gaza (MC Adam / طوفان غزة)": {
+		era: "2010s",
+		affiliation: "Palestinian hip-hop / Gaza",
+		notes: "Gaza rapper whose tracks are archived under MC Adam.",
+	},
+	"IL Mughrabi (محمود المغربي)": {
+		era: "2010s",
+		affiliation: "Palestinian hip-hop / Gaza",
+		notes: "Mahmoud al-Mughrabi; Gaza rapper documented by IREMAM.",
+	},
+	"Monem Awad (Fawda / منعم عوض)": {
+		era: "2010s",
+		affiliation: "Palestinian hip-hop / Gaza",
+		notes: "Gaza rapper who releases music as Fawda.",
+	},
+	"Tarek Faifty (طارق فيفتي)": {
+		era: "2010s",
+		affiliation: "Palestinian hip-hop / Gaza",
+		notes: "Gaza rapper documented by IREMAM under Fire Music.",
+	},
+	"Salameh (سلامة)": {
+		era: "2020s",
+		affiliation: "Palestinian diaspora hip-hop",
+		notes:
+			"Rapper who describes his background as Jordanian, Palestinian and Algerian.",
+	},
+	"Rajieen (راجعين)": {
+		era: "2020s",
+		affiliation: "Palestine solidarity collaboration",
+		notes: "Pan-Arab charity collaboration featuring Palestinian performers.",
 	},
 } as const;

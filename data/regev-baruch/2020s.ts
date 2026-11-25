@@ -42,4 +42,59 @@ export const regevBaruch2020s = [
 			song_info: "https://regevbaruch.bandcamp.com/album/super-sparta",
 		},
 	},
+	{
+		name: "השבנו (Heshavnu / We Restored)",
+		artist: "Regev Baruch (רגב ברוך)",
+		language: "Hebrew",
+		published_date: "2026-08-16",
+		political_leaning: "unknown",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "והשבנו את ההרתעה והשבנו את השקט לשנים רבות קדימה",
+			english_translation:
+				"And we restored deterrence, and we restored quiet for years to come.",
+		},
+		context: {
+			he: "ברוך מדמה מהדורת חדשות מ־2029 המכריזה על שקט לשנים, אף שבאותו דיווח נאמר שרק כשנה חלפה מאז העימות הקודם עם איראן. זו סאטירה, לא דיווח על מבצע אמיתי; חילופי התקיפות בין ישראל לאיראן ביוני 2025 ממחישים את הרקע ללשון הצבאית שהשיר מחקה.",
+			en: "Baruch imagines a 2029 newscast promising years of quiet while noting that barely a year has passed since the last clash with Iran. The broadcast is satire, not a report of an actual operation. The June 2025 exchange of strikes between Israel and Iran gives context to the military language it imitates.",
+			sources: [
+				{
+					url: "https://www.reuters.com/world/middle-east/big-questions-loom-over-trumps-announcement-israel-iran-ceasefire-deal-2025-06-24/",
+					en: "Reuters on the June 2025 Israel–Iran conflict",
+					he: "רויטרס על העימות בין ישראל לאיראן ביוני 2025",
+				},
+			],
+		},
+		links: {
+			lyrics: "https://regevbaruch.bandcamp.com/track/--4",
+			song_info: "https://regevbaruch.bandcamp.com/album/super-sparta",
+		},
+	},
+	{
+		name: "ספינה שוקעת (Sfina Shoka’at / Sinking Ship)",
+		artist: "Regev Baruch (רגב ברוך)",
+		language: "Hebrew",
+		published_date: "2026-08-16",
+		political_leaning: "left",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "לסרב לצבא להתגייס לשלום",
+			english_translation: "Refuse military service; enlist for peace.",
+		},
+		context: {
+			he: "ברוך הופך את לשון הגיוס לקריאה לסירוב ולפעולה למען שלום. לדבריו בראיון ל־+972, הוא השתתף במחאות נגד המלחמה בעזה; בשיר הוא שואל אם לעזוב את הארץ או להישאר ולנסות לשנות את המצב.",
+			en: "Baruch turns the language of enlistment into a call to refuse military service and work for peace. He told +972 Magazine he took part in protests over the Gaza war; in the song, he asks whether to leave the country or stay and try to change things.",
+			sources: [
+				{
+					url: "https://www.972mag.com/israeli-music-regev-baruch-super-sparta/",
+					en: "Regev Baruch interview in +972 Magazine",
+					he: "ראיון עם רגב ברוך במגזין +972",
+				},
+			],
+		},
+		links: {
+			lyrics: "https://regevbaruch.bandcamp.com/track/--12",
+			song_info: "https://regevbaruch.bandcamp.com/album/super-sparta",
+		},
+	},
 ] satisfies FileSongList;
