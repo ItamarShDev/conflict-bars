@@ -868,7 +868,6 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-title span + span {
 	}
 
 	.pass-it-on .pass-it-on-song-date {
-		max-width: 4.7rem;
 		text-align: center;
 	}
 
@@ -2618,6 +2617,7 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-scrolly-backdrop-wash-dark {
 .pass-it-on .pass-it-on-song-disclosure[data-leaning="left"] {
 	align-self: flex-start;
 	padding-left: 1.5rem;
+	padding-inline-end: 2.6rem;
 	box-shadow:
 		0 1px 0 rgb(255 255 255 / 85%) inset,
 		0 22px 48px rgb(0 0 0 / 48%),
@@ -2627,6 +2627,7 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-scrolly-backdrop-wash-dark {
 .pass-it-on .pass-it-on-song-disclosure[data-leaning="right"] {
 	align-self: flex-end;
 	padding-right: 1.5rem;
+	padding-inline-end: 2.6rem;
 	box-shadow:
 		0 1px 0 rgb(255 255 255 / 85%) inset,
 		0 22px 48px rgb(0 0 0 / 48%),
@@ -2637,7 +2638,7 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-scrolly-backdrop-wash-dark {
 .pass-it-on .pass-it-on-song-disclosure[data-leaning="unknown"] {
 	align-self: center;
 	width: min(600px, 94%);
-	padding-top: 0.7rem;
+	padding-top: 1.35rem;
 }
 
 .pass-it-on .pass-it-on-song-disclosure {
@@ -2648,7 +2649,7 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-scrolly-backdrop-wash-dark {
 	position: static;
 }
 
-/* Song year pinned onto the animated leaning-gradient edge */
+/* Song year pinned to the side opposite the reading start */
 .pass-it-on .pass-it-on-song-disclosure .pass-it-on-song-date {
 	margin: 0;
 }
@@ -2675,14 +2676,20 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-scrolly-backdrop-wash-dark {
 	pointer-events: none;
 }
 .pass-it-on
-	.pass-it-on-song-disclosure[data-leaning="left"]
-	.pass-it-on-song-date {
-	left: 0;
-}
+	.pass-it-on-song-disclosure[dir="ltr"][data-leaning="left"]
+	.pass-it-on-song-date,
 .pass-it-on
-	.pass-it-on-song-disclosure[data-leaning="right"]
+	.pass-it-on-song-disclosure[dir="ltr"][data-leaning="right"]
 	.pass-it-on-song-date {
 	right: 0;
+}
+.pass-it-on
+	.pass-it-on-song-disclosure[dir="rtl"][data-leaning="left"]
+	.pass-it-on-song-date,
+.pass-it-on
+	.pass-it-on-song-disclosure[dir="rtl"][data-leaning="right"]
+	.pass-it-on-song-date {
+	left: 0;
 }
 .pass-it-on
 	.pass-it-on-song-disclosure[data-leaning="center"]
@@ -2692,10 +2699,10 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-scrolly-backdrop-wash-dark {
 	.pass-it-on-song-date {
 	position: absolute;
 	top: 0;
-	inset-inline-start: 0.8rem;
 	z-index: 3;
 	padding-inline: 0.5rem;
 	padding-block: 0.15rem;
+	white-space: nowrap;
 	border-radius: 6px;
 	background: rgb(16 13 10 / 88%);
 	font-size: 0.72rem;
@@ -2704,6 +2711,23 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-scrolly-backdrop-wash-dark {
 	text-shadow: 0 1px 2px rgb(0 0 0 / 45%);
 	pointer-events: none;
 	transform: translateY(-10%);
+}
+
+.pass-it-on
+	.pass-it-on-song-disclosure[dir="ltr"][data-leaning="center"]
+	.pass-it-on-song-date,
+.pass-it-on
+	.pass-it-on-song-disclosure[dir="ltr"][data-leaning="unknown"]
+	.pass-it-on-song-date {
+	right: 0.8rem;
+}
+.pass-it-on
+	.pass-it-on-song-disclosure[dir="rtl"][data-leaning="center"]
+	.pass-it-on-song-date,
+.pass-it-on
+	.pass-it-on-song-disclosure[dir="rtl"][data-leaning="unknown"]
+	.pass-it-on-song-date {
+	left: 0.8rem;
 }
 
 .pass-it-on .pass-it-on-leaning-edge {
@@ -3044,10 +3068,12 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-scrolly-backdrop-wash-dark {
 
 	.pass-it-on .pass-it-on-song-disclosure[data-leaning="left"] {
 		padding-left: 1.05rem;
+		padding-inline-end: 2.6rem;
 	}
 
 	.pass-it-on .pass-it-on-song-disclosure[data-leaning="right"] {
 		padding-right: 1.05rem;
+		padding-inline-end: 2.6rem;
 	}
 
 	.pass-it-on .pass-it-on-song-disclosure[data-leaning="center"],
