@@ -1,5 +1,118 @@
 export const saintLevant2020s = [
 	{
+		name: "Jerusalem Freestyle",
+		artist: "Saint Levant (سانت ليفانت)",
+		language: "English/French",
+		published_date: "2020-09-26",
+		political_leaning: "left",
+		lyric_sample: {
+			original_language: "en",
+			hebrew: "תעודות זהות במחסומים, רק כדי שנדע שאנחנו במעמד נחות",
+			english_translation: "IDs at the checkpoints / Just so we know, we below",
+		},
+		context: {
+			he: "בסינגל הבכורה שלו, סנט ליוואנט מציג את בדיקת תעודות הזהות במחסומים כחלק משגרת תנועה לא שוויונית. הפנייה למאזינים שיבואו לירושלים ויראו בעצמם מחברת את הדימוי לדיון על חופש התנועה של פלסטינים.",
+			en: "On his debut single, Saint Levant portrays showing ID at checkpoints as part of an unequal system of movement. His invitation to visit Jerusalem and see for oneself connects the image to Palestinian freedom of movement.",
+			sources: [
+				{
+					url: "https://www.ochaopt.org/content/movement-and-access-west-bank-september-2024",
+					he: "סקירת האו״ם על מגבלות תנועה בגדה המערבית",
+					en: "UN overview of West Bank movement restrictions",
+				},
+			],
+		},
+		links: {
+			lyrics:
+				"https://lyrics.lol/artist/3328322-Saint-Levant/lyrics/6087168-Jerusalem-Freestyle",
+			song_info:
+				"https://music.apple.com/us/album/jerusalem-freestyle-single/1533173782",
+		},
+	},
+	{
+		name: "Haifa in a Tesla",
+		artist: "Saint Levant (سانت ليفانت)",
+		language: "English/Arabic/French",
+		published_date: "2021-08-04",
+		political_leaning: "left",
+		lyric_sample: {
+			original_language: "en",
+			hebrew: "כל מה שאנחנו רוצים זה להיות שווים",
+			english_translation: "When all we wanna be is equal",
+		},
+		context: {
+			he: "הדרישה לשוויון באה לצד תיאורים של עקירה ושל מפגש עם חייל. האזכור של ג׳ייקוב מהדהד סרטון שהופץ ב-2021 משייח׳ ג׳ראח, שבו מתנחל השיב לתושבת פלסטינית שהתנגדה להשתלטות על ביתה.",
+			en: "The demand for equality sits alongside depictions of displacement and an encounter with a soldier. The reference to Jacob echoes a 2021 video from Sheikh Jarrah in which a settler responded to a Palestinian resident objecting to the takeover of her home.",
+			sources: [
+				{
+					url: "https://www.aljazeera.com/news/2021/5/4/if-i-dont-steal-your-home-someone-else-will-jewish-settler-says",
+					he: "דיווח על הסרטון משייח׳ ג׳ראח",
+					en: "Reporting on the Sheikh Jarrah video",
+				},
+			],
+		},
+		links: {
+			lyrics: "https://www.letras.com/saint-levant/haifa-in-a-tesla/",
+			song_info:
+				"https://music.apple.com/us/album/haifa-in-a-tesla-single/1576292545",
+		},
+	},
+	{
+		name: "CAGED BIRDS SING",
+		artist: "Saint Levant (سانت ليفانت)",
+		language: "English",
+		published_date: "2022-02-08",
+		political_leaning: "unknown",
+		lyric_sample: {
+			original_language: "en",
+			hebrew: "אני מתגעגע לימים שבהם לא ידעתי שאני חי באזור מלחמה",
+			english_translation: "I miss not knowing I was living in a war zone",
+		},
+		context: {
+			he: "השיר עובר משיחה עם מטפל לזיכרון ילדות באזור מלחמה ולהבטחה לייצג את עזה על במה. ההצמדה הזאת קושרת את חוויית ההתבגרות בצל העימות בעזה לזיכרון ולחיים הרחק ממנה.",
+			en: "The song moves from a conversation with a therapist to a childhood memory of a war zone and a promise to represent Gaza onstage. That juxtaposition ties growing up amid conflict in Gaza to memory and life away from it.",
+			sources: [
+				{
+					url: "https://scenenoise.com/New-Music/Palestinian-Artist-Saint-Levant-Digs-Deep-on-Caged-Birds-Sin",
+					he: "סיקור הסינגל ב-SceneNoise",
+					en: "SceneNoise coverage of the single",
+				},
+			],
+		},
+		links: {
+			lyrics: "https://pisnicky-akordy.cz/saint-levant/caged-birds-sing",
+			song_info: "https://open.spotify.com/track/4CFNSWtBSAjZmD7dHZZtd2",
+		},
+	},
+	{
+		name: "5am in Paris",
+		artist: "Saint Levant (سانت ليفانت)",
+		language: "French/Arabic/English",
+		published_date: "2024-04-11",
+		political_leaning: "unknown",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "بس عمري بنساش تربايتي بالحرب",
+			hebrew: "אבל לעולם לא אשכח שגדלתי בזמן מלחמה",
+			english_translation: "But I’ll never forget growing up in wartime",
+		},
+		context: {
+			he: "בבית בערבית הזמר זוכר שגדל בזמן מלחמה; בפזמון בצרפתית גופו בפריז ולבו בעזה. השיר, שיצא במהלך מלחמת עזה ב-2024, מבטא געגוע ושייכות לכמה מקומות בלי לזהות אירוע צבאי מסוים.",
+			en: "In the Arabic verse the singer remembers growing up in wartime; in the French refrain his body is in Paris and his heart in Gaza. Released during the Gaza war in 2024, the song expresses longing and divided belonging without identifying a specific military event.",
+			sources: [
+				{
+					url: "https://www.grammy.com/news/saint-levant-love-letters-interview-palestinian-singer-arab-music/",
+					he: "ראיון על הילדות בעזה ועל האלבום",
+					en: "Interview about his childhood in Gaza and the album",
+				},
+			],
+		},
+		links: {
+			lyrics: "https://deira.saintlevant.com/5am-in-paris/",
+			song_info:
+				"https://music.apple.com/us/album/5am-in-paris-single/1737514325",
+		},
+	},
+	{
 		name: "DALOONA",
 		artist: "Saint Levant (سانت ليفانت)",
 		collaborators: ["47SOUL", "Shadi Alborini", "Qasem AlNajjar"],

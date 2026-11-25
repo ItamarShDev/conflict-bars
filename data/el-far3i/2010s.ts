@@ -2,6 +2,92 @@ import type { FileSongList } from "../../timeline/types";
 
 export const elFar3i2010s = [
 	{
+		name: "كل مرة بحكي عنّك (Kol Marra Bahki / Boikutt)",
+		artist: "El Far3i (الفرعي)",
+		language: "Arabic",
+		published_date: "2012-02-17",
+		political_leaning: "left",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "فلسطين أمي أختي و عشيقتي",
+			hebrew: "פלסטין היא אמי, אחותי ואהובתי",
+			english_translation: "Palestine is my mother, my sister and my beloved",
+		},
+		context: {
+			he: "הדובר פונה אל פלסטין כאל בת משפחה ואהובה. תיאור הבידוק הממושך בגשר והקריאה להחרים את ההסדר המדיני מעמידים את הזיקה האישית הזאת מול מגבלות התנועה ומחלוקת על הדרך לסיום העימות.",
+			en: "The narrator addresses Palestine as family and as a beloved. His description of a long inspection at a bridge and his call to boycott a political settlement set that personal bond against movement restrictions and disagreement over how to end the conflict.",
+			sources: [
+				{
+					url: "https://www.ochaopt.org/sites/default/files/ocha_opt_movement_and_access_report_september_2012_english.pdf",
+					he: "דוח האו״ם על מגבלות התנועה ב-2012",
+					en: "UN report on movement restrictions in 2012",
+				},
+			],
+		},
+		links: {
+			lyrics: "https://elfar3i.bandcamp.com/track/kol-marra-bahki-boikutt",
+			song_info: "https://elfar3i.bandcamp.com/album/far3-el-madakhil",
+		},
+	},
+	{
+		name: "خواطر شرق النّهر (Khwatir Sharq El Nahir)",
+		artist: "El Far3i (الفرعي)",
+		language: "Arabic",
+		published_date: "2012-02-17",
+		political_leaning: "left",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "إذا يوما ما رح أرجع على اللد بمنطاد",
+			hebrew: "אם יום אחד אחזור ללוד בכדור פורח",
+			english_translation: "If one day I return to Lod in a balloon",
+		},
+		context: {
+			he: "הדובר מדמיין שיבה ללוד בכדור פורח ומציב ראפ ממזרח לנהר הירדן מול ראפ ממערבו. אזכורי הכיבוש וההתנחלויות קושרים את השיבה המדומיינת לשאלת האדמה ולגבולות החוצים את האזור.",
+			en: "The narrator imagines returning to Lod in a balloon and sets rap east of the Jordan River beside rap from the west. References to occupation and settlements link this imagined return to land and the borders that divide the region.",
+			sources: [
+				{
+					url: "https://www.un.org/unispal/document/auto-insert-184942/",
+					he: "דוח האו״ם על שאלת פלסטין ב-2012",
+					en: "UN report on the question of Palestine in 2012",
+				},
+			],
+		},
+		links: {
+			lyrics:
+				"https://elfar3i.bandcamp.com/track/khwatir-sharq-el-nahir-dj-lethal-skillz",
+			song_info: "https://elfar3i.bandcamp.com/album/far3-el-madakhil",
+		},
+	},
+	{
+		name: "استشراق داخلي (Estishraq Dakhily / Internal Orientalism)",
+		artist: "El Far3i (الفرعي)",
+		language: "Arabic",
+		published_date: "2017-03-21",
+		political_leaning: "left",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "أنا ابن لاجئ على السكيت حب يشوف البيت",
+			hebrew: "אני בן של פליט שרצה בשקט לראות את הבית",
+			english_translation:
+				"I’m the son of a refugee who quietly wanted to see his home",
+		},
+		context: {
+			he: "השיר מצמיד את הרצון לראות שוב את הבית לדימויים של היתר מעבר ושל נסיעה אל הגשר. כשהדובר מכנה זאת כיבוש, הוא קושר את חוויית הפליטות למגבלות התנועה, בלי לנקוב בשמו של מעבר מסוים.",
+			en: "The song puts the desire to see home again next to images of a travel permit and a ride to the bridge. By calling this occupation, the narrator connects refugee identity to restrictions on movement without naming a specific crossing.",
+			sources: [
+				{
+					url: "https://www.ochaopt.org/content/west-bank-movement-and-access-west-bank",
+					he: "תיעוד האו״ם על תנועה וגישה בגדה המערבית",
+					en: "UN documentation of West Bank movement and access",
+				},
+			],
+		},
+		links: {
+			lyrics: "https://elfar3i.bandcamp.com/track/08-estishraq-dakhily",
+			song_info: "https://elfar3i.bandcamp.com/album/el-rajol-el-khashabi",
+		},
+	},
+	{
 		name: "فتنة (Fitna / Discord)",
 		artist: "El Far3i (الفرعي)",
 		language: "Arabic",

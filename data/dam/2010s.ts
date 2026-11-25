@@ -1,5 +1,62 @@
 export const dam2010s = [
 	{
+		name: "BROOKLYD (برووكليد)",
+		artist: "DAM (דאם)",
+		language: "Arabic/English",
+		published_date: "2019-06-07",
+		political_leaning: "left",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "مستحيل يعطوها جنسيه",
+			hebrew: "אין סיכוי שייתנו לה אזרחות",
+			english_translation: "There’s no way they’ll give her citizenship",
+		},
+		context: {
+			he: "השם מחבר את לוד וברוקלין, שתי הערים במסעו של הדובר. הקביעה שג׳קי, המתוארת כחצי סורית וחצי פלסטינית, לא תקבל אזרחות מציבה את שאלת המעמד והזוגיות לצד ההגירה לארצות הברית.",
+			en: "The title blends Lod and Brooklyn, the two cities in the narrator’s journey. His assertion that Jackie, described as half Syrian and half Palestinian, will not be granted citizenship puts legal status and relationships alongside migration to the United States.",
+			sources: [
+				{
+					url: "https://www.hrw.org/news/2018/02/14/israel-love-knows-boundaries",
+					he: "רקע על מגבלות איחוד משפחות",
+					en: "Background on family reunification restrictions",
+				},
+			],
+		},
+		links: {
+			lyrics:
+				"https://www.lingq.com/en/learn-arabic-online/courses/582708/brooklyd-brwwklyd-3610717/",
+			song_info: "https://damofficialband.bandcamp.com/track/brooklyd",
+		},
+	},
+	{
+		name: "SHARE’ 20 (شارع عشرين)",
+		artist: "DAM (דאם)",
+		language: "Arabic",
+		published_date: "2019-06-07",
+		political_leaning: "unknown",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "فيها خيانة إذا طلعت جابوتينسكي",
+			hebrew: "זאת בגידה אם אצא לרחוב ז׳בוטינסקי?",
+			english_translation: "Is it betrayal if I go out onto Jabotinsky Street?",
+		},
+		context: {
+			he: "הדובר מרפרפ על תחושת תקיעות ברחוב בלוד. השאלה אם יציאה לרחוב על שם זאב ז׳בוטינסקי היא בגידה הופכת נסיעה יומיומית לבדיחה על נאמנות לאומית בעיר מעורבת.",
+			en: "The narrator raps about feeling stuck on a street in Lod. Asking whether it is betrayal to go out onto a street named for Ze’ev Jabotinsky turns an everyday drive into a joke about national loyalty in a mixed city.",
+			sources: [
+				{
+					url: "https://www.thenationalnews.com/arts-culture/music/da-arab-mcs-palestine-s-first-hip-hop-group-on-politics-feminism-and-their-third-album-1.846525",
+					he: "כתבה על שורשי ההרכב בלוד ועל האלבום",
+					en: "Reporting on DAM’s roots in Lod and the album",
+				},
+			],
+		},
+		links: {
+			lyrics: "https://www.lyricdown.com/lyrics/dam-share-20-11804573",
+			song_info: "https://damofficialband.bandcamp.com/track/share-20",
+		},
+	},
+	{
 		name: "Dabke on the Moon (ندبك عالقمر)",
 		artist: "DAM (דאם)",
 		language: "Arabic",
