@@ -18,7 +18,8 @@ export const salameh2020s = [
 			en: "Salameh invokes Muhammad al-Durrah to link Palestinian childhood with recurring violence and voices opposition to occupation. Footage of al-Durrah’s death in Gaza in September 2000 became a symbol of the Second Intifada; the lyric is not evidence about how he died.",
 		},
 		links: {
-			lyrics: "https://kalimat.anghami.com/lyrics/1084335393",
+			lyrics:
+				"https://ghanniha.com/w/165879/%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86-%D8%B3%D9%84%D8%A7%D9%85%D8%A9",
 			song_info:
 				"https://music.apple.com/sz/album/%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86-single/1653131280",
 		},
