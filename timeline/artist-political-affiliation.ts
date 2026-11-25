@@ -663,11 +663,6 @@ export const artistPoliticalAffiliation: Record<
 		affiliation: "Palestinian hip-hop / Gaza",
 		notes: "Gaza rapper who releases music as Fawda.",
 	},
-	"Beesh Besaiso (بشير بسيسو)": {
-		era: "2010s",
-		affiliation: "Palestinian hip-hop / Gaza",
-		notes: "Rapper and producer documented by IREMAM.",
-	},
 	"Khalid Alnayrab (خالد النيرب)": {
 		era: "2010s",
 		affiliation: "Palestinian hip-hop / Gaza",
