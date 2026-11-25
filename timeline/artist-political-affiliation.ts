@@ -658,4 +658,35 @@ export const artistPoliticalAffiliation: Record<
 		affiliation: "Palestinian hip-hop / Gaza",
 		notes: "Mahmoud al-Mughrabi; Gaza rapper documented by IREMAM.",
 	},
+	"Monem Awad (Fawda / منعم عوض)": {
+		era: "2010s",
+		affiliation: "Palestinian hip-hop / Gaza",
+		notes: "Gaza rapper who releases music as Fawda.",
+	},
+	"Beesh Besaiso (بشير بسيسو)": {
+		era: "2010s",
+		affiliation: "Palestinian hip-hop / Gaza",
+		notes: "Rapper and producer documented by IREMAM.",
+	},
+	"Khalid Alnayrab (خالد النيرب)": {
+		era: "2010s",
+		affiliation: "Palestinian hip-hop / Gaza",
+		notes: "Rapper associated with Veto Band.",
+	},
+	"Tarek Faifty (طارق فيفتي)": {
+		era: "2010s",
+		affiliation: "Palestinian hip-hop / Gaza",
+		notes: "Gaza rapper documented by IREMAM under Fire Music.",
+	},
+	"Salameh (سلامة)": {
+		era: "2020s",
+		affiliation: "Palestinian diaspora hip-hop",
+		notes:
+			"Rapper who describes his background as Jordanian, Palestinian and Algerian.",
+	},
+	"Rajieen (راجعين)": {
+		era: "2020s",
+		affiliation: "Palestine solidarity collaboration",
+		notes: "Pan-Arab charity collaboration featuring Palestinian performers.",
+	},
 } as const;
