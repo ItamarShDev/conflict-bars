@@ -55,14 +55,14 @@ export const elFar3i2010s = [
 		links: {
 			lyrics:
 				"https://elfar3i.bandcamp.com/track/khwatir-sharq-el-nahir-dj-lethal-skillz",
-			song_info: "https://elfar3i.bandcamp.com/album/far3-el-madakhil",
+			song_info: "https://music.apple.com/us/album/far3-el-madakhil/1797088182",
 		},
 	},
 	{
 		name: "استشراق داخلي (Estishraq Dakhily / Internal Orientalism)",
 		artist: "El Far3i (الفرعي)",
 		language: "Arabic",
-		published_date: "2017-03-21",
+		published_date: "2017-03",
 		political_leaning: "left",
 		lyric_sample: {
 			original_language: "ar",
@@ -84,7 +84,8 @@ export const elFar3i2010s = [
 		},
 		links: {
 			lyrics: "https://elfar3i.bandcamp.com/track/08-estishraq-dakhily",
-			song_info: "https://elfar3i.bandcamp.com/album/el-rajol-el-khashabi",
+			song_info:
+				"https://music.apple.com/us/album/el-rajol-el-khashabi/1795150818",
 		},
 	},
 	{
