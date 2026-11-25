@@ -38,8 +38,8 @@ export function SolutionShiftChart({
 	const labels = t.filters.leaning;
 	const rowHeight = 27;
 	const top = 54;
-	const left = 50;
-	const laneWidth = 68;
+	const left = 62;
+	const laneWidth = 64;
 	const width = left + LEANINGS.length * laneWidth + 18;
 	const plotBottom = top + data.years.length * rowHeight;
 	const height = plotBottom + 28;
