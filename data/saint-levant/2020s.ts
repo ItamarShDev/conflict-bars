@@ -79,7 +79,8 @@ export const saintLevant2020s = [
 			],
 		},
 		links: {
-			lyrics: "https://pisnicky-akordy.cz/saint-levant/caged-birds-sing",
+			lyrics:
+				"https://lyrics.lol/artist/3328322-Saint-Levant/lyrics/8900403-CAGED-BIRDS-SING",
 			song_info: "https://open.spotify.com/track/4CFNSWtBSAjZmD7dHZZtd2",
 		},
 	},
