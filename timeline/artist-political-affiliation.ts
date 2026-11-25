@@ -663,11 +663,6 @@ export const artistPoliticalAffiliation: Record<
 		affiliation: "Palestinian hip-hop / Gaza",
 		notes: "Gaza rapper who releases music as Fawda.",
 	},
-	"Khalid Alnayrab (خالد النيرب)": {
-		era: "2010s",
-		affiliation: "Palestinian hip-hop / Gaza",
-		notes: "Rapper associated with Veto Band.",
-	},
 	"Tarek Faifty (طارق فيفتي)": {
 		era: "2010s",
 		affiliation: "Palestinian hip-hop / Gaza",
