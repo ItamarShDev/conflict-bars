@@ -8,5 +8,5 @@ export default async function BubblePage({
 }) {
 	const { lang } = await params;
 	requireLocale(lang);
-	redirect(lang === "he" ? "/stats?tab=leaning" : `/${lang}/stats?tab=leaning`);
+	redirect(lang === "he" ? "/stats/leaning" : `/${lang}/stats/leaning`);
 }

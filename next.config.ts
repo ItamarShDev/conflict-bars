@@ -14,7 +14,19 @@ const nextConfig: NextConfig = {
 			},
 			{
 				source: "/bubble",
-				destination: "/stats?tab=leaning",
+				destination: "/stats/leaning",
+				permanent: true,
+			},
+			{
+				source: "/stats",
+				has: [{ type: "query", key: "tab", value: "leaning" }],
+				destination: "/stats/leaning",
+				permanent: true,
+			},
+			{
+				source: "/en/stats",
+				has: [{ type: "query", key: "tab", value: "leaning" }],
+				destination: "/en/stats/leaning",
 				permanent: true,
 			},
 		];
@@ -28,6 +40,14 @@ const nextConfig: NextConfig = {
 			{
 				source: "/stats",
 				destination: "/he/stats",
+			},
+			{
+				source: "/stats/leaning",
+				destination: "/he/stats/leaning",
+			},
+			{
+				source: "/stats/resolution",
+				destination: "/he/stats/resolution",
 			},
 		];
 	},

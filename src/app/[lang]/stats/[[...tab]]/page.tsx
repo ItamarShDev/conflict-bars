@@ -12,9 +12,10 @@ import { getCatalogStats } from "@/utils/timeline";
 
 type StatsTab = "resolution" | "leaning";
 
-function parseTab(value: string | string[] | undefined): StatsTab | null {
+function parseTab(value: string[] | undefined): StatsTab | null {
 	if (value === undefined) return "resolution";
-	if (value === "resolution" || value === "leaning") return value;
+	if (value.length !== 1) return null;
+	if (value[0] === "resolution" || value[0] === "leaning") return value[0];
 	return null;
 }
 
@@ -51,20 +52,18 @@ export async function generateMetadata({
 
 export default async function StatsPage({
 	params,
-	searchParams,
 }: {
-	params: Promise<{ lang: string }>;
-	searchParams: Promise<{ tab?: string | string[] }>;
+	params: Promise<{ lang: string; tab?: string[] }>;
 }) {
-	const [{ lang }, query] = await Promise.all([params, searchParams]);
+	const { lang, tab: tabSegments } = await params;
 	requireLocale(lang);
-	const tab = parseTab(query.tab);
+	const tab = parseTab(tabSegments);
 	if (!tab) notFound();
 
 	const songs = loadFileSongs();
 	const t = translations[lang];
 	const stats = getCatalogStats(songs);
-	const languageTogglePath = `${lang === "he" ? "/en" : ""}/stats?tab=${tab}`;
+	const languageTogglePath = `${lang === "he" ? "/en/stats" : "/stats"}${tab === "leaning" ? "/leaning" : ""}`;
 
 	return (
 		<div
