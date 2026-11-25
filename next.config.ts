@@ -12,6 +12,11 @@ const nextConfig: NextConfig = {
 				destination: "/",
 				permanent: true,
 			},
+			{
+				source: "/bubble",
+				destination: "/stats/leaning",
+				permanent: true,
+			},
 		];
 	},
 	async rewrites() {
@@ -21,8 +26,16 @@ const nextConfig: NextConfig = {
 				destination: "/he",
 			},
 			{
-				source: "/bubble",
-				destination: "/he/bubble",
+				source: "/stats",
+				destination: "/he/stats",
+			},
+			{
+				source: "/stats/leaning",
+				destination: "/he/stats/leaning",
+			},
+			{
+				source: "/stats/resolution",
+				destination: "/he/stats/resolution",
 			},
 		];
 	},

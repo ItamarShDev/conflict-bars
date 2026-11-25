@@ -246,8 +246,8 @@ export function Timeline({
 				railOffset={false}
 				compact
 				nav={{
-					href: lang === "he" ? "/bubble" : "/en/bubble",
-					label: t.nav.bubble,
+					href: lang === "he" ? "/stats" : "/en/stats",
+					label: t.nav.stats,
 				}}
 				languageToggle={{
 					href: lang === "he" ? "/en" : "/",

@@ -43,3 +43,6 @@ next-env.d.ts
 # generated build artifacts
 /data/songs-generated.json
 .env*.local
+
+# local analysis caches
+/.cache/

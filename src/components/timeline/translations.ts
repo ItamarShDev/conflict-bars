@@ -178,10 +178,31 @@ export const translations = {
 			},
 		},
 		nav: {
-			bubble: "Chart",
+			bubble: "Stats",
+			stats: "Stats",
 			timeline: "Timeline",
 		},
 		languageToggle: "עברית",
+		stats: {
+			title: "Catalog statistics",
+			subtitle: "Political patterns across the archive",
+			description:
+				"Two complementary charts: release volume by political leaning, and the changing presence of coexistence and two-state aspirations in the lyrics.",
+			tabsLabel: "Statistics views",
+			resolutionTab: "Resolution aspirations",
+			leaningTab: "Releases by leaning",
+			resolutionChartTitle: "Shared-resolution aspirations over time",
+			resolutionChartDescription:
+				"Each bubble counts songs classified as aspiring to peaceful coexistence or a shared political resolution. Circle area is proportional to the count; solid inner circles mark explicit two-state support. Small dots mark exclusive or anti-compromise songs in the same year and leaning.",
+			resolutionPositiveLabel: "peaceful-resolution songs",
+			explicitTwoStateLabel: "explicit two-state songs",
+			shareLabel: "of classified catalog",
+			legendPositive: "peaceful/shared resolution",
+			legendExplicit: "explicit two-state",
+			legendOpposed: "exclusive/opposed present",
+			methodNote:
+				"Method: lyrics-linked automated classification with manual review of positive and opposed results; evidence came from {{full}} full lyric texts, {{partial}} partial texts, and {{excerpt}} catalog excerpts. Interpretive classifications are conservative and linked to sources. Because matches are sparse and lyric coverage is uneven, treat the chart as documented examples over time rather than a representative trend measurement.",
+		},
 		bubble: {
 			title: "Releases by political leaning",
 			subtitle: "Songs per year — left vs right",
@@ -365,10 +386,31 @@ export const translations = {
 			},
 		},
 		nav: {
-			bubble: "תרשים",
+			bubble: "סטטיסטיקה",
+			stats: "סטטיסטיקה",
 			timeline: "ציר זמן",
 		},
 		languageToggle: "English",
+		stats: {
+			title: "קצת מספרים",
+			subtitle: "דפוסים פוליטיים לאורך הארכיון",
+			description:
+				"שני תרשימים משלימים: היקף שירים לפי נטייה פוליטית, והשתנות נוכחות הכמיהה לדו־קיום ולפתרון שתי המדינות במילים.",
+			tabsLabel: "תצוגות סטטיסטיקה",
+			resolutionTab: "כמיהה לפתרון",
+			leaningTab: "שירים לפי נטייה",
+			resolutionChartTitle: "כמיהה לפתרון משותף לאורך זמן",
+			resolutionChartDescription:
+				"כל בועה סופרת שירים שסווגו כמבטאים כמיהה לדו־קיום שלום או לפתרון מדיני משותף. שטח העיגול יחסי לכמות; עיגול פנימי מלא מסמן תמיכה מפורשת בשתי מדינות. נקודות קטנות מסמנות שירים בלעדיים או מתנגדי פשרה באותה שנה ונטייה.",
+			resolutionPositiveLabel: "שירי פתרון שליו",
+			explicitTwoStateLabel: "שירי שתי מדינות מפורשים",
+			shareLabel: "מהקטלוג המסווג",
+			legendPositive: "פתרון שליו/משותף",
+			legendExplicit: "שתי מדינות במפורש",
+			legendOpposed: "קיים שיר בלעדי/מתנגד",
+			methodNote:
+				"שיטה: סיווג אוטומטי של מילים המקושרות לשירים, עם בדיקה ידנית של תוצאות חיוביות ומתנגדות; המקורות כללו {{full}} מילים מלאות, {{partial}} מילים חלקיות ו־{{excerpt}} קטעים מהקטלוג. הסיווגים הפרשניים שמרניים ומקושרים למקורות. מכיוון שההתאמות מעטות וכיסוי המילים אינו אחיד, יש לראות בתרשים דוגמאות מתועדות לאורך זמן ולא מדד מייצג למגמה.",
+		},
 		bubble: {
 			title: "שירים לפי נטייה פוליטית",
 			subtitle: "שירים לפי שנה — שמאל מול ימין",
