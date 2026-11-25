@@ -50,11 +50,12 @@ This doc orients AI/automation agents to work safely and effectively on Conflict
   language?: "Hebrew" | "Arabic" | "English" | "Hebrew/Arabic",
   published_date: "YYYY" | "YYYY-MM" | "YYYY-MM-DD",
   lyric_sample?: { hebrew?: string; arabic?: string; english_translation?: string },
-  context?: { he?: string; en?: string },
+  context?: { he?: string; en?: string; sources?: { url: string; he: string; en: string }[] },
   links?: { lyrics?: string; song_info?: string; youtube?: string },
 }
 ```
 - Era buckets are file names: `90s.ts`, `2000s.ts`, `2010s.ts`, `2020s.ts`; each artist's `index.ts` re-exports the combined array. A song must live in the era file matching its year.
+- Link background sources in `context.sources` with labels in both languages. Keep lyric and recording links separate.
 - Shared types: `timeline/types.ts`.
 
 ### Song shape (Convex)

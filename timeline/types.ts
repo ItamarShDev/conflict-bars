@@ -45,7 +45,11 @@ export type FileSong = {
 		arabic?: string;
 		english_translation?: string;
 	};
-	context?: { he?: string; en?: string };
+	context?: {
+		he?: string;
+		en?: string;
+		sources?: { url: string; he: string; en: string }[];
+	};
 	full_lyrics?: { hebrew?: string; english_translation?: string };
 	links?: { lyrics?: string; song_info?: string; youtube?: string };
 };

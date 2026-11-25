@@ -37,6 +37,13 @@ export const haykal2020s = [
 		context: {
 			en: "After describing lung surgery, Haykal watches footage of a hospital in Gaza and describes it as ruined. A May 2026 WHO analysis documented widespread hospital damage in Gaza; the song does not identify the hospital in the video.",
 			he: "אחרי שהוא מספר על ניתוח בריאה, היכל צופה בתיעוד של בית חולים בעזה ומתאר אותו כהרוס. דו״ח של ארגון הבריאות העולמי ממאי 2026 תיעד נזק נרחב לבתי החולים בעזה; השיר אינו מזהה את בית החולים שבסרטון.",
+			sources: [
+				{
+					url: "https://reliefweb.int/report/occupied-palestinian-territory/public-health-situation-analysis-phsa-hostilities-occupied-palestinian-territory-opt-11-may-2026",
+					en: "WHO analysis of Gaza hospital damage",
+					he: "ניתוח ארגון הבריאות העולמי על הפגיעה בבתי החולים בעזה",
+				},
+			],
 		},
 	},
 	{

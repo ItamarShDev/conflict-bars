@@ -1,5 +1,13 @@
 import type { FileSongList } from "../../timeline/types";
 
+const surBaherSources = [
+	{
+		url: "https://www.unocha.org/publications/report/occupied-palestinian-territory/un-officials-statement-demolitions-sur-bahir",
+		en: "UN statement on the Sur Baher demolitions",
+		he: "הודעת האו״ם על ההריסות בצור באהר",
+	},
+];
+
 export const lounar2020s = [
 	{
 		name: "Keemtak (قيمتك)",
@@ -40,6 +48,7 @@ export const lounar2020s = [
 		context: {
 			en: "Lounar contrasts his safety abroad with the sirens and gunfire his relatives live with. He dedicates the track to the displaced diaspora; the label identifies Sur Baher as his hometown. The UN documented displacement from demolitions in Sur Baher, but the lyric does not identify a specific incident.",
 			he: "לונאר מציב את הביטחון שלו בחו״ל מול הסירנות והיריות שקרוביו חיים לצידן. הוא מקדיש את השיר לפזורה שנעקרה, והלייבל מציין שמקום מוצאו הוא צור באהר. האו״ם תיעד עקירה בעקבות הריסות בצור באהר, אך המילים אינן מצביעות על תקרית מסוימת.",
+			sources: surBaherSources,
 		},
 	},
 	{
@@ -60,6 +69,7 @@ export const lounar2020s = [
 		context: {
 			en: "The call to imagine his people free follows a verse about watching distress from the safety of a screen. The label presents the EP as commentary on Palestinian displacement and names Sur Baher, where UN officials documented displacement following demolitions, as Lounar’s hometown. The song does not name a particular event.",
 			he: "הקריאה לדמיין את בני עמו חופשיים באה אחרי בית שבו לונאר מתאר צפייה במצוקה מבעד למסך, ממקום בטוח. הלייבל מציג את האי־פי כעיסוק בעקירה הפלסטינית ומציין שמקום מוצאו של לונאר הוא צור באהר, שם תיעדו נציגי האו״ם עקירה בעקבות הריסות. השיר אינו מציין אירוע מסוים.",
+			sources: surBaherSources,
 		},
 	},
 ] satisfies FileSongList;

@@ -1,5 +1,13 @@
 import type { FileSongList } from "../../timeline/types";
 
+const shaharHalelInterviewSources = [
+	{
+		url: "https://www.jjuiceradio.com/index.php/jigga-juice/item/962-ep730-shaharhalel.html",
+		en: "Shahar Halel interview on Jigga Juice",
+		he: "ראיון עם שחר הלל בתוכנית Jigga Juice",
+	},
+];
+
 export const shaharHalel2020s = [
 	{
 		name: "שטח אש (Shetach Esh / Firing Zone)",
@@ -101,6 +109,7 @@ export const shaharHalel2020s = [
 		context: {
 			he: "הלל משתמש בדימוי של קבוצת הכדורגל בית״ר כדי לדחות את הרעיון שחייבים לבחור קבוצה. השיר פותח אלבום שעליו סיפר הלל בראיון ל־Jigga Juice כי הוא מחבר את חייו למלחמה שאחרי 7 באוקטובר.",
 			en: "Halel invokes the Beitar football club to question the pressure to pick a team. The track opens an album that, as Halel told Jigga Juice, connects his own life to the war after October 7.",
+			sources: shaharHalelInterviewSources,
 		},
 		links: {
 			lyrics:
@@ -122,6 +131,7 @@ export const shaharHalel2020s = [
 		context: {
 			he: "באלבום העוסק בחיים אחרי 7 באוקטובר, הלל שואל על מה יוצאים לקרב ועל מי דואגים. הוא מספר שאמו אמרה לו שעד שיגדל כבר לא יהיה צורך בצבא, וכעת אומרת זאת שוב לאחיינו.",
 			en: "On an album about life after October 7, Halel asks what people go into battle for and whom they look after. He recalls his mother telling him there would be no army by the time he grew up, and saying the same thing years later to his nephew.",
+			sources: shaharHalelInterviewSources,
 		},
 		links: {
 			lyrics:
@@ -144,6 +154,7 @@ export const shaharHalel2020s = [
 		context: {
 			he: "הלל מציב שאלה על מחיר החיים במלחמה לצד הצהרת נאמנות למולדת. באלבום שנכתב בצל המלחמה אחרי 7 באוקטובר, הוא מתאר את המלחמה כשבר דורי, בלי להציע עמדה מדינית מסוימת.",
 			en: "Halel asks what wartime life still demands of people while declaring loyalty to his homeland. On an album made in the shadow of the war after October 7, he treats the war as a generational rupture without spelling out a policy position.",
+			sources: shaharHalelInterviewSources,
 		},
 		links: {
 			lyrics:
@@ -166,6 +177,13 @@ export const shaharHalel2020s = [
 		context: {
 			he: "הלל מעמיד את אמונת אמו בנס מול הפציעה של אחיו. ביקורת האלבום ב״הארץ״ מאשרת שאחד מאחיו נפצע בעזה, והשיר מציב את הפציעה לצד זיכרון מהלוויות במבצע צוק איתן ב־2014.",
 			en: "Halel sets his mother’s belief in a miracle against his brother’s injury. Haaretz’s album review notes that his brother was wounded in Gaza; the song sets that injury alongside a childhood memory of funerals during the 2014 Gaza war.",
+			sources: [
+				{
+					url: "https://www.haaretz.co.il/gallery/music/selective-hearing/2025-10-16/ty-article-magazine/.highlight/00000199-d860-dde4-a7bd-d87e28bf0000",
+					en: "Haaretz review of Hilkhot Milhama",
+					he: "ביקורת ״הארץ״ על ״הלכות מלחמה״",
+				},
+			],
 		},
 		links: {
 			lyrics:
@@ -188,6 +206,7 @@ export const shaharHalel2020s = [
 		context: {
 			he: "הלל מתאר שכן שאין בביתו מרחב מוגן, ואילו שירו מערער על ההאדרה של מוות למען המולדת. באלבום העוסק בחיים אחרי 7 באוקטובר, השיר קושר בין תחושת חוסר ביטחון בבית לבין ספקות לגבי השפה שבה מדברים על המלחמה.",
 			en: "Halel describes a neighbour without a safe room, while Shiru questions the glorification of dying for one’s country. On an album about life after October 7, the track connects insecurity at home with doubts about the language people use to talk about war.",
+			sources: shaharHalelInterviewSources,
 		},
 		links: {
 			lyrics:

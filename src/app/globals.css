@@ -1793,6 +1793,9 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-track-number {
 .pass-it-on .pass-it-on-song-context {
 	color: #6f6759;
 }
+.pass-it-on .pass-it-on-song-citation {
+	color: #23596a;
+}
 .pass-it-on .pass-it-on-leaning {
 	gap: 0.28rem;
 }
