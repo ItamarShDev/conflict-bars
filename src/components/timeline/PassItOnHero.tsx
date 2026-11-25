@@ -99,9 +99,11 @@ export function PassItOnHero({
 						<span>{copy.titleLead}</span>
 						<span>{copy.titleEmphasis}</span>
 					</h1>
-					<p className="pass-it-on-hebrew" lang="he" dir="rtl">
-						{copy.hebrewTagline}
-					</p>
+					{lang === "he" && (
+						<p className="pass-it-on-hebrew" lang="he" dir="rtl">
+							{copy.hebrewTagline}
+						</p>
+					)}
 					<p className="pass-it-on-subtitle">{copy.subtitle}</p>
 				</div>
 				<div className="pass-it-on-hero-art">

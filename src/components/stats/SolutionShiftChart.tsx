@@ -1,4 +1,8 @@
-import { LEANING_COLORS, LEANINGS } from "@/components/bubble/chart-data";
+import {
+	type ConflictBand,
+	LEANING_COLORS,
+	LEANINGS,
+} from "@/components/bubble/chart-data";
 import { translations } from "@/components/timeline/translations";
 import type { FileSongList } from "../../../timeline/types";
 import { buildResolutionChartData } from "./solution-chart-data";
@@ -6,10 +10,15 @@ import { buildResolutionChartData } from "./solution-chart-data";
 interface SolutionShiftChartProps {
 	songs: FileSongList;
 	lang: "en" | "he";
+	bands: ConflictBand[];
 }
 
+type ResolutionCell = ReturnType<
+	typeof buildResolutionChartData
+>["cells"][number][number];
+
 function titleFor(
-	cell: ReturnType<typeof buildResolutionChartData>["cells"][number][number],
+	cell: ResolutionCell,
 	labels: Record<string, string>,
 ): string {
 	const names = cell.positive
@@ -19,22 +28,40 @@ function titleFor(
 	return `${cell.year} · ${labels[cell.leaning]} · ${cell.positive.length}/${cell.total}\n${names}`;
 }
 
-export function SolutionShiftChart({ songs, lang }: SolutionShiftChartProps) {
+export function SolutionShiftChart({
+	songs,
+	lang,
+	bands,
+}: SolutionShiftChartProps) {
 	const t = translations[lang] as (typeof translations)["en"];
 	const data = buildResolutionChartData(songs);
 	const labels = t.filters.leaning;
-	const rowHeight = 58;
-	const top = 42;
-	const left = 112;
-	const yearWidth = 34;
-	const width = left + data.years.length * yearWidth + 28;
-	const height = top + LEANINGS.length * rowHeight + 34;
-	const maxRadius = 22;
+	const rowHeight = 27;
+	const top = 54;
+	const left = 50;
+	const laneWidth = 68;
+	const width = left + LEANINGS.length * laneWidth + 18;
+	const plotBottom = top + data.years.length * rowHeight;
+	const height = plotBottom + 28;
+	const laneX = (index: number) => left + index * laneWidth + laneWidth / 2;
+	const yearY = (index: number) => top + index * rowHeight + rowHeight / 2;
 	const radius = (count: number) =>
-		count === 0
-			? 0
-			: Math.max(5, Math.sqrt(count / data.maxPositive) * maxRadius);
+		count === 0 ? 0 : 4.5 + Math.sqrt(count / data.maxPositive) * 5.5;
 	const percent = Math.round((data.totals.positive / data.totals.songs) * 100);
+	const minYear = data.years[0];
+	const maxYear = data.years[data.years.length - 1];
+	const yForYear = (year: number) => top + (year - minYear) * rowHeight;
+	const positiveThreads = LEANINGS.map((leaning, laneIndex) =>
+		data.cells
+			.flatMap((rowCells, yearIndex) =>
+				rowCells
+					.filter(
+						(cell) => cell.leaning === leaning && cell.positive.length > 0,
+					)
+					.map((cell) => `${laneX(laneIndex)},${yearY(yearIndex)}`),
+			)
+			.join(" "),
+	);
 
 	return (
 		<section
@@ -70,69 +97,110 @@ export function SolutionShiftChart({ songs, lang }: SolutionShiftChartProps) {
 					aria-label={t.stats.resolutionChartTitle}
 					className="resolution-chart-svg"
 				>
+					{bands.map((band) => {
+						const bandTop = Math.max(yForYear(band.start), top - 4);
+						const bandBottom = Math.min(
+							yForYear(band.end) + rowHeight,
+							plotBottom,
+						);
+						if (band.end < minYear || band.start > maxYear) return null;
+						return (
+							<rect
+								key={`${band.start}-${band.title}`}
+								x={left - 7}
+								y={bandTop}
+								width={width - left - 14}
+								height={Math.max(4, bandBottom - bandTop)}
+								className="resolution-conflict-band"
+							>
+								<title>{band.title}</title>
+							</rect>
+						);
+					})}
+
+					<line
+						x1={left - 18}
+						y1={top - 10}
+						x2={left - 18}
+						y2={plotBottom}
+						className="resolution-time-spine"
+					/>
+
 					{data.years.map((year, index) => {
-						const x = left + index * yearWidth + yearWidth / 2;
+						const y = yearY(index);
+						const decade = year % 10 === 0;
 						return (
 							<g key={year}>
-								{index % 5 === 0 && (
-									<text
-										x={x}
-										y={22}
-										textAnchor="middle"
-										className="resolution-year-label"
-									>
-										{year}
-									</text>
+								{(decade || index === 0) && (
+									<line
+										x1={left - 7}
+										x2={width - 10}
+										y1={y - rowHeight / 2}
+										y2={y - rowHeight / 2}
+										className="resolution-grid strong"
+									/>
 								)}
-								<line
-									x1={x}
-									x2={x}
-									y1={top - 8}
-									y2={top + LEANINGS.length * rowHeight}
+								<circle
+									cx={left - 18}
+									cy={y}
+									r={decade ? 3.2 : 2}
 									className={
-										index % 5 === 0
-											? "resolution-grid strong"
-											: "resolution-grid"
+										decade
+											? "resolution-time-dot decade"
+											: "resolution-time-dot"
 									}
 								/>
+								<text
+									x={left - 26}
+									y={y + 3.5}
+									textAnchor="end"
+									className={
+										decade
+											? "resolution-year-label decade"
+											: "resolution-year-label"
+									}
+								>
+									{year}
+								</text>
 							</g>
 						);
 					})}
-					{LEANINGS.map((leaning, row) => {
-						const y = top + row * rowHeight + rowHeight / 2;
+
+					{LEANINGS.map((leaning, index) => {
+						const x = laneX(index);
 						return (
 							<g key={leaning}>
+								<line
+									x1={x}
+									y1={top - 4}
+									x2={x}
+									y2={plotBottom}
+									className="resolution-lane-line"
+								/>
 								<text
-									x={left - 12}
-									y={y + 4}
-									textAnchor="end"
+									x={x}
+									y={24}
+									textAnchor="middle"
 									className="resolution-row-label"
 									fill={LEANING_COLORS[leaning]}
 								>
 									{labels[leaning]}
 								</text>
-								<line
-									x1={left - 4}
-									x2={width - 12}
-									y1={y + rowHeight / 2}
-									y2={y + rowHeight / 2}
-									className="resolution-grid"
+								<polyline
+									points={positiveThreads[index]}
+									className="resolution-positive-thread"
+									style={{ color: LEANING_COLORS[leaning] }}
 								/>
 							</g>
 						);
 					})}
+
 					{data.cells.flatMap((rowCells, yearIndex) =>
-						rowCells.map((cell, rowIndex) => {
-							const x = left + yearIndex * yearWidth + yearWidth / 2;
-							const y = top + rowIndex * rowHeight + rowHeight / 2;
+						rowCells.map((cell, laneIndex) => {
+							const x = laneX(laneIndex);
+							const y = yearY(yearIndex);
 							const outer = radius(cell.positive.length);
-							const inner = cell.explicit.length
-								? Math.max(
-										4,
-										Math.sqrt(cell.explicit.length / data.maxPositive) *
-											maxRadius,
-									)
-								: 0;
+							const inner = outer * 0.48;
 							return (
 								<g
 									key={`${cell.year}-${cell.leaning}`}
@@ -148,7 +216,7 @@ export function SolutionShiftChart({ songs, lang }: SolutionShiftChartProps) {
 											fill={LEANING_COLORS[cell.leaning]}
 										/>
 									)}
-									{inner > 0 && (
+									{cell.explicit.length > 0 && (
 										<circle
 											cx={x}
 											cy={y}
@@ -160,7 +228,7 @@ export function SolutionShiftChart({ songs, lang }: SolutionShiftChartProps) {
 									{cell.positive.length > 0 && (
 										<text
 											x={x}
-											y={y + 4}
+											y={y + 3.5}
 											textAnchor="middle"
 											className="resolution-count"
 										>
@@ -169,9 +237,9 @@ export function SolutionShiftChart({ songs, lang }: SolutionShiftChartProps) {
 									)}
 									{cell.opposed.length > 0 && (
 										<circle
-											cx={x + 11}
-											cy={y - 13}
-											r="3"
+											cx={x + 10}
+											cy={y - 8}
+											r="2.7"
 											className="resolution-opposed-dot"
 										/>
 									)}

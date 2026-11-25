@@ -97,7 +97,11 @@ export default async function StatsPage({
 			<main className="pass-it-on-chart-main">
 				<div className="pass-it-on-chart-content">
 					{tab === "resolution" ? (
-						<SolutionShiftChart songs={songs} lang={lang} />
+						<SolutionShiftChart
+							songs={songs}
+							lang={lang}
+							bands={getConflictBands(undefined, lang)}
+						/>
 					) : (
 						<BubbleChart
 							songs={songs}

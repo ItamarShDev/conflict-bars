@@ -3184,8 +3184,8 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-scrolly-backdrop-wash-dark {
 	padding: 0.25rem;
 	border: 1px solid var(--pass-rule);
 	border-radius: 999px;
-	background: color-mix(in srgb, var(--pass-paper) 78%, white);
-	box-shadow: 0 12px 30px rgb(42 31 20 / 0.08);
+	background: var(--pass-paper-hi);
+	box-shadow: 0 8px 22px color-mix(in srgb, var(--pass-ink) 12%, transparent);
 }
 
 .stats-tabs a {
@@ -3207,8 +3207,8 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-scrolly-backdrop-wash-dark {
 }
 
 .stats-tabs a.active {
-	background: var(--pass-ink);
-	color: var(--pass-paper);
+	background: var(--pass-yellow);
+	color: #2b241d;
 }
 
 .resolution-chart {
@@ -3218,11 +3218,11 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-scrolly-backdrop-wash-dark {
 	background:
 		radial-gradient(
 			circle at top left,
-			rgb(190 78 53 / 0.08),
+			color-mix(in srgb, var(--pass-yellow) 12%, transparent),
 			transparent 34rem
 		),
-		color-mix(in srgb, var(--pass-paper) 90%, white);
-	box-shadow: 0 24px 70px rgb(42 31 20 / 0.11);
+		var(--pass-paper-hi);
+	box-shadow: 0 24px 70px color-mix(in srgb, var(--pass-ink) 16%, transparent);
 }
 
 .resolution-chart-summary {
@@ -3236,7 +3236,7 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-scrolly-backdrop-wash-dark {
 	padding: 1rem;
 	border: 1px solid var(--pass-rule);
 	border-radius: 18px;
-	background: rgb(255 255 255 / 0.5);
+	background: color-mix(in srgb, var(--pass-paper) 68%, transparent);
 }
 
 .resolution-chart-summary strong {
@@ -3272,16 +3272,16 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-scrolly-backdrop-wash-dark {
 }
 
 .resolution-chart-scroll {
-	overflow-x: auto;
+	overflow-x: hidden;
 	margin-top: 1rem;
 	padding-bottom: 0.4rem;
 }
 
 .resolution-chart-svg {
 	display: block;
-	min-width: 860px;
-	width: 100%;
+	width: min(100%, 560px);
 	height: auto;
+	margin-inline: auto;
 }
 
 .resolution-year-label,
@@ -3300,11 +3300,53 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-scrolly-backdrop-wash-dark {
 	stroke: color-mix(in srgb, var(--pass-muted) 32%, transparent);
 }
 
+.resolution-conflict-band {
+	fill: var(--pass-yellow);
+	opacity: 0.075;
+}
+
+.resolution-time-spine {
+	stroke: var(--pass-muted);
+	stroke-width: 1.6;
+	stroke-opacity: 0.45;
+}
+
+.resolution-time-dot {
+	fill: var(--pass-paper-hi);
+	stroke: var(--pass-muted);
+	stroke-width: 1.2;
+}
+
+.resolution-time-dot.decade {
+	fill: var(--pass-yellow);
+	stroke: var(--pass-ink);
+}
+
+.resolution-year-label.decade {
+	fill: var(--pass-ink);
+	font-size: 12px;
+}
+
+.resolution-lane-line {
+	stroke: var(--pass-rule);
+	stroke-dasharray: 2 7;
+	stroke-width: 1;
+}
+
+.resolution-positive-thread {
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 1.5;
+	stroke-dasharray: 2 5;
+	stroke-opacity: 0.24;
+}
+
 .resolution-positive-bubble {
-	fill-opacity: 0.2;
+	fill-opacity: 0.28;
 	stroke-width: 2;
 	stroke: currentColor;
-	stroke-opacity: 0.72;
+	stroke-opacity: 0.9;
+	filter: drop-shadow(0 0 5px currentColor);
 }
 
 .resolution-explicit-bubble {
@@ -3314,15 +3356,15 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-scrolly-backdrop-wash-dark {
 }
 
 .resolution-count {
-	font-size: 10px;
+	font-size: 9px;
 	font-weight: 950;
 	fill: var(--pass-ink);
 	pointer-events: none;
 }
 
 .resolution-opposed-dot {
-	fill: #2b2118;
-	stroke: var(--pass-paper);
+	fill: var(--pass-ink);
+	stroke: var(--pass-paper-hi);
 	stroke-width: 1;
 }
 
@@ -3361,19 +3403,22 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-scrolly-backdrop-wash-dark {
 .resolution-chart-legend .legend-dot {
 	width: 8px;
 	height: 8px;
-	background: #2b2118;
+	background: var(--pass-ink);
 	border: 0;
 }
 
 @media (max-width: 640px) {
 	.stats-tabs {
-		display: grid;
-		grid-template-columns: 1fr;
-		width: calc(100% - 2rem);
-		border-radius: 22px;
+		display: flex;
+		width: min(100%, 25rem);
+		border-radius: 999px;
 	}
 
 	.stats-tabs a {
+		flex: 1;
+		padding: 0.48rem 0.55rem;
+		font-size: 0.72rem;
+		line-height: 1.15;
 		text-align: center;
 	}
 
@@ -3384,9 +3429,5 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-scrolly-backdrop-wash-dark {
 
 	.resolution-chart-summary {
 		grid-template-columns: 1fr;
-	}
-
-	.resolution-chart-svg {
-		min-width: 980px;
 	}
 }
