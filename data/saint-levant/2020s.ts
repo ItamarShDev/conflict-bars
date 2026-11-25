@@ -15,9 +15,9 @@ export const saintLevant2020s = [
 			en: "On his debut single, Saint Levant portrays showing ID at checkpoints as part of an unequal system of movement. His invitation to visit Jerusalem and see for oneself connects the image to Palestinian freedom of movement.",
 			sources: [
 				{
-					url: "https://www.ochaopt.org/content/movement-and-access-west-bank-september-2024",
-					he: "סקירת האו״ם על מגבלות תנועה בגדה המערבית",
-					en: "UN overview of West Bank movement restrictions",
+					url: "https://www.ochaopt.org/content/longstanding-access-restrictions-continue-undermine-living-conditions-west-bank--palestinians",
+					he: "סקירת האו״ם על מגבלות תנועה בגדה המערבית ב-2020",
+					en: "2020 UN overview of West Bank movement restrictions",
 				},
 			],
 		},
