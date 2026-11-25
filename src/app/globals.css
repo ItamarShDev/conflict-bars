@@ -3154,3 +3154,239 @@ html[data-theme="boombox"] .pass-it-on .pass-it-on-scrolly-backdrop-wash-dark {
 		transform: none;
 	}
 }
+
+/* Stats and resolution-shift chart */
+.stats-intro {
+	max-width: 980px;
+}
+
+.stats-kicker {
+	margin: 0 0 0.4rem;
+	font-size: 0.72rem;
+	font-weight: 900;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--pass-muted);
+}
+
+.stats-description {
+	max-width: 760px;
+	margin: 0.8rem auto 0;
+	color: var(--pass-muted);
+	font-size: 0.95rem;
+	line-height: 1.6;
+}
+
+.stats-tabs {
+	display: inline-flex;
+	gap: 0.35rem;
+	margin-top: 1.15rem;
+	padding: 0.25rem;
+	border: 1px solid var(--pass-rule);
+	border-radius: 999px;
+	background: color-mix(in srgb, var(--pass-paper) 78%, white);
+	box-shadow: 0 12px 30px rgb(42 31 20 / 0.08);
+}
+
+.stats-tabs a {
+	border-radius: 999px;
+	padding: 0.62rem 1rem;
+	font-size: 0.82rem;
+	font-weight: 900;
+	color: var(--pass-muted);
+	text-decoration: none;
+	transition:
+		background 160ms ease,
+		color 160ms ease,
+		transform 160ms ease;
+}
+
+.stats-tabs a:hover {
+	color: var(--pass-ink);
+	transform: translateY(-1px);
+}
+
+.stats-tabs a.active {
+	background: var(--pass-ink);
+	color: var(--pass-paper);
+}
+
+.resolution-chart {
+	padding: clamp(1rem, 3vw, 2rem);
+	border: 1px solid var(--pass-rule);
+	border-radius: 28px;
+	background:
+		radial-gradient(
+			circle at top left,
+			rgb(190 78 53 / 0.08),
+			transparent 34rem
+		),
+		color-mix(in srgb, var(--pass-paper) 90%, white);
+	box-shadow: 0 24px 70px rgb(42 31 20 / 0.11);
+}
+
+.resolution-chart-summary {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 0.75rem;
+	margin-bottom: 1.4rem;
+}
+
+.resolution-chart-summary > div {
+	padding: 1rem;
+	border: 1px solid var(--pass-rule);
+	border-radius: 18px;
+	background: rgb(255 255 255 / 0.5);
+}
+
+.resolution-chart-summary strong {
+	display: block;
+	font-family: var(--font-display, inherit);
+	font-size: clamp(1.9rem, 5vw, 3rem);
+	line-height: 1;
+}
+
+.resolution-chart-summary span {
+	display: block;
+	margin-top: 0.35rem;
+	font-size: 0.73rem;
+	font-weight: 900;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--pass-muted);
+}
+
+.resolution-chart-title {
+	margin: 0;
+	font-family: var(--font-display, inherit);
+	font-size: clamp(1.45rem, 4vw, 2.35rem);
+	line-height: 1.05;
+}
+
+.resolution-chart-description,
+.resolution-method-note {
+	max-width: 850px;
+	color: var(--pass-muted);
+	line-height: 1.6;
+	font-size: 0.92rem;
+}
+
+.resolution-chart-scroll {
+	overflow-x: auto;
+	margin-top: 1rem;
+	padding-bottom: 0.4rem;
+}
+
+.resolution-chart-svg {
+	display: block;
+	min-width: 860px;
+	width: 100%;
+	height: auto;
+}
+
+.resolution-year-label,
+.resolution-row-label {
+	font-size: 11px;
+	font-weight: 900;
+	fill: var(--pass-muted);
+}
+
+.resolution-grid {
+	stroke: color-mix(in srgb, var(--pass-rule) 62%, transparent);
+	stroke-width: 1;
+}
+
+.resolution-grid.strong {
+	stroke: color-mix(in srgb, var(--pass-muted) 32%, transparent);
+}
+
+.resolution-positive-bubble {
+	fill-opacity: 0.2;
+	stroke-width: 2;
+	stroke: currentColor;
+	stroke-opacity: 0.72;
+}
+
+.resolution-explicit-bubble {
+	fill-opacity: 0.92;
+	stroke: var(--pass-paper);
+	stroke-width: 1.5;
+}
+
+.resolution-count {
+	font-size: 10px;
+	font-weight: 950;
+	fill: var(--pass-ink);
+	pointer-events: none;
+}
+
+.resolution-opposed-dot {
+	fill: #2b2118;
+	stroke: var(--pass-paper);
+	stroke-width: 1;
+}
+
+.resolution-chart-legend {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.7rem 1.2rem;
+	margin-top: 0.8rem;
+	font-size: 0.8rem;
+	font-weight: 800;
+	color: var(--pass-muted);
+}
+
+.resolution-chart-legend span {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.45rem;
+}
+
+.resolution-chart-legend i {
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	border-radius: 999px;
+	border: 2px solid var(--pass-muted);
+}
+
+.resolution-chart-legend .legend-outer {
+	background: color-mix(in srgb, var(--pass-muted) 22%, transparent);
+}
+
+.resolution-chart-legend .legend-inner {
+	background: var(--pass-muted);
+}
+
+.resolution-chart-legend .legend-dot {
+	width: 8px;
+	height: 8px;
+	background: #2b2118;
+	border: 0;
+}
+
+@media (max-width: 640px) {
+	.stats-tabs {
+		display: grid;
+		grid-template-columns: 1fr;
+		width: calc(100% - 2rem);
+		border-radius: 22px;
+	}
+
+	.stats-tabs a {
+		text-align: center;
+	}
+
+	.resolution-chart {
+		border-radius: 20px;
+		padding: 0.9rem;
+	}
+
+	.resolution-chart-summary {
+		grid-template-columns: 1fr;
+	}
+
+	.resolution-chart-svg {
+		min-width: 980px;
+	}
+}

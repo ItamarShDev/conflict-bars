@@ -8,7 +8,8 @@
 			"!**/convex/_generated",
 			"!**/.vscode",
 			"!**/data/songs-generated.json",
-			"!**/.convex"
+			"!**/.convex",
+			"!**/.cache"
 		]
 	},
 	"linter": {
