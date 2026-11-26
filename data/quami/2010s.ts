@@ -1,5 +1,41 @@
 export const quami2010s = [
 	{
+		name: "תה (Te / Tea Time)",
+		artist: "Quami (קוואמי)",
+		collaborators: ["Hachalvot (החלבות)"],
+		language: "Hebrew",
+		published_date: "2010",
+		political_leaning: "left",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "מה, נכבוש עוד שטחים? נראה לכם?",
+			english_translation:
+				"What, are we going to occupy more territories? You think so?",
+		},
+		context: {
+			en: "Quami asks whether another war means occupying more territory and losing more lives. The same song challenges claims that citizenship should depend on loyalty, against the backdrop of Israel’s 2010 loyalty-oath debate as negotiations stalled over West Bank settlement building.",
+			he: "קוואמי שואל אם עוד מלחמה פירושה כיבוש שטחים נוספים ואובדן חיי אדם. באותו שיר הוא מערער על התניית האזרחות בנאמנות, על רקע הוויכוח בישראל ב־2010 על שבועת נאמנות והמשבר בשיחות סביב הבנייה בהתנחלויות בגדה המערבית.",
+			sources: [
+				{
+					url: "https://stereo-ve-mono.com/13645",
+					en: "Discography entry for the 2010 CD release",
+					he: "רישום דיסקוגרפי של התקליטור מ־2010",
+				},
+				{
+					url: "https://www.bbc.com/news/world-middle-east-11510765",
+					en: "BBC reporting on the 2010 citizenship and settlement debates",
+					he: "דיווח ה־BBC על ויכוחי האזרחות וההתנחלויות ב־2010",
+				},
+			],
+		},
+		links: {
+			lyrics:
+				"https://shironet.mako.co.il/artist?lang=1&prfid=2455&type=lyrics&wrkid=29359",
+			song_info:
+				"https://music.apple.com/il/album/tea-time/1362711250?i=1362711677",
+		},
+	},
+	{
 		name: "רשימת דרישות (Reshimat Drishot / List of Demands)",
 		artist: "Quami (קוואמי)",
 		collaborators: [
