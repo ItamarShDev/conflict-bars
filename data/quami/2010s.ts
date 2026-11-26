@@ -4,7 +4,7 @@ export const quami2010s = [
 		artist: "Quami (קוואמי)",
 		collaborators: ["Hachalvot (החלבות)"],
 		language: "Hebrew",
-		published_date: "2010",
+		published_date: "2010-03-18",
 		political_leaning: "left",
 		lyric_sample: {
 			original_language: "he",
