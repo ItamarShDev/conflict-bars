@@ -89,8 +89,7 @@ export const solutionAspirationAnnotations: Record<
 		confidence: "high",
 		evidenceBasis: "full_lyrics",
 		evidence: "מה, נכבוש עוד שטחים? נראה לכם?",
-		sourceUrl:
-			"https://shironet.mako.co.il/artist?lang=1&prfid=2455&type=lyrics&wrkid=29359",
+		sourceUrl: "https://lyrks.com/lyrics/quami/te",
 		rationale: {
 			en: "The verse rejects occupying more territory but does not endorse a particular negotiated settlement.",
 			he: "הבית מתנגד לכיבוש שטחים נוספים, אך אינו מצדד בהסדר מדיני מסוים.",
@@ -108,18 +107,6 @@ export const solutionAspirationAnnotations: Record<
 				he: "השיר מצדד בשיבת פליטים בלי להציג מבנה משטרי או לשלול דו־קיום.",
 			},
 		},
-	"tuna (טונה)::וויו וויו (wiyu wiyu)": {
-		category: "no_clear_resolution",
-		confidence: "high",
-		evidenceBasis: "full_lyrics",
-		evidence: "אם החטופה, הגיי, החרדי והקשיש",
-		sourceUrl:
-			"https://shironet.mako.co.il/artist?lang=1&play=true&prfid=4847&type=lyrics&wrkid=63788",
-		rationale: {
-			en: "The narrator defends wartime dissent and criticizes policing without proposing a settlement.",
-			he: "הדובר מגן על הזכות למחות בזמן מלחמה ומבקר את התנהלות המשטרה בלי להציע הסדר מדיני.",
-		},
-	},
 	"tuna (טונה)::תחת אש (tachat esh / under fire)": {
 		category: "no_clear_resolution",
 		confidence: "high",

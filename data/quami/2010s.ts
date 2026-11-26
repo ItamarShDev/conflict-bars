@@ -29,8 +29,7 @@ export const quami2010s = [
 			],
 		},
 		links: {
-			lyrics:
-				"https://shironet.mako.co.il/artist?lang=1&prfid=2455&type=lyrics&wrkid=29359",
+			lyrics: "https://lyrks.com/lyrics/quami/te",
 			song_info:
 				"https://music.apple.com/il/album/tea-time/1362711250?i=1362711677",
 		},

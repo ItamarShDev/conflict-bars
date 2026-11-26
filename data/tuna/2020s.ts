@@ -1,40 +1,5 @@
 export const tuna2020s = [
 	{
-		name: "וויו וויו (Wiyu Wiyu)",
-		artist: "Tuna (טונה)",
-		language: "Hebrew",
-		published_date: "2025-05-30",
-		political_leaning: "unknown",
-		lyric_sample: {
-			original_language: "he",
-			hebrew: "אם החטופה, הגיי, החרדי והקשיש",
-			english_translation:
-				"The hostage’s mother, the gay man, the Haredi man and the older man.",
-		},
-		context: {
-			en: "Tuna puts a hostage’s mother among a varied crowd on the road, then describes police water cannon. The scene echoes Israeli protests during the Gaza war, when some demonstrators demanded the return of hostages and an end to renewed fighting.",
-			he: "טונה מציב אם של חטופה בין אנשים מרקעים שונים שחוסמים כביש, ובהמשך מתאר שימוש במכת״זית. התמונה מהדהדת את המחאות בישראל בזמן המלחמה בעזה, שבהן דרשו חלק מהמפגינים את השבת החטופים ואת הפסקת הלחימה שהתחדשה.",
-			sources: [
-				{
-					url: "https://www.walla.co.il/entertainment/music/3755808",
-					en: "Walla review of the protest references",
-					he: "ביקורת וואלה על שירי המחאה באלבום",
-				},
-				{
-					url: "https://www.reuters.com/world/middle-east/anti-netanyahu-protesters-clash-with-israeli-police-2025-03-20/",
-					en: "Reuters on wartime protests and police water cannon",
-					he: "רויטרס על המחאות בזמן המלחמה והשימוש במכת״זיות",
-				},
-			],
-		},
-		links: {
-			lyrics:
-				"https://shironet.mako.co.il/artist?lang=1&play=true&prfid=4847&type=lyrics&wrkid=63788",
-			song_info:
-				"https://music.apple.com/il/album/%D7%95%D7%95%D7%99%D7%95-%D7%95%D7%95%D7%99%D7%95/1815498714?i=1815499432",
-		},
-	},
-	{
 		name: "תחת אש (Tachat Esh / Under Fire)",
 		artist: "Tuna (טונה)",
 		language: "Hebrew",
