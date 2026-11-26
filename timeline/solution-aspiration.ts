@@ -3330,4 +3330,108 @@ export const solutionAspirationAnnotations: Record<
 			he: "השיר מתאר את המציאות הכאוטית של המלחמה והטראומה הלאומית מבלי להציע פתרון מדיני ספציפי.",
 		},
 	},
+	"dam (דאם)::brooklyd (برووكليد)": {
+		category: "no_clear_resolution",
+		confidence: "high",
+		evidenceBasis: "full_lyrics",
+		evidence: "بيتي هو الكون",
+		sourceUrl:
+			"https://www.lingq.com/en/learn-arabic-online/courses/582708/brooklyd-brwwklyd-3610717/",
+		rationale: {
+			en: "The move from Lod to Brooklyn and the narrator’s partner’s citizenship barrier illustrate displacement without proposing a political settlement.",
+			he: "המעבר מלוד לברוקלין ומחסום האזרחות של בת הזוג ממחישים עקירה, בלי להציע הסדר מדיני.",
+		},
+	},
+	"dam (דאם)::share’ 20 (شارع عشرين)": {
+		category: "no_clear_resolution",
+		confidence: "high",
+		evidenceBasis: "full_lyrics",
+		evidence: "",
+		sourceUrl: "https://lyricstranslate.com/en/share20-road-20.html",
+		rationale: {
+			en: "The road story satirizes patriotism and evokes the Nakba and entrapment without proposing a political resolution.",
+			he: "סיפור הנסיעה לועג לפטריוטיזם ומעלה את זיכרון הנכבה ותחושת המלכוד, בלי להציע פתרון מדיני.",
+		},
+	},
+	"el far3i (الفرعي)::كل مرة بحكي عنّك (kol marra bahki / boikutt)": {
+		category: "no_clear_resolution",
+		confidence: "medium",
+		evidenceBasis: "full_lyrics",
+		evidence: "المهم مقاطعة التسوية",
+		sourceUrl: "https://elfar3i.bandcamp.com/track/kol-marra-bahki-boikutt",
+		rationale: {
+			en: "A satirical passage invokes boycotting an unspecified settlement process without clearly rejecting coexistence or proposing an alternative.",
+			he: "קטע סאטירי מזכיר חרם על תהליך הסדר לא מוגדר, בלי לשלול בבירור דו־קיום או להציע חלופה.",
+		},
+	},
+	"el far3i (الفرعي)::خواطر شرق النّهر (khwatir sharq el nahir)": {
+		category: "no_clear_resolution",
+		confidence: "high",
+		evidenceBasis: "full_lyrics",
+		evidence: "إذا يوما ما رح أرجع على اللد بمنطاد",
+		sourceUrl:
+			"https://elfar3i.bandcamp.com/track/khwatir-sharq-el-nahir-dj-lethal-skillz",
+		rationale: {
+			en: "The narrator imagines returning to Lod and urges resistance to racism and cultural erasure without proposing a political settlement.",
+			he: "הדובר מדמיין חזרה ללוד וקורא להתנגד לגזענות ולמחיקת הזהות, בלי להציע הסדר מדיני.",
+		},
+	},
+	"el far3i (الفرعي)::استشراق داخلي (estishraq dakhily / internal orientalism)":
+		{
+			category: "no_clear_resolution",
+			confidence: "medium",
+			evidenceBasis: "full_lyrics",
+			evidence: "بتضل الأرض هاي كلها إلي لو بقسموها مية مرة",
+			sourceUrl: "https://elfar3i.bandcamp.com/track/08-estishraq-dakhily",
+			rationale: {
+				en: "The narrator claims belonging to the whole land even if divided, without clearly prescribing exclusive political control.",
+				he: "הדובר מבטא שייכות לכל הארץ גם אם תחולק, בלי להציע בבירור שליטה מדינית בלעדית.",
+			},
+		},
+	"saint levant (سانت ليفانت)::jerusalem freestyle": {
+		category: "no_clear_resolution",
+		confidence: "high",
+		evidenceBasis: "full_lyrics",
+		evidence: "IDs at the checkpoints",
+		sourceUrl:
+			"https://lyricstranslate.com/en/saint-levant-jerusalem-freestyle-lyrics.html",
+		rationale: {
+			en: "Checkpoints, displacement and the wish to return home frame the song, which offers no clear political settlement.",
+			he: "מחסומים, עקירה והכמיהה לשוב הביתה עומדים במרכז השיר, שאינו מציע הסדר מדיני ברור.",
+		},
+	},
+	"saint levant (سانت ليفانت)::haifa in a tesla": {
+		category: "peaceful_resolution",
+		confidence: "medium",
+		evidenceBasis: "full_lyrics",
+		evidence: "When all we wanna be is equal",
+		sourceUrl: "https://www.cifraclub.com/saint-levant/haifa-in-a-tesla/letra/",
+		rationale: {
+			en: "The lyrics explicitly seek equality and lament bloodshed, without proposing two states or another political structure.",
+			he: "המילים מביעות שאיפה מפורשת לשוויון ומבכות את שפיכות הדמים, בלי להציע שתי מדינות או מבנה מדיני אחר.",
+		},
+	},
+	"saint levant (سانت ليفانت)::caged birds sing": {
+		category: "no_clear_resolution",
+		confidence: "medium",
+		evidenceBasis: "catalog_excerpt",
+		evidence: "",
+		sourceUrl: "https://www.youtube.com/watch?v=7l0zvIBRvZY",
+		rationale: {
+			en: "The available passages connect therapy, memories of war and representing Gaza without expressing a political resolution.",
+			he: "הקטעים שנבדקו קושרים בין טיפול, זיכרונות מלחמה וייצוג עזה, בלי להביע עמדה על פתרון מדיני.",
+		},
+	},
+	"saint levant (سانت ليفانت)::5am in paris": {
+		category: "no_clear_resolution",
+		confidence: "high",
+		evidenceBasis: "full_lyrics",
+		evidence: "Je me sens chez moi nulle part",
+		sourceUrl:
+			"https://lyricsweb.com/song/saint-levant/saint-levant-5am-in-paris",
+		rationale: {
+			en: "The narrator recalls growing up during war and feeling split across cities but does not propose a political resolution.",
+			he: "הדובר נזכר בגדילה בזמן מלחמה ובתחושת שייכות מפוצלת בין ערים, בלי להציע פתרון מדיני.",
+		},
+	},
 };
