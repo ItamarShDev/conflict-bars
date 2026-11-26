@@ -104,7 +104,69 @@ describe("mutation access boundary", () => {
 		};
 		await functions.submitSongEditSuggestion.handler(ctx, {
 			userEmail: "test@example.com",
-			suggestion: { name: "Song", published_date: "2000", artistId: "artist1" },
+			suggestion: {
+				name: "Song",
+				published_date: "2000",
+				artistId: "artist1",
+				lyric_sample: { hebrew: "שורה משיר" },
+				links: { lyrics: "https://genius.com/song-lyrics" },
+			},
+		});
+		expect(insert).toHaveBeenLastCalledWith(
+			"songs",
+			expect.objectContaining({ published: false }),
+		);
+	});
+	it.each([
+		{
+			name: "Song",
+			published_date: "2000",
+			artistId: "artist1",
+			links: { lyrics: "https://genius.com/song-lyrics" },
+		},
+		{
+			name: "Song",
+			published_date: "2000",
+			artistId: "artist1",
+			lyric_sample: { hebrew: "שורה משיר" },
+		},
+		{ name: "Song", published_date: "2000", artistId: "artist1" },
+	])(
+		"rejects new songs without a sourced lyric excerpt: %j",
+		async (suggestion) => {
+			const ctx = {
+				db: {
+					query: () => ({ withIndex: () => ({ first: async () => null }) }),
+					insert: vi.fn().mockResolvedValue("user1"),
+				},
+			};
+			await expect(
+				functions.submitSongEditSuggestion.handler(ctx, {
+					userEmail: "test@example.com",
+					suggestion,
+				}),
+			).rejects.toThrow("sourced lyric excerpt");
+		},
+	);
+	it("keeps file-song edit suggestions on the unpublished path", async () => {
+		const insert = vi
+			.fn()
+			.mockResolvedValueOnce("user1")
+			.mockResolvedValueOnce("song1");
+		const ctx = {
+			db: {
+				query: () => ({ withIndex: () => ({ first: async () => null }) }),
+				insert,
+			},
+		};
+		await functions.submitSongEditSuggestion.handler(ctx, {
+			userEmail: "test@example.com",
+			isEdit: true,
+			suggestion: {
+				name: "Song",
+				published_date: "2000",
+				artistId: "artist1",
+			},
 		});
 		expect(insert).toHaveBeenLastCalledWith(
 			"songs",

@@ -68,5 +68,48 @@ const enriched = rawSongs.map((song) => {
 	};
 });
 
-writeFileSync(outputPath, JSON.stringify(enriched, null, 2));
-console.log(`Generated ${enriched.length} songs → ${outputPath}`);
+const LYRIC_KEYS = ["hebrew", "arabic", "english_translation"] as const;
+
+function lyricExcerpt(song: RawSong) {
+	return song.lyric_sample as Record<string, unknown> | undefined;
+}
+
+function lyricsLink(song: RawSong) {
+	const links = song.links as Record<string, unknown> | undefined;
+	return typeof links?.lyrics === "string" ? links.lyrics.trim() : "";
+}
+
+function hasSourcedLyricExcerpt(song: RawSong) {
+	return (
+		LYRIC_KEYS.some((key) => {
+			const value = lyricExcerpt(song)?.[key];
+			return typeof value === "string" && value.trim().length > 0;
+		}) && lyricsLink(song).length > 0
+	);
+}
+
+// Songs without a sourced lyric excerpt stay in data/ but are held out of
+// the generated catalog, which feeds both public surfaces (timeline, bubble).
+const publishable = enriched.filter(hasSourcedLyricExcerpt);
+const heldOut = enriched.filter((song) => !hasSourcedLyricExcerpt(song));
+
+writeFileSync(outputPath, JSON.stringify(publishable, null, 2));
+console.log(`Generated ${publishable.length} songs → ${outputPath}`);
+
+if (heldOut.length > 0) {
+	console.warn(
+		`⚠ ${heldOut.length} songs held out of the catalog (missing sourced lyric excerpt):`,
+	);
+	for (const song of heldOut) {
+		const missing = [
+			!LYRIC_KEYS.some((key) => {
+				const value = lyricExcerpt(song)?.[key];
+				return typeof value === "string" && value.trim().length > 0;
+			}) && "excerpt",
+			!lyricsLink(song) && "lyrics source",
+		]
+			.filter(Boolean)
+			.join(" + ");
+		console.warn(`  held out: ${song.artist} | ${song.name} (${missing})`);
+	}
+}

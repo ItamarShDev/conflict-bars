@@ -63,4 +63,32 @@ describe("SubmitSongForm Hebrew language field", () => {
 
 		expect(languageInput).toContain('value="עברית/ערבית"');
 	});
+
+	it("requires a lyric excerpt and a lyrics source link", () => {
+		const html = renderForm();
+		const lyricHebrewInput = html.match(
+			/<textarea[^>]*name="lyricHebrew"[^>]*>/,
+		)?.[0];
+		const linkLyricsInput = html.match(
+			/<input[^>]*name="linkLyrics"[^>]*>/,
+		)?.[0];
+
+		expect(lyricHebrewInput).toContain("required");
+		expect(linkLyricsInput).toContain("required");
+		expect(linkLyricsInput).toContain('type="url"');
+		expect(html).toContain("קישור למקור המילים *");
+	});
+
+	it("does not require a lyrics source link on edit suggestions", () => {
+		const html = renderForm({
+			name: "Original title",
+			artist: "Original artist",
+			published_date: "2001",
+		});
+		const linkLyricsInput = html.match(
+			/<input[^>]*name="linkLyrics"[^>]*>/,
+		)?.[0];
+
+		expect(linkLyricsInput).not.toContain("required");
+	});
 });

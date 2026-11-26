@@ -71,6 +71,7 @@ export const translations = {
 			original: "Original lyric",
 			hebrew: "Hebrew translation",
 			english: "English translation",
+			missing: "No sourced lyric excerpt has been added yet.",
 		},
 		fullLyrics: {
 			button: "Full lyrics",
@@ -104,7 +105,7 @@ export const translations = {
 				language: "Language *",
 				lyricHebrew: "Lyric sample (Hebrew) *",
 				lyricEnglish: "Lyric sample (English translation)",
-				linkLyrics: "Lyrics link",
+				linkLyrics: "Lyrics source link *",
 				linkInfo: "Song info link",
 				linkYoutube: "YouTube link",
 			},
@@ -280,6 +281,7 @@ export const translations = {
 			original: "המילים במקור",
 			hebrew: "תרגום לעברית",
 			english: "תרגום לאנגלית",
+			missing: "עדיין לא נוסף קטע מילים ממקור.",
 		},
 		fullLyrics: {
 			button: "מילים מלאות",
@@ -313,7 +315,7 @@ export const translations = {
 				language: "שפה *",
 				lyricHebrew: "קטע מילים (עברית) *",
 				lyricEnglish: "קטע מילים (תרגום לאנגלית)",
-				linkLyrics: "קישור למילים",
+				linkLyrics: "קישור למקור המילים *",
 				linkInfo: "קישור למידע על השיר",
 				linkYoutube: "קישור ליוטיוב",
 			},

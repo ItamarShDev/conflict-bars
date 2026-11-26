@@ -169,6 +169,11 @@ export function SongEntry({
 					: []),
 			]
 		: undefined;
+	const hasLyricExcerpt = Boolean(
+		lyricContent ||
+			originalArabicLyric ||
+			labeledLyrics?.some((excerpt) => excerpt.text),
+	);
 
 	const contextHebrew = songContext?.he?.trim() ? songContext.he : undefined;
 	const contextEnglish = songContext?.en?.trim() ? songContext.en : undefined;
@@ -249,7 +254,7 @@ export function SongEntry({
 					</div>
 				)}
 
-				{!isCompact && (lyricContent || contextContent) && (
+				{!isCompact && (
 					<div className="pt-3 border-t border-(--color-border) space-y-2">
 						{contextContent && (
 							<p
@@ -314,6 +319,14 @@ export function SongEntry({
 								dir={lyricDir}
 							>
 								"{highlightText(lyricContent)}"
+							</p>
+						)}
+						{!hasLyricExcerpt && (
+							<p
+								className="pass-it-on-song-missing text-sm leading-relaxed text-(--color-muted-foreground) text-start"
+								dir={lang === "he" ? "rtl" : "ltr"}
+							>
+								{t.lyricExcerpt.missing}
 							</p>
 						)}
 					</div>
