@@ -1,34 +1,5 @@
 export const tuna2020s = [
 	{
-		name: "תחת אש (Tachat Esh / Under Fire)",
-		artist: "Tuna (טונה)",
-		language: "Hebrew",
-		published_date: "2025-05-30",
-		political_leaning: "unknown",
-		lyric_sample: {
-			original_language: "he",
-			hebrew: 'ואזעקות התחילו אין לנו ממ"ד',
-			english_translation: "And the sirens started; we don’t have a safe room.",
-		},
-		context: {
-			en: "When the sirens start and there is no safe room, the narrator’s wish to shelter a partner becomes both literal and emotional. Released during the Gaza war, the song depicts how air-raid alerts intrude on a relationship rather than taking a position on the war.",
-			he: "כשהאזעקות מתחילות ואין ממ״ד, הרצון של הדובר להגן על בת זוגו מקבל משמעות פיזית ורגשית כאחת. השיר יצא בזמן המלחמה בעזה ומתאר כיצד אזעקות חודרות לחיי הזוגיות, בלי להביע עמדה על המלחמה.",
-			sources: [
-				{
-					url: "https://www.walla.co.il/entertainment/music/3755808",
-					en: "Walla review on relationships under air-raid sirens",
-					he: "ביקורת וואלה על זוגיות בצל האזעקות",
-				},
-			],
-		},
-		links: {
-			lyrics:
-				"https://www.tab4u.com/lyrics/songs/77105_%D7%98%D7%95%D7%A0%D7%94_-_%D7%AA%D7%97%D7%AA_%D7%90%D7%A9.html",
-			song_info:
-				"https://music.apple.com/il/album/%D7%AA%D7%97%D7%AA-%D7%90%D7%A9/1815498714?i=1815499425",
-		},
-	},
-	{
 		name: "Rosh Lemal'a (ראש למעלה)",
 		artist: "Tuna (טונה)",
 		language: "Hebrew",
@@ -88,6 +59,35 @@ export const tuna2020s = [
 				"https://hebrewerry.com/en/songs/6148-tuna-%D7%98%D7%95%D7%A0%D7%94-rovim-vetaltalim-%D7%A8%D7%95%D7%91%D7%99%D7%9D-%D7%95%D7%AA%D7%9C%D7%AA%D7%9C%D7%99%D7%9D",
 			song_info:
 				"https://he.wikipedia.org/wiki/%D7%A8%D7%95%D7%91%D7%99%D7%9D_%D7%95%D7%AA%D7%9C%D7%AA%D7%9C%D7%99%D7%9D",
+		},
+	},
+	{
+		name: "תחת אש (Tachat Esh / Under Fire)",
+		artist: "Tuna (טונה)",
+		language: "Hebrew",
+		published_date: "2025-05-30",
+		political_leaning: "unknown",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: 'ואזעקות התחילו אין לנו ממ"ד',
+			english_translation: "And the sirens started; we don’t have a safe room.",
+		},
+		context: {
+			en: "When the sirens start and there is no safe room, the narrator’s wish to shelter a partner becomes both literal and emotional. Released during the Gaza war, the song depicts how air-raid alerts intrude on a relationship rather than taking a position on the war.",
+			he: "כשהאזעקות מתחילות ואין ממ״ד, הרצון של הדובר להגן על בת זוגו מקבל משמעות פיזית ורגשית כאחת. השיר יצא בזמן המלחמה בעזה ומתאר כיצד אזעקות חודרות לחיי הזוגיות, בלי להביע עמדה על המלחמה.",
+			sources: [
+				{
+					url: "https://www.walla.co.il/entertainment/music/3755808",
+					en: "Walla review on relationships under air-raid sirens",
+					he: "ביקורת וואלה על זוגיות בצל האזעקות",
+				},
+			],
+		},
+		links: {
+			lyrics:
+				"https://www.tab4u.com/lyrics/songs/77105_%D7%98%D7%95%D7%A0%D7%94_-_%D7%AA%D7%97%D7%AA_%D7%90%D7%A9.html",
+			song_info:
+				"https://music.apple.com/il/album/%D7%AA%D7%97%D7%AA-%D7%90%D7%A9/1815498714?i=1815499425",
 		},
 	},
 ];
