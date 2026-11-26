@@ -3434,4 +3434,120 @@ export const solutionAspirationAnnotations: Record<
 			he: "הדובר נזכר בגדילה בזמן מלחמה ובתחושת שייכות מפוצלת בין ערים, בלי להציע פתרון מדיני.",
 		},
 	},
+	"phay::watermelon seeds": {
+		category: "no_clear_resolution",
+		confidence: "high",
+		evidenceBasis: "full_lyrics",
+		evidence: "Till all of my mans free",
+		sourceUrl: "https://www.antiwarsongs.org/canzone.php?id=69593&lang=en",
+		rationale: {
+			en: "The song opposes the bombing and calls for freedom without proposing a political settlement.",
+			he: "השיר מתנגד להפצצות וקורא לחירות, בלי להציע הסדר מדיני.",
+		},
+	},
+	"sammy shiblaq::gaza strip 2 detroit": {
+		category: "no_clear_resolution",
+		confidence: "medium",
+		evidenceBasis: "partial_lyrics",
+		evidence: "They cut the internet my cousin can’t pick up the phone",
+		sourceUrl:
+			"https://azlyrics.biz/s/sammy-shiblaq-lyrics/sammy-shiblaq-gaza-strip-2-detroit-lyrics/",
+		rationale: {
+			en: "The transcribed passages condemn the occupation and describe fear for family in Gaza without spelling out a political settlement.",
+			he: "הקטעים המתומללים מגנים את הכיבוש ומתארים דאגה למשפחה בעזה, בלי לפרט הסדר מדיני.",
+		},
+	},
+	"sammy shiblaq::48 mile": {
+		category: "no_clear_resolution",
+		confidence: "medium",
+		evidenceBasis: "partial_lyrics",
+		evidence: "I’m the voice of the occupied",
+		sourceUrl:
+			"https://azlyrics.biz/s/sammy-shiblaq-lyrics/sammy-shiblaq-48-mile-lyrics/",
+		rationale: {
+			en: "The transcribed passages frame the song as a protest against dispossession without proposing a political settlement.",
+			he: "הקטעים המתומללים מציגים את השיר כמחאה נגד נישול, בלי להציע הסדר מדיני.",
+		},
+	},
+	"abe batshon::free palestine": {
+		category: "peaceful_resolution",
+		confidence: "high",
+		evidenceBasis: "full_lyrics",
+		evidence: "I’m really lookin for a peaceful resolution",
+		sourceUrl:
+			"https://azlyrics.biz/a/abe-batshon-lyrics/abe-batshon-free-palestine-lyrics/",
+		rationale: {
+			en: "The narrator explicitly seeks a peaceful resolution without specifying two states or another political structure.",
+			he: "הדובר מבקש במפורש פתרון בדרכי שלום, בלי לציין שתי מדינות או מבנה מדיני אחר.",
+		},
+	},
+	"abe batshon::palestine will rise": {
+		category: "peaceful_resolution",
+		confidence: "high",
+		evidenceBasis: "full_lyrics",
+		evidence: "Our dignity and peace is everything that we’re wanting",
+		sourceUrl:
+			"https://tekst-pesni.online/abe-batshon-samer-sammy-shiblaq-palestine-will-rise/",
+		rationale: {
+			en: "The lyrics explicitly seek dignity and peace and call for a ceasefire, without specifying a political structure.",
+			he: "המילים מביעות שאיפה מפורשת לכבוד ולשלום וקוראות להפסקת אש, בלי לציין מבנה מדיני.",
+		},
+	},
+	"samer::world goes blind": {
+		category: "no_clear_resolution",
+		confidence: "high",
+		evidenceBasis: "full_lyrics",
+		evidence: "Wish that I could do something ‘bout bombs dropped in Gaza",
+		sourceUrl:
+			"https://www.radionasyid.net/2023/11/samer-world-goes-blind.html",
+		rationale: {
+			en: "The narrator condemns the bombing and inaction without proposing a political settlement.",
+			he: "הדובר מגנה את ההפצצות ואת חוסר המעש, בלי להציע הסדר מדיני.",
+		},
+	},
+	"samer::divest": {
+		category: "no_clear_resolution",
+		confidence: "high",
+		evidenceBasis: "full_lyrics",
+		evidence: "We only asked you to divest",
+		sourceUrl: "https://www.youtube.com/watch?v=ESjEQnKRaYw",
+		rationale: {
+			en: "The song calls for nonviolent protest and divestment; those are tactics rather than proposals for a settlement.",
+			he: "השיר קורא למחאה לא אלימה ולמשיכת השקעות; אלה דרכי פעולה ולא הצעות להסדר.",
+		},
+	},
+	"samer::key in my pocket": {
+		category: "no_clear_resolution",
+		confidence: "high",
+		evidenceBasis: "full_lyrics",
+		evidence: "I’m coming back home / I got the key in my pocket",
+		sourceUrl: "https://www.youtube.com/watch?v=U_S75c24g28",
+		rationale: {
+			en: "The song imagines return to an ancestral home without defining a political settlement.",
+			he: "השיר מדמיין שיבה לבית המשפחה, בלי להגדיר הסדר מדיני.",
+		},
+	},
+	"westside gravy::diaspora": {
+		category: "no_clear_resolution",
+		confidence: "high",
+		evidenceBasis: "full_lyrics",
+		evidence: "Keep shooting rockets but you never gon’ take it",
+		sourceUrl: "https://www.youtube.com/watch?v=qy1PSKX5RE8",
+		rationale: {
+			en: "The narrator identifies with Israel and rejects the boycott campaign without proposing a political settlement.",
+			he: "הדובר מביע הזדהות עם ישראל ומתנגד לקמפיין החרם, בלי להציע הסדר מדיני.",
+		},
+	},
+	"bigsam (بيج سام)::لو مرة بس (law mara bas / if only once)": {
+		category: "no_clear_resolution",
+		confidence: "high",
+		evidenceBasis: "full_lyrics",
+		evidence: "يا غزة انا بروحي معاكي",
+		sourceUrl:
+			"https://www.lyrics-arabic.com/2024/02/lyrics-law-mara-bas-bigsam.html",
+		rationale: {
+			en: "The lyrics address loss and displacement in Gaza without proposing a political settlement.",
+			he: "המילים עוסקות באובדן ובעקירה בעזה, בלי להציע הסדר מדיני.",
+		},
+	},
 };
