@@ -85,14 +85,14 @@ export const solutionAspirationAnnotations: Record<
 		},
 	},
 	"quami (קוואמי)::תה (te / tea time)": {
-		category: "no_clear_resolution",
+		category: "peaceful_resolution",
 		confidence: "high",
 		evidenceBasis: "full_lyrics",
-		evidence: "מה, נכבוש עוד שטחים? נראה לכם?",
+		evidence: "יהודי קם ערבי וערבי קם יהודי",
 		sourceUrl: "https://lyrks.com/lyrics/quami/te",
 		rationale: {
-			en: "The verse rejects occupying more territory but does not endorse a particular negotiated settlement.",
-			he: "הבית מתנגד לכיבוש שטחים נוספים, אך אינו מצדד בהסדר מדיני מסוים.",
+			en: "The verse imagines Jews and Arabs trading places and living without racism, without proposing a political arrangement.",
+			he: "הבית מדמיין יהודים וערבים מתחלפים בזהותם וחיים בלי גזענות, בלי להציע הסדר מדיני.",
 		},
 	},
 	"tamer nafar (תאמר נפאר)::راجع عالبيت (raje‘ aal beit / i’m returning home)":
