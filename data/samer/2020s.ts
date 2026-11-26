@@ -34,7 +34,7 @@ export const samer2020s = [
 	{
 		name: "Divest",
 		artist: "Samer",
-		published_date: "2024-05-17",
+		published_date: "2024-05-14",
 		political_leaning: "left",
 		language: "English",
 		lyric_sample: {
