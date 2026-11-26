@@ -81,9 +81,9 @@ export const fortySevenSoul2010s = [
 			he: "הבית מבקש מהמאזינים לחפש את שמות הדוברים על המפה. על רקע העקירה הפלסטינית שבה עוסק האלבום, הקריאה במפה נעשית דרך לבטא קשר למקומות שאנשים נאלצו לעזוב.",
 			sources: [
 				{
-					url: "https://mei.edu/publication/palestinian-cultural-resistance-art-face-violence/",
-					en: "Middle East Institute on Machina and Palestinian cultural resistance",
-					he: "מכון המזרח התיכון על Machina והתנגדות תרבותית פלסטינית",
+					url: "https://gulfnews.com/entertainment/music/2-years-of-balfron-promise-47souls-album-revisited-1.69462178",
+					en: "Gulf News analysis of Machina and geographic identity",
+					he: "ניתוח ב־Gulf News של Machina וזהות גאוגרפית",
 				},
 				{
 					url: "https://www.thenationalnews.com/arts-culture/music/47soul-on-album-balfron-promise-and-using-a-theme-of-displacement-in-their-music-1.709805",
