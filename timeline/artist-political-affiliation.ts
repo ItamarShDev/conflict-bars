@@ -674,6 +674,36 @@ export const artistPoliticalAffiliation: Record<
 		notes:
 			"Rapper who describes his background as Jordanian, Palestinian and Algerian.",
 	},
+	Phay: {
+		era: "2010s–present",
+		affiliation: "Unknown",
+		notes: "Palestinian-American rapper based in East Atlanta.",
+	},
+	"Sammy Shiblaq": {
+		era: "2020s",
+		affiliation: "Unknown",
+		notes: "Palestinian-American rapper and recording artist.",
+	},
+	"Abe Batshon": {
+		era: "2020s",
+		affiliation: "Unknown",
+		notes: "Palestinian-American rapper from Hayward, California.",
+	},
+	Samer: {
+		era: "2020s",
+		affiliation: "Unknown",
+		notes: "Palestinian-American rapper from the San Francisco Bay Area.",
+	},
+	"Westside Gravy": {
+		era: "2010s–present",
+		affiliation: "Unknown",
+		notes: "Black Jewish rapper also known as Noah Shufutinsky.",
+	},
+	"BiGSaM (بيج سام)": {
+		era: "2020s",
+		affiliation: "Unknown",
+		notes: "Palestinian hip-hop artist Samer Sawwan.",
+	},
 	"Rajieen (راجعين)": {
 		era: "2020s",
 		affiliation: "Palestine solidarity collaboration",
