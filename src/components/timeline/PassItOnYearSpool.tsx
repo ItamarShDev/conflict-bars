@@ -18,7 +18,7 @@ function MiniCassetteReel({ side }: { side: "start" | "end" }) {
 			aria-hidden="true"
 		>
 			<Image
-				src="/pass-it-on/cassette-reel.png"
+				src="/pass-it-on/cassette-reel.svg"
 				alt=""
 				width={28}
 				height={28}
