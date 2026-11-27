@@ -25,6 +25,7 @@ const MANUAL_REVIEW_OVERRIDES: Record<
 	{
 		category: ClassificationCategory;
 		confidence: Confidence;
+		basis?: EvidenceBasis;
 		rationaleEn: string;
 		rationaleHe: string;
 		evidence?: string;
@@ -62,6 +63,45 @@ const MANUAL_REVIEW_OVERRIDES: Record<
 			"The unity lyrics address Palestinian internal division and self-protection, not a shared Israeli-Palestinian resolution.",
 		rationaleHe:
 			"מילות האחדות מתייחסות לפילוג הפלסטיני הפנימי ולהגנה עצמית, לא לפתרון ישראלי-פלסטיני משותף.",
+	},
+	"daboor (دابور)::dolab (دولاب)": {
+		category: "no_clear_resolution",
+		confidence: "high",
+		basis: "full_lyrics",
+		rationaleEn:
+			"The lyrics mention Silwan and Mohammed Deif without proposing a settlement.",
+		rationaleHe:
+			"השיר מזכיר את סילוואן ואת מוחמד דף, אך אינו מציע הסדר לסכסוך.",
+		evidence: "ع سطوح في نص سلوان",
+	},
+	"lior ben-hur::there is another way": {
+		category: "peaceful_resolution",
+		confidence: "high",
+		basis: "full_lyrics",
+		rationaleEn:
+			"The song calls for peace and justice without proposing a two-state arrangement.",
+		rationaleHe: "השיר קורא לחיים בשלום ובצדק, אך אינו מציע חלוקה לשתי מדינות.",
+		evidence: "عالم واحد بلا حدود و العدل يسود",
+	},
+	"fawzi (فوزي)::ma6a6 (مطاط)": {
+		category: "no_clear_resolution",
+		confidence: "high",
+		basis: "full_lyrics",
+		rationaleEn:
+			"The references to the Intifada and curfew describe lived conditions, not a settlement.",
+		rationaleHe:
+			"האזכור של האינתיפאדה והעוצר מתאר חוויית חיים, ולא מציע הסדר מדיני.",
+		evidence: "مواليد الانتفاضة منع تجوال",
+	},
+	"fawzi (فوزي)::jiftlek (جفتلك)": {
+		category: "no_clear_resolution",
+		confidence: "high",
+		basis: "full_lyrics",
+		rationaleEn:
+			"The contrast between a checkpoint crossing and imagined freedom does not amount to a settlement proposal.",
+		rationaleHe:
+			"הניגוד בין המעבר במחסום לחופש שבדמיון אינו הופך להצעה להסדר מדיני.",
+		evidence: "في خيالي اطير",
 	},
 };
 
@@ -944,7 +984,7 @@ async function main() {
 		return {
 			...reviewed,
 			evidence: reviewed.evidence.slice(0, 110),
-			basis: input.basis,
+			basis: reviewed.basis ?? input.basis,
 			sourceUrl: input.song.links?.lyrics,
 		};
 	});

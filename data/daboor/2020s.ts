@@ -60,4 +60,33 @@ export const daboor2020s = [
 			song_info: "https://bltnm.bandcamp.com",
 		},
 	},
+	{
+		name: "Dolab (دولاب)",
+		artist: "Daboor (دابور)",
+		language: "Arabic",
+		published_date: "2021-04-30",
+		political_leaning: "unknown",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "ع سطوح في نص سلوان",
+			hebrew: "על הגגות בלב סילוואן.",
+			english_translation: "On rooftops in the middle of Silwan.",
+		},
+		context: {
+			he: "דאבור ממקם את הבית על גגות סילוואן שבמזרח ירושלים. השיר יצא באביב 2021; באותו קיץ דיווח האיחוד האירופי על צווי הריסה והליכי פינוי בשכונה. הבית מזכיר גם את מוחמד דף, אך אינו מציע הסדר מדיני.",
+			en: "Daboor sets the verse on the rooftops of Silwan in East Jerusalem. The track came out in spring 2021; that summer the EU reported demolition orders and eviction proceedings in the neighborhood. The verse also names Mohammed Deif but offers no political settlement.",
+			sources: [
+				{
+					url: "https://www.un.org/unispal/document/eu-local-statement-on-situation-in-silwan-neighbourhood-in-east-jerusalem-non-un-document/",
+					he: "הודעת האיחוד האירופי על סילוואן",
+					en: "EU statement on Silwan",
+				},
+			],
+		},
+		links: {
+			lyrics:
+				"https://lyrics.lol/artist/2709049-Daboor-%D8%B6%D8%A8%D9%88%D8%B1/lyrics/6755114-Dolab-%D8%AF%D9%88%D9%84%D8%A7%D8%A8",
+			song_info: "https://bltnm.bandcamp.com/track/dolab",
+		},
+	},
 ];

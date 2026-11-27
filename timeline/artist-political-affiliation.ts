@@ -6,6 +6,17 @@ export const artistPoliticalAffiliation: Record<
 		notes: string;
 	}
 > = {
+	"Fawzi (فوزي)": {
+		era: "2020s–present",
+		affiliation: "Unknown",
+		notes: "Palestinian rapper with Ramallah-based label BLTNM.",
+	},
+	"Lior Ben-Hur": {
+		era: "2010s–present",
+		affiliation: "Unknown",
+		notes:
+			"Jerusalem-born reggae artist who collaborated with Palestinian rapper Saz.",
+	},
 	"ABUL3EES (أبو العيس)": {
 		era: "2010s–present",
 		affiliation: "Unknown",
