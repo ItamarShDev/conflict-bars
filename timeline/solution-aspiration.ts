@@ -3577,9 +3577,8 @@ export const solutionAspirationAnnotations: Record<
 		category: "no_clear_resolution",
 		confidence: "medium",
 		evidenceBasis: "full_lyrics",
-		evidence: "It's called a security fence",
-		sourceUrl:
-			"https://lyricsweb.com/song/invincible/invincible-no-compromises",
+		evidence: "Apartheid wall / It's called a security fence",
+		sourceUrl: "https://antiwarsongs.org/canzone.php?id=49272&lang=en",
 		rationale: {
 			en: "The verse criticizes the barrier, then broadens into a general vision of not having to fight; it does not describe what ending the Israeli–Palestinian conflict would mean.",
 			he: "הבית מבקר את הגדר ובהמשך מציג תקווה כללית ליום שבו לא יהיה עוד צורך להיאבק, בלי לתאר מה יהיה פירוש סיום הסכסוך הישראלי־פלסטיני.",
@@ -3594,18 +3593,6 @@ export const solutionAspirationAnnotations: Record<
 		rationale: {
 			en: "The song foregrounds displacement and the right of return without describing a political settlement for both peoples.",
 			he: "השיר מדגיש את העקירה ואת זכות השיבה, בלי לתאר הסדר מדיני לשני העמים.",
-		},
-	},
-	"invincible::the emperor's clothes": {
-		category: "peaceful_resolution",
-		confidence: "high",
-		evidenceBasis: "full_lyrics",
-		evidence: "Show them we want peace but only with real justice",
-		sourceUrl:
-			"https://sfbayview.com/2009/01/the-emperors-clothes-by-invincible/",
-		rationale: {
-			en: "The lyrics explicitly call for peace with justice and advocate boycotts as a means of pressure, without specifying two states.",
-			he: "המילים קוראות במפורש לשלום עם צדק ומציגות חרם כאמצעי לחץ, בלי להזכיר שתי מדינות.",
 		},
 	},
 	"yair elitzur (יאיר אלייצור)::אין נחמה (ein nechama / no consolation)": {

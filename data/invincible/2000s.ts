@@ -7,10 +7,8 @@ export const invincible2000s = [
 		published_date: "2005-08",
 		lyric_sample: {
 			original_language: "en",
-			hebrew:
-				"קוראים לזה גדר ביטחון, אבל עד קצה שדה הראייה אני רואה רק תסביך עליונות.",
-			english_translation:
-				"It's called a security fence / But all I see as far as the eye stretches / Are superiority complex",
+			hebrew: "חומת אפרטהייד / קוראים לזה גדר ביטחון",
+			english_translation: "Apartheid wall / It's called a security fence",
 		},
 		context: {
 			he: "השיר נכלל באוסף ההיפ־הופ Free the P. אינווינסיבל מתעמתת עם המונח ״גדר ביטחון״ ומציגה את המכשול כביטוי ליחסי כוח, במסגרת שיר שמחבר בין מאבקים פוליטיים בכמה מקומות.",
@@ -24,7 +22,7 @@ export const invincible2000s = [
 			],
 		},
 		links: {
-			lyrics: "https://lyricsweb.com/song/invincible/invincible-no-compromises",
+			lyrics: "https://antiwarsongs.org/canzone.php?id=49272&lang=en",
 			song_info:
 				"https://electronicintifada.net/content/free-p-palestine-takes-nycs-east-village-storm/5772",
 		},
@@ -61,35 +59,6 @@ export const invincible2000s = [
 		links: {
 			lyrics: "https://antiwarsongs.org/canzone.php?id=47677&lang=en",
 			song_info: "https://music.apple.com/us/album/shapeshifters/281640779",
-		},
-	},
-	{
-		name: "The Emperor's Clothes",
-		artist: "Invincible",
-		political_leaning: "left",
-		language: "English",
-		published_date: "2009-01",
-		lyric_sample: {
-			original_language: "en",
-			hebrew: "תראו להם שאנחנו רוצים שלום, אבל רק עם צדק אמיתי.",
-			english_translation: "Show them we want peace but only with real justice",
-		},
-		context: {
-			he: "השיר הופץ בחינם בינואר 2009 בתגובה למבצע עופרת יצוקה בעזה. הוא קושר את הדרישה לשלום ולצדק לקריאה לחרם, למשיכת השקעות ולהטלת סנקציות.",
-			en: "Released as a free download in January 2009 in response to Operation Cast Lead in Gaza, the track connects a call for peace with justice to advocacy for boycott, divestment, and sanctions.",
-			sources: [
-				{
-					url: "https://sfbayview.com/2009/01/the-emperors-clothes-by-invincible/",
-					he: "San Francisco Bay View: הודעת ההפצה והרקע לשיר",
-					en: "San Francisco Bay View: Release and background",
-				},
-			],
-		},
-		links: {
-			lyrics:
-				"https://sfbayview.com/2009/01/the-emperors-clothes-by-invincible/",
-			song_info:
-				"https://mvremix.com/rock_blogs/2009/08/16/invincible-emperors-clothes/",
 		},
 	},
 ];
