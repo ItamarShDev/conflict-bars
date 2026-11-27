@@ -3550,4 +3550,74 @@ export const solutionAspirationAnnotations: Record<
 			he: "המילים עוסקות באובדן ובעקירה בעזה, בלי להציע הסדר מדיני.",
 		},
 	},
+	"hatikva 6 (התקווה 6)::ויהי אור (vayehi or / let there be light)": {
+		category: "peaceful_resolution",
+		confidence: "high",
+		evidenceBasis: "full_lyrics",
+		evidence: "וכולם יחזרו הביתה ולא נדע עוד מלחמה",
+		sourceUrl: "https://www.walla.co.il/entertainment/stage/3761163",
+		rationale: {
+			en: "The closing wish imagines everyone returning home and an end to war, without specifying a political settlement.",
+			he: "בסיום השיר מופיעה תקווה שכולם יחזרו הביתה ושלא תהיה עוד מלחמה, בלי לציין הסדר מדיני.",
+		},
+	},
+	"hatikva 6 (התקווה 6)::חופשת מלחמה (chufshat milchama / wartime break)": {
+		category: "no_clear_resolution",
+		confidence: "high",
+		evidenceBasis: "full_lyrics",
+		evidence: "ומה ציפורים עושות כשיש אזעקה",
+		sourceUrl:
+			"https://yosmusic.com/%d7%94%d7%aa%d7%a7%d7%95%d7%95%d7%94-6-%d7%97%d7%95%d7%a4%d7%a9%d7%aa-%d7%9e%d7%9c%d7%97%d7%9e%d7%94/",
+		rationale: {
+			en: "Children's questions describe daily life during wartime rather than proposing a way to resolve the conflict.",
+			he: "שאלות הילדים מתארות את החיים בזמן מלחמה ולא מציעות דרך ליישוב הסכסוך.",
+		},
+	},
+	"invincible::no compromises": {
+		category: "no_clear_resolution",
+		confidence: "medium",
+		evidenceBasis: "full_lyrics",
+		evidence: "Apartheid wall / It's called a security fence",
+		sourceUrl: "https://antiwarsongs.org/canzone.php?id=49272&lang=en",
+		rationale: {
+			en: "The verse criticizes the barrier, then broadens into a general vision of not having to fight; it does not describe what ending the Israeli–Palestinian conflict would mean.",
+			he: "הבית מבקר את הגדר ובהמשך מציג תקווה כללית ליום שבו לא יהיה עוד צורך להיאבק, בלי לתאר מה יהיה פירוש סיום הסכסוך הישראלי־פלסטיני.",
+		},
+	},
+	"invincible::people not places": {
+		category: "no_clear_resolution",
+		confidence: "high",
+		evidenceBasis: "full_lyrics",
+		evidence: "But I see a man standing with a key and a deed in his hand",
+		sourceUrl: "https://antiwarsongs.org/canzone.php?id=47677&lang=en",
+		rationale: {
+			en: "The song foregrounds displacement and the right of return without describing a political settlement for both peoples.",
+			he: "השיר מדגיש את העקירה ואת זכות השיבה, בלי לתאר הסדר מדיני לשני העמים.",
+		},
+	},
+	"yair elitzur (יאיר אלייצור)::אין נחמה (ein nechama / no consolation)": {
+		category: "no_clear_resolution",
+		confidence: "high",
+		evidenceBasis: "full_lyrics",
+		evidence: "אין שום נחמה יותר עכשיו רק גאולה",
+		sourceUrl:
+			"https://www.tab4u.com/lyrics/songs/72606_%D7%99%D7%90%D7%99%D7%A8_%D7%90%D7%9C%D7%99%D7%99%D7%A6%D7%95%D7%A8_-_%D7%90%D7%99%D7%9F_%D7%A0%D7%97%D7%9E%D7%94.html",
+		rationale: {
+			en: "The lyric seeks religious redemption in wartime rather than proposing a political settlement.",
+			he: "המילים מבקשות גאולה במובן הדתי בזמן מלחמה ואינן מציעות הסדר מדיני.",
+		},
+	},
+	"yair elitzur (יאיר אלייצור)::המלחמה האחרונה (hamilchama haacharona / the last war)":
+		{
+			category: "peaceful_resolution",
+			confidence: "high",
+			evidenceBasis: "full_lyrics",
+			evidence: "אני מתפלל שזאת תהיה המלחמה האחרונה",
+			sourceUrl:
+				"https://www.tab4u.com/lyrics/songs/77512_%D7%99%D7%90%D7%99%D7%A8_%D7%90%D7%9C%D7%99%D7%99%D7%A6%D7%95%D7%A8_%D7%95%D7%91%D7%A8_%D7%A7%D7%95%D7%A4%D7%A8%D7%A9%D7%98%D7%99%D7%99%D7%9F_-_%D7%94%D7%9E%D7%9C%D7%97%D7%9E%D7%94_%D7%94%D7%90%D7%97%D7%A8%D7%95%D7%A0%D7%94.html",
+			rationale: {
+				en: "The chorus explicitly wishes for an end to war without naming a political settlement.",
+				he: "הפזמון מביע במפורש תקווה לסיום המלחמות, בלי להציע הסדר מדיני.",
+			},
+		},
 };
