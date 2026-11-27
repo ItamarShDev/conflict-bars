@@ -11,9 +11,9 @@ description: How to test the file-backed ConflictBars Next.js app locally and dr
 
 Songs load from repo files through `loadFileSongs()`; conflicts are imported from
 `timeline/conflicts.ts`. The timeline does not require a Convex deployment. Song submissions and
-corrections are emailed privately through a server-side Gmail transport, which requires the `GMAIL`
-environment variable. Unit tests mock the mail transport and verify the bilingual form and
-correction payload without sending real mail.
+corrections create prefilled `mailto:` drafts in the visitor's email app. The visitor must review
+and send them; the site has no server-side email delivery. Unit tests verify safe mailto encoding,
+correction details, and the full-content fallback without opening a mail app.
 
 ## Before/after comparison against `main`
 
@@ -259,8 +259,8 @@ The metadata image URLs include a query-string hash that Next.js derives from th
 
 - Comparing checked-in conflicts with deployed database events requires the correct read-only
   Convex deployment URL and a public `events:getAllEvents` function. Neither is needed to run the app.
-- Sending a contribution requires the server-only `GMAIL` credential; tests must mock Nodemailer and
-  must never send real mail.
+- Opening a mailto draft is a user action; tests must verify the generated URL/body without opening
+  an email app or sending real mail.
 
 ## RTL and Hebrew-input gotchas
 

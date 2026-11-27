@@ -96,8 +96,6 @@ export const translations = {
 			title: "Submit a Song",
 			editTitle: "Suggest Song Edit",
 			fields: {
-				displayName: "Your name (optional)",
-				email: "Email (optional)",
 				songName: "Song name *",
 				artist: "Artist *",
 				publishedDate: "Published date (YYYY, YYYY-MM, or YYYY-MM-DD) *",
@@ -109,21 +107,29 @@ export const translations = {
 				linkYoutube: "YouTube link",
 			},
 			placeholders: {
-				optional: "Optional",
 				publishedYear: "YYYY",
 			},
 			buttons: {
-				submitting: "Sending...",
-				submit: "Send by email",
+				submit: "Open email draft",
+				openEmail: "Open email draft again",
+				copyMessage: "Copy full email body",
 			},
-			success:
-				"Thanks! Your contribution was emailed to the Conflict Bars team.",
-			privacyNotice:
-				"Your contribution and any optional contact details are emailed privately to the Conflict Bars team, not posted publicly. If you provide an email address, we can reply and will send a confirmation.",
+			sendNotice:
+				"This opens a prefilled email to itamarsharifytech@gmail.com using your email account. Review and send it yourself; this site does not send or receive it.",
+			draftReady:
+				"Your email app should open with a draft. Review and send it to complete your contribution.",
+			tooLarge:
+				"This message is too large to open reliably as an email draft. Copy the full message below into a new email.",
+			fallback: {
+				recipient: "To",
+				subject: "Subject",
+				body: "Full email body",
+				copied: "Message body copied. Paste it into a new email and send it.",
+				copyFailed:
+					"Automatic copying did not work. Select and copy the full message below.",
+			},
 			errors: {
 				required: "Please fill in all required fields.",
-				generic:
-					"We couldn't send your contribution right now. Please try again later.",
 				invalidPublishedDate:
 					"Enter a date as YYYY, YYYY-MM, or YYYY-MM-DD (1900–2099).",
 			},
@@ -310,8 +316,6 @@ export const translations = {
 			title: "הוסף שיר",
 			editTitle: "הצעת עריכה לשיר",
 			fields: {
-				displayName: "השם שלך (לא חובה)",
-				email: "אימייל (לא חובה)",
 				songName: "שם השיר *",
 				artist: "אמן *",
 				publishedDate: "תאריך יציאה (YYYY, YYYY-MM או YYYY-MM-DD) *",
@@ -323,19 +327,28 @@ export const translations = {
 				linkYoutube: "קישור ליוטיוב",
 			},
 			placeholders: {
-				optional: "לא חובה",
 				publishedYear: "YYYY",
 			},
 			buttons: {
-				submitting: "שולח...",
-				submit: "שליחה במייל",
+				submit: "פתיחת טיוטת דוא״ל",
+				openEmail: "פתיחת טיוטת הדוא״ל שוב",
+				copyMessage: "העתקת גוף הדוא״ל המלא",
 			},
-			success: "תודה! ההצעה נשלחה בדוא״ל לצוות Conflict Bars.",
-			privacyNotice:
-				"ההצעה ופרטי קשר שתבחרו למסור נשלחים בדוא״ל לצוות Conflict Bars ולא מתפרסמים. אם תזינו כתובת אימייל, נשלח אישור והצוות יוכל להשיב.",
+			sendNotice:
+				"תיפתח טיוטת דוא״ל אל itamarsharifytech@gmail.com דרך חשבון הדוא״ל שלכם. בדקו ושלחו אותה בעצמכם; האתר לא שולח או מקבל את ההודעה.",
+			draftReady:
+				"טיוטת דוא״ל אמורה להיפתח. בדקו אותה ושלחו כדי להשלים את ההצעה.",
+			tooLarge:
+				"ההודעה ארוכה מדי לפתיחה אמינה כטיוטת דוא״ל. העתיקו את כל ההודעה למטה לדוא״ל חדש.",
+			fallback: {
+				recipient: "אל",
+				subject: "נושא",
+				body: "גוף הדוא״ל המלא",
+				copied: "גוף ההודעה הועתק. הדביקו אותו בדוא״ל חדש ושלחו.",
+				copyFailed: "ההעתקה האוטומטית נכשלה. סמנו והעתיקו את כל ההודעה למטה.",
+			},
 			errors: {
 				required: "אנא מלא את כל השדות החיוניים.",
-				generic: "לא הצלחנו לשלוח את ההצעה כרגע. נסו שוב מאוחר יותר.",
 				invalidPublishedDate:
 					"יש להזין תאריך בפורמט YYYY, YYYY-MM או YYYY-MM-DD (1900–2099).",
 			},

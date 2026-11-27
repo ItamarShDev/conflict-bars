@@ -63,12 +63,12 @@ describe("SubmitSongForm Hebrew language field", () => {
 		},
 	);
 
-	it("explains in Hebrew that contributions are sent privately by email", () => {
+	it("explains in Hebrew that the contributor must send the email draft", () => {
 		const html = renderForm();
-		expect(html).toContain("ההצעה ופרטי קשר שתבחרו למסור נשלחים בדוא״ל");
-		expect(html).toContain("ולא מתפרסמים");
-		const emailInput = html.match(/<input[^>]*name="email"[^>]*>/)?.[0];
-		expect(emailInput).toContain('type="email"');
-		expect(emailInput).not.toContain("required");
+		expect(html).toContain("פתיחת טיוטת דוא״ל");
+		expect(html).toContain("itamarsharifytech@gmail.com");
+		expect(html).toContain("האתר לא שולח או מקבל את ההודעה");
+		expect(html).not.toContain('name="email"');
+		expect(html).not.toContain('name="displayName"');
 	});
 });

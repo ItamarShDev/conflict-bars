@@ -19,7 +19,7 @@ Entries should be concise, sourced, and neutral in tone. Eligibility rules and t
 - React 19, TypeScript
 - Tailwind CSS v4 (via `@tailwindcss/postcss`)
 - Biome (lint + format)
-- Nodemailer — server-side Gmail mail transport for private contributions
+- `mailto:` drafts — prefilled contribution email opened in the visitor's mail app
 - Vercel Analytics
 
 Path alias: `@/*` → `src/*`.
@@ -32,7 +32,7 @@ Path alias: `@/*` → `src/*`.
 - `src/app/[lang]/` — the single locale‑aware route plus OG/Twitter images; `src/app/layout.tsx`, `globals.css`
 - `src/components/timeline/` — `Timeline.tsx`, `YearSection.tsx`, `YearRail.tsx`, `SongEntry.tsx`, `FilterPanel.tsx`, `HelpModal.tsx`, `LanguageSwitcher.tsx`, `TimelineHeader.tsx`, `translations.ts` (en/he strings)
 - `src/components/conflict/` — conflict card pieces; `src/components/SubmitSong*` — submission modal/form
-- `src/actions/email.ts` — server-side email delivery for song submissions and corrections
+- `src/utils/song-submission-mailto.ts` — browser-side prefilled email draft builder
 - `src/utils/` — `file-songs.ts` (reads generated JSON), `timeline.ts` (merges conflicts + songs by year), `colors.ts`
 - `convex/` and historical migration/sync scripts — retained for existing data; not used by the app runtime
 - `scripts/` — `generate-songs-json.ts` and legacy migration/sync utilities
@@ -123,7 +123,7 @@ lyrics have been copied into the catalog.
 
 ### Contributions
 
-Visitors can use the bilingual contribution form to email a new-song submission or a correction to a file-backed song. The email includes the proposed metadata, lyric samples, links, and the original entry details for corrections. Optional name/email details are sent privately with the submission and are never published; an email address can be used for a reply and receipt confirmation. The server-side Gmail transport requires the `GMAIL` environment variable; credentials must never be exposed to the client.
+The bilingual contribution form opens the visitor's email app with a prefilled message to `itamarsharifytech@gmail.com`. New submissions and file-backed corrections include the proposed metadata, lyric samples, links, and the original entry details. The visitor must review and send the draft; the site does not send email or collect contact details. Oversized drafts are never shortened: the form shows the complete message and a copy fallback instead of opening a potentially truncated link.
 
 ## Internationalization
 
