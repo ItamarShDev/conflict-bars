@@ -26,7 +26,7 @@ This doc orients AI/automation agents to work safely and effectively on Conflict
 ## Architecture Overview
 - Frontend: Next.js 16 (App Router, Turbopack) + React 19 + TypeScript + Tailwind CSS v4. Lint/format via Biome 2.
 - Songs: file data under `data/`, compiled to `data/songs-generated.json` at `predev`/`prebuild` and read server-side by `src/utils/file-songs.ts`.
-- Conflicts/events: static source in `timeline/conflicts.ts`; song contributions and corrections open prefilled public GitHub issues.
+- Conflicts/events: static source in `timeline/conflicts.ts`; song contributions and corrections are emailed privately through a server-only Gmail transport.
 - Data flow: `src/app/[lang]/page.tsx` loads generated songs and imports `israeliConflicts` → `src/utils/timeline.ts` merges conflicts and songs by year → rendered by `src/components/timeline/Timeline.tsx` and children.
 - Convex code and migration scripts remain for historical database maintenance only; the app has no Convex runtime dependency.
 - Routing/i18n: locale is the `[lang]` segment (`en`/`he`); `next.config.ts` redirects `/` → `/he`. UI strings in `src/components/timeline/translations.ts`.
@@ -60,7 +60,8 @@ This doc orients AI/automation agents to work safely and effectively on Conflict
 - Shared types: `timeline/types.ts`.
 
 ### Contributions
-- The bilingual form prepares a public GitHub issue for new songs and corrections. Users review and submit it on GitHub; never collect or include private contact details in the issue.
+- The bilingual form emails new-song submissions and file-backed correction suggestions to the maintainer. Optional name/email details are included privately with the submission; the email may be used for a reply and confirmation, and must never be published.
+- The mail action uses the server-only `GMAIL` credential and validates submitted fields before sending.
 
 ### Data hygiene
 - One record per artist+song. When merging duplicates keep the richest entry (lyrics, links, language, collaborators) and the better-sourced date.

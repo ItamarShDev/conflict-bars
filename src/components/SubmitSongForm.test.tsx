@@ -63,7 +63,12 @@ describe("SubmitSongForm Hebrew language field", () => {
 		},
 	);
 
-	it("warns in Hebrew that the GitHub issue is public", () => {
-		expect(renderForm()).toContain("ייפתח דיווח ציבורי ב-GitHub");
+	it("explains in Hebrew that contributions are sent privately by email", () => {
+		const html = renderForm();
+		expect(html).toContain("ההצעה ופרטי קשר שתבחרו למסור נשלחים בדוא״ל");
+		expect(html).toContain("ולא מתפרסמים");
+		const emailInput = html.match(/<input[^>]*name="email"[^>]*>/)?.[0];
+		expect(emailInput).toContain('type="email"');
+		expect(emailInput).not.toContain("required");
 	});
 });

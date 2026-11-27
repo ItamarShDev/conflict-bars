@@ -19,7 +19,7 @@ Entries should be concise, sourced, and neutral in tone. Eligibility rules and t
 - React 19, TypeScript
 - Tailwind CSS v4 (via `@tailwindcss/postcss`)
 - Biome (lint + format)
-- GitHub Issues — public contribution and correction drafts
+- Nodemailer — server-side Gmail mail transport for private contributions
 - Vercel Analytics
 
 Path alias: `@/*` → `src/*`.
@@ -32,7 +32,8 @@ Path alias: `@/*` → `src/*`.
 - `src/app/[lang]/` — the single locale‑aware route plus OG/Twitter images; `src/app/layout.tsx`, `globals.css`
 - `src/components/timeline/` — `Timeline.tsx`, `YearSection.tsx`, `YearRail.tsx`, `SongEntry.tsx`, `FilterPanel.tsx`, `HelpModal.tsx`, `LanguageSwitcher.tsx`, `TimelineHeader.tsx`, `translations.ts` (en/he strings)
 - `src/components/conflict/` — conflict card pieces; `src/components/SubmitSong*` — submission modal/form
-- `src/utils/` — `file-songs.ts` (reads generated JSON), `song-submission-issue.ts` (builds GitHub issue drafts), `timeline.ts` (merges conflicts + songs by year), `colors.ts`
+- `src/actions/email.ts` — server-side email delivery for song submissions and corrections
+- `src/utils/` — `file-songs.ts` (reads generated JSON), `timeline.ts` (merges conflicts + songs by year), `colors.ts`
 - `convex/` and historical migration/sync scripts — retained for existing data; not used by the app runtime
 - `scripts/` — `generate-songs-json.ts` and legacy migration/sync utilities
 
@@ -51,7 +52,7 @@ timeline/conflicts.ts ──────────────────┘
                                           └─ src/utils/timeline.ts → Timeline
 ```
 
-Songs render from generated JSON and conflicts render from `timeline/conflicts.ts`. Contributions open a prefilled public GitHub issue in this repository; users review and submit the issue on GitHub. Because the generator walks the filesystem, adding or removing a song file changes the catalog — removing an artist means deleting their song files, not just their `index.ts` export.
+Songs render from generated JSON and conflicts render from `timeline/conflicts.ts`. Song contributions and corrections are sent privately by email; the timeline remains file-backed. Because the generator walks the filesystem, adding or removing a song file changes the catalog — removing an artist means deleting their song files, not just their `index.ts` export.
 
 ## Local Development
 
@@ -122,7 +123,7 @@ lyrics have been copied into the catalog.
 
 ### Contributions
 
-Visitors can use the contribution form to prepare a prefilled issue in the public `ItamarShDev/conflict-bars` repository. New-song submissions and corrections use the same form, and the issue body includes the proposed metadata, lyric samples, and links. The visitor must be signed in to GitHub and submit the issue; no email address is collected or published by the form. Prefilled URLs are capped at 7,000 characters; oversized drafts show an error instead of being shortened.
+Visitors can use the bilingual contribution form to email a new-song submission or a correction to a file-backed song. The email includes the proposed metadata, lyric samples, links, and the original entry details for corrections. Optional name/email details are sent privately with the submission and are never published; an email address can be used for a reply and receipt confirmation. The server-side Gmail transport requires the `GMAIL` environment variable; credentials must never be exposed to the client.
 
 ## Internationalization
 

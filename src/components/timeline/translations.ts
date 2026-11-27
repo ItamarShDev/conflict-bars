@@ -96,6 +96,8 @@ export const translations = {
 			title: "Submit a Song",
 			editTitle: "Suggest Song Edit",
 			fields: {
+				displayName: "Your name (optional)",
+				email: "Email (optional)",
 				songName: "Song name *",
 				artist: "Artist *",
 				publishedDate: "Published date (YYYY, YYYY-MM, or YYYY-MM-DD) *",
@@ -107,22 +109,23 @@ export const translations = {
 				linkYoutube: "YouTube link",
 			},
 			placeholders: {
+				optional: "Optional",
 				publishedYear: "YYYY",
 			},
 			buttons: {
-				submit: "Prepare GitHub issue",
-				openIssue: "Review and submit on GitHub",
+				submitting: "Sending...",
+				submit: "Send by email",
 			},
-			issueReady:
-				"Your draft is ready. Review it and submit the issue on GitHub to finish.",
-			issuePrivacyNotice:
-				"This opens a public GitHub issue. Do not include private information.",
+			success:
+				"Thanks! Your contribution was emailed to the Conflict Bars team.",
+			privacyNotice:
+				"Your contribution and any optional contact details are emailed privately to the Conflict Bars team, not posted publicly. If you provide an email address, we can reply and will send a confirmation.",
 			errors: {
 				required: "Please fill in all required fields.",
+				generic:
+					"We couldn't send your contribution right now. Please try again later.",
 				invalidPublishedDate:
 					"Enter a date as YYYY, YYYY-MM, or YYYY-MM-DD (1900–2099).",
-				issueTooLong:
-					"The complete draft exceeds the safe GitHub URL limit ({{limit}} characters). Nothing was truncated; shorten the lyric sample or links, or create the issue manually.",
 			},
 		},
 		helpModal: {
@@ -307,6 +310,8 @@ export const translations = {
 			title: "הוסף שיר",
 			editTitle: "הצעת עריכה לשיר",
 			fields: {
+				displayName: "השם שלך (לא חובה)",
+				email: "אימייל (לא חובה)",
 				songName: "שם השיר *",
 				artist: "אמן *",
 				publishedDate: "תאריך יציאה (YYYY, YYYY-MM או YYYY-MM-DD) *",
@@ -318,22 +323,21 @@ export const translations = {
 				linkYoutube: "קישור ליוטיוב",
 			},
 			placeholders: {
+				optional: "לא חובה",
 				publishedYear: "YYYY",
 			},
 			buttons: {
-				submit: "הכנת פנייה ל-GitHub",
-				openIssue: "בדיקה ושליחה ב-GitHub",
+				submitting: "שולח...",
+				submit: "שליחה במייל",
 			},
-			issueReady:
-				"הטיוטה מוכנה. בדקו אותה ושלחו את הפנייה ב-GitHub כדי להשלים את ההגשה.",
-			issuePrivacyNotice:
-				"ייפתח דיווח ציבורי ב-GitHub. אין לכלול מידע אישי או פרטי.",
+			success: "תודה! ההצעה נשלחה בדוא״ל לצוות Conflict Bars.",
+			privacyNotice:
+				"ההצעה ופרטי קשר שתבחרו למסור נשלחים בדוא״ל לצוות Conflict Bars ולא מתפרסמים. אם תזינו כתובת אימייל, נשלח אישור והצוות יוכל להשיב.",
 			errors: {
 				required: "אנא מלא את כל השדות החיוניים.",
+				generic: "לא הצלחנו לשלוח את ההצעה כרגע. נסו שוב מאוחר יותר.",
 				invalidPublishedDate:
 					"יש להזין תאריך בפורמט YYYY, YYYY-MM או YYYY-MM-DD (1900–2099).",
-				issueTooLong:
-					"הטיוטה המלאה חורגת ממגבלת האורך הבטוחה לקישור GitHub ({{limit}} תווים). לא קוצר תוכן; יש לקצר את קטע המילים או הקישורים, או ליצור פנייה ידנית.",
 			},
 		},
 		helpModal: {
