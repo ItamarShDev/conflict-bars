@@ -25,6 +25,7 @@ const MANUAL_REVIEW_OVERRIDES: Record<
 	{
 		category: ClassificationCategory;
 		confidence: Confidence;
+		basis?: EvidenceBasis;
 		rationaleEn: string;
 		rationaleHe: string;
 		evidence?: string;
@@ -66,6 +67,7 @@ const MANUAL_REVIEW_OVERRIDES: Record<
 	"daboor (دابور)::dolab (دولاب)": {
 		category: "no_clear_resolution",
 		confidence: "high",
+		basis: "full_lyrics",
 		rationaleEn:
 			"The lyrics mention Silwan and Mohammed Deif without proposing a settlement.",
 		rationaleHe:
@@ -75,6 +77,7 @@ const MANUAL_REVIEW_OVERRIDES: Record<
 	"lior ben-hur::there is another way": {
 		category: "peaceful_resolution",
 		confidence: "high",
+		basis: "full_lyrics",
 		rationaleEn:
 			"The song calls for peace and justice without proposing a two-state arrangement.",
 		rationaleHe: "השיר קורא לחיים בשלום ובצדק, אך אינו מציע חלוקה לשתי מדינות.",
@@ -83,6 +86,7 @@ const MANUAL_REVIEW_OVERRIDES: Record<
 	"fawzi (فوزي)::ma6a6 (مطاط)": {
 		category: "no_clear_resolution",
 		confidence: "high",
+		basis: "full_lyrics",
 		rationaleEn:
 			"The references to the Intifada and curfew describe lived conditions, not a settlement.",
 		rationaleHe:
@@ -92,6 +96,7 @@ const MANUAL_REVIEW_OVERRIDES: Record<
 	"fawzi (فوزي)::jiftlek (جفتلك)": {
 		category: "no_clear_resolution",
 		confidence: "high",
+		basis: "full_lyrics",
 		rationaleEn:
 			"The contrast between a checkpoint crossing and imagined freedom does not amount to a settlement proposal.",
 		rationaleHe:
@@ -979,7 +984,7 @@ async function main() {
 		return {
 			...reviewed,
 			evidence: reviewed.evidence.slice(0, 110),
-			basis: input.basis,
+			basis: reviewed.basis ?? input.basis,
 			sourceUrl: input.song.links?.lyrics,
 		};
 	});
