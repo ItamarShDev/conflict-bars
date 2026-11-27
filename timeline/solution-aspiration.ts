@@ -28,6 +28,109 @@ export const solutionAspirationAnnotations: Record<
 	string,
 	SolutionAspirationAnnotation
 > = {
+	"47soul (٤٧ سول)::gamar": {
+		category: "no_clear_resolution",
+		confidence: "medium",
+		evidenceBasis: "full_lyrics",
+		evidence: "بسرعه صدمت انا بمشروع استيطاني",
+		sourceUrl: "https://madrasafree.com/gamar/",
+		rationale: {
+			en: "The settlement allegory criticizes displacement without proposing a political settlement.",
+			he: "האלגוריה על ההתנחלות מותחת ביקורת על עקירה בלי להציע הסדר מדיני.",
+		},
+	},
+	"47soul (٤٧ سول)::machina": {
+		category: "no_clear_resolution",
+		confidence: "medium",
+		evidenceBasis: "partial_lyrics",
+		evidence: "It's a readable map when you look for our names",
+		sourceUrl: "https://www.lyricdown.com/lyrics/47soul-machina-7280760",
+		rationale: {
+			en: "The image of recovering names on a map asserts belonging without specifying a political arrangement.",
+			he: "דימוי חיפוש השמות במפה מבטא שייכות בלי להגדיר הסדר מדיני.",
+		},
+	},
+	"47soul (٤٧ سول)::locked up shop": {
+		category: "no_clear_resolution",
+		confidence: "medium",
+		evidenceBasis: "partial_lyrics",
+		evidence: "Trim me up for war\nWon't die for a clean cut",
+		sourceUrl: "https://www.lyricdown.com/lyrics/47soul-locked-up-shop-7280523",
+		rationale: {
+			en: "The juxtaposition of a wedding and wartime loss does not set out a political solution.",
+			he: "ההצבה של חתונה לצד אובדן במלחמה אינה מציעה פתרון מדיני.",
+		},
+	},
+	"47soul (٤٧ سول)::marked safe": {
+		category: "no_clear_resolution",
+		confidence: "medium",
+		evidenceBasis: "partial_lyrics",
+		evidence: "على أمل اني الدار الاقيها",
+		sourceUrl: "https://www.lyricdown.com/lyrics/47soul-marked-safe-11981740",
+		rationale: {
+			en: "The hope of finding home conveys longing, not a specified political settlement.",
+			he: "התקווה למצוא את הבית מבטאת געגוע, לא הסדר מדיני מוגדר.",
+		},
+	},
+	"47soul (٤٧ سول)::ghazal (promised outro)": {
+		category: "no_clear_resolution",
+		confidence: "medium",
+		evidenceBasis: "partial_lyrics",
+		evidence: "انت يالغزالة الشاردة",
+		sourceUrl:
+			"https://www.lyricdown.com/lyrics/47soul-ghazal-promised-outro-7278296",
+		rationale: {
+			en: "The allegory of exile and hoped-for reunion does not prescribe a political settlement.",
+			he: "האלגוריה על גלות והכמיהה למפגש מחדש אינה מציעה הסדר מדיני.",
+		},
+	},
+	"quami (קוואמי)::תה (te / tea time)": {
+		category: "peaceful_resolution",
+		confidence: "high",
+		evidenceBasis: "full_lyrics",
+		evidence: "יהודי קם ערבי וערבי קם יהודי",
+		sourceUrl: "https://lyrks.com/lyrics/quami/te",
+		rationale: {
+			en: "The verse imagines Jews and Arabs trading places and living without racism, without proposing a political arrangement.",
+			he: "הבית מדמיין יהודים וערבים מתחלפים בזהותם וחיים בלי גזענות, בלי להציע הסדר מדיני.",
+		},
+	},
+	"tamer nafar (תאמר נפאר)::راجع عالبيت (raje‘ aal beit / i’m returning home)":
+		{
+			category: "no_clear_resolution",
+			confidence: "high",
+			evidenceBasis: "full_lyrics",
+			evidence: "شعب بحالو انطرد من الارض",
+			sourceUrl: "https://www.zochrot.org/videos/view/56563/ar",
+			rationale: {
+				en: "The song affirms refugee return without naming a governing arrangement or rejecting coexistence.",
+				he: "השיר מצדד בשיבת פליטים בלי להציג מבנה משטרי או לשלול דו־קיום.",
+			},
+		},
+	"tuna (טונה)::תחת אש (tachat esh / under fire)": {
+		category: "no_clear_resolution",
+		confidence: "high",
+		evidenceBasis: "full_lyrics",
+		evidence: 'ואזעקות התחילו אין לנו ממ"ד',
+		sourceUrl:
+			"https://www.tab4u.com/lyrics/songs/77105_%D7%98%D7%95%D7%A0%D7%94_-_%D7%AA%D7%97%D7%AA_%D7%90%D7%A9.html",
+		rationale: {
+			en: "The narrator describes fear and intimacy under sirens without suggesting a political solution.",
+			he: "הדובר מתאר פחד ואינטימיות בצל האזעקות בלי להציע פתרון מדיני.",
+		},
+	},
+	"47soul (٤٧ سول)::mo light (رفّ الطّير)": {
+		category: "no_clear_resolution",
+		confidence: "medium",
+		evidenceBasis: "full_lyrics",
+		evidence: "This is really from the Nazareth",
+		sourceUrl:
+			"https://www.songtexte.com/songtext/47soul/mo-light-g638a52e7.html",
+		rationale: {
+			en: "The verses connect displacement with class and profit without endorsing a political settlement.",
+			he: "הבתים קושרים עקירה למעמד ולרווח כלכלי בלי לצדד בהסדר מדיני.",
+		},
+	},
 	"47soul (٤٧ سول)::intro to shamstep": {
 		category: "no_clear_resolution",
 		confidence: "high",
