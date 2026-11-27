@@ -1,5 +1,63 @@
 export const hatikvah62020s = [
 	{
+		name: "ויהי אור (Vayehi Or / Let There Be Light)",
+		artist: "Hatikva 6 (התקווה 6)",
+		political_leaning: "unknown",
+		language: "Hebrew",
+		published_date: "2025-06-29",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "וכולם יחזרו הביתה ולא נדע עוד מלחמה",
+			english_translation:
+				"And everyone will come home, and we will know war no more.",
+		},
+		context: {
+			he: "השיר יצא ביוני 2025, במהלכה של המלחמה שפרצה באוקטובר 2023. החזרה הביתה והתקווה שלא תהיה עוד מלחמה הן חלק מתיאור של שגרה שאפשר לשוב אליה.",
+			en: "Released in June 2025 during the war that began in October 2023, the song pictures a return to ordinary life through the hope that everyone will come home and there will be no more war.",
+			sources: [
+				{
+					url: "https://www.israelhayom.co.il/culture/music/article/19275742",
+					he: "ישראל היום: השירים שנוספו לאלבום בעקבות המלחמה",
+					en: "Israel Hayom: The songs added to the album in response to the war",
+				},
+			],
+		},
+		links: {
+			lyrics: "https://www.walla.co.il/entertainment/stage/3761163",
+			song_info:
+				"https://music.apple.com/lt/album/%D7%95%D7%99%D7%94%D7%99-%D7%90%D7%95%D7%A8-single/1818867328",
+		},
+	},
+	{
+		name: "חופשת מלחמה (Chufshat Milchama / Wartime Break)",
+		artist: "Hatikva 6 (התקווה 6)",
+		political_leaning: "unknown",
+		language: "Hebrew",
+		published_date: "2026-04",
+		lyric_sample: {
+			original_language: "he",
+			hebrew: "ומה ציפורים עושות כשיש אזעקה",
+			english_translation: "And what do birds do when the siren goes off?",
+		},
+		context: {
+			he: "השיר נכתב בהשראת שאלות אמיתיות של ילדים בישראל בזמן מלחמה, כשמסגרות חינוך נסגרו. השאלה על הציפורים בזמן אזעקה ממחישה איך האזעקות נכנסות לשגרת החיים של הילדים.",
+			en: "Inspired by questions children in Israel asked during wartime school closures, the song uses a question about birds during a siren to show how alerts become part of daily life.",
+			sources: [
+				{
+					url: "https://www.srugim.co.il/1301377",
+					he: "סרוגים: סגירת המסגרות והרקע לשיר",
+					en: "Srugim: School closures and the song's background",
+				},
+			],
+		},
+		links: {
+			lyrics:
+				"https://yosmusic.com/%d7%94%d7%aa%d7%a7%d7%95%d7%95%d7%94-6-%d7%97%d7%95%d7%a4%d7%a9%d7%aa-%d7%9e%d7%9c%d7%97%d7%9e%d7%94/",
+			song_info:
+				"https://music.apple.com/us/album/%D7%97%D7%95%D7%A4%D7%A9%D7%AA-%D7%9E%D7%9C%D7%97%D7%9E%D7%94-single/1889650753",
+		},
+	},
+	{
 		name: "המנון הלוחם (Himnon HaLochem / The Warrior's Anthem)",
 		artist: "Hatikva 6 (התקווה 6)",
 		language: "Hebrew",

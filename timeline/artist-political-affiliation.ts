@@ -6,6 +6,16 @@ export const artistPoliticalAffiliation: Record<
 		notes: string;
 	}
 > = {
+	Invincible: {
+		era: "2000s–present",
+		affiliation: "Unknown",
+		notes: "Detroit rapper who spent their early childhood in Israel.",
+	},
+	"Yair Elitzur (יאיר אלייצור)": {
+		era: "2010s–present",
+		affiliation: "Unknown",
+		notes: "Israeli rapper and songwriter.",
+	},
 	"ABUL3EES (أبو العيس)": {
 		era: "2010s–present",
 		affiliation: "Unknown",
