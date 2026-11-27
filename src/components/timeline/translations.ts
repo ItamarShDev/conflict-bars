@@ -98,7 +98,7 @@ export const translations = {
 			fields: {
 				songName: "Song name *",
 				artist: "Artist *",
-				publishedDate: "Published date (YYYY) *",
+				publishedDate: "Published date (YYYY, YYYY-MM, or YYYY-MM-DD) *",
 				language: "Language *",
 				lyricHebrew: "Lyric sample (Hebrew) *",
 				lyricEnglish: "Lyric sample (English translation)",
@@ -119,6 +119,8 @@ export const translations = {
 				"This opens a public GitHub issue. Do not include private information.",
 			errors: {
 				required: "Please fill in all required fields.",
+				invalidPublishedDate:
+					"Enter a date as YYYY, YYYY-MM, or YYYY-MM-DD (1900–2099).",
 				issueTooLong:
 					"The complete draft exceeds the safe GitHub URL limit ({{limit}} characters). Nothing was truncated; shorten the lyric sample or links, or create the issue manually.",
 			},
@@ -307,7 +309,7 @@ export const translations = {
 			fields: {
 				songName: "שם השיר *",
 				artist: "אמן *",
-				publishedDate: "תאריך יציאה (YYYY) *",
+				publishedDate: "תאריך יציאה (YYYY, YYYY-MM או YYYY-MM-DD) *",
 				language: "שפה *",
 				lyricHebrew: "קטע מילים (עברית) *",
 				lyricEnglish: "קטע מילים (תרגום לאנגלית)",
@@ -328,6 +330,8 @@ export const translations = {
 				"ייפתח דיווח ציבורי ב-GitHub. אין לכלול מידע אישי או פרטי.",
 			errors: {
 				required: "אנא מלא את כל השדות החיוניים.",
+				invalidPublishedDate:
+					"יש להזין תאריך בפורמט YYYY, YYYY-MM או YYYY-MM-DD (1900–2099).",
 				issueTooLong:
 					"הטיוטה המלאה חורגת ממגבלת האורך הבטוחה לקישור GitHub ({{limit}} תווים). לא קוצר תוכן; יש לקצר את קטע המילים או הקישורים, או ליצור פנייה ידנית.",
 			},

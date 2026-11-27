@@ -6,6 +6,7 @@ import {
 	displaySongLanguage,
 } from "../utils/song-language";
 import { buildSongSubmissionIssueUrl } from "../utils/song-submission-issue";
+import { isValidSongPublishedDate } from "../utils/timeline";
 import type { SubmitSongFormProps } from "./SubmitSongForm.types";
 
 type SubmissionStatus = "idle" | "ready" | "error";
@@ -61,6 +62,13 @@ export function SubmitSongForm({
 			setMissingFields(missing);
 			setStatus("error");
 			setErrorMessage(translations.errors.required);
+			return;
+		}
+
+		if (!isValidSongPublishedDate(publishedDate)) {
+			setMissingFields(new Set(["publishedDate"]));
+			setStatus("error");
+			setErrorMessage(translations.errors.invalidPublishedDate);
 			return;
 		}
 
@@ -184,9 +192,8 @@ export function SubmitSongForm({
 						</span>
 						<input
 							name="publishedDate"
-							type="number"
-							min="1900"
-							max="2099"
+							type="text"
+							maxLength={10}
 							placeholder={t.placeholders.publishedYear}
 							required
 							defaultValue={editSong?.published_date || ""}

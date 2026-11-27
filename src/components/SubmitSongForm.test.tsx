@@ -46,6 +46,23 @@ describe("SubmitSongForm Hebrew language field", () => {
 		expect(languageInput).toContain('value="עברית/ערבית"');
 	});
 
+	it.each(["2001", "2022-01", "2008-08-01"])(
+		"preserves correction date precision for %s",
+		(publishedDate) => {
+			const html = renderForm({
+				name: "Original title",
+				artist: "Original artist",
+				published_date: publishedDate,
+			});
+			const dateInput = html.match(
+				/<input[^>]*name="publishedDate"[^>]*>/,
+			)?.[0];
+
+			expect(dateInput).toContain('type="text"');
+			expect(dateInput).toContain(`value="${publishedDate}"`);
+		},
+	);
+
 	it("warns in Hebrew that the GitHub issue is public", () => {
 		expect(renderForm()).toContain("ייפתח דיווח ציבורי ב-GitHub");
 	});

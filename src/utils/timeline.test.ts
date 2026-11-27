@@ -4,6 +4,7 @@ import {
 	filterYearGroups,
 	getCatalogStats,
 	getEntriesByYear,
+	isValidSongPublishedDate,
 } from "./timeline";
 
 const song: FileSong = {
@@ -49,6 +50,25 @@ describe("song release calendar dates", () => {
 			startYear: 2000,
 			endYear: 2019,
 		});
+	});
+
+	it.each(["2001", "2022-01", "2008-08-01", "2020-02-29"])(
+		"accepts valid published date precision: %s",
+		(date) => {
+			expect(isValidSongPublishedDate(date)).toBe(true);
+		},
+	);
+
+	it.each([
+		"1899",
+		"2100",
+		"2020s",
+		"2020-13",
+		"2020-02-30",
+		"2020-1",
+		"2020-01-01T00:00:00Z",
+	])("rejects invalid published dates: %s", (date) => {
+		expect(isValidSongPublishedDate(date)).toBe(false);
 	});
 
 	it("uses the same release year for decade filtering", () => {
