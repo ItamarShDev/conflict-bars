@@ -3550,4 +3550,62 @@ export const solutionAspirationAnnotations: Record<
 			he: "המילים עוסקות באובדן ובעקירה בעזה, בלי להציע הסדר מדיני.",
 		},
 	},
+	"daboor (دابور)::dolab (دولاب)": {
+		category: "no_clear_resolution",
+		confidence: "high",
+		evidenceBasis: "full_lyrics",
+		evidence: "ع سطوح في نص سلوان",
+		sourceUrl:
+			"https://lyrics.lol/artist/2709049-Daboor-%D8%B6%D8%A8%D9%88%D8%B1/lyrics/6755114-Dolab-%D8%AF%D9%88%D9%84%D8%A7%D8%A8",
+		rationale: {
+			en: "The lyrics mention Silwan and Mohammed Deif without proposing a settlement.",
+			he: "השיר מזכיר את סילוואן ואת מוחמד דף, אך אינו מציע הסדר לסכסוך.",
+		},
+	},
+	"stormtrap / asifeh (عاصفة)::fi hadal habs (في هذا الحبس / in this prison)": {
+		category: "no_clear_resolution",
+		confidence: "high",
+		evidenceBasis: "full_lyrics",
+		evidence: "يوم ورا يوم بحاول استوعب قديش ثمن الحرية",
+		sourceUrl: "https://www.youtube.com/watch?v=-OXk0DVs9vs",
+		rationale: {
+			en: "The song criticizes occupation and the idea of economic peace without proposing an alternative settlement.",
+			he: "השיר מבקר את הכיבוש ואת רעיון ״השלום הכלכלי״ ללא הצעה להסדר חלופי.",
+		},
+	},
+	"lior ben-hur::there is another way": {
+		category: "peaceful_resolution",
+		confidence: "high",
+		evidenceBasis: "full_lyrics",
+		evidence: "عالم واحد بلا حدود و العدل يسود",
+		sourceUrl:
+			"https://liorbenhur.bandcamp.com/track/there-is-another-way-feat-saz",
+		rationale: {
+			en: "The song calls for peace and justice without proposing a two-state arrangement.",
+			he: "השיר קורא לחיים בשלום ובצדק, אך אינו מציע חלוקה לשתי מדינות.",
+		},
+	},
+	"fawzi (فوزي)::ma6a6 (مطاط)": {
+		category: "no_clear_resolution",
+		confidence: "high",
+		evidenceBasis: "full_lyrics",
+		evidence: "مواليد الانتفاضة منع تجوال",
+		sourceUrl: "https://www.songlyrics.com/fawzi/ma6a6-lyrics/",
+		rationale: {
+			en: "The references to the Intifada and curfew describe lived conditions, not a settlement.",
+			he: "האזכור של האינתיפאדה והעוצר מתאר חוויית חיים, ולא מציע הסדר מדיני.",
+		},
+	},
+	"fawzi (فوزي)::jiftlek (جفتلك)": {
+		category: "no_clear_resolution",
+		confidence: "high",
+		evidenceBasis: "full_lyrics",
+		evidence: "في خيالي اطير",
+		sourceUrl:
+			"https://azlyrics.biz/other/%d9%81%d9%88%d8%b2%d9%8a-julmud-lyrics/%d9%81%d9%88%d8%b2%d9%8a-julmud-jiftlek-fawzi-pse-lyrics/",
+		rationale: {
+			en: "The contrast between a checkpoint crossing and imagined freedom does not amount to a settlement proposal.",
+			he: "הניגוד בין המעבר במחסום לחופש שבדמיון אינו הופך להצעה להסדר מדיני.",
+		},
+	},
 };

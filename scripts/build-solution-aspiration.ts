@@ -63,6 +63,50 @@ const MANUAL_REVIEW_OVERRIDES: Record<
 		rationaleHe:
 			"מילות האחדות מתייחסות לפילוג הפלסטיני הפנימי ולהגנה עצמית, לא לפתרון ישראלי-פלסטיני משותף.",
 	},
+	"daboor (دابور)::dolab (دولاب)": {
+		category: "no_clear_resolution",
+		confidence: "high",
+		rationaleEn:
+			"The lyrics mention Silwan and Mohammed Deif without proposing a settlement.",
+		rationaleHe:
+			"השיר מזכיר את סילוואן ואת מוחמד דף, אך אינו מציע הסדר לסכסוך.",
+		evidence: "ع سطوح في نص سلوان",
+	},
+	"stormtrap / asifeh (عاصفة)::fi hadal habs (في هذا الحبس / in this prison)": {
+		category: "no_clear_resolution",
+		confidence: "high",
+		rationaleEn:
+			"The song criticizes occupation and the idea of economic peace without proposing an alternative settlement.",
+		rationaleHe:
+			"השיר מבקר את הכיבוש ואת רעיון ״השלום הכלכלי״ ללא הצעה להסדר חלופי.",
+		evidence: "يوم ورا يوم بحاول استوعب قديش ثمن الحرية",
+	},
+	"lior ben-hur::there is another way": {
+		category: "peaceful_resolution",
+		confidence: "high",
+		rationaleEn:
+			"The song calls for peace and justice without proposing a two-state arrangement.",
+		rationaleHe: "השיר קורא לחיים בשלום ובצדק, אך אינו מציע חלוקה לשתי מדינות.",
+		evidence: "عالم واحد بلا حدود و العدل يسود",
+	},
+	"fawzi (فوزي)::ma6a6 (مطاط)": {
+		category: "no_clear_resolution",
+		confidence: "high",
+		rationaleEn:
+			"The references to the Intifada and curfew describe lived conditions, not a settlement.",
+		rationaleHe:
+			"האזכור של האינתיפאדה והעוצר מתאר חוויית חיים, ולא מציע הסדר מדיני.",
+		evidence: "مواليد الانتفاضة منع تجوال",
+	},
+	"fawzi (فوزي)::jiftlek (جفتلك)": {
+		category: "no_clear_resolution",
+		confidence: "high",
+		rationaleEn:
+			"The contrast between a checkpoint crossing and imagined freedom does not amount to a settlement proposal.",
+		rationaleHe:
+			"הניגוד בין המעבר במחסום לחופש שבדמיון אינו הופך להצעה להסדר מדיני.",
+		evidence: "في خيالي اطير",
+	},
 };
 
 type EvidenceBasis = "full_lyrics" | "partial_lyrics" | "catalog_excerpt";
