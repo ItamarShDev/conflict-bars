@@ -32,7 +32,7 @@ This doc orients AI/automation agents to work safely and effectively on Conflict
 
 ## Timeline rendering rules
 - The timeline renders the **union** of years that have a conflict and years that have a song, so a song in a year with no recorded conflict still appears, with a neutral “no recorded conflict for this year” note in the conflict column. Do not re-gate rendering on conflict years only.
-- `published_date` is parsed with `new Date()`. Decade placeholders (`"2020s"`) produce an invalid date and the entry silently disappears — always use `YYYY`, `YYYY-MM`, or `YYYY-MM-DD`.
+- Song dates use the release calendar year, regardless of viewer timezone. Preserve source precision with `YYYY`, `YYYY-MM`, or `YYYY-MM-DD`; invalid dates and decade placeholders (such as `"2020s"`) are omitted from the timeline.
 - Political-leaning borders come from `timeline/artist-political-affiliation.ts`, keyed by the **exact** `artist` string used in the song records. A key that differs by a character (transliteration, Hebrew spelling) falls back to the grey “unknown” border. When adding an artist, add the map entry with the identical string.
 
 ## Data & Content Sources

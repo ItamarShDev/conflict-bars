@@ -31,6 +31,51 @@ describe("full lyrics search", () => {
 	});
 });
 
+describe("song release calendar dates", () => {
+	const dates = ["2000", "2009-01", "2010-01-01", "2019-05-17"];
+	const releases = dates.map((published_date) => ({
+		...song,
+		name: published_date,
+		published_date,
+	}));
+
+	it("preserves the release year and original date precision", () => {
+		const groups = getEntriesByYear(releases, []);
+		expect(groups.map(([year]) => year)).toEqual([2000, 2009, 2010, 2019]);
+		expect(
+			groups.flatMap(([, entries]) => entries.map((e) => e.timestamp)),
+		).toEqual(dates);
+		expect(getCatalogStats(releases)).toMatchObject({
+			startYear: 2000,
+			endYear: 2019,
+		});
+	});
+
+	it("uses the same release year for decade filtering", () => {
+		const yearsIn = (decade: number) =>
+			getEntriesByYear(releases, [], undefined, undefined, [decade]).map(
+				([year]) => year,
+			);
+		expect(yearsIn(1990)).toEqual([]);
+		expect(yearsIn(2000)).toEqual([2000, 2009]);
+		expect(yearsIn(2010)).toEqual([2010, 2019]);
+	});
+
+	it("excludes invalid dates from both grouping and the catalog year range", () => {
+		const invalid = [
+			"2020s",
+			"2020-02-30",
+			"2020-13",
+			"2020-01-01T00:00:00Z",
+		].map((published_date) => ({ ...song, published_date }));
+		expect(getEntriesByYear(invalid, [])).toEqual([]);
+		expect(getCatalogStats(invalid)).toMatchObject({
+			startYear: null,
+			endYear: null,
+		});
+	});
+});
+
 const archiveSongs: FileSong[] = [
 	{ ...song, name: "First 2008 song", published_date: "2008-02-01" },
 	{ ...song, name: "Second 2008 song", published_date: "2008-11-01" },
