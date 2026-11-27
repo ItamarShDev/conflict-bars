@@ -23,7 +23,7 @@ Both typefaces are licensed under the SIL Open Font License, Version 1.1. The co
 Sony C60D ("Duad", Japanese-market Ferri Chrome) compact cassette photograph, transparent cutout, 1605×1070.
 Source: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sony_Duad_(Japanese_market_Ferri_Chrome)_cassette_(transparent).png). License: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) (public domain dedication). No attribution required.
 
-## cassette-reel.png
-Compact cassette reel/spool photograph (cropped), original 1280×960.
-Source: [Wikimedia Commons — "Compact cassette - reel.png" by Brtkr](https://commons.wikimedia.org/wiki/File:Compact_cassette_-_reel.png).
-License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) — attribution: "Brtkr / Wikimedia Commons"; share-alike on derivatives.
+## cassette-reel.svg
+Magnetic audio tape reel vector illustration (Inkscape SVG, 480×480).
+Source: [Wikimedia Commons — "Magnetic audio tape.svg" by Tucvbif](https://commons.wikimedia.org/wiki/File:Magnetic_audio_tape.svg).
+License: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) — attribution: "Tucvbif / Wikimedia Commons"; share-alike on derivatives. Replaces the earlier compact-cassette reel photograph by Brtkr (CC BY-SA 4.0).
