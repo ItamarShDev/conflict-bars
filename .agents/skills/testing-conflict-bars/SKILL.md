@@ -1,79 +1,19 @@
 ---
 name: testing-conflict-bars
-description: How to stand up and test the ConflictBars Next.js app locally (including without a real Convex deployment), and how to drive precise mobile/RTL viewport testing in the browser.
+description: How to test the file-backed ConflictBars Next.js app locally and drive precise mobile/RTL viewport checks in the browser.
 ---
 
 # Testing ConflictBars locally
 
-## Running the app without a Convex deployment
+## Running the app
 
 `npm run dev` starts Next 16 on :3000 (a `predev` step regenerates `data/songs-generated.json`).
 
-Song data comes from repo files (`loadFileSongs()` in `src/utils/file-songs.ts`), so **songs render without any backend**. The only server-side Convex dependency is
-`preloadQuery(api.events.getAllEvents)` in `src/app/[lang]/page.tsx`, which fails the page render if `NEXT_PUBLIC_CONVEX_URL` / `CONVEX_URL` are unset.
-
-If no `npx convex dev` login is available, you can unblock the page with a throwaway HTTP shim (keep it **outside** the repo / untracked):
-
-1. Write a small `node:http` server on `127.0.0.1:3210` that answers `POST /api/query` with
-   `{"status":"success","value": <array of events>}`. Events can be converted from the legacy
-   `timeline/conflicts.ts` data into the Convex event shape (`_id`, `_creationTime`, `start`, `end`, `title`, `title_he`, `reason`, `reason_he`, …).
-2. Create an untracked `.env.local` in the repo root:
-   ```
-   NEXT_PUBLIC_CONVEX_URL=http://127.0.0.1:3210
-   CONVEX_URL=http://127.0.0.1:3210
-   ```
-
-### Shim request/response details
-
-`preloadQuery` (convex/nextjs) uses `ConvexHttpClient` and sends a `POST /api/query` body like:
-
-```json
-{
-  "path": "events/getAllEvents",
-  "format": "convex_encoded_json",
-  "args": [{}]
-}
-```
-
-A working shim only needs to return the Convex-encoded JSON value:
-
-```js
-import { convexToJson } from "/path/to/repo/node_modules/convex/dist/esm/values/index.js";
-
-const events = legacyConflicts.map((c, i) => ({
-  _id: `event${i}`,
-  _creationTime: Date.now(),
-  start: c.time.start,
-  end: c.time.end,
-  title: c.conflict.title,
-  title_he: c.conflict.title_he,
-  reason: c.conflict.reason,
-  reason_he: c.conflict.reason_he,
-  description: c.conflict.description,
-  description_he: c.conflict.description_he,
-  effects: c.conflict.effects,
-  effects_he: c.conflict.effects_he,
-  wikipedia_url: c.conflict.wikipedia_url,
-}));
-
-const value = convexToJson(events); // plain JSON array of objects for string-only fields
-res.end(JSON.stringify({ status: "success", value }));
-```
-
-No `WebSocket` support is needed for the server render; the browser `ConvexProvider` will attempt WebSocket reconnection, but read-only timeline rendering still works.
-
-**Known limitation:** the browser Convex client (`useQuery` / `useMutation`) talks over a **WebSocket**, which an HTTP shim cannot serve. The console will loop
-`WebSocket closed with code 1006 / Attempting reconnect`. Consequences:
-
-- `api.artists.getAllArtists` / `api.songs.getAllSongs` resolve to `[]`.
-- The submit-song mutation can **never** succeed, so the post-success path
-  (`sendThankYouMail`, success toast, modal auto-close) is unreachable.
-- You can still test client-side validation: required fields are `songName`, `artist`,
-  `publishedDate`, `language`, `lyricHebrew`, and the artist must match a known Convex artist —
-  with an empty artist list any filled-in form yields the "required fields" error, which is a
-  usable way to prove error surfacing.
-
-Report the submission/email path as untested unless a real Convex URL and a `GMAIL` credential are supplied.
+Songs load from repo files through `loadFileSongs()`; conflicts are imported from
+`timeline/conflicts.ts`. The app and timeline do not require a Convex deployment or environment
+variables. Song submissions and corrections prepare a public GitHub issue draft; the visitor must
+review and submit it in GitHub, which requires a signed-in GitHub account. Unit tests verify the
+issue URL and its bilingual content without making a remote request.
 
 ## Before/after comparison against `main`
 
@@ -106,8 +46,7 @@ request time. Two failure modes to watch for:
 git log --oneline -1 && node -e 'const s=require("./data/songs-generated.json");console.log(s.length)'
 ```
 
-Also note `.env.local` is gitignored and can disappear during cleanup/commits; if the dev server
-suddenly 500s with `Environment variable NEXT_PUBLIC_CONVEX_URL is not set`, just recreate it.
+No `.env.local` or Convex URL is needed for file-backed timeline rendering.
 
 Beware `pkill -f next` right after spawning a new dev server — it kills the one you just started.
 Prefer `setsid nohup npm run dev &` and verify with `curl -o /dev/null -w '%{http_code}'`.
@@ -130,8 +69,7 @@ request time. Two failure modes to watch for:
 git log --oneline -1 && node -e 'const s=require("./data/songs-generated.json");console.log(s.length)'
 ```
 
-Also note `.env.local` is gitignored and can disappear during cleanup/commits; if the dev server
-suddenly 500s with `Environment variable NEXT_PUBLIC_CONVEX_URL is not set`, just recreate it.
+No `.env.local` or Convex URL is needed for file-backed timeline rendering.
 
 Beware `pkill -f next` right after spawning a new dev server — it kills the one you just started.
 Prefer `setsid nohup npm run dev &` and verify with `curl -o /dev/null -w '%{http_code}'`.
@@ -165,25 +103,13 @@ do with the PR (unused vars, `let` that should be `const`, etc.). Delete the tem
 `git status --porcelain` is empty *before* running lint/build, otherwise you will report a false
 regression failure.
 
-### Rebuilding the shim's event data
-`/tmp/events.json` (input to `convex-shim.mjs`) does not survive box restarts. Regenerate it with a
-throwaway tsx script that imports `israeliConflicts` from `timeline/conflicts.ts` — note the export
-is named `israeliConflicts`, not `conflicts`. The script must live **inside the repo** (e.g.
-`scripts/tmp-mkevents.ts`, then delete it) because tsx resolves relative imports from the file's own
-directory; a script in `/tmp` fails with `Cannot find module './timeline/conflicts'`. There are 11
-events, whose start years are the 11 conflict years.
-
 ### Expected section count = union of song years and conflict years
 Sections are the union, so the count is NOT the number of song years. Conflict years with zero songs
 (e.g. 1991, 1993, 2005) still render a section containing only the conflict card — that is correct,
-not an "empty section". Derive it explicitly:
+not an "empty section". Derive it from the static conflict file and generated song catalog:
 
 ```
-python3 -c "
-import json
-cy={int(str(e['start'])[:4]) for e in json.load(open('/tmp/events.json'))}
-sy={int(str(s['published_date'])[:4]) for s in json.load(open('data/songs-generated.json'))}
-print('sections',len(cy|sy),'conflict',len(cy&(cy|sy)),'noConflict',len(sy-cy))"
+npx tsx -e 'import { israeliConflicts } from "./timeline/conflicts"; import { loadFileSongs } from "./src/utils/file-songs"; const conflictYears = new Set(israeliConflicts.map((event) => Number(String(event.time.start).slice(0, 4)))); const songYears = new Set(loadFileSongs().map((song) => Number(String(song.published_date).slice(0, 4)))); console.log({ sections: new Set([...conflictYears, ...songYears]).size, conflict: conflictYears.size, songsWithoutConflict: [...songYears].filter((year) => !conflictYears.has(year)).length });'
 ```
 
 ## Driving exact viewports (mobile / tablet / desktop)
@@ -320,29 +246,20 @@ section that mixes an unknown card with a classified one so the difference is vi
 choice. Whether grey is the desired presentation for apolitical artists is a standing product
 question, not a bug to report each run.
 
-## Testing OG/Twitter card metadata locally without a real Convex deployment
+## Testing OG/Twitter card metadata locally
 
-`npm run build` and `npm run start` can be tested without a real Convex URL by using a throwaway HTTP shim on `127.0.0.1:3210`:
-
-1. Set the env vars when starting the production server:
-   ```
-   NEXT_PUBLIC_CONVEX_URL=http://127.0.0.1:3210 CONVEX_URL=http://127.0.0.1:3210 npm run start
-   ```
-2. The shim must answer `POST /api/query` for `path: "events:getAllEvents"` (note the **colon** in `events:getAllEvents`) with `{"status":"success","value":[]}`.
-3. With an empty events array the page renders; the timeline will be song-only, which is enough to verify `<head>` metadata and the `opengraph-image` / `twitter-image` routes.
-4. Useful assertions:
+`npm run build` and `npm run start` need no Convex URL or HTTP shim. Useful assertions:
    - `curl -sL http://localhost:3000/<lang>` and grep for `og:image` / `twitter:image` URLs.
    - `curl -I http://localhost:3000/<lang>/opengraph-image.png` should 404.
    - `curl -I http://localhost:3000/<lang>/opengraph-image` should return `content-type: image/png` and the body is a 1200x630 PNG (use `identify` from ImageMagick).
    - The bare `opengraph-image` route is what Next.js emits in `og:image`; the `.png` variant does not exist because the source file is `opengraph-image.tsx`.
-5. The metadata image URLs include a query-string hash that Next.js derives from the metadata source; changing comments/exports in `twitter-image.tsx` or strings in `opengraph-image.tsx` can change the hash and force cache re-fetches.
+The metadata image URLs include a query-string hash that Next.js derives from the metadata source; changing comments/exports in `twitter-image.tsx` or strings in `opengraph-image.tsx` can change the hash and force cache re-fetches.
 
-## Devin Secrets Needed
+## External access needed for optional checks
 
-- `NEXT_PUBLIC_CONVEX_URL` / Convex deploy key — required for any real query, mutation or
-  end-to-end submission test. Without it, only read-only file-backed rendering can be tested.
-- `GMAIL` (Gmail app password used by `src/actions/email.ts`) — required to verify submission
-  notification emails. Not available by default.
+- Comparing checked-in conflicts with deployed database events requires the correct read-only
+  Convex deployment URL and a public `events:getAllEvents` function. Neither is needed to run the app.
+- Submitting a GitHub issue is an explicit user action and requires a signed-in GitHub account.
 
 ## RTL and Hebrew-input gotchas
 

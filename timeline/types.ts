@@ -1,11 +1,3 @@
-import type { Preloaded } from "convex/react";
-import type { api } from "../convex/_generated/api";
-
-export type Song = (typeof api.songs.getAllSongs._returnType)[number];
-export type SongList = typeof api.songs.getAllSongs._returnType;
-export type PreloadedSongList = Preloaded<typeof api.songs.getAllSongs>;
-export type PreloadedEvents = Preloaded<typeof api.events.getAllEvents>;
-
 export type EventsTimeline = {
 	time: { start: string; end?: string };
 	conflict?: {
@@ -20,8 +12,6 @@ export type EventsTimeline = {
 		wikipedia_url?: string; // Wikipedia page URL
 	};
 };
-
-export type ConvexEvent = (typeof api.events.getAllEvents._returnType)[number];
 
 export type FileSongArtistDetails = {
 	affiliation?: string;

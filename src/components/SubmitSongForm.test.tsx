@@ -1,26 +1,7 @@
 import { renderToStaticMarkup } from "react-dom/server";
-import { beforeEach, describe, expect, it, vi } from "vitest";
+import { describe, expect, it } from "vitest";
 import { SubmitSongForm } from "./SubmitSongForm";
 import { translations } from "./timeline/translations";
-
-const formMocks = vi.hoisted(() => ({
-	queryResults: [] as unknown[],
-}));
-
-vi.mock("convex/react", () => ({
-	useQuery: () => formMocks.queryResults.shift(),
-	useConvex: () => ({ query: vi.fn(), mutation: vi.fn() }),
-}));
-vi.mock("../actions/email", () => ({ sendThankYouMail: vi.fn() }));
-
-const supportedLanguages = ["Arabic", "English", "Hebrew", "Hebrew/Arabic"];
-
-beforeEach(() => {
-	formMocks.queryResults = [
-		supportedLanguages.map((language) => ({ language })),
-		[],
-	];
-});
 
 function renderForm(editSong?: {
 	name: string;
@@ -30,7 +11,8 @@ function renderForm(editSong?: {
 }) {
 	return renderToStaticMarkup(
 		<SubmitSongForm
-			submitSong={vi.fn() as never}
+			artistNames={["Test artist"]}
+			languageNames={["Arabic", "English", "Hebrew", "Hebrew/Arabic"]}
 			translations={translations.he.submitSongForm}
 			lang="he"
 			editSong={editSong}
@@ -62,5 +44,9 @@ describe("SubmitSongForm Hebrew language field", () => {
 		const languageInput = html.match(/<input[^>]*name="language"[^>]*>/)?.[0];
 
 		expect(languageInput).toContain('value="עברית/ערבית"');
+	});
+
+	it("warns in Hebrew that the GitHub issue is public", () => {
+		expect(renderForm()).toContain("ייפתח דיווח ציבורי ב-GitHub");
 	});
 });

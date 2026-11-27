@@ -26,8 +26,9 @@ This doc orients AI/automation agents to work safely and effectively on Conflict
 ## Architecture Overview
 - Frontend: Next.js 16 (App Router, Turbopack) + React 19 + TypeScript + Tailwind CSS v4. Lint/format via Biome 2.
 - Songs: file data under `data/`, compiled to `data/songs-generated.json` at `predev`/`prebuild` and read server-side by `src/utils/file-songs.ts`.
-- Conflicts/events + submissions: Convex (`convex/schema.ts`, `convex/events.ts`, `convex/songs.ts`, `convex/artists.ts`, `convex/mutations.ts`).
-- Data flow: `src/app/[lang]/page.tsx` loads generated songs and preloads `api.events.getAllEvents` → `src/utils/convex-helpers.ts` normalizes events → `src/utils/timeline.ts` merges conflicts and songs by year → rendered by `src/components/timeline/Timeline.tsx` and children.
+- Conflicts/events: static source in `timeline/conflicts.ts`; song contributions and corrections open prefilled public GitHub issues.
+- Data flow: `src/app/[lang]/page.tsx` loads generated songs and imports `israeliConflicts` → `src/utils/timeline.ts` merges conflicts and songs by year → rendered by `src/components/timeline/Timeline.tsx` and children.
+- Convex code and migration scripts remain for historical database maintenance only; the app has no Convex runtime dependency.
 - Routing/i18n: locale is the `[lang]` segment (`en`/`he`); `next.config.ts` redirects `/` → `/he`. UI strings in `src/components/timeline/translations.ts`.
 
 ## Timeline rendering rules
@@ -38,7 +39,7 @@ This doc orients AI/automation agents to work safely and effectively on Conflict
 ## Data & Content Sources
 - Source of truth for songs: `data/<artist>/<era>.ts`. `data/songs-generated.json` is a build artifact and git-ignored — never edit it by hand.
 - `scripts/generate-songs-json.ts` walks `data/` recursively and picks up **every** exported array in every `.ts` file except `index.ts`. Consequently, dropping an artist from `index.ts` does not remove their songs; delete the era files (or the artist folder) instead. Re-run `npm run generate-songs` after any data change and check the printed count.
-- Conflicts: `timeline/conflicts.ts` + `timeline/conflict-utils.ts` for file data; Convex `events` for what the app renders (seed with `npm run migrate:events`).
+- Conflicts: `timeline/conflicts.ts` is the source rendered by the app; `timeline/conflict-utils.ts` parses and lays out entries.
 - Content expectations: dates, links, neutral bilingual context, and a political-affiliation entry per artist.
 
 ### Song shape (file data)
@@ -58,9 +59,8 @@ This doc orients AI/automation agents to work safely and effectively on Conflict
 - Link background sources in `context.sources` with labels in both languages. Keep lyric and recording links separate.
 - Shared types: `timeline/types.ts`.
 
-### Song shape (Convex)
-- Table `songs`: `name`, `artist_id`, optional `collaborator_ids`, `published_date` (string), `published`, optional `language`, `lyric_sample` (`hebrew`, `english_translation`), `links` (`lyrics`, `song_info`, `youtube`), `submitted_by`.
-- `convex/songs.ts` hydrates artist + collaborators and sorts by date. Mutations: `insertSong`, `updateSong`, `deleteSong` plus artist/collaborator helpers. Visitor corrections land in `song_edit_suggestions` (`convex/mutations.ts`) and are emailed by `src/actions/email.ts`.
+### Contributions
+- The bilingual form prepares a public GitHub issue for new songs and corrections. Users review and submit it on GitHub; never collect or include private contact details in the issue.
 
 ### Data hygiene
 - One record per artist+song. When merging duplicates keep the richest entry (lyrics, links, language, collaborators) and the better-sourced date.
@@ -69,12 +69,10 @@ This doc orients AI/automation agents to work safely and effectively on Conflict
 
 ## Operations (local)
 1) `npm install`
-2) `npx convex dev` (required — conflicts come from Convex)
-3) First time: `npm run migrate` (songs/artists) and `npm run migrate:events` (conflicts)
-4) `npm run dev` → http://localhost:3000 (redirects to `/he`)
+2) `npm run dev` → http://localhost:3000 (generates songs and redirects to `/he`)
 
 Checks before opening a PR: `npm run generate-songs`, `npm test` (Vitest), `npm run lint` (Biome), `npm run typecheck`, `npm run build`. Formatting fixes: `npm run format` or `npx biome check --write <paths>`.
-Other: `npm run db:clear`, `npm run reset-data`, `npm run migrate:language`, `npx convex dashboard`.
+Legacy Convex maintenance scripts are not required to run or build the app.
 
 ## Contribution Guidance for Agents
 - Respect neutrality: Do not introduce biased language; keep political labels factual, sourced, and minimal.
@@ -88,6 +86,6 @@ Other: `npm run db:clear`, `npm run reset-data`, `npm run migrate:language`, `np
 - Project README: `README.md`
 - Data contribution notes: `data/AGENTS.md`
 - Song generation: `scripts/generate-songs-json.ts`, `src/utils/file-songs.ts`
-- Timeline utilities: `src/utils/timeline.ts`, `src/utils/convex-helpers.ts`
+- Timeline utilities: `src/utils/timeline.ts`, `timeline/conflict-utils.ts`
 - Translations: `src/components/timeline/translations.ts`
 - Political affiliation map: `timeline/artist-political-affiliation.ts`

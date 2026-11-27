@@ -1,32 +1,25 @@
 "use client";
 
-import { useConvex, useQuery } from "convex/react";
-import { useEffect, useId, useMemo, useState } from "react";
-import { api } from "../../convex/_generated/api";
-import type { Id } from "../../convex/_generated/dataModel";
-import { sendThankYouMail } from "../actions/email";
+import { useId, useState } from "react";
 import {
 	canonicalSongLanguage,
 	displaySongLanguage,
 } from "../utils/song-language";
-import { resolveSubmissionArtist } from "../utils/submission-artist";
+import { buildSongSubmissionIssueUrl } from "../utils/song-submission-issue";
 import type { SubmitSongFormProps } from "./SubmitSongForm.types";
 
-type SubmissionStatus = "idle" | "submitting" | "success" | "error";
+type SubmissionStatus = "idle" | "ready" | "error";
 
 export function SubmitSongForm({
-	onSuccess,
 	translations,
 	lang = "en",
 	editSong,
-	submitSong,
+	artistNames = [],
+	languageNames = [],
 }: SubmitSongFormProps) {
-	const songs = useQuery(api.songs.getAllSongs) ?? [];
-	const artists = useQuery(api.artists.getAllArtists) ?? [];
-	const convex = useConvex();
 	const [status, setStatus] = useState<SubmissionStatus>("idle");
 	const [errorMessage, setErrorMessage] = useState<string | null>(null);
-	const [prefillEmail, setPrefillEmail] = useState<string>("");
+	const [issueUrl, setIssueUrl] = useState<string | null>(null);
 	const [artistValue, setArtistValue] = useState<string>(
 		editSong?.artist ?? "",
 	);
@@ -35,57 +28,15 @@ export function SubmitSongForm({
 	const languageListId = useId();
 	const isEditMode = !!editSong;
 
-	useEffect(() => {
-		const savedEmail = sessionStorage.getItem("submitSongFormEmail");
-		if (savedEmail) {
-			setPrefillEmail(savedEmail);
-		}
-	}, []);
-
-	const { artistOptions, languages } = useMemo(() => {
-		const languageSet = new Set<string>();
-		for (const song of songs) {
-			if (song.language) {
-				languageSet.add(song.language);
-			}
-		}
-		const artistOptions = artists
-			.map((artist) => ({
-				id: artist._id,
-				name: artist.name,
-			}))
-			.sort((a, b) => a.name.localeCompare(b.name));
-
-		return {
-			artistOptions,
-			languages: Array.from(languageSet).sort((a, b) => a.localeCompare(b)),
-		};
-	}, [songs, artists]);
-
-	const artistNameToId = useMemo(() => {
-		const map = new Map<string, Id<"artists">>();
-		for (const option of artistOptions) {
-			if (option.name) {
-				map.set(option.name.toLowerCase(), option.id);
-			}
-		}
-		return map;
-	}, [artistOptions]);
-
-	const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (
-		event,
-	) => {
+	const handleSubmit: React.FormEventHandler<HTMLFormElement> = (event) => {
 		event.preventDefault();
-		setStatus("submitting");
+		setStatus("idle");
 		setErrorMessage(null);
+		setIssueUrl(null);
 		setMissingFields(new Set());
 
-		const form = event.currentTarget;
-		const formData = new FormData(form);
+		const formData = new FormData(event.currentTarget);
 
-		const displayName = (formData.get("displayName") as string)?.trim() ?? "";
-		const emailRaw = (formData.get("email") as string) ?? "";
-		const email = emailRaw.trim();
 		const songName = (formData.get("songName") as string)?.trim();
 		const artist = (formData.get("artist") as string)?.trim();
 		const publishedDate = (formData.get("publishedDate") as string)?.trim();
@@ -130,59 +81,46 @@ export function SubmitSongForm({
 					}
 				: undefined;
 
-		try {
-			const artistId = await resolveSubmissionArtist(
-				artist,
-				artistNameToId,
-				editSong,
-				async (normalized) =>
-					(
-						await convex.query(api.internal.artists.getByNormalizedName, {
-							normalized,
-						})
-					)?._id,
-				(args) => convex.mutation(api.mutations.upsertArtist, args),
-			);
-			if (!artistId) {
-				setMissingFields(new Set(["artist"]));
-				setStatus("error");
-				setErrorMessage(translations.errors.required);
-				return;
-			}
-			await submitSong({
-				songId: editSong?._id,
-				userDisplayName: displayName,
-				userEmail: email,
-				suggestion: {
-					name: songName,
-					artistId,
-					published_date: publishedDate,
-					language: language ? language : undefined,
-					lyric_sample: lyricSample,
-					links,
-				},
-			});
-			setStatus("success");
-			onSuccess?.();
-			form.reset();
-			try {
-				await sendThankYouMail({
-					submitterEmail: email,
-					songName,
-					artist,
-					publishedDate,
-					language,
-					lyricSample,
-					links,
-				});
-			} catch (error) {
-				console.error("Failed to send submission email", error);
-			}
-		} catch (error) {
-			console.error("Failed to submit song", error);
+		const issueResult = buildSongSubmissionIssueUrl({
+			isEditMode,
+			songName,
+			artist,
+			publishedDate,
+			language,
+			lyricSample: lyricSample
+				? {
+						hebrew: lyricSample.hebrew,
+						englishTranslation: lyricSample.english_translation,
+					}
+				: undefined,
+			links: links
+				? {
+						lyrics: links.lyrics,
+						songInfo: links.song_info,
+						youtube: links.youtube,
+					}
+				: undefined,
+			existingSong: editSong,
+		});
+		if (issueResult.status === "too-long") {
 			setStatus("error");
-			setErrorMessage(translations.errors.generic);
+			setErrorMessage(
+				translations.errors.issueTooLong.replace(
+					"{{limit}}",
+					String(issueResult.maxLength),
+				),
+			);
+			return;
 		}
+
+		setIssueUrl(issueResult.url);
+		setStatus("ready");
+	};
+
+	const handleFormChange: React.FormEventHandler<HTMLFormElement> = () => {
+		setStatus("idle");
+		setErrorMessage(null);
+		setIssueUrl(null);
 	};
 
 	const t = translations;
@@ -195,31 +133,12 @@ export function SubmitSongForm({
 			<h2 className="mb-3 font-display text-lg font-black text-(--color-card-foreground) sm:mb-4 sm:text-xl">
 				{isEditMode ? t.editTitle : t.title}
 			</h2>
-			<form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
+			<form
+				onChange={handleFormChange}
+				onSubmit={handleSubmit}
+				className="space-y-3 sm:space-y-4"
+			>
 				<div className="grid min-w-0 grid-cols-1 gap-3 sm:gap-4 md:grid-cols-2">
-					<label className="flex min-w-0 flex-col gap-1.5 sm:gap-2">
-						<span className="text-xs font-black uppercase tracking-wider text-(--color-muted-foreground)">
-							{t.fields.displayName}
-						</span>
-						<input
-							name="displayName"
-							type="text"
-							placeholder={t.placeholders.displayNameOptional}
-							className={inputBase}
-						/>
-					</label>
-					<label className="flex min-w-0 flex-col gap-1.5 sm:gap-2">
-						<span className="text-xs font-black uppercase tracking-wider text-(--color-muted-foreground)">
-							{t.fields.email}
-						</span>
-						<input
-							name="email"
-							type="email"
-							defaultValue={prefillEmail}
-							dir="ltr"
-							className={inputBase}
-						/>
-					</label>
 					<label className="flex min-w-0 flex-col gap-1.5 sm:gap-2">
 						<span className="text-xs font-black uppercase tracking-wider text-(--color-muted-foreground)">
 							{t.fields.songName}
@@ -368,12 +287,27 @@ export function SubmitSongForm({
 					</label>
 				</div>
 
+				<p className="text-xs leading-relaxed text-(--color-muted-foreground)">
+					{t.issuePrivacyNotice}
+				</p>
+
 				<div className="flex flex-col-reverse items-center justify-end gap-4 sm:flex-row">
 					<div>
-						{status === "success" && (
-							<span className="text-sm font-bold text-emerald-400">
-								{t.success}
-							</span>
+						{status === "ready" && issueUrl && (
+							<div
+								className="flex flex-col gap-2 text-sm font-bold text-emerald-400"
+								role="status"
+							>
+								<span>{t.issueReady}</span>
+								<a
+									href={issueUrl}
+									target="_blank"
+									rel="noreferrer"
+									className="underline"
+								>
+									{t.buttons.openIssue}
+								</a>
+							</div>
 						)}
 						{status === "error" && errorMessage && (
 							<span className="text-sm font-bold text-red-400">
@@ -383,19 +317,18 @@ export function SubmitSongForm({
 					</div>
 					<button
 						type="submit"
-						disabled={status === "submitting"}
 						className="w-full bg-(--color-accent) px-6 py-2.5 font-black text-[#fffdf5] transition wobble-sm hover:bg-(--color-accent-hover) disabled:opacity-50 sm:w-auto"
 					>
-						{status === "submitting" ? t.buttons.submitting : t.buttons.submit}
+						{t.buttons.submit}
 					</button>
 				</div>
 				<datalist id={artistListId}>
-					{artistOptions.map((option) => (
-						<option key={option.id} value={option.name} />
+					{artistNames.map((artistName) => (
+						<option key={artistName} value={artistName} />
 					))}
 				</datalist>
 				<datalist id={languageListId}>
-					{languages.map((langOption) => (
+					{languageNames.map((langOption) => (
 						<option
 							key={langOption}
 							value={displaySongLanguage(langOption, lang)}

@@ -5,7 +5,6 @@ import { FullLyricsDialog } from "./FullLyricsDialog";
 import { SongEntry } from "./SongEntry";
 import { translations } from "./translations";
 
-vi.mock("convex/react", () => ({ useMutation: () => vi.fn() }));
 vi.mock("@/components/SubmitSongForm", () => ({ SubmitSongForm: () => null }));
 
 const song: FileSong = {

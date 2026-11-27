@@ -1,6 +1,6 @@
 # ConflictBars
 
-An interactive, bilingual timeline that places Israeli and Palestinian hip‑hop next to the conflicts it responds to. Built with Next.js (App Router), React 19, TypeScript and Tailwind CSS v4, with Convex for conflict/event data and song submissions.
+An interactive, bilingual timeline that places Israeli and Palestinian hip‑hop next to the conflicts it responds to. Built with Next.js (App Router), React 19, TypeScript and Tailwind CSS v4, with conflict and song data maintained in repository files.
 
 ## Project Goal
 
@@ -19,8 +19,7 @@ Entries should be concise, sourced, and neutral in tone. Eligibility rules and t
 - React 19, TypeScript
 - Tailwind CSS v4 (via `@tailwindcss/postcss`)
 - Biome (lint + format)
-- Convex — events, artists, and submitted songs
-- Nodemailer — submission notification emails
+- GitHub Issues — public contribution and correction drafts
 - Vercel Analytics
 
 Path alias: `@/*` → `src/*`.
@@ -33,10 +32,9 @@ Path alias: `@/*` → `src/*`.
 - `src/app/[lang]/` — the single locale‑aware route plus OG/Twitter images; `src/app/layout.tsx`, `globals.css`
 - `src/components/timeline/` — `Timeline.tsx`, `YearSection.tsx`, `YearRail.tsx`, `SongEntry.tsx`, `FilterPanel.tsx`, `HelpModal.tsx`, `LanguageSwitcher.tsx`, `TimelineHeader.tsx`, `translations.ts` (en/he strings)
 - `src/components/conflict/` — conflict card pieces; `src/components/SubmitSong*` — submission modal/form
-- `src/utils/` — `file-songs.ts` (reads the generated JSON), `convex-helpers.ts`, `timeline.ts` (merges conflicts + songs by year), `colors.ts`
-- `src/actions/email.ts` — server action that emails new submissions
-- `convex/` — `schema.ts`, `events.ts`, `songs.ts`, `artists.ts`, `mutations.ts`
-- `scripts/` — `generate-songs-json.ts`, migration/sync utilities
+- `src/utils/` — `file-songs.ts` (reads generated JSON), `song-submission-issue.ts` (builds GitHub issue drafts), `timeline.ts` (merges conflicts + songs by year), `colors.ts`
+- `convex/` and historical migration/sync scripts — retained for existing data; not used by the app runtime
+- `scripts/` — `generate-songs-json.ts` and legacy migration/sync utilities
 
 ## Timeline Behaviour
 
@@ -49,11 +47,11 @@ data/<artist>/<era>.ts
   └─ scripts/generate-songs-json.ts   (recursively scans data/, skips index.ts)
        └─ data/songs-generated.json
             └─ src/utils/file-songs.ts → app/[lang]/page.tsx (server)
-                                          + Convex events (preloadQuery)
-                                             └─ src/utils/timeline.ts → Timeline
+timeline/conflicts.ts ──────────────────┘
+                                          └─ src/utils/timeline.ts → Timeline
 ```
 
-Songs render from the generated JSON; conflicts/events come from Convex. Because the generator walks the filesystem, adding or removing a song file changes the catalog — removing an artist means deleting their song files, not just their `index.ts` export.
+Songs render from generated JSON and conflicts render from `timeline/conflicts.ts`. Contributions open a prefilled public GitHub issue in this repository; users review and submit the issue on GitHub. Because the generator walks the filesystem, adding or removing a song file changes the catalog — removing an artist means deleting their song files, not just their `index.ts` export.
 
 ## Local Development
 
@@ -63,22 +61,7 @@ Songs render from the generated JSON; conflicts/events come from Convex. Because
 npm install
 ```
 
-2) Start the Convex dev server (required — the timeline needs events)
-
-```bash
-npx convex dev
-```
-
-Keep this terminal running; it creates/connects the deployment, generates type‑safe API code, and watches `convex/`.
-
-3) Seed Convex (first time only)
-
-```bash
-npm run migrate         # songs/artists
-npm run migrate:events  # conflicts/events
-```
-
-4) Start Next.js
+2) Start Next.js
 
 ```bash
 npm run dev             # runs generate-songs first
@@ -92,9 +75,7 @@ Open http://localhost:3000 — `/` redirects to `/he` (see `next.config.ts`); `/
 - `npm run generate-songs` — rebuild `data/songs-generated.json` from `data/`
 - `npm run lint` — Biome check; `npm run format` — Biome write; `npm run typecheck` — `tsc --noEmit`
 - `npm test` — run the Vitest regression suite (include with lint, typecheck and build before opening a PR)
-- `npm run migrate`, `migrate:force`, `migrate:events`, `migrate:language` — Convex data migrations
-- `npm run db:clear`, `reset-data`, `reset-data:force` — clear/reseed Convex songs
-- `npx convex dev`, `npx convex dashboard`
+- Legacy Convex migration/reset scripts remain available for historical database maintenance; the app does not need a Convex deployment.
 
 ## Content Model
 
@@ -139,13 +120,9 @@ lyrics have been copied into the catalog.
 
 `timeline/artist-political-affiliation.ts` maps the exact `artist` string to `{ era, affiliation, notes }`. The key must match the song's `artist` value verbatim, otherwise the entry falls back to the "unknown" grey border.
 
-### Convex
+### Contributions
 
-- `songs` — submitted songs, hydrated with artist/collaborators (`convex/songs.ts`)
-- `events` — conflicts with dates, descriptions and effects (`convex/events.ts`)
-- `song_edit_suggestions` — visitor corrections (`convex/mutations.ts`)
-
-Manage data at https://dashboard.convex.dev
+Visitors can use the contribution form to prepare a prefilled issue in the public `ItamarShDev/conflict-bars` repository. New-song submissions and corrections use the same form, and the issue body includes the proposed metadata, lyric samples, and links. The visitor must be signed in to GitHub and submit the issue; no email address is collected or published by the form. Prefilled URLs are capped at 7,000 characters; oversized drafts show an error instead of being shortened.
 
 ## Internationalization
 

@@ -1,6 +1,5 @@
 "use client";
 
-import { usePreloadedQuery } from "convex/react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { SubmitSongModal } from "@/components/SubmitSongModal";
 import { PassItOnHero } from "@/components/timeline/PassItOnHero";
@@ -9,13 +8,12 @@ import { PassItOnYearSpool } from "@/components/timeline/PassItOnYearSpool";
 import { ScrollyBackdrop } from "@/components/timeline/ScrollyBackdrop";
 import { TimelineHeader } from "@/components/timeline/TimelineHeader";
 import { translations } from "@/components/timeline/translations";
-import { convertConvexEventsToTimeline } from "@/utils/convex-helpers";
 import { getCatalogStats, getEntriesByYear } from "@/utils/timeline";
 import {
 	getYearScrollTop,
 	MOBILE_DOCK_BREAKPOINT,
 } from "@/utils/timeline-scroll";
-import type { FileSongList, PreloadedEvents } from "../../../timeline/types";
+import type { EventsTimeline, FileSongList } from "../../../timeline/types";
 
 type ManualScrollLock = {
 	year: number;
@@ -27,18 +25,13 @@ type ManualScrollLock = {
 export function Timeline({
 	lang,
 	songs,
-	convexEvents,
+	events,
 }: {
 	lang: "en" | "he";
 	songs: FileSongList;
-	convexEvents: PreloadedEvents;
+	events: EventsTimeline[];
 }) {
 	const t = translations[lang];
-	const convexEventsData = usePreloadedQuery(convexEvents);
-	const events = useMemo(
-		() => convertConvexEventsToTimeline(convexEventsData),
-		[convexEventsData],
-	);
 	const [selectedYear, setSelectedYear] = useState<number | null>(null);
 	const manualScrollLockRef = useRef<ManualScrollLock | null>(null);
 
@@ -47,6 +40,22 @@ export function Timeline({
 		[songs, events],
 	);
 	const catalogStats = useMemo(() => getCatalogStats(songs), [songs]);
+	const artistNames = useMemo(
+		() =>
+			Array.from(new Set(songs.map((song) => song.artist))).sort((a, b) =>
+				a.localeCompare(b),
+			),
+		[songs],
+	);
+	const languageNames = useMemo(
+		() =>
+			Array.from(
+				new Set(
+					songs.flatMap((song) => (song.language ? [song.language] : [])),
+				),
+			).sort((a, b) => a.localeCompare(b)),
+		[songs],
+	);
 	const years = useMemo(() => yearGroups.map(([year]) => year), [yearGroups]);
 	const sectionRefs = useRef<Record<number, HTMLElement | null>>({});
 	const yearsContainerRef = useRef<HTMLDivElement | null>(null);
@@ -282,6 +291,8 @@ export function Timeline({
 						label={t.submitSongButton}
 						translations={t.submitSongForm}
 						lang={lang}
+						artistNames={artistNames}
+						languageNames={languageNames}
 					/>
 
 					<p className="pass-it-on-count" role="status" aria-live="polite">

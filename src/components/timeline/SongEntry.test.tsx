@@ -1,12 +1,7 @@
 import { renderToStaticMarkup } from "react-dom/server";
-import { describe, expect, it, vi } from "vitest";
+import { describe, expect, it } from "vitest";
 import type { FileSong } from "../../../timeline/types";
 import { SongEntry } from "./SongEntry";
-
-vi.mock("convex/react", () => ({
-	useMutation: () => vi.fn(),
-	useQuery: () => undefined,
-}));
 
 const baseSong: FileSong = {
 	name: "Test Song",

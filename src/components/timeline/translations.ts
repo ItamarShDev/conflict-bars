@@ -96,8 +96,6 @@ export const translations = {
 			title: "Submit a Song",
 			editTitle: "Suggest Song Edit",
 			fields: {
-				displayName: "Your name",
-				email: "Email",
 				songName: "Song name *",
 				artist: "Artist *",
 				publishedDate: "Published date (YYYY) *",
@@ -109,18 +107,20 @@ export const translations = {
 				linkYoutube: "YouTube link",
 			},
 			placeholders: {
-				displayNameOptional: "Optional",
 				publishedYear: "YYYY",
 			},
 			buttons: {
-				submitting: "Submitting...",
-				submit: "Submit song",
+				submit: "Prepare GitHub issue",
+				openIssue: "Review and submit on GitHub",
 			},
-			success: "Thanks! We'll review your submission soon.",
+			issueReady:
+				"Your draft is ready. Review it and submit the issue on GitHub to finish.",
+			issuePrivacyNotice:
+				"This opens a public GitHub issue. Do not include private information.",
 			errors: {
 				required: "Please fill in all required fields.",
-				generic:
-					"Something went wrong while submitting the song. Please try again.",
+				issueTooLong:
+					"The complete draft exceeds the safe GitHub URL limit ({{limit}} characters). Nothing was truncated; shorten the lyric sample or links, or create the issue manually.",
 			},
 		},
 		helpModal: {
@@ -305,8 +305,6 @@ export const translations = {
 			title: "הוסף שיר",
 			editTitle: "הצעת עריכה לשיר",
 			fields: {
-				displayName: "השם שלך",
-				email: "אימייל",
 				songName: "שם השיר *",
 				artist: "אמן *",
 				publishedDate: "תאריך יציאה (YYYY) *",
@@ -318,17 +316,20 @@ export const translations = {
 				linkYoutube: "קישור ליוטיוב",
 			},
 			placeholders: {
-				displayNameOptional: "אופציונלי",
 				publishedYear: "YYYY",
 			},
 			buttons: {
-				submitting: "שולח...",
-				submit: "שלח שיר",
+				submit: "הכנת פנייה ל-GitHub",
+				openIssue: "בדיקה ושליחה ב-GitHub",
 			},
-			success: "תודה! נעבור על ההגשה שלך בקרוב.",
+			issueReady:
+				"הטיוטה מוכנה. בדקו אותה ושלחו את הפנייה ב-GitHub כדי להשלים את ההגשה.",
+			issuePrivacyNotice:
+				"ייפתח דיווח ציבורי ב-GitHub. אין לכלול מידע אישי או פרטי.",
 			errors: {
 				required: "אנא מלא את כל השדות החיוניים.",
-				generic: "משהו השתבש בשליחת השיר. נסה שוב בבקשה.",
+				issueTooLong:
+					"הטיוטה המלאה חורגת ממגבלת האורך הבטוחה לקישור GitHub ({{limit}} תווים). לא קוצר תוכן; יש לקצר את קטע המילים או הקישורים, או ליצור פנייה ידנית.",
 			},
 		},
 		helpModal: {

@@ -5,7 +5,6 @@ import type { EventsTimeline, FileSong } from "../../../timeline/types";
 import { PassItOnYearSection } from "./PassItOnYearSection";
 import { translations } from "./translations";
 
-vi.mock("convex/react", () => ({ useMutation: () => vi.fn() }));
 vi.mock("@/components/SubmitSongForm", () => ({ SubmitSongForm: () => null }));
 
 const songs: FileSong[] = [
