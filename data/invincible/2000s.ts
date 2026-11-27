@@ -58,7 +58,7 @@ export const invincible2000s = [
 		},
 		links: {
 			lyrics: "https://antiwarsongs.org/canzone.php?id=47677&lang=en",
-			song_info: "https://music.apple.com/us/album/shapeshifters/281640779",
+			song_info: "https://music.apple.com/us/song/people-not-places/281640788",
 		},
 	},
 ];
