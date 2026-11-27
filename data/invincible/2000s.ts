@@ -24,9 +24,9 @@ export const invincible2000s = [
 			],
 		},
 		links: {
-			lyrics: "https://www.songlyrics.com/invincible/no-compromises-lyrics/",
+			lyrics: "https://lyricsweb.com/song/invincible/invincible-no-compromises",
 			song_info:
-				"https://lyricsweb.com/song/invincible/invincible-no-compromises",
+				"https://electronicintifada.net/content/free-p-palestine-takes-nycs-east-village-storm/5772",
 		},
 	},
 	{
@@ -59,7 +59,7 @@ export const invincible2000s = [
 			],
 		},
 		links: {
-			lyrics: "https://www.songlyrics.com/invincible/people-not-places-lyrics/",
+			lyrics: "https://antiwarsongs.org/canzone.php?id=47677&lang=en",
 			song_info: "https://music.apple.com/us/album/shapeshifters/281640779",
 		},
 	},

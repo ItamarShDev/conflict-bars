@@ -3578,7 +3578,8 @@ export const solutionAspirationAnnotations: Record<
 		confidence: "medium",
 		evidenceBasis: "full_lyrics",
 		evidence: "It's called a security fence",
-		sourceUrl: "https://www.songlyrics.com/invincible/no-compromises-lyrics/",
+		sourceUrl:
+			"https://lyricsweb.com/song/invincible/invincible-no-compromises",
 		rationale: {
 			en: "The verse criticizes the barrier, then broadens into a general vision of not having to fight; it does not describe what ending the Israeli–Palestinian conflict would mean.",
 			he: "הבית מבקר את הגדר ובהמשך מציג תקווה כללית ליום שבו לא יהיה עוד צורך להיאבק, בלי לתאר מה יהיה פירוש סיום הסכסוך הישראלי־פלסטיני.",
@@ -3589,8 +3590,7 @@ export const solutionAspirationAnnotations: Record<
 		confidence: "high",
 		evidenceBasis: "full_lyrics",
 		evidence: "But I see a man standing with a key and a deed in his hand",
-		sourceUrl:
-			"https://www.songlyrics.com/invincible/people-not-places-lyrics/",
+		sourceUrl: "https://antiwarsongs.org/canzone.php?id=47677&lang=en",
 		rationale: {
 			en: "The song foregrounds displacement and the right of return without describing a political settlement for both peoples.",
 			he: "השיר מדגיש את העקירה ואת זכות השיבה, בלי לתאר הסדר מדיני לשני העמים.",
