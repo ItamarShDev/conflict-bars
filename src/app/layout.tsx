@@ -7,7 +7,6 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
-import { ConvexClientProvider } from "@/components/ConvexClientProvider";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -69,7 +68,7 @@ export default function RootLayout({
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} ${libreFranklin.variable} antialiased bg-(--color-background) text-(--color-foreground)`}
 			>
-				<ConvexClientProvider>{children}</ConvexClientProvider>
+				{children}
 				<Analytics />
 			</body>
 		</html>

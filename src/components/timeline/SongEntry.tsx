@@ -1,11 +1,8 @@
-import { useMutation } from "convex/react";
 import { type ReactNode, useState } from "react";
 import { createModalPortal } from "@/components/ModalPortal";
 import { SubmitSongForm } from "@/components/SubmitSongForm";
 import { FullLyricsDialog } from "@/components/timeline/FullLyricsDialog";
 import { translations } from "@/components/timeline/translations";
-import { api } from "../../../convex/_generated/api";
-import type { Id } from "../../../convex/_generated/dataModel";
 import type { FileSong } from "../../../timeline/types";
 
 export type SongTranslations = {
@@ -43,12 +40,11 @@ export function SongEntry({
 	highlightTerm,
 	hideHeader = false,
 }: SongTimelineEntryProps) {
-	const submitSong = useMutation(api.mutations.submitSongEditSuggestion);
 	const [isEditModalOpen, setIsEditModalOpen] = useState(false);
 	const [isLyricsOpen, setIsLyricsOpen] = useState(false);
 	const t = translations[lang];
 
-	const songObj = song as FileSong & { _id?: Id<"songs"> };
+	const songObj = song as FileSong;
 	const isSongObject = typeof song === "object" && song !== null;
 	const hasSongIdentity =
 		isSongObject &&
@@ -428,20 +424,18 @@ export function SongEntry({
 								</button>
 							</div>
 							<SubmitSongForm
-								submitSong={submitSong}
 								lang={lang}
+								artistNames={[songObj.artist]}
+								languageNames={songObj.language ? [songObj.language] : []}
 								editSong={{
-									_id: songObj._id,
 									name: songObj.name,
 									artist: songObj.artist,
-									artist_details: songObj.artist_details,
 									published_date: songObj.published_date,
 									language: songObj.language,
 									lyric_sample: songObj.lyric_sample,
 									links: songObj.links,
 								}}
 								translations={translations[lang].submitSongForm}
-								onSuccess={() => setIsEditModalOpen(false)}
 							/>
 						</div>
 					</div>,

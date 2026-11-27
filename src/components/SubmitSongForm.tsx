@@ -1,32 +1,31 @@
 "use client";
 
-import { useConvex, useQuery } from "convex/react";
-import { useEffect, useId, useMemo, useState } from "react";
-import { api } from "../../convex/_generated/api";
-import type { Id } from "../../convex/_generated/dataModel";
-import { sendThankYouMail } from "../actions/email";
+import { useId, useState } from "react";
 import {
 	canonicalSongLanguage,
 	displaySongLanguage,
 } from "../utils/song-language";
-import { resolveSubmissionArtist } from "../utils/submission-artist";
+import {
+	buildSongSubmissionMailto,
+	type SongSubmissionMailtoDraft,
+} from "../utils/song-submission-mailto";
+import { isValidSongPublishedDate } from "../utils/timeline";
 import type { SubmitSongFormProps } from "./SubmitSongForm.types";
 
-type SubmissionStatus = "idle" | "submitting" | "success" | "error";
+type SubmissionStatus = "idle" | "ready" | "too-large" | "error";
+type CopyStatus = "idle" | "copied" | "failed";
 
 export function SubmitSongForm({
-	onSuccess,
 	translations,
 	lang = "en",
 	editSong,
-	submitSong,
+	artistNames = [],
+	languageNames = [],
 }: SubmitSongFormProps) {
-	const songs = useQuery(api.songs.getAllSongs) ?? [];
-	const artists = useQuery(api.artists.getAllArtists) ?? [];
-	const convex = useConvex();
 	const [status, setStatus] = useState<SubmissionStatus>("idle");
+	const [draft, setDraft] = useState<SongSubmissionMailtoDraft | null>(null);
+	const [copyStatus, setCopyStatus] = useState<CopyStatus>("idle");
 	const [errorMessage, setErrorMessage] = useState<string | null>(null);
-	const [prefillEmail, setPrefillEmail] = useState<string>("");
 	const [artistValue, setArtistValue] = useState<string>(
 		editSong?.artist ?? "",
 	);
@@ -35,57 +34,15 @@ export function SubmitSongForm({
 	const languageListId = useId();
 	const isEditMode = !!editSong;
 
-	useEffect(() => {
-		const savedEmail = sessionStorage.getItem("submitSongFormEmail");
-		if (savedEmail) {
-			setPrefillEmail(savedEmail);
-		}
-	}, []);
-
-	const { artistOptions, languages } = useMemo(() => {
-		const languageSet = new Set<string>();
-		for (const song of songs) {
-			if (song.language) {
-				languageSet.add(song.language);
-			}
-		}
-		const artistOptions = artists
-			.map((artist) => ({
-				id: artist._id,
-				name: artist.name,
-			}))
-			.sort((a, b) => a.name.localeCompare(b.name));
-
-		return {
-			artistOptions,
-			languages: Array.from(languageSet).sort((a, b) => a.localeCompare(b)),
-		};
-	}, [songs, artists]);
-
-	const artistNameToId = useMemo(() => {
-		const map = new Map<string, Id<"artists">>();
-		for (const option of artistOptions) {
-			if (option.name) {
-				map.set(option.name.toLowerCase(), option.id);
-			}
-		}
-		return map;
-	}, [artistOptions]);
-
-	const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (
-		event,
-	) => {
+	const handleSubmit: React.FormEventHandler<HTMLFormElement> = (event) => {
 		event.preventDefault();
-		setStatus("submitting");
 		setErrorMessage(null);
+		setDraft(null);
+		setCopyStatus("idle");
 		setMissingFields(new Set());
 
-		const form = event.currentTarget;
-		const formData = new FormData(form);
+		const formData = new FormData(event.currentTarget);
 
-		const displayName = (formData.get("displayName") as string)?.trim() ?? "";
-		const emailRaw = (formData.get("email") as string) ?? "";
-		const email = emailRaw.trim();
 		const songName = (formData.get("songName") as string)?.trim();
 		const artist = (formData.get("artist") as string)?.trim();
 		const publishedDate = (formData.get("publishedDate") as string)?.trim();
@@ -113,75 +70,59 @@ export function SubmitSongForm({
 			return;
 		}
 
-		const lyricSample =
-			lyricHebrew || lyricEnglish
-				? {
-						hebrew: lyricHebrew || undefined,
-						english_translation: lyricEnglish || undefined,
-					}
-				: undefined;
-
-		const links =
-			linkLyrics || linkInfo || linkYoutube
-				? {
-						lyrics: linkLyrics || undefined,
-						song_info: linkInfo || undefined,
-						youtube: linkYoutube || undefined,
-					}
-				: undefined;
-
-		try {
-			const artistId = await resolveSubmissionArtist(
-				artist,
-				artistNameToId,
-				editSong,
-				async (normalized) =>
-					(
-						await convex.query(api.internal.artists.getByNormalizedName, {
-							normalized,
-						})
-					)?._id,
-				(args) => convex.mutation(api.mutations.upsertArtist, args),
-			);
-			if (!artistId) {
-				setMissingFields(new Set(["artist"]));
-				setStatus("error");
-				setErrorMessage(translations.errors.required);
-				return;
-			}
-			await submitSong({
-				songId: editSong?._id,
-				userDisplayName: displayName,
-				userEmail: email,
-				suggestion: {
-					name: songName,
-					artistId,
-					published_date: publishedDate,
-					language: language ? language : undefined,
-					lyric_sample: lyricSample,
-					links,
-				},
-			});
-			setStatus("success");
-			onSuccess?.();
-			form.reset();
-			try {
-				await sendThankYouMail({
-					submitterEmail: email,
-					songName,
-					artist,
-					publishedDate,
-					language,
-					lyricSample,
-					links,
-				});
-			} catch (error) {
-				console.error("Failed to send submission email", error);
-			}
-		} catch (error) {
-			console.error("Failed to submit song", error);
+		if (!isValidSongPublishedDate(publishedDate)) {
+			setMissingFields(new Set(["publishedDate"]));
 			setStatus("error");
-			setErrorMessage(translations.errors.generic);
+			setErrorMessage(translations.errors.invalidPublishedDate);
+			return;
+		}
+
+		const nextDraft = buildSongSubmissionMailto({
+			isCorrection: isEditMode,
+			songName,
+			artist,
+			publishedDate,
+			language,
+			existingSong: editSong
+				? {
+						name: editSong.name,
+						artist: editSong.artist,
+						publishedDate: editSong.published_date,
+					}
+				: undefined,
+			lyricSample: {
+				hebrew: lyricHebrew,
+				englishTranslation: lyricEnglish || undefined,
+			},
+			links: {
+				lyrics: linkLyrics || undefined,
+				songInfo: linkInfo || undefined,
+				youtube: linkYoutube || undefined,
+			},
+		});
+		setDraft(nextDraft);
+		if (nextDraft.url) {
+			setStatus("ready");
+			window.location.href = nextDraft.url;
+			return;
+		}
+		setStatus("too-large");
+	};
+
+	const handleFormChange: React.FormEventHandler<HTMLFormElement> = () => {
+		setStatus("idle");
+		setDraft(null);
+		setCopyStatus("idle");
+		setErrorMessage(null);
+	};
+
+	const handleCopyMessage = async () => {
+		if (!draft) return;
+		try {
+			await navigator.clipboard.writeText(draft.body);
+			setCopyStatus("copied");
+		} catch {
+			setCopyStatus("failed");
 		}
 	};
 
@@ -195,31 +136,12 @@ export function SubmitSongForm({
 			<h2 className="mb-3 font-display text-lg font-black text-(--color-card-foreground) sm:mb-4 sm:text-xl">
 				{isEditMode ? t.editTitle : t.title}
 			</h2>
-			<form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
+			<form
+				onChange={handleFormChange}
+				onSubmit={handleSubmit}
+				className="space-y-3 sm:space-y-4"
+			>
 				<div className="grid min-w-0 grid-cols-1 gap-3 sm:gap-4 md:grid-cols-2">
-					<label className="flex min-w-0 flex-col gap-1.5 sm:gap-2">
-						<span className="text-xs font-black uppercase tracking-wider text-(--color-muted-foreground)">
-							{t.fields.displayName}
-						</span>
-						<input
-							name="displayName"
-							type="text"
-							placeholder={t.placeholders.displayNameOptional}
-							className={inputBase}
-						/>
-					</label>
-					<label className="flex min-w-0 flex-col gap-1.5 sm:gap-2">
-						<span className="text-xs font-black uppercase tracking-wider text-(--color-muted-foreground)">
-							{t.fields.email}
-						</span>
-						<input
-							name="email"
-							type="email"
-							defaultValue={prefillEmail}
-							dir="ltr"
-							className={inputBase}
-						/>
-					</label>
 					<label className="flex min-w-0 flex-col gap-1.5 sm:gap-2">
 						<span className="text-xs font-black uppercase tracking-wider text-(--color-muted-foreground)">
 							{t.fields.songName}
@@ -227,6 +149,7 @@ export function SubmitSongForm({
 						<input
 							name="songName"
 							type="text"
+							maxLength={200}
 							required
 							defaultValue={editSong?.name || ""}
 							dir={lang === "he" ? "rtl" : "ltr"}
@@ -244,6 +167,7 @@ export function SubmitSongForm({
 						<input
 							name="artist"
 							type="text"
+							maxLength={200}
 							required={!isEditMode}
 							readOnly={isEditMode}
 							value={artistValue}
@@ -265,9 +189,8 @@ export function SubmitSongForm({
 						</span>
 						<input
 							name="publishedDate"
-							type="number"
-							min="1900"
-							max="2099"
+							type="text"
+							maxLength={10}
 							placeholder={t.placeholders.publishedYear}
 							required
 							defaultValue={editSong?.published_date || ""}
@@ -285,6 +208,7 @@ export function SubmitSongForm({
 						<input
 							name="language"
 							type="text"
+							maxLength={64}
 							required
 							defaultValue={displaySongLanguage(editSong?.language || "", lang)}
 							list={languageListId}
@@ -305,6 +229,7 @@ export function SubmitSongForm({
 						<textarea
 							name="lyricHebrew"
 							rows={3}
+							maxLength={5000}
 							required
 							defaultValue={editSong?.lyric_sample?.hebrew || ""}
 							dir="rtl"
@@ -322,6 +247,7 @@ export function SubmitSongForm({
 						<textarea
 							name="lyricEnglish"
 							rows={3}
+							maxLength={5000}
 							defaultValue={editSong?.lyric_sample?.english_translation || ""}
 							dir="ltr"
 							className={inputBase}
@@ -337,6 +263,7 @@ export function SubmitSongForm({
 						<input
 							name="linkLyrics"
 							type="url"
+							maxLength={2048}
 							defaultValue={editSong?.links?.lyrics || ""}
 							dir={lang === "he" ? "rtl" : "ltr"}
 							className={inputBase}
@@ -349,6 +276,7 @@ export function SubmitSongForm({
 						<input
 							name="linkInfo"
 							type="url"
+							maxLength={2048}
 							defaultValue={editSong?.links?.song_info || ""}
 							dir={lang === "he" ? "rtl" : "ltr"}
 							className={inputBase}
@@ -361,6 +289,7 @@ export function SubmitSongForm({
 						<input
 							name="linkYoutube"
 							type="url"
+							maxLength={2048}
 							defaultValue={editSong?.links?.youtube || ""}
 							dir={lang === "he" ? "rtl" : "ltr"}
 							className={inputBase}
@@ -368,12 +297,64 @@ export function SubmitSongForm({
 					</label>
 				</div>
 
+				<p className="text-xs leading-relaxed text-(--color-muted-foreground)">
+					{t.sendNotice}
+				</p>
+
 				<div className="flex flex-col-reverse items-center justify-end gap-4 sm:flex-row">
 					<div>
-						{status === "success" && (
-							<span className="text-sm font-bold text-emerald-400">
-								{t.success}
-							</span>
+						{status === "ready" && draft?.url && (
+							<div className="space-y-2">
+								<p
+									className="text-sm font-bold text-(--color-muted-foreground)"
+									role="status"
+								>
+									{t.draftReady}
+								</p>
+								<a href={draft.url} className="text-sm font-bold underline">
+									{t.buttons.openEmail}
+								</a>
+							</div>
+						)}
+						{status === "too-large" && draft && (
+							<div className="space-y-2">
+								<p
+									className="text-sm font-bold text-(--color-muted-foreground)"
+									role="status"
+								>
+									{t.tooLarge}
+								</p>
+								<p className="text-xs">
+									{t.fallback.recipient}: {draft.recipient}
+									<br />
+									{t.fallback.subject}: {draft.subject}
+								</p>
+								<textarea
+									readOnly
+									rows={8}
+									value={draft.body}
+									dir="auto"
+									aria-label={t.fallback.body}
+									className={inputBase}
+								/>
+								<button
+									type="button"
+									onClick={handleCopyMessage}
+									className="text-sm font-bold underline"
+								>
+									{t.buttons.copyMessage}
+								</button>
+								{copyStatus === "copied" && (
+									<p className="text-xs" role="status">
+										{t.fallback.copied}
+									</p>
+								)}
+								{copyStatus === "failed" && (
+									<p className="text-xs" role="alert">
+										{t.fallback.copyFailed}
+									</p>
+								)}
+							</div>
 						)}
 						{status === "error" && errorMessage && (
 							<span className="text-sm font-bold text-red-400">
@@ -383,19 +364,18 @@ export function SubmitSongForm({
 					</div>
 					<button
 						type="submit"
-						disabled={status === "submitting"}
-						className="w-full bg-(--color-accent) px-6 py-2.5 font-black text-[#fffdf5] transition wobble-sm hover:bg-(--color-accent-hover) disabled:opacity-50 sm:w-auto"
+						className="w-full bg-(--color-accent) px-6 py-2.5 font-black text-[#fffdf5] transition wobble-sm hover:bg-(--color-accent-hover) sm:w-auto"
 					>
-						{status === "submitting" ? t.buttons.submitting : t.buttons.submit}
+						{t.buttons.submit}
 					</button>
 				</div>
 				<datalist id={artistListId}>
-					{artistOptions.map((option) => (
-						<option key={option.id} value={option.name} />
+					{artistNames.map((artistName) => (
+						<option key={artistName} value={artistName} />
 					))}
 				</datalist>
 				<datalist id={languageListId}>
-					{languages.map((langOption) => (
+					{languageNames.map((langOption) => (
 						<option
 							key={langOption}
 							value={displaySongLanguage(langOption, lang)}

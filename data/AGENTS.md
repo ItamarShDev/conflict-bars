@@ -35,6 +35,6 @@ Purpose: fast orientation for adding songs in `data/`.
 - Without complete text, song cards open `links.lyrics` directly. Verify the URL matches the song and performer and includes lyrics, not just metadata or excerpts. Put recording metadata in `links.song_info` and background references in `context.sources` with labels in both languages. Never construct unverified URL slugs.
 
 ## Cross-checks
-- Keep naming consistent with Convex artist names when possible.
+- Keep naming consistent with the existing file catalog.
 - Dates: use exact year when known; fallback to decade string if necessary.
 - Neutral tone; include sources/links when available.

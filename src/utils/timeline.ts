@@ -39,6 +39,11 @@ function getSongReleaseYear(date: string): number {
 		: Number.NaN;
 }
 
+export function isValidSongPublishedDate(date: string): boolean {
+	const year = getSongReleaseYear(date);
+	return Number.isFinite(year) && year >= 1900 && year <= 2099;
+}
+
 export function getCatalogStats(songs: FileSongList) {
 	const years = songs
 		.map((song) => getSongReleaseYear(song.published_date))

@@ -1,34 +1,13 @@
-import type { ReactMutation } from "convex/react";
 import type { SubmitSongFormTranslations } from "@/components/timeline/translations";
-import type { api } from "../../convex/_generated/api";
-import type { Id } from "../../convex/_generated/dataModel";
-import type { FileSongArtistDetails } from "../../timeline/types";
+import type { FileSong } from "../../timeline/types";
 
 export type SubmitSongFormProps = {
-	submitSong: ReactMutation<typeof api.mutations.submitSongEditSuggestion>;
-	onSuccess?: () => void;
 	translations: SubmitSongFormTranslations;
 	lang?: "en" | "he";
-	editSong?: {
-		_id?: Id<"songs">;
-		name: string;
-		artist: string;
-		artist_details?: FileSongArtistDetails;
-		published_date: string;
-		language?: string;
-		lyric_sample?: {
-			hebrew?: string;
-			arabic?: string;
-			english_translation?: string;
-		};
-		context?: {
-			he?: string;
-			en?: string;
-		};
-		links?: {
-			lyrics?: string;
-			song_info?: string;
-			youtube?: string;
-		};
-	};
+	artistNames?: string[];
+	languageNames?: string[];
+	editSong?: Pick<
+		FileSong,
+		"name" | "artist" | "published_date" | "language" | "lyric_sample" | "links"
+	>;
 };

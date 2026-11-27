@@ -1,22 +1,23 @@
 "use client";
 
-import { useMutation } from "convex/react";
 import { useEffect, useState } from "react";
 import { createModalPortal } from "@/components/ModalPortal";
 import { SubmitSongForm } from "@/components/SubmitSongForm";
 import type { SubmitSongFormTranslations } from "@/components/timeline/translations";
-import { api } from "../../convex/_generated/api";
 
 export function SubmitSongModal({
 	label,
 	translations,
 	lang,
+	artistNames,
+	languageNames,
 }: {
 	label: string;
 	translations: SubmitSongFormTranslations;
 	lang: "en" | "he";
+	artistNames: string[];
+	languageNames: string[];
 }) {
-	const submitSong = useMutation(api.mutations.submitSongEditSuggestion);
 	const [isOpen, setIsOpen] = useState(false);
 
 	useEffect(() => {
@@ -80,12 +81,10 @@ export function SubmitSongModal({
 								</button>
 							</div>
 							<SubmitSongForm
-								submitSong={submitSong}
 								lang={lang}
+								artistNames={artistNames}
+								languageNames={languageNames}
 								translations={translations}
-								onSuccess={() => {
-									setIsOpen(false);
-								}}
 							/>
 						</div>
 					</div>,
