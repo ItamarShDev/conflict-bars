@@ -28,18 +28,20 @@ export function getSongLeaning(song: FileSong): SongLeaning {
 	return song.political_leaning ?? getArtistLeaning(song.artist_details);
 }
 
-function parseStartYear(timestamp: string): number {
-	return new Date(timestamp).getFullYear();
+function getSongReleaseYear(date: string): number {
+	if (!/^\d{4}(?:-\d{2}(?:-\d{2})?)?$/.test(date)) return Number.NaN;
+	const parsed = new Date(date);
+	// Release dates are calendar values, not local instants. Round-trip to reject rollover.
+	const year = parsed.getUTCFullYear();
+	return Number.isFinite(year) &&
+		parsed.toISOString().slice(0, date.length) === date
+		? year
+		: Number.NaN;
 }
 
 export function getCatalogStats(songs: FileSongList) {
 	const years = songs
-		.map((song) => {
-			if (!/^\d{4}(?:-\d{2}(?:-\d{2})?)?$/.test(song.published_date)) {
-				return Number.NaN;
-			}
-			return new Date(song.published_date).getUTCFullYear();
-		})
+		.map((song) => getSongReleaseYear(song.published_date))
 		.filter(Number.isFinite);
 	return {
 		songCount: songs.length,
@@ -123,32 +125,18 @@ export function getEntriesByYear(
 		);
 	};
 
-	const matchesFilters = (song: FileSong) => {
-		const year = parseStartYear(song.published_date);
-		if (Number.isFinite(year) && decades && decades.length > 0) {
-			const decade = Math.floor(year / 10) * 10;
-			if (!decades.includes(decade)) return false;
-		}
-		if (leanings && leanings.length > 0) {
-			const leaning = getSongLeaning(song);
-			if (!leanings.includes(leaning)) return false;
-		}
-		return true;
-	};
-
 	const songEntries = timeline
 		.filter(matchesSearch)
-		.filter(matchesFilters)
-		.flatMap((t) => {
-			const year = parseStartYear(t.published_date);
-			return {
-				year,
-				timestamp: new Date(t.published_date).toLocaleDateString(),
-				song: t,
-				leaning: getSongLeaning(t),
-			};
+		.flatMap((song) => {
+			const year = getSongReleaseYear(song.published_date);
+			if (!Number.isFinite(year)) return [];
+			if (decades?.length && !decades.includes(Math.floor(year / 10) * 10)) {
+				return [];
+			}
+			const leaning = getSongLeaning(song);
+			if (leanings?.length && !leanings.includes(leaning)) return [];
+			return [{ year, timestamp: song.published_date, song, leaning }];
 		})
-		.filter((entry) => Number.isFinite(entry.year))
 		.sort((a, b) => a.year - b.year);
 
 	// Process conflicts with side-by-side layout logic
