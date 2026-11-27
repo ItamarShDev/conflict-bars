@@ -40,33 +40,4 @@ export const stormtrap2010s = [
 				"http://revolutionaryarabraptheindex.blogspot.com/2014/04/stormtrap-asifeh-misunderstanding.html",
 		},
 	},
-	{
-		name: "Fi Hadal Habs (في هذا الحبس / In This Prison)",
-		artist: "Stormtrap / Asifeh (عاصفة)",
-		language: "Arabic",
-		published_date: "2012-02-17",
-		political_leaning: "left",
-		lyric_sample: {
-			original_language: "ar",
-			arabic: "يوم ورا يوم بحاول استوعب قديش ثمن الحرية",
-			hebrew: "יום אחרי יום אני מנסה להבין מה מחיר החירות.",
-			english_translation:
-				"Day after day, I try to understand the price of freedom.",
-		},
-		context: {
-			he: "השאלה על מחיר החירות פותחת שיר על החיים תחת הכיבוש. אסיפה הסביר שהקליפ צולם בחברון כדי לקשור את המילים למציאות בעיר; בהמשך השיר הוא מבקר את רעיון ״השלום הכלכלי״.",
-			en: "The question about the price of freedom opens a song about life under occupation. Asifeh said the video was shot in Hebron to ground the lyrics in life there; later verses criticize the idea of “economic peace.”",
-			sources: [
-				{
-					url: "https://electronicintifada.net/blogs/maureen-clare-murphy/mc-stormtrap-asifeh-takes-liberation-vs-fayyadism-new-video-prison",
-					he: "ריאיון עם אסיפה ותרגום המילים",
-					en: "Asifeh interview and lyric translation",
-				},
-			],
-		},
-		links: {
-			lyrics: "https://www.youtube.com/watch?v=-OXk0DVs9vs",
-			song_info: "https://asifeh.bandcamp.com/track/fi-hadal-habs",
-		},
-	},
 ];

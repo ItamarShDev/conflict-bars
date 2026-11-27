@@ -3562,17 +3562,6 @@ export const solutionAspirationAnnotations: Record<
 			he: "השיר מזכיר את סילוואן ואת מוחמד דף, אך אינו מציע הסדר לסכסוך.",
 		},
 	},
-	"stormtrap / asifeh (عاصفة)::fi hadal habs (في هذا الحبس / in this prison)": {
-		category: "no_clear_resolution",
-		confidence: "high",
-		evidenceBasis: "full_lyrics",
-		evidence: "يوم ورا يوم بحاول استوعب قديش ثمن الحرية",
-		sourceUrl: "https://www.youtube.com/watch?v=-OXk0DVs9vs",
-		rationale: {
-			en: "The song criticizes occupation and the idea of economic peace without proposing an alternative settlement.",
-			he: "השיר מבקר את הכיבוש ואת רעיון ״השלום הכלכלי״ ללא הצעה להסדר חלופי.",
-		},
-	},
 	"lior ben-hur::there is another way": {
 		category: "peaceful_resolution",
 		confidence: "high",
