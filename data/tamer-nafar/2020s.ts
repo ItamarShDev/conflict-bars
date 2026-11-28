@@ -144,4 +144,34 @@ export const tamernafar2020s = [
 				"https://audiomack.com/tamer-nafar/album/in-the-name-of-the-father-the-imam-john-lennon-2482119",
 		},
 	},
+	{
+		name: "Change the world for me",
+		artist: "Tamer Nafar (תאמר נפאר)",
+		language: "Arabic/English",
+		published_date: "2024-11-25",
+		political_leaning: "left",
+		lyric_sample: {
+			original_language: "en",
+			hebrew: "הם מחרימים מים; תסלחו לי אם הפלואו שלי התייבש.",
+			english_translation:
+				"They confiscate water excuse my flows if they got dry",
+		},
+		context: {
+			he: "נפאר מחבר החרמת מים ל״יובש״ בראפ שלו. באותו בית הוא מזכיר גם אובדן אדמה וזיתים, ומציג את הכתיבה כדרך לתעד את מה שנלקח. דו״ח האו״ם מאותה תקופה מתעד פגיעות בגישה של חקלאים פלסטינים לאדמות ולמסיק הזיתים בגדה.",
+			en: "Nafar links confiscated water to his rap flows ‘going dry.’ The same verse invokes lost land and olives and presents writing as a way to document what was taken. A UN report from the period documents interference with Palestinian farmers’ access to land and the olive harvest in the West Bank.",
+			sources: [
+				{
+					url: "https://www.unocha.org/publications/report/occupied-palestinian-territory/humanitarian-situation-update-234-west-bank",
+					he: "דו״ח האו״ם על הגדה המערבית ומסיק הזיתים",
+					en: "UN report on the West Bank and olive harvest",
+				},
+			],
+		},
+		links: {
+			lyrics:
+				"https://testicanzoni.rockol.it/testi/change-the-world-for-me-tamer-nafar-ctid-191454538",
+			song_info:
+				"https://music.apple.com/us/album/change-the-world-for-me-single/1781735289",
+		},
+	},
 ];

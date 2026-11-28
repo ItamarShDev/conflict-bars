@@ -25,6 +25,7 @@ const MANUAL_REVIEW_OVERRIDES: Record<
 	{
 		category: ClassificationCategory;
 		confidence: Confidence;
+		basis?: EvidenceBasis;
 		rationaleEn: string;
 		rationaleHe: string;
 		evidence?: string;
@@ -62,6 +63,66 @@ const MANUAL_REVIEW_OVERRIDES: Record<
 			"The unity lyrics address Palestinian internal division and self-protection, not a shared Israeli-Palestinian resolution.",
 		rationaleHe:
 			"מילות האחדות מתייחסות לפילוג הפלסטיני הפנימי ולהגנה עצמית, לא לפתרון ישראלי-פלסטיני משותף.",
+	},
+	"daboor (دابور)::daboor (ضبور)": {
+		category: "no_clear_resolution",
+		confidence: "high",
+		basis: "full_lyrics",
+		evidence: "كسخت تطبيع الإمارات كتير مرات",
+		rationaleEn:
+			"The track rejects UAE–Israel normalization without endorsing or ruling out an Israeli–Palestinian settlement.",
+		rationaleHe:
+			"השיר מתנגד לנורמליזציה בין האמירויות לישראל בלי לתמוך בהסדר ישראלי־פלסטיני או לשלול אותו.",
+	},
+	"daboor (دابور)::wadda3 (ودّع / farewell)": {
+		category: "no_clear_resolution",
+		confidence: "high",
+		basis: "full_lyrics",
+		evidence: "شو دسد ديون ولا سد جروح",
+		rationaleEn:
+			"The song describes the toll of life in Jerusalem rather than advocating a political settlement.",
+		rationaleHe:
+			"השיר מתאר את המחיר האישי של החיים בירושלים ולא קורא להסדר מדיני.",
+	},
+	"fawzi & shabjdeed (فوزي وشبجديد)::youmi (يومي / my day)": {
+		category: "no_clear_resolution",
+		confidence: "high",
+		basis: "full_lyrics",
+		evidence: "بوابة الفحص مُغلقة، بوابة الفوار مُغلقة",
+		rationaleEn:
+			"The repeated gate closures document restricted mobility, without advocating a particular political settlement.",
+		rationaleHe:
+			"החזרה על סגירת השערים מתארת הגבלת תנועה, בלי לקרוא להסדר מדיני מסוים.",
+	},
+	"r3d::bi balash (ببلاش / for free)": {
+		category: "no_clear_resolution",
+		confidence: "high",
+		basis: "full_lyrics",
+		evidence: "هان فش امان هان فش امان",
+		rationaleEn:
+			"The lyrics describe checkpoints, military searches and fear of bombardment without setting out a political settlement.",
+		rationaleHe:
+			"המילים מתארות מחסומים, חיפושים צבאיים ופחד מהפצצות, בלי לנסח הסדר מדיני.",
+	},
+	"shabjdeed (شبجديد)::fein el dawa (فين الدوا / where’s the remedy?)": {
+		category: "no_clear_resolution",
+		confidence: "high",
+		basis: "full_lyrics",
+		evidence: "قصفوا أشكلون وين كنت",
+		rationaleEn:
+			"The verse moves between bombardment, militant rhetoric, and imagined flight rather than articulating a political settlement.",
+		rationaleHe:
+			"הבית נע בין הפגזה, רטוריקה לוחמנית ודמיון של בריחה, בלי לנסח הסדר מדיני.",
+	},
+	"tamer nafar (תאמר נפאר)::change the world for me": {
+		category: "no_clear_resolution",
+		confidence: "high",
+		basis: "full_lyrics",
+		evidence: "They confiscate water excuse my flows if they got dry",
+		rationaleEn:
+			"The lyrics describe dispossession and the limits of activism without endorsing a political settlement.",
+		rationaleHe:
+			"המילים מתארות נישול ואת מגבלות הפעילות הציבורית, בלי לתמוך בהסדר מדיני.",
 	},
 };
 
@@ -944,7 +1005,7 @@ async function main() {
 		return {
 			...reviewed,
 			evidence: reviewed.evidence.slice(0, 110),
-			basis: input.basis,
+			basis: MANUAL_REVIEW_OVERRIDES[input.key]?.basis ?? input.basis,
 			sourceUrl: input.song.links?.lyrics,
 		};
 	});

@@ -532,6 +532,11 @@ export const artistPoliticalAffiliation: Record<
 		notes:
 			"BLTNM co-billed Palestinian release addressing life under occupation during the Gaza war.",
 	},
+	"Fawzi & Shabjdeed (فوزي وشبجديد)": {
+		era: "2020s",
+		affiliation: "Unknown",
+		notes: "Palestinian rappers jointly credited on the BLTNM single Youmi.",
+	},
 	"Refugees of Rap": {
 		era: "2010s–present",
 		affiliation: "Palestinian left / Anti-occupation",

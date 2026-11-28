@@ -60,4 +60,61 @@ export const daboor2020s = [
 			song_info: "https://bltnm.bandcamp.com",
 		},
 	},
+	{
+		name: "Daboor (ضبور)",
+		artist: "Daboor (دابور)",
+		language: "Arabic",
+		published_date: "2021-04-30",
+		political_leaning: "unknown",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "كسخت تطبيع الإمارات كتير مرات",
+			hebrew: "לעזאזל עם הנורמליזציה של האמירויות, שוב ושוב.",
+			english_translation: "Fuck the UAE normalization, over and over.",
+		},
+		context: {
+			he: "דאבור מקלל את הנורמליזציה עם איחוד האמירויות ומיד מזכיר דולרים. השיר יצא אחרי כינון היחסים הרשמיים בין ישראל לאמירויות במסגרת הסכמי אברהם, ומציג התנגדות למהלך בשפה של כסף ועסקאות.",
+			en: "Daboor curses normalization with the United Arab Emirates and immediately brings up dollars. Released after Israel and the UAE formalized ties under the Abraham Accords, the track voices opposition in the language of money and deals.",
+			sources: [
+				{
+					url: "https://www.reuters.com/article/us-israel-gulf-usa/in-break-with-past-uae-and-bahrain-sign-u-s-brokered-deals-with-israel-idUSKBN2660LF/",
+					he: "רויטרס על כינון היחסים עם איחוד האמירויות",
+					en: "Reuters on the establishment of UAE–Israel ties",
+				},
+			],
+		},
+		links: {
+			lyrics: "https://kalimat.anghami.com/lyrics/108121833",
+			song_info: "https://bltnm.bandcamp.com/track/daboor",
+		},
+	},
+	{
+		name: "Wadda3 (ودّع / Farewell)",
+		artist: "Daboor (دابور)",
+		collaborators: ["Al Nather (النثر)"],
+		language: "Arabic",
+		published_date: "2022-12-31",
+		political_leaning: "unknown",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "شو دسد ديون ولا سد جروح",
+			hebrew: "מה אסגור, חובות או פצעים?",
+			english_translation: "What should I close up, debts or wounds?",
+		},
+		context: {
+			he: "דאבור מציב את סגירת החובות מול סגירת הפצעים. בשיר הוא מזכיר גם זעזועים בירושלים ומכירת אדמה. The Wire מתאר את הסינגל כהתבוננות בדרכי ההתמודדות שלו עם נסיבות החיים בעיר.",
+			en: "Daboor sets paying debts against closing wounds. Elsewhere he refers to turmoil in Jerusalem and land being sold. The Wire describes the single as a reflection on how he copes with the circumstances of life in the city.",
+			sources: [
+				{
+					url: "https://www.thewire.co.uk/audio/tracks/unlimited-editions-bltnm",
+					he: "The Wire על הקלטות BLTNM והרקע שלהן",
+					en: "The Wire on the BLTNM recordings and their context",
+				},
+			],
+		},
+		links: {
+			lyrics: "https://kalimat.anghami.com/lyrics/1091895013",
+			song_info: "https://bltnm.bandcamp.com/track/wadda3",
+		},
+	},
 ];
