@@ -927,12 +927,18 @@ async function main() {
 	const inputs = songs.map((song) => {
 		const key = songKey(song);
 		const entry = lyricsCache[key];
+		const review = MANUAL_REVIEW_OVERRIDES[key];
 		return {
 			song,
 			key,
 			entry,
 			lyrics: entry?.text ?? "",
 			basis: evidenceBasis(entry),
+			review,
+			reviewedClassification:
+				review?.evidence === undefined
+					? undefined
+					: { ...review, key, evidence: review.evidence },
 		};
 	});
 	const basisCounts = inputs.reduce<Record<string, number>>((counts, input) => {
@@ -946,13 +952,14 @@ async function main() {
 
 	const model = process.env.GOOGLE_CHAT_MODEL || "gemini-2.5-flash";
 	const smoke = process.argv.includes("--smoke");
-	const uncached = inputs.filter((input) => {
+	const modelInputs = inputs.filter((input) => !input.reviewedClassification);
+	const uncached = modelInputs.filter((input) => {
 		const cached = classificationCache[input.key];
 		return !cached || cached.model !== model;
 	});
 	const pending = smoke ? uncached.slice(0, BATCH_SIZE) : uncached;
 	console.log(
-		`Classifying ${pending.length} songs (${inputs.length - uncached.length} cached)`,
+		`Classifying ${pending.length} songs (${modelInputs.length - uncached.length} cached, ${inputs.length - modelInputs.length} manually reviewed)`,
 	);
 
 	for (let start = 0; start < pending.length; start += BATCH_SIZE) {
@@ -995,17 +1002,18 @@ async function main() {
 	}
 
 	const records = inputs.map((input) => {
-		const classification = classificationCache[input.key];
+		const classification =
+			input.reviewedClassification ?? classificationCache[input.key];
 		if (!classification) throw new Error(`No classification for ${input.key}`);
 		const reviewed = {
 			...classification,
-			...MANUAL_REVIEW_OVERRIDES[input.key],
+			...input.review,
 			key: input.key,
 		};
 		return {
 			...reviewed,
 			evidence: reviewed.evidence.slice(0, 110),
-			basis: MANUAL_REVIEW_OVERRIDES[input.key]?.basis ?? input.basis,
+			basis: input.review?.basis ?? input.basis,
 			sourceUrl: input.song.links?.lyrics,
 		};
 	});
