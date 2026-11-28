@@ -3611,8 +3611,7 @@ export const solutionAspirationAnnotations: Record<
 		confidence: "high",
 		evidenceBasis: "full_lyrics",
 		evidence: "They confiscate water excuse my flows if they got dry",
-		sourceUrl:
-			"https://testicanzoni.rockol.it/testi/change-the-world-for-me-tamer-nafar-ctid-191454538",
+		sourceUrl: "https://lyrks.com/lyrics/tamer-nafar/change-the-world-for-me",
 		rationale: {
 			en: "The lyrics describe dispossession and the limits of activism without endorsing a political settlement.",
 			he: "המילים מתארות נישול ואת מגבלות הפעילות הציבורית, בלי לתמוך בהסדר מדיני.",

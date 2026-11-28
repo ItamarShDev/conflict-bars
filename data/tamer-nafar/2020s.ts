@@ -168,8 +168,7 @@ export const tamernafar2020s = [
 			],
 		},
 		links: {
-			lyrics:
-				"https://testicanzoni.rockol.it/testi/change-the-world-for-me-tamer-nafar-ctid-191454538",
+			lyrics: "https://lyrks.com/lyrics/tamer-nafar/change-the-world-for-me",
 			song_info:
 				"https://music.apple.com/us/album/change-the-world-for-me-single/1781735289",
 		},
