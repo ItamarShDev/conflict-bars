@@ -3550,4 +3550,71 @@ export const solutionAspirationAnnotations: Record<
 			he: "המילים עוסקות באובדן ובעקירה בעזה, בלי להציע הסדר מדיני.",
 		},
 	},
+	"daboor (دابور)::daboor (ضبور)": {
+		category: "no_clear_resolution",
+		confidence: "high",
+		evidenceBasis: "full_lyrics",
+		evidence: "كسخت تطبيع الإمارات كتير مرات",
+		sourceUrl: "https://kalimat.anghami.com/lyrics/108121833",
+		rationale: {
+			en: "The track rejects UAE–Israel normalization without endorsing or ruling out an Israeli–Palestinian settlement.",
+			he: "השיר מתנגד לנורמליזציה בין האמירויות לישראל בלי לתמוך בהסדר ישראלי־פלסטיני או לשלול אותו.",
+		},
+	},
+	"daboor (دابور)::wadda3 (ودّع / farewell)": {
+		category: "no_clear_resolution",
+		confidence: "high",
+		evidenceBasis: "full_lyrics",
+		evidence: "شو دسد ديون ولا سد جروح",
+		sourceUrl: "https://kalimat.anghami.com/lyrics/1091895013",
+		rationale: {
+			en: "The song describes the toll of life in Jerusalem rather than advocating a political settlement.",
+			he: "השיר מתאר את המחיר האישי של החיים בירושלים ולא קורא להסדר מדיני.",
+		},
+	},
+	"fawzi & shabjdeed (فوزي وشبجديد)::youmi (يومي / my day)": {
+		category: "no_clear_resolution",
+		confidence: "high",
+		evidenceBasis: "full_lyrics",
+		evidence: "بوابة الفحص مُغلقة، بوابة الفوار مُغلقة",
+		sourceUrl: "https://kalimat.anghami.com/lyrics/1229893403",
+		rationale: {
+			en: "The repeated gate closures document restricted mobility, without advocating a particular political settlement.",
+			he: "החזרה על סגירת השערים מתארת הגבלת תנועה, בלי לקרוא להסדר מדיני מסוים.",
+		},
+	},
+	"r3d::bi balash (ببلاش / for free)": {
+		category: "no_clear_resolution",
+		confidence: "high",
+		evidenceBasis: "full_lyrics",
+		evidence: "هان فش امان هان فش امان",
+		sourceUrl:
+			"https://lyrics.nu/kalimat-aghani/%D8%A8%D8%A8%D9%84%D8%A7%D8%B4/%D8%B1%D8%B9%D8%AF/",
+		rationale: {
+			en: "The lyrics describe checkpoints, military searches and fear of bombardment without setting out a political settlement.",
+			he: "המילים מתארות מחסומים, חיפושים צבאיים ופחד מהפצצות, בלי לנסח הסדר מדיני.",
+		},
+	},
+	"shabjdeed (شبجديد)::fein el dawa (فين الدوا / where’s the remedy?)": {
+		category: "no_clear_resolution",
+		confidence: "high",
+		evidenceBasis: "full_lyrics",
+		evidence: "قصفوا أشكلون وين كنت",
+		sourceUrl: "https://kalimat.anghami.com/lyrics/1148049046",
+		rationale: {
+			en: "The verse moves between bombardment, militant rhetoric, and imagined flight rather than articulating a political settlement.",
+			he: "הבית נע בין הפגזה, רטוריקה לוחמנית ודמיון של בריחה, בלי לנסח הסדר מדיני.",
+		},
+	},
+	"tamer nafar (תאמר נפאר)::change the world for me": {
+		category: "no_clear_resolution",
+		confidence: "high",
+		evidenceBasis: "full_lyrics",
+		evidence: "They confiscate water excuse my flows if they got dry",
+		sourceUrl: "https://lyrks.com/lyrics/tamer-nafar/change-the-world-for-me",
+		rationale: {
+			en: "The lyrics describe dispossession and the limits of activism without endorsing a political settlement.",
+			he: "המילים מתארות נישול ואת מגבלות הפעילות הציבורית, בלי לתמוך בהסדר מדיני.",
+		},
+	},
 };

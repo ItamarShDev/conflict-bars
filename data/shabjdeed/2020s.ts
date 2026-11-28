@@ -197,4 +197,33 @@ export const shabjdeed2020s = [
 			song_info: "https://bltnm.bandcamp.com/track/tal-abib",
 		},
 	},
+	{
+		name: "Fein El Dawa (فين الدوا / Where’s the Remedy?)",
+		artist: "Shabjdeed (شبجديد)",
+		collaborators: ["Al Nather (النثر)"],
+		language: "Arabic",
+		published_date: "2024-02-29",
+		political_leaning: "unknown",
+		lyric_sample: {
+			original_language: "ar",
+			arabic: "قصفوا أشكلون وين كنت",
+			hebrew: "הפגיזו את אשקלון, איפה היית?",
+			english_translation: "They shelled Ashkelon. Where were you?",
+		},
+		context: {
+			he: "השאלה על הפגזת אשקלון מופיעה לצד אזכור של אשדוד ותיאור צפייה בנאום דרך הטלפון. השיר יצא ב־2024, לאחר דיווחים על ירי רקטות לעבר אשקלון; המילים אינן מציינות לאיזה מטח הן מתייחסות.",
+			en: "The question about Ashkelon being shelled appears alongside a reference to Ashdod and a speech watched on a phone. The song came out in 2024, after reports of rocket fire at Ashkelon; the lyrics do not identify a particular barrage.",
+			sources: [
+				{
+					url: "https://www.euronews.com/2023/10/10/israeli-pm-says-siege-just-getting-started-as-gaza-battered-overnight",
+					he: "Euronews על ירי הרקטות לאשקלון באוקטובר 2023",
+					en: "Euronews on rocket fire at Ashkelon in October 2023",
+				},
+			],
+		},
+		links: {
+			lyrics: "https://kalimat.anghami.com/lyrics/1148049046",
+			song_info: "https://bltnm.bandcamp.com/track/fein-el-dawa",
+		},
+	},
 ];
